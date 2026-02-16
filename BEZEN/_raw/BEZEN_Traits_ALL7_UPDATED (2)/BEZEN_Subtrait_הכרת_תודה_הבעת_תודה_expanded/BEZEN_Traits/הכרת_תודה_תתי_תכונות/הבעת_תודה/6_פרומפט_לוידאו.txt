@@ -1,0 +1,6 @@
+Create an interactive video where a character receives help.
+Offer two paths:
+1) Finish task and leave silently.
+2) Express sincere thanks and engage briefly.
+Include BEZEN guiding on heartfelt appreciation.
+End with the quote: "Gratitude expressed is joy multiplied."

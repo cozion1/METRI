@@ -1,0 +1,6 @@
+Create an interactive video where a character struggles to concentrate.
+Offer two paths:
+1) Continue in a distracting environment.
+2) Move to a focused, organized space.
+Include BEZEN demonstrating environmental control.
+End with the quote: "Focus is the gateway to excellence."

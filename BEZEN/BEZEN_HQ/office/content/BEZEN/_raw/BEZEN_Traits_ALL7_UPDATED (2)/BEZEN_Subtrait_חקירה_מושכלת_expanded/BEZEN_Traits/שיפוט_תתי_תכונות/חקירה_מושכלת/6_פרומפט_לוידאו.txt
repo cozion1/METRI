@@ -1,0 +1,6 @@
+Create an interactive video where a character researches new data.
+Offer two paths:
+1) Rely on a single source.
+2) Conduct thorough multi-source research.
+Include BEZEN teaching rigorous inquiry.
+End with the quote: "Many eyes see clearer."

@@ -1,0 +1,6 @@
+Create an interactive video where a character starts a venture.
+Offer two paths:
+1) Do minimal planning.
+2) Dive in and act immediately.
+Include BEZEN guiding on calculated risk.
+End with the quote: "Bold initiative shapes the future."

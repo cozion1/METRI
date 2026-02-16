@@ -1,0 +1,6 @@
+Create an interactive video where a student must choose sources.
+Offer two paths:
+1) Use a single unchecked source.
+2) Cross-reference multiple reliable sources.
+Include BEZEN guiding on evidence evaluation.
+End with the quote: 'Strong judgments rest on solid evidence.'  

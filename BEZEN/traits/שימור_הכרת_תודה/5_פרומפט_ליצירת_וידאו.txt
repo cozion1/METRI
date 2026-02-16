@@ -1,0 +1,6 @@
+Create an interactive video where a character reviews past gratitude entries.
+Offer two paths:
+1) Move on without looking back.
+2) Read past entries and reignite gratitude.
+Include BEZEN guiding on sustaining gratitude.
+End with the quote: "Gratitude remembered is gratitude renewed."

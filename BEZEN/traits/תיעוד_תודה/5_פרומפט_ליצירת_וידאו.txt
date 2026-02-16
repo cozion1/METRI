@@ -1,0 +1,6 @@
+Create an interactive video where a character ends their day.
+Offer two paths:
+1) Go to sleep immediately.
+2) Journal three things they are grateful for.
+Include BEZEN guiding on gratitude journaling.
+End with the quote: "Recording thanks secures joy tomorrow."

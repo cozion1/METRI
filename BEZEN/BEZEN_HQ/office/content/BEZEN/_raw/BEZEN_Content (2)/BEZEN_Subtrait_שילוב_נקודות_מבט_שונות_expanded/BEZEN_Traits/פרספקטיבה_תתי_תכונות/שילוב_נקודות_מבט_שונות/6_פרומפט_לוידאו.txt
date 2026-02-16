@@ -1,0 +1,6 @@
+Create an interactive video where a character moderates a panel discussion.
+Offer two paths:
+1) Recite every viewpoint in detail.
+2) Craft a concise unified perspective.
+Include BEZEN guiding on integrating views.
+End with the quote: "Unity thrives on thoughtful synthesis."

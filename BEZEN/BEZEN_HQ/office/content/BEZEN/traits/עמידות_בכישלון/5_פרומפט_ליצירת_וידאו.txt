@@ -1,0 +1,6 @@
+Create an interactive video where a character fails a task.
+Offer two paths:
+1) Stop and give up.
+2) Analyze errors and retry.
+Include BEZEN teaching that failure is a step towards success.
+End with the quote: "Resilience turns setbacks into comebacks."

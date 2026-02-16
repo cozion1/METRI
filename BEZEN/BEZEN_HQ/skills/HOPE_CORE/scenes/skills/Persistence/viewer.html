@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEZEN Viewer</title>
+
+<style>
+body{
+    margin:0;
+    background:#0b1220;
+    color:#e8eefc;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    padding:24px;
+}
+
+.card{
+    width:min(980px,100%);
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:18px;
+    padding:22px;
+}
+
+pre{
+    white-space:pre-wrap;
+    line-height:1.7;
+    font-size:18px;
+}
+
+.choices button{
+    display:block;
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    background:#1f2a44;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+.nav button{
+    padding:10px 16px;
+    background:#2a3555;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div id="scene"></div>
+
+    <div class="nav">
+        <button id="back">← חזור</button>
+        <button id="home">🏠 בית</button>
+    </div>
+</div>
+
+<script>
+const START = "day_03.md";
+const HOME  = "day_01.md";
+
+let historyStack = [];
+
+async function load(file){
+    if(file) historyStack.push(file);
+
+    const res = await fetch(file);
+    const text = await res.text();
+
+    const lines = text.split("\n");
+
+    let content = "";
+    let choices = [];
+
+    for(let l of lines){
+        if(l.startsWith("→")){
+            const [label,target] = l.replace("→","").split("|");
+            choices.push({label:label.trim(), target:target.trim()});
+        }else{
+            content += l + "\n";
+        }
+    }
+
+    const box = document.getElementById("scene");
+
+    box.innerHTML = `
+        <pre>${content}</pre>
+        <div class="choices">
+            ${choices.map(c=>`<button onclick="jump('${c.target}')">${c.label}</button>`).join("")}
+        </div>
+    `;
+
+    document.getElementById("back").disabled = historyStack.length <= 1;
+}
+
+function jump(file){
+    load(file);
+}
+
+document.getElementById("back").onclick = ()=>{
+    if(historyStack.length>1){
+        historyStack.pop();
+        load(historyStack.pop());
+    }
+};
+
+document.getElementById("home").onclick = ()=>{
+    historyStack=[];
+    load(HOME);
+};
+
+load(START);
+</script>
+
+</body>
+</html>
+
+
+

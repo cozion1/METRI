@@ -1,0 +1,6 @@
+Create an interactive video where a character learns a new concept.
+Offer two paths:
+1) Keep reading theory.
+2) Build a small project to apply.
+Include BEZEN emphasizing active application.
+End with: "Knowledge lives in action."

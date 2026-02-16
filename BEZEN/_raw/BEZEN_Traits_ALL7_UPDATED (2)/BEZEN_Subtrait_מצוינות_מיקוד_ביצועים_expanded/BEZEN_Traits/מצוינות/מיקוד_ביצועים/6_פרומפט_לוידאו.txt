@@ -1,0 +1,6 @@
+Create an interactive video where a character plans their day.
+Offer two paths:
+1) Multitask across activities.
+2) Focus deeply on one task at a time.
+Include BEZEN guiding on performance focus.
+End with the quote: "Deep focus drives true achievement."

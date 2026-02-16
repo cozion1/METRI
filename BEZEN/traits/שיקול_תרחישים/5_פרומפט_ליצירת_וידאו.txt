@@ -1,0 +1,6 @@
+Create an interactive video where a character plans under uncertainty.
+Offer two paths:
+1) Prepare only for the worst-case.
+2) Plan for multiple scenarios.
+Include BEZEN guiding balanced scenario planning.
+End with the quote: "Preparedness reduces regret."

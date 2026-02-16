@@ -1,0 +1,6 @@
+Create an interactive video where a team meets for a status update.
+Offer two paths:
+1) Dive deep into technical details.
+2) Present a concise summary with clear action points.
+Include BEZEN guiding on balanced team communication.
+End with the quote: "Clear communication is the backbone of teamwork."

@@ -1,0 +1,6 @@
+Create an interactive video where a character receives praise.
+Offer two paths:
+1) Accept and move on.
+2) Examine feedback and plan improvements.
+Include BEZEN guiding on continuous improvement.
+End with the quote: "Growth is a journey, not a destination."

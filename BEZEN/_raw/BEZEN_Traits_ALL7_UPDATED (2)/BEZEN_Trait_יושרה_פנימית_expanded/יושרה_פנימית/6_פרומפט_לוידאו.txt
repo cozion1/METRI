@@ -1,0 +1,5 @@
+Create an interactive story where Noa is offered a shortcut to impress her class.
+
+Offer three options: accept the shortcut, refuse it, or consult someone.
+
+Let BEZEN highlight the value of internal integrity and authentic decision-making.

@@ -1,0 +1,9 @@
+Create an interactive video where a character participates in a team project.
+
+Show two choices:
+1) Follow the existing plan without offering suggestions.
+2) Propose an improvement that could benefit everyone.
+
+Include BEZEN as a guide, explaining how balanced teamwork includes personal initiative and collective support.
+
+End with the quote: "Teamwork thrives when every voice adds value."

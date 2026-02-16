@@ -1,0 +1,5 @@
+Create an interactive scene where Yoav is asked by a friend to help with studies.
+
+Offer three options: help despite being tired, gently decline, or ignore.
+
+Let BEZEN intervene with wisdom on balancing generosity and self-care.

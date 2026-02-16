@@ -1,0 +1,6 @@
+Create an interactive video where a character plans a financial decision.
+Offer two paths:
+1) Invest immediately.
+2) Model long-term scenarios.
+Include BEZEN teaching balanced foresight.
+End with the quote: "Tomorrow rewards the planners."

@@ -1,0 +1,9 @@
+Create an interactive video where a character plans an experiment.
+
+Offer two paths:
+1) Run trials spontaneously.
+2) Set objectives and plan methodically.
+
+Include BEZEN teaching goal-oriented investigation.
+
+End with the quote: "Intentional inquiry achieves clarity."

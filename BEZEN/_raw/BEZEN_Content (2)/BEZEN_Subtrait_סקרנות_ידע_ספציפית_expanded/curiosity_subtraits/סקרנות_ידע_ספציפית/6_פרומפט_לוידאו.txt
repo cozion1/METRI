@@ -1,0 +1,9 @@
+Create an interactive video where a character faces a confusing data point.
+
+Offer two paths:
+1) Ignore and move on.
+2) Research the specific question in depth.
+
+Include BEZEN as a mentor explaining time management in focused curiosity.
+
+End with the quote: "Specific curiosity fuels precise understanding."

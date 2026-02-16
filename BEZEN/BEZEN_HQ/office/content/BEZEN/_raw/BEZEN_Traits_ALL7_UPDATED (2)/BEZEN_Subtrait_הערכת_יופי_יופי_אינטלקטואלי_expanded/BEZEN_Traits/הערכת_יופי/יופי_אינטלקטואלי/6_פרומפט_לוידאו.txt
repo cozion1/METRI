@@ -1,0 +1,6 @@
+Create an interactive video where a character solves a complex problem.
+Offer two paths:
+1) Skip understanding the elegance.
+2) Appreciate the logical beauty of the solution.
+Include BEZEN guiding on intellectual beauty appreciation.
+End with the quote: "Beauty lies in truth and reason."

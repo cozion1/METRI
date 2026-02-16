@@ -1,0 +1,6 @@
+Create an interactive video where a character needs to synthesize multiple inputs.
+Offer two paths:
+1) Focus on one input and proceed.
+2) Synthesize all inputs before acting.
+Include BEZEN guiding balanced integration.
+End with the quote: "Integration reveals the whole."

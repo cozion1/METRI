@@ -1,0 +1,6 @@
+Create an interactive video where a meeting has multiple speakers.
+Offer two paths:
+1) Allow dominant voices to lead.
+2) Facilitate equal speaking turns.
+Include BEZEN teaching balanced listening.
+End with the quote: "Equal listening fosters belonging."

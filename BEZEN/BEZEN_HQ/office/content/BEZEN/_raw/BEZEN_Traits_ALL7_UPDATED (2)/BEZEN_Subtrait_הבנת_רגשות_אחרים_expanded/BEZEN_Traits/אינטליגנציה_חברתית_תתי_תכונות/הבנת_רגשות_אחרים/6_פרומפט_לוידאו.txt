@@ -1,0 +1,6 @@
+Create an interactive video where a character notices a colleague's withdrawal.
+Offer two paths:
+1) Ignore signs and continue.
+2) Approach and ask how they're feeling.
+Include BEZEN guiding on emotional understanding.
+End with the quote: "Understanding emotions builds connection."

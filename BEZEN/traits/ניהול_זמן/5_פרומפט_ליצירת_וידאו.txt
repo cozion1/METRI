@@ -1,0 +1,6 @@
+Create an interactive video where a character has a strict deadline.
+Offer two paths:
+1) Work continuously without breaks.
+2) Divide the work into scheduled segments.
+Include BEZEN demonstrating balanced time management.
+End with the quote: "Time well managed preserves both results and well-being."

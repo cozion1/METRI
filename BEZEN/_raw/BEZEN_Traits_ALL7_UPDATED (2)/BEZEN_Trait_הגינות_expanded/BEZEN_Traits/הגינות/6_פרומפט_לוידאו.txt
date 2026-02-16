@@ -1,0 +1,9 @@
+Create an interactive video where a character must allocate tasks in a team.
+
+Show two paths:
+1) Divide tasks equally regardless of skills and face suboptimal results.
+2) Assign tasks based on strengths while ensuring everyone feels valued.
+
+Include BEZEN as a guide explaining how true fairness balances equality and effectiveness.
+
+End with the quote: "Fairness is giving each person what they need to succeed." 

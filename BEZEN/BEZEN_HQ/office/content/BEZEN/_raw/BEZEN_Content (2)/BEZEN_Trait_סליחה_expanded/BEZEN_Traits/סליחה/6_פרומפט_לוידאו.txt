@@ -1,0 +1,9 @@
+Create an interactive video where a character faces someone who hurt them.
+
+Present two choices:
+1) Respond with anger and escalate the conflict.
+2) Offer forgiveness and open a path to reconciliation.
+
+Include BEZEN as a guide who explains how forgiveness heals both parties.
+
+End with the quote: "Forgiveness frees the forgiver more than the forgiven." 

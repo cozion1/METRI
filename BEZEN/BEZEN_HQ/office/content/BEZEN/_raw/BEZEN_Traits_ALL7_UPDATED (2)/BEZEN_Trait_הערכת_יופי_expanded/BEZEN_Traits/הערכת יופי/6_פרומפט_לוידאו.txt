@@ -1,0 +1,9 @@
+Create an interactive video where a character explores an art gallery.
+
+Show two options:
+1) Glance quickly and move on.
+2) Pause to study details and context.
+
+Include a guide named BEZEN who emphasizes finding depth in beauty and excellence.
+
+End with the quote: "Beauty is felt deeply by those who choose to see."

@@ -1,0 +1,6 @@
+Create an interactive video where a character realizes they forgot to credit a teammate.
+Offer two paths:
+1) Ignore the oversight.
+2) Acknowledge the mistake and express understanding of its impact.
+Include BEZEN guiding on the importance of admission.
+End with the quote: "Admitting the mistake paves the path to trust."

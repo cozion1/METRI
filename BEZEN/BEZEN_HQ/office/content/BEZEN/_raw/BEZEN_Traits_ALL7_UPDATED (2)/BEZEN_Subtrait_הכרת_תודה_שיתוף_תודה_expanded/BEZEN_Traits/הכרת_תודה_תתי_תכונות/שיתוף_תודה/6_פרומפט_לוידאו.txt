@@ -1,0 +1,6 @@
+Create an interactive video where a character shares gratitude.
+Offer two paths:
+1) Send a private thank-you note.
+2) Post a public message of thanks.
+Include BEZEN guiding on sharing gratitude.
+End with the quote: "Gratitude shared grows abundance."

@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run BEZEN-CORE (one click)",
+      "type": "shell",
+      "command": "cmd",
+      "args": ["/c", "agents\\BEZEN-CORE\\RUN_BEZEN_CORE.bat"],
+      "problemMatcher": []
+    }
+  ]
+}

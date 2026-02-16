@@ -1,0 +1,6 @@
+Create an interactive video where a character fixes a broken item.
+Offer two paths:
+1) Apologize and leave.
+2) Repair or replace the item and check satisfaction.
+Include BEZEN guiding on making amends.
+End with the quote: "Actions seal the sincerity of apology."

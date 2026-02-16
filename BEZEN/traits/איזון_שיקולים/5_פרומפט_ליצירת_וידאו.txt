@@ -1,0 +1,6 @@
+Create an interactive video where a person selects a study path.
+Offer two paths:
+1) Go with gut feeling.
+2) List pros and cons methodically.
+Include BEZEN guiding on weighing factors.
+End with the quote: 'Balanced choices build confidence.' 

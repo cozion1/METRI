@@ -1,0 +1,6 @@
+Create an interactive video where a character hikes after rain.
+Offer two paths:
+1) Walk without noticing details.
+2) Observe droplets and blooming life.
+Include BEZEN guiding on natural beauty appreciation.
+End with the quote: "Nature's beauty heals the soul."

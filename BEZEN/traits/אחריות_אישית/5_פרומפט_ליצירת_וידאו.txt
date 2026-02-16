@@ -1,0 +1,6 @@
+Create an interactive video where a character faces a project failure.
+Offer two paths:
+1) Blame teammates.
+2) Own mistakes and fix them.
+Include BEZEN guiding on healthy responsibility.
+End with the quote: "Responsibility unlocks progress."

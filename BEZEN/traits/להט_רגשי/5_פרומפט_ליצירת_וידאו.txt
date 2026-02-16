@@ -1,0 +1,6 @@
+Create an interactive video where a character receives good news.
+Offer two paths:
+1) React calmly.
+2) Express joy with enthusiasm.
+Include BEZEN teaching how emotional zeal fosters connection.
+End with the quote: "Passion speaks in the language of the heart."

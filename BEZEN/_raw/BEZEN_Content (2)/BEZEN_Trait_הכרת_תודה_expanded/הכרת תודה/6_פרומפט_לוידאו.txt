@@ -1,0 +1,5 @@
+Create an interactive video where Noa receives a small thoughtful gift.
+
+Present two choices: respond with heartfelt gratitude or ignore it and move on.
+
+End with BEZEN saying: "Gratitude turns a moment into a miracle."

@@ -1,0 +1,6 @@
+Create an interactive video where a character faces a dark room.
+Offer two paths:
+1) Flee in fear.
+2) Turn on a flashlight and enter.
+Include BEZEN teaching that fear guides growth.
+End with the quote: "Fear lights the path to courage."

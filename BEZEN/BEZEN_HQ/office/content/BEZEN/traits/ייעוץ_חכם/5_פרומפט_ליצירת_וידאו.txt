@@ -1,0 +1,6 @@
+Create an interactive video where a character gives advice to a colleague.
+Offer two paths:
+1) Provide generic counsel.
+2) Ask clarifying questions and customize advice.
+Include BEZEN emphasizing deep listening.
+End with the quote: "Effective advice springs from understanding."

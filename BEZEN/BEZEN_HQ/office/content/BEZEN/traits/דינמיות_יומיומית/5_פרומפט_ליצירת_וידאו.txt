@@ -1,0 +1,6 @@
+Create an interactive video where a character plans their schedule.
+Offer two paths:
+1) Follow the known routine.
+2) Insert a surprising new activity.
+Include BEZEN teaching balanced dynamism.
+End with the quote: "Daily variety sparks creativity."

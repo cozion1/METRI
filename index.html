@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEZEN • מנהלים</title>
+    <style>
+        :root {
+            --bg: #05050a;
+            --surface: rgba(6, 12, 24, 0.72);
+            --surface-strong: rgba(8, 16, 32, 0.86);
+            --text: #ffffff;
+            --muted: rgba(255, 255, 255, 0.78);
+            --accent: #4a9eff;
+            --accent-strong: #3f8fff;
+            --border: rgba(255, 255, 255, 0.26);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg) url('background.png') center center no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        }
+
+        #scene-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.34;
+        }
+
+        #emotion-filter {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background: transparent;
+            transition: background 0.45s ease;
+        }
+
+        body.emotion-calm #emotion-filter {
+            background: rgba(88, 170, 255, 0.14);
+        }
+
+        body.emotion-stress #emotion-filter {
+            background: rgba(255, 98, 98, 0.18);
+        }
+
+        body.emotion-lonely #emotion-filter {
+            background: rgba(155, 120, 255, 0.18);
+        }
+
+        body.emotion-curious #emotion-filter {
+            background: rgba(90, 220, 190, 0.16);
+        }
+
+        .landing {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            place-items: center;
+            gap: 20px;
+            width: min(96vw, 980px);
+            margin: 0 auto;
+            padding: 26px 16px;
+            min-height: 100vh;
+        }
+
+        .mode-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .mode-btn {
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 11px 18px;
+            cursor: pointer;
+            font-size: 0.98rem;
+            transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .mode-btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(255, 255, 255, 0.48);
+        }
+
+        .mode-btn.active {
+            background: rgba(74, 158, 255, 0.28);
+            border-color: rgba(74, 158, 255, 0.75);
+        }
+
+        .guide-btn {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        #ai-orb {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #66b4ff 0%, #1565d8 42%, transparent 72%);
+            box-shadow: 0 0 50px #4a9eff, 0 0 100px rgba(74, 158, 255, 0.5);
+            animation: breathe 4.8s infinite ease-in-out;
+            position: relative;
+        }
+
+        #ai-orb::after {
+            content: attr(data-mode-label);
+            position: absolute;
+            inset: auto 50% -34px auto;
+            transform: translateX(50%);
+            white-space: nowrap;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #ai-orb.mode-personal {
+            filter: hue-rotate(0deg);
+        }
+
+        #ai-orb.mode-teacher {
+            filter: hue-rotate(80deg);
+        }
+
+        #ai-orb.mode-world {
+            filter: hue-rotate(180deg);
+        }
+
+        .mode-panel {
+            width: 100%;
+            max-width: 720px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+            backdrop-filter: blur(7px);
+        }
+
+        .mode-title {
+            margin: 0 0 6px;
+            font-size: 1.15rem;
+        }
+
+        .mode-description {
+            margin: 0 0 14px;
+            color: var(--muted);
+            font-size: 0.96rem;
+        }
+
+        .control-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .control {
+            flex: 1 1 300px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 12px;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .control::placeholder {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .action-btn {
+            border: 1px solid rgba(74, 158, 255, 0.7);
+            border-radius: 12px;
+            background: rgba(74, 158, 255, 0.26);
+            color: var(--text);
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .single-response {
+            margin: 12px 0 0;
+            min-height: 1.4em;
+            color: var(--text);
+            font-size: 0.98rem;
+        }
+
+        .pulse-map {
+            margin: 0 0 12px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 12px;
+        }
+
+        .pulse-title {
+            margin: 0 0 8px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .pulse-row {
+            display: grid;
+            grid-template-columns: 110px 1fr auto;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .pulse-track {
+            height: 9px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.15);
+            overflow: hidden;
+        }
+
+        .pulse-fill {
+            height: 100%;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(74, 158, 255, 0.95), rgba(96, 208, 255, 0.9));
+        }
+
+        .emotion-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .emotion-chip {
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            padding: 5px 10px;
+            font-size: 0.82rem;
+            background: rgba(255, 255, 255, 0.08);
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .privacy-note {
+            margin: 10px 0 0;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .scene-block {
+            margin: 0 0 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .scene-label {
+            margin: 0 0 8px;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .scene-text {
+            margin: 0;
+            font-size: 0.97rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .world-actions {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .world-choice {
+            border: 1px solid rgba(255, 255, 255, 0.34);
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.09);
+            color: var(--text);
+            padding: 16px 14px;
+            font-size: 1.02rem;
+            font-weight: 600;
+            cursor: pointer;
+            min-height: 72px;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .world-choice:hover {
+            transform: translateY(-1px);
+            border-color: rgba(74, 158, 255, 0.8);
+            background: rgba(74, 158, 255, 0.2);
+        }
+
+        .world-outcome {
+            margin: 10px 0 0;
+            min-height: 1.4em;
+            color: rgba(255, 255, 255, 0.96);
+            font-size: 0.96rem;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 3;
+            background: radial-gradient(circle at 30% 20%, rgba(72, 130, 255, 0.2), rgba(5, 12, 28, 0.78) 45%, rgba(2, 7, 18, 0.88) 100%);
+            backdrop-filter: blur(3px) saturate(125%);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .modal-overlay.is-open {
+            display: flex;
+        }
+
+        .modal-card {
+            width: min(96vw, 560px);
+            border-radius: 18px;
+            border: 1px solid rgba(137, 182, 255, 0.34);
+            background:
+                linear-gradient(160deg, rgba(19, 42, 86, 0.72), rgba(10, 25, 58, 0.78)),
+                rgba(7, 18, 44, 0.72);
+            backdrop-filter: blur(14px) saturate(125%);
+            box-shadow: 0 22px 56px rgba(5, 12, 28, 0.62), 0 0 0 1px rgba(173, 206, 255, 0.1) inset;
+            padding: 18px;
+        }
+
+        .modal-title {
+            margin: 0 0 8px;
+            font-size: 1.1rem;
+            color: rgba(237, 246, 255, 0.98);
+        }
+
+        .modal-text {
+            margin: 0;
+            color: rgba(225, 236, 255, 0.9);
+            line-height: 1.45;
+            font-size: 0.95rem;
+        }
+
+        .modal-actions {
+            margin-top: 14px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .modal-close-btn {
+            min-height: 46px;
+            min-width: 124px;
+            padding: 12px 22px;
+            border-radius: 14px;
+            border: 1px solid rgba(186, 217, 255, 0.7);
+            background: linear-gradient(180deg, rgba(84, 157, 255, 0.95), rgba(52, 122, 236, 0.95));
+            color: #f7fbff;
+            font-weight: 700;
+            font-size: 0.97rem;
+            letter-spacing: 0.01em;
+            box-shadow: 0 10px 24px rgba(44, 104, 214, 0.45);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        .modal-close-btn:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.05);
+            box-shadow: 0 14px 28px rgba(44, 104, 214, 0.52);
+        }
+
+        .modal-close-btn:focus-visible {
+            outline: 2px solid rgba(215, 236, 255, 0.95);
+            outline-offset: 2px;
+        }
+
+        @keyframes breathe {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.85;
+                box-shadow: 0 0 40px #4a9eff, 0 0 80px rgba(74, 158, 255, 0.4);
+            }
+            50% {
+                transform: scale(1.08);
+                opacity: 1;
+                box-shadow: 0 0 60px #4a9eff, 0 0 120px rgba(74, 158, 255, 0.6);
+            }
+        }
+
+        @media (max-width: 700px) {
+            #ai-orb {
+                width: 170px;
+                height: 170px;
+            }
+
+            .mode-btn {
+                width: 100%;
+            }
+
+            .mode-panel {
+                padding: 14px;
+            }
+
+            .world-actions {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .modal-card {
+                padding: 14px;
+                border-radius: 14px;
+            }
+
+            .modal-title {
+                font-size: 1rem;
+            }
+
+            .modal-text {
+                font-size: 0.91rem;
+                line-height: 1.5;
+            }
+
+            .modal-close-btn {
+                width: 100%;
+                min-width: 0;
+            }
+
+            .modal-actions {
+                justify-content: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="scene-bg" aria-hidden="true"></canvas>
+    <div id="emotion-filter" aria-hidden="true"></div>
+    <main class="landing" aria-label="BEZEN Landing">
+        <div class="mode-buttons" role="tablist" aria-label="BEZEN Modes">
+            <button class="mode-btn" data-mode="personal" type="button">חוויה אישית</button>
+            <button class="mode-btn" data-mode="teacher" type="button">כלי מלווה למורה</button>
+            <button class="mode-btn" data-mode="world" type="button">סימולטור עולם</button>
+            <button id="principal-guide-btn" class="mode-btn guide-btn" type="button">הוראות למנהלת</button>
+        </div>
+
+        <div id="ai-orb" data-mode-label="BEZEN AI"></div>
+
+        <section id="mode-panel" class="mode-panel" aria-live="polite"></section>
+    </main>
+
+    <div id="principal-modal" class="modal-overlay" aria-hidden="true">
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="principal-guide-title">
+            <h2 id="principal-guide-title" class="modal-title">הוראות למנהלת</h2>
+            <p class="modal-text">
+                שלב 1 — חוויה אישית: תלמיד/ה מקבל/ת מענה רגשי קצר ובטוח. <br>
+                שלב 2 — כלי מלווה למורה: "מפת דופק" אנונימית ברמה כיתתית, ללא חשיפת תוכן אישי. <br>
+                שלב 3 — סימולטור 3D: בחירת מסלול (להמשיך בשיח / לצאת להפסקה) והדגמת השפעת הבחירה.
+            </p>
+            <div class="modal-actions">
+                <button id="principal-modal-close" class="action-btn modal-close-btn" type="button">סגור</button>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const orb = document.getElementById('ai-orb');
+        const modePanel = document.getElementById('mode-panel');
+        const modeButtons = Array.from(document.querySelectorAll('.mode-btn'));
+        const principalGuideBtn = document.getElementById('principal-guide-btn');
+        const principalModal = document.getElementById('principal-modal');
+        const principalModalClose = document.getElementById('principal-modal-close');
+        const pageBody = document.body;
+        const contentCache = new Map();
+        const NETLIFY_GEMINI_ENDPOINT = '/.netlify/functions/gemini';
+
+        const modes = {
+            personal: {
+                orbClass: 'mode-personal',
+                orbLabel: 'חוויה אישית',
+                title: 'חוויה אישית לתלמיד',
+                description: 'קליטת משפט מטריד והחזרת משפט אחד קצר ומרגיע.',
+                placeholder: 'המשפט המטריד של התלמיד...',
+                libraryPath: 'BEZEN Skills Library/01_Social_Bridge/'
+            },
+            teacher: {
+                orbClass: 'mode-teacher',
+                orbLabel: 'מלווה למורה',
+                title: 'כלי מלווה למורה',
+                description: 'קלט אירוע קצר והפקת המלצת תגובה מיידית לצוות החינוכי.',
+                placeholder: 'תיאור אירוע כיתתי קצר...',
+                libraryPath: 'BEZEN Skills Library/04_Safe_Space/'
+            },
+            world: {
+                orbClass: 'mode-world',
+                orbLabel: 'סימולטור עולם',
+                title: 'סימולטור עולם',
+                description: 'בחירת תרחיש והפקת צעד ראשון בטוח לתרגול וקבלת החלטות.',
+                placeholder: 'תרחיש לבדיקה (לדוגמה: קונפליקט ברשת)...',
+                libraryPath: 'BEZEN Skills Library/03_Life_Link/'
+            }
+        };
+
+        const SKILL_FILES = ['Scene.md', 'Dialogue.md', 'Wisdom.md', 'MicroActions.md', 'End.md'];
+        const modeValidation = new Map();
+        let renderToken = 0;
+
+        function resetEmotionFilter() {
+            pageBody.classList.remove('emotion-calm', 'emotion-stress', 'emotion-lonely', 'emotion-curious');
+        }
+
+        function detectDominantEmotion(text) {
+            const source = (text || '').toLowerCase();
+            const emotionMatchers = [
+                {
+                    key: 'stress',
+                    className: 'emotion-stress',
+                    label: 'מתח',
+                    words: ['מתח', 'לחץ', 'כעס', 'פחד', 'חרדה', 'עימות']
+                },
+                {
+                    key: 'lonely',
+                    className: 'emotion-lonely',
+                    label: 'בדידות',
+                    words: ['בדיד', 'בדידות', 'שקט', 'דחוי', 'לבד']
+                },
+                {
+                    key: 'curious',
+                    className: 'emotion-curious',
+                    label: 'סקרנות',
+                    words: ['סקרנות', 'חקירה', 'למידה', 'שאלה', 'גילוי']
+                }
+            ];
+
+            const scored = emotionMatchers
+                .map((emotion) => ({
+                    ...emotion,
+                    score: emotion.words.reduce((acc, word) => acc + (source.includes(word) ? 1 : 0), 0)
+                }))
+                .sort((a, b) => b.score - a.score);
+
+            if (!scored[0] || scored[0].score === 0) {
+                return { key: 'calm', className: 'emotion-calm', label: 'איזון' };
+            }
+
+            return scored[0];
+        }
+
+        function stripMarkdown(line) {
+            return line
+                .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
+                .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+                .replace(/^#{1,6}\s*/g, '')
+                .replace(/[>*_`~-]/g, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function collectLines(text) {
+            return text
+                .split('\n')
+                .map(stripMarkdown)
+                .filter((line) => line.length >= 12);
+        }
+
+        function firstSentence(text) {
+            const normalized = stripMarkdown(text);
+            const match = normalized.match(/^[^.!?]+[.!?]/);
+            if (match) return match[0].trim();
+            if (normalized.length <= 120) return `${normalized}.`;
+            return `${normalized.slice(0, 117).trim()}...`;
+        }
+
+        async function loadModeContent(modeKey) {
+            if (contentCache.has(modeKey)) {
+                return contentCache.get(modeKey);
+            }
+
+            const mode = modes[modeKey];
+            const fallback = {
+                title: mode.title,
+                description: mode.description,
+                response: oneLineResponse(modeKey),
+                placeholder: mode.placeholder
+            };
+
+            try {
+                const fileTexts = {};
+                await Promise.all(
+                    SKILL_FILES.map(async (fileName) => {
+                        const response = await fetch(`${mode.libraryPath}${fileName}`);
+                        if (!response.ok) {
+                            fileTexts[fileName] = '';
+                            return;
+                        }
+                        fileTexts[fileName] = await response.text();
+                    })
+                );
+
+                const missingFiles = SKILL_FILES.filter((fileName) => !fileTexts[fileName] || !fileTexts[fileName].trim());
+                modeValidation.set(modeKey, {
+                    isValid: missingFiles.length === 0,
+                    missingFiles
+                });
+
+                const sceneLines = collectLines(fileTexts['Scene.md'] || '');
+                const dialogueLines = collectLines(fileTexts['Dialogue.md'] || '');
+                const wisdomLines = collectLines(fileTexts['Wisdom.md'] || '');
+
+                const title = sceneLines[0] || dialogueLines[0] || fallback.title;
+                const description = sceneLines[1] || dialogueLines[1] || fallback.description;
+                const responseLine = wisdomLines[0] || fallback.response;
+
+                const loaded = {
+                    title,
+                    description,
+                    response: firstSentence(responseLine),
+                    wisdomLines,
+                    placeholder: fallback.placeholder,
+                    sceneLines
+                };
+
+                contentCache.set(modeKey, loaded);
+                return loaded;
+            } catch (error) {
+                modeValidation.set(modeKey, {
+                    isValid: false,
+                    missingFiles: [...SKILL_FILES]
+                });
+                contentCache.set(modeKey, fallback);
+                return fallback;
+            }
+        }
+
+        function oneLineResponse(mode) {
+            if (mode === 'personal') return 'אתה לא לבד, ננשום יחד ונבחר צעד קטן ובטוח.';
+            if (mode === 'teacher') return 'המלצה למורה: לאמת רגש, להציב גבול ברור ולתאם מעקב קצר.';
+            return 'צעד ראשון בסימולציה: לעצור הסלמה, למפות סיכונים ולבחור תגובת הרגעה מיידית.';
+        }
+
+        function detectEmotionPattern(text) {
+            const source = (text || '').toLowerCase();
+            const groups = [
+                { emotion: 'כעס', words: ['כעס', 'עצבני', 'מעצבן', 'זעם', 'רתיחה'] },
+                { emotion: 'בדידות', words: ['לבד', 'בדידות', 'דחוי', 'אף אחד', 'שקוף'] },
+                { emotion: 'תסכול', words: ['תסכול', 'לא מצליח', 'נמאס', 'תקוע', 'מיואש'] },
+                { emotion: 'חרדה', words: ['חרדה', 'פחד', 'לחץ', 'מתח', 'נחנק'] },
+                { emotion: 'עצב', words: ['עצוב', 'כואב', 'בוכה', 'נפגע'] },
+                { emotion: 'קושי חברתי', words: ['חבר', 'חברות', 'הפסקה', 'לא משתפים', 'שייכות'] },
+                { emotion: 'קושי בלמידה', words: ['מבחן', 'שיעורים', 'הכתבה', 'לא הבנתי', 'טעיתי'] }
+            ];
+
+            let detected = 'בלבול';
+            let bestScore = 0;
+
+            groups.forEach((group) => {
+                const score = group.words.reduce((acc, word) => acc + (source.includes(word) ? 1 : 0), 0);
+                if (score > bestScore) {
+                    bestScore = score;
+                    detected = group.emotion;
+                }
+            });
+
+            return detected;
+        }
+
+        function isExtremeDistress(text) {
+            const source = (text || '').toLowerCase();
+            const highRiskWords = ['לפגוע בעצמי', 'להיעלם', 'לא רוצה לחיות', 'להתאבד', 'סוף לחיים', 'אין טעם לחיות'];
+            return highRiskWords.some((word) => source.includes(word));
+        }
+
+        function bezenResponse(modeKey, text, fallbackText) {
+            const wisdomBase = firstSentence(fallbackText || oneLineResponse(modeKey));
+
+            if (isExtremeDistress(text)) {
+                return `${wisdomBase} אם קשה מאוד עכשיו, פנה/י למחנכת הכיתה לשיחה תומכת.`;
+            }
+
+            const emotion = detectEmotionPattern(text);
+
+            if (modeKey === 'teacher') {
+                return `עולה דפוס של ${emotion} בכיתה, ${wisdomBase}`;
+            }
+
+            if (modeKey === 'world') {
+                return `בסימולטור זיהינו ${emotion}; ${wisdomBase} מה אתה בוחר עכשיו?`;
+            }
+
+            if (emotion === 'בלבול') {
+                return `${wisdomBase} מה אתה בוחר עכשיו?`;
+            }
+
+            return `אני שומע ${emotion}; ${wisdomBase}`;
+        }
+
+        function buildSystemInstruction(modeKey) {
+            const modeHint =
+                modeKey === 'teacher'
+                    ? 'בהקשר מורה: התמקד באקלים כיתתי וקהילתי מצרפי, ללא חשיפת תוכן אישי.'
+                    : modeKey === 'world'
+                        ? 'בהקשר סימולטור: הדגש בחירה חיובית בין מסלולי פעולה והשפעתה על הסצנה.'
+                        : 'בהקשר תלמיד: תן מענה אישי חם, פשוט וקצר לילדי יסודי.';
+
+            return [
+                'אתה הלב של BEZEN – סוכן מלווה לחיזוק האקלים הכיתתי והקהילתי בבית הספר היסודי.',
+                'שפה לילדים: דבר בשפה פשוטה, חמה ונגישה המתאימה לילדים בגילאי יסודי, ללא מושגים מסובכים.',
+                'מרחב אישי בטוח: אפשר לכל תלמיד לפרוק רגשות בפרטיות מוחלטת כדי לבנות חוסן רגשי.',
+                'זיהוי דפוסים חברתיים: התמקד ברגשות מחיי היום-יום בבית הספר, כולל חברות, משחקים בהפסקה, הצלחה ותסכול בלימודים ותחושת שייכות.',
+                'הובלה לשיח: תמיד הצע דרך חיובית להתמודדות. אם נדרשת תמיכה נוספת, הפנה בנעימות למחנכת הכיתה לשיחה.',
+                'קצר וממוקד: ענה במשפט אחד או שניים בלבד ותן לתלמיד להוביל את השיחה.',
+                'פרטיות: לעולם אל תבקש פרטים אישיים מזהים. הכל נשאר פרטי.',
+                'בסס כל תגובה בעיקר על תוכן Wisdom.md של BEZEN והתאם אותה לילדים.',
+                modeHint
+            ].join('\n');
+        }
+
+        async function getApiBezenResponse(modeKey, userText, fallbackText, wisdomContext = []) {
+            try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 2200);
+                const response = await fetch(
+                    NETLIFY_GEMINI_ENDPOINT,
+                    {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        signal: controller.signal,
+                        body: JSON.stringify({
+                            modeKey,
+                            userText,
+                            fallbackText,
+                            wisdomContext,
+                            systemInstruction: buildSystemInstruction(modeKey)
+                        })
+                    }
+                );
+                clearTimeout(timeoutId);
+
+                if (!response.ok) {
+                    return bezenResponse(modeKey, userText, fallbackText);
+                }
+
+                const data = await response.json();
+                const apiText = data?.text?.trim();
+                if (!apiText) {
+                    return bezenResponse(modeKey, userText, fallbackText);
+                }
+
+                const concise = apiText.split('\n').map((line) => line.trim()).filter(Boolean).slice(0, 2).join(' ');
+                return concise || bezenResponse(modeKey, userText, fallbackText);
+            } catch (error) {
+                return bezenResponse(modeKey, userText, fallbackText);
+            }
+        }
+
+        function getSafeFallbackResponse(modeKey, loaded) {
+            const validation = modeValidation.get(modeKey);
+            if (validation && !validation.isValid) {
+                return oneLineResponse(modeKey);
+            }
+            return loaded.response || oneLineResponse(modeKey);
+        }
+
+        function createTeacherPulseMap() {
+            const pulseData = [
+                { label: 'תחושת בדידות', value: 30 },
+                { label: 'סקרנות', value: 50 },
+                { label: 'מתח חברתי', value: 20 }
+            ];
+            const cloudTerms = ['בדידות', 'סקרנות', 'שייכות', 'לחץ קל', 'רצון לשתף'];
+
+            const wrapper = document.createElement('section');
+            wrapper.className = 'pulse-map';
+
+            const title = document.createElement('p');
+            title.className = 'pulse-title';
+            title.textContent = 'מפת דופק כיתתית — תמונת מצב כללית';
+            wrapper.appendChild(title);
+
+            pulseData.forEach((item) => {
+                const row = document.createElement('div');
+                row.className = 'pulse-row';
+
+                const name = document.createElement('span');
+                name.textContent = item.label;
+
+                const track = document.createElement('div');
+                track.className = 'pulse-track';
+
+                const fill = document.createElement('div');
+                fill.className = 'pulse-fill';
+                fill.style.width = `${item.value}%`;
+                track.appendChild(fill);
+
+                const value = document.createElement('strong');
+                value.textContent = `${item.value}%`;
+
+                row.append(name, track, value);
+                wrapper.appendChild(row);
+            });
+
+            const cloud = document.createElement('div');
+            cloud.className = 'emotion-cloud';
+            cloudTerms.forEach((term) => {
+                const chip = document.createElement('span');
+                chip.className = 'emotion-chip';
+                chip.textContent = term;
+                cloud.appendChild(chip);
+            });
+            wrapper.appendChild(cloud);
+
+            const privacy = document.createElement('p');
+            privacy.className = 'privacy-note';
+            privacy.textContent = 'ללא חשיפת תוכן אישי — הנתונים מוצגים ברמה כיתתית מצרפית בלבד.';
+            wrapper.appendChild(privacy);
+
+            return wrapper;
+        }
+
+        function createWorldSimulator(loaded) {
+            const sceneSource = loaded.sceneLines && loaded.sceneLines.length
+                ? loaded.sceneLines.slice(0, 2).join(' ')
+                : loaded.description;
+            const dominant = detectDominantEmotion(sceneSource);
+            resetEmotionFilter();
+            pageBody.classList.add(dominant.className);
+
+            const wrapper = document.createElement('section');
+            wrapper.className = 'scene-block';
+
+            const sceneLabel = document.createElement('p');
+            sceneLabel.className = 'scene-label';
+            sceneLabel.textContent = `סצנה פעילה מתוך Scene.md · רגש דומיננטי: ${dominant.label}`;
+
+            const sceneText = document.createElement('p');
+            sceneText.className = 'scene-text';
+            sceneText.textContent = sceneSource;
+
+            const actions = document.createElement('div');
+            actions.className = 'world-actions';
+
+            const continueBtn = document.createElement('button');
+            continueBtn.className = 'world-choice';
+            continueBtn.type = 'button';
+            continueBtn.textContent = 'להמשיך בשיח';
+
+            const breakBtn = document.createElement('button');
+            breakBtn.className = 'world-choice';
+            breakBtn.type = 'button';
+            breakBtn.textContent = 'לצאת להפסקה';
+
+            actions.append(continueBtn, breakBtn);
+
+            const outcome = document.createElement('p');
+            outcome.className = 'world-outcome';
+
+            continueBtn.addEventListener('click', () => {
+                outcome.textContent = 'המסלול ממשיך: הדמו מראה ירידת מתח הדרגתית והעמקת שיח בטוח.';
+                orb.style.transform = 'scale(1.06)';
+                setTimeout(() => {
+                    orb.style.transform = '';
+                }, 260);
+            });
+
+            breakBtn.addEventListener('click', () => {
+                outcome.textContent = 'המסלול מתחלף: הסרט האינטראקטיבי עובר להפסקה קצרה לפני חזרה לשיחה.';
+                pageBody.classList.remove('emotion-stress', 'emotion-lonely');
+                pageBody.classList.add('emotion-calm');
+                orb.style.filter = 'hue-rotate(210deg)';
+                setTimeout(() => {
+                    orb.style.filter = '';
+                }, 300);
+            });
+
+            wrapper.append(sceneLabel, sceneText, actions, outcome);
+            return wrapper;
+        }
+
+        async function renderMode(modeKey) {
+            const mode = modes[modeKey];
+            if (!mode) return;
+            const localToken = ++renderToken;
+
+            modeButtons.forEach((button) => {
+                button.classList.toggle('active', button.dataset.mode === modeKey);
+                button.setAttribute('aria-selected', button.dataset.mode === modeKey ? 'true' : 'false');
+            });
+
+            orb.classList.remove('mode-personal', 'mode-teacher', 'mode-world');
+            orb.classList.add(mode.orbClass);
+            orb.setAttribute('data-mode-label', mode.orbLabel);
+
+            modePanel.innerHTML = '';
+            const loadingTitle = document.createElement('h2');
+            loadingTitle.className = 'mode-title';
+            loadingTitle.textContent = mode.title;
+            const loadingText = document.createElement('p');
+            loadingText.className = 'mode-description';
+            loadingText.textContent = 'טוען הנחיות מתוכנית BEZEN...';
+            modePanel.append(loadingTitle, loadingText);
+
+            const loaded = await loadModeContent(modeKey);
+            if (localToken !== renderToken) return;
+
+            const titleEl = document.createElement('h2');
+            titleEl.className = 'mode-title';
+            titleEl.textContent = loaded.title;
+
+            const descriptionEl = document.createElement('p');
+            descriptionEl.className = 'mode-description';
+            descriptionEl.textContent = loaded.description;
+
+            const teacherPulseMap = modeKey === 'teacher' ? createTeacherPulseMap() : null;
+            const worldSimulator = modeKey === 'world' ? createWorldSimulator(loaded) : null;
+            if (modeKey !== 'world') {
+                resetEmotionFilter();
+            }
+
+            const row = document.createElement('div');
+            row.className = 'control-row';
+
+            const modeInput = document.createElement('input');
+            modeInput.id = 'mode-input';
+            modeInput.className = 'control';
+            modeInput.type = 'text';
+            modeInput.placeholder = loaded.placeholder;
+            modeInput.setAttribute('aria-label', loaded.title);
+
+            const modeAction = document.createElement('button');
+            modeAction.id = 'mode-action';
+            modeAction.className = 'action-btn';
+            modeAction.type = 'button';
+            modeAction.textContent = 'הפעל ממשק';
+
+            row.append(modeInput, modeAction);
+
+            const singleResponse = document.createElement('p');
+            singleResponse.id = 'single-response';
+            singleResponse.className = 'single-response';
+
+            if (teacherPulseMap) {
+                modePanel.replaceChildren(titleEl, descriptionEl, teacherPulseMap, row, singleResponse);
+            } else if (worldSimulator) {
+                modePanel.replaceChildren(titleEl, descriptionEl, worldSimulator, row, singleResponse);
+            } else {
+                modePanel.replaceChildren(titleEl, descriptionEl, row, singleResponse);
+            }
+
+            const submit = async () => {
+                const userText = modeInput.value.trim();
+                if (!userText) {
+                    singleResponse.textContent = '';
+                    return;
+                }
+
+                const fallbackBase = getSafeFallbackResponse(modeKey, loaded);
+                const localInstant = bezenResponse(modeKey, userText, fallbackBase);
+                singleResponse.textContent = localInstant;
+
+                const apiResult = await getApiBezenResponse(
+                    modeKey,
+                    userText,
+                    fallbackBase,
+                    loaded.wisdomLines || []
+                );
+
+                if (apiResult && apiResult !== localInstant) {
+                    singleResponse.textContent = apiResult;
+                }
+            };
+
+            modeAction.addEventListener('click', submit);
+            modeInput.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter') submit();
+            });
+        }
+
+        modeButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                if (button.id === 'principal-guide-btn') return;
+                renderMode(button.dataset.mode);
+            });
+        });
+
+        principalGuideBtn.addEventListener('click', () => {
+            principalModal.classList.add('is-open');
+            principalModal.setAttribute('aria-hidden', 'false');
+        });
+
+        principalModalClose.addEventListener('click', () => {
+            principalModal.classList.remove('is-open');
+            principalModal.setAttribute('aria-hidden', 'true');
+        });
+
+        principalModal.addEventListener('click', (event) => {
+            if (event.target === principalModal) {
+                principalModal.classList.remove('is-open');
+                principalModal.setAttribute('aria-hidden', 'true');
+            }
+        });
+
+        renderMode('personal');
+        Promise.all(Object.keys(modes).map((modeKey) => loadModeContent(modeKey))).catch(() => {});
+
+        const canvas = document.getElementById('scene-bg');
+        const ctx = canvas.getContext('2d');
+        let width = 0;
+        let height = 0;
+
+        function resizeScene() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        function drawScene(time) {
+            ctx.clearRect(0, 0, width, height);
+            ctx.fillStyle = 'rgba(5, 5, 10, 0.58)';
+            ctx.fillRect(0, 0, width, height);
+
+            const spacing = 46;
+            const horizon = height * 0.33;
+            const drift = (time * 0.018) % spacing;
+
+            ctx.lineWidth = 0.75;
+            ctx.strokeStyle = 'rgba(86, 180, 255, 0.38)';
+
+            for (let x = -width; x < width * 2; x += spacing) {
+                ctx.beginPath();
+                ctx.moveTo(x + drift, height);
+                ctx.lineTo(width / 2 + (x - width / 2) * 0.55, horizon);
+                ctx.stroke();
+            }
+
+            for (let y = 0; y < height; y += spacing) {
+                const depth = y / height;
+                const rowY = horizon + (height - horizon) * depth * depth;
+                ctx.beginPath();
+                ctx.moveTo(0, rowY);
+                ctx.lineTo(width, rowY);
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(drawScene);
+        }
+
+        window.addEventListener('resize', resizeScene);
+        resizeScene();
+        requestAnimationFrame(drawScene);
+    </script>
+</body>
+</html>

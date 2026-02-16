@@ -1,0 +1,6 @@
+Create an interactive video where a character apologizes to a friend.
+Offer two paths:
+1) A quick "sorry" with shrug.
+2) A heartfelt expression of sorrow and understanding.
+Include BEZEN teaching the power of genuine remorse.
+End with the quote: "Sincere remorse heals wounded hearts."

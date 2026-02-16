@@ -1,0 +1,9 @@
+Create an interactive video where a character explores multiple hobbies.
+
+Offer two paths:
+1) Try everything briefly.
+2) Select a few and dive deep.
+
+Include BEZEN teaching balance between breadth and depth.
+
+End with the quote: "Diverse curiosity blooms with focused depth."

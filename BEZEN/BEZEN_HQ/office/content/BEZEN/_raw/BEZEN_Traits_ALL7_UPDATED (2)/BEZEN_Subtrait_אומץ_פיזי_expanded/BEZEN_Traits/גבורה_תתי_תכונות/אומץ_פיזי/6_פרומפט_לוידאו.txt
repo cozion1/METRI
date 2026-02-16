@@ -1,0 +1,6 @@
+Create an interactive video where a character faces a high ledge.
+Offer two paths:
+1) Jump impulsively into the void.
+2) Inspect safety measures and proceed carefully.
+Include BEZEN explaining that physical courage pairs with preparation.
+End with the quote: "True bravery protects the body while challenging the spirit."

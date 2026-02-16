@@ -1,0 +1,6 @@
+Create an interactive video where a character reviews a complex project map.
+Offer two paths:
+1) Dive into fine details first.
+2) Describe the overall process flow.
+Include BEZEN teaching the balance between overview and detail.
+End with the quote: "A true overview stands on solid details."

@@ -1,0 +1,6 @@
+Create an interactive video where a character must resist a distraction.
+Offer two paths:
+1) Give in to the distraction now.
+2) Stay focused and reward yourself later.
+Include BEZEN teaching delayed gratification.
+End with the quote: "Sacrifice now, reap benefits tomorrow."

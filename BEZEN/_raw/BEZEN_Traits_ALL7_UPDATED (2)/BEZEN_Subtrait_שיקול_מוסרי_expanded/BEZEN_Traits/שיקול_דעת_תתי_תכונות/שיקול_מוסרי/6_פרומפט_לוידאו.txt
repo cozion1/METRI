@@ -1,0 +1,6 @@
+Create an interactive video where a character selects a technology.
+Offer two paths:
+1) Use for personal gain.
+2) Evaluate social and environmental impacts.
+Include BEZEN highlighting ethical judgment.
+End with the quote: 'Justice and benefit guide right choices.' 

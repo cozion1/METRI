@@ -1,0 +1,6 @@
+Create an interactive video where a character delivers honest feedback.
+Offer two paths:
+1) Speak truth bluntly.
+2) Frame truth with empathy.
+Include BEZEN guiding on balanced honesty.
+End with the quote: "Truth spoken with kindness builds trust."

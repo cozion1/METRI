@@ -1,0 +1,6 @@
+Create an interactive video where a manager launches a project.
+Offer two paths:
+1) Launch immediately.
+2) Analyze best, worst, and expected scenarios first.
+Include BEZEN teaching outcome forecasting.
+End with the quote: 'Foreseeing paths guides success.' 

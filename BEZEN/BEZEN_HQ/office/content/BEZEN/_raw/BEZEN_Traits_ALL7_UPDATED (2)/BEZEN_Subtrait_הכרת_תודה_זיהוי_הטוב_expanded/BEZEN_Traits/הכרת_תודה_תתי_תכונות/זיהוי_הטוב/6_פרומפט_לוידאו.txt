@@ -1,0 +1,6 @@
+Create an interactive video where a character wakes up to a new day.
+Offer two paths:
+1) Focus on worries and tasks.
+2) Notice a small positive moment (sunlight, aroma of coffee).
+Include BEZEN guiding on spotting good moments.
+End with the quote: "Gratitude begins with noticing the small wonders."

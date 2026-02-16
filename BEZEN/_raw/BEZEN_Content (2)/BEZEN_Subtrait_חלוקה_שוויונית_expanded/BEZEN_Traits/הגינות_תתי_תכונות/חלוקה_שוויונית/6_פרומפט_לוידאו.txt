@@ -1,0 +1,6 @@
+Create an interactive video where a team allocates budget resources.
+Offer two paths:
+1) Distribute equal amounts to everyone.
+2) Allocate based on role and necessity.
+Include BEZEN explaining that fair distribution balances equality and needs.
+End with the quote: "Fairness is giving each what they need."

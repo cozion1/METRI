@@ -1,0 +1,6 @@
+Create an interactive video where a character chooses courses to study.
+Offer two paths:
+1) Take many introductory courses.
+2) Focus on one advanced topic.
+Include BEZEN guiding on mastery orientation.
+End with: "Depth of focus brings true expertise."

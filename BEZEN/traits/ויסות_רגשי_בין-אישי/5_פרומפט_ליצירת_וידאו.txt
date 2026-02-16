@@ -1,0 +1,6 @@
+Create an interactive video where a character handles an angry customer.
+Offer two paths:
+1) Respond with anger.
+2) Stay calm and offer a solution.
+Include BEZEN teaching interpersonal emotional regulation.
+End with the quote: "Control your emotions, control the situation."

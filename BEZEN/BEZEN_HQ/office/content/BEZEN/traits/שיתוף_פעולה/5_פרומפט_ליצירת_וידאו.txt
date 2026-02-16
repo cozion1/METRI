@@ -1,0 +1,6 @@
+Create an interactive video where a team creates a presentation.
+Offer two paths:
+1) Individually work on separate slides.
+2) Coordinate to build a unified presentation.
+Include BEZEN teaching effective collaboration.
+End with the quote: "Together we achieve more."

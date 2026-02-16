@@ -1,0 +1,6 @@
+Create an interactive video where a character consoles a friend.
+Offer two paths:
+1) Offer silent listening.
+2) Share past successes and hopeful plans.
+Include BEZEN guiding on sharing hope.
+End with the quote: "Hope shared is hope multiplied."

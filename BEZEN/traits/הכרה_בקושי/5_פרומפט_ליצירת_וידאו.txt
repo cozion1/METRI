@@ -1,0 +1,6 @@
+Create an interactive video where a character faces a tough challenge.
+Offer two paths:
+1) Deny its difficulty and ignore the problem.
+2) Acknowledge the challenge and map out the first steps.
+Include BEZEN guiding on constructive recognition.
+End with the quote: "Seeing the problem clearly is the first step to hope."

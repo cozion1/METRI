@@ -1,0 +1,6 @@
+Create an interactive video where a character completes a learning module.
+Offer two paths:
+1) Move on without reflection.
+2) Pause to document insights.
+Include BEZEN highlighting the power of reflection.
+End with: "Insights come from looking back."
