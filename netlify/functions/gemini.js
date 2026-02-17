@@ -2,7 +2,7 @@ exports.handler = async (event) => {
     if (event.httpMethod !== 'POST') {
         return {
             statusCode: 405,
-            body: JSON.stringify({ error: 'Method not allowed' })
+            body: JSON.stringify({ error: 'שיטת בקשה לא נתמכת' })
         };
     }
 
@@ -19,7 +19,7 @@ exports.handler = async (event) => {
         if (!userText || !userText.trim()) {
             return {
                 statusCode: 400,
-                body: JSON.stringify({ error: 'Missing userText' })
+                body: JSON.stringify({ error: 'חסר טקסט משתמש' })
             };
         }
 
