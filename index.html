@@ -311,6 +311,72 @@
             font-size: 0.96rem;
         }
 
+        .practice-rubric {
+            margin: 0 0 10px;
+            border: 1px solid rgba(125, 180, 255, 0.55);
+            border-radius: 14px;
+            padding: 10px;
+            background: rgba(74, 158, 255, 0.14);
+        }
+
+        .practice-title {
+            margin: 0 0 8px;
+            font-size: 1rem;
+            color: rgba(238, 246, 255, 0.98);
+            font-weight: 600;
+        }
+
+        .practice-scroll {
+            max-height: 128px;
+            overflow-y: auto;
+            padding-left: 2px;
+        }
+
+        .practice-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .practice-scroll::-webkit-scrollbar-thumb {
+            background: rgba(120, 170, 255, 0.45);
+            border-radius: 999px;
+        }
+
+        .practice-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .practice-btn {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.09);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.82rem;
+            padding: 7px 10px;
+            cursor: pointer;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .practice-btn:hover {
+            border-color: rgba(74, 158, 255, 0.85);
+            background: rgba(74, 158, 255, 0.22);
+        }
+
+        .freewrite-block {
+            margin: 0 0 12px;
+            border: 1px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .freewrite-title {
+            margin: 0 0 7px;
+            font-size: 0.86rem;
+            color: rgba(255, 255, 255, 0.83);
+        }
+
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -886,6 +952,48 @@
             return wrapper;
         }
 
+
+        function createPracticeRubric() {
+            const examples = [
+                'תמיד אתה חייב להרוס לכל הקבוצה',
+                'המורה, השיעור הזה משעמם מוות',
+                'אף אחד לא מבין אותי פה',
+                'אף פעם לא מבינים אותי',
+                'כולם בקבוצה עושים לייקים, לי לא',
+                'אני מרגיש שלא סופרים אותי בכלל',
+                'אם אני אכתוב משהו יחשבו שאני חופר',
+                'אני מרגיש שאני סתם מפריע',
+                'אני משתדל לא להגיב, אולי זה ייפסק',
+                'אני עושה כאילו לא אכפת לי, אבל זה ממש לא נכון'
+            ];
+
+            const wrapper = document.createElement('section');
+            wrapper.className = 'practice-rubric';
+
+            const title = document.createElement('p');
+            title.className = 'practice-title';
+            title.textContent = 'משפטים טעוני שיפור';
+
+            const buttons = document.createElement('div');
+            buttons.className = 'practice-buttons';
+
+            const scroll = document.createElement('div');
+            scroll.className = 'practice-scroll';
+
+            examples.forEach((sentence) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'practice-btn';
+                btn.textContent = sentence;
+                btn.dataset.practiceSentence = sentence;
+                buttons.appendChild(btn);
+            });
+
+            scroll.appendChild(buttons);
+            wrapper.append(title, scroll);
+            return wrapper;
+        }
+
         async function renderMode(modeKey) {
             const mode = modes[modeKey];
             if (!mode) return;
@@ -922,12 +1030,20 @@
 
             const teacherPulseMap = modeKey === 'teacher' ? createTeacherPulseMap() : null;
             const worldSimulator = modeKey === 'world' ? createWorldSimulator(loaded) : null;
+            const worldPracticeRubric = modeKey === 'world' ? createPracticeRubric() : null;
             if (modeKey !== 'world') {
                 resetEmotionFilter();
             }
 
             const row = document.createElement('div');
             row.className = 'control-row';
+
+            const freewriteBlock = document.createElement('div');
+            freewriteBlock.className = 'freewrite-block';
+
+            const freewriteTitle = document.createElement('p');
+            freewriteTitle.className = 'freewrite-title';
+            freewriteTitle.textContent = 'או נסחו משפט בעצמכם אם לא מצאתם';
 
             const modeInput = document.createElement('input');
             modeInput.id = 'mode-input';
@@ -951,9 +1067,20 @@
             if (teacherPulseMap) {
                 modePanel.replaceChildren(titleEl, descriptionEl, teacherPulseMap, row, singleResponse);
             } else if (worldSimulator) {
-                modePanel.replaceChildren(titleEl, descriptionEl, worldSimulator, row, singleResponse);
+                freewriteBlock.append(freewriteTitle, row);
+                modePanel.replaceChildren(titleEl, descriptionEl, worldPracticeRubric, freewriteBlock, worldSimulator, singleResponse);
             } else {
                 modePanel.replaceChildren(titleEl, descriptionEl, row, singleResponse);
+            }
+
+            if (worldPracticeRubric) {
+                const practiceButtons = worldPracticeRubric.querySelectorAll('.practice-btn');
+                practiceButtons.forEach((button) => {
+                    button.addEventListener('click', () => {
+                        modeInput.value = button.dataset.practiceSentence || '';
+                        modeInput.focus();
+                    });
+                });
             }
 
             const submit = async () => {
@@ -1009,7 +1136,7 @@
             }
         });
 
-        renderMode('personal');
+        renderMode('world');
         Promise.all(Object.keys(modes).map((modeKey) => loadModeContent(modeKey))).catch(() => {});
 
         const canvas = document.getElementById('scene-bg');
