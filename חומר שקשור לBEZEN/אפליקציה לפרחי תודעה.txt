@@ -1,0 +1,457 @@
+רעיון מצוין 🌿
+אתה חושב בדיוק כמו יזם מודע — לא לחכות שיאשרו, אלא *להראות חוויה אמיתית*.
+במקום לדבר על פוטנציאל — פשוט ליצור אותו.
+אז בוא נבנה את ה־**MVP ב־Lovable** צעד־צעד, עם דגש על פרחי הוראה.
+
+---
+
+## 🎯 שם האפליקציה
+
+**BEZEN-EDU | מסע המורה הפנימי**
+
+---
+
+## 🌱 מטרת ה־MVP
+
+להציג למרכזת פרחי ההוראה (ולכל גורם נוסף)
+איך בינה מלאכותית יכולה ללוות מורה צעיר בתהליך רגשי קצר, אינטראקטיבי ועמוק —
+בלי עומס, בלי טיפול, רק **5 דקות של הקשבה מודעת ביום**.
+
+---
+
+## 🧩 מבנה בסיסי – שלושה מסכים עיקריים
+
+### 1️⃣ מסך פתיחה – Welcome
+
+**כותרת:** “שלום 🌿, נצא יחד למסע קצר של נשימה ומודעות.”
+
+* שדה שם פרטי
+* בחירת ערך מנחה (חמלה / הקשבה / אחריות / שלווה)
+* כפתור: “התחל את המסע”
+
+📦 ב־Lovable:
+Entity = `User`
+Fields: `name`, `value_focus`
+
+---
+
+### 2️⃣ מסך המסע – 5 שלבים קצרים
+
+בכל שלב רכיב אחד פשוט (בחירה, טקסט, נשימה):
+
+| שלב | שם               | פעולה                                              | תוצאה                                          |
+| --- | ---------------- | -------------------------------------------------- | ---------------------------------------------- |
+| 1   | **BEZEN-MIND**   | המשתמש כותב מחשבה שחוזרת אליו (“אני לא מספיק טוב”) | מוצגת מחשבה מיטיבה (“אני לומד ומשתפר בכל יום”) |
+| 2   | **BEZEN-HEART**  | בוחר רגש מתוך רשימה (פחד / תסכול / תקווה)          | מוצגת נשימה מודרכת 4-4-4                       |
+| 3   | **BEZEN-BODY**   | מזיז סליידר “איך הגוף מרגיש?”                      | מופיעה הודעה מרגיעה (“שים לב לנשימה שלך...”)   |
+| 4   | **BEZEN-ACTION** | בוחר פעולה קטנה ליישום מחר בכיתה                   | נרשם כיעד אישי                                 |
+| 5   | **BEZEN-SOUL**   | כותב משפט אמונה חדש (“אני ראוי להיות מורה שמקשיב”) | נוצר קלף תודעה עם המשפט                        |
+
+📦 ב־Lovable:
+Entity = `Journey`
+Fields: `mind_text`, `heart_emotion`, `body_slider`, `action_step`, `soul_belief`, `user_id`
+
+---
+
+### 3️⃣ מסך סיום – קלף תודעה
+
+מוצג משפטו החדש של המשתמש בקלף ויזואלי:
+
+> “אני מורה שמלמד מתוך שקט פנימי 💫”
+> כפתורים:
+
+* “שמור קלף”
+* “התחל מסע חדש מחר”
+
+📦 Entity = `Card`
+Fields: `text`, `value_tag`, `user_id`
+
+---
+
+## 💠 לוגיקה בסיסית (Lovable):
+
+* כל משתמש מתחיל מסע חדש ביום.
+* הנתונים נשמרים אוטומטית ל־Journey.
+* ב־Dashboard אפשר להציג גרף רגשות לאורך שבוע (פשוט אך אפקטיבי).
+
+---
+
+## 🎨 עיצוב מומלץ
+
+* צבע רקע: #F7F9F9
+* צבע טקסט: #244C5A (ירוק־תכלת BEZEN)
+* גופן: Noto Sans או Assistant
+* אייקונים: עלי לוטוס קטנים בכל שלב
+
+---
+
+## 🌸 חוויית משתמש
+
+ה־MVP צריך להרגיש: **רגוע, אישי, לא מאיים, חומל.**
+שקט ויזואלי, טקסט רך, התקדמות מדורגת (כמו מדיטציה מודרכת קלה).
+
+---
+
+אם תרצה —
+אני יכול עכשיו להכין לך קובץ תכנון מוכן ל־Lovable (כולל ישויות, שדות, טקסטים למסכים והנחיות ל־Prompt של Lovable לבנייה אוטומטית).
+כך תוכל להדביק אותו ישירות למערכת, והיא תבנה עבורך את ה־MVP תוך דקות.
+
+רוצה שאכין לך את קובץ ההנחיות ל־Lovable בעברית או באנגלית?
+מדהים 🌿
+הנה לך **קובץ הנחיות מלא בעברית** שאפשר להעתיק ישירות לתוך **Lovable** כדי לבנות את גרסת ה־MVP של
+**“BEZEN-EDU | מסע המורה הפנימי”**
+
+(הוא מנוסח כך שתוכל פשוט להדביק אותו לחלון ההנחיות של Lovable – המערכת תבין את המבנה ותיצור עבורך את הפרויקט האינטראקטיבי.)
+
+---
+
+## 🪷 קובץ הנחיות לבניית MVP ב־Lovable
+
+**שם הפרויקט:** BEZEN-EDU | מסע המורה הפנימי
+
+**מטרה:** ליצור אפליקציה אינטראקטיבית רכה, בת 5–7 דקות ביום, שמלווה פרחי הוראה בתהליך קצר של מודעות רגשית, נשימה וחיזוק עצמי.
+
+---
+
+### 👤 ישות ראשית: `User`
+
+תיאור: משתמש שהוא פרח הוראה או מורה צעיר.
+שדות:
+
+* `name` – שם פרטי
+* `email` – מייל
+* `value_focus` – ערך מנחה (חמלה / הקשבה / אחריות / שלווה)
+* `created_at` – תאריך הצטרפות
+
+---
+
+### 🌿 ישות שנייה: `Journey`
+
+תיאור: המסע היומי של המשתמש (חמישה שלבים קצרים).
+שדות:
+
+* `user_id` – קישור ל־User
+* `date` – תאריך המסע
+* `mind_text` – מחשבה שעלתה היום
+* `mind_reframe` – מחשבה מחזקת
+* `heart_emotion` – רגש נבחר
+* `body_state` – סליידר תחושה (1–5)
+* `action_step` – פעולה קטנה למחר
+* `soul_belief` – אמונה מחזקת
+* `calm_score` – רמת שקט אחרי המסע (1–5)
+
+---
+
+### 💎 ישות שלישית: `Card`
+
+תיאור: קלף תודעה אישי שהמשתמש מקבל בסוף כל מסע.
+שדות:
+
+* `user_id` – קישור ל־User
+* `text` – משפט תודעה מחזק
+* `value_tag` – הערך שממנו נוצר
+* `created_at` – תאריך יצירה
+
+---
+
+### 📱 מסכים באפליקציה
+
+#### 1️⃣ מסך פתיחה – “ברוך הבא”
+
+* כותרת: “שלום 🌿, נצא יחד למסע קצר של נשימה ומודעות.”
+* שדה שם + בחירת ערך מנחה (תפריט).
+* כפתור: “התחל את המסע”.
+* ברקע אנימציה עדינה של נשימה (פולס איטי).
+
+#### 2️⃣ מסך המסע – 5 שלבים:
+
+* **שלב 1 | BEZEN-MIND:**
+  טקסט: “איזו מחשבה עולה בך כשאתה חושב על ההוראה שלך היום?”
+  קלט טקסט חופשי → לאחר מכן מוצג משפט מחזק:
+  “נסה לראות את עצמך כלומד, לא כמושלם.”
+
+* **שלב 2 | BEZEN-HEART:**
+  טקסט: “איזה רגש מורגש כרגע?”
+  בחירה מתוך: פחד / תקווה / תסכול / סקרנות.
+  לאחר הבחירה מופיעה נשימה מודרכת (4-4-4).
+
+* **שלב 3 | BEZEN-BODY:**
+  טקסט: “שים לב לגוף שלך. כמה שקט אתה מרגיש עכשיו?”
+  סליידר 1–5 עם צבעים משתנים (אדום → ירוק).
+
+* **שלב 4 | BEZEN-ACTION:**
+  טקסט: “איזו פעולה קטנה תעזור לך מחר בכיתה?”
+  שדה טקסט קצר (לדוגמה: “להקשיב יותר לפני שאענה”).
+
+* **שלב 5 | BEZEN-SOUL:**
+  טקסט: “כתוב משפט שמחזק את תחושת הייעוד שלך כמורה.”
+  לדוגמה: “אני מאמין שכל תלמיד נושא בתוכו אור.”
+
+---
+
+#### 3️⃣ מסך סיום – קלף תודעה
+
+* מוצג הקלף עם המשפט המחזק שיצר המשתמש.
+* טקסט: “זה הקלף שלך להיום 💫 קח נשימה לפני שתמשיך הלאה.”
+* כפתורים:
+
+  * “שמור קלף” (יוצר רשומת Card)
+  * “מסע חדש מחר”
+
+---
+
+### 🎨 עיצוב מומלץ
+
+* צבע רקע: #F9FBFA (בהיר ורך)
+* צבע טקסט: #225C56 (ירוק־תכלת BE ZEN)
+* גופן: “Assistant” או “Noto Sans Hebrew”
+* אנימציה קלה של נשימה (עיגול מתרחב ומתכווץ ברוגע).
+
+---
+
+### 💡 פונקציות עיקריות
+
+1. התחברות בסיסית (שם בלבד, בלי סיסמה).
+2. שמירת המסע האחרון אוטומטית.
+3. אפשרות צפייה בקלפים שנוצרו (אוסף תודעה אישי).
+4. Dashboard פשוט למנחה (לראות כמה מסעות הושלמו השבוע).
+
+---
+
+### 🛡️ פרטיות
+
+* אין איסוף מידע רפואי או אישי רגיש.
+* כל הנתונים אנונימיים למעט שם פרטי ודוא"ל (אופציונלי).
+* מטרת האפליקציה: העצמה רגשית, לא טיפול או אבחון.
+
+---
+
+### 🌸 הודעת פתיחה רגישה (להדביק למסך הראשון)
+
+> “כל מסע מתחיל בנשימה אחת.
+> כאן אין נכון או לא נכון – יש הקשבה, רוך, וחיבור לעצמך.
+> אתה לא לבד – כל נשימה שלך משנה משהו קטן לטובה.”
+
+---
+
+### ✨ הודעת סיום
+
+> “תודה שהקדשת רגע לעצמך.
+> זכור – שלווה איננה מקום שאליו מגיעים,
+> אלא דרך שבה הולכים.”
+
+---
+
+אם תרצה, אעזור לך בשלב הבא להכין את **prompt המוכן להדבקה ב־Lovable**
+(כולל ניסוח מלא באנגלית עבור המנוע שם, כדי שייבנה את המסכים אוטומטית בדיוק לפי ההנחיות האלה).
+רוצה שאכין לך את גרסת ההדבקה המלאה ל־Lovable עכשיו? 🌿
+מושלם 🌿
+הנה גרסה **מוכנה להדבקה ישירות ל־Lovable**, באנגלית (כדי שהמערכת תבין את ההנחיות במדויק) —
+אבל היא שומרת את כל הרוח, התוכן והזרימה שכתבנו בעברית.
+פשוט תעתיק את כל הטקסט הזה, תיכנס ל־[https://lovable.dev](https://lovable.dev),
+ותדביק אותו ב־prompt הראשי תחת **"Describe your app idea"**.
+
+---
+
+## 💫 Prompt to paste into Lovable
+
+**Project Name:** BEZEN-EDU | The Inner Teacher Journey
+
+**Goal:**
+Create a gentle, interactive MVP (web + mobile) that guides trainee teachers through a 5-minute daily emotional awareness journey.
+The experience combines mindfulness, breathing, and compassionate thinking, helping teachers strengthen inner calm and professional presence.
+
+---
+
+### 🧩 ENTITIES
+
+**1. User**
+Represents each trainee teacher.
+Fields:
+
+* name (string)
+* email (string, optional)
+* value_focus (enum: Compassion, Listening, Responsibility, Calmness)
+* created_at (datetime)
+
+---
+
+**2. Journey**
+Represents the user’s daily emotional session.
+Fields:
+
+* user_id (relation to User)
+* date (datetime)
+* mind_text (string)
+* mind_reframe (string)
+* heart_emotion (enum: Fear, Hope, Frustration, Curiosity)
+* body_state (integer, 1–5 slider)
+* action_step (string)
+* soul_belief (string)
+* calm_score (integer, 1–5)
+
+---
+
+**3. Card**
+Represents the final consciousness affirmation card created at the end of each session.
+Fields:
+
+* user_id (relation to User)
+* text (string)
+* value_tag (string)
+* created_at (datetime)
+
+---
+
+### 📱 SCREENS
+
+#### 1️⃣ Welcome Screen
+
+**Title:** “Welcome 🌿 Let’s take a short journey of breathing and awareness.”
+Elements:
+
+* Input field: name
+* Dropdown: Select guiding value (Compassion / Listening / Responsibility / Calmness)
+* Button: “Start the Journey”
+* Background animation: soft breathing pulse (circle expanding gently)
+
+---
+
+#### 2️⃣ The Journey (Five Stages)
+
+**Stage 1 – BEZEN-MIND**
+Prompt: “What thought arises when you think about your teaching today?”
+→ Text input.
+After submission, display: “Try to see yourself as learning, not failing.”
+
+**Stage 2 – BEZEN-HEART**
+Prompt: “Which emotion is present right now?”
+→ Choose from Fear / Hope / Frustration / Curiosity.
+After selection: show short breathing guide (4-4-4 breathing).
+
+**Stage 3 – BEZEN-BODY**
+Prompt: “Notice your body. How calm do you feel right now?”
+→ Slider 1–5 (color from red to green).
+
+**Stage 4 – BEZEN-ACTION**
+Prompt: “What small action could support you tomorrow in class?”
+→ Short text field (example: ‘I’ll listen before I react.’).
+
+**Stage 5 – BEZEN-SOUL**
+Prompt: “Write a belief that strengthens your sense of purpose as a teacher.”
+→ Text field (example: ‘Every student carries light within.’).
+
+---
+
+#### 3️⃣ Final Screen – Consciousness Card
+
+Display the new affirmation card:
+
+> “I am a teacher who teaches from inner calm 💫.”
+> Buttons:
+
+* “Save Card” (creates new Card entity)
+* “Start a New Journey Tomorrow”
+  Soft fade-out animation + gentle chime sound.
+
+---
+
+### 🎨 DESIGN STYLE
+
+* Background color: `#F9FBFA`
+* Text color: `#225C56` (soft green-blue)
+* Font: *Noto Sans* or *Assistant*
+* Minimal, calm layout — plenty of white space, rounded buttons, breathing animations.
+
+---
+
+### 💡 FEATURES
+
+* Simple login (first name only)
+* Auto-save the latest Journey
+* “My Cards” section to view past affirmations
+* Basic dashboard for mentors: number of journeys completed per week
+
+---
+
+### 🛡️ PRIVACY & ETHICS
+
+* Collect only first name and optional email.
+* No sensitive or medical data.
+* Purpose: personal emotional empowerment, not diagnosis or therapy.
+* Show clear “Safe Space” disclaimer.
+
+---
+
+### 🌸 OPENING MESSAGE (first screen)
+
+> “Every journey begins with a single breath.
+> Here there’s no right or wrong — only listening, kindness, and connection to yourself.
+> You are not alone — every breath changes something for the better.”
+
+---
+
+### ✨ FINAL MESSAGE (last screen)
+
+> “Thank you for giving yourself this moment.
+> Remember — calmness isn’t a place you arrive at,
+> it’s a way of walking through life.”
+
+---
+
+### 🧠 Optional Components for MVP+
+
+* Weekly summary: average calm_score per user.
+* Group view for mentors (non-identifiable).
+* Notification once per day: “Take one breath for awareness 🌿.”
+
+---
+
+💚 **End of Prompt**
+Paste this text into Lovable, click “Generate App”, and the platform will auto-build your BEZEN-EDU MVP prototype.
+
+---
+
+רוצה שאעזור לך אחרי זה גם לנסח את הטקסט הקצר (תיאור) שתצרף ל־**עמוד האפליקציה ב־Lovable**, כדי שהרכזת תוכל לראות אותו אונליין בצורה מקצועית?
+נפלא 💫
+הנה נוסח מוכן וברור לתיאור האפליקציה שתוכל להכניס לעמוד של **BEZEN-EDU** ב־Lovable (או בדף הנחיתה שלה).
+הוא מנוסח כך שידבר גם לרגש וגם לשפה המקצועית של רכזת פרחי הוראה — מדויק, עדין ולא “מוכר” מדי.
+
+---
+
+## 🌿 תיאור האפליקציה – BEZEN-EDU | מסע המורה הפנימי
+
+**BEZEN-EDU** היא אפליקציה חדשנית שמלווה פרחי הוראה ומורים צעירים בתהליך יומי קצר של חיזוק חוסן רגשי, מודעות וחמלה עצמית.
+בכל יום, המשתמש עובר מסע בן חמש דקות בלבד, המשלב נשימה, הקשבה פנימית והמרת מחשבות ביקורתיות למחשבות מחזקות.
+
+האפליקציה נועדה לאפשר למורה הצעיר **להתחבר לעצמו לפני שהוא ניגש אל תלמידיו**, וליצור הרגל פשוט של איזון רגשי ונוכחות מקצועית.
+כל מסע כולל חמישה שלבים – מחשבה, רגש, תחושה, פעולה ואמונה – ובסופו נוצר *קלף תודעה אישי* עם משפט מחזק שמלווה את המשתמש להמשך היום.
+
+---
+
+### 💎 מה מייחד את BEZEN-EDU?
+
+* מבוססת על עקרונות שיטת **BE ZEN** – נשימה, מודעות, חמלה והקשבה.
+* נבנתה במיוחד לפרחי הוראה, מתוך הבנה של האתגרים הרגשיים בתחילת הדרך.
+* פשוטה, רגועה ואינטואיטיבית – מתאימה גם למשתמשים ללא רקע טכנולוגי.
+* מאפשרת יצירת קהילה רכה של מורים שמתרגלים נוכחות וחוסן פנימי.
+
+---
+
+### 🪞 המסר מאחורי האפליקציה
+
+> “אנחנו לא באנו לתקן את המורה –
+> באנו להזכיר לו לנשום, להקשיב, ולזכור את הלב שמאחורי ההוראה.”
+
+---
+
+### 📱 תמצית טכנית
+
+* פלטפורמה: **Lovable MVP** (Web + Mobile Responsive).
+* שלבים: MIND | HEART | BODY | ACTION | SOUL.
+* כלים עיקריים: טקסטים מודרכים, בחירות רגשיות, נשימות מודעות, קלפים אישיים.
+* פרטיות מלאה – ללא איסוף נתונים אישיים או טיפול רגשי ישיר.
+
+---
+
+רוצה שאכין גם **גרסה מקוצרת באנגלית** של אותו תיאור (מתאימה להצגה באתר Lovable עצמו או למשקיעים / שותפים בינלאומיים)?

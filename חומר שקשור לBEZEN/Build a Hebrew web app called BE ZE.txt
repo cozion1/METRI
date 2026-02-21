@@ -1,0 +1,738 @@
+Build a Hebrew web app called "BE ZEN GAME".
+Goal: an interactive emotional-awareness game for 1–6 players (Solo or Group).
+Core flow:
+1) Onboarding: choose mode (Solo / Group), choose topic from list.
+2) Game screen: show a random "Pain Card" (negative belief) for the chosen topic; player writes a "Helpful Sentence" (positive, compassionate reframing).
+3) Bot (BEZEN-BOT) gives soft feedback with 3 criteria: Honesty, Compassion, Creativity; returns a score and a short supportive note.
+4) Group mode: all players submit, then a Voting phase (each player votes), combined with the Bot score → final round score.
+5) End of round: show "Anchor Sentence" (the player's best helpful sentence) + mini breathing cue.
+6) Profile: save rounds, scores, anchor sentences, and topics history.
+
+Data:
+- Topics: id, name, emoji
+- PainCards: id, topicId, text
+- Rounds: id, gameId, playerId, topicId, painCardId, playerText, botScoreHonesty, botScoreCompassion, botScoreCreativity, crowdVotes, totalScore, anchorSentence, createdAt
+- Games: id, mode (solo/group), joinCode, status (lobby/playing/ended), topicId, roundNumber
+- Players: id, gameId, displayName, avatarColor, isHost, sessionId
+
+UI pages:
+- Home: CTA "Start Solo" / "Create Group" / "Join Group"
+- Lobby (Group): join by code, list of players, host starts game
+- Topic Picker: grid of topics (Relations, Anxiety, Self-confidence, Past, Inner peace, Self-love, Success)
+- Game Round: shows pain card, input box, submit; timer; then Feedback phase; in group mode → Voting screen; then Results
+- Profile: list of rounds, anchor sentences
+- Admin: manage Topics and PainCards
+
+Logic:
+- Solo: after submit → call local scoring function (heuristics) → show feedback + anchor crafting prompt
+- Group: host triggers phases; simple voting; totalScore = botScore*0.6 + normalizedVotes*0.4
+- Randomize PainCard by topic; avoid repeats within session
+
+Style: calm, soft, beige/sand/water palette; rounded cards; Hebrew RTL; large readable fonts; gentle micro-animations (breathing circle).
+2) סכימת נתונים (ב-Lovable/DB)
+
+Topics: id (uuid) | name (text) | emoji (text)
+
+PainCards: id | topicId (fk) | text
+
+Games: id | mode (enum: solo/group) | joinCode (string) | status (enum) | topicId (fk) | roundNumber (int)
+
+Players: id | gameId (fk) | displayName (text) | avatarColor (text) | isHost (bool) | sessionId (text)
+
+Rounds:
+id | gameId | playerId | topicId | painCardId | playerText (text) | botScoreHonesty (int 0–3) | botScoreCompassion (int 0–3) | botScoreCreativity (int 0–3) | crowdVotes (int) | totalScore (float) | anchorSentence (text) | createdAt
+
+3) מסכי UI (מה לשים בכל מסך)
+מסך בית
+
+כפתורים: “משחק סולו”, “צור משחק קבוצתי”, “הצטרף למשחק” (עם קוד).
+
+טקסט עדין: “משפט אחד יכול לשנות את מה שאתה מרגיש.”
+
+לובי (קבוצתי)
+
+הצגת קוד חדר (לדוגמה: ZEN-427).
+
+רשימת שחקנים (בועות צבע).
+
+כפתור “התחל סיבוב” למארח.
+
+בחירת נושא
+
+גריד RTL:
+💞 יחסים | 🌊 פחדים/חרדה | 💪 ביטחון עצמי | 🌿 שחרור מהעבר | ☁️ שלווה פנימית | 💗 אהבה עצמית | 🌞 הצלחה וערך עצמי
+
+סבב משחק
+
+כרטיס כאב (כותרת + משפט).
+
+שדה טקסט גדול: “הפוך/י למשפט מועיל ברוח חמלה.”
+
+טיימר עדין (60–90 שניות).
+
+כפתור “שלח”.
+
+פידבק בוט + ניקוד.
+
+בקבוצה: מסך הצבעה (שלוש קטגוריות אמץ/חמלה/יצירתיות).
+
+תוצאות הסבב
+
+משפט עוגן של כל שחקן.
+
+סך הניקוד.
+
+אנימציית נשימה: “שאיפה 4 | החזקה 4 | נשיפה 6”.
+
+פרופיל
+
+היסטוריית עוגנים, נושאים וניקוד ממוצע.
+
+function scoreHelpfulSentence(text) {
+  const t = (text || "").trim();
+  if (!t) return {honesty:0, compassion:0, creativity:0, note:"בוא/י ננסה שוב בעדינות."};
+  const compassionWords = ["מרשה", "לומד/ת", "מותר לי", "רך/ה", "בחמלה", "כבוד", "נשימה", "איטי/ה", "שקט", "ראוי/ה"];
+  const creativityCues = ["דמיון", "אור", "זריחה", "מים", "נשימה ארוכה", "לב פתוח"];
+  let honesty = t.length >= 12 ? 2 : 1;
+  if (t.includes("אני")) honesty += 1;
+  let compassion = compassionWords.some(w=>t.includes(w)) ? 2 : 1;
+  let creativity = creativityCues.some(w=>t.includes(w)) ? 2 : 1;
+  return {
+    honesty: Math.min(honesty,3),
+    compassion: Math.min(compassion,3),
+    creativity: Math.min(creativity,3),
+    note: "נשימה עמוקה. המילים שלך נעשו רכות יותר – יפה."
+  };
+}
+total = honesty*1 + compassion*1.2 + creativity*0.8
+normVotes = crowdVotes / maxCrowdVotesInRound
+total = (honesty + 1.2*compassion + 0.8*creativity)*0.6 + (normVotes*3)*0.4
+מדהים 🙌
+בוא נבנה עכשיו **MVP עובד באפליקציית Lovable** – כזה שתוכל להרים במהירות, לבדוק עם משתמשים, ואז להעמיק. הכנתי לך הכל *מוכן להדבקה*: פרומפטים ל-Lovable, סכימת נתונים, מסכי UI, לוגיקת משחק, טקסטים לבוט, ותוכן התחלתי.
+
+---
+
+# 1) פרומפט מוכן ל-Lovable – יצירת האפליקציה
+
+העתק/י והדבק/י את הטקסט הבא ב-Lovable כדי ליצור שלד אפליקציה:
+
+```
+Build a Hebrew web app called "BE ZEN GAME".
+Goal: an interactive emotional-awareness game for 1–6 players (Solo or Group).
+Core flow:
+1) Onboarding: choose mode (Solo / Group), choose topic from list.
+2) Game screen: show a random "Pain Card" (negative belief) for the chosen topic; player writes a "Helpful Sentence" (positive, compassionate reframing).
+3) Bot (BEZEN-BOT) gives soft feedback with 3 criteria: Honesty, Compassion, Creativity; returns a score and a short supportive note.
+4) Group mode: all players submit, then a Voting phase (each player votes), combined with the Bot score → final round score.
+5) End of round: show "Anchor Sentence" (the player's best helpful sentence) + mini breathing cue.
+6) Profile: save rounds, scores, anchor sentences, and topics history.
+
+Data:
+- Topics: id, name, emoji
+- PainCards: id, topicId, text
+- Rounds: id, gameId, playerId, topicId, painCardId, playerText, botScoreHonesty, botScoreCompassion, botScoreCreativity, crowdVotes, totalScore, anchorSentence, createdAt
+- Games: id, mode (solo/group), joinCode, status (lobby/playing/ended), topicId, roundNumber
+- Players: id, gameId, displayName, avatarColor, isHost, sessionId
+
+UI pages:
+- Home: CTA "Start Solo" / "Create Group" / "Join Group"
+- Lobby (Group): join by code, list of players, host starts game
+- Topic Picker: grid of topics (Relations, Anxiety, Self-confidence, Past, Inner peace, Self-love, Success)
+- Game Round: shows pain card, input box, submit; timer; then Feedback phase; in group mode → Voting screen; then Results
+- Profile: list of rounds, anchor sentences
+- Admin: manage Topics and PainCards
+
+Logic:
+- Solo: after submit → call local scoring function (heuristics) → show feedback + anchor crafting prompt
+- Group: host triggers phases; simple voting; totalScore = botScore*0.6 + normalizedVotes*0.4
+- Randomize PainCard by topic; avoid repeats within session
+
+Style: calm, soft, beige/sand/water palette; rounded cards; Hebrew RTL; large readable fonts; gentle micro-animations (breathing circle).
+```
+
+---
+
+# 2) סכימת נתונים (ב-Lovable/DB)
+
+* **Topics**: `id (uuid) | name (text) | emoji (text)`
+* **PainCards**: `id | topicId (fk) | text`
+* **Games**: `id | mode (enum: solo/group) | joinCode (string) | status (enum) | topicId (fk) | roundNumber (int)`
+* **Players**: `id | gameId (fk) | displayName (text) | avatarColor (text) | isHost (bool) | sessionId (text)`
+* **Rounds**:
+  `id | gameId | playerId | topicId | painCardId | playerText (text) | botScoreHonesty (int 0–3) | botScoreCompassion (int 0–3) | botScoreCreativity (int 0–3) | crowdVotes (int) | totalScore (float) | anchorSentence (text) | createdAt`
+
+---
+
+# 3) מסכי UI (מה לשים בכל מסך)
+
+### מסך בית
+
+* כפתורים: **“משחק סולו”**, **“צור משחק קבוצתי”**, **“הצטרף למשחק”** (עם קוד).
+* טקסט עדין: “משפט אחד יכול לשנות את מה שאתה מרגיש.”
+
+### לובי (קבוצתי)
+
+* הצגת קוד חדר (לדוגמה: **ZEN-427**).
+* רשימת שחקנים (בועות צבע).
+* כפתור “התחל סיבוב” למארח.
+
+### בחירת נושא
+
+גריד RTL:
+💞 יחסים | 🌊 פחדים/חרדה | 💪 ביטחון עצמי | 🌿 שחרור מהעבר | ☁️ שלווה פנימית | 💗 אהבה עצמית | 🌞 הצלחה וערך עצמי
+
+### סבב משחק
+
+1. כרטיס כאב (כותרת + משפט).
+2. שדה טקסט גדול: “הפוך/י למשפט מועיל ברוח חמלה.”
+3. טיימר עדין (60–90 שניות).
+4. כפתור “שלח”.
+5. פידבק בוט + ניקוד.
+6. בקבוצה: מסך הצבעה (שלוש קטגוריות אמץ/חמלה/יצירתיות).
+
+### תוצאות הסבב
+
+* **משפט עוגן** של כל שחקן.
+* סך הניקוד.
+* אנימציית נשימה: “שאיפה 4 | החזקה 4 | נשיפה 6”.
+
+### פרופיל
+
+* היסטוריית עוגנים, נושאים וניקוד ממוצע.
+
+---
+
+# 4) לוגיקת ניקוד (למימוש כ-“Action/Function”)
+
+ל-MVP בלי API, אפשר heuristic פשוט:
+
+```js
+function scoreHelpfulSentence(text) {
+  const t = (text || "").trim();
+  if (!t) return {honesty:0, compassion:0, creativity:0, note:"בוא/י ננסה שוב בעדינות."};
+  const compassionWords = ["מרשה", "לומד/ת", "מותר לי", "רך/ה", "בחמלה", "כבוד", "נשימה", "איטי/ה", "שקט", "ראוי/ה"];
+  const creativityCues = ["דמיון", "אור", "זריחה", "מים", "נשימה ארוכה", "לב פתוח"];
+  let honesty = t.length >= 12 ? 2 : 1;
+  if (t.includes("אני")) honesty += 1;
+  let compassion = compassionWords.some(w=>t.includes(w)) ? 2 : 1;
+  let creativity = creativityCues.some(w=>t.includes(w)) ? 2 : 1;
+  return {
+    honesty: Math.min(honesty,3),
+    compassion: Math.min(compassion,3),
+    creativity: Math.min(creativity,3),
+    note: "נשימה עמוקה. המילים שלך נעשו רכות יותר – יפה."
+  };
+}
+```
+
+**ניקוד סופי (סולו):**
+
+```
+total = honesty*1 + compassion*1.2 + creativity*0.8
+```
+
+**ניקוד סופי (קבוצה):**
+
+```
+normVotes = crowdVotes / maxCrowdVotesInRound
+total = (honesty + 1.2*compassion + 0.8*creativity)*0.6 + (normVotes*3)*0.4
+```
+
+---
+
+# 5) זרימת משחק (Solo → Group)
+
+**Solo**
+
+1. בחירת נושא → שליפת PainCard → כתיבה → פידבק+ניקוד → “עוגן אישי” מוצע → סיום סיבוב / המשך.
+
+**Group (2–6)**
+
+1. לובי וקוד → בחירת נושא ע”י המארח → לכולם מוצג אותו PainCard
+2. כולם כותבים ושולחים → שלב הצבעה → ניקוד כולל → תוצאות + עוגן לכל אחד → סיבוב הבא.
+
+---
+
+# 6) BEZEN-BOT – טקסטים מיידיים (מוכן לשימוש)
+
+**ברכות פתיחה (רנדומלי):**
+
+* “ברוך/ה הבא/ה. נשימה קלה, ואנחנו מתחילים.”
+* “אני כאן כדי להזכיר לך רוך. נתחיל בכרטיס קטן.”
+
+**הנחיה לכתיבה:**
+
+* “כתוב/כתבי משפט מועיל אחד באורך 6–20 מילים. דבר/י אל עצמך כמו אל חבר אהוב.”
+
+**פידבק אחרי שליחה:**
+
+* “יש כאן כנות – אני מרגיש/ה אותך. רוצה להוסיף מילה אחת של חמלה לעצמך?”
+* “יפה. נסה/י להחליף ‘חייב/ת’ ב‘אני מרשה לעצמי’. נשמי שוב ונסחי מחדש אם תרצה/י.”
+
+**יצירת עוגן:**
+
+* “הנה גרסת העוגן שנולדה מהלב שלך: ‘אני מרשה לעצמי להאט ולנשום, גם כשלא ברור הכול.’ רוצה לשמור?”
+
+**סיום סבב:**
+
+* “נשימה: שאיפה 4, החזקה 4, נשיפה 6. שמור/י את העוגן בלב.”
+
+---
+
+# 7) רשימת נושאים + 20 כרטיסי כאב התחלתיים
+
+**נושאים (Topics):**
+
+* יחסים 💞 | פחדים/חרדה 🌊 | ביטחון עצמי 💪 | שחרור מהעבר 🌿 | שלווה פנימית ☁️ | אהבה עצמית 💗 | הצלחה וערך עצמי 🌞
+
+**PainCards (דוגמאות):**
+
+1. “אני תמיד מקלקל/ת ברגע האחרון.”
+2. “אין לי שקט בראש.”
+3. “אני לא מספיק חזק/ה.”
+4. “כולם מצליחים חוץ ממני.”
+5. “אני מפחד/ת שינטשו אותי.”
+6. “אני לא ראוי/ה לאהבה.”
+7. “העבר שלי מגדיר אותי.”
+8. “אני תקוע/ה במקום.”
+9. “אני לא שולט/ת בעצמי.”
+10. “אסור לי לטעות.”
+11. “אני לא מעניין/ת אף אחד.”
+12. “אני תמיד לבד.”
+13. “אין טעם לנסות.”
+14. “הגוף שלי מאכזב אותי.”
+15. “אני דוחה הכל.”
+16. “אני חייב/ת לרצות את כולם.”
+17. “אם יכירו אותי באמת – לא יאהבו אותי.”
+18. “אני לא יודע/ת להירגע.”
+19. “אני חלש/ה מדי לשינוי.”
+20. “אני לא מסוגל/ת להציב גבולות.”
+
+**תבנית הצעה ל”משפט מועיל” (לשימוש בבוט):**
+
+* “אני לומד/ת ___ גם כש___.”
+* “אני מרשה לעצמי ___ בקצב עדין.”
+* “מותר לי להרגיש ___ ועדיין לבחור ___.”
+* “אני ראוי/ה ל___ גם אם העבר אמר אחרת.”
+
+---
+
+# 8) ניהול תוכן (Admin קל)
+
+במסך Admin הוסף/י:
+
+* CRUD לנושאים
+* CRUD לכרטיסי כאב
+* בודק כפילויות/חיתום נושא
+* כפתור “ייבוא CSV” (אם קיים) להעלאת מאגר גדול שלך
+
+---
+
+# 9) בדיקה והשקה (MVP)
+
+1. צור חדר בדיקה עם 3–4 אנשים.
+2. מדוד: זמן סשן, אחוז שליחה, שימור “עוגן”, פידבק חווייתי.
+3. אסוף 5–10 צילומי מסך + עדויות קצרות → דף נחיתה.
+4. הוסף “אתגר שבועי” (נושא אחד לכולם, דירוג שבועי).
+
+---
+
+# 10) חיבור API (כשתרצה לשדרג)
+
+* הוסף קריאה ל-API של מודל שפה (למשל /score) שמחזירה שלושה ציונים והערת עידוד.
+* שמור Cache כדי לחסוך עלויות.
+* אפשר בהמשך להוסיף **פרופיל רגשי אישי**: נושא חזק, מילים שמופעלות אצל השחקן, התקדמות לאורך זמן.
+
+---
+
+## רוצה שאייצר לך עכשיו קבצי תוכן להזרקה?
+
+* 📥 **קובץ JSON לנושאים וכרטיסי כאב** (מוכן ליבוא)
+* 🧩 **סט 60 קלפים** נוספים לפי כל נושא
+* 🧠 **פרומפטים מוכנים לבוט** (להדבקה ישירה בתגובות המוכנות של האפליקציה)
+
+אם מתאים לך, אומר “קדימה” ואני מכין לך את שלושת הקבצים/הטקסטים — כדי שתוכל להעלות ל-Lovable כבר היום 🌿
+{
+  "topics": [
+    {"id": "t1", "name": "יחסים", "emoji": "💞"},
+    {"id": "t2", "name": "פחדים וחרדה", "emoji": "🌊"},
+    {"id": "t3", "name": "ביטחון עצמי", "emoji": "💪"},
+    {"id": "t4", "name": "שחרור מהעבר", "emoji": "🌿"},
+    {"id": "t5", "name": "שלווה פנימית", "emoji": "☁️"},
+    {"id": "t6", "name": "אהבה עצמית", "emoji": "💗"},
+    {"id": "t7", "name": "הצלחה וערך עצמי", "emoji": "🌞"}
+  ],
+  "painCards": [
+    {"id":"pc001","topicId":"t7","text":"כולם מצליחים חוץ ממני."},
+    {"id":"pc002","topicId":"t5","text":"אין לי שקט בראש."},
+    {"id":"pc003","topicId":"t3","text":"אני לא מספיק חזק/ה."},
+    {"id":"pc004","topicId":"t1","text":"אני תמיד מקלקל/ת ברגע האחרון בקשרים."},
+    {"id":"pc005","topicId":"t2","text":"אני מפחד/ת שינטשו אותי."},
+    {"id":"pc006","topicId":"t6","text":"אני לא ראוי/ה לאהבה."},
+    {"id":"pc007","topicId":"t4","text":"העבר שלי מגדיר אותי."},
+    {"id":"pc008","topicId":"t7","text":"אין טעם לנסות, זה לא יעבוד לי."},
+    {"id":"pc009","topicId":"t5","text":"אני לא יודע/ת להירגע."},
+    {"id":"pc010","topicId":"t3","text":"אסור לי לטעות."},
+    {"id":"pc011","topicId":"t1","text":"אני תמיד לבד גם כשאני בזוגיות."},
+    {"id":"pc012","topicId":"t2","text":"אני לא שולט/ת בעצמי כשאני בלחץ."},
+    {"id":"pc013","topicId":"t6","text":"אני לא מעניין/ת אף אחד."},
+    {"id":"pc014","topicId":"t4","text":"אני תקוע/ה במקום כי העבר כבד."},
+    {"id":"pc015","topicId":"t7","text":"אני דוחה הכל כי אני מפחד/ת להיכשל."},
+    {"id":"pc016","topicId":"t1","text":"אני חייב/ת לרצות את כולם בקשר."},
+    {"id":"pc017","topicId":"t6","text":"אם יכירו אותי באמת — לא יאהבו אותי."},
+    {"id":"pc018","topicId":"t5","text":"אין לי שליטה על המחשבות."},
+    {"id":"pc019","topicId":"t3","text":"אני חלש/ה מדי לשינוי."},
+    {"id":"pc020","topicId":"t4","text":"אני לא מסוגל/ת להציב גבולות בגלל העבר."}
+  ]
+}
+{
+  "painCards": [
+    {"id":"pc101","topicId":"t1","text":"אני מפחד/ת לפתוח את הלב כדי שלא איפגע."},
+    {"id":"pc102","topicId":"t1","text":"אני נכנס/ת לסכסוכים על דברים קטנים."},
+    {"id":"pc103","topicId":"t1","text":"קשה לי לבקש עזרה בקשר."},
+    {"id":"pc104","topicId":"t1","text":"אני לא מאמין/ה שמבינים אותי."},
+    {"id":"pc105","topicId":"t1","text":"אני מוותר/ת על עצמי בשביל שלום בית."},
+    {"id":"pc106","topicId":"t1","text":"אני מקנא/ה ומשווה את הקשר לאחרים."},
+    {"id":"pc107","topicId":"t1","text":"אני חושש/ת להיות כנה עד הסוף."},
+    {"id":"pc108","topicId":"t1","text":"אני לוקח/ת הכל אישית."},
+    {"id":"pc109","topicId":"t1","text":"אני נסגר/ת כשמבקרים אותי."},
+
+    {"id":"pc110","topicId":"t2","text":"הלב שלי דופק חזק ואני נכנס/ת לדרמה."},
+    {"id":"pc111","topicId":"t2","text":"אני חושב/ת על התרחיש הכי גרוע."},
+    {"id":"pc112","topicId":"t2","text":"אני לא מצליח/ה לנשום עמוק כשאני בלחץ."},
+    {"id":"pc113","topicId":"t2","text":"הגוף שלי כל הזמן בדריכות."},
+    {"id":"pc114","topicId":"t2","text":"אני דוחה דברים בגלל פחד מהתוצאה."},
+    {"id":"pc115","topicId":"t2","text":"אני מתבייש/ת בחרדה שלי."},
+    {"id":"pc116","topicId":"t2","text":"אני מתעורר/ת בלילה עם מחשבות טורדניות."},
+    {"id":"pc117","topicId":"t2","text":"אני פוחד/ת לאבד שליטה מול אנשים."},
+    {"id":"pc118","topicId":"t2","text":"אני מאמין/ה שדברים רעים בדרך אליי."},
+
+    {"id":"pc119","topicId":"t3","text":"אני מצטנע/ת יתר על המידה שלא יחשבו שאני מתנשא/ת."},
+    {"id":"pc120","topicId":"t3","text":"אני נמנע/ת מהזדמנויות כי אין לי ביטחון."},
+    {"id":"pc121","topicId":"t3","text":"קשה לי להאמין שמגיע לי טוב."},
+    {"id":"pc122","topicId":"t3","text":"אני מתפרק/ת מביקורת קטנה."},
+    {"id":"pc123","topicId":"t3","text":"אני מתנצל/ת על עצם הקיום שלי."},
+    {"id":"pc124","topicId":"t3","text":"אני לא יודע/ת לשים גבולות ברורים."},
+    {"id":"pc125","topicId":"t3","text":"אני מרגיש/ה מאחורי כולם."},
+    {"id":"pc126","topicId":"t3","text":"אני מפחד/ת להיראות נלהב/ת."},
+    {"id":"pc127","topicId":"t3","text":"אני שופט/ת את עצמי בחומרה."},
+
+    {"id":"pc128","topicId":"t4","text":"אני חוזר/ת שוב ושוב לסיפור הישן."},
+    {"id":"pc129","topicId":"t4","text":"אני לא סולח/ת לעצמי על טעויות עבר."},
+    {"id":"pc130","topicId":"t4","text":"אני נצמד/ת לזהות שכבר לא משרתת אותי."},
+    {"id":"pc131","topicId":"t4","text":"אני חושש/ת לאבד אנשים אם אתפתח."},
+    {"id":"pc132","topicId":"t4","text":"אני מתאבל/ת על מה שלא קרה."},
+    {"id":"pc133","topicId":"t4","text":"אני נלחם/ת בזיכרונות במקום לנשום אותם."},
+    {"id":"pc134","topicId":"t4","text":"אני מתמכר/ת לאשמה כדי להרגיש בשליטה."},
+    {"id":"pc135","topicId":"t4","text":"אני מחזיק/ה טינה כדי לא להיפגע שוב."},
+    {"id":"pc136","topicId":"t4","text":"אני מתקשה לשחרר חפצים/אנשים מהעבר."},
+
+    {"id":"pc137","topicId":"t5","text":"המוח שלי רועש בבוקר."},
+    {"id":"pc138","topicId":"t5","text":"אני עייף/ה מהמרדף הבלתי נגמר."},
+    {"id":"pc139","topicId":"t5","text":"אני מתמלא/ת אשמה כשאני נח/ה."},
+    {"id":"pc140","topicId":"t5","text":"אני קופצ/ת בין מטלות בלי נשימה."},
+    {"id":"pc141","topicId":"t5","text":"אני כועס/ת על עצמי שאין לי שלווה."},
+    {"id":"pc142","topicId":"t5","text":"אני מתעורר/ת ישר לטלפון ולחדשות."},
+    {"id":"pc143","topicId":"t5","text":"קשה לי להאט את הקצב."},
+    {"id":"pc144","topicId":"t5","text":"אני מרגיש/ה שחסר לי מרכז."},
+    {"id":"pc145","topicId":"t5","text":"שקט מרגיש לי מוזר ומאיים."},
+
+    {"id":"pc146","topicId":"t6","text":"אני מדבר/ת לעצמי בקשיחות."},
+    {"id":"pc147","topicId":"t6","text":"אני מחכה לאישור חיצוני כדי לאהוב את עצמי."},
+    {"id":"pc148","topicId":"t6","text":"אני מתעלם/ת מהצרכים שלי."},
+    {"id":"pc149","topicId":"t6","text":"יש לי קושי לחבק את החולשות שלי."},
+    {"id":"pc150","topicId":"t6","text":"אני מבטל/ת את ההישגים שלי."},
+    {"id":"pc151","topicId":"t6","text":"אני מאמין/ה שאהבה לעצמי זה אנוכי."},
+    {"id":"pc152","topicId":"t6","text":"אני מסתיר/ה חלקים ממני מבושה."},
+    {"id":"pc153","topicId":"t6","text":"אני מסמס/ת לעצמי הבטחות בסיסיות."},
+    {"id":"pc154","topicId":"t6","text":"אני נבהל/ת מהשקט כי אז שומעים את עצמי."},
+
+    {"id":"pc155","topicId":"t7","text":"אני חושש/ת לבקש יותר כסף/ערך."},
+    {"id":"pc156","topicId":"t7","text":"אני דוחה החלטות חשובות."},
+    {"id":"pc157","topicId":"t7","text":"אני בורח/ת למשימות קטנות במקום העיקר."},
+    {"id":"pc158","topicId":"t7","text":"אני מאבד/ת פוקוס כשיש יותר מדי אפשרויות."},
+    {"id":"pc159","topicId":"t7","text":"אני מפחד/ת להיחשף במלוא העוצמה."},
+    {"id":"pc160","topicId":"t7","text":"אני מאמין/ה שההצלחה שייכת לאחרים."},
+    {"id":"pc161","topicId":"t7","text":"אני מקריב/ה בריאות בשביל הישגים."},
+    {"id":"pc162","topicId":"t7","text":"אני מתבלבל/ת בין ערך עצמי לתוצאה."},
+    {"id":"pc163","topicId":"t7","text":"אני מוותר/ת כשזה נהיה מאתגר."}
+  ]
+}
+# SYSTEM (זהות וטון)
+את/ה BEZEN-BOT — מנחה רך, אוהב וממוקד חמלה.
+תפקידך במשחק: להנחות שחקנים להפוך "משפט טעון שיפור" למשפט מועיל.
+תמיד תדבר/י בעברית רכה, קצרה ובהירה. בלי שיפוט. נשימות, קצב איטי.
+
+עקרונות:
+- כנות מעל שלמות.
+- חמלה מעל ביקורת.
+- פשטות מעל תחכום.
+- משפט עוגן = קצר, בגוף ראשון, בהווה, ברוך.
+
+# SCORING (ניקוד 0–3 לכל ממד + הערת עידוד)
+נתון: input_text = המשפט המועיל שהשחקן כתב.
+החזר JSON בלבד:
+{
+  "honesty": 0-3,
+  "compassion": 0-3,
+  "creativity": 0-3,
+  "note": "משוב קצר ועדין בעברית בגוף שני"
+}
+
+קריטריונים:
+- כנות: יש "אני", הודאה ברגש/צורך, שפה אישית. (0=אין, 1=חלש, 2=סביר, 3=חזק)
+- חמלה: מילים כמו "מרשה", "לומד/ת", "מותר לי", "בקצב עדין", "חמלה", "כבוד". (0–3)
+- יצירתיות: דימוי/שפה חיה ("אור", "מים", "נשימה ארוכה", "זריחה", "לב פתוח") או ניסוח אישי לא קלישאתי. (0–3)
+
+# FEEDBACK (אחרי הניקוד)
+ניסוח קצר (משפט או שניים):
+- "יש כאן כנות. נסה/י להוסיף מילה רכה לעצמך."
+- "יפה ועדין. רוצה להפוך 'חייב/ת' ל'מרשה לעצמי'?"
+- "מזמין. אפשר לקצר לעוגן חד."
+
+# ANCHOR CREATION (יצירת עוגן)
+קבל input_text ומילות מפתח (topic). צור עוגן אחד:
+כללים: 6–14 מילים, בגוף ראשון, הווה, חיובי, רך, ללא שלילה ("לא").
+דוגמאות תבנית:
+- "אני מרשה לעצמי ___ בקצב עדין."
+- "אני לומד/ת לנשום גם כש___."
+- "מותר לי להרגיש ___ ועדיין לבחור רוך."
+- "אני בוחר/ת בחמלה שמרגיעה את הלב שלי."
+החזר: שורה אחת בלבד של העוגן.
+
+# GROUP VOTE SUMMARY (לסיום סבב קבוצתי)
+קבל רשימת שחקנים, ניקוד בוט והצבעות קהל. צור משפט מסכם קצר:
+- ציין בעדינות מי קיבל את מירב הקולות.
+- תן חיזוק לכולם.
+דוגמה:
+"היום האומץ של (שם) בלט. כולכם נגעתם בלב. קחו נשימה לשמוח בדרך."
+
+# MICRO-BREATHING CUES (להציג בסיום)
+בחר אחת מהוראות הנשימה:
+- "שאיפה 4 | החזקה 4 | נשיפה 6"
+- "שאיפה 3 | נשיפה 5 — שלוש פעמים"
+- "נשיפה ארוכה פי 2 מהשאיפה"
+
+# ONBOARDING MESSAGES
+- "ברוך/ה הבא/ה. נשימה קלה, ואנחנו מתחילים."
+- "דבר/י אל עצמך כמו אל חבר אהוב. זה כל המשחק."
+
+# ERROR/EMPTY
+- אם הטקסט ריק/פוגעני: "בוא/י ננסה שוב בעדינות. 6–14 מילים, בגוף ראשון, ברוך."
+מדהים. הנה שלושת הקבצים שהבטחתי — מוכנים להטמעה ב-Lovable (או כל DB פשוטה). הכל בעברית, UTF-8.
+
+---
+
+# 1) topics_and_paincards.json
+
+(7 נושאים + 20 קלפי כאב בסיסיים)
+
+```json
+{
+  "topics": [
+    {"id": "t1", "name": "יחסים", "emoji": "💞"},
+    {"id": "t2", "name": "פחדים וחרדה", "emoji": "🌊"},
+    {"id": "t3", "name": "ביטחון עצמי", "emoji": "💪"},
+    {"id": "t4", "name": "שחרור מהעבר", "emoji": "🌿"},
+    {"id": "t5", "name": "שלווה פנימית", "emoji": "☁️"},
+    {"id": "t6", "name": "אהבה עצמית", "emoji": "💗"},
+    {"id": "t7", "name": "הצלחה וערך עצמי", "emoji": "🌞"}
+  ],
+  "painCards": [
+    {"id":"pc001","topicId":"t7","text":"כולם מצליחים חוץ ממני."},
+    {"id":"pc002","topicId":"t5","text":"אין לי שקט בראש."},
+    {"id":"pc003","topicId":"t3","text":"אני לא מספיק חזק/ה."},
+    {"id":"pc004","topicId":"t1","text":"אני תמיד מקלקל/ת ברגע האחרון בקשרים."},
+    {"id":"pc005","topicId":"t2","text":"אני מפחד/ת שינטשו אותי."},
+    {"id":"pc006","topicId":"t6","text":"אני לא ראוי/ה לאהבה."},
+    {"id":"pc007","topicId":"t4","text":"העבר שלי מגדיר אותי."},
+    {"id":"pc008","topicId":"t7","text":"אין טעם לנסות, זה לא יעבוד לי."},
+    {"id":"pc009","topicId":"t5","text":"אני לא יודע/ת להירגע."},
+    {"id":"pc010","topicId":"t3","text":"אסור לי לטעות."},
+    {"id":"pc011","topicId":"t1","text":"אני תמיד לבד גם כשאני בזוגיות."},
+    {"id":"pc012","topicId":"t2","text":"אני לא שולט/ת בעצמי כשאני בלחץ."},
+    {"id":"pc013","topicId":"t6","text":"אני לא מעניין/ת אף אחד."},
+    {"id":"pc014","topicId":"t4","text":"אני תקוע/ה במקום כי העבר כבד."},
+    {"id":"pc015","topicId":"t7","text":"אני דוחה הכל כי אני מפחד/ת להיכשל."},
+    {"id":"pc016","topicId":"t1","text":"אני חייב/ת לרצות את כולם בקשר."},
+    {"id":"pc017","topicId":"t6","text":"אם יכירו אותי באמת — לא יאהבו אותי."},
+    {"id":"pc018","topicId":"t5","text":"אין לי שליטה על המחשבות."},
+    {"id":"pc019","topicId":"t3","text":"אני חלש/ה מדי לשינוי."},
+    {"id":"pc020","topicId":"t4","text":"אני לא מסוגל/ת להציב גבולות בגלל העבר."}
+  ]
+}
+```
+
+---
+
+# 2) paincards_extra_60.json
+
+(סט של **63** קלפים — 9 לכל נושא, כדי שנגיע ל~60+ בצורה מאוזנת)
+
+```json
+{
+  "painCards": [
+    {"id":"pc101","topicId":"t1","text":"אני מפחד/ת לפתוח את הלב כדי שלא איפגע."},
+    {"id":"pc102","topicId":"t1","text":"אני נכנס/ת לסכסוכים על דברים קטנים."},
+    {"id":"pc103","topicId":"t1","text":"קשה לי לבקש עזרה בקשר."},
+    {"id":"pc104","topicId":"t1","text":"אני לא מאמין/ה שמבינים אותי."},
+    {"id":"pc105","topicId":"t1","text":"אני מוותר/ת על עצמי בשביל שלום בית."},
+    {"id":"pc106","topicId":"t1","text":"אני מקנא/ה ומשווה את הקשר לאחרים."},
+    {"id":"pc107","topicId":"t1","text":"אני חושש/ת להיות כנה עד הסוף."},
+    {"id":"pc108","topicId":"t1","text":"אני לוקח/ת הכל אישית."},
+    {"id":"pc109","topicId":"t1","text":"אני נסגר/ת כשמבקרים אותי."},
+
+    {"id":"pc110","topicId":"t2","text":"הלב שלי דופק חזק ואני נכנס/ת לדרמה."},
+    {"id":"pc111","topicId":"t2","text":"אני חושב/ת על התרחיש הכי גרוע."},
+    {"id":"pc112","topicId":"t2","text":"אני לא מצליח/ה לנשום עמוק כשאני בלחץ."},
+    {"id":"pc113","topicId":"t2","text":"הגוף שלי כל הזמן בדריכות."},
+    {"id":"pc114","topicId":"t2","text":"אני דוחה דברים בגלל פחד מהתוצאה."},
+    {"id":"pc115","topicId":"t2","text":"אני מתבייש/ת בחרדה שלי."},
+    {"id":"pc116","topicId":"t2","text":"אני מתעורר/ת בלילה עם מחשבות טורדניות."},
+    {"id":"pc117","topicId":"t2","text":"אני פוחד/ת לאבד שליטה מול אנשים."},
+    {"id":"pc118","topicId":"t2","text":"אני מאמין/ה שדברים רעים בדרך אליי."},
+
+    {"id":"pc119","topicId":"t3","text":"אני מצטנע/ת יתר על המידה שלא יחשבו שאני מתנשא/ת."},
+    {"id":"pc120","topicId":"t3","text":"אני נמנע/ת מהזדמנויות כי אין לי ביטחון."},
+    {"id":"pc121","topicId":"t3","text":"קשה לי להאמין שמגיע לי טוב."},
+    {"id":"pc122","topicId":"t3","text":"אני מתפרק/ת מביקורת קטנה."},
+    {"id":"pc123","topicId":"t3","text":"אני מתנצל/ת על עצם הקיום שלי."},
+    {"id":"pc124","topicId":"t3","text":"אני לא יודע/ת לשים גבולות ברורים."},
+    {"id":"pc125","topicId":"t3","text":"אני מרגיש/ה מאחורי כולם."},
+    {"id":"pc126","topicId":"t3","text":"אני מפחד/ת להיראות נלהב/ת."},
+    {"id":"pc127","topicId":"t3","text":"אני שופט/ת את עצמי בחומרה."},
+
+    {"id":"pc128","topicId":"t4","text":"אני חוזר/ת שוב ושוב לסיפור הישן."},
+    {"id":"pc129","topicId":"t4","text":"אני לא סולח/ת לעצמי על טעויות עבר."},
+    {"id":"pc130","topicId":"t4","text":"אני נצמד/ת לזהות שכבר לא משרתת אותי."},
+    {"id":"pc131","topicId":"t4","text":"אני חושש/ת לאבד אנשים אם אתפתח."},
+    {"id":"pc132","topicId":"t4","text":"אני מתאבל/ת על מה שלא קרה."},
+    {"id":"pc133","topicId":"t4","text":"אני נלחם/ת בזיכרונות במקום לנשום אותם."},
+    {"id":"pc134","topicId":"t4","text":"אני מתמכר/ת לאשמה כדי להרגיש בשליטה."},
+    {"id":"pc135","topicId":"t4","text":"אני מחזיק/ה טינה כדי לא להיפגע שוב."},
+    {"id":"pc136","topicId":"t4","text":"אני מתקשה לשחרר חפצים/אנשים מהעבר."},
+
+    {"id":"pc137","topicId":"t5","text":"המוח שלי רועש בבוקר."},
+    {"id":"pc138","topicId":"t5","text":"אני עייף/ה מהמרדף הבלתי נגמר."},
+    {"id":"pc139","topicId":"t5","text":"אני מתמלא/ת אשמה כשאני נח/ה."},
+    {"id":"pc140","topicId":"t5","text":"אני קופצ/ת בין מטלות בלי נשימה."},
+    {"id":"pc141","topicId":"t5","text":"אני כועס/ת על עצמי שאין לי שלווה."},
+    {"id":"pc142","topicId":"t5","text":"אני מתעורר/ת ישר לטלפון ולחדשות."},
+    {"id":"pc143","topicId":"t5","text":"קשה לי להאט את הקצב."},
+    {"id":"pc144","topicId":"t5","text":"אני מרגיש/ה שחסר לי מרכז."},
+    {"id":"pc145","topicId":"t5","text":"שקט מרגיש לי מוזר ומאיים."},
+
+    {"id":"pc146","topicId":"t6","text":"אני מדבר/ת לעצמי בקשיחות."},
+    {"id":"pc147","topicId":"t6","text":"אני מחכה לאישור חיצוני כדי לאהוב את עצמי."},
+    {"id":"pc148","topicId":"t6","text":"אני מתעלם/ת מהצרכים שלי."},
+    {"id":"pc149","topicId":"t6","text":"יש לי קושי לחבק את החולשות שלי."},
+    {"id":"pc150","topicId":"t6","text":"אני מבטל/ת את ההישגים שלי."},
+    {"id":"pc151","topicId":"t6","text":"אני מאמין/ה שאהבה לעצמי זה אנוכי."},
+    {"id":"pc152","topicId":"t6","text":"אני מסתיר/ה חלקים ממני מבושה."},
+    {"id":"pc153","topicId":"t6","text":"אני מסמס/ת לעצמי הבטחות בסיסיות."},
+    {"id":"pc154","topicId":"t6","text":"אני נבהל/ת מהשקט כי אז שומעים את עצמי."},
+
+    {"id":"pc155","topicId":"t7","text":"אני חושש/ת לבקש יותר כסף/ערך."},
+    {"id":"pc156","topicId":"t7","text":"אני דוחה החלטות חשובות."},
+    {"id":"pc157","topicId":"t7","text":"אני בורח/ת למשימות קטנות במקום העיקר."},
+    {"id":"pc158","topicId":"t7","text":"אני מאבד/ת פוקוס כשיש יותר מדי אפשרויות."},
+    {"id":"pc159","topicId":"t7","text":"אני מפחד/ת להיחשף במלוא העוצמה."},
+    {"id":"pc160","topicId":"t7","text":"אני מאמין/ה שההצלחה שייכת לאחרים."},
+    {"id":"pc161","topicId":"t7","text":"אני מקריב/ה בריאות בשביל הישגים."},
+    {"id":"pc162","topicId":"t7","text":"אני מתבלבל/ת בין ערך עצמי לתוצאה."},
+    {"id":"pc163","topicId":"t7","text":"אני מוותר/ת כשזה נהיה מאתגר."}
+  ]
+}
+```
+
+> טיפ: אם אין ייבוא JSON מובנה ב-Lovable, אפשר להדביק לטבלאות (Airtable/Firebase) או להמיר ל-CSV.
+
+---
+
+# 3) bot_prompts.md
+
+(פרומפטים מוכנים ל-BEZEN-BOT: טון, ניקוד, פידבק, יצירת עוגן, והודעות מערכת)
+
+```md
+# SYSTEM (זהות וטון)
+את/ה BEZEN-BOT — מנחה רך, אוהב וממוקד חמלה.
+תפקידך במשחק: להנחות שחקנים להפוך "משפט טעון שיפור" למשפט מועיל.
+תמיד תדבר/י בעברית רכה, קצרה ובהירה. בלי שיפוט. נשימות, קצב איטי.
+
+עקרונות:
+- כנות מעל שלמות.
+- חמלה מעל ביקורת.
+- פשטות מעל תחכום.
+- משפט עוגן = קצר, בגוף ראשון, בהווה, ברוך.
+
+# SCORING (ניקוד 0–3 לכל ממד + הערת עידוד)
+נתון: input_text = המשפט המועיל שהשחקן כתב.
+החזר JSON בלבד:
+{
+  "honesty": 0-3,
+  "compassion": 0-3,
+  "creativity": 0-3,
+  "note": "משוב קצר ועדין בעברית בגוף שני"
+}
+
+קריטריונים:
+- כנות: יש "אני", הודאה ברגש/צורך, שפה אישית. (0=אין, 1=חלש, 2=סביר, 3=חזק)
+- חמלה: מילים כמו "מרשה", "לומד/ת", "מותר לי", "בקצב עדין", "חמלה", "כבוד". (0–3)
+- יצירתיות: דימוי/שפה חיה ("אור", "מים", "נשימה ארוכה", "זריחה", "לב פתוח") או ניסוח אישי לא קלישאתי. (0–3)
+
+# FEEDBACK (אחרי הניקוד)
+ניסוח קצר (משפט או שניים):
+- "יש כאן כנות. נסה/י להוסיף מילה רכה לעצמך."
+- "יפה ועדין. רוצה להפוך 'חייב/ת' ל'מרשה לעצמי'?"
+- "מזמין. אפשר לקצר לעוגן חד."
+
+# ANCHOR CREATION (יצירת עוגן)
+קבל input_text ומילות מפתח (topic). צור עוגן אחד:
+כללים: 6–14 מילים, בגוף ראשון, הווה, חיובי, רך, ללא שלילה ("לא").
+דוגמאות תבנית:
+- "אני מרשה לעצמי ___ בקצב עדין."
+- "אני לומד/ת לנשום גם כש___."
+- "מותר לי להרגיש ___ ועדיין לבחור רוך."
+- "אני בוחר/ת בחמלה שמרגיעה את הלב שלי."
+החזר: שורה אחת בלבד של העוגן.
+
+# GROUP VOTE SUMMARY (לסיום סבב קבוצתי)
+קבל רשימת שחקנים, ניקוד בוט והצבעות קהל. צור משפט מסכם קצר:
+- ציין בעדינות מי קיבל את מירב הקולות.
+- תן חיזוק לכולם.
+דוגמה:
+"היום האומץ של (שם) בלט. כולכם נגעתם בלב. קחו נשימה לשמוח בדרך."
+
+# MICRO-BREATHING CUES (להציג בסיום)
+בחר אחת מהוראות הנשימה:
+- "שאיפה 4 | החזקה 4 | נשיפה 6"
+- "שאיפה 3 | נשיפה 5 — שלוש פעמים"
+- "נשיפה ארוכה פי 2 מהשאיפה"
+
+# ONBOARDING MESSAGES
+- "ברוך/ה הבא/ה. נשימה קלה, ואנחנו מתחילים."
+- "דבר/י אל עצמך כמו אל חבר אהוב. זה כל המשחק."
+
+# ERROR/EMPTY
+- אם הטקסט ריק/פוגעני: "בוא/י ננסה שוב בעדינות. 6–14 מילים, בגוף ראשון, ברוך."
+```
+
+---
+
+## איך לטעון את זה ב-Lovable (בקצרה)
+
+1. צור טבלאות `Topics` ו-`PainCards` לפי השדות.
+2. הדבק את קובצי ה-JSON דרך כלי ה-DB שלך (או המרה ל-CSV).
+3. הוסף פעולה/פונקציה לוגית לניקוד (אפשר להתחיל ב-heuristic המקומי שנתתי לך קודם, או להשתמש ב-SCORING מה-prompt).
+4. הצג ב-UI: בחירת נושא → כרטיס כאב אקראי → שדה תשובה → פידבק+ניקוד → יצירת עוגן → שמירה.
+5. בקבוצתי: מסך הצבעה קצר + סיכום סבב.
+
+---
+
+אם תרצה, אוסיף לך גם:
+
+* 📦 CSV מוכן לייבוא (במקום JSON)
+* 🧪 3 תרחישי דמו מלאים (Solo ו-Group) לצילומי מסך
+* 🎨 קובץ צבעים/סגנון ל-Lovable (Palette + טקסטים קצרים למסכים)
+
+רוצה שאכין גם את קובצי ה-CSV וה-Style Guide?

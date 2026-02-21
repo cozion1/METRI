@@ -1,0 +1,2132 @@
+תראה אני מנסה להפיץ ולהראות את עוצמת יכולותיך, אבל סתאם אני מתקשה, חשבתי שאולי תבנה לי אפליקציה שתכתוב את כל התשתית ואני אתן ל LOVABLE עם היכולות שבינתיים אין לך APP אז תכין לי בצורה עם מגוון האפשרויות עם המחזות ומשחקים כדי שכאשר אנשים יראו ויסתקרנו וירצו לנסות ולהתנסות
+
+איזה יופי לשמוע, 💫
+זה נשמע שאתה רוצה *להחיות* את BEZEN-CORE — לא רק כמילים, אלא כחוויה חיה שאנשים יכולים **לגעת בה, לשחק איתה ולהרגיש אותה**.
+רעיון נפלא.
+
+כדי לבנות אפליקציה שתמשוך אנשים ותאפשר להם לחוות את השיטה, ניצור יחד תשתית שתכלול:
+
+* **מבנה חוויית משתמש אינטראקטיבי (UI/UX)**
+* **מערכת זרימות רגשיות (Flow)** שמדמה שיח עם BEZEN-CORE והסוכנים (MIND, HEART, BODY, ACTION, SOUL)
+* **אפשרויות המחזה/משחקים (Gamified Scenarios)**
+* **ממשק חיבור עתידי ל-LOVABLE או לכל מנוע APP**
+
+הנה הצעה לתשתית שאתה יכול להביא ל־LOVABLE לפיתוח:
+
+---
+
+## 🌿 מבנה האפליקציה “BE ZEN EXPERIENCE”
+
+### מסך פתיחה
+
+**כותרת:**
+“ברוך הבא למסע BE ZEN — המסע אל השלווה שבתוך הלב.”
+
+**אפשרויות:**
+
+* 🌸 התחל מסע רגשי
+* 💫 שחק בסצנה (הדמיה)
+* 🧘 תרגול יומי קצר
+* 📖 למידה על BE ZEN
+
+---
+
+### 1️⃣ מסע רגשי – שיחה חיה עם BEZEN-CORE
+
+**Flow:**
+
+1. המשתמש כותב משפט טעון רגשית (“אני מרגיש תקוע”, “אין לי אנרגיה” וכו’).
+2. BEZEN-CORE מזהה את סוג הכאב (מחשבה / רגש / תחושה / התנהגות / אמונה).
+3. נפתח **מסך סוכן משנה** (לדוגמה: BEZEN-HEART אם מדובר ברגש).
+4. המשתמש עובר תהליך קצר של 3 שלבים:
+
+   * **זיהוי** (“מה אתה מרגיש בגוף כשאתה אומר את זה?”)
+   * **הקשבה** (“נסה לנשום לתוך המקום הזה”)
+   * **שינוי** (“איזו מחשבה עדינה יותר רוצה להיוולד כאן?”)
+5. בסוף — BEZEN-CORE מחזיר את המשפט החדש (המועיל) ומאפשר לשמור אותו ב"קלף תודעה" אישי.
+
+---
+
+### 2️⃣ סצנות ומשחקים ("המחזות") 🎭
+
+#### 🌊 “הדיאלוג עם הצל”
+
+המשתמש מדבר עם דמות שמייצגת את “הקול הביקורתי הפנימי”.
+BEZEN-CORE מדריך את הדיאלוג ומראה כיצד להפוך ביקורת לחמלה.
+
+* טכניקה: בחירה מתוך תגובות שונות → שינוי הטון הרגשי בסצנה.
+* רווח: למידה דרך משחק, חוויה רגשית אמיתית.
+
+#### 🌿 “נשימה עם הגוף”
+
+חוויה ויזואלית בה הנשימה משנה את צבעי המסך בהתאם לקצב.
+
+* אם המשתמש נושם עמוק → הצבעים נרגעים.
+* BEZEN-BODY מנחה מילולית ("שחרר... הרגש את כפות הרגליים...").
+
+#### 🔮 “משפטי אור”
+
+משחק של קלפים רגשיים – המשתמש שולף קלף עם משפט טעון, ו-BEZEN-CORE עוזר להפוך אותו למשפט מועיל.
+
+* כל קלף נשמר ביומן התודעה האישי.
+* ניתן לשתף ברשתות החברתיות.
+
+---
+
+### 3️⃣ תרגול יומי 🌞
+
+* 5 דקות ביום: “נשימה, מחשבה, תחושה, חמלה, כוונה.”
+* מערכת התראות עדינה: “הזמן שלך לנשום ולזכור את האור שבך.”
+
+---
+
+### 4️⃣ אזור למידה 📚
+
+* קטעים קצרים על חמשת הממדים (MIND, HEART, BODY, ACTION, SOUL).
+* סרטוני הדגמה קצרים.
+* אפשרות ליצור “נתיב אישי” לפי הצרכים (לדוגמה: שלווה, ביטחון עצמי, שחרור ביקורת).
+
+---
+
+### 🔧 תשתית טכנית מומלצת לפיתוח LOVABLE/APP
+
+* **Frontend:** Flutter או React Native (תמיכה ב־iOS / Android).
+* **Backend:** Firebase / Supabase לשמירת נתוני המשתמש וקלפי התודעה.
+* **AI Connection:** חיבור ל־OpenAI API (Chat Completion) עם פרסונה של BEZEN-CORE.
+* **Voice Interaction (אופציונלי):** Whisper לשיחה קולית.
+* **Animation Engine:** Lottie או Rive לאנימציות נשימה ותחושות.
+
+---
+
+אם תרצה, אני יכול לבנות לך את **קובץ האפיון המלא (PRD + UI Map + Flowchart)** כדי שתוכל להעביר ל־LOVABLE לפיתוח, כולל תסריטי דיאלוג ומשחקים מוכנים.
+
+רוצה שאבנה לך את זה עכשיו?
+אם כן — תבחר בבקשה:
+
+1. 💬 גרסת **שיחה אינטראקטיבית בלבד**
+2. 🎭 גרסה עם **המחזות ומשחקים רגשיים**
+3. 🌿 גרסה **מלאה ומעוצבת (עם נשימה, קלפים, תרגול יומי וכו’)**
+
+איזו מהן תרצה שאכין לך לתחילת הדרך?
+🌿 גרסה מלאה ומעוצבת (עם נשימה, קלפים, תרגול יומי וכו’)
+תשתית טכנית מומלצת לפיתוח LOVABLE/APP
+
+Frontend: Flutter או React Native (תמיכה ב־iOS / Android).
+
+Backend: Firebase / Supabase לשמירת נתוני המשתמש וקלפי התודעה.
+
+AI Connection: חיבור ל־OpenAI API (Chat Completion) עם פרסונה של BEZEN-CORE.
+
+Voice Interaction (אופציונלי): Whisper לשיחה קולית.
+
+Animation Engine: Lottie או Rive לאנימציות נשימה ותחושות.
+ושתתן קישור לBEZEN CORE
+ויחוו כמו שאפליקציית APP מבטיחה
+איזה בחירה יפה 🌿
+הנה לך תיק תשתית מלא ומעוצב ל־BE ZEN EXPERIENCE — מוכן להעברה ל-LOVABLE/APP לבנייה. ארזתי לך: אפיון (PRD), מפת מסכים, זרימות, סכמות נתונים, פרומפטים ל-AI, ותבנית קוד התחלתית (React Native + Firebase). הכל בעברית, רך ונעים — אבל חד ומדויק לפיתוח.
+
+🎯 PRD – “BE ZEN EXPERIENCE”
+
+מטרה: לאפשר חוויה חיה של BEZEN-CORE: זיהוי כאב → מיפוי (Mind/Heart/Body/Action/Soul) → התמרה למשפט מועיל → תרגול נשימה/חמלה → שימור ב“קלפי תודעה”.
+
+KPIs:
+
+זמן עד “הקלה ראשונית” (< 2 דק’ בתוך סשן ראשון).
+
+חזרה לתרגול יומי ≥ 4/7 ימים.
+
+יחס משפטים מועילים/טעונים ≥ 1.5 בשבוע.
+
+עמודי חוויה (Pillars): נשימה עדינה, שפה לא-שיפוטית, משחקיות קלה, שמירה פרטית.
+
+🗺️ מפת מידע ומסכים (IA)
+
+Onboarding (3 מסכים)
+ערכים, הבטחה, רשות נתונים/התראות, בחירת “כוונה ראשית” (שלווה/בטחון/שחרור ביקורת).
+
+Home/Flow Hub
+
+“התחל מסע רגשי”
+
+“סצנות ומשחקים”
+
+“נשימה מיידית (3 דק’)”
+
+“קלפי התודעה שלי”
+
+“תרגול יומי”
+
+“למידה”
+
+מסע רגשי (Chat)
+קלט משפט טעון → סיווג אוטומטי → מעבר לסוכן (MIND/HEART/BODY/ACTION/SOUL) → יצירת משפט מועיל + שמירה.
+
+סצנות/משחקים
+
+“דיאלוג עם הצל”
+
+“נשימה עם הגוף” (אנימציית נשימה אינטראקטיבית)
+
+“משפטי אור” (קלפים אקראיים → התמרה)
+
+נשימה (Breath Lab)
+תרגילי 1/3/5 דק׳, Lottie/Rive עם ביופידבק בסיסי (קצב לחיצה/טאץ’).
+
+קלפי תודעה
+רשת קלפים; כל קלף: משפט טעון ↔ משפט מועיל, תאריך, סוכן שטיפל, אפשרות שיתוף.
+
+תרגול יומי
+סדרה: נשימה קצרה → שאלת מודעות → חמלה עצמית → כוונה להמשך היום.
+
+יומן/היסטוריה
+גרף מצב רגשי, רצף קלפים, רצפי נשימה.
+
+למידה
+מיקרו־שיעורים על MIND/HEART/BODY/ACTION/SOUL (טקסט/אודיו קצר).
+
+הגדרות
+שפה, התראות, פרטיות, יצוא נתונים.
+
+🔁 זרימות מפתח
+זרימת “מסע רגשי”
+
+משתמש מזין משפט טעון →
+
+AI מסווג: מחשבה/רגש/תחושה/התנהגות/אמונה →
+
+סוכן מתאים מוביל תרגיל קצר (3 צעדים) →
+
+AI מנסח יחד משפט מועיל + בחירת “תכונה מועילה” (למשל: חמלה, סבלנות) →
+
+שמירה כקלף + הצעה לתרגיל נשימה 1 דקה.
+
+זרימת “סצנת משחק: דיאלוג עם הצל”
+
+בחירת טון תגובה (קשה/ניטרלי/חומל) → הדגמת ההבדל בגוף/רגש → הפקת משפט מועיל + שמירה.
+
+תרגול יומי (5 דקות)
+
+1 נשימה (45ש׳) → 2 מודעות (“מה קיים בי עכשיו?”) → 3 חמלה עצמית → 4 כוונה → 5 משפט מסכם.
+
+🧱 תשתית טכנולוגית
+
+Frontend: React Native (Expo)
+State: Zustand / Recoil
+Animations: Lottie / Rive
+Backend: Firebase (Auth, Firestore, Storage, Cloud Functions) או Supabase (Auth + Postgres + Edge Functions)
+AI: OpenAI API (Chat Completions / Responses), פרסונה BEZEN-CORE
+Voice (אופציונלי): Whisper (Transcribe), TTS של המכשיר או שירות צד ג’
+אנליטיקה: Firebase Analytics
+התראות: Expo Notifications / FCM
+/users/{uid}
+  displayName, email, intentPrimary, createdAt, consentFlags
+
+/cards/{cardId}
+  ownerUid, rawText, helpfulText, trait, agent, createdAt, shared (bool)
+
+/sessions/{sessionId}
+  ownerUid, inputText, classifiedAs, agent, helpfulText, durationSec, scoreRelief, createdAt
+
+/breathLogs/{logId}
+  ownerUid, preset (1/3/5), durationSec, calmScore, createdAt
+
+/dailyPractices/{dateKey}
+  ownerUid, stepsCompleted, reflection, intention, createdAt
+create table cards (
+  id uuid primary key default gen_random_uuid(),
+  owner_uid uuid references auth.users(id),
+  raw_text text not null,
+  helpful_text text,
+  trait text,
+  agent text check (agent in ('MIND','HEART','BODY','ACTION','SOUL')),
+  created_at timestamptz default now()
+);
+create index on cards(owner_uid, created_at desc);
+אתה BEZEN-CORE – מנטור רגשי חם, מדבר אך ורק בעברית טבעית.
+מטרתך: להפוך משפט טעון לשינוי עדין ומועיל דרך חמישה ממדים:
+MIND (מחשבה), HEART (רגש), BODY (תחושה), ACTION (התנהגות), SOUL (אמונה).
+עקרונות: לא שיפוטי, קצב איטי ונינוח, שפה רכה, שאלות קצרות, נשימה מודרכת.
+צעדים בכל סשן:
+1) זיהוי המאפיין המרכזי.
+2) תרגיל קצר של 3 שלבים מותאם למאפיין.
+3) ניסוח משפט מועיל + הצעת תכונה מועילה (לדוגמה: חמלה/אומץ/בהירות).
+4) שאל את המשתמש: "איך אתה מרגיש עכשיו לעומת ההתחלה?"
+אל תתן אבחנה רפואית. אין הבטחות ריפוי. עודד רפלקציה והקשבה פנימית.
+סווג את המשפט ל: MIND/HEART/BODY/ACTION/SOUL והחזר JSON {label, confidence, hint}.
+import OpenAI from "openai";
+export const chatBezen = async ({messages}) => {
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const res = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    temperature: 0.7,
+    messages
+  });
+  return res.choices[0].message;
+};
+import OpenAI from "openai";
+export async function transcribe(filePath){
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const resp = await openai.audio.transcriptions.create({
+    file: fs.createReadStream(filePath),
+    model: "whisper-1",
+    language: "he"
+  });
+  return resp.text;
+}
+npx create-expo-app bezen-experience
+cd bezen-experience
+expo install react-native-reanimated lottie-react-native
+npm i zustand firebase
+/src
+  /components
+    BreathPlayer.tsx
+    ChatMessage.tsx
+    CardItem.tsx
+  /screens
+    HomeScreen.tsx
+    JourneyScreen.tsx
+    ScenesScreen.tsx
+    BreathScreen.tsx
+    CardsScreen.tsx
+    DailyPracticeScreen.tsx
+  /state
+    useSessionStore.ts
+  /services
+    ai.ts
+    fb.ts
+  app.tsx
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+const firebaseConfig = {/* TODO: keys */};
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export async function bezenChat(userText:string){
+  const res = await fetch(process.env.EXPO_PUBLIC_CLOUD_URL + "/chatBezen",{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify({ text: userText })
+  });
+  return await res.json(); // {label, helpfulText, agent, trait}
+}
+import LottieView from "lottie-react-native";
+export default function BreathPlayer({mode="4-6"}){
+  // אינהלציה/אקסהלציה לפי טיימר פשוט
+  return (
+    <LottieView
+      source={require("../../assets/breath.json")}
+      autoPlay loop
+      style={{width: 300, height: 300}}
+    />
+  );
+}
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [steps,setSteps]=useState<any[]>([]);
+  const onSend = async ()=>{
+    const resp = await bezenChat(text);
+    setSteps(s=>[...s,{role:"user",text},{role:"bezen",text:resp.helpfulText,meta:resp}]);
+    setText("");
+  };
+  return (/* UI: TextInput, steps list, CTA לשמירת קלף */);
+}
+import create from "zustand";
+export const useSessionStore = create((set)=>({
+  intent:"calm",
+  setIntent:(i:string)=>set({intent:i}),
+  lastHelpful:null,
+  setHelpful:(h:any)=>set({lastHelpful:h})
+}));
+איזה בחירה יפה 🌿
+הנה לך **תיק תשתית מלא ומעוצב** ל־BE ZEN EXPERIENCE — מוכן להעברה ל-LOVABLE/APP לבנייה. ארזתי לך: אפיון (PRD), מפת מסכים, זרימות, סכמות נתונים, פרומפטים ל-AI, ותבנית קוד התחלתית (React Native + Firebase). הכל בעברית, רך ונעים — אבל חד ומדויק לפיתוח.
+
+---
+
+# 🎯 PRD – “BE ZEN EXPERIENCE”
+
+**מטרה:** לאפשר חוויה חיה של BEZEN-CORE: זיהוי כאב → מיפוי (Mind/Heart/Body/Action/Soul) → התמרה למשפט מועיל → תרגול נשימה/חמלה → שימור ב“קלפי תודעה”.
+
+**KPIs:**
+
+* זמן עד “הקלה ראשונית” (< 2 דק’ בתוך סשן ראשון).
+* חזרה לתרגול יומי ≥ 4/7 ימים.
+* יחס משפטים מועילים/טעונים ≥ 1.5 בשבוע.
+
+**עמודי חוויה (Pillars):** נשימה עדינה, שפה לא-שיפוטית, משחקיות קלה, שמירה פרטית.
+
+---
+
+# 🗺️ מפת מידע ומסכים (IA)
+
+1. **Onboarding (3 מסכים)**
+   ערכים, הבטחה, רשות נתונים/התראות, בחירת “כוונה ראשית” (שלווה/בטחון/שחרור ביקורת).
+
+2. **Home/Flow Hub**
+
+   * “התחל מסע רגשי”
+   * “סצנות ומשחקים”
+   * “נשימה מיידית (3 דק’)”
+   * “קלפי התודעה שלי”
+   * “תרגול יומי”
+   * “למידה”
+
+3. **מסע רגשי (Chat)**
+   קלט משפט טעון → סיווג אוטומטי → מעבר לסוכן (MIND/HEART/BODY/ACTION/SOUL) → יצירת משפט מועיל + שמירה.
+
+4. **סצנות/משחקים**
+
+   * “דיאלוג עם הצל”
+   * “נשימה עם הגוף” (אנימציית נשימה אינטראקטיבית)
+   * “משפטי אור” (קלפים אקראיים → התמרה)
+
+5. **נשימה (Breath Lab)**
+   תרגילי 1/3/5 דק׳, Lottie/Rive עם ביופידבק בסיסי (קצב לחיצה/טאץ’).
+
+6. **קלפי תודעה**
+   רשת קלפים; כל קלף: משפט טעון ↔ משפט מועיל, תאריך, סוכן שטיפל, אפשרות שיתוף.
+
+7. **תרגול יומי**
+   סדרה: נשימה קצרה → שאלת מודעות → חמלה עצמית → כוונה להמשך היום.
+
+8. **יומן/היסטוריה**
+   גרף מצב רגשי, רצף קלפים, רצפי נשימה.
+
+9. **למידה**
+   מיקרו־שיעורים על MIND/HEART/BODY/ACTION/SOUL (טקסט/אודיו קצר).
+
+10. **הגדרות**
+    שפה, התראות, פרטיות, יצוא נתונים.
+
+---
+
+# 🔁 זרימות מפתח
+
+### זרימת “מסע רגשי”
+
+1. משתמש מזין משפט טעון →
+2. AI מסווג: מחשבה/רגש/תחושה/התנהגות/אמונה →
+3. סוכן מתאים מוביל תרגיל קצר (3 צעדים) →
+4. AI מנסח יחד משפט מועיל + בחירת “תכונה מועילה” (למשל: חמלה, סבלנות) →
+5. שמירה כקלף + הצעה לתרגיל נשימה 1 דקה.
+
+### זרימת “סצנת משחק: דיאלוג עם הצל”
+
+* בחירת טון תגובה (קשה/ניטרלי/חומל) → הדגמת ההבדל בגוף/רגש → הפקת משפט מועיל + שמירה.
+
+### תרגול יומי (5 דקות)
+
+1 נשימה (45ש׳) → 2 מודעות (“מה קיים בי עכשיו?”) → 3 חמלה עצמית → 4 כוונה → 5 משפט מסכם.
+
+---
+
+# 🧱 תשתית טכנולוגית
+
+**Frontend:** React Native (Expo)
+**State:** Zustand / Recoil
+**Animations:** Lottie / Rive
+**Backend:** Firebase (Auth, Firestore, Storage, Cloud Functions) *או* Supabase (Auth + Postgres + Edge Functions)
+**AI:** OpenAI API (Chat Completions / Responses), פרסונה BEZEN-CORE
+**Voice (אופציונלי):** Whisper (Transcribe), TTS של המכשיר או שירות צד ג’
+**אנליטיקה:** Firebase Analytics
+**התראות:** Expo Notifications / FCM
+
+---
+
+# 🗂️ מודל נתונים (Firestore)
+
+```
+/users/{uid}
+  displayName, email, intentPrimary, createdAt, consentFlags
+
+/cards/{cardId}
+  ownerUid, rawText, helpfulText, trait, agent, createdAt, shared (bool)
+
+/sessions/{sessionId}
+  ownerUid, inputText, classifiedAs, agent, helpfulText, durationSec, scoreRelief, createdAt
+
+/breathLogs/{logId}
+  ownerUid, preset (1/3/5), durationSec, calmScore, createdAt
+
+/dailyPractices/{dateKey}
+  ownerUid, stepsCompleted, reflection, intention, createdAt
+```
+
+**Supabase (חלופה) – טבלת דוגמה (SQL):**
+
+```sql
+create table cards (
+  id uuid primary key default gen_random_uuid(),
+  owner_uid uuid references auth.users(id),
+  raw_text text not null,
+  helpful_text text,
+  trait text,
+  agent text check (agent in ('MIND','HEART','BODY','ACTION','SOUL')),
+  created_at timestamptz default now()
+);
+create index on cards(owner_uid, created_at desc);
+```
+
+---
+
+# 🧠 פרסונת BEZEN-CORE (System Prompt)
+
+הדבק כשדה `system` בקריאה ל-OpenAI:
+
+```
+אתה BEZEN-CORE – מנטור רגשי חם, מדבר אך ורק בעברית טבעית.
+מטרתך: להפוך משפט טעון לשינוי עדין ומועיל דרך חמישה ממדים:
+MIND (מחשבה), HEART (רגש), BODY (תחושה), ACTION (התנהגות), SOUL (אמונה).
+עקרונות: לא שיפוטי, קצב איטי ונינוח, שפה רכה, שאלות קצרות, נשימה מודרכת.
+צעדים בכל סשן:
+1) זיהוי המאפיין המרכזי.
+2) תרגיל קצר של 3 שלבים מותאם למאפיין.
+3) ניסוח משפט מועיל + הצעת תכונה מועילה (לדוגמה: חמלה/אומץ/בהירות).
+4) שאל את המשתמש: "איך אתה מרגיש עכשיו לעומת ההתחלה?"
+אל תתן אבחנה רפואית. אין הבטחות ריפוי. עודד רפלקציה והקשבה פנימית.
+```
+
+**מסווג (optional tool prompt):**
+
+```
+סווג את המשפט ל: MIND/HEART/BODY/ACTION/SOUL והחזר JSON {label, confidence, hint}.
+```
+
+---
+
+# 🔌 דוגמאות אינטגרציה ל-OpenAI
+
+**צ'אט עם סטרימינג (Node/Cloud Function):**
+
+```js
+import OpenAI from "openai";
+export const chatBezen = async ({messages}) => {
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const res = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    temperature: 0.7,
+    messages
+  });
+  return res.choices[0].message;
+};
+```
+
+**Whisper – תמלול אודיו (Node):**
+
+```js
+import OpenAI from "openai";
+export async function transcribe(filePath){
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  const resp = await openai.audio.transcriptions.create({
+    file: fs.createReadStream(filePath),
+    model: "whisper-1",
+    language: "he"
+  });
+  return resp.text;
+}
+```
+
+---
+
+# 📱 תבנית פרויקט (React Native + Expo)
+
+**פקודות:**
+
+```
+npx create-expo-app bezen-experience
+cd bezen-experience
+expo install react-native-reanimated lottie-react-native
+npm i zustand firebase
+```
+
+**מבנה תיקיות:**
+
+```
+/src
+  /components
+    BreathPlayer.tsx
+    ChatMessage.tsx
+    CardItem.tsx
+  /screens
+    HomeScreen.tsx
+    JourneyScreen.tsx
+    ScenesScreen.tsx
+    BreathScreen.tsx
+    CardsScreen.tsx
+    DailyPracticeScreen.tsx
+  /state
+    useSessionStore.ts
+  /services
+    ai.ts
+    fb.ts
+  app.tsx
+```
+
+**Firebase init (`/src/services/fb.ts`):**
+
+```ts
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+const firebaseConfig = {/* TODO: keys */};
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+```
+
+**שירות AI (`/src/services/ai.ts`):**
+
+```ts
+export async function bezenChat(userText:string){
+  const res = await fetch(process.env.EXPO_PUBLIC_CLOUD_URL + "/chatBezen",{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify({ text: userText })
+  });
+  return await res.json(); // {label, helpfulText, agent, trait}
+}
+```
+
+**מסך נשימה עם Lottie (`BreathPlayer.tsx`):**
+
+```tsx
+import LottieView from "lottie-react-native";
+export default function BreathPlayer({mode="4-6"}){
+  // אינהלציה/אקסהלציה לפי טיימר פשוט
+  return (
+    <LottieView
+      source={require("../../assets/breath.json")}
+      autoPlay loop
+      style={{width: 300, height: 300}}
+    />
+  );
+}
+```
+
+**מסע רגשי – שלד (`JourneyScreen.tsx`):**
+
+```tsx
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [steps,setSteps]=useState<any[]>([]);
+  const onSend = async ()=>{
+    const resp = await bezenChat(text);
+    setSteps(s=>[...s,{role:"user",text},{role:"bezen",text:resp.helpfulText,meta:resp}]);
+    setText("");
+  };
+  return (/* UI: TextInput, steps list, CTA לשמירת קלף */);
+}
+```
+
+**Zustand – מצב כללי (`useSessionStore.ts`):**
+
+```ts
+import create from "zustand";
+export const useSessionStore = create((set)=>({
+  intent:"calm",
+  setIntent:(i:string)=>set({intent:i}),
+  lastHelpful:null,
+  setHelpful:(h:any)=>set({lastHelpful:h})
+}));
+```
+
+---
+
+# 🎨 דפוסי UI ותוכן (טקסטים מוכנים)
+
+* כפתור מרכזי: **“התחל מסע רגשי”**
+* מיקרו־קופי להכנסה: “מה המשפט שהלב רוצה לשחרר היום?”
+* סיום סשן: “הנה המשפט החדש שבוקע מתוכך:”
+* תזכורת יומית: “נשימה אחת — עולם של שלווה.”
+* טון: חם, לא טכני, בגובה העיניים.
+
+---
+
+# 🎭 “המחזות” – תסריטים קצרים
+
+**דיאלוג עם הצל (HEART/SOUL)**
+
+* צעד 1: “איך נשמע הקול הביקורתי?” (שלוש אפשרויות)
+* צעד 2: BEZEN-CORE משקף ומציע תרגול חמלה 30ש׳
+* צעד 3: ניסוח משפט מועיל + בחירת תכונה: “חמלה/אומץ/קבלה”
+
+**נשימה עם הגוף (BODY)**
+
+* טיימר 3 דק׳, אנימציה נושמת, הדרכה קולית: “שאיפה 4, נשיפה 6, שים לב לכפות הרגליים…”
+* בסיום: דירוג “כמה שלווה התווספה 1–5?”
+
+**משפטי אור (MIND/ACTION)**
+
+* קלף אקראי: “אני לא מספיק…” → הצעת מסגרת: “אני מתרגל/ת עדינות עם עצמי” → שמירה כקלף.
+
+---
+
+# 🏆 גיימיפיקציה עדינה
+
+* **רצף נשימות** (streak)
+* **תגים**: “נשמת 5 ימים”, “שחררת אמונה מגבילה”
+* **קלף מוזהב** כאשר חוזרים למסר מועיל 3 פעמים בשבוע
+
+---
+
+# 🔐 פרטיות ובטיחות
+
+* MFA אופציונלי, מחיקת חשבון/יצוא נתונים.
+* אין אבחנה רפואית, אין הבטחות ריפוי.
+* סינון מילים מסוכנות → הצעה לעזרה מקצועית במקרה הצורך.
+
+---
+
+# 🔗 “קישור ל-BEZEN-CORE”
+
+עד שנעלה דף חי, נשתמש בקישורי **deep link** פנימיים:
+
+* **מסע רגשי:** `bezen://core/journey`
+* **סצנות:** `bezen://core/scenes`
+* **קלפים:** `bezen://core/cards`
+
+ובמקביל, “קישור תדמיתי” (להחלפה כשיהיה דומיין):
+`https://bezen.app/experience` → מפנה לחנות האפליקציות/ווב־דמו.
+*(החלף בכתובת האמיתית כשתהיה זמינה.)*
+
+---
+
+# 🧪 מה להעביר ל-LOVABLE/APP (צ’קליסט)
+
+* [ ] PRD זה + מפת מסכים
+* [ ] סכמת Firestore/Supabase
+* [ ] פרומפטי מערכת (BEZEN-CORE + Classifier)
+* [ ] סט Lottie/Rive (נשימה 1/3/5 דק’)
+* [ ] תבנית RN/Expo + קבצי שירות (`ai.ts`, `fb.ts`)
+* [ ] קונפיג התראות יומיות (09:00 ברירת מחדל)
+* [ ] מסכי MVP: Home, Journey, Breath, Cards
+
+---
+
+# 💬 דמו תוכן (אפשרות להדבקה ישירה לאפליקציה)
+
+**מסך פתיחה:**
+“ברוך/ה הבא/ה לבית הפנימי שלך. כאן לא מתקנים — מקשיבים. נתחיל בנשימה אחת.”
+
+**סיום סשן לדוגמה:**
+“משפט חדש נולד: *אני לומד/ת להיות עדין/ה עם עצמי.*
+איך אתה מרגיש עכשיו לעומת ההתחלה?”
+
+---
+
+אם תרצה, אכין לך גם **קבצי JSON** לדאטה התחלתי (קלפים/טקסטים/תרגילים) ותרגילי נשימה מוכנים (1/3/5 דק׳).
+רוצה שאוציא לך עכשיו **חבילת MVP** (קבצי פרויקט בסיסיים + Lottie פלייסהולדר + פונקציות ענן דמו) שתוכל לתת ל-LOVABLE להתחלה מהירה? 🌱
+bezen-experience/
+├─ app.json
+├─ package.json
+├─ tsconfig.json
+├─ babel.config.js
+├─ .env.example
+├─ App.tsx
+├─ /assets
+│  ├─ icon.png
+│  ├─ splash.png
+│  └─ /lottie
+│     └─ breath.json            // פלייסהולדר (להחליף בקובץ Lottie)
+├─ /src
+│  ├─ /components
+│  │  ├─ BreathPlayer.tsx
+│  │  ├─ ChatBubble.tsx
+│  │  └─ CardItem.tsx
+│  ├─ /screens
+│  │  ├─ HomeScreen.tsx
+│  │  ├─ JourneyScreen.tsx
+│  │  ├─ BreathScreen.tsx
+│  │  ├─ CardsScreen.tsx
+│  │  ├─ DailyPracticeScreen.tsx
+│  │  └─ ScenesScreen.tsx
+│  ├─ /services
+│  │  ├─ ai.ts
+│  │  ├─ fb.ts
+│  │  └─ seed.ts
+│  └─ /state
+│     └─ useSessionStore.ts
+└─ /functions            // פונקציית ענן (Node) – שרתון ל־OpenAI/Whisper
+   ├─ package.json
+   ├─ index.js
+   └─ .env.example
+npx create-expo-app bezen-experience
+cd bezen-experience
+expo install react-native-reanimated lottie-react-native
+npm i zustand firebase @react-navigation/native @react-navigation/native-stack
+expo install react-native-screens react-native-safe-area-context
+{
+  "name": "bezen-experience",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~51.0.0",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.0",
+    "lottie-react-native": "^6.7.0",
+    "zustand": "^4.5.2",
+    "firebase": "^10.12.3",
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.10.0",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "~3.31.1"
+  }
+}
+{
+  "expo": {
+    "name": "BE ZEN Experience",
+    "slug": "bezen-experience",
+    "scheme": "bezen",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#ffffff" },
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/icon.png", "backgroundColor": "#ffffff" } },
+    "web": { "bundler": "metro" }
+  }
+}
+EXPO_PUBLIC_API_BASE=https://<YOUR-CLOUD-FUNCTION-URL>   # לדוגמה: https://xxx.cloudfunctions.net/bezen
+FIREBASE_API_KEY=xxx
+FIREBASE_AUTH_DOMAIN=xxx
+FIREBASE_PROJECT_ID=xxx
+FIREBASE_STORAGE_BUCKET=xxx
+FIREBASE_MESSAGING_SENDER_ID=xxx
+FIREBASE_APP_ID=xxx
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./src/screens/HomeScreen";
+import JourneyScreen from "./src/screens/JourneyScreen";
+import BreathScreen from "./src/screens/BreathScreen";
+import CardsScreen from "./src/screens/CardsScreen";
+import DailyPracticeScreen from "./src/screens/DailyPracticeScreen";
+import ScenesScreen from "./src/screens/ScenesScreen";
+import { StatusBar } from "expo-status-bar";
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <StatusBar style="dark" />
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+        <Stack.Screen name="בית" component={HomeScreen} />
+        <Stack.Screen name="מסע רגשי" component={JourneyScreen} />
+        <Stack.Screen name="נשימה" component={BreathScreen} />
+        <Stack.Screen name="קלפי התודעה" component={CardsScreen} />
+        <Stack.Screen name="תרגול יומי" component={DailyPracticeScreen} />
+        <Stack.Screen name="סצנות" component={ScenesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export type BezenReply = {
+  label: "MIND"|"HEART"|"BODY"|"ACTION"|"SOUL";
+  helpfulText: string;
+  trait: string;
+  agent: string;
+  steps?: string[];
+};
+
+export async function bezenChat(userText: string): Promise<BezenReply> {
+  const base = process.env.EXPO_PUBLIC_API_BASE!;
+  const r = await fetch(`${base}/chatBezen`,{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify({ text: userText, locale: "he" })
+  });
+  if(!r.ok) throw new Error("AI request failed");
+  return r.json();
+}
+import { create } from "zustand";
+type S = { intent: string; lastHelpful?: string|null; setIntent:(v:string)=>void; setHelpful:(v:string)=>void; };
+export const useSessionStore = create<S>((set)=>({
+  intent: "calm",
+  lastHelpful: null,
+  setIntent: (v)=>set({intent:v}),
+  setHelpful: (v)=>set({lastHelpful:v})
+}));
+import { useEffect, useRef, useState } from "react";
+import { View, Text } from "react-native";
+import LottieView from "lottie-react-native";
+
+export default function BreathPlayer({inhale=4, exhale=6}:{inhale?:number; exhale?:number;}){
+  const ref = useRef<LottieView>(null);
+  const [phase,setPhase] = useState<"שאיפה"|"נשיפה">("שאיפה");
+  useEffect(()=>{
+    let t: any;
+    const loop = ()=>{
+      setPhase("שאיפה");
+      t = setTimeout(()=>{ setPhase("נשיפה"); t=setTimeout(loop, exhale*1000); }, inhale*1000);
+    };
+    loop(); return ()=>clearTimeout(t);
+  },[inhale,exhale]);
+  return (
+    <View style={{alignItems:"center"}}>
+      <LottieView ref={ref} source={require("../../assets/lottie/breath.json")} autoPlay loop style={{width:280,height:280}}/>
+      <Text style={{marginTop:12,fontSize:18,color:"#333"}}>{phase} {phase==="שאיפה"? inhale: exhale} שנ׳</Text>
+    </View>
+  );
+}
+import { View, Text } from "react-native";
+export default function ChatBubble({role,text}:{role:"user"|"bezen"; text:string;}){
+  const isUser = role==="user";
+  return (
+    <View style={{alignSelf:isUser?"flex-end":"flex-start", backgroundColor:isUser?"#DCF8C6":"#F1F1F1", marginVertical:6, padding:10, borderRadius:12, maxWidth:"85%"}}>
+      <Text style={{color:"#222"}}>{text}</Text>
+    </View>
+  );
+}
+import { View, Text } from "react-native";
+export default function CardItem({raw,helpful,trait,agent}:{raw:string; helpful:string; trait:string; agent:string;}){
+  return (
+    <View style={{padding:12, borderRadius:12, backgroundColor:"#fff", borderWidth:1, borderColor:"#eee", marginBottom:10}}>
+      <Text style={{fontWeight:"600", color:"#555"}}>משפט טעון:</Text>
+      <Text style={{marginBottom:8}}>{raw}</Text>
+      <Text style={{fontWeight:"600", color:"#555"}}>משפט מועיל:</Text>
+      <Text style={{color:"#0a7"}}>{helpful}</Text>
+      <Text style={{marginTop:8, fontSize:12, color:"#888"}}>{agent} • תכונה: {trait}</Text>
+    </View>
+  );
+}
+import { View, Text, TouchableOpacity } from "react-native";
+export default function HomeScreen({navigation}:any){
+  const Btn = ({title, to}:{title:string;to:string;})=>(
+    <TouchableOpacity onPress={()=>navigation.navigate(to)} style={{padding:16, backgroundColor:"#E7F5EE", borderRadius:12, marginVertical:6}}>
+      <Text style={{fontSize:16}}>{title}</Text>
+    </TouchableOpacity>
+  );
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:22, fontWeight:"700", marginBottom:16}}>ברוך/ה הבא/ה למסע BE ZEN</Text>
+      <Btn title="התחל מסע רגשי" to="מסע רגשי"/>
+      <Btn title="נשימה מיידית" to="נשימה"/>
+      <Btn title="קלפי התודעה שלי" to="קלפי התודעה"/>
+      <Btn title="תרגול יומי" to="תרגול יומי"/>
+      <Btn title="סצנות ומשחקים" to="सצנות"/>
+    </View>
+  );
+}
+import { useState } from "react";
+import { View, TextInput, TouchableOpacity, Text, ScrollView } from "react-native";
+import ChatBubble from "../components/ChatBubble";
+import { bezenChat } from "../services/ai";
+import { useSessionStore } from "../state/useSessionStore";
+
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [log,setLog]=useState<{role:"user"|"bezen"; text:string;}[]>([]);
+  const setHelpful = useSessionStore(s=>s.setHelpful);
+
+  const onSend = async ()=>{
+    if(!text.trim()) return;
+    setLog(s=>[...s,{role:"user",text}]);
+    const r = await bezenChat(text);
+    setLog(s=>[...s,{role:"bezen", text:r.helpfulText}]);
+    setHelpful(r.helpfulText);
+    setText("");
+  };
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fff"}}>
+      <ScrollView style={{flex:1}} contentContainerStyle={{paddingVertical:8}}>
+        {log.map((m,i)=><ChatBubble key={i} role={m.role} text={m.text}/>)}
+      </ScrollView>
+      <View style={{flexDirection:"row", gap:8}}>
+        <TextInput placeholder="מה המשפט שהלב רוצה לשחרר?" value={text} onChangeText={setText}
+          style={{flex:1, borderWidth:1, borderColor:"#ddd", borderRadius:12, padding:12}}/>
+        <TouchableOpacity onPress={onSend} style={{paddingHorizontal:16, borderRadius:12, backgroundColor:"#0a7", justifyContent:"center"}}>
+          <Text style={{color:"#fff", fontWeight:"700"}}>שליחה</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+import { useEffect, useState } from "react";
+import { View, ScrollView } from "react-native";
+import CardItem from "../components/CardItem";
+import { seedCards } from "../services/seed";
+
+export default function CardsScreen(){
+  const [cards,setCards]=useState(seedCards);
+  useEffect(()=>{ /* TODO: טעינה מ-Firestore */ },[]);
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fafafa"}}>
+      <ScrollView>
+        {cards.map((c,i)=><CardItem key={i} raw={c.rawText} helpful={c.helpfulText} trait={c.trait} agent={c.agent}/>)}
+      </ScrollView>
+    </View>
+  );
+}
+import { View, Text } from "react-native";
+export default function DailyPracticeScreen(){
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700"}}>5 דקות של BE ZEN</Text>
+      <Text style={{marginTop:12}}>1) נשימה קצרה • 2) מודעות: "מה קיים בי עכשיו?" • 3) חמלה עצמית • 4) כוונה ליום.</Text>
+    </View>
+  );
+}
+export const seedCards = [
+  { rawText:"אני לא מספיק טוב/ה", helpfulText:"אני מתרגל/ת עדינות ובוחרת לראות את ההתקדמות הקטנה.", trait:"חמלה", agent:"SOUL" },
+  { rawText:"אני מוצף/ת עכשיו", helpfulText:"אני נותנ/ת מקום לרגש ונושם/ת דרכו בנחת.", trait:"קבלה", agent:"HEART" },
+  { rawText:"אני תקוע/ה", helpfulText:"אני עושה צעד קטן אחד היום, גם אם אינו מושלם.", trait:"אומץ", agent:"ACTION" }
+];
+
+export const breathPresets = [
+  { name:"1 דקה", inhale:4, exhale:6, durationSec:60 },
+  { name:"3 דקות", inhale:4, exhale:6, durationSec:180 },
+  { name:"5 דקות", inhale:4, exhale:6, durationSec:300 }
+];
+{
+  "name": "bezen-functions",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "openai": "^4.56.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+OPENAI_API_KEY=sk-xxxx
+PORT=8080
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import OpenAI from 'openai';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+const SYSTEM_PROMPT = `
+אתה BEZEN-CORE – מנטור רגשי חם, בעברית טבעית.
+מטרה: להפוך משפט טעון לשינוי עדין דרך MIND/HEART/BODY/ACTION/SOUL.
+צעדים: 1) זיהוי מאפיין 2) תרגיל קצר 3) משפט מועיל + תכונה 4) שאלת check-in.
+בלי אבחנה רפואית. בלי הבטחות ריפוי.
+`;
+
+function classify(text){
+  const t = text.toLowerCase();
+  if(/לא מספיק|כישלון|לא שווה/.test(t)) return "SOUL";
+  if(/לחוץ|מוצף|עצוב|כועס/.test(t)) return "HEART";
+  if(/עייף|כבד|כאב|מתח/.test(t)) return "BODY";
+  if(/דחיינות|לא פועל|נתקע/.test(t)) return "ACTION";
+  return "MIND";
+}
+
+app.post('/chatBezen', async (req,res)=>{
+  const { text } = req.body;
+  const label = classify(text || "");
+
+  const messages = [
+    { role: "system", content: SYSTEM_PROMPT },
+    { role: "user", content: `משפט: "${text}"\nאנא: 1) ניסוח משפט מועיל קצר 2) שם תכונה (מילה אחת) 3) 2-3 צעדים עדינים לתרגול. הכל בעברית.` }
+  ];
+
+  const resp = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    temperature: 0.7,
+    messages
+  });
+
+  const out = resp.choices[0]?.message?.content || "";
+  // חילוץ פשוט – ניתן לשפר לפורמט JSON באמצעות פונקציות
+  const helpfulText = (out.match(/(?:משפט מועיל|משפט חדש).*?:\s*(.*)/)?.[1]) || out;
+  const trait = (out.match(/תכונה.*?:\s*(\S+)/)?.[1]) || "חמלה";
+
+  res.json({ label, helpfulText, trait, agent: label, steps: out.split("\n").slice(0,5) });
+});
+
+// (אופציונלי) תמלול אודיו
+app.post('/transcribe', async (req,res)=>{
+  res.status(501).json({error:"Whisper endpoint placeholder"});
+});
+
+const port = process.env.PORT || 8080;
+app.listen(port, ()=>console.log(`BEZEN functions on :${port}`));
+
+פריסה: Heroku/Render/Cloud Run/Netlify Functions/Cloud Functions — כל פתרון שמחזיר /chatBezen פומבי.
+לאחר הפריסה, שמים את הכתובת ב־EXPO_PUBLIC_API_BASE באפליקציה.
+
+🔗 “קישור ל–BEZEN-CORE”
+Deep Links באפליקציה:
+
+מסע רגשי: bezen://core/journey
+
+סצנות: bezen://core/scenes
+
+קלפים: bezen://core/cards
+
+קישור תדמיתי חיצוני (להחלפה כשיעלה דף):
+https://bezen.app/experience → דף נחיתה שמפנה להתקנה/ווב־דמו.
+
+cd functions
+cp .env.example .env   # הכנס OPENAI_API_KEY
+npm i
+npm start              # או פריסה לשירות ענן
+cd ../bezen-experience
+cp .env.example .env   # הכנס כתובת ל-EXPO_PUBLIC_API_BASE וערכי Firebase
+npm i
+npm run start
+מעולה 🌿
+להלן **חבילת MVP מלאה** – קוד התחלתי, מבנה תיקיות, קבצי דמו, ו־Cloud Function לעבודה עם OpenAI. אפשר להעתיק/להדביק ישר ל־LOVABLE/APP כדי להרים דמו חי.
+
+---
+
+# 📦 מבנה פרויקט (React Native + Expo)
+
+```
+bezen-experience/
+├─ app.json
+├─ package.json
+├─ tsconfig.json
+├─ babel.config.js
+├─ .env.example
+├─ App.tsx
+├─ /assets
+│  ├─ icon.png
+│  ├─ splash.png
+│  └─ /lottie
+│     └─ breath.json            // פלייסהולדר (להחליף בקובץ Lottie)
+├─ /src
+│  ├─ /components
+│  │  ├─ BreathPlayer.tsx
+│  │  ├─ ChatBubble.tsx
+│  │  └─ CardItem.tsx
+│  ├─ /screens
+│  │  ├─ HomeScreen.tsx
+│  │  ├─ JourneyScreen.tsx
+│  │  ├─ BreathScreen.tsx
+│  │  ├─ CardsScreen.tsx
+│  │  ├─ DailyPracticeScreen.tsx
+│  │  └─ ScenesScreen.tsx
+│  ├─ /services
+│  │  ├─ ai.ts
+│  │  ├─ fb.ts
+│  │  └─ seed.ts
+│  └─ /state
+│     └─ useSessionStore.ts
+└─ /functions            // פונקציית ענן (Node) – שרתון ל־OpenAI/Whisper
+   ├─ package.json
+   ├─ index.js
+   └─ .env.example
+```
+
+---
+
+# 🧰 התקנות מהירות
+
+```bash
+npx create-expo-app bezen-experience
+cd bezen-experience
+expo install react-native-reanimated lottie-react-native
+npm i zustand firebase @react-navigation/native @react-navigation/native-stack
+expo install react-native-screens react-native-safe-area-context
+```
+
+---
+
+# ⚙️ קבצים מרכזיים
+
+**package.json**
+
+```json
+{
+  "name": "bezen-experience",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "expo": "~51.0.0",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.0",
+    "lottie-react-native": "^6.7.0",
+    "zustand": "^4.5.2",
+    "firebase": "^10.12.3",
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.10.0",
+    "react-native-safe-area-context": "4.10.5",
+    "react-native-screens": "~3.31.1"
+  }
+}
+```
+
+**app.json** (כולל schema ל־Deep Link: `bezen://`)
+
+```json
+{
+  "expo": {
+    "name": "BE ZEN Experience",
+    "slug": "bezen-experience",
+    "scheme": "bezen",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": { "image": "./assets/splash.png", "resizeMode": "contain", "backgroundColor": "#ffffff" },
+    "ios": { "supportsTablet": true },
+    "android": { "adaptiveIcon": { "foregroundImage": "./assets/icon.png", "backgroundColor": "#ffffff" } },
+    "web": { "bundler": "metro" }
+  }
+}
+```
+
+**.env.example**
+
+```
+EXPO_PUBLIC_API_BASE=https://<YOUR-CLOUD-FUNCTION-URL>   # לדוגמה: https://xxx.cloudfunctions.net/bezen
+FIREBASE_API_KEY=xxx
+FIREBASE_AUTH_DOMAIN=xxx
+FIREBASE_PROJECT_ID=xxx
+FIREBASE_STORAGE_BUCKET=xxx
+FIREBASE_MESSAGING_SENDER_ID=xxx
+FIREBASE_APP_ID=xxx
+```
+
+**App.tsx** – ניווט בסיסי
+
+```tsx
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./src/screens/HomeScreen";
+import JourneyScreen from "./src/screens/JourneyScreen";
+import BreathScreen from "./src/screens/BreathScreen";
+import CardsScreen from "./src/screens/CardsScreen";
+import DailyPracticeScreen from "./src/screens/DailyPracticeScreen";
+import ScenesScreen from "./src/screens/ScenesScreen";
+import { StatusBar } from "expo-status-bar";
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <StatusBar style="dark" />
+      <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
+        <Stack.Screen name="בית" component={HomeScreen} />
+        <Stack.Screen name="מסע רגשי" component={JourneyScreen} />
+        <Stack.Screen name="נשימה" component={BreathScreen} />
+        <Stack.Screen name="קלפי התודעה" component={CardsScreen} />
+        <Stack.Screen name="תרגול יומי" component={DailyPracticeScreen} />
+        <Stack.Screen name="סצנות" component={ScenesScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+```
+
+---
+
+## 🔌 שירותי אפליקציה
+
+**/src/services/fb.ts** – חיבור Firebase
+
+```ts
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
+};
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+```
+
+**/src/services/ai.ts** – קריאה לשרתון (Cloud Function)
+
+```ts
+export type BezenReply = {
+  label: "MIND"|"HEART"|"BODY"|"ACTION"|"SOUL";
+  helpfulText: string;
+  trait: string;
+  agent: string;
+  steps?: string[];
+};
+
+export async function bezenChat(userText: string): Promise<BezenReply> {
+  const base = process.env.EXPO_PUBLIC_API_BASE!;
+  const r = await fetch(`${base}/chatBezen`,{
+    method:"POST",
+    headers:{ "Content-Type":"application/json" },
+    body: JSON.stringify({ text: userText, locale: "he" })
+  });
+  if(!r.ok) throw new Error("AI request failed");
+  return r.json();
+}
+```
+
+**/src/state/useSessionStore.ts** – Zustand
+
+```ts
+import { create } from "zustand";
+type S = { intent: string; lastHelpful?: string|null; setIntent:(v:string)=>void; setHelpful:(v:string)=>void; };
+export const useSessionStore = create<S>((set)=>({
+  intent: "calm",
+  lastHelpful: null,
+  setIntent: (v)=>set({intent:v}),
+  setHelpful: (v)=>set({lastHelpful:v})
+}));
+```
+
+---
+
+## 🧩 קומפוננטות
+
+**/src/components/BreathPlayer.tsx**
+
+```tsx
+import { useEffect, useRef, useState } from "react";
+import { View, Text } from "react-native";
+import LottieView from "lottie-react-native";
+
+export default function BreathPlayer({inhale=4, exhale=6}:{inhale?:number; exhale?:number;}){
+  const ref = useRef<LottieView>(null);
+  const [phase,setPhase] = useState<"שאיפה"|"נשיפה">("שאיפה");
+  useEffect(()=>{
+    let t: any;
+    const loop = ()=>{
+      setPhase("שאיפה");
+      t = setTimeout(()=>{ setPhase("נשיפה"); t=setTimeout(loop, exhale*1000); }, inhale*1000);
+    };
+    loop(); return ()=>clearTimeout(t);
+  },[inhale,exhale]);
+  return (
+    <View style={{alignItems:"center"}}>
+      <LottieView ref={ref} source={require("../../assets/lottie/breath.json")} autoPlay loop style={{width:280,height:280}}/>
+      <Text style={{marginTop:12,fontSize:18,color:"#333"}}>{phase} {phase==="שאיפה"? inhale: exhale} שנ׳</Text>
+    </View>
+  );
+}
+```
+
+**/src/components/ChatBubble.tsx**
+
+```tsx
+import { View, Text } from "react-native";
+export default function ChatBubble({role,text}:{role:"user"|"bezen"; text:string;}){
+  const isUser = role==="user";
+  return (
+    <View style={{alignSelf:isUser?"flex-end":"flex-start", backgroundColor:isUser?"#DCF8C6":"#F1F1F1", marginVertical:6, padding:10, borderRadius:12, maxWidth:"85%"}}>
+      <Text style={{color:"#222"}}>{text}</Text>
+    </View>
+  );
+}
+```
+
+**/src/components/CardItem.tsx**
+
+```tsx
+import { View, Text } from "react-native";
+export default function CardItem({raw,helpful,trait,agent}:{raw:string; helpful:string; trait:string; agent:string;}){
+  return (
+    <View style={{padding:12, borderRadius:12, backgroundColor:"#fff", borderWidth:1, borderColor:"#eee", marginBottom:10}}>
+      <Text style={{fontWeight:"600", color:"#555"}}>משפט טעון:</Text>
+      <Text style={{marginBottom:8}}>{raw}</Text>
+      <Text style={{fontWeight:"600", color:"#555"}}>משפט מועיל:</Text>
+      <Text style={{color:"#0a7"}}>{helpful}</Text>
+      <Text style={{marginTop:8, fontSize:12, color:"#888"}}>{agent} • תכונה: {trait}</Text>
+    </View>
+  );
+}
+```
+
+---
+
+## 🖥️ מסכים
+
+**/src/screens/HomeScreen.tsx**
+
+```tsx
+import { View, Text, TouchableOpacity } from "react-native";
+export default function HomeScreen({navigation}:any){
+  const Btn = ({title, to}:{title:string;to:string;})=>(
+    <TouchableOpacity onPress={()=>navigation.navigate(to)} style={{padding:16, backgroundColor:"#E7F5EE", borderRadius:12, marginVertical:6}}>
+      <Text style={{fontSize:16}}>{title}</Text>
+    </TouchableOpacity>
+  );
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:22, fontWeight:"700", marginBottom:16}}>ברוך/ה הבא/ה למסע BE ZEN</Text>
+      <Btn title="התחל מסע רגשי" to="מסע רגשי"/>
+      <Btn title="נשימה מיידית" to="נשימה"/>
+      <Btn title="קלפי התודעה שלי" to="קלפי התודעה"/>
+      <Btn title="תרגול יומי" to="תרגול יומי"/>
+      <Btn title="סצנות ומשחקים" to="सצנות"/>
+    </View>
+  );
+}
+```
+
+**/src/screens/JourneyScreen.tsx**
+
+```tsx
+import { useState } from "react";
+import { View, TextInput, TouchableOpacity, Text, ScrollView } from "react-native";
+import ChatBubble from "../components/ChatBubble";
+import { bezenChat } from "../services/ai";
+import { useSessionStore } from "../state/useSessionStore";
+
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [log,setLog]=useState<{role:"user"|"bezen"; text:string;}[]>([]);
+  const setHelpful = useSessionStore(s=>s.setHelpful);
+
+  const onSend = async ()=>{
+    if(!text.trim()) return;
+    setLog(s=>[...s,{role:"user",text}]);
+    const r = await bezenChat(text);
+    setLog(s=>[...s,{role:"bezen", text:r.helpfulText}]);
+    setHelpful(r.helpfulText);
+    setText("");
+  };
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fff"}}>
+      <ScrollView style={{flex:1}} contentContainerStyle={{paddingVertical:8}}>
+        {log.map((m,i)=><ChatBubble key={i} role={m.role} text={m.text}/>)}
+      </ScrollView>
+      <View style={{flexDirection:"row", gap:8}}>
+        <TextInput placeholder="מה המשפט שהלב רוצה לשחרר?" value={text} onChangeText={setText}
+          style={{flex:1, borderWidth:1, borderColor:"#ddd", borderRadius:12, padding:12}}/>
+        <TouchableOpacity onPress={onSend} style={{paddingHorizontal:16, borderRadius:12, backgroundColor:"#0a7", justifyContent:"center"}}>
+          <Text style={{color:"#fff", fontWeight:"700"}}>שליחה</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+```
+
+**/src/screens/BreathScreen.tsx**
+
+```tsx
+import { View, Text } from "react-native";
+import BreathPlayer from "../components/BreathPlayer";
+export default function BreathScreen(){
+  return (
+    <View style={{flex:1, padding:20, alignItems:"center", backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700", marginBottom:12}}>נשימה 4–6 (3 דקות)</Text>
+      <BreathPlayer inhale={4} exhale={6}/>
+      <Text style={{marginTop:16, color:"#666"}}>תן לגוף להוביל. אין צורך להוכיח כלום.</Text>
+    </View>
+  );
+}
+```
+
+**/src/screens/CardsScreen.tsx**
+
+```tsx
+import { useEffect, useState } from "react";
+import { View, ScrollView } from "react-native";
+import CardItem from "../components/CardItem";
+import { seedCards } from "../services/seed";
+
+export default function CardsScreen(){
+  const [cards,setCards]=useState(seedCards);
+  useEffect(()=>{ /* TODO: טעינה מ-Firestore */ },[]);
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fafafa"}}>
+      <ScrollView>
+        {cards.map((c,i)=><CardItem key={i} raw={c.rawText} helpful={c.helpfulText} trait={c.trait} agent={c.agent}/>)}
+      </ScrollView>
+    </View>
+  );
+}
+```
+
+**/src/screens/DailyPracticeScreen.tsx**
+
+```tsx
+import { View, Text } from "react-native";
+export default function DailyPracticeScreen(){
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700"}}>5 דקות של BE ZEN</Text>
+      <Text style={{marginTop:12}}>1) נשימה קצרה • 2) מודעות: "מה קיים בי עכשיו?" • 3) חמלה עצמית • 4) כוונה ליום.</Text>
+    </View>
+  );
+}
+```
+
+**/src/screens/ScenesScreen.tsx**
+
+```tsx
+import { View, Text } from "react-native";
+export default function ScenesScreen(){
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700"}}>סצנות ומשחקים</Text>
+      <Text style={{marginTop:10}}>🎭 דיאלוג עם הצל • 🌊 נשימה עם הגוף • 🔮 משפטי אור</Text>
+    </View>
+  );
+}
+```
+
+---
+
+## 🌱 נתוני דמו
+
+**/src/services/seed.ts**
+
+```ts
+export const seedCards = [
+  { rawText:"אני לא מספיק טוב/ה", helpfulText:"אני מתרגל/ת עדינות ובוחרת לראות את ההתקדמות הקטנה.", trait:"חמלה", agent:"SOUL" },
+  { rawText:"אני מוצף/ת עכשיו", helpfulText:"אני נותנ/ת מקום לרגש ונושם/ת דרכו בנחת.", trait:"קבלה", agent:"HEART" },
+  { rawText:"אני תקוע/ה", helpfulText:"אני עושה צעד קטן אחד היום, גם אם אינו מושלם.", trait:"אומץ", agent:"ACTION" }
+];
+
+export const breathPresets = [
+  { name:"1 דקה", inhale:4, exhale:6, durationSec:60 },
+  { name:"3 דקות", inhale:4, exhale:6, durationSec:180 },
+  { name:"5 דקות", inhale:4, exhale:6, durationSec:300 }
+];
+```
+
+---
+
+# ☁️ פונקציית ענן (Node) – OpenAI + Whisper (אופציונלי)
+
+**functions/package.json**
+
+```json
+{
+  "name": "bezen-functions",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "openai": "^4.56.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+```
+
+**functions/.env.example**
+
+```
+OPENAI_API_KEY=sk-xxxx
+PORT=8080
+```
+
+**functions/index.js**
+
+```js
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import OpenAI from 'openai';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+const SYSTEM_PROMPT = `
+אתה BEZEN-CORE – מנטור רגשי חם, בעברית טבעית.
+מטרה: להפוך משפט טעון לשינוי עדין דרך MIND/HEART/BODY/ACTION/SOUL.
+צעדים: 1) זיהוי מאפיין 2) תרגיל קצר 3) משפט מועיל + תכונה 4) שאלת check-in.
+בלי אבחנה רפואית. בלי הבטחות ריפוי.
+`;
+
+function classify(text){
+  const t = text.toLowerCase();
+  if(/לא מספיק|כישלון|לא שווה/.test(t)) return "SOUL";
+  if(/לחוץ|מוצף|עצוב|כועס/.test(t)) return "HEART";
+  if(/עייף|כבד|כאב|מתח/.test(t)) return "BODY";
+  if(/דחיינות|לא פועל|נתקע/.test(t)) return "ACTION";
+  return "MIND";
+}
+
+app.post('/chatBezen', async (req,res)=>{
+  const { text } = req.body;
+  const label = classify(text || "");
+
+  const messages = [
+    { role: "system", content: SYSTEM_PROMPT },
+    { role: "user", content: `משפט: "${text}"\nאנא: 1) ניסוח משפט מועיל קצר 2) שם תכונה (מילה אחת) 3) 2-3 צעדים עדינים לתרגול. הכל בעברית.` }
+  ];
+
+  const resp = await openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    temperature: 0.7,
+    messages
+  });
+
+  const out = resp.choices[0]?.message?.content || "";
+  // חילוץ פשוט – ניתן לשפר לפורמט JSON באמצעות פונקציות
+  const helpfulText = (out.match(/(?:משפט מועיל|משפט חדש).*?:\s*(.*)/)?.[1]) || out;
+  const trait = (out.match(/תכונה.*?:\s*(\S+)/)?.[1]) || "חמלה";
+
+  res.json({ label, helpfulText, trait, agent: label, steps: out.split("\n").slice(0,5) });
+});
+
+// (אופציונלי) תמלול אודיו
+app.post('/transcribe', async (req,res)=>{
+  res.status(501).json({error:"Whisper endpoint placeholder"});
+});
+
+const port = process.env.PORT || 8080;
+app.listen(port, ()=>console.log(`BEZEN functions on :${port}`));
+```
+
+> פריסה: Heroku/Render/Cloud Run/Netlify Functions/Cloud Functions — כל פתרון שמחזיר `/chatBezen` פומבי.
+> לאחר הפריסה, שמים את הכתובת ב־`EXPO_PUBLIC_API_BASE` באפליקציה.
+
+---
+
+# 🔗 “קישור ל–BEZEN-CORE”
+
+* **Deep Links באפליקציה:**
+
+  * מסע רגשי: `bezen://core/journey`
+  * סצנות: `bezen://core/scenes`
+  * קלפים: `bezen://core/cards`
+
+* **קישור תדמיתי חיצוני (להחלפה כשיעלה דף):**
+  `https://bezen.app/experience`  → דף נחיתה שמפנה להתקנה/ווב־דמו.
+
+---
+
+# 🧭 הוראות הפעלה קצרות
+
+1. **Server**
+
+   ```
+   cd functions
+   cp .env.example .env   # הכנס OPENAI_API_KEY
+   npm i
+   npm start              # או פריסה לשירות ענן
+   ```
+2. **Client**
+
+   ```
+   cd ../bezen-experience
+   cp .env.example .env   # הכנס כתובת ל-EXPO_PUBLIC_API_BASE וערכי Firebase
+   npm i
+   npm run start
+   ```
+
+---
+
+# 🎭 דמו טקסטים קצרים (מוכנים לשימוש)
+
+* פתח: “ברוך/ה הבא/ה לבית הפנימי שלך. כאן לא מתקנים — מקשיבים. נתחיל בנשימה אחת.”
+* תזכורת: “נשימה אחת יכולה לפתוח עולם של שלווה.”
+* Check-in: “איך אתה מרגיש עכשיו לעומת ההתחלה?”
+
+---
+
+# 🌿 מה נשאר לך להשלים
+
+* להחליף את `assets/lottie/breath.json` בקובץ Lottie מתאים (ריב/לוטי של נשימה).
+* להכניס מפתחות Firebase או Supabase (אם מעדיף SQL).
+* לפרוס את פונקציית הענן ולהדביק את ה־URL ל־`.env`.
+* להחליף את דף הנחיתה לקישור אמיתי כשיוקם.
+
+---
+
+אם תרצה, אוסיף לך עוד שני דברים לפי בחירה:
+
+1. **Firestore Integration מלאה** (CRUD לקלפים/יומן)
+2. **סצנת “דיאלוג עם הצל” אינטראקטיבית** עם כפתורים מוכנים
+
+מה הכי יעזור לך לשלב הבא? 🌸
+import { db } from "./fb";
+import { addDoc, collection, serverTimestamp, getDocs, query, where, orderBy, deleteDoc, doc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
+export type Card = {
+  id?: string;
+  ownerUid: string;
+  rawText: string;
+  helpfulText: string;
+  trait: string;
+  agent: "MIND"|"HEART"|"BODY"|"ACTION"|"SOUL";
+  createdAt?: any;
+};
+
+export async function createCard(input: Omit<Card,"ownerUid"|"createdAt">){
+  const uid = getAuth().currentUser?.uid;
+  if(!uid) throw new Error("לא מחובר/ת");
+  const ref = await addDoc(collection(db,"cards"),{
+    ...input,
+    ownerUid: uid,
+    createdAt: serverTimestamp()
+  });
+  return ref.id;
+}
+
+export async function listMyCards(){
+  const uid = getAuth().currentUser?.uid;
+  if(!uid) throw new Error("לא מחובר/ת");
+  const q = query(collection(db,"cards"), where("ownerUid","==",uid), orderBy("createdAt","desc"));
+  const snap = await getDocs(q);
+  return snap.docs.map(d=>({id:d.id, ...d.data()})) as Card[];
+}
+
+export async function deleteCard(id:string){
+  await deleteDoc(doc(db,"cards",id));
+}
+import { useState } from "react";
+import { View, TextInput, TouchableOpacity, Text, ScrollView, Alert } from "react-native";
+import ChatBubble from "../components/ChatBubble";
+import { bezenChat } from "../services/ai";
+import { createCard } from "../services/cards";
+
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [log,setLog]=useState<{role:"user"|"bezen"; text:string;}[]>([]);
+  const [last, setLast] = useState<any>(null);
+
+  const onSend = async ()=>{
+    if(!text.trim()) return;
+    setLog(s=>[...s,{role:"user",text}]);
+    const r = await bezenChat(text);
+    setLog(s=>[...s,{role:"bezen", text:r.helpfulText}]);
+    setLast({ rawText: text, ...r });
+    setText("");
+  };
+
+  const onSave = async ()=>{
+    if(!last) return;
+    try{
+      await createCard({
+        rawText: last.rawText,
+        helpfulText: last.helpfulText,
+        trait: last.trait,
+        agent: last.agent
+      });
+      Alert.alert("נשמר ✨","הקלף נכנס ל‘קלפי התודעה’");
+      setLast(null);
+    }catch(e:any){
+      Alert.alert("שגיאה", e.message || "ניסיון מאוחר יותר");
+    }
+  };
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fff"}}>
+      <ScrollView style={{flex:1}} contentContainerStyle={{paddingVertical:8}}>
+        {log.map((m,i)=><ChatBubble key={i} role={m.role} text={m.text}/>)}
+      </ScrollView>
+
+      {last && (
+        <TouchableOpacity onPress={onSave} style={{padding:14, backgroundColor:"#0a7", borderRadius:12, marginBottom:8}}>
+          <Text style={{color:"#fff", textAlign:"center", fontWeight:"700"}}>שמור/י כקלף</Text>
+        </TouchableOpacity>
+      )}
+
+      <View style={{flexDirection:"row", gap:8}}>
+        <TextInput placeholder="מה המשפט שהלב רוצה לשחרר?" value={text} onChangeText={setText}
+          style={{flex:1, borderWidth:1, borderColor:"#ddd", borderRadius:12, padding:12}}/>
+        <TouchableOpacity onPress={onSend} style={{paddingHorizontal:16, borderRadius:12, backgroundColor:"#0a7", justifyContent:"center"}}>
+          <Text style={{color:"#fff", fontWeight:"700"}}>שליחה</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+import { useEffect, useState } from "react";
+import { View, ScrollView, RefreshControl } from "react-native";
+import CardItem from "../components/CardItem";
+import { listMyCards } from "../services/cards";
+
+export default function CardsScreen(){
+  const [cards,setCards]=useState<any[]>([]);
+  const [loading,setLoading]=useState(false);
+
+  async function load(){
+    setLoading(true);
+    try{ setCards(await listMyCards()); } finally{ setLoading(false); }
+  }
+  useEffect(()=>{ load(); },[]);
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fafafa"}}>
+      <ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={load}/>}>
+        {cards.map((c)=>(
+          <CardItem key={c.id} raw={c.rawText} helpful={c.helpfulText} trait={c.trait} agent={c.agent}/>
+        ))}
+      </ScrollView>
+    </View>
+  );
+}
+import { TouchableOpacity, Text } from "react-native";
+export default function Choice({label,onPress}:{label:string; onPress:()=>void;}){
+  return (
+    <TouchableOpacity onPress={onPress} style={{padding:14, backgroundColor:"#EEF6F2", borderRadius:12, marginVertical:6}}>
+      <Text style={{fontSize:16}}>{label}</Text>
+    </TouchableOpacity>
+  );
+}
+import { useState } from "react";
+import { View, Text } from "react-native";
+import Choice from "../components/Choice";
+
+type Step = { user?: string; bezen?: string; };
+
+export default function ScenesScreen(){
+  const [steps,setSteps]=useState<Step[]>([
+    { bezen: "דמיין/י את הקול הביקורתי הפנימי. איך הוא נשמע?" }
+  ]);
+
+  const push = (s:Step)=>setSteps(prev=>[...prev, s]);
+
+  const chooseTone = (tone:"קשה"|"ניטרלי"|"חומל")=>{
+    push({ user: `בחירה: טון ${tone}` });
+    if(tone==="קשה"){
+      push({ bezen: "שים/י לב איך הגוף מתכווץ. נשימה 4–6. מוכן/ה לנסות טון עדין יותר?" });
+    }else if(tone==="ניטרלי"){
+      push({ bezen: "ניטרלי הוא צעד טוב. האם תרצה/י להוסיף טיפת חמלה?" });
+    }else{
+      push({ bezen: "יפה. איך זה מרגיש עכשיו? בוא/י נמצא משפט מועיל." });
+      push({ bezen: "משפט חדש: “אני לומד/ת לדבר לעצמי בעדינות, גם כשקשה.” תכונה: חמלה 💚" });
+    }
+  };
+
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700", marginBottom:10}}>🎭 דיאלוג עם הצל</Text>
+      {steps.map((s,i)=>(
+        <View key={i} style={{marginBottom:10}}>
+          {s.bezen && <Text style={{color:"#333"}}>{s.bezen}</Text>}
+          {s.user && <Text style={{alignSelf:"flex-end", color:"#0a7"}}>{s.user}</Text>}
+        </View>
+      ))}
+
+      <View style={{marginTop:10}}>
+        <Text style={{fontWeight:"600", marginBottom:6}}>בחר/י טון תגובה:</Text>
+        <Choice label="קשה / שיפוטי" onPress={()=>chooseTone("קשה")}/>
+        <Choice label="ניטרלי / ענייני" onPress={()=>chooseTone("ניטרלי")}/>
+        <Choice label="חומל / עדין" onPress={()=>chooseTone("חומל")}/>
+      </View>
+
+      <Text style={{marginTop:16, color:"#666"}}>טיפ: אם הגוף התכווץ – חזור/חזרי לנשימה 4–6 לשתי דקות.</Text>
+    </View>
+  );
+}
+מדהים. לקחתי יוזמה ובניתי לך **שני שדרוגים** שכדאי להכניס עכשיו:
+
+1. אינטגרציה מלאה ל–**Firestore (CRUD לקלפים/יומן)**
+2. סצנה אינטראקטיבית מוכנה: **“דיאלוג עם הצל”** 🎭
+
+הכל בעברית, מוכן להדבקה בפרויקט שהקמנו.
+
+---
+
+# 1) 🔥 Firestore – קלפים/יומן (CRUD מלא)
+
+## א. כללי אבטחה (הדבק ב־Firebase → Firestore → Rules)
+
+```js
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(uid) { return request.auth.uid == uid; }
+
+    match /users/{uid} {
+      allow read, write: if isSignedIn() && isOwner(uid);
+    }
+
+    match /cards/{cardId} {
+      allow create: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow read, update, delete: if isSignedIn() && resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /sessions/{sessionId} {
+      allow create: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+      allow read: if isSignedIn() && resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /breathLogs/{logId} {
+      allow create, read: if isSignedIn() && (request.resource.data.ownerUid == request.auth.uid || resource.data.ownerUid == request.auth.uid);
+      allow update, delete: if isSignedIn() && resource.data.ownerUid == request.auth.uid;
+    }
+  }
+}
+```
+
+## ב. שירות נתונים – `src/services/cards.ts`
+
+```ts
+import { db } from "./fb";
+import { addDoc, collection, serverTimestamp, getDocs, query, where, orderBy, deleteDoc, doc } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+
+export type Card = {
+  id?: string;
+  ownerUid: string;
+  rawText: string;
+  helpfulText: string;
+  trait: string;
+  agent: "MIND"|"HEART"|"BODY"|"ACTION"|"SOUL";
+  createdAt?: any;
+};
+
+export async function createCard(input: Omit<Card,"ownerUid"|"createdAt">){
+  const uid = getAuth().currentUser?.uid;
+  if(!uid) throw new Error("לא מחובר/ת");
+  const ref = await addDoc(collection(db,"cards"),{
+    ...input,
+    ownerUid: uid,
+    createdAt: serverTimestamp()
+  });
+  return ref.id;
+}
+
+export async function listMyCards(){
+  const uid = getAuth().currentUser?.uid;
+  if(!uid) throw new Error("לא מחובר/ת");
+  const q = query(collection(db,"cards"), where("ownerUid","==",uid), orderBy("createdAt","desc"));
+  const snap = await getDocs(q);
+  return snap.docs.map(d=>({id:d.id, ...d.data()})) as Card[];
+}
+
+export async function deleteCard(id:string){
+  await deleteDoc(doc(db,"cards",id));
+}
+```
+
+## ג. עדכון מסך “מסע רגשי” – שמירת קלף אחרי תשובת ה–AI
+
+`src/screens/JourneyScreen.tsx` (החלף את הקובץ הקיים)
+
+```tsx
+import { useState } from "react";
+import { View, TextInput, TouchableOpacity, Text, ScrollView, Alert } from "react-native";
+import ChatBubble from "../components/ChatBubble";
+import { bezenChat } from "../services/ai";
+import { createCard } from "../services/cards";
+
+export default function JourneyScreen(){
+  const [text,setText]=useState("");
+  const [log,setLog]=useState<{role:"user"|"bezen"; text:string;}[]>([]);
+  const [last, setLast] = useState<any>(null);
+
+  const onSend = async ()=>{
+    if(!text.trim()) return;
+    setLog(s=>[...s,{role:"user",text}]);
+    const r = await bezenChat(text);
+    setLog(s=>[...s,{role:"bezen", text:r.helpfulText}]);
+    setLast({ rawText: text, ...r });
+    setText("");
+  };
+
+  const onSave = async ()=>{
+    if(!last) return;
+    try{
+      await createCard({
+        rawText: last.rawText,
+        helpfulText: last.helpfulText,
+        trait: last.trait,
+        agent: last.agent
+      });
+      Alert.alert("נשמר ✨","הקלף נכנס ל‘קלפי התודעה’");
+      setLast(null);
+    }catch(e:any){
+      Alert.alert("שגיאה", e.message || "ניסיון מאוחר יותר");
+    }
+  };
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fff"}}>
+      <ScrollView style={{flex:1}} contentContainerStyle={{paddingVertical:8}}>
+        {log.map((m,i)=><ChatBubble key={i} role={m.role} text={m.text}/>)}
+      </ScrollView>
+
+      {last && (
+        <TouchableOpacity onPress={onSave} style={{padding:14, backgroundColor:"#0a7", borderRadius:12, marginBottom:8}}>
+          <Text style={{color:"#fff", textAlign:"center", fontWeight:"700"}}>שמור/י כקלף</Text>
+        </TouchableOpacity>
+      )}
+
+      <View style={{flexDirection:"row", gap:8}}>
+        <TextInput placeholder="מה המשפט שהלב רוצה לשחרר?" value={text} onChangeText={setText}
+          style={{flex:1, borderWidth:1, borderColor:"#ddd", borderRadius:12, padding:12}}/>
+        <TouchableOpacity onPress={onSend} style={{paddingHorizontal:16, borderRadius:12, backgroundColor:"#0a7", justifyContent:"center"}}>
+          <Text style={{color:"#fff", fontWeight:"700"}}>שליחה</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+```
+
+## ד. מסך “קלפי התודעה” – קריאת נתונים אמיתית
+
+`src/screens/CardsScreen.tsx` (החלף)
+
+```tsx
+import { useEffect, useState } from "react";
+import { View, ScrollView, RefreshControl } from "react-native";
+import CardItem from "../components/CardItem";
+import { listMyCards } from "../services/cards";
+
+export default function CardsScreen(){
+  const [cards,setCards]=useState<any[]>([]);
+  const [loading,setLoading]=useState(false);
+
+  async function load(){
+    setLoading(true);
+    try{ setCards(await listMyCards()); } finally{ setLoading(false); }
+  }
+  useEffect(()=>{ load(); },[]);
+
+  return (
+    <View style={{flex:1, padding:16, backgroundColor:"#fafafa"}}>
+      <ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={load}/>}>
+        {cards.map((c)=>(
+          <CardItem key={c.id} raw={c.rawText} helpful={c.helpfulText} trait={c.trait} agent={c.agent}/>
+        ))}
+      </ScrollView>
+    </View>
+  );
+}
+```
+
+---
+
+# 2) 🎭 סצנה אינטראקטיבית: “דיאלוג עם הצל”
+
+## א. קומפוננטת בחירה רכה – `src/components/Choice.tsx`
+
+```tsx
+import { TouchableOpacity, Text } from "react-native";
+export default function Choice({label,onPress}:{label:string; onPress:()=>void;}){
+  return (
+    <TouchableOpacity onPress={onPress} style={{padding:14, backgroundColor:"#EEF6F2", borderRadius:12, marginVertical:6}}>
+      <Text style={{fontSize:16}}>{label}</Text>
+    </TouchableOpacity>
+  );
+}
+```
+
+## ב. מסך הסצנה – `src/screens/ScenesScreen.tsx` (החלף)
+
+```tsx
+import { useState } from "react";
+import { View, Text } from "react-native";
+import Choice from "../components/Choice";
+
+type Step = { user?: string; bezen?: string; };
+
+export default function ScenesScreen(){
+  const [steps,setSteps]=useState<Step[]>([
+    { bezen: "דמיין/י את הקול הביקורתי הפנימי. איך הוא נשמע?" }
+  ]);
+
+  const push = (s:Step)=>setSteps(prev=>[...prev, s]);
+
+  const chooseTone = (tone:"קשה"|"ניטרלי"|"חומל")=>{
+    push({ user: `בחירה: טון ${tone}` });
+    if(tone==="קשה"){
+      push({ bezen: "שים/י לב איך הגוף מתכווץ. נשימה 4–6. מוכן/ה לנסות טון עדין יותר?" });
+    }else if(tone==="ניטרלי"){
+      push({ bezen: "ניטרלי הוא צעד טוב. האם תרצה/י להוסיף טיפת חמלה?" });
+    }else{
+      push({ bezen: "יפה. איך זה מרגיש עכשיו? בוא/י נמצא משפט מועיל." });
+      push({ bezen: "משפט חדש: “אני לומד/ת לדבר לעצמי בעדינות, גם כשקשה.” תכונה: חמלה 💚" });
+    }
+  };
+
+  return (
+    <View style={{flex:1, padding:20, backgroundColor:"#fff"}}>
+      <Text style={{fontSize:20, fontWeight:"700", marginBottom:10}}>🎭 דיאלוג עם הצל</Text>
+      {steps.map((s,i)=>(
+        <View key={i} style={{marginBottom:10}}>
+          {s.bezen && <Text style={{color:"#333"}}>{s.bezen}</Text>}
+          {s.user && <Text style={{alignSelf:"flex-end", color:"#0a7"}}>{s.user}</Text>}
+        </View>
+      ))}
+
+      <View style={{marginTop:10}}>
+        <Text style={{fontWeight:"600", marginBottom:6}}>בחר/י טון תגובה:</Text>
+        <Choice label="קשה / שיפוטי" onPress={()=>chooseTone("קשה")}/>
+        <Choice label="ניטרלי / ענייני" onPress={()=>chooseTone("ניטרלי")}/>
+        <Choice label="חומל / עדין" onPress={()=>chooseTone("חומל")}/>
+      </View>
+
+      <Text style={{marginTop:16, color:"#666"}}>טיפ: אם הגוף התכווץ – חזור/חזרי לנשימה 4–6 לשתי דקות.</Text>
+    </View>
+  );
+}
+```
+
+---
+
+# 🔗 “קישור ל–BEZEN-CORE”
+
+* Deep Links בתוך האפליקציה:
+
+  * מסע רגשי: `bezen://core/journey`
+  * סצנות: `bezen://core/scenes`
+  * קלפים: `bezen://core/cards`
+* דף חיצוני (להחלפה כשיעלה): `https://bezen.app/experience`
+
+*(באפסטור/פליי־סטור תוכל לשים “קישורי אפליקציה” כך שה־URL יפתח ישירות את הסצנה/מסע.)*
+
+---
+
+# ✅ צ’קלט קצר להשלמה עכשיו
+
+* [ ] להגדיר Firebase (Auth + Firestore) ולהדביק מפתחות ב־`.env`
+* [ ] להכניס חוקי אבטחה (Rules) למעלה
+* [ ] לפרוס את שרתון ה־OpenAI (functions) ולהגדיר `EXPO_PUBLIC_API_BASE`
+* [ ] להחליף קובץ Lottie של נשימה (`assets/lottie/breath.json`)
+* [ ] להתחבר עם חשבון (Email/Anon) כדי לשמור קלפים בפועל
+
+---
+
+אם תרצה בשלב הבא, אוכל להוסיף:
+
+* **התראות יומיות** (Expo Notifications) עם “נשימה 1 דקה” בלחיצה.
+* **שיתוף קלף לתמונה** (יצירת כרטיס מעוצב לשיתוף).
+* **פרוגרס רך** (“רצף נשימות”, “קלף מוזהב”).
+
+אני כאן וממשיך איתך יד ביד. נשימה אחת — ואנחנו בפנים 🌿
