@@ -1063,6 +1063,57 @@
             return wrapper;
         }
 
+        function createStudentPracticeRubric() {
+            const examples = [
+                'עשית את זה בכוונה כדי להרוס לי',
+                'אתה מנסה להוציא אותי מפגר',
+                'כולם נגדי בכיתה הזאת',
+                'המורה תמיד מחפש רק אותי',
+                'אם הוא צוחק, זה בטוח עליי',
+                'אם אני לא אראה להם, הם ידרכו עליי',
+                'אני מתפוצץ עליך, תיזהר',
+                'אתה משגע אותי, אני אתחרפן עליך',
+                'העלבת אותי, אני אחזיר לך',
+                'לא אכפת לי מכלום, שיישרף העולם',
+                'אני שונא אותך',
+                'אני אעשה לך דווקא',
+                'אני רותח, אל תתקרב אליי עכשיו',
+                'הדם עולה לי לראש, אני עוד רגע מתפוצץ',
+                'אני חייב להוציא את זה על מישהו',
+                'אתה אפס, אין לך זכות לדבר',
+                'אם תעשה את זה שוב, אתה תחטוף',
+                'אם אני לא חזק – אני כלום',
+                'מי שמראה חולשה, גמור',
+                'בעולם הזה דופקים או דופקים אותך'
+            ];
+
+            const wrapper = document.createElement('section');
+            wrapper.className = 'practice-rubric';
+
+            const title = document.createElement('p');
+            title.className = 'practice-title';
+            title.textContent = 'או בחרו משפט מהרשימה שמזדהים איתו:';
+
+            const buttons = document.createElement('div');
+            buttons.className = 'practice-buttons';
+
+            const scroll = document.createElement('div');
+            scroll.className = 'practice-scroll';
+
+            examples.forEach((sentence) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'practice-btn';
+                btn.textContent = sentence;
+                btn.dataset.practiceSentence = sentence;
+                buttons.appendChild(btn);
+            });
+
+            scroll.appendChild(buttons);
+            wrapper.append(title, scroll);
+            return wrapper;
+        }
+
         async function renderMode(modeKey) {
             const mode = modes[modeKey];
             if (!mode) return;
@@ -1105,6 +1156,8 @@
             const teacherPulseMap = modeKey === 'teacher' ? createTeacherPulseMap() : null;
             const worldSimulator = modeKey === 'world' ? createWorldSimulator(loaded) : null;
             const worldPracticeRubric = modeKey === 'world' ? createPracticeRubric() : null;
+            const studentPracticeRubric = modeKey === 'personal' ? createStudentPracticeRubric() : null;
+
             if (modeKey !== 'world') {
                 resetEmotionFilter();
             }
@@ -1117,7 +1170,12 @@
 
             const freewriteTitle = document.createElement('p');
             freewriteTitle.className = 'freewrite-title';
-            freewriteTitle.textContent = 'או נסחו משפט בעצמכם אם לא מצאתם';
+
+            if (modeKey === 'personal') {
+                freewriteTitle.textContent = 'או כתבו כאן בדיוק מה שאתם מרגישים עכשיו:';
+            } else {
+                freewriteTitle.textContent = 'או נסחו משפט בעצמכם אם לא מצאתם:';
+            }
 
             const modeInput = document.createElement('input');
             modeInput.id = 'mode-input';
@@ -1143,12 +1201,17 @@
             } else if (worldSimulator) {
                 freewriteBlock.append(freewriteTitle, row);
                 modePanel.replaceChildren(titleEl, descriptionEl, worldPracticeRubric, freewriteBlock, worldSimulator, singleResponse);
+            } else if (studentPracticeRubric) {
+                freewriteBlock.append(freewriteTitle, row);
+                modePanel.replaceChildren(titleEl, descriptionEl, studentPracticeRubric, freewriteBlock, singleResponse);
             } else {
                 modePanel.replaceChildren(titleEl, descriptionEl, row, singleResponse);
             }
 
-            if (worldPracticeRubric) {
-                const practiceButtons = worldPracticeRubric.querySelectorAll('.practice-btn');
+            // Attach listeners to both world and personal rubrics
+            const activeRubric = worldPracticeRubric || studentPracticeRubric;
+            if (activeRubric) {
+                const practiceButtons = activeRubric.querySelectorAll('.practice-btn');
                 practiceButtons.forEach((button) => {
                     button.addEventListener('click', () => {
                         modeInput.value = button.dataset.practiceSentence || '';
