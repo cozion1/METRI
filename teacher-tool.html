@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,18 @@
             --primary-hover: #3182ce;
             --border: #e2e8f0;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.08);
-            
+
             /* Agent Colors */
-            --mind: #805ad5;   /* Purple */
-            --heart: #e53e3e;  /* Red */
-            --body: #dd6b20;   /* Orange */
-            --action: #319795; /* Teal */
-            --soul: #3182ce;   /* Blue */
+            --mind: #805ad5;
+            /* Purple */
+            --heart: #e53e3e;
+            /* Red */
+            --body: #dd6b20;
+            /* Orange */
+            --action: #319795;
+            /* Teal */
+            --soul: #3182ce;
+            /* Blue */
         }
 
         body {
@@ -129,11 +135,25 @@
             margin-bottom: 12px;
         }
 
-        .agent-mind { background-color: var(--mind); }
-        .agent-heart { background-color: var(--heart); }
-        .agent-body { background-color: var(--body); }
-        .agent-action { background-color: var(--action); }
-        .agent-soul { background-color: var(--soul); }
+        .agent-mind {
+            background-color: var(--mind);
+        }
+
+        .agent-heart {
+            background-color: var(--heart);
+        }
+
+        .agent-body {
+            background-color: var(--body);
+        }
+
+        .agent-action {
+            background-color: var(--action);
+        }
+
+        .agent-soul {
+            background-color: var(--soul);
+        }
 
         .result-box {
             background: #eef2f7;
@@ -167,15 +187,34 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
         <h1>BEZEN IMPACT 🎯</h1>
-        <p class="subtitle">פרוטוקול עזר למורה להתמודדות עם משפטים אלימים</p>
+        <p class="subtitle">פרוטוקול עזר למורה להתמודדות עם משפטים טעוני שיפור</p>
+
+        <button id="instructions-btn" class="btn"
+            style="background-color: transparent; color: var(--primary); border: 1px solid var(--primary); margin-bottom: 24px;">💡
+            איך זה עובד? (הוראות למורה)</button>
+
+        <div id="instructions-modal"
+            style="display: none; background: #eef2f7; padding: 16px; border-radius: 8px; margin-bottom: 24px; font-size: 0.9rem; line-height: 1.5;">
+            <p><strong>פרוטוקול עבודה:</strong></p>
+            <ol style="padding-right: 20px; margin-bottom: 0;">
+                <li>המערכת מזהה את מניע השורש (הסוכן הפנימי) של המשפט טעון השיפור (מחשבה, רגש, גוף, פעולה או אמונה).
+                </li>
+                <li>המערכת מציעה "משפט מועיל" (כלומר - מה התלמיד יכול להגיד במקום, כדי להביע את המצוקה בלי לתקוף).</li>
+                <li>המורה מציף את המשפט החלופי בפני התלמיד: <em>"את מה שאמרת, אפשר להגיד גם טעון שיפור..."</em> ומבקש
+                    ממנו לחזור עליו.</li>
+                <li>המורה משקף בקצרה: <em>"איך זה מרגיש להגיד את זה בצורה החדשה?"</em></li>
+            </ol>
+        </div>
 
         <div class="form-group">
             <label for="student-input">מה התלמיד אמר?</label>
-            <textarea id="student-input" placeholder='לדוגמה: "אני מתפוצץ עליך, תיזהר" או "כולם נגדי בכיתה הזאת"'></textarea>
+            <textarea id="student-input"
+                placeholder='לדוגמה: "אני מתפוצץ עליך, תיזהר" או "כולם נגדי בכיתה הזאת"'></textarea>
         </div>
 
         <button id="analyze-btn" class="btn">נתח משפט ומצא חלופה</button>
@@ -183,7 +222,7 @@
 
         <div id="result-area">
             <span id="agent-badge" class="agent-badge"></span>
-            
+
             <div class="result-box">
                 <span class="result-label">משפט מועיל להציע לתלמיד:</span>
                 <div id="helpful-sentence" class="result-text"></div>
@@ -202,6 +241,18 @@
         const agentBadge = document.getElementById('agent-badge');
         const helpfulSentence = document.getElementById('helpful-sentence');
         const explanationText = document.getElementById('explanation-text');
+        const instructionsBtn = document.getElementById('instructions-btn');
+        const instructionsModal = document.getElementById('instructions-modal');
+
+        instructionsBtn.addEventListener('click', () => {
+            if (instructionsModal.style.display === 'none') {
+                instructionsModal.style.display = 'block';
+                instructionsBtn.textContent = '💡 הסתר הוראות';
+            } else {
+                instructionsModal.style.display = 'none';
+                instructionsBtn.textContent = '💡 איך זה עובד? (הוראות למורה)';
+            }
+        });
 
         analyzeBtn.addEventListener('click', async () => {
             const text = studentInput.value.trim();
@@ -223,17 +274,17 @@
                 });
 
                 if (!response.ok) throw new Error('API Error');
-                
+
                 const data = await response.json();
-                
+
                 // Expecting JSON back from the modified lambda function
                 // Format: { agent: 'HEART', helpfulSentence: '...', explanation: '...' }
-                
+
                 let parsedResult;
                 try {
                     // Try to parse the text response as JSON
                     parsedResult = JSON.parse(data.text);
-                } catch(e) {
+                } catch (e) {
                     // Fallback if the AI didn't return perfect JSON
                     console.error("Failed to parse JSON from AI", data.text);
                     parsedResult = {
@@ -245,7 +296,7 @@
 
                 // Update UI
                 renderResult(parsedResult);
-                
+
             } catch (error) {
                 console.error(error);
                 alert('אירעה שגיאה בניתוח המשפט. אנא נסה שוב.');
@@ -257,7 +308,7 @@
 
         function renderResult(data) {
             const agent = data.agent || 'MIND';
-            
+
             // Set Badge
             agentBadge.textContent = agent;
             agentBadge.className = 'agent-badge'; // reset
@@ -272,4 +323,5 @@
         }
     </script>
 </body>
+
 </html>

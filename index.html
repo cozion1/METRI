@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -451,12 +452,14 @@
         }
 
         @keyframes breathe {
+
             0%,
             100% {
                 transform: scale(1);
                 opacity: 0.85;
                 box-shadow: 0 0 40px #4a9eff, 0 0 80px rgba(74, 158, 255, 0.4);
             }
+
             50% {
                 transform: scale(1.08);
                 opacity: 1;
@@ -509,6 +512,7 @@
         }
     </style>
 </head>
+
 <body>
     <canvas id="scene-bg" aria-hidden="true"></canvas>
     <div id="emotion-filter" aria-hidden="true"></div>
@@ -527,14 +531,50 @@
 
     <div id="principal-modal" class="modal-overlay" aria-hidden="true">
         <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="principal-guide-title">
-            <h2 id="principal-guide-title" class="modal-title">הוראות למנהלת</h2>
+            <h2 id="principal-guide-title" class="modal-title">הוראות למנהלת / צוות חינוכי</h2>
             <p class="modal-text">
-                שלב 1 — חוויה אישית: תלמיד/ה מקבל/ת מענה רגשי קצר ובטוח. <br>
+                <strong>מטרת המערכת: פיתוח חוסן רגשי, ויסות רגשות, כישורים חברתיים ודפוסי תגובה
+                    מאוזנים.</strong><br><br>
+                שלב 1 — חוויה אישית: תלמיד/ה מקבל/ת מענה רגשי קצר השמור אצלו בפרטיות (מקום בטוח נטול שיפוטיות). <br>
                 שלב 2 — כלי מלווה למורה: "מפת דופק" אנונימית ברמה כיתתית, ללא חשיפת תוכן אישי. <br>
                 שלב 3 — סימולטור תלת־ממד: בחירת מסלול (להמשיך בשיח / לצאת להפסקה) והדגמת השפעת הבחירה.
             </p>
             <div class="modal-actions">
                 <button id="principal-modal-close" class="action-btn modal-close-btn" type="button">סגור</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="student-intro-modal" class="modal-overlay" aria-hidden="true">
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="student-intro-title">
+            <h2 id="student-intro-title" class="modal-title">ברוך הבא למרחב הבטוח שלך 🌿</h2>
+            <p class="modal-text">
+                כאן תוכל לכתוב מה שמעיק עליך בלי פילטרים.
+                <br><br>
+                ✔️ <strong>זה פרטי לחלוטין:</strong> אף אחד (לא מורים ולא חברים) לא רואה את מה שאתה כותב.
+                <br>
+                ✔️ <strong>בלי שיפוט:</strong> אנחנו כאן רק כדי לעזור לך לעשות סדר ולקבל משפט שיחזק אותך.
+            </p>
+            <div class="modal-actions">
+                <button id="student-intro-close" class="action-btn modal-close-btn" type="button">הבנתי, בוא
+                    נתחיל</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="student-intro-modal" class="modal-overlay" aria-hidden="true">
+        <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="student-intro-title">
+            <h2 id="student-intro-title" class="modal-title">ברוך הבא למרחב הבטוח שלך 🌿</h2>
+            <p class="modal-text">
+                כאן תוכל לכתוב מה שמעיק עליך בלי פילטרים.
+                <br><br>
+                ✔️ <strong>זה פרטי לחלוטין:</strong> אף אחד (לא מורים ולא חברים) לא רואה את מה שאתה כותב.
+                <br>
+                ✔️ <strong>בלי שיפוט:</strong> אנחנו כאן רק כדי לעזור לך לארגן את המחשבות למצוא משפט שיעשה לך טוב.
+            </p>
+            <div class="modal-actions">
+                <button id="student-intro-close" class="action-btn modal-close-btn" type="button">הבנתי, בוא
+                    נתחיל</button>
             </div>
         </section>
     </div>
@@ -546,6 +586,11 @@
         const principalGuideBtn = document.getElementById('principal-guide-btn');
         const principalModal = document.getElementById('principal-modal');
         const principalModalClose = document.getElementById('principal-modal-close');
+
+        // Student Intro Modal Elements
+        const studentIntroModal = document.getElementById('student-intro-modal');
+        const studentIntroClose = document.getElementById('student-intro-close');
+
         const pageBody = document.body;
         const contentCache = new Map();
         const NETLIFY_GEMINI_ENDPOINT = '/.netlify/functions/gemini';
@@ -1115,7 +1160,16 @@
         modeButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 if (button.id === 'principal-guide-btn') return;
-                renderMode(button.dataset.mode);
+
+                const modeKey = button.dataset.mode;
+
+                // Show intro modal for student mode if not active
+                if (modeKey === 'personal' && !button.classList.contains('active')) {
+                    studentIntroModal.classList.add('is-open');
+                    studentIntroModal.setAttribute('aria-hidden', 'false');
+                }
+
+                renderMode(modeKey);
             });
         });
 
@@ -1129,6 +1183,11 @@
             principalModal.setAttribute('aria-hidden', 'true');
         });
 
+        studentIntroClose.addEventListener('click', () => {
+            studentIntroModal.classList.remove('is-open');
+            studentIntroModal.setAttribute('aria-hidden', 'true');
+        });
+
         principalModal.addEventListener('click', (event) => {
             if (event.target === principalModal) {
                 principalModal.classList.remove('is-open');
@@ -1137,7 +1196,7 @@
         });
 
         renderMode('world');
-        Promise.all(Object.keys(modes).map((modeKey) => loadModeContent(modeKey))).catch(() => {});
+        Promise.all(Object.keys(modes).map((modeKey) => loadModeContent(modeKey))).catch(() => { });
 
         const canvas = document.getElementById('scene-bg');
         const ctx = canvas.getContext('2d');
@@ -1185,4 +1244,5 @@
         requestAnimationFrame(drawScene);
     </script>
 </body>
+
 </html>
