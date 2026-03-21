@@ -2,6 +2,17 @@
   publish = "."
   functions = "netlify/functions"
 
+# Clean URLs — accessible without .html extension
+[[redirects]]
+  from = "/neural"
+  to   = "/mind_map_neural_view.html"
+  status = 200
+
+[[redirects]]
+  from = "/brain"
+  to   = "/mind_map_neural_view.html"
+  status = 200
+
 [[headers]]
   for = "/data/*"
   [headers.values]
