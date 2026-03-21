@@ -1,0 +1,305 @@
+[
+  {
+    "id": "pattern_081",
+    "category": "hopelessness",
+    "pattern_name": "future_hopelessness",
+    "example_sentences": [
+      "אני לא רואה עתיד טוב לעצמי.",
+      "לא משנה מה אעשה, הדברים לא ישתפרו.",
+      "קשה לי לדמיין את עצמי מאושר בעוד שנה."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "The future holds nothing positive for me and things will not improve.",
+    "balanced_trait": "hope",
+    "bridge_sentence": "חוסר תקווה הוא תחושה, לא עובדה — ותחושות משתנות.",
+    "helpful_sentence": "אני פותח אפילו רק סדק קטן לאפשרות שדברים יכולים להשתפר."
+  },
+  {
+    "id": "pattern_082",
+    "category": "hopelessness",
+    "pattern_name": "patterns_never_change",
+    "example_sentences": [
+      "זה תמיד ככה ויהיה תמיד ככה.",
+      "אני חוזר על אותן טעויות כבר שנים.",
+      "הדפוסים שלי קבועים — אני לא יכול לשנות אותם."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "My patterns are permanent and I am incapable of real change.",
+    "balanced_trait": "growth",
+    "bridge_sentence": "הדפוסים נוצרו פעם אחת — הם לא חקוקים. מה שנלמד אפשר לשנות.",
+    "helpful_sentence": "אני מסוגל לשנות דפוסים לאט ובעקביות."
+  },
+  {
+    "id": "pattern_083",
+    "category": "hopelessness",
+    "pattern_name": "effort_feels_futile",
+    "example_sentences": [
+      "לא משנה כמה אני מנסה — זה לא עוזר.",
+      "השקעתי כל כך הרבה ולא ראיתי תוצאות.",
+      "מה הטעם להמשיך לנסות?"
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "No amount of effort will make a difference so why try.",
+    "balanced_trait": "persistence",
+    "bridge_sentence": "לפעמים המאמץ עובד מתחת לפני השטח — לפני שרואים אותו.",
+    "helpful_sentence": "כל מאמץ שאני משקיע נוגע במשהו, גם אם לא ניכר מיד."
+  },
+  {
+    "id": "pattern_084",
+    "category": "hopelessness",
+    "pattern_name": "permanently_stuck",
+    "example_sentences": [
+      "אני תקוע במקום הזה ולא רואה דרך לצאת.",
+      "תחושת התקיעות שלי היא כל כך עמוקה שהיא מרגישה קבועה.",
+      "כל כיוון שאני מנסה מוביל לאותו מקום."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "I am permanently stuck and no path forward exists for me.",
+    "balanced_trait": "movement",
+    "bridge_sentence": "תקיעות היא לרוב עייפות שמחפשת כיוון — לא מצב קבוע.",
+    "helpful_sentence": "אני יכול לצאת מהתקיעות בצעד אחד קטן לצד, לא רק קדימה."
+  },
+  {
+    "id": "pattern_085",
+    "category": "hopelessness",
+    "pattern_name": "failure_history_predicts_future",
+    "example_sentences": [
+      "כישלתי בעבר — לכן ייכשל גם בעתיד.",
+      "הרצף של הכישלונות שלי מוכיח שלא מגיע לי להצליח.",
+      "ההיסטוריה שלי היא מרשם לעתידי."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "My past failures are evidence that future success is impossible for me.",
+    "balanced_trait": "fresh start",
+    "bridge_sentence": "ההיסטוריה מלמדת — אבל היא לא כותבת את הפרק הבא.",
+    "helpful_sentence": "כל יום הוא הזדמנות חדשה שלא נכתבה עדיין."
+  },
+  {
+    "id": "pattern_086",
+    "category": "hopelessness",
+    "pattern_name": "change_feels_impossible",
+    "example_sentences": [
+      "אני לא מאמין שדברים יכולים להיות אחרת.",
+      "שמעתי את זה כל כך הרבה פעמים שיכול להשתנות — אבל לא האמנתי.",
+      "שינוי מרגיש כמו דבר שקורה לאחרים, לא לי."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "Change is possible for others but not for someone like me.",
+    "balanced_trait": "belief",
+    "bridge_sentence": "שינוי לא קורה בבת אחת — הוא לפעמים כל כך הדרגתי שלא רואים אותו עד אחר כך.",
+    "helpful_sentence": "אני פתוח לאפשרות שאני משתנה, גם אם הוא לא נראה לי עכשיו."
+  },
+  {
+    "id": "pattern_087",
+    "category": "hopelessness",
+    "pattern_name": "happiness_unattainable",
+    "example_sentences": [
+      "אושר הוא לא משהו שמיועד לאנשים כמוני.",
+      "כבר ויתרתי על הרעיון שאני יכול להיות מאושר.",
+      "נראה לי שמאושר כמו שאחרים הוא פשוט מחוץ לטווח שלי."
+    ],
+    "emotion": "sadness",
+    "limiting_belief": "Happiness is not available to me and I have given up expecting it.",
+    "balanced_trait": "joy",
+    "bridge_sentence": "אושר לא מגיע כסטייק גדול — הוא מגיע ברגעים קטנים שאפשר לחפש.",
+    "helpful_sentence": "אני מחפש ומכיר ברגעי שמחה קטנים, גם ביום רגיל."
+  },
+  {
+    "id": "pattern_088",
+    "category": "hopelessness",
+    "pattern_name": "recovery_feels_impossible",
+    "example_sentences": [
+      "אחרי מה שעברתי, אני לא מאמין שאוכל להתאושש.",
+      "האובדן הזה השאיר פצע שלא ירפא.",
+      "אנשים אומרים שמתאוששים — אבל אני לא רואה איך."
+    ],
+    "emotion": "grief",
+    "limiting_belief": "I am too broken from what happened to ever recover or heal.",
+    "balanced_trait": "healing",
+    "bridge_sentences": [
+      "ריפוי לא אומר שכלום לא קרה — הוא אומר שאתה ממשיך לחיות בצלו."
+    ],
+    "bridge_sentence": "ריפוי לא אומר שכלום לא קרה — הוא אומר שאתה ממשיך לחיות בצלו.",
+    "helpful_sentence": "אני מתאושש לאט, בדרכי שלי, וזה מספיק."
+  },
+  {
+    "id": "pattern_089",
+    "category": "hopelessness",
+    "pattern_name": "meaning_loss",
+    "example_sentences": [
+      "אני לא מוצא טעם במה שאני עושה.",
+      "כל כך קשה לי לקום בבוקר כי אין לי למה.",
+      "פעם ידעתי מה חשוב לי — עכשיו הכל נראה ריק."
+    ],
+    "emotion": "emptiness",
+    "limiting_belief": "Nothing has meaning and there is no reason to invest in anything.",
+    "balanced_trait": "purpose",
+    "bridge_sentence": "משמעות לא תמיד קיימת — לפעמים צריך ליצור אותה בצעדים קטנים.",
+    "helpful_sentence": "אני מחפש פיסות קטנות של משמעות שעוד חיות בתוכי."
+  },
+  {
+    "id": "pattern_090",
+    "category": "hopelessness",
+    "pattern_name": "resigned_to_fate",
+    "example_sentences": [
+      "זה הגורל שלי ואין מה לעשות.",
+      "ויתרתי — ככה זה פשוט.",
+      "כבר לא מנסה לשנות כי מה שנכתב — נכתב."
+    ],
+    "emotion": "resignation",
+    "limiting_belief": "My fate is fixed and resistance or effort is pointless.",
+    "balanced_trait": "agency",
+    "bridge_sentence": "ויתור לפעמים הוא מנוחה — לא גורל. אחרי המנוחה, אפשר לבחור שוב.",
+    "helpful_sentence": "גם אם הכל מרגיש קבוע — אני בוחר לנסות שוב."
+  },
+  {
+    "id": "pattern_091",
+    "category": "identity_confusion",
+    "pattern_name": "role_confusion",
+    "example_sentences": [
+      "אני לא יודע מי אני מחוץ לתפקידים שלי.",
+      "כשאני לא עובד, לא הורה ולא חבר — מי אני?",
+      "הרגשתי שאיבדתי את עצמי בתוך כל הדברים שאני עושה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "Without my roles I have no identity of my own.",
+    "balanced_trait": "selfhood",
+    "bridge_sentence": "אתה קיים מעבר לתפקידים שאתה ממלא — מי אתה כשאף אחד לא מסתכל?",
+    "helpful_sentence": "יש לי עצמי אמיתי שקיים מתחת לכל התפקידים."
+  },
+  {
+    "id": "pattern_092",
+    "category": "identity_confusion",
+    "pattern_name": "unstable_self_concept",
+    "example_sentences": [
+      "אני מרגיש אחרת לגמרי עם אנשים שונים.",
+      "אני לא יודע מה באמת אני חושב כי זה משתנה כל הזמן.",
+      "לפעמים נדמה לי שאני פשוט מגיב לסביבה ולא חי מתוך עצמי."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I have no stable sense of self and I am different people in different contexts.",
+    "balanced_trait": "core identity",
+    "bridge_sentence": "לאדם יש גרסאות רבות — אבל יש ליבה שנשארת. מה שם בך שתמיד נשאר?",
+    "helpful_sentence": "יש בי ליבה יציבה שנמצאת מתחת לכל השכבות."
+  },
+  {
+    "id": "pattern_093",
+    "category": "identity_confusion",
+    "pattern_name": "purpose_fog",
+    "example_sentences": [
+      "אני לא יודע לאן אני הולך בחיים.",
+      "חסר לי כיוון ברור ואני מרגיש מבולבל.",
+      "אחרים נראים כאילו יש להם מטרה ואני תועה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I have no purpose and am drifting aimlessly through life.",
+    "balanced_trait": "direction",
+    "bridge_sentence": "מטרה לא תמיד מגיעה כהתגלות — לפעמים היא מתגלה תוך כדי תנועה.",
+    "helpful_sentence": "אני בדרך לגלות את הכיוון שלי, גם כשהוא עדיין לא ברור."
+  },
+  {
+    "id": "pattern_094",
+    "category": "identity_confusion",
+    "pattern_name": "value_confusion",
+    "example_sentences": [
+      "לא ברור לי מה באמת חשוב לי.",
+      "אני מוצא את עצמי חי לפי ערכים שאולי הם לא שלי.",
+      "פעמים רבות אני עושה דברים שלא מתאימים למי שאני — ולא יודע למה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I do not know my own values and therefore cannot live authentically.",
+    "balanced_trait": "clarity",
+    "bridge_sentence": "הבלבול לגבי ערכים הוא שלב — לא כישלון. מה מרגיש נכון כשהכל שקט?",
+    "helpful_sentence": "אני מחפש ומוצא בהדרגה את הערכים שמניעים אותי מבפנים."
+  },
+  {
+    "id": "pattern_095",
+    "category": "identity_confusion",
+    "pattern_name": "identity_in_transition",
+    "example_sentences": [
+      "עברתי שינוי גדול ואני לא יודע מי אני עכשיו.",
+      "הגרסה הישנה שלי כבר לא קיימת — אבל החדשה עדיין לא ברורה.",
+      "נמצא בין לבין ומרגיש לא מעוגן."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Being in transition means I am lost and have no solid ground.",
+    "balanced_trait": "emergence",
+    "bridge_sentence": "המעבר הוא לא ריק — הוא המקום שבו הגרסה הבאה שלך מתעצבת.",
+    "helpful_sentence": "אני בתהליך עיצוב עצמי ואני סומך על התהליך הזה."
+  },
+  {
+    "id": "pattern_096",
+    "category": "identity_confusion",
+    "pattern_name": "comparison_erases_self",
+    "example_sentences": [
+      "כשאני מסתכל על אחרים אני שוכח מי אני.",
+      "ההשוואה מטשטשת את הקול הפנימי שלי.",
+      "אני מנסה להיות כמו אנשים שאני מעריץ ואובד את עצמי."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I need to be like others to have value, which erases who I truly am.",
+    "balanced_trait": "uniqueness",
+    "bridge_sentence": "הדמיון לאחרים לא הוא המטרה — היציאה לאור של מה שרק אתה הוא המטרה.",
+    "helpful_sentence": "אני ייחודי ובעל ערך בדיוק כפי שאני, לא כגרסת אחרים."
+  },
+  {
+    "id": "pattern_097",
+    "category": "identity_confusion",
+    "pattern_name": "authenticity_struggle",
+    "example_sentences": [
+      "אני לא מצליח להיות עצמי — תמיד מנסה להתאים.",
+      "אני חושש שאם אראה מי אני באמת, זה לא יהיה מספיק.",
+      "חיים בתוך תפקיד שאינו אני — וזה מותש."
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "My true self is not acceptable so I must perform a false version of myself.",
+    "balanced_trait": "authenticity",
+    "bridge_sentence": "לחיות את עצמך האמיתי — גם אם הוא לא מושלם — הוא הדרך החיה ביותר.",
+    "helpful_sentence": "אני בוחר להיות עצמי האמיתי, אחד קטן בכל פעם."
+  },
+  {
+    "id": "pattern_098",
+    "category": "identity_confusion",
+    "pattern_name": "role_conflict",
+    "example_sentences": [
+      "אני הורה, עובד, ילד וחבר — ולא יודע מה לשים ראשון.",
+      "התפקידים השונים שלי מושכים אותי לכיוונים מנוגדים.",
+      "אני מרגיש שאני מאכזב את כולם כי אין לי מספיק מעצמי לתת."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "I cannot fulfill all my roles well and will always be failing someone.",
+    "balanced_trait": "balance",
+    "bridge_sentence": "לא כל תפקיד צריך את כולך כל הזמן — חלוקת אנרגיה היא מיומנות.",
+    "helpful_sentence": "אני מחלק את עצמי בחוכמה ומסלח לעצמי על מה שלא הצלחתי."
+  },
+  {
+    "id": "pattern_099",
+    "category": "identity_confusion",
+    "pattern_name": "past_vs_present_self_disconnect",
+    "example_sentences": [
+      "אני לא מכיר את עצמי הישן יותר.",
+      "מי שהייתי לפני שלוש שנים נראה כמו זר.",
+      "שינוי כל כך עמוק שאני לא בטוח מי אני עכשיו."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "Changing means losing myself and I no longer know who I am.",
+    "balanced_trait": "continuity",
+    "bridge_sentence": "השינוי הוא חלק ממך — לא מחיקה. אתה כולל את כל הגרסאות.",
+    "helpful_sentence": "אני נושא את כל הגרסאות שהייתי ובונה את מי שאני הופך."
+  },
+  {
+    "id": "pattern_100",
+    "category": "identity_confusion",
+    "pattern_name": "fear_of_future_self",
+    "example_sentences": [
+      "אני מפחד ממי שאהיה אם אשנה.",
+      "מה אם הגרסה הבאה שלי לא תהיה אני?",
+      "אני נאחז בעצמי הנוכחי גם כשהוא כבר לא עובד."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Changing who I am means losing myself entirely.",
+    "balanced_trait": "evolution",
+    "bridge_sentence": "הגרסה הבאה שלך נבנית ממה שאתה עכשיו — לא מחליפה אותו.",
+    "helpful_sentence": "אני מאמין שהגרסה הבאה שלי תהיה עדיין אני — רק יותר."
+  }
+]

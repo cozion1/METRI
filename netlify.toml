@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    X-Frame-Options = "SAMEORIGIN"

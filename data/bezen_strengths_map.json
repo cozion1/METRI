@@ -1,0 +1,177 @@
+{
+  "version": "v1.0.0",
+  "language": "he",
+  "generated_at": "2026-03-15T19:53:14Z",
+  "strengths": [
+    {
+      "id": "self_worth",
+      "label_he": "ערך עצמי",
+      "label_en": "Self Worth",
+      "definition": "תחושת ערך בסיסית שאינה תלויה בהשוואה מתמדת לאחרים.",
+      "long_term_value": "מעניקה יציבות פנימית ומפחיתה תלות באישורים חיצוניים.",
+      "related_trait_ids": [
+        "self_acceptance"
+      ],
+      "growth_indicators": [
+        "פחות השוואה אובססיבית לאחרים",
+        "יכולת לראות הישגים אישיים",
+        "פחות מחיקה עצמית מול הצלחת אחרים"
+      ],
+      "anchor_sentence": "הערך שלי אינו תחרותי אלא אנושי.",
+      "active": true
+    },
+    {
+      "id": "courage",
+      "label_he": "אומץ",
+      "label_en": "Courage",
+      "definition": "יכולת לפעול למרות ספק, פחד או סיכון רגשי.",
+      "long_term_value": "מקדמת התקדמות אמיתית גם בתנאים של אי ודאות.",
+      "related_trait_ids": [
+        "inner_confidence"
+      ],
+      "growth_indicators": [
+        "יותר ניסיונות למרות ספק",
+        "בחירה בפעולה קטנה במקום קיפאון",
+        "פחות תלות בתחושת מוכנות מושלמת"
+      ],
+      "anchor_sentence": "אומץ הוא תנועה עם פחד, לא בלי פחד.",
+      "active": true
+    },
+    {
+      "id": "relational_security",
+      "label_he": "ביטחון בקשר",
+      "label_en": "Relational Security",
+      "definition": "יכולת להחזיק קשרים בלי לפרש כל מרחק כדחייה מוחלטת.",
+      "long_term_value": "מחזקת יציבות ביחסים ומפחיתה חרדת נטישה.",
+      "related_trait_ids": [
+        "emotional_resilience"
+      ],
+      "growth_indicators": [
+        "פחות פרשנות קטסטרופלית לשתיקה או מרחק",
+        "יכולת לבקש הבהרה בקשר",
+        "יותר ויסות אחרי פגיעה רגשית"
+      ],
+      "anchor_sentence": "פגיעה בקשר לא בהכרח מבטלת את הקשר.",
+      "active": true
+    },
+    {
+      "id": "self_regulation",
+      "label_he": "ויסות עצמי",
+      "label_en": "Self Regulation",
+      "definition": "יכולת לנהל עומס, קשב ותגובה באופן שמחזיר יציבות.",
+      "long_term_value": "מאפשרת פעולה יציבה גם תחת לחץ או הצפה.",
+      "related_trait_ids": [
+        "stepwise_focus"
+      ],
+      "growth_indicators": [
+        "פחות קפיאה מול ריבוי משימות",
+        "יותר יכולת לפרק עומס",
+        "תגובה רגועה יותר למצבי לחץ"
+      ],
+      "anchor_sentence": "כשאני מווסת, אני מחזיר לעצמי מרחב בחירה.",
+      "active": true
+    },
+    {
+      "id": "hope",
+      "label_he": "תקווה",
+      "label_en": "Hope",
+      "definition": "יכולת לשמור פתח לאפשרות טובה גם בתוך אי ודאות.",
+      "long_term_value": "מחזקת התמדה ומפחיתה ייאוש משתק.",
+      "related_trait_ids": [
+        "grounded_hope"
+      ],
+      "growth_indicators": [
+        "פחות נבואות שחורות אוטומטיות",
+        "יותר תכנון מעשי לעתיד",
+        "הישענות על אפשרויות ולא רק על איומים"
+      ],
+      "anchor_sentence": "אני לא יודע הכול על המחר, ולכן גם איני יודע שרק רע מחכה שם.",
+      "active": true
+    },
+    {
+      "id": "dignity",
+      "label_he": "כבוד אנושי",
+      "label_en": "Dignity",
+      "definition": "הכרה בכך שגם בקושי, טעות או בושה האדם נשאר ראוי לכבוד.",
+      "long_term_value": "שומרת על ליבה פנימית שאינה מתפרקת מול כישלון או מבוכה.",
+      "related_trait_ids": [
+        "self_compassion"
+      ],
+      "growth_indicators": [
+        "פחות שפה משפילה כלפי עצמי",
+        "יותר יכולת לשאת טעות בלי קריסה",
+        "יחס אנושי יותר לעצמי"
+      ],
+      "anchor_sentence": "גם כשאני נשבר, הכבוד שלי לא נמחק.",
+      "active": true
+    },
+    {
+      "id": "human_value",
+      "label_he": "ערך אנושי בסיסי",
+      "label_en": "Basic Human Value",
+      "definition": "הכרה בכך שלעצם הקיום האנושי יש משמעות וערך.",
+      "long_term_value": "מחזקת בסיס יציב מול תחושות מיותרות, ריקנות וחוסר ערך.",
+      "related_trait_ids": [
+        "self_value_recognition"
+      ],
+      "growth_indicators": [
+        "פחות אמירות של מחיקה עצמית",
+        "יכולת לראות תרומה גם בדברים קטנים",
+        "יותר כבוד לעצם הנוכחות האישית"
+      ],
+      "anchor_sentence": "אני לא צריך להרוויח את הזכות להיות בעל ערך.",
+      "active": true
+    },
+    {
+      "id": "empowerment",
+      "label_he": "העצמה",
+      "label_en": "Empowerment",
+      "definition": "תחושת יכולת והשפעה מציאותית בתוך החיים.",
+      "long_term_value": "מקדמת אחריות, יוזמה ויציאה הדרגתית מחוסר אונים.",
+      "related_trait_ids": [
+        "active_agency"
+      ],
+      "growth_indicators": [
+        "בחירת פעולות קטנות באופן עקבי",
+        "ירידה באמירות של ייאוש מוחלט",
+        "חזרה ליוזמה מסוימת"
+      ],
+      "anchor_sentence": "אני לא חייב לשלוט בהכול כדי להשפיע על משהו.",
+      "active": true
+    },
+    {
+      "id": "connection",
+      "label_he": "חיבור אנושי",
+      "label_en": "Connection",
+      "definition": "היכולת ליצור ולשמר קשרים משמעותיים ומזינים.",
+      "long_term_value": "מפחיתה בדידות וניכור ומחזקת תחושת חיים ושייכות.",
+      "related_trait_ids": [
+        "relational_openness"
+      ],
+      "growth_indicators": [
+        "יותר פניות יזומות לקשר",
+        "ירידה בהסתגרות מוחלטת",
+        "נכונות להיות במגע רגשי מתון"
+      ],
+      "anchor_sentence": "גם חיבור קטן יכול להתחיל לרפא ניתוק גדול.",
+      "active": true
+    },
+    {
+      "id": "relational_identity",
+      "label_he": "זהות שייכת",
+      "label_en": "Relational Identity",
+      "definition": "תחושת זהות שיש לה מקום בתוך קשרים, מסגרות וקהילה.",
+      "long_term_value": "מחזקת תחושת בית פנימי בעולם וביחסים עם אחרים.",
+      "related_trait_ids": [
+        "secure_belonging"
+      ],
+      "growth_indicators": [
+        "פחות תחושת חוץ קבועה",
+        "יותר זיהוי מקומות שייכות אמיתיים",
+        "יכולת להרגיש חלק גם בלי שלמות"
+      ],
+      "anchor_sentence": "יש לי מקום, גם אם אני עדיין לומד להרגיש אותו.",
+      "active": true
+    }
+  ]
+}

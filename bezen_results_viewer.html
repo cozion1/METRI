@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEZEN Results Viewer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            direction: rtl;
+        }
+
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sentence-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-right: 4px solid #667eea;
+        }
+
+        .sentence-text {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .info-item {
+            background-color: #f8f9fa;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+            margin-bottom: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .nav-bar {
+            background: #333;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .nav-bar button {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            margin: 0 5px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .nav-bar button:hover {
+            background: #777;
+        }
+
+        .input-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        #analysisInput {
+            width: 100%;
+            min-height: 80px;
+            padding: 12px;
+            font-size: 1em;
+            font-family: inherit;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            resize: vertical;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+
+        #analysisInput:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .input-section button {
+            margin-top: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .input-section button:hover {
+            opacity: 0.9;
+        }
+
+        #analysisResult {
+            margin-top: 20px;
+        }
+
+        .result-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 18px 20px;
+            margin-bottom: 14px;
+            border-right: 4px solid #667eea;
+        }
+
+        .result-section-title {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-section-title .icon {
+            font-size: 1.1em;
+        }
+
+        .result-body {
+            color: #333;
+            line-height: 1.7;
+            font-size: 0.97em;
+        }
+
+        .result-body strong {
+            color: #4a4a8a;
+        }
+
+        .result-body em {
+            color: #555;
+            font-style: normal;
+            background: #eef0ff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .result-field {
+            margin-bottom: 7px;
+        }
+
+        .result-field-label {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .result-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 9px 18px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .result-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .chat-section {
+            background: white;
+            border-radius: 10px;
+            padding: 22px 25px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .chat-section-title {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 18px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+        }
+
+        .chat-thread {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .bubble {
+            max-width: 82%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            line-height: 1.75;
+            font-size: 0.96em;
+            color: #333;
+        }
+
+        .bubble strong { color: #4a4a8a; }
+        .bubble em {
+            font-style: normal;
+            background: #e8e6ff;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .bezen-bubble {
+            background: linear-gradient(135deg, #f0f2ff 0%, #f7f0ff 100%);
+            border-right: 3px solid #764ba2;
+            align-self: flex-start;
+        }
+
+        .user-bubble {
+            background: #e8f4fd;
+            border-left: 3px solid #667eea;
+            align-self: flex-end;
+        }
+
+        .bubble-label {
+            font-size: 0.75em;
+            font-weight: bold;
+            color: #764ba2;
+            margin-bottom: 5px;
+            letter-spacing: 0.4px;
+        }
+
+        .user-bubble .bubble-label { color: #667eea; }
+
+        .chat-input-area {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .chat-input-area textarea {
+            width: 100%;
+            min-height: 65px;
+            padding: 10px 12px;
+            font-size: 0.97em;
+            font-family: inherit;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            resize: vertical;
+            box-sizing: border-box;
+            direction: rtl;
+        }
+
+        .chat-input-area textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .chat-send-btn {
+            align-self: flex-start;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 9px 22px;
+            border-radius: 6px;
+            font-size: 0.97em;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .chat-send-btn:disabled { opacity: 0.6; cursor: default; }
+
+        .closing-card {
+            background: linear-gradient(135deg, #f0f2ff 0%, #f7f0ff 100%);
+            border-radius: 10px;
+            padding: 22px 24px;
+            margin-top: 16px;
+            border: 2px solid #764ba2;
+        }
+
+        .closing-card h3 {
+            color: #764ba2;
+            font-size: 1.1em;
+            margin: 0 0 16px 0;
+        }
+
+        .closing-item { margin-bottom: 14px; }
+
+        .closing-label {
+            font-weight: bold;
+            color: #667eea;
+            font-size: 0.88em;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin-bottom: 4px;
+        }
+
+        .closing-value { color: #333; line-height: 1.65; }
+
+        .anchor-sentence {
+            background: white;
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #4a4a8a;
+            font-weight: bold;
+            border-right: 3px solid #764ba2;
+            margin-top: 4px;
+        }
+
+        .entry-points-label {
+            font-size: 0.88em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .entry-points-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .entry-chip {
+            background: #f4f4ff;
+            border: 2px solid #d0d4f8;
+            border-radius: 8px;
+            padding: 11px 16px;
+            font-family: inherit;
+            font-size: 0.97em;
+            color: #333;
+            text-align: right;
+            cursor: pointer;
+            transition: all 0.18s;
+            line-height: 1.5;
+        }
+
+        .entry-chip:hover {
+            background: #eaedff;
+            border-color: #667eea;
+            color: #4a4a8a;
+        }
+
+        .entry-chip.selected {
+            background: linear-gradient(135deg, #f0f2ff 0%, #f7f0ff 100%);
+            border-color: #764ba2;
+            color: #4a4a8a;
+            font-weight: bold;
+        }
+
+        .or-divider {
+            text-align: center;
+            color: #aaa;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .or-divider::before, .or-divider::after {
+            content: '';
+            display: inline-block;
+            width: 35%;
+            height: 1px;
+            background: #ddd;
+            vertical-align: middle;
+            margin: 0 8px;
+        }
+
+        .brain-section { border-right-color: #764ba2; }
+
+        .brain-trait-name {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #4a4a8a;
+            margin-bottom: 8px;
+        }
+
+        .brain-trait-explain {
+            color: #555;
+            line-height: 1.75;
+            font-size: 0.95em;
+        }
+
+        .brain-bridge {
+            font-style: italic;
+            color: #444;
+            line-height: 1.75;
+            padding: 10px 14px;
+            background: #f0f2ff;
+            border-radius: 6px;
+            border-right: 3px solid #764ba2;
+        }
+
+        .brain-helpful {
+            color: #333;
+            line-height: 1.75;
+            margin-bottom: 10px;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .question-item {
+            background: #f4f4ff;
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #4a4a8a;
+            font-size: 0.96em;
+            line-height: 1.6;
+            border-right: 3px solid #667eea;
+        }
+
+        .emotion-section {
+            border-right-color: var(--emotion-color, #667eea);
+        }
+
+        .emotion-badge-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .emotion-icon {
+            font-size: 1.6em;
+            line-height: 1;
+        }
+
+        .emotion-badge {
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 1.15em;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 0.3px;
+        }
+
+        .emotion-context {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .pain-axis-section { border-right-color: #e8963a; }
+
+        .pain-axis-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #b5621a;
+            margin-bottom: 6px;
+        }
+
+        .pain-axis-explain {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        .pain-axis-count {
+            font-size: 0.84em;
+            color: #999;
+            margin-top: 6px;
+        }
+
+        .summary-axis-tag {
+            display: inline-block;
+            background: #fff3e8;
+            color: #b5621a;
+            font-weight: bold;
+            padding: 3px 14px;
+            border-radius: 14px;
+            border: 1.5px solid #e8963a;
+            font-size: 1em;
+            margin-left: 6px;
+        }
+
+        .summary-axis-explain {
+            color: #666;
+            font-size: 0.93em;
+        }
+
+        .summary-trait {
+            font-weight: bold;
+            color: #4a4a8a;
+            font-size: 1.05em;
+        }
+
+        .summary-step {
+            background: white;
+            border-radius: 6px;
+            padding: 10px 14px;
+            border-right: 3px solid #e8963a;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .mind-map-flow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px 0 4px 0;
+            direction: ltr;
+        }
+
+        .flow-node {
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.93em;
+            color: white;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .flow-node-axis     { background: #e8963a; }
+        .flow-node-trait    { background: #764ba2; }
+        .flow-node-strength { background: #5ba87a; }
+
+        .flow-arrow {
+            color: #bbb;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        .mind-map-label {
+            font-size: 0.78em;
+            color: #888;
+            text-align: center;
+            margin-bottom: 6px;
+            direction: rtl;
+        }
+
+        .bezen-explanation-section { border-right-color: #5ba87a; }
+
+        .explanation-para {
+            margin: 0 0 13px 0;
+            line-height: 1.85;
+            color: #333;
+        }
+
+        .explanation-para:last-child { margin-bottom: 0; }
+
+        .explanation-para em {
+            font-style: normal;
+            background: #eef5ee;
+            color: #3a7a50;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>BEZEN Results Viewer</h1>
+    </div>
+
+    <div class="input-section">
+        <h2>בחר משפט פתיחה</h2>
+        <p style="color:#888; font-size:0.92em; margin: -10px 0 18px 0;">לפעמים קל יותר לזהות את הכאב כשקוראים אותו.</p>
+        <div id="entry-points-container"></div>
+        <div class="or-divider">או כתוב משפט משלך</div>
+        <textarea id="analysisInput" placeholder="כתוב כאן משפט לבדיקה..." oninput="onManualInput()"></textarea>
+        <button onclick="analyzeSentence()">התחל עם BEZEN</button>
+        <div id="analysisResult"></div>
+    </div>
+
+    <div id="content">
+        <div class="loading">טוען נתונים...</div>
+    </div>
+
+    <script>
+        let allSentences = null;
+        let entryPoints  = null;
+        let patterns150  = null;
+        let traitsById   = {};
+        let helpfulById  = {};
+        let followupById = {};
+        let mindMapById  = {};
+        let painAxisScores = {};   // accumulates across all detections in this page session
+        let selectedEntryPoint = null;
+        let session  = null;
+        let chatTurn = 0;
+        const MAX_TURNS = 3;
+
+        const CAT_HE = {
+            comparison: 'השוואה', fear_of_failure: 'פחד מכישלון', self_doubt: 'ספק עצמי',
+            rejection: 'רגישות לדחייה', procrastination: 'דחיינות', perfectionism: 'שלמותנות',
+            loneliness: 'בדידות', lack_of_control: 'חוסר שליטה', hopelessness: 'ייאוש',
+            identity_confusion: 'בלבול זהות', decision_paralysis: 'שיתוק החלטות',
+            overwhelm: 'עומס יתר', shame: 'בושה', anger: 'כעס', avoidance: 'הימנעות'
+        };
+
+        const EMOTION_HE = {
+            anxiety: 'חרדה', fear: 'פחד', shame: 'בושה', hopelessness: 'חוסר תקווה',
+            guilt: 'אשמה', loneliness: 'בדידות', anger: 'כעס', grief: 'אבל',
+            exhaustion: 'עייפות', overwhelm: 'עומס', frustration: 'תסכול', envy: 'קנאה',
+            confusion: 'בלבול', helplessness: 'חוסר אונים', inadequacy: 'חוסר ספיקה',
+            sadness: 'עצב', resignation: 'ויתור', emptiness: 'ריקנות', longing: 'געגוע'
+        };
+
+        // Maps each category to one of the 9 controlled emotion keys
+        const CATEGORY_EMOTION = {
+            comparison:         'comparison',
+            fear_of_failure:    'fear',
+            self_doubt:         'shame',
+            rejection:          'rejection',
+            procrastination:    'overwhelm',
+            perfectionism:      'shame',
+            loneliness:         'loneliness',
+            lack_of_control:    'overwhelm',
+            hopelessness:       'hopelessness',
+            identity_confusion: 'sadness',
+            decision_paralysis: 'overwhelm',
+            overwhelm:          'overwhelm',
+            shame:              'shame',
+            anger:              'anger',
+            avoidance:          'fear'
+        };
+
+        // Controlled emotion display data: label, icon, color, context
+        const EMOTION_DATA = {
+            sadness:     { label: 'עצב',     icon: '💙', color: '#5b8dd9', context: 'כאב פנימי שמחפש הכרה ומרחב לעצמו.' },
+            loneliness:  { label: 'בדידות',  icon: '🌑', color: '#7c5cbf', context: 'תחושת ניתוק מאחרים ולפעמים גם מעצמך.' },
+            fear:        { label: 'פחד',     icon: '🟠', color: '#e8963a', context: 'דריכות פנימית שמנסה להגן עליך מפני הלא נודע.' },
+            shame:       { label: 'בושה',    icon: '❤️', color: '#c0443a', context: 'תחושת חוסר ראויות שלמדת להאמין בה עם הזמן.' },
+            anger:       { label: 'כעס',     icon: '🔴', color: '#d44e3a', context: 'אות לגבול שנחצה, או לצורך שלא קיבל מענה.' },
+            overwhelm:   { label: 'עומס',    icon: '🌊', color: '#3a9bb5', context: 'עודף גירויים, אחריות או דרישות שמקשים לנשום.' },
+            comparison:  { label: 'השוואה',  icon: '⚖️', color: '#5ba87a', context: 'שימוש במדד חיצוני לקביעת הערך העצמי שלך.' },
+            rejection:   { label: 'דחייה',   icon: '💔', color: '#b55a8a', context: 'פחד עמוק מאובדן שייכות ואהבה של אחרים.' },
+            hopelessness:{ label: 'ייאוש',   icon: '🌧️', color: '#7a7a8a', context: 'תחושה שהדברים לא ישתנו, גם אם תנסה.' }
+        };
+
+        const PAIN_AXIS_DATA = {
+            anger:             { label: 'כעס',          explain: 'קושי לשאת גבולות שנחצו או צרכים שלא קיבלו מענה.' },
+            avoidance:         { label: 'הימנעות',       explain: 'נטייה לברוח ממצבים מאיימים במקום להתמודד איתם.' },
+            comparison:        { label: 'השוואה',        explain: 'מדידת הערך העצמי לפי מה שנראה אצל אחרים.' },
+            fear:              { label: 'פחד',           explain: 'תחושת איום מתמדת מפני כישלון, דחייה או הלא נודע.' },
+            hopelessness:      { label: 'ייאוש',         explain: 'תחושה שהשינוי בלתי אפשרי גם אם תנסה.' },
+            identity_confusion:{ label: 'בלבול זהות',   explain: 'חוסר בהירות לגבי מי אתה ומה מגדיר אותך.' },
+            lack_of_control:   { label: 'חוסר שליטה',   explain: 'תחושה שאירועים מכתיבים את חייך ללא יכולת השפעה.' },
+            loneliness:        { label: 'בדידות',        explain: 'תחושת ניתוק מאחרים ולפעמים גם מעצמך.' },
+            overwhelm:         { label: 'עומס יתר',      explain: 'עודף גירויים, דרישות ואחריות שמקשים לנשום.' },
+            perfectionism:     { label: 'שלמותנות',      explain: 'דרישה מוגזמת מהעצמי שהופכת כל ניסיון לאיום.' },
+            procrastination:   { label: 'דחיינות',       explain: 'דחיית משימות מפחד, מהצפה או מחוסר בהירות.' },
+            rejection:         { label: 'דחייה',         explain: 'פחד עמוק מאובדן שייכות ואהבתם של אחרים.' },
+            self_doubt:        { label: 'ספק עצמי',      explain: 'חוסר אמון בשיפוט, ביכולת ובערך העצמי.' },
+            shame:             { label: 'בושה',          explain: 'תחושת חוסר ראויות שנרכשה לאורך השנים.' }
+        };
+
+        async function loadSentences() {
+            try {
+                const [sentRes, epRes, p150Res, trRes, hsRes, fqRes, mmRes] = await Promise.all([
+                    fetch('./data/sentences/user_sentences.json'),
+                    fetch('./data/bezen_entry_points.json'),
+                    fetch('./data/bezen_thought_patterns_150.json'),
+                    fetch('./data/bezen_traits_map.json'),
+                    fetch('./data/bezen_helpful_sentences.json'),
+                    fetch('./data/bezen_followup_questions.json'),
+                    fetch('./data/bezen_mind_map.json')
+                ]);
+                allSentences = await sentRes.json();
+                entryPoints  = await epRes.json();
+                patterns150  = await p150Res.json();
+                const traitsArr   = await trRes.json();
+                const helpfulArr  = await hsRes.json();
+                const followupArr = await fqRes.json();
+                const mindMapArr  = await mmRes.json();
+                traitsArr.forEach(t  => traitsById[t.pattern_id]  = t);
+                helpfulArr.forEach(h => helpfulById[h.pattern_id] = h);
+                followupArr.forEach(f => followupById[f.pattern_id] = f);
+                mindMapArr.forEach(m => mindMapById[m.pattern_id]  = m);
+                console.log('Loaded: sentences=%d, entryPoints=%d, patterns=%d, mindMap=%d',
+                    allSentences.length, entryPoints.length, patterns150.length, mindMapArr.length);
+                renderEntryPoints();
+                renderSentences(allSentences);
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('content').innerHTML = '<div class="error">שגיאה בטעינת הנתונים</div>';
+            }
+        }
+
+        function renderEntryPoints() {
+            const container = document.getElementById('entry-points-container');
+            if (!entryPoints || !entryPoints.length) return;
+            const chips = entryPoints.map(ep => `
+                <button class="entry-chip" data-id="${ep.id}" onclick="selectEntryPoint('${ep.id}')">
+                    ${ep.opening_sentence}
+                </button>`).join('');
+            container.innerHTML = `<div class="entry-points-grid">${chips}</div>`;
+        }
+
+        function matchEntryPoint(text) {
+            if (!entryPoints) return null;
+            const inputToks = tokenize(text);
+            let best = null, bestScore = 0;
+            entryPoints.forEach(ep => {
+                const score = tokenOverlapScore(inputToks, tokenize(ep.opening_sentence));
+                if (score > bestScore) { bestScore = score; best = ep; }
+            });
+            return bestScore >= SEMANTIC_THRESHOLD ? best : null;
+        }
+
+        // ── Semantic Hebrew matching helpers ────────────────────────────────────
+        const FINAL_MAP = { 'ך':'כ', 'ם':'מ', 'ן':'נ', 'ף':'פ', 'ץ':'צ' };
+
+        function normalizeHebrew(text) {
+            // Strip punctuation and normalize Hebrew final letters to base form
+            return text
+                .replace(/[.,!?;:"'״׳()\[\]\-–—…\/\\]/g, ' ')
+                .replace(/[ךםןףץ]/g, c => FINAL_MAP[c])
+                .replace(/\s+/g, ' ')
+                .trim()
+                .toLowerCase();
+        }
+
+        function tokenize(text) {
+            return normalizeHebrew(text).split(/\s+/).filter(w => w.length > 1);
+        }
+
+        // Jaccard-style overlap with partial/stem boost for Hebrew conjugations
+        function tokenOverlapScore(aToks, bToks) {
+            if (!aToks.length || !bToks.length) return 0;
+            const setA = new Set(aToks);
+            const setB = new Set(bToks);
+            let overlap = 0;
+            setA.forEach(w => {
+                if (setB.has(w)) {
+                    overlap += 1;
+                } else if (w.length >= 3) {
+                    // Partial stem match — common in Hebrew conjugations
+                    for (const bw of setB) {
+                        if (bw.length >= 3 && (bw.includes(w) || w.includes(bw))) {
+                            overlap += 0.55;
+                            break;
+                        }
+                    }
+                }
+            });
+            const union = setA.size + setB.size - overlap;
+            return union > 0 ? overlap / union : 0;
+        }
+
+        const SEMANTIC_THRESHOLD = 0.12;
+
+        function matchPattern150(text) {
+            if (!patterns150) return null;
+            const inputToks = tokenize(text);
+            if (!inputToks.length) return null;
+
+            let best = null, bestScore = 0;
+
+            patterns150.forEach(p => {
+                // Score against each example sentence individually — take the best match
+                let patternBest = 0;
+                p.example_sentences.forEach(ex => {
+                    const s = tokenOverlapScore(inputToks, tokenize(ex));
+                    if (s > patternBest) patternBest = s;
+                });
+                if (patternBest > bestScore) { bestScore = patternBest; best = p; }
+            });
+
+            console.log('Semantic score:', bestScore.toFixed(3), best ? best.id : 'none');
+            return bestScore >= SEMANTIC_THRESHOLD ? best : null;
+        }
+
+        function onManualInput() {
+            // Deselect chip if user edits text away from the entry point sentence
+            if (selectedEntryPoint &&
+                document.getElementById('analysisInput').value !== selectedEntryPoint.opening_sentence) {
+                selectedEntryPoint = null;
+                document.querySelectorAll('.entry-chip').forEach(b => b.classList.remove('selected'));
+            }
+        }
+
+        function selectEntryPoint(id) {
+            selectedEntryPoint = entryPoints.find(ep => ep.id === id) || null;
+            if (!selectedEntryPoint) return;
+            // Highlight selected chip
+            document.querySelectorAll('.entry-chip').forEach(btn => {
+                btn.classList.toggle('selected', btn.dataset.id === id);
+            });
+            document.getElementById('analysisInput').value = selectedEntryPoint.opening_sentence;
+        }
+
+        function analyzeSentence() {
+            const btn = document.querySelector('.input-section button');
+            const result = document.getElementById('analysisResult');
+
+            try {
+                const text = document.getElementById('analysisInput').value.trim();
+                if (!text) { result.innerHTML = ''; return; }
+
+                if (allSentences === null) {
+                    result.innerHTML = '<div class="info-item">הנתונים עדיין בטעינה, נסה שוב בעוד רגע</div>';
+                    return;
+                }
+
+                btn.textContent = 'מנתח...';
+                btn.disabled = true;
+
+                let matchData = null;
+
+                // 1. Selected entry point (exact)
+                if (selectedEntryPoint && selectedEntryPoint.opening_sentence === text) {
+                    const ep = selectedEntryPoint;
+                    matchData = {
+                        text: ep.opening_sentence,
+                        related_pattern_family: ep.pattern_family,
+                        emotion: ep.emotion, limiting_belief: ep.limiting_belief,
+                        helpful_sentence: ep.helpful_sentence, feature: 'emotion',
+                        _reflection: ep.reflection, _bridge: ep.bridge_sentence,
+                        _balanced_trait: ep.balanced_trait, _followup_q: ep.followup_question
+                    };
+                } else {
+                    document.querySelectorAll('.entry-chip').forEach(b => b.classList.remove('selected'));
+                    selectedEntryPoint = null;
+
+                    // 2. Entry point word-match
+                    const epMatch = matchEntryPoint(text);
+                    if (epMatch) {
+                        selectedEntryPoint = epMatch;
+                        document.querySelectorAll('.entry-chip').forEach(b => {
+                            b.classList.toggle('selected', b.dataset.id === epMatch.id);
+                        });
+                        matchData = {
+                            text: epMatch.opening_sentence,
+                            related_pattern_family: epMatch.pattern_family,
+                            emotion: epMatch.emotion, limiting_belief: epMatch.limiting_belief,
+                            helpful_sentence: epMatch.helpful_sentence, feature: 'emotion',
+                            _reflection: epMatch.reflection, _bridge: epMatch.bridge_sentence,
+                            _balanced_trait: epMatch.balanced_trait, _followup_q: epMatch.followup_question
+                        };
+                    } else {
+                        // 3. Match against 150 thought patterns
+                        const p150 = matchPattern150(text);
+                        if (p150) {
+                            matchData = {
+                                _from150: true,
+                                pattern: p150,
+                                trait: traitsById[p150.id],
+                                hs:    helpfulById[p150.id],
+                                fq:    followupById[p150.id],
+                                text,
+                                related_pattern_family: CAT_HE[p150.category] || p150.category,
+                                emotion: EMOTION_HE[p150.emotion] || p150.emotion,
+                                limiting_belief: p150.limiting_belief,
+                                helpful_sentence: helpfulById[p150.id] ? helpfulById[p150.id].helpful_sentence : '',
+                                feature: 'emotion'
+                            };
+                            console.log('Matched pattern150:', p150.id);
+                        } else {
+                            // 4. Fallback: user_sentences word-match
+                            const inputWords = text.split(/\s+/).filter(Boolean);
+                            let bestScore = 0;
+                            allSentences.forEach(s => {
+                                if (!s.text) return;
+                                const sw = s.text.split(/\s+/).filter(Boolean);
+                                let score = 0;
+                                inputWords.forEach(w => {
+                                    if (sw.some(pw => pw.includes(w) || w.includes(pw))) score++;
+                                });
+                                if (score > bestScore) { bestScore = score; matchData = s; }
+                            });
+                            if (!matchData || bestScore === 0) matchData = null;
+                        }
+                    }
+                }
+
+                if (!matchData) {
+                    result.innerHTML = '<div class="info-item">לא נמצאה התאמה במאגר. נסה לנסח מחדש.</div>';
+                } else {
+                    result.innerHTML = buildResultHTML(matchData, text);
+                }
+            } catch (err) {
+                console.error('Analysis error:', err);
+                result.innerHTML = `<div class="info-item" style="color:red;">שגיאה: ${err.message}</div>`;
+            } finally {
+                btn.textContent = 'התחל עם BEZEN';
+                btn.disabled = false;
+            }
+        }
+
+        function featureLabel(f) {
+            return { thought: 'מחשבה', emotion: 'רגש', behavior: 'התנהגות',
+                     sensation: 'תחושה גופנית', belief: 'אמונה', barrier: 'חסם' }[f] || f || 'ביטוי';
+        }
+
+        function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+        // ── Session initialisation ──────────────────────────────────────────────
+        function initSession(s, originalText) {
+            if (s._from150) {
+                const p = s.pattern;
+                session = {
+                    originalSentence: originalText,
+                    from150: true,
+                    patternId:        p.id,
+                    patternName:      p.pattern_name.replace(/_/g, ' '),
+                    categoryKey:      p.category,
+                    categoryHe:       CAT_HE[p.category] || p.category,
+                    emotionHe:        EMOTION_HE[p.emotion] || p.emotion,
+                    detectedEmotion:  CATEGORY_EMOTION[p.category] || 'fear',
+                    family:           CAT_HE[p.category] || p.category,
+                    emotion:          EMOTION_HE[p.emotion] || p.emotion,
+                    limiting:         p.limiting_belief,
+                    helpful:          s.hs ? s.hs.helpful_sentence : '',
+                    traitHe:          s.trait ? s.trait.balanced_trait : '',
+                    traitExplanation: s.trait ? s.trait.trait_explanation_he : '',
+                    bridgeSentence:   s.hs ? s.hs.bridge_sentence  : '',
+                    helpfulSentence:  s.hs ? s.hs.helpful_sentence : '',
+                    anchorSentence:   s.hs ? s.hs.anchor_sentence  : '',
+                    brainQuestions:   s.fq ? [s.fq.question_1, s.fq.question_2, s.fq.question_3] : [],
+                    reflection: '', bridge: s.hs ? s.hs.bridge_sentence : '',
+                    balancedTrait: s.trait ? s.trait.balanced_trait : '',
+                    turns: []
+                };
+                // Score pain axis for this detection
+                const mm = mindMapById[p.id];
+                if (mm && mm.pain_axis) {
+                    painAxisScores[mm.pain_axis] = (painAxisScores[mm.pain_axis] || 0) + 1;
+                    session.painAxis = mm.pain_axis;
+                }
+            } else {
+                session = {
+                    originalSentence: originalText,
+                    from150: false,
+                    family:        s.related_pattern_family || '',
+                    emotion:       s.emotion  || '',
+                    limiting:      s.limiting_belief  || '',
+                    helpful:       s.helpful_sentence || '',
+                    reflection:    s._reflection    || '',
+                    bridge:        s._bridge        || '',
+                    balancedTrait: s._balanced_trait|| '',
+                    followupQ:     s._followup_q    || '',
+                    brainQuestions: [],
+                    anchorSentence: '',
+                    turns: []
+                };
+            }
+            chatTurn = 0;
+        }
+
+        // ── Turn questions ──────────────────────────────────────────────────────
+        function getTurnQuestion(turn) {
+            // Brain questions take priority (turn 1 = q1, turn 2 = q2, turn 3 = q3)
+            if (session.brainQuestions && session.brainQuestions.length >= turn) {
+                return session.brainQuestions[turn - 1];
+            }
+            const f = session.family;
+            if (turn === 1) {
+                if (session.followupQ) return session.followupQ;
+                if (f.includes('השוואה') || f.includes('התקדמות')) return 'מה הדבר שהכי מכאיב לך בתחושת התקיעות הזאת?';
+                if (f.includes('דחיי') || f.includes('דחייה'))       return 'מה הכי פוגע לך ברגע שבו אתה מרגיש דחוי?';
+                if (f.includes('ספק')  || f.includes('תסמונת'))      return 'מה הקול הפנימי שלך אומר לך ברגעים כאלה?';
+                if (f.includes('פחד')  || f.includes('עומס') || f.includes('חרדה')) return 'מה הדבר שהכי מפחיד או מכביד עליך כאן?';
+                if (f.includes('בדידות'))                             return 'מתי בפעם האחרונה הרגשת שמישהו באמת מבין אותך?';
+                if (f.includes('ייאוש'))                              return 'מה עדיין חשוב לך, גם כשהכל מרגיש כבד?';
+                if (f.includes('ערך')  || f.includes('כישלון'))      return 'במה אתה הכי מחמיר עם עצמך בנושא הזה?';
+                if (f.includes('שלמות')|| f.includes('מושלם'))       return 'מה קורה בתוכך כשאתה לא עומד בסטנדרט שהצבת לעצמך?';
+                return 'מה הדבר שהכי קשה לך לקבל בתחושה הזאת?';
+            }
+            if (turn === 2) {
+                if (f.includes('השוואה') || f.includes('התקדמות')) return 'מה הייתה הנקודה שבה התחושה הזאת התחזקה הכי הרבה?';
+                if (f.includes('דחיי') || f.includes('דחייה'))      return 'אם היית יכול לדבר אל עצמך ברגע הכי קשה — מה היית אומר?';
+                if (f.includes('בדידות'))                            return 'מה היית רוצה שמישהו יאמר לך עכשיו?';
+                if (f.includes('ייאוש'))                             return 'אם משהו קטן היה יכול להשתנות מחר — מה היית בוחר?';
+                return 'האם יש רגעים שבהם אתה מרגיש אחרת? גם קצרים — מה קורה שם?';
+            }
+            // turn 3
+            return 'מה תוכל לעשות היום — גם משהו קטן מאד — שיהיה צעד לכיוון חדש?';
+        }
+
+        // ── Per-turn BEZEN responses ────────────────────────────────────────────
+        function generateTurnResponse(turn) {
+            const { family, limiting, helpful } = session;
+
+            if (turn === 1) {
+                const ref = pick(['מה שתיארת — זה כואב. ולגיטימי שזה כואב.',
+                                  'זה לא קל לשים את זה במילים, ואתה עשית את זה.',
+                                  'אני שומע כמה כבד זה.']);
+                const pat = `התחושה הזאת נוגעת לדפוס של <strong>${family}</strong>. זה לא אומר שהכאב פחות אמיתי — אבל זה אומר שיש לו הגיון, ושהוא לא אתה.`;
+                const hint = limiting
+                    ? `האמונה <em>"${limiting}"</em> היא חלק ממה שמחזיק את הדפוס הזה — ומעבר לה יש אפשרות אחרת.`
+                    : 'מה שמחזיק את הדפוס הזה הוא לא חוסר כוח — אלא הרגל חשיבה שאפשר לשנות.';
+                const q = getTurnQuestion(2);
+                return `<p>${ref}</p><p>${pat}</p><p>${hint}</p><p><strong>${q}</strong></p>`;
+            }
+
+            if (turn === 2) {
+                const val = pick([
+                    'מה שאתה מתאר מראה כמה עמוק הדפוס שורש — ובמקביל, כמה אתה מסוגל להסתכל עליו.',
+                    'זה לא מקרי שהגעת לכאן. חלק ממך מחפש שינוי.',
+                    'ההכרה שאתה יכול לראות את זה מבחוץ — היא כבר תנועה.'
+                ]);
+                const meaning = `כשאנחנו מזהים את הדפוס <strong>${family}</strong>, אנחנו מתחילים להבין שהוא לא קבוע. הוא תגובה. ותגובות אפשר לשנות.`;
+                const move = helpful
+                    ? `הכיוון הבא הוא פשוט — לא שינוי גדול, אלא הרחבה קטנה: <em>"${helpful}"</em>.`
+                    : 'הצעד הבא הוא לשים לב — מתי הדפוס מופעל, ומה קודם לו.';
+                const q = getTurnQuestion(3);
+                return `<p>${val}</p><p>${meaning}</p><p>${move}</p><p><strong>${q}</strong></p>`;
+            }
+
+            // turn 3 — no further question
+            const integ = pick([
+                'הגעת רחוק בשיחה הזאת. ממשפט אחד — לשלוש שכבות של הבנה.',
+                'שלושת התגובות שלך מראות שאתה מוכן לעבוד על זה. זה לא מובן מאליו.',
+                'מה שהיה כאן הוא לא רק ניתוח — זו תחילת שיחה שאתה יכול להמשיך עם עצמך.'
+            ]);
+            const anchor = helpful
+                ? `המשפט העוגן שאני מותיר לך: <em>"${helpful}"</em>. החזק אותו קרוב.`
+                : 'קח איתך את ההכרה הזאת: הדפוס הוא לא אתה. אתה גדול ממנו.';
+            return `<p>${integ}</p><p>${anchor}</p>`;
+        }
+
+        // ── Session summary card ────────────────────────────────────────────────
+        function buildClosingCard() {
+            // 1. Dominant pain axis
+            const dominant = getDominantAxis();
+            const axisKey  = dominant ? dominant.axis : (session.painAxis || null);
+            const axisData = axisKey ? (PAIN_AXIS_DATA[axisKey] || { label: axisKey, explain: '' }) : null;
+
+            // 2. Main balanced trait
+            const traitText = session.traitHe || session.balancedTrait || null;
+
+            // 3. Best anchor sentence
+            const anchorText = session.anchorSentence || session.helpful || 'כל שינוי מתחיל בצעד קטן אחד.';
+
+            // 4. Axis-specific small next step
+            const smallStep = (axisKey && NEXT_STEP_BY_AXIS[axisKey])
+                ? NEXT_STEP_BY_AXIS[axisKey]
+                : 'היום, פעם אחת, כשהדפוס יעלה — שים לב אליו בלי לשפוט. רק שים לב.';
+
+            // 5. Higher strength from mind map (for flow visualization)
+            const mm = session.patternId ? mindMapById[session.patternId] : null;
+            const higherStrengthKey = mm ? mm.higher_strength : null;
+            const higherStrengthHe  = higherStrengthKey ? (HIGHER_STRENGTH_HE[higherStrengthKey] || higherStrengthKey) : null;
+
+            const mindMapFlowRow = (axisData && traitText && higherStrengthHe) ? `
+                    <div class="closing-item">
+                        <div class="closing-label">מסלול השינוי</div>
+                        <div class="closing-value">
+                            <div class="mind-map-label">מציר הכאב → לתכונה מאזנת → לחוזק עליון</div>
+                            <div class="mind-map-flow">
+                                <span class="flow-node flow-node-axis">${axisData.label}</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-node flow-node-trait">${traitText}</span>
+                                <span class="flow-arrow">→</span>
+                                <span class="flow-node flow-node-strength">${higherStrengthHe}</span>
+                            </div>
+                        </div>
+                    </div>` : '';
+
+            const axisRow = axisData ? `
+                    <div class="closing-item">
+                        <div class="closing-label">ציר כאב דומיננטי</div>
+                        <div class="closing-value">
+                            <span class="summary-axis-tag">${axisData.label}</span>
+                            ${axisData.explain ? `<span class="summary-axis-explain"> — ${axisData.explain}</span>` : ''}
+                        </div>
+                    </div>` : '';
+
+            const traitRow = traitText ? `
+                    <div class="closing-item">
+                        <div class="closing-label">תכונה מאזנת</div>
+                        <div class="closing-value summary-trait">${traitText}</div>
+                    </div>` : '';
+
+            return `
+                <div class="closing-card">
+                    <h3>✨ סיכום השיחה</h3>
+                    ${axisRow}
+                    ${traitRow}
+                    ${mindMapFlowRow}
+                    <div class="closing-item">
+                        <div class="closing-label">משפט עוגן</div>
+                        <div class="closing-value anchor-sentence">"${anchorText}"</div>
+                    </div>
+                    <div class="closing-item">
+                        <div class="closing-label">צעד קטן להיום</div>
+                        <div class="closing-value summary-step">${smallStep}</div>
+                    </div>
+                </div>`;
+        }
+
+        // ── Chat bubble helpers ─────────────────────────────────────────────────
+        function addBubble(type, html) {
+            const thread = document.getElementById('chat-thread');
+            const wrap = document.createElement('div');
+            wrap.className = `bubble ${type}-bubble`;
+            wrap.innerHTML = `<div class="bubble-label">${type === 'bezen' ? 'BEZEN' : 'אתה'}</div><div>${html}</div>`;
+            thread.appendChild(wrap);
+            wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // ── Send chat message ───────────────────────────────────────────────────
+        function sendChatMessage() {
+            const btn      = document.getElementById('chatSendBtn');
+            const textarea = document.getElementById('chatInput');
+            const userText = textarea.value.trim();
+            if (!userText || !session) return;
+
+            addBubble('user', userText);
+            session.turns.push({ user: userText });
+            textarea.value = '';
+            btn.textContent = 'BEZEN מקשיב...';
+            btn.disabled = true;
+            chatTurn++;
+
+            setTimeout(() => {
+                try {
+                    const bezenText = generateTurnResponse(chatTurn);
+                    session.turns[session.turns.length - 1].bezen = bezenText;
+                    addBubble('bezen', bezenText);
+
+                    if (chatTurn >= MAX_TURNS) {
+                        // Hide input, show closing
+                        document.getElementById('chat-input-area').style.display = 'none';
+                        const thread = document.getElementById('chat-thread');
+                        thread.insertAdjacentHTML('afterend', buildClosingCard());
+                    } else {
+                        btn.textContent = 'שלח ל-BEZEN';
+                        btn.disabled = false;
+                        textarea.focus();
+                    }
+                } catch (err) {
+                    addBubble('bezen', `<span style="color:red">שגיאה: ${err.message}</span>`);
+                    btn.textContent = 'שלח ל-BEZEN';
+                    btn.disabled = false;
+                }
+            }, 700);
+        }
+
+        // ── Build result + chat section ─────────────────────────────────────────
+        function buildResultHTML(s, originalText) {
+            initSession(s, originalText);
+            if (session.from150) return buildBrain150HTML();
+
+            // Legacy display for entry points / user_sentences
+            const { family, emotion, limiting, helpful } = session;
+            const feat = featureLabel(s.feature);
+
+            const sec1 = session.reflection
+                ? session.reflection
+                : `זיהינו במשפט שלך ביטוי של <strong>${feat}</strong> השייך לדפוס של <strong>${family}</strong>${emotion ? `. התחושה המרכזית שעולה היא <strong>${emotion}</strong>` : ''}. זו תגובה אנושית מוכרת שאנשים רבים חווים.`;
+
+            const sec2 = `
+                ${family   ? `<div class="result-field"><span class="result-field-label">משפחת דפוסים:</span> ${family}</div>`   : ''}
+                ${emotion  ? `<div class="result-field"><span class="result-field-label">רגש מרכזי:</span> ${emotion}</div>`      : ''}
+                ${limiting ? `<div class="result-field"><span class="result-field-label">אמונה מגבילה:</span> ${limiting}</div>`  : ''}
+                ${helpful  ? `<div class="result-field"><span class="result-field-label">משפט מועיל:</span> <em>${helpful}</em></div>` : ''}`;
+
+            const sec3 = `זיהוי הדפוס <strong>${family}</strong> מאפשר לנו להבין שהתחושה אינה עובדה אובייקטיבית אלא תגובה רגשית שנוצרת מתוך ניסיון חיים. ברגע שמזהים את הדפוס, אפשר להתחיל לבחון אותו מחוץ למעגל שלו.`;
+
+            const sec4 = session.bridge
+                ? session.bridge
+                : limiting && helpful
+                    ? `המשפט מצביע על האמונה: <em>"${limiting}"</em>. הכיוון הבריא הוא לעבור ממנה אל: <em>"${helpful}"</em>. זה לא שינוי מיידי, אלא תהליך הדרגתי של הרחבת הפרספקטיבה.`
+                    : 'הצעד הראשון הוא פשוט להכיר בכך שהדפוס קיים. הכרה זו היא כבר תנועה קדימה.';
+
+            return `
+                <div class="result-section">
+                    <div class="result-section-title"><span class="icon">🔍</span> מה זיהינו במשפט שלך</div>
+                    <div class="result-body">${sec1}</div>
+                </div>
+                <div class="result-section">
+                    <div class="result-section-title"><span class="icon">📖</span> פירוש התוצאה</div>
+                    <div class="result-body">${sec2}</div>
+                </div>
+                <div class="result-section">
+                    <div class="result-section-title"><span class="icon">💡</span> למה זה חשוב</div>
+                    <div class="result-body">${sec3}</div>
+                </div>
+                <div class="result-section">
+                    <div class="result-section-title"><span class="icon">🌱</span> לאן זה אמור להוביל</div>
+                    <div class="result-body">${sec4}</div>
+                </div>
+                ${buildChatSection(getTurnQuestion(1))}`;
+        }
+
+        // ── Axis-specific small next steps ─────────────────────────────────────
+        const NEXT_STEP_BY_AXIS = {
+            anger:             'היום, כשתרגיש כעס עולה — עצור שלוש שניות לפני שאתה מגיב.',
+            avoidance:         'בחר משימה אחת קטנה שנמנעת ממנה — ועשה ממנה רק צעד ראשון.',
+            comparison:        'פעם אחת היום, כשהשוואה תעלה — שאל את עצמך: "מה אני צריך עכשיו?"',
+            fear:              'זהה פחד אחד קטן — ועשה פעולה קטנה אחת לכיוונו.',
+            hopelessness:      'רשום דבר אחד קטן שעדיין חשוב לך, גם אם הכל מרגיש כבד.',
+            identity_confusion:'היום, כתוב משפט אחד שמתאר מה באמת חשוב לך — לא לאחרים.',
+            lack_of_control:   'בחר דבר אחד קטן שאתה יכול לשלוט בו היום — ועשה אותו.',
+            loneliness:        'פנה לאדם אחד — גם בהודעה קצרה — ואמר לו שאתה חושב עליו.',
+            overwhelm:         'בחר שלוש משימות בלבד להיום — ושחרר את כל השאר.',
+            perfectionism:     'עשה דבר אחד ב-80% — ותן לו להיות מספיק טוב.',
+            procrastination:   'הגדר משימה אחת קטנה — ועסוק בה 10 דקות בלבד.',
+            rejection:         'היום, שתף מישהו במשהו אמיתי — גם משהו קטן.',
+            self_doubt:        'רשום שלושה דברים שעשית טוב השבוע — גם הקטנים.',
+            shame:             'דבר אל עצמך פעם אחת היום כמו שהיית מדבר לחבר טוב.'
+        };
+
+        const HIGHER_STRENGTH_HE = {
+            belonging:            'שייכות',
+            clarity:              'בהירות',
+            compassion:           'חמלה',
+            connection:           'חיבור',
+            courage:              'אומץ',
+            discipline:           'משמעת עצמית',
+            emotional_regulation: 'ויסות רגשי',
+            flexibility:          'גמישות',
+            hope:                 'תקווה',
+            perseverance:         'התמדה',
+            resilience:           'חוסן',
+            self_direction:       'כיוון עצמי',
+            self_worth:           'ערך עצמי',
+            wisdom:               'חכמה'
+        };
+
+        // ── Category-level psychological explanations ───────────────────────────
+        const CATEGORY_PSYCHOLOGY = {
+            comparison:         'השוואה לאחרים היא מנגנון שנוצר כשהערך העצמי נמדד מבחוץ. היא יוצרת תחושת תחרות מתמדת שמותירה חוסר — כי תמיד יהיה מישהו שנראה קדימה.',
+            fear_of_failure:    'הפחד מכישלון מופיע כשהזהות קשורה לתוצאות. כשהצלחה שווה ערך, כישלון נחווה כאיום על מי שאתה — לא רק על מה שעשית.',
+            self_doubt:         'ספק עצמי עמוק נוצר לרוב ממסרים שקיבלנו בעבר שאמרו שהשיפוט שלנו אינו מהימן. הוא גורם לחיפוש אישור חיצוני לפני כל צעד.',
+            rejection:          'רגישות לדחייה מגיעה מפצע שייכות עמוק — ניסיון שלימד שאהבה מותנית. הגוף לומד להיות בדריכות מתמדת מפני אובדן חיבור.',
+            procrastination:    'דחיינות היא לרוב לא עצלות — היא תגובה לחרדה. כשמשימה מאיימת על הזהות או ההצלחה, הימנעות הופכת לאסטרטגיה הגנתית.',
+            perfectionism:      'שלמותנות מגיעה מרצון בשליטה ואישור. היא מגנה מפני ביקורת על ידי ניסיון להיות מושלם — אבל גם מונעת ניסוי, סיכון, וצמיחה.',
+            loneliness:         'בדידות עמוקה היא לא תמיד היעדר אנשים — היא לרוב תחושת ניתוק פנימי. אפשר להיות בחדר מלא ועדיין לא להרגיש נראה.',
+            lack_of_control:    'תחושת חוסר שליטה מופעלת כשמתרחשים דברים שלא תיכננו. הנפש מחפשת וודאות, ובהיעדרה — חרדה ונוקשות הן תגובות טבעיות.',
+            hopelessness:       'ייאוש הוא לרוב תגובה לכאב ממושך שלא קיבל מענה. הוא מגן מפני אכזבה נוספת על ידי כיבוי הציפייה — אבל גם כובל את היכולת לדמיין שינוי.',
+            identity_confusion: 'בלבול זהות מופיע כשאנחנו לא בטוחים מי אנחנו מחוץ לתפקידים ולציפיות שקיבלנו מבחוץ. הוא יכול להרגיש כשאלות ללא תשובה.',
+            decision_paralysis: 'שיתוק החלטות מגיע מפחד לטעות, לאכזב, או לבחור "לא נכון". כשכל אפשרות נראית שוות סיכון — מערכת העצבים מקפיאה.',
+            overwhelm:          'עומס יתר נוצר כשהמערכת קולטת יותר מכפי שהיא מסוגלת לעבד. הוא אות לגבולות שצריכים הכרה — לא סימן לחולשה.',
+            shame:              'בושה היא אחת הרגשות הכבדות ביותר — היא לא "עשיתי משהו רע" אלא "אני לא בסדר". היא לרוב נלמדת, לא מולדת, וניתנת לעיבוד עם זמן ומרחב בטוח.',
+            anger:              'כעס מגיע לרוב מגבול שנחצה — גבול ערכי, אישי, או צורך שלא קיבל מענה. הוא אינו שלילי כשלעצמו; הוא מידע חשוב על מה שחשוב לך.',
+            avoidance:          'הימנעות היא תגובה טבעית לאיום — אבל כשהיא הופכת לדפוס קבוע, מה שמדלגים עליו גדל בדמיון. החזרה ההדרגתית היא הדרך.'
+        };
+
+        // ── BEZEN Explanation block ─────────────────────────────────────────────
+        function buildBezenExplanation() {
+            const { originalSentence, categoryKey, categoryHe, patternName, limiting,
+                    traitHe, traitExplanation, helpfulSentence, painAxis } = session;
+
+            // Para 1: what was detected
+            const para1 = `במשפט שלך זיהינו ביטוי של דפוס <strong>${categoryHe}</strong>`
+                + (patternName ? ` — ספציפית: <strong>${patternName}</strong>` : '')
+                + (limiting    ? `. האמונה שמניעה אותו: <em>"${limiting}"</em>.` : '.');
+
+            // Para 2: psychology of the pattern
+            const para2 = CATEGORY_PSYCHOLOGY[categoryKey]
+                || 'דפוסי חשיבה מגבילים נוצרים לרוב כתגובה לחוויות עבר. הם אינם מגדירים אותך — הם מגנים עליך, כפי שלמדת בעבר.';
+
+            // Para 3: why the balanced trait helps
+            const para3 = traitHe
+                ? `התכונה המאזנת שעולה כאן היא <strong>${traitHe}</strong>. `
+                  + (traitExplanation || 'היא מייצגת את הכיוון שאליו אפשר לנוע כשהדפוס מאבד מאחיזתו.')
+                : null;
+
+            // Para 4: the helpful sentence
+            const para4 = helpfulSentence
+                ? `המשפט המועיל: <em>"${helpfulSentence}"</em>. הוא לא מטרה — הוא כיוון. לא צריך להאמין בו עכשיו, רק לאפשר לו להיות נוכח.`
+                : null;
+
+            // Para 5: next small step
+            const stepText = painAxis ? NEXT_STEP_BY_AXIS[painAxis] : null;
+            const para5 = stepText
+                ? `הצעד הקטן הבא: ${stepText}`
+                : null;
+
+            const paras = [para1, para2, para3, para4, para5].filter(Boolean);
+
+            return `
+                <div class="result-section brain-section bezen-explanation-section">
+                    <div class="result-section-title"><span class="icon">📝</span> הסבר BEZEN</div>
+                    <div class="result-body">
+                        ${paras.map(p => `<p class="explanation-para">${p}</p>`).join('')}
+                    </div>
+                </div>`;
+        }
+
+        // ── Pain axis scoring ───────────────────────────────────────────────────
+        function getDominantAxis() {
+            let best = null, bestScore = 0;
+            Object.entries(painAxisScores).forEach(([ax, score]) => {
+                if (score > bestScore) { bestScore = score; best = ax; }
+            });
+            return best ? { axis: best, score: bestScore } : null;
+        }
+
+        // ── Brain 150 display (6 sections) ─────────────────────────────────────
+        function buildBrain150HTML() {
+            const { patternName, categoryHe, detectedEmotion, traitHe, traitExplanation,
+                    bridgeSentence, helpfulSentence, anchorSentence, brainQuestions } = session;
+
+            const formattedName = patternName
+                .split(' ')
+                .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+                .join(' ');
+
+            const q1 = brainQuestions[0] || '';
+            const q2 = brainQuestions[1] || '';
+            const q3 = brainQuestions[2] || '';
+
+            const ed = EMOTION_DATA[detectedEmotion] || EMOTION_DATA['fear'];
+
+            const dominant = getDominantAxis();
+            const axisHTML = dominant ? (() => {
+                const ad = PAIN_AXIS_DATA[dominant.axis] || { label: dominant.axis, explain: '' };
+                return `
+                <div class="result-section brain-section pain-axis-section">
+                    <div class="result-section-title"><span class="icon">🧭</span> ציר כאב דומיננטי</div>
+                    <div class="result-body">
+                        <div class="pain-axis-name">${ad.label}</div>
+                        ${ad.explain ? `<div class="pain-axis-explain">${ad.explain}</div>` : ''}
+                        ${dominant.score > 1 ? `<div class="pain-axis-count">זוהה ${dominant.score} פעמים בשיחה זו</div>` : ''}
+                    </div>
+                </div>`;
+            })() : '';
+
+            return `
+                <div class="result-section brain-section">
+                    <div class="result-section-title"><span class="icon">🔍</span> דפוס שזוהה</div>
+                    <div class="result-body">
+                        <div class="result-field"><span class="result-field-label">קטגוריה:</span> ${categoryHe}</div>
+                        <div class="result-field"><span class="result-field-label">דפוס:</span> ${formattedName}</div>
+                    </div>
+                </div>
+                ${buildBezenExplanation()}
+                <div class="result-section brain-section emotion-section" style="--emotion-color: ${ed.color}">
+                    <div class="result-section-title"><span class="icon">${ed.icon}</span> רגש מזוהה</div>
+                    <div class="result-body">
+                        <div class="emotion-badge-row">
+                            <span class="emotion-badge" style="background: ${ed.color}">${ed.label}</span>
+                        </div>
+                        <div class="emotion-context">${ed.context}</div>
+                    </div>
+                </div>
+                ${axisHTML}
+                <div class="result-section brain-section">
+                    <div class="result-section-title"><span class="icon">✨</span> תכונה מאזנת</div>
+                    <div class="result-body">
+                        <div class="brain-trait-name">${traitHe}</div>
+                        ${traitExplanation ? `<div class="brain-trait-explain">${traitExplanation}</div>` : ''}
+                    </div>
+                </div>
+                <div class="result-section brain-section">
+                    <div class="result-section-title"><span class="icon">🌉</span> משפט גשר</div>
+                    <div class="result-body">
+                        <div class="brain-bridge">"${bridgeSentence}"</div>
+                    </div>
+                </div>
+                <div class="result-section brain-section">
+                    <div class="result-section-title"><span class="icon">💪</span> משפט מחזק</div>
+                    <div class="result-body">
+                        <div class="brain-helpful">${helpfulSentence}</div>
+                        ${anchorSentence ? `<div class="anchor-sentence">"${anchorSentence}"</div>` : ''}
+                    </div>
+                </div>
+                <div class="result-section brain-section">
+                    <div class="result-section-title"><span class="icon">❓</span> שאלות להמשך</div>
+                    <div class="result-body">
+                        <div class="questions-list">
+                            ${q1 ? `<div class="question-item">${q1}</div>` : ''}
+                            ${q2 ? `<div class="question-item">${q2}</div>` : ''}
+                            ${q3 ? `<div class="question-item">${q3}</div>` : ''}
+                        </div>
+                    </div>
+                </div>
+                ${buildChatSection(q1)}`;
+        }
+
+        function buildChatSection(openingQ) {
+            return `
+                <div class="chat-section">
+                    <div class="chat-section-title">💬 שיחה עם BEZEN</div>
+                    <div class="chat-thread" id="chat-thread">
+                        <div class="bubble bezen-bubble">
+                            <div class="bubble-label">BEZEN</div>
+                            <div><strong>${openingQ}</strong></div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area" id="chat-input-area">
+                        <textarea id="chatInput" placeholder="כתוב כאן את תשובתך..."></textarea>
+                        <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">שלח ל-BEZEN</button>
+                    </div>
+                </div>`;
+        }
+
+        function renderSentences(sentences) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = '';
+            sentences.forEach(s => {
+                const card = document.createElement('div');
+                card.className = 'sentence-card';
+                card.innerHTML = `
+                    <div class="sentence-text">${s.text}</div>
+                    <div class="info-item"><div class="info-label">משפחת דפוסים</div><div class="info-value">${s.related_pattern_family || ''}</div></div>
+                    <div class="info-item"><div class="info-label">תכונה</div><div class="info-value">${s.feature || ''}</div></div>
+                    <div class="info-item"><div class="info-label">רגש</div><div class="info-value">${s.emotion || 'לא זמין'}</div></div>
+                    <div class="info-item"><div class="info-label">אמונה מגבילה</div><div class="info-value">${s.limiting_belief || 'לא זמין'}</div></div>
+                    <div class="info-item"><div class="info-label">משפט מועיל</div><div class="info-value">${s.helpful_sentence || 'לא זמין'}</div></div>`;
+                contentDiv.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadSentences);
+    </script>
+</body>
+</html>

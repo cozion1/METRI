@@ -1,0 +1,1509 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-16T11:03:34Z",
+  "total_patterns": 150,
+  "via_strengths_count": 24,
+  "virtues_count": 6,
+  "mappings": [
+    {
+      "pattern_id": "alienation_01",
+      "pain_axis": "alienation",
+      "pattern_label_he": "ניכור ובדידות פנימית",
+      "pattern_label_en": "Alienation and Inner Loneliness",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "alienation_02",
+      "pain_axis": "alienation",
+      "pattern_label_he": "תחושת זרות בתוך קבוצה",
+      "pattern_label_en": "Foreignness Within a Group",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "alienation_03",
+      "pain_axis": "alienation",
+      "pattern_label_he": "אף אחד לא מבין אותי",
+      "pattern_label_en": "Nobody Understands Me",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "alienation_04",
+      "pain_axis": "alienation",
+      "pattern_label_he": "הסתגרות כהגנה",
+      "pattern_label_en": "Withdrawal as Protection",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "alienation_05",
+      "pain_axis": "alienation",
+      "pattern_label_he": "קושי לשתף כאב",
+      "pattern_label_en": "Difficulty Sharing Pain",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "alienation_06",
+      "pain_axis": "alienation",
+      "pattern_label_he": "התרחקות גם מהטובים",
+      "pattern_label_en": "Distancing from Good People",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "alienation_07",
+      "pain_axis": "alienation",
+      "pattern_label_he": "בדידות גם בנוכחות אחרים",
+      "pattern_label_en": "Lonely Even with Others Present",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "alienation_08",
+      "pain_axis": "alienation",
+      "pattern_label_he": "חשד בסיסי כלפי קשר",
+      "pattern_label_en": "Basic Suspicion Toward Connection",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "alienation_09",
+      "pain_axis": "alienation",
+      "pattern_label_he": "תחושת אי נראות",
+      "pattern_label_en": "Feeling Invisible",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "alienation_10",
+      "pain_axis": "alienation",
+      "pattern_label_he": "ויתור על שייכות",
+      "pattern_label_en": "Giving Up on Belonging",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "anger_01",
+      "pain_axis": "anger",
+      "pattern_label_he": "כעס כבוש",
+      "pattern_label_en": "Suppressed Anger",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_02",
+      "pain_axis": "anger",
+      "pattern_label_he": "כעס מופנה פנימה",
+      "pattern_label_en": "Inward-Directed Anger",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_03",
+      "pain_axis": "anger",
+      "pattern_label_he": "פרשנות מהירה לפגיעה",
+      "pattern_label_en": "Quick Interpretation as Offense",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_04",
+      "pain_axis": "anger",
+      "pattern_label_he": "קושי לעצור לפני תגובה",
+      "pattern_label_en": "Difficulty Stopping Before Reacting",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_05",
+      "pain_axis": "anger",
+      "pattern_label_he": "כעס על עצמי במקום כאב",
+      "pattern_label_en": "Anger at Self Instead of Pain",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_06",
+      "pain_axis": "anger",
+      "pattern_label_he": "צורך לנצח בעימות",
+      "pattern_label_en": "Need to Win Conflict",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "anger_07",
+      "pain_axis": "anger",
+      "pattern_label_he": "נוקשות תחת איום",
+      "pattern_label_en": "Rigidity Under Threat",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "anger_08",
+      "pain_axis": "anger",
+      "pattern_label_he": "תחושת עוול בוערת",
+      "pattern_label_en": "Burning Sense of Injustice",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_09",
+      "pain_axis": "anger",
+      "pattern_label_he": "הטחת אשמה במקום בקשה",
+      "pattern_label_en": "Blaming Instead of Requesting",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "anger_10",
+      "pain_axis": "anger",
+      "pattern_label_he": "פיצוץ לאחר הצטברות",
+      "pattern_label_en": "Explosion After Accumulation",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "belonging_01",
+      "pain_axis": "belonging",
+      "pattern_label_he": "שייכות מערערת",
+      "pattern_label_en": "Undermined Sense of Belonging",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "belonging_02",
+      "pain_axis": "belonging",
+      "pattern_label_he": "אין לי מקום",
+      "pattern_label_en": "No Place for Me",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "belonging_03",
+      "pain_axis": "belonging",
+      "pattern_label_he": "חיפוש זהות דרך קבוצה",
+      "pattern_label_en": "Seeking Identity Through Group",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "belonging_04",
+      "pain_axis": "belonging",
+      "pattern_label_he": "פחד להיות מחוץ",
+      "pattern_label_en": "Fear of Being Outside",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "belonging_05",
+      "pain_axis": "belonging",
+      "pattern_label_he": "הסתגלות עצמית קיצונית",
+      "pattern_label_en": "Extreme Self-Adaptation",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "belonging_06",
+      "pain_axis": "belonging",
+      "pattern_label_he": "אובדן קול אישי",
+      "pattern_label_en": "Losing Personal Voice",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "belonging_07",
+      "pain_axis": "belonging",
+      "pattern_label_he": "זיוף חברתי",
+      "pattern_label_en": "Social Fakery",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "belonging_08",
+      "pain_axis": "belonging",
+      "pattern_label_he": "קנאה בשייכות של אחרים",
+      "pattern_label_en": "Envy of Others Belonging",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "belonging_09",
+      "pain_axis": "belonging",
+      "pattern_label_he": "רגישות לפערי מעמד",
+      "pattern_label_en": "Sensitivity to Status Gaps",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "belonging_10",
+      "pain_axis": "belonging",
+      "pattern_label_he": "תלות בזהות חברתית חיצונית",
+      "pattern_label_en": "Depending on External Social Identity",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "comparison_01",
+      "pain_axis": "comparison",
+      "pattern_label_he": "השוואה מכאיבה לאחרים",
+      "pattern_label_en": "Painful Social Comparison",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "comparison_02",
+      "pain_axis": "comparison",
+      "pattern_label_he": "השוואה גופנית",
+      "pattern_label_en": "Physical Appearance Comparison",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "comparison_03",
+      "pain_axis": "comparison",
+      "pattern_label_he": "תחושת פיגור מתמדת",
+      "pattern_label_en": "Constant Sense of Falling Behind",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "comparison_04",
+      "pain_axis": "comparison",
+      "pattern_label_he": "מדידת ערך לפי הישגים",
+      "pattern_label_en": "Worth Measured by Achievements",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "comparison_05",
+      "pain_axis": "comparison",
+      "pattern_label_he": "מחיקה עצמית מול הצלחת אחרים",
+      "pattern_label_en": "Self-Erasure Before Others Success",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "comparison_06",
+      "pain_axis": "comparison",
+      "pattern_label_he": "רדיפה אחר סטנדרטים לא אנושיים",
+      "pattern_label_en": "Chasing Inhuman Standards",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "comparison_07",
+      "pain_axis": "comparison",
+      "pattern_label_he": "פרשנות עצמית כנחות",
+      "pattern_label_en": "Self-Interpretation as Inferior",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "comparison_08",
+      "pain_axis": "comparison",
+      "pattern_label_he": "תלות באישור חיצוני",
+      "pattern_label_en": "Dependence on External Validation",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "comparison_09",
+      "pain_axis": "comparison",
+      "pattern_label_he": "בושה על הקצב האישי",
+      "pattern_label_en": "Shame About Personal Pace",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "comparison_10",
+      "pain_axis": "comparison",
+      "pattern_label_he": "חוסר יכולת ליהנות ממה שיש",
+      "pattern_label_en": "Inability to Enjoy What I Have",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "control_01",
+      "pain_axis": "control",
+      "pattern_label_he": "צורך בשליטה מוחלטת",
+      "pattern_label_en": "Need for Total Control",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "control_02",
+      "pain_axis": "control",
+      "pattern_label_he": "פחד מאובדן אחיזה",
+      "pattern_label_en": "Fear of Losing Grip",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_03",
+      "pain_axis": "control",
+      "pattern_label_he": "קושי לסמוך על התהליך",
+      "pattern_label_en": "Difficulty Trusting the Process",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_04",
+      "pain_axis": "control",
+      "pattern_label_he": "מיקרו-ניהול עצמי ואחרים",
+      "pattern_label_en": "Micro-managing Self and Others",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_05",
+      "pain_axis": "control",
+      "pattern_label_he": "מתח פנימי כשדברים משתנים",
+      "pattern_label_en": "Internal Tension When Things Change",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_06",
+      "pain_axis": "control",
+      "pattern_label_he": "חוסר גמישות קוגניטיבית",
+      "pattern_label_en": "Lack of Cognitive Flexibility",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_07",
+      "pain_axis": "control",
+      "pattern_label_he": "התפרקות מול שיבוש קטן",
+      "pattern_label_en": "Falling Apart over Small Disruption",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "control_08",
+      "pain_axis": "control",
+      "pattern_label_he": "קושי להרפות כשעייף",
+      "pattern_label_en": "Difficulty Letting Go When Tired",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "fairness",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "control_09",
+      "pain_axis": "control",
+      "pattern_label_he": "שליטה ברגש במקום לפגוש אותו",
+      "pattern_label_en": "Controlling Emotion Instead of Meeting It",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "control_10",
+      "pain_axis": "control",
+      "pattern_label_he": "זהות הנשענת על שליטה",
+      "pattern_label_en": "Identity Resting on Control",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "failure_01",
+      "pain_axis": "failure",
+      "pattern_label_he": "פחד מכישלון",
+      "pattern_label_en": "Fear of Failure",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "failure_02",
+      "pain_axis": "failure",
+      "pattern_label_he": "זהות של כישלון",
+      "pattern_label_en": "Failure Identity",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "failure_03",
+      "pain_axis": "failure",
+      "pattern_label_he": "תיוג עצמי ככישלון",
+      "pattern_label_en": "Labeling Self as Failure",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "failure_04",
+      "pain_axis": "failure",
+      "pattern_label_he": "ראיית טעות כהתרסקות",
+      "pattern_label_en": "Seeing Mistake as Crash",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "failure_05",
+      "pain_axis": "failure",
+      "pattern_label_he": "חוסר יכולת להתאושש לאחר כישלון",
+      "pattern_label_en": "Inability to Recover After Failure",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "failure_06",
+      "pain_axis": "failure",
+      "pattern_label_he": "פרפקציוניזם משתק",
+      "pattern_label_en": "Paralyzing Perfectionism",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "failure_07",
+      "pain_axis": "failure",
+      "pattern_label_he": "בושה לאחר ביצוע חלש",
+      "pattern_label_en": "Shame After Weak Performance",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "failure_08",
+      "pain_axis": "failure",
+      "pattern_label_he": "ויתור על מטרות גדולות",
+      "pattern_label_en": "Giving Up on Big Goals",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "failure_09",
+      "pain_axis": "failure",
+      "pattern_label_he": "כיווץ חלומות כדי להימנע מאכזבה",
+      "pattern_label_en": "Shrinking Dreams to Avoid Disappointment",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "failure_10",
+      "pain_axis": "failure",
+      "pattern_label_he": "הזדהות עם כישלונות עבר",
+      "pattern_label_en": "Identifying with Past Failures",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "fear_01",
+      "pain_axis": "fear",
+      "pattern_label_he": "פחד מהעתיד",
+      "pattern_label_en": "Fear of the Future",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "fear_02",
+      "pain_axis": "fear",
+      "pattern_label_he": "ציפייה לאסון",
+      "pattern_label_en": "Anticipating Disaster",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "fear_03",
+      "pain_axis": "fear",
+      "pattern_label_he": "פחד שטעות תהרוס הכול",
+      "pattern_label_en": "Fear Mistake Will Ruin Everything",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "fear_04",
+      "pain_axis": "fear",
+      "pattern_label_he": "הימנעות מסיכון רגשי",
+      "pattern_label_en": "Avoiding Emotional Risk",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "fear_05",
+      "pain_axis": "fear",
+      "pattern_label_he": "חרדה מהלא נודע",
+      "pattern_label_en": "Anxiety of the Unknown",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "fear_06",
+      "pain_axis": "fear",
+      "pattern_label_he": "דריכות יתר לפני צעד חדש",
+      "pattern_label_en": "Hyper-Alertness Before New Step",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "fear_07",
+      "pain_axis": "fear",
+      "pattern_label_he": "הצפה בתרחישים שליליים",
+      "pattern_label_en": "Flooding with Negative Scenarios",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "fear_08",
+      "pain_axis": "fear",
+      "pattern_label_he": "צורך להבטיח שליטה מלאה",
+      "pattern_label_en": "Need to Guarantee Full Control",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "fear_09",
+      "pain_axis": "fear",
+      "pattern_label_he": "פחד מתקיעות נצחית",
+      "pattern_label_en": "Fear of Eternal Stagnation",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "fear_10",
+      "pain_axis": "fear",
+      "pattern_label_he": "קיפאון מול סיכון קטן",
+      "pattern_label_en": "Freezing Before Small Risk",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "helplessness_01",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "חוסר אונים נרכש",
+      "pattern_label_en": "Learned Helplessness",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "helplessness_02",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "אמונה שכלום לא ישתנה",
+      "pattern_label_en": "Belief Nothing Will Change",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "helplessness_03",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "ויתור מוקדם",
+      "pattern_label_en": "Giving Up Early",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "helplessness_04",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "תלות בהצלה חיצונית",
+      "pattern_label_en": "Depending on Others to Rescue",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "helplessness_05",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "תחושת נעילה מוחלטת",
+      "pattern_label_en": "Total Lock-Up Feeling",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "helplessness_06",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "אמונה שאין לי השפעה",
+      "pattern_label_en": "Believing I Have No Influence",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "helplessness_07",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "קיפאון מול בעיה חוזרת",
+      "pattern_label_en": "Freezing Before Recurring Problem",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "helplessness_08",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "תשישות המתחפשת לייאוש",
+      "pattern_label_en": "Exhaustion Disguised as Despair",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "helplessness_09",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "ויתור לפני הניסיון",
+      "pattern_label_en": "Giving Up Before Trying",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "helplessness_10",
+      "pain_axis": "helplessness",
+      "pattern_label_he": "פרשנות של קושי כסוף",
+      "pattern_label_en": "Interpreting Difficulty as the End",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "loneliness_01",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "בדידות כרונית",
+      "pattern_label_en": "Chronic Loneliness",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "loneliness_02",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "בדידות בתוך קשר",
+      "pattern_label_en": "Loneliness Within a Relationship",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "loneliness_03",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "ניתוק ממעגלים חברתיים",
+      "pattern_label_en": "Disconnection from Social Circles",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "loneliness_04",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "התרגלות לבדידות כהגנה",
+      "pattern_label_en": "Habituation to Loneliness as Protection",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "loneliness_05",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "אמונה שאף אחד לא יבין",
+      "pattern_label_en": "Belief No One Will Understand",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "leadership",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "loneliness_06",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "געגוע לקשר שלא מתממש",
+      "pattern_label_en": "Longing for Connection That Doesnt Materialize",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "loneliness_07",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "הימנעות מיוזמה לקשר",
+      "pattern_label_en": "Avoiding Initiative for Connection",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "loneliness_08",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "חוויה של ריק חברתי",
+      "pattern_label_en": "Experience of Social Void",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "loneliness_09",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "קנאה בחיבור של אחרים",
+      "pattern_label_en": "Envy of Others Connection",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "loneliness_10",
+      "pain_axis": "loneliness",
+      "pattern_label_he": "פרשנות של בדידות כחוסר ערך",
+      "pattern_label_en": "Interpreting Loneliness as Worthlessness",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "overwhelm_01",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "הצפה מוחלטת",
+      "pattern_label_en": "Total Overwhelm",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "overwhelm_02",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "עומס מנטלי בלתי נסבל",
+      "pattern_label_en": "Unbearable Mental Load",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "overwhelm_03",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "חוסר יכולת לתעדף",
+      "pattern_label_en": "Inability to Prioritize",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "overwhelm_04",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "תחושת קריסה ממשמשת",
+      "pattern_label_en": "Sense of Impending Collapse",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "overwhelm_05",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "הימנעות מהתמודדות בגלל עומס",
+      "pattern_label_en": "Avoiding Tasks Due to Overload",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "overwhelm_06",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "חנק מהתחייבויות",
+      "pattern_label_en": "Suffocating from Obligations",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "overwhelm_07",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "בלבול בין דחוף לחשוב",
+      "pattern_label_en": "Confusing Urgent with Important",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "overwhelm_08",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "קיפאון מול רשימות ארוכות",
+      "pattern_label_en": "Freezing Before Long Lists",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "overwhelm_09",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "כעס על עצמי שלא מספיק",
+      "pattern_label_en": "Anger at Self for Not Being Enough",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "overwhelm_10",
+      "pain_axis": "overwhelm",
+      "pattern_label_he": "איבוד כיוון בתוך העומס",
+      "pattern_label_en": "Losing Direction in Load",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "rejection_01",
+      "pain_axis": "rejection",
+      "pattern_label_he": "תחושת דחייה אישית",
+      "pattern_label_en": "Personal Rejection Feeling",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "rejection_02",
+      "pain_axis": "rejection",
+      "pattern_label_he": "דחייה רומנטית",
+      "pattern_label_en": "Romantic Rejection",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "rejection_03",
+      "pain_axis": "rejection",
+      "pattern_label_he": "חרדת נטישה נסתרת",
+      "pattern_label_en": "Hidden Abandonment Anxiety",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_04",
+      "pain_axis": "rejection",
+      "pattern_label_he": "רגישות יתר לאי הסכמה",
+      "pattern_label_en": "Over-Sensitivity to Disagreement",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_05",
+      "pain_axis": "rejection",
+      "pattern_label_he": "ציפייה לדחייה מראש",
+      "pattern_label_en": "Anticipating Rejection",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_06",
+      "pain_axis": "rejection",
+      "pattern_label_he": "כיווץ אחרי מסר קריר",
+      "pattern_label_en": "Shrinking After Cold Message",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_07",
+      "pain_axis": "rejection",
+      "pattern_label_he": "נסיגה לפני שנדחים",
+      "pattern_label_en": "Withdrawing Before Being Rejected",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_08",
+      "pain_axis": "rejection",
+      "pattern_label_he": "פרשנות של ביקורת כדחייה",
+      "pattern_label_en": "Interpreting Criticism as Rejection",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "rejection_09",
+      "pain_axis": "rejection",
+      "pattern_label_he": "חיפוש אישור כדי להימנע מדחייה",
+      "pattern_label_en": "Seeking Approval to Avoid Rejection",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "rejection_10",
+      "pain_axis": "rejection",
+      "pattern_label_he": "תחושת לא-רצוי",
+      "pattern_label_en": "Feeling Unwanted",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "teamwork",
+      "virtue_id": "justice"
+    },
+    {
+      "pattern_id": "self_doubt_01",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "ספק עצמי משתק",
+      "pattern_label_en": "Paralyzing Self-Doubt",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "self_doubt_02",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "תסמונת המתחזה",
+      "pattern_label_en": "Impostor Syndrome",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "self_doubt_03",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "ספק לגבי הצלחות עבר",
+      "pattern_label_en": "Doubting Past Successes",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "self_doubt_04",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "תחושה שאין בי את זה",
+      "pattern_label_en": "Feeling of Not Having What It Takes",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "bravery",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "self_doubt_05",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "צורך להיות מוכן לגמרי",
+      "pattern_label_en": "Need to Be Fully Ready",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "perseverance",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "self_doubt_06",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "פחד מחשיפה",
+      "pattern_label_en": "Fear of Exposure",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "self_doubt_07",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "דחיית החלטות",
+      "pattern_label_en": "Postponing Decisions",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "self_doubt_08",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "חוסר אמון בשיקול הדעת העצמי",
+      "pattern_label_en": "Distrusting Own Judgment",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "self_doubt_09",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "דחיית הצלחות כמזל",
+      "pattern_label_en": "Dismissing Achievements as Luck",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "self_regulation",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "self_doubt_10",
+      "pain_axis": "self_doubt",
+      "pattern_label_he": "שיתוק מול בחירות",
+      "pattern_label_en": "Paralysis Before Choices",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "shame_01",
+      "pain_axis": "shame",
+      "pattern_label_he": "בושה מכווצת",
+      "pattern_label_en": "Shrinking Shame",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "shame_02",
+      "pain_axis": "shame",
+      "pattern_label_he": "תחושת פגם פנימי",
+      "pattern_label_en": "Internal Defect Feeling",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "shame_03",
+      "pain_axis": "shame",
+      "pattern_label_he": "הסתרה עצמית מפני מבוכה",
+      "pattern_label_en": "Self-Concealment from Embarrassment",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "shame_04",
+      "pain_axis": "shame",
+      "pattern_label_he": "הלקאה עצמית לאחר טעות",
+      "pattern_label_en": "Self-Flagellation After Mistake",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "shame_05",
+      "pain_axis": "shame",
+      "pattern_label_he": "קושי להרים עיניים",
+      "pattern_label_en": "Difficulty Looking People in Eyes",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "forgiveness",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "shame_06",
+      "pain_axis": "shame",
+      "pattern_label_he": "הזדהות מלאה עם כישלון",
+      "pattern_label_en": "Full Identification with Failure",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "shame_07",
+      "pain_axis": "shame",
+      "pattern_label_he": "פחד מחשיפת חולשה",
+      "pattern_label_en": "Fear of Exposing Weakness",
+      "bezen_trait_id": "emotional_resilience",
+      "bezen_strength_id": "relational_security",
+      "via_strength_id": "humility",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "shame_08",
+      "pain_axis": "shame",
+      "pattern_label_he": "דחף להיעלם לאחר מבוכה",
+      "pattern_label_en": "Urge to Disappear After Embarrassment",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "shame_09",
+      "pain_axis": "shame",
+      "pattern_label_he": "תיוג עצמי כפגום",
+      "pattern_label_en": "Labeling Self as Flawed",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "shame_10",
+      "pain_axis": "shame",
+      "pattern_label_he": "קיפאון חברתי מבושה",
+      "pattern_label_en": "Social Freeze from Shame",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "social_intelligence",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "uncertainty_01",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "אי סבילות לאי ודאות",
+      "pattern_label_en": "Intolerance of Uncertainty",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_02",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "צורך לדעת הכל מראש",
+      "pattern_label_en": "Need to Know Everything First",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "curiosity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_03",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "חרדה ללא תשובה מיידית",
+      "pattern_label_en": "Anxiety Without Immediate Answer",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "judgment",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_04",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "קושי לבחור ללא ערובה",
+      "pattern_label_en": "Difficulty Choosing Without Guarantee",
+      "bezen_trait_id": "inner_confidence",
+      "bezen_strength_id": "courage",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "uncertainty_05",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "שיתוק מול עמימות",
+      "pattern_label_en": "Paralysis Facing Ambiguity",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "prudence",
+      "virtue_id": "temperance"
+    },
+    {
+      "pattern_id": "uncertainty_06",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "חיפוש ודאות דרך שליטה",
+      "pattern_label_en": "Seeking Certainty via Excessive Control",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "love_of_learning",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_07",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "פרשנות של עמימות כאיום",
+      "pattern_label_en": "Interpreting Ambiguity as Threat",
+      "bezen_trait_id": "grounded_hope",
+      "bezen_strength_id": "hope",
+      "via_strength_id": "perspective",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_08",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "עומס מחשבתי מהתלבטות",
+      "pattern_label_en": "Mental Overload from Deliberation",
+      "bezen_trait_id": "stepwise_focus",
+      "bezen_strength_id": "self_regulation",
+      "via_strength_id": "creativity",
+      "virtue_id": "wisdom"
+    },
+    {
+      "pattern_id": "uncertainty_09",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "עיכוב עד למידע מושלם",
+      "pattern_label_en": "Delaying Until Perfect Information",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "uncertainty_10",
+      "pain_axis": "uncertainty",
+      "pattern_label_he": "הימנעות מפתיחות מחוסר בהירות",
+      "pattern_label_en": "Avoiding Openness from Lack of Clarity",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "humor",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_01",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "תחושת חוסר ערך פנימי",
+      "pattern_label_en": "Inner Worthlessness",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "honesty",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "worthlessness_02",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "תחושת מיותר",
+      "pattern_label_en": "Sense of Redundancy",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "zest",
+      "virtue_id": "courage"
+    },
+    {
+      "pattern_id": "worthlessness_03",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "מחיקת נוכחות עצמית",
+      "pattern_label_en": "Erasing Own Presence",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "kindness",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "worthlessness_04",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "אמונה שאין לי מה לתת",
+      "pattern_label_en": "Belief of Nothing to Offer",
+      "bezen_trait_id": "active_agency",
+      "bezen_strength_id": "empowerment",
+      "via_strength_id": "love",
+      "virtue_id": "humanity"
+    },
+    {
+      "pattern_id": "worthlessness_05",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "ערך המבוסס על הישגים",
+      "pattern_label_en": "Worth Based on Achievement",
+      "bezen_trait_id": "self_acceptance",
+      "bezen_strength_id": "self_worth",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_06",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "תחושת ריקנות זהותית",
+      "pattern_label_en": "Sense of Identity Emptiness",
+      "bezen_trait_id": "secure_belonging",
+      "bezen_strength_id": "relational_identity",
+      "via_strength_id": "gratitude",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_07",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "אמונה שאני נטל",
+      "pattern_label_en": "Believing I Am a Burden",
+      "bezen_trait_id": "self_compassion",
+      "bezen_strength_id": "dignity",
+      "via_strength_id": "hope",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_08",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "זלזול בצרכים עצמיים",
+      "pattern_label_en": "Dismissing Own Needs",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_09",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "קושי בקבלת טוב מאחרים",
+      "pattern_label_en": "Difficulty Receiving Goodness",
+      "bezen_trait_id": "relational_openness",
+      "bezen_strength_id": "connection",
+      "via_strength_id": "appreciation_of_beauty",
+      "virtue_id": "transcendence"
+    },
+    {
+      "pattern_id": "worthlessness_10",
+      "pain_axis": "worthlessness",
+      "pattern_label_he": "ביטול כל תרומה עצמית",
+      "pattern_label_en": "Canceling Every Contribution",
+      "bezen_trait_id": "self_value_recognition",
+      "bezen_strength_id": "human_value",
+      "via_strength_id": "spirituality",
+      "virtue_id": "transcendence"
+    }
+  ]
+}

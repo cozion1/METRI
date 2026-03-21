@@ -1,0 +1,1502 @@
+[
+  {
+    "pattern_id": "pattern_001",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "קצב עצמי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "השוואה מתמדת וחוסר שקט פנימי",
+    "excess_side": "שאננות שמאטה צמיחה",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_002",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "השראה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "קנאה שמעכבת פעולה",
+    "excess_side": "השראה שמחליפה מחויבות",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_003",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "deficiency_side": "דחיית עצמי ותנאים לאהבה עצמית",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_004",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "מוכנות",
+    "higher_strength": "hope",
+    "deficiency_side": "אי-נכונות ופסיביות",
+    "excess_side": "מוכנות שמונעת נוכחות",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_005",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "סקרנות",
+    "higher_strength": "wisdom",
+    "deficiency_side": "פחד מהלא נודע",
+    "excess_side": "סקרנות שמונעת הבנה עמוקה",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_006",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "סיפוק פנימי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "חוסר שביעות רצון מתמידה",
+    "excess_side": "שביעות רצון שמונעת שאיפה",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_007",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "מכוונות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "תפקוד ללא כיוון",
+    "excess_side": "מטרה מוגזמת שמונעת גמישות",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_008",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "הערכה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "הכרת תודה מינימלית",
+    "excess_side": "הערכה שמסתירה קושי",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_009",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "הכרת תודה",
+    "higher_strength": "hope",
+    "deficiency_side": "חוסר הכרת תודה וקיצור ראייה",
+    "excess_side": "הכרת תודה שמונעת ביקורת",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_010",
+    "pain_axis": "comparison",
+    "core_belief": "הערך שלי נקבע לפי מיקומי ביחס לאחרים — לא לפי מי שאני",
+    "balanced_trait": "אבחנה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "אי-הבחנה בין מקורות",
+    "excess_side": "ביקורתיות שמונעת פתיחות",
+    "mind_movement_he": "מתמדד ביחס לאחרים → מתמקד בהתקדמות שלי ביחס לעצמי"
+  },
+  {
+    "pattern_id": "pattern_011",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "deficiency_side": "שיתוק מפחד ומניעה עצמית",
+    "excess_side": "פזיזות חסרת שיקול דעת",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_012",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "אותנטיות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "מסכה ותפקוד מזויף",
+    "excess_side": "קשיחות וחוסר גמישות חברתית",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_013",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "נאמנות לעצמי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "ציות לאחרים על חשבון עצמך",
+    "excess_side": "התנתקות מוגזמת מהסביבה",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_014",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "שייכות ללא תנאים",
+    "higher_strength": "belonging",
+    "deficiency_side": "בדידות ופחד מחיבור",
+    "excess_side": "תלות בשייכות שמונעת עצמאות",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_015",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "חוסן",
+    "higher_strength": "resilience",
+    "deficiency_side": "שבירה מהירה בפני קשיים",
+    "excess_side": "קשיחות שמונעת עיבוד",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_016",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "יושר אינטלקטואלי",
+    "higher_strength": "wisdom",
+    "deficiency_side": "הסתרת בלבול מחרדת שיפוט",
+    "excess_side": "ביקורת עצמית מוגזמת",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_017",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "יציבות פנימית",
+    "higher_strength": "resilience",
+    "deficiency_side": "תגובתיות וחרדה סביבתית",
+    "excess_side": "נוקשות שמונעת הסתגלות",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_018",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "מחויבות",
+    "higher_strength": "discipline",
+    "deficiency_side": "הימנעות ממחויבות מפחד",
+    "excess_side": "מחויבות כפייתית שמתשת",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_019",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "deficiency_side": "שריון רגשי וסגירות",
+    "excess_side": "חשיפה עצמית ללא גבולות",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_020",
+    "pain_axis": "fear",
+    "core_belief": "כישלון מוכיח שאינני ראוי — ואז כולם יראו שאני לא מספיק",
+    "balanced_trait": "תנועה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "קיפאון ותקיעות",
+    "excess_side": "תנועה ללא כיוון ומטרה",
+    "mind_movement_he": "נמנע מניסיון מפחד → מתקרב בצעד קטן למרות הפחד"
+  },
+  {
+    "pattern_id": "pattern_021",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "זיהוי עצמי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "ביטול עצמי ואי-ראיית ערכים",
+    "excess_side": "גאווה שמונעת צמיחה",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_022",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "אמון",
+    "higher_strength": "hope",
+    "deficiency_side": "חרדה ושליטה מוגזמת",
+    "excess_side": "תמימות שמונעת שיקול דעת",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_023",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "ביקורת עצמית קשה וחסרת רחמים",
+    "excess_side": "סבלנות עצמית שמונעת שינוי",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_024",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "יכולת",
+    "higher_strength": "self_worth",
+    "deficiency_side": "אי-הכרה בכוחות עצמיים",
+    "excess_side": "ביטחון מופרז ללא עיגון",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_025",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "ראויות",
+    "higher_strength": "self_worth",
+    "deficiency_side": "תחושת חוסר ראויות",
+    "excess_side": "זכאות מנותקת מהשקעה",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_026",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "ביטחון אינטלקטואלי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "הסתרת בלבול מפחד שיפוט",
+    "excess_side": "ביטחון שמונע למידה",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_027",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "נינוחות חברתית",
+    "higher_strength": "connection",
+    "deficiency_side": "עמידות ולחץ חברתי מתמשך",
+    "excess_side": "קלות חברתית שמונעת עומק",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_028",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "הכרה",
+    "higher_strength": "self_worth",
+    "deficiency_side": "ביטול הישגים עצמיים",
+    "excess_side": "תלות בחיצוני להרגשת ערך",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_029",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "חשיבת צמיחה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "ראיית יכולות כקבועות",
+    "excess_side": "אופטימיות ללא יסוד מציאותי",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_030",
+    "pain_axis": "self_doubt",
+    "core_belief": "יש בי פגם יסודי שאחרים ימצאו בסופו של דבר",
+    "balanced_trait": "סמכות פנימית",
+    "higher_strength": "self_direction",
+    "deficiency_side": "תלות בחיצוני ואיבוד כיוון",
+    "excess_side": "סמכות עצמית נוקשה שמנתקת",
+    "mind_movement_he": "מאמין לקול הביקורת הפנימי → מזהה ומאמת את הכוחות שלי"
+  },
+  {
+    "pattern_id": "pattern_031",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "סגירות וחשש מחדש",
+    "excess_side": "פתיחות ללא גבולות שמבלבלת",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_032",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "ויסות רגשי",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "הצפה רגשית ותגובתיות",
+    "excess_side": "דיכוי רגשות וניתוק",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_033",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "ערך עצמי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "חוסר ערך עצמי ותלות בחיצוני",
+    "excess_side": "הגנה מוגזמת שמונעת ביקורת",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_034",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "deficiency_side": "בדידות ותחושת ניתוק",
+    "excess_side": "איבוד עצמי בתוך הקבוצה",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_035",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "deficiency_side": "בדידות ותחושת ניתוק",
+    "excess_side": "איבוד עצמי בתוך הקבוצה",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_036",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "התמדה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "נטישה מהירה בפני קושי",
+    "excess_side": "עקשנות ללא גמישות",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_037",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "עריכה עצמית",
+    "higher_strength": "self_direction",
+    "deficiency_side": "ויתור על צרכים ושתיקה",
+    "excess_side": "עמידה על עצמך שפוגעת בקשרים",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_038",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "ראיית נקודות מבט",
+    "higher_strength": "wisdom",
+    "deficiency_side": "ראיית מציאות חלקית וחד-ממדית",
+    "excess_side": "אמפתיה מוגזמת שמונעת עמדה",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_039",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "ביקורת עצמית קשה וחסרת רחמים",
+    "excess_side": "סבלנות עצמית שמונעת שינוי",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_040",
+    "pain_axis": "rejection",
+    "core_belief": "אם יתקרבו אליי באמת — הם ידחו אותי, כי אינני ראוי לאהבה",
+    "balanced_trait": "חשיבה מורכבת",
+    "higher_strength": "wisdom",
+    "deficiency_side": "חשיבה דיכוטומית שחור-לבן",
+    "excess_side": "פרשנות-יתר שמאחרת החלטה",
+    "mind_movement_he": "נמנע מחיבור כדי לא להיפגע → פותח לחיבור תוך שמירה על ערך עצמי"
+  },
+  {
+    "pattern_id": "pattern_041",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "משמעת",
+    "higher_strength": "discipline",
+    "deficiency_side": "אי-עמידה בהתחייבויות",
+    "excess_side": "קפדנות מוגזמת שמוציאה אנרגיה",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_042",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "פעולה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "שיתוק מניתוח-יתר",
+    "excess_side": "פעולה ללא תכנון",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_043",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "פעולה הדרגתית",
+    "higher_strength": "perseverance",
+    "deficiency_side": "המתנה לרגע הנכון שלא מגיע",
+    "excess_side": "צעדים ללא כיוון כולל",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_044",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "deficiency_side": "שיתוק מפחד ומניעה עצמית",
+    "excess_side": "פזיזות חסרת שיקול דעת",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_045",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "נחרצות בהחלטות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "שיתוק החלטות",
+    "excess_side": "נחרצות ללא שיקול מספיק",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_046",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "עקביות",
+    "higher_strength": "discipline",
+    "deficiency_side": "התנהגות שרירותית ולא עקבית",
+    "excess_side": "עקביות שמונעת הסתגלות",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_047",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "מיקוד",
+    "higher_strength": "discipline",
+    "deficiency_side": "פיזור קשב ואי-עשייה",
+    "excess_side": "מיקוד שמונע ראיית תמונה רחבה",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_048",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "תמיכה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "ביקורת עצמית ללא חמלה",
+    "excess_side": "הגנה עצמית שמונעת גדילה",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_049",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "יוזמה קדימה",
+    "higher_strength": "discipline",
+    "deficiency_side": "פסיביות ותגובתיות",
+    "excess_side": "יוזמה מוגזמת שמכלה אנרגיה",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_050",
+    "pain_axis": "procrastination",
+    "core_belief": "אם אתחיל ולא אצליח, זה יוכיח שאינני מסוגל",
+    "balanced_trait": "עמידה בהתחייבות",
+    "higher_strength": "discipline",
+    "deficiency_side": "עזיבה לפני הסיום",
+    "excess_side": "השלמה כפייתית שמתעלמת מגבולות",
+    "mind_movement_he": "מחכה לרגע המושלם → מתחיל בצעד אחד גם ללא תנאים"
+  },
+  {
+    "pattern_id": "pattern_051",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "גמישות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "נוקשות ועמידה בתוצאה אחת",
+    "excess_side": "גמישות שמונעת מחויבות",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_052",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "שחרור",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "אחיזה בכאב ובשליטה",
+    "excess_side": "שחרור ללא עיבוד",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_053",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "סליחה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "אשמה מתמשכת ועונש עצמי",
+    "excess_side": "ויתור שמונע לקיחת אחריות",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_054",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "יוזמה",
+    "higher_strength": "courage",
+    "deficiency_side": "מניעה עצמית מהתחלה",
+    "excess_side": "התחלה ללא הכנה",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_055",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "מנוחה",
+    "higher_strength": "compassion",
+    "deficiency_side": "עבודה ללא הפסקה",
+    "excess_side": "מנוחה שמחליפה פעולה",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_056",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "סיפוק",
+    "higher_strength": "self_worth",
+    "deficiency_side": "חיפוש מתמיד אחר יותר",
+    "excess_side": "שביעות רצון שמונעת שאיפה",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_057",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "deficiency_side": "דחיית עצמי ותנאים לאהבה עצמית",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_058",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "נוכחות",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "אי-נוכחות ויציאה למחשבות",
+    "excess_side": "נוכחות שמונעת תכנון",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_059",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "ביטחון גופני",
+    "higher_strength": "self_worth",
+    "deficiency_side": "בושה גופנית וניתוק מהגוף",
+    "excess_side": "בטחון שמתעלם מגבולות",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_060",
+    "pain_axis": "perfectionism",
+    "core_belief": "ערכי מותנה בכך שאעשה הכל ללא שגיאה — אחרת אינני שווה",
+    "balanced_trait": "ספונטניות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "תכנון-יתר וחוסר ספונטניות",
+    "excess_side": "ספונטניות שמונעת מבנה",
+    "mind_movement_he": "שואף למושלם → מאמץ \"מספיק טוב\" כמפתח לפעולה אמיתית"
+  },
+  {
+    "pattern_id": "pattern_061",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "חיבור",
+    "higher_strength": "connection",
+    "deficiency_side": "בדידות וניתוק",
+    "excess_side": "תלות שמונעת עצמאות",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_062",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "נראות",
+    "higher_strength": "self_worth",
+    "deficiency_side": "הסתתרות ותחושת אי-ראייה",
+    "excess_side": "חשיפה ללא גבולות",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_063",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "עומק",
+    "higher_strength": "connection",
+    "deficiency_side": "שיחות שטחיות ונמנעות",
+    "excess_side": "עומק שמכביד",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_064",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "ביטוי",
+    "higher_strength": "connection",
+    "deficiency_side": "דחיסת רגשות ומחשבות",
+    "excess_side": "ביטוי ללא מסנן",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_065",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "deficiency_side": "בדידות ותחושת ניתוק",
+    "excess_side": "איבוד עצמי בתוך הקבוצה",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_066",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "אינטימיות",
+    "higher_strength": "connection",
+    "deficiency_side": "ריחוק ושמירת מרחק",
+    "excess_side": "אינטימיות מהירה ללא בסיס",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_067",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "שלום פנימי",
+    "higher_strength": "hope",
+    "deficiency_side": "מתח מתמיד וחוסר שקט",
+    "excess_side": "שלווה שמנתקת מתחושות",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_068",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "נוקשות בפני שינוי",
+    "excess_side": "הסתגלות שמאבדת עצמי",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_069",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "אבל משותף",
+    "higher_strength": "connection",
+    "deficiency_side": "בדידות בכאב",
+    "excess_side": "התמזגות כאב שמאבדת גבולות",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_070",
+    "pain_axis": "loneliness",
+    "core_belief": "אינני ראוי לחיבור עמוק, ואחרים לא יכולים להבין אותי באמת",
+    "balanced_trait": "נוכחות",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "אי-נוכחות ויציאה למחשבות",
+    "excess_side": "נוכחות שמונעת תכנון",
+    "mind_movement_he": "מסתגר כדי להגן על עצמו → מושיט יד לחיבור אפשרי"
+  },
+  {
+    "pattern_id": "pattern_071",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "אמון",
+    "higher_strength": "hope",
+    "deficiency_side": "חרדה ושליטה מוגזמת",
+    "excess_side": "תמימות שמונעת שיקול דעת",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_072",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "נוקשות בפני שינוי",
+    "excess_side": "הסתגלות שמאבדת עצמי",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_073",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "כוח פעולה עצמי",
+    "higher_strength": "self_direction",
+    "deficiency_side": "תחושת חוסר אונים ותלות",
+    "excess_side": "תחושת שליטה מוגזמת",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_074",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "עקשנות חיובית",
+    "higher_strength": "perseverance",
+    "deficiency_side": "נטישה ממוקדת",
+    "excess_side": "עקשנות ללא התאמה",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_075",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "סבלנות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "רגישות-יתר",
+    "excess_side": "סבלנות שמאפשרת פגיעה",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_076",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "ניתוק בריא",
+    "higher_strength": "wisdom",
+    "deficiency_side": "היסחפות רגשית",
+    "excess_side": "ניתוק שמונע חיבור",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_077",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "ספונטניות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "תכנון-יתר וחוסר ספונטניות",
+    "excess_side": "ספונטניות שמונעת מבנה",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_078",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "האצלה",
+    "higher_strength": "self_direction",
+    "deficiency_side": "שליטה ומיקרו-ניהול",
+    "excess_side": "האצלה ללא מעקב",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_079",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "העצמה",
+    "higher_strength": "self_direction",
+    "deficiency_side": "חוסר אונים ותלות",
+    "excess_side": "שליטה שמונעת שיתוף",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_080",
+    "pain_axis": "lack_of_control",
+    "core_belief": "ללא שליטה מלאה — כל דבר עלול להתפרק ואני לא אוכל להתמודד",
+    "balanced_trait": "התמקדות בהווה",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "חרדת עתיד וקיפאון",
+    "excess_side": "נוכחות שמונעת תכנון",
+    "mind_movement_he": "נאחז בשליטה → מפנה אנרגיה לתחום ההשפעה הממשי שלי"
+  },
+  {
+    "pattern_id": "pattern_081",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "תקווה",
+    "higher_strength": "hope",
+    "deficiency_side": "ייאוש ואי-תנועה",
+    "excess_side": "תקווה שמנתקת מהמציאות",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_082",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "צמיחה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "תקיעות וסטגנציה",
+    "excess_side": "צמיחה ללא עיגון",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_083",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "עקשנות חיובית",
+    "higher_strength": "perseverance",
+    "deficiency_side": "נטישה ממוקדת",
+    "excess_side": "עקשנות ללא התאמה",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_084",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "תנועה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "קיפאון ותקיעות",
+    "excess_side": "תנועה ללא כיוון ומטרה",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_085",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "התחלה מחדש",
+    "higher_strength": "hope",
+    "deficiency_side": "אחיזה בכישלון העבר",
+    "excess_side": "מחיקה ללא למידה",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_086",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "אמונה",
+    "higher_strength": "hope",
+    "deficiency_side": "ייאוש מחוסר אמונה",
+    "excess_side": "אמונה שמנתקת מציאות",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_087",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "שמחה",
+    "higher_strength": "hope",
+    "deficiency_side": "עצב מושתק וכאב פנימי",
+    "excess_side": "אופטימיות שמסתירה כאב",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_088",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "ריפוי",
+    "higher_strength": "resilience",
+    "deficiency_side": "אחיזה בכאב ואי-ריפוי",
+    "excess_side": "ריפוי שמנתק מזיכרון",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_089",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "מטרה",
+    "higher_strength": "self_direction",
+    "deficiency_side": "נדודי כיוון וחוסר מוטיבציה",
+    "excess_side": "מטרה שמונעת ספונטניות",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_090",
+    "pain_axis": "hopelessness",
+    "core_belief": "דברים לא ישתנו — וניסיון הוא רק עוד הזדמנות לכישלון",
+    "balanced_trait": "כוח פעולה עצמי",
+    "higher_strength": "self_direction",
+    "deficiency_side": "תחושת חוסר אונים ותלות",
+    "excess_side": "תחושת שליטה מוגזמת",
+    "mind_movement_he": "מאמין שלא ניתן לשנות → מחפש ראיות לתנועה קטנה אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_091",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "עצמיות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "אובדן עצמי בין תפקידים",
+    "excess_side": "אגו שמונע חיבור",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_092",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "זהות עצמית",
+    "higher_strength": "self_direction",
+    "deficiency_side": "ניתוק מעצמי",
+    "excess_side": "זהות שמתנגדת לצמיחה",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_093",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "כיוון",
+    "higher_strength": "self_direction",
+    "deficiency_side": "אי-ידיעת כיוון",
+    "excess_side": "כיוון נוקשה ללא גמישות",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_094",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "בהירות",
+    "higher_strength": "clarity",
+    "deficiency_side": "ערפל ובלבול פנימי",
+    "excess_side": "בהירות שמונעת מורכבות",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_095",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "הופעה",
+    "higher_strength": "self_direction",
+    "deficiency_side": "הסתרת עצמי מחדש",
+    "excess_side": "הופעה ללא הכנה",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_096",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "ייחודיות",
+    "higher_strength": "self_worth",
+    "deficiency_side": "הסתרת ייחודיות",
+    "excess_side": "ייחודיות שמנתקת",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_097",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "אותנטיות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "מסכה ותפקוד מזויף",
+    "excess_side": "קשיחות וחוסר גמישות חברתית",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_098",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "איזון",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "קיצוניות בדפוסים",
+    "excess_side": "איזון שמונע עוצמה",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_099",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "רציפות",
+    "higher_strength": "resilience",
+    "deficiency_side": "תחושת פיצול ואי-רציפות",
+    "excess_side": "רציפות שמונעת שינוי",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_100",
+    "pain_axis": "identity_confusion",
+    "core_belief": "אינני יודע מי אני, ולכן אינני שלם ולא ניתן לסמוך עליי",
+    "balanced_trait": "התפתחות",
+    "higher_strength": "perseverance",
+    "deficiency_side": "תקיעות בעבר",
+    "excess_side": "שינוי ללא שורשים",
+    "mind_movement_he": "מחפש עצמי מבחוץ → מקשיב לעצמי מבפנים"
+  },
+  {
+    "pattern_id": "pattern_101",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "נחרצות בהחלטות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "שיתוק החלטות",
+    "excess_side": "נחרצות ללא שיקול מספיק",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_102",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "סבלנות לסיכון",
+    "higher_strength": "courage",
+    "deficiency_side": "הימנעות ממסיכון",
+    "excess_side": "סיכון ללא שיקול",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_103",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "פעולה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "שיתוק מניתוח-יתר",
+    "excess_side": "פעולה ללא תכנון",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_104",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "פעולה בהווה",
+    "higher_strength": "discipline",
+    "deficiency_side": "דחיינות וחרדת עתיד",
+    "excess_side": "פעולה ללא תכנון",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_105",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "אחריות",
+    "higher_strength": "discipline",
+    "deficiency_side": "הימנעות מאחריות",
+    "excess_side": "אחריות-יתר שמכלה",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_106",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "אמון עצמי",
+    "higher_strength": "self_direction",
+    "deficiency_side": "תלות בחיצוני",
+    "excess_side": "אמון עצמי ללא ביקורת",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_107",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "מחויבות",
+    "higher_strength": "discipline",
+    "deficiency_side": "הימנעות ממחויבות מפחד",
+    "excess_side": "מחויבות כפייתית שמתשת",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_108",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "פרופורציה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "הגזמה בתגובות",
+    "excess_side": "מינימיזציה שמונעת עיבוד",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_109",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "deficiency_side": "שיתוק מפחד ומניעה עצמית",
+    "excess_side": "פזיזות חסרת שיקול דעת",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_110",
+    "pain_axis": "lack_of_control",
+    "core_belief": "כל טעות תוביל לתוצאה בלתי הפיכה שלא אוכל לשאת",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "deficiency_side": "מאבק בלתי פוסק",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "מחכה לוודאות מלאה → מחליט עם המידע הקיים ומתאים בדרך"
+  },
+  {
+    "pattern_id": "pattern_111",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "תעדוף",
+    "higher_strength": "discipline",
+    "deficiency_side": "עומס ללא כיוון",
+    "excess_side": "תעדוף שמוציא את הבלתי-צפוי",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_112",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "ויסות רגשי",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "הצפה רגשית ותגובתיות",
+    "excess_side": "דיכוי רגשות וניתוק",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_113",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "אבחנה",
+    "higher_strength": "wisdom",
+    "deficiency_side": "אי-הבחנה בין מקורות",
+    "excess_side": "ביקורתיות שמונעת פתיחות",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_114",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "האצלה",
+    "higher_strength": "self_direction",
+    "deficiency_side": "שליטה ומיקרו-ניהול",
+    "excess_side": "האצלה ללא מעקב",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_115",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "גבולות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "חוסר גבולות",
+    "excess_side": "גבולות נוקשים שמנתקים",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_116",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "נוקשות בפני שינוי",
+    "excess_side": "הסתגלות שמאבדת עצמי",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_117",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "ביצוע רגוע",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "חרדת ביצוע",
+    "excess_side": "שלווה שמונעת נוכחות",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_118",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "חוסן",
+    "higher_strength": "resilience",
+    "deficiency_side": "שבירה מהירה בפני קשיים",
+    "excess_side": "קשיחות שמונעת עיבוד",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_119",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "טיפול עצמי",
+    "higher_strength": "compassion",
+    "deficiency_side": "הזנחה עצמית",
+    "excess_side": "טיפול עצמי שמנתק מאחרים",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_120",
+    "pain_axis": "overwhelm",
+    "core_belief": "אינני מסוגל להכיל את הכמות שנדרשת ממני — אני פשוט חלש",
+    "balanced_trait": "מודעות עצמית",
+    "higher_strength": "wisdom",
+    "deficiency_side": "עיוורון עצמי",
+    "excess_side": "מודעות-יתר שמכבידה",
+    "mind_movement_he": "מנסה להכיל הכל בבת אחת → מצמצם לפעולה אחת אפשרית עכשיו"
+  },
+  {
+    "pattern_id": "pattern_121",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "ערך מולד",
+    "higher_strength": "self_worth",
+    "deficiency_side": "תחושת חוסר ערך",
+    "excess_side": "ביטחון שמנתק מאחרים",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_122",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "deficiency_side": "שריון רגשי וסגירות",
+    "excess_side": "חשיפה עצמית ללא גבולות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_123",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "הגדרה עצמית",
+    "higher_strength": "self_direction",
+    "deficiency_side": "הגדרה עצמית על ידי אחרים",
+    "excess_side": "הגדרה שמנתקת מגמישות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_124",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "קבלת הגוף",
+    "higher_strength": "self_worth",
+    "deficiency_side": "בושה גופנית",
+    "excess_side": "קבלה שמונעת בריאות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_125",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "ביקורת עצמית קשה וחסרת רחמים",
+    "excess_side": "סבלנות עצמית שמונעת שינוי",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_126",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "סליחה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "אשמה מתמשכת ועונש עצמי",
+    "excess_side": "ויתור שמונע לקיחת אחריות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_127",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "חופש רגשי",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "כבלי רגש ישנים",
+    "excess_side": "חופש שמונע מחויבות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_128",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "ערך עצמי",
+    "higher_strength": "self_worth",
+    "deficiency_side": "חוסר ערך עצמי ותלות בחיצוני",
+    "excess_side": "הגנה מוגזמת שמונעת ביקורת",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_129",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "גאווה",
+    "higher_strength": "self_worth",
+    "deficiency_side": "ביטול הישגים עצמיים",
+    "excess_side": "גאווה שמונעת צניעות",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_130",
+    "pain_axis": "shame",
+    "core_belief": "יש בי פגם עמוק שאם יגלו אותו — ידחו אותי לחלוטין",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "סגירות וחשש מחדש",
+    "excess_side": "פתיחות ללא גבולות שמבלבלת",
+    "mind_movement_he": "מסתיר את הפגם → מגלה שהאנושיות שלי מחברת ולא מנתקת"
+  },
+  {
+    "pattern_id": "pattern_131",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "חיפוש צדק",
+    "higher_strength": "self_direction",
+    "deficiency_side": "ויתור על גבולות",
+    "excess_side": "חיפוש צדק שמשתיק חמלה",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_132",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "deficiency_side": "מאבק בלתי פוסק",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_133",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "גמישות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "נוקשות ועמידה בתוצאה אחת",
+    "excess_side": "גמישות שמונעת מחויבות",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_134",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "deficiency_side": "ביקורת עצמית קשה וחסרת רחמים",
+    "excess_side": "סבלנות עצמית שמונעת שינוי",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_135",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "עמידה על עצמי",
+    "higher_strength": "self_direction",
+    "deficiency_side": "שתיקה וויתור עצמי",
+    "excess_side": "עמידה שמסלימה מיד",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_136",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "שלוות נפש",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "תגובתיות רגשית",
+    "excess_side": "ניתוק שמסתיר צרכים",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_137",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "ביטוי בריא",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "בליעת רגשות",
+    "excess_side": "ביטוי ללא שיקול",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_138",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "deficiency_side": "דחיית עצמי ותנאים לאהבה עצמית",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_139",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "deficiency_side": "סגירות וחשש מחדש",
+    "excess_side": "פתיחות ללא גבולות שמבלבלת",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_140",
+    "pain_axis": "anger",
+    "core_belief": "אינני מקבל את מה שמגיע לי — והעולם לא צודק ולא יהיה",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "deficiency_side": "מאבק בלתי פוסק",
+    "excess_side": "קבלה שמונעת שינוי",
+    "mind_movement_he": "פורץ או בולע את הכעס → מזהה מה הכעס מסמן ומגיב מתוך בחירה"
+  },
+  {
+    "pattern_id": "pattern_141",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "אומץ חברתי",
+    "higher_strength": "courage",
+    "deficiency_side": "ביישנות מוגזמת",
+    "excess_side": "אומץ חברתי ללא רגישות",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_142",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "נוכחות רגשית",
+    "higher_strength": "emotional_regulation",
+    "deficiency_side": "ניתוק רגשי",
+    "excess_side": "הצפה רגשית",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_143",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "נחרצות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "פסיביות ועמידות",
+    "excess_side": "אגרסיביות שמונעת חיבור",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_144",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "משמעת",
+    "higher_strength": "discipline",
+    "deficiency_side": "אי-עמידה בהתחייבויות",
+    "excess_side": "קפדנות מוגזמת שמוציאה אנרגיה",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_145",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "אינטימיות",
+    "higher_strength": "connection",
+    "deficiency_side": "ריחוק ושמירת מרחק",
+    "excess_side": "אינטימיות מהירה ללא בסיס",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_146",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "כיוון לצמיחה",
+    "higher_strength": "perseverance",
+    "deficiency_side": "הימנעות מאתגרים",
+    "excess_side": "שאיפה ללא נוחות",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_147",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "בעלות",
+    "higher_strength": "self_direction",
+    "deficiency_side": "הכחשת אחריות",
+    "excess_side": "אחריות מוגזמת שמעיקה",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_148",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "פתיחות לשינוי",
+    "higher_strength": "flexibility",
+    "deficiency_side": "הימנעות משינוי",
+    "excess_side": "שינוי מוגזם ללא יציבות",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_149",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "ראויות",
+    "higher_strength": "self_worth",
+    "deficiency_side": "תחושת חוסר ראויות",
+    "excess_side": "תביעה ללא הכרה",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  },
+  {
+    "pattern_id": "pattern_150",
+    "pain_axis": "avoidance",
+    "core_belief": "ניסיון להתמודד ישירות יוביל לכאב שאינני מסוגל לשאת",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "deficiency_side": "שריון רגשי וסגירות",
+    "excess_side": "חשיפה עצמית ללא גבולות",
+    "mind_movement_he": "נמלט ממה שמפחיד → מתקרב אליו בצעד קטן ובמודעות"
+  }
+]

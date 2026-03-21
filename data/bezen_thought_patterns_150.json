@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "pattern_001",
+    "category": "comparison",
+    "pattern_name": "social_progress_comparison",
+    "example_sentences": [
+      "כולם כבר קדימה בחיים ואני עדיין במקום אחד.",
+      "חברה שלי כבר קנתה דירה ואני עוד גרה עם הורים.",
+      "נדמה לי שכולם מתקדמים חוץ ממני."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I am falling behind everyone else in life and something is wrong with me.",
+    "balanced_trait": "self-pacing",
+    "bridge_sentence": "כל אחד הולך בקצב שלו, והקצב שלך אינו פחות תקין.",
+    "helpful_sentence": "אני מתקדם בדרכי שלי, וזה מספיק."
+  },
+  {
+    "id": "pattern_002",
+    "category": "comparison",
+    "pattern_name": "success_envy",
+    "example_sentences": [
+      "כשאני שומע על הצלחה של מישהו אחר אני מרגיש קטן.",
+      "למה לו מגיע ולי לא?",
+      "ההצלחה שלהם מזכירה לי כמה אני לא מצליח."
+    ],
+    "emotion": "envy",
+    "limiting_belief": "Others' success is evidence of my own lack of worth.",
+    "balanced_trait": "inspiration",
+    "bridge_sentence": "ההצלחה שלהם לא גוזלת ממך כלום — יש מספיק מקום לכולם.",
+    "helpful_sentence": "הצלחה של אחרים יכולה לעורר בי השראה, לא לאיים עלי."
+  },
+  {
+    "id": "pattern_003",
+    "category": "comparison",
+    "pattern_name": "appearance_comparison",
+    "example_sentences": [
+      "היא נראית כל כך טוב ואני תמיד מרגישה לא מספיק.",
+      "בכל תמונה שאני רואה אני שם לב כמה אני נראה אחרת.",
+      "למה אני לא יכולה להיראות ככה?"
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My appearance is inferior and therefore I am less valuable.",
+    "balanced_trait": "self-acceptance",
+    "bridge_sentence": "הגוף שלך הוא הבית שלך — הוא עושה כל כך הרבה בשבילך.",
+    "helpful_sentence": "אני מכבד את הגוף שלי על כל מה שהוא מאפשר לי."
+  },
+  {
+    "id": "pattern_004",
+    "category": "comparison",
+    "pattern_name": "relationship_comparison",
+    "example_sentences": [
+      "כולם סביבי בזוגיות ואני לבד.",
+      "הזוגות האלה נראים כל כך מאושרים, למה אני לא מוצא את זה?",
+      "אולי יש בי משהו שמונע ממני לבנות מערכת יחסים טובה."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "Everyone else can find love easily except me, which means I am fundamentally unlovable.",
+    "balanced_trait": "readiness",
+    "bridge_sentence": "מה שנראה בחוץ לא תמיד משקף את המציאות האמיתית של הזוגות האלה.",
+    "helpful_sentence": "אני ראוי לאהבה ואני פתוח לה כשהזמן יהיה נכון."
+  },
+  {
+    "id": "pattern_005",
+    "category": "comparison",
+    "pattern_name": "intelligence_comparison",
+    "example_sentences": [
+      "כולם בקבוצה הזו נראים חכמים ממני.",
+      "הם תופסים דברים מהר ואני צריך הרבה זמן להבין.",
+      "בישיבות אני לא מעז לדבר כי אני בטוח שמה שאגיד יישמע טיפשי."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "I am less intelligent than others and my contributions have no value.",
+    "balanced_trait": "curiosity",
+    "bridge_sentence": "לכל אחד יש אינטליגנציה אחרת — השאלה שלך היא הוכחה לחשיבה שלך.",
+    "helpful_sentence": "הדרך שבה אני חושב היא ייחודית ויש לה ערך."
+  },
+  {
+    "id": "pattern_006",
+    "category": "comparison",
+    "pattern_name": "happiness_comparison",
+    "example_sentences": [
+      "נדמה לי שכולם יותר מאושרים ממני.",
+      "אנשים נראים כל כך שלמים עם החיים שלהם ואני מתקשה.",
+      "אולי אני פשוט לא מסוגל להיות מאושר כמו כולם."
+    ],
+    "emotion": "sadness",
+    "limiting_belief": "Happiness comes naturally to others but is inaccessible to me.",
+    "balanced_trait": "contentment",
+    "bridge_sentence": "האושר לא נראה אותו אצל כולם — אולי גם שלך נמצא כאן, רק בצורה אחרת.",
+    "helpful_sentence": "אני מסוגל למצוא שמחה קטנה ואמיתית בתוך היום שלי."
+  },
+  {
+    "id": "pattern_007",
+    "category": "comparison",
+    "pattern_name": "career_comparison",
+    "example_sentences": [
+      "חבר שלי כבר מנהל ואני עדיין עובד שורה.",
+      "הם עשו כבר כל כך הרבה בגיל הזה ואני תקוע.",
+      "לפעמים אני מתבייש לספר לאנשים מה אני עושה בעבודה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My career progress is a measure of my worth and I am failing.",
+    "balanced_trait": "purposefulness",
+    "bridge_sentence": "הקריירה שלך לא מגדירה אותך — ערכך גדול בהרבה ממשרה.",
+    "helpful_sentence": "אני בונה את הדרך המקצועית שלי בקצב שנכון לי."
+  },
+  {
+    "id": "pattern_008",
+    "category": "comparison",
+    "pattern_name": "achievement_comparison",
+    "example_sentences": [
+      "הם כבר סיימו תואר שני ואני עדיין לא סיימתי ראשון.",
+      "בגיל הזה הם כבר השיגו כל כך הרבה.",
+      "ההישגים שלי נראים כל כך מיותרים לעומת שלהם."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "My achievements are insignificant and I have not accomplished enough.",
+    "balanced_trait": "appreciation",
+    "bridge_sentence": "כל צעד שעשית הוא הישג אמיתי, גם אם הוא לא עולה על רשימה.",
+    "helpful_sentence": "אני רואה ומכיר בדברים שהשגתי, גם הקטנים שבהם."
+  },
+  {
+    "id": "pattern_009",
+    "category": "comparison",
+    "pattern_name": "upward_social_comparison",
+    "example_sentences": [
+      "אני תמיד מסתכל על מי שיש לו יותר ממני.",
+      "קשה לי להיות מרוצה כי תמיד יש מישהו שמצבו טוב יותר.",
+      "ככל שאני מסתכל על אנשים מצליחים אני מרגיש יותר קטן."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "There is always someone better and therefore I will never be enough.",
+    "balanced_trait": "gratitude",
+    "bridge_sentence": "ההשוואה לגבוה תמיד תשאיר אותך מתוסכל — מה יש לך עכשיו שאפשר להכיר בו?",
+    "helpful_sentence": "אני בוחר להכיר בטוב שכבר קיים בחיי."
+  },
+  {
+    "id": "pattern_010",
+    "category": "comparison",
+    "pattern_name": "social_media_comparison",
+    "example_sentences": [
+      "אחרי כל גלילה ברשתות אני מרגיש גרוע יותר עם עצמי.",
+      "החיים שלהם נראים כל כך מושלמים בהשוואה לשלי.",
+      "אני יודע שזה מסנן אבל עדיין זה מכאיב לראות."
+    ],
+    "emotion": "envy",
+    "limiting_belief": "Other people's lives are genuinely better than mine.",
+    "balanced_trait": "discernment",
+    "bridge_sentence": "מה שרואים ברשת הוא רק הרגע שבחרו לשתף — לא המלאות של חייהם.",
+    "helpful_sentence": "החיים שלי, כפי שהם, מלאים בדברים שלא צריכים לקבל לייק."
+  },
+  {
+    "id": "pattern_011",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_starting",
+    "example_sentences": [
+      "אני רוצה להתחיל את הפרויקט הזה אבל לא מצליח להתחיל.",
+      "מה אם אתחיל ואכשל? עדיף לא לנסות.",
+      "רעיון הפרויקט נמצא בראש שלי כבר חודשים ואני לא זזה."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Starting means risking failure, and failure is unbearable.",
+    "balanced_trait": "courage",
+    "bridge_sentence": "הצעד הראשון לא חייב להיות מושלם — הוא רק חייב להיות.",
+    "helpful_sentence": "אני יכול להתחיל בקטן, ולתת לתהליך להוביל אותי."
+  },
+  {
+    "id": "pattern_012",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_judgment",
+    "example_sentences": [
+      "מה יגידו עלי אם אכשל בפומבי?",
+      "אני מפחד שיראו אותי נכשל ויחשבו שאני לא מוכשר.",
+      "לפני כל הצגה אני חושב רק על מה יחשבו אם אשגה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "If others see me fail, they will reject or judge me permanently.",
+    "balanced_trait": "authenticity",
+    "bridge_sentence": "אנשים בדרך כלל עסוקים מדי בעצמם כדי לשפוט אותך כמו שאתה חושש.",
+    "helpful_sentence": "מה שאחרים חושבים עלי הוא מחוץ לשליטתי ולא מגדיר אותי."
+  },
+  {
+    "id": "pattern_013",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_disappointing_others",
+    "example_sentences": [
+      "אני לא יכול להכזיב את ההורים שלי אחרי כל מה שהשקיעו בי.",
+      "הם כל כך מאמינים בי, אם אכשל אני אהרוס להם את זה.",
+      "פחד שאכזיב אחרים גדול יותר מהפחד שאכזיב את עצמי."
+    ],
+    "emotion": "guilt",
+    "limiting_belief": "My failure will harm those who love me and destroy their trust in me.",
+    "balanced_trait": "self-loyalty",
+    "bridge_sentence": "האנשים שאוהבים אותך רוצים שתהיה בסדר — לא רק שתצליח.",
+    "helpful_sentence": "אני יכול לאכזב ציפיות מבלי לאכזב אנשים."
+  },
+  {
+    "id": "pattern_014",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_equals_rejection",
+    "example_sentences": [
+      "אם אכשל הם לא ירצו אותי יותר.",
+      "ההצלחה שלי זה מה שגורם לאנשים לאהוב אותי.",
+      "כשנכשלתי פעם אחרונה, אנשים התרחקו."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "I am only lovable and accepted when I succeed.",
+    "balanced_trait": "unconditional belonging",
+    "bridge_sentence": "ערכך כאדם לא נמדד בתוצאות — אנשים שאוהבים אותך לא יעזבו אחרי כישלון.",
+    "helpful_sentence": "אני ראוי לחיבה גם כשאני טועה ונכשל."
+  },
+  {
+    "id": "pattern_015",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_brings_shame",
+    "example_sentences": [
+      "אם אכשל, אני אבוש בעצמי.",
+      "כישלון הוא לא רק תוצאה — הוא מה שאני.",
+      "אחרי שנכשלתי לא יכולתי להסתכל בראי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Failure is not something that happens to me — it is what I am.",
+    "balanced_trait": "resilience",
+    "bridge_sentence": "כישלון הוא חלק מהניסיון — הוא לא סימן על זהותך.",
+    "helpful_sentence": "אני יותר מהתוצאות שלי, גם בזמנים קשים."
+  },
+  {
+    "id": "pattern_016",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_revealing_incompetence",
+    "example_sentences": [
+      "אם ינסו אותי יגלו שאני לא יודע מה שהם חושבים שאני יודע.",
+      "אני מנסה לא לשאול שאלות כדי שלא יבינו שאני לא מבין.",
+      "כל פעם שמישהו שואל אותי שאלה מקצועית אני נכנס לפאניקה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "If people find out what I do not know, they will see I am a fraud.",
+    "balanced_trait": "intellectual honesty",
+    "bridge_sentence": "לא לדעת משהו זה תחילת הלמידה — לא סוף האמינות שלך.",
+    "helpful_sentence": "אני מסוגל לשאול, ללמוד ולהתפתח בלי שזה יאיים על ערכי."
+  },
+  {
+    "id": "pattern_017",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_losing_respect",
+    "example_sentences": [
+      "אם אכשל, אנשים יפסיקו לכבד אותי.",
+      "הכבוד שקיבלתי הוא על בסיס ההישגים שלי בלבד.",
+      "אני מפחד שטעות אחת תהרוס את כל מה שבניתי."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Respect is conditional on my performance and one failure will erase it.",
+    "balanced_trait": "groundedness",
+    "bridge_sentence": "כבוד אמיתי לא נבנה על מופע — הוא נבנה על אמון ועל אדם.",
+    "helpful_sentence": "הכבוד שאני נותן לעצמי לא תלוי בהצלחה אחת."
+  },
+  {
+    "id": "pattern_018",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_commitment",
+    "example_sentences": [
+      "אם אתחייב ואכשל, יהיה גרוע יותר מאם לא ניסיתי.",
+      "אני נמנע מלהתחייב לדברים כי פחד מלא לעמוד בהם.",
+      "קל לי לעזוב לפני שמתחייבים מאשר להישאר ולהכזיב."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Commitment exposes me to the risk of failure that I cannot handle.",
+    "balanced_trait": "commitment",
+    "bridge_sentence": "התחייבות לא מבטיחה הצלחה — אבל היא מבטיחה שניסית.",
+    "helpful_sentence": "אני בוחר להתחייב לדברים שחשובים לי, גם אם זה מפחיד."
+  },
+  {
+    "id": "pattern_019",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_public_failure",
+    "example_sentences": [
+      "לכשול בפני אנשים זה הדבר הכי מביך שאני יכול לחשוב עליו.",
+      "אם ישמעו אותי טועה בהרצאה אני לא אוכל לחזור לשם.",
+      "אני מעדיף לא להציג בכלל מאשר להיכשל בפומבי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "A public mistake is a permanent mark of shame that I will never recover from.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "אנשים שנופלים ומתקימים בפומבי מהווים השראה — לא לגיחוך.",
+    "helpful_sentence": "אני יכול לטעות בפני אחרים ועדיין לקום ולהמשיך."
+  },
+  {
+    "id": "pattern_020",
+    "category": "fear_of_failure",
+    "pattern_name": "paralysis_by_fear",
+    "example_sentences": [
+      "אני כל כך פוחד לטעות שאני פשוט לא עושה כלום.",
+      "הפחד מכישלון מקפיא אותי לחלוטין.",
+      "כשאני צריך לקבל החלטה חשובה, הגוף שלי פשוט לא מגיב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Action leads to failure, and inaction is the only safe choice.",
+    "balanced_trait": "movement",
+    "bridge_sentence": "הקיפאון הוא גם בחירה — אולי הגיע הזמן לנוע אפילו בצעד קטן.",
+    "helpful_sentence": "כל צעד קטן לקדימה שווה יותר מחיכוי מושלם."
+  },
+  {
+    "id": "pattern_021",
+    "category": "self_doubt",
+    "pattern_name": "imposter_syndrome",
+    "example_sentences": [
+      "אני לא באמת מוכשר — הם רק עוד לא הבינו את זה.",
+      "כשיגלו מי אני באמת, הכל יתפרק.",
+      "כל ההצלחות שלי הגיעו מהצלחה לא ממני עצמי."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "My success is a mistake and I am a fraud waiting to be exposed.",
+    "balanced_trait": "self-recognition",
+    "bridge_sentence": "הישגיך הם שלך — גם אם קשה לך להחזיק בהם.",
+    "helpful_sentence": "אני מסוגל להכיר בכשרונות שלי גם כשספק מנסה לגנוב אותם."
+  },
+  {
+    "id": "pattern_022",
+    "category": "self_doubt",
+    "pattern_name": "constant_self_questioning",
+    "example_sentences": [
+      "אחרי כל מה שאני עושה אני שואל את עצמי אם עשיתי נכון.",
+      "אני חי בלופ של ספק — עשיתי טוב? לא? אולי?",
+      "גם כשמשהו יוצא טוב אני מוצא סיבה לפקפק בו."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "My judgment cannot be trusted and I need constant verification.",
+    "balanced_trait": "trust",
+    "bridge_sentence": "לשאול שאלות זה בריא — לחיות בתוך ספק מתמיד זה מחיר גדול מדי.",
+    "helpful_sentence": "אני סומך על עצמי לעשות את ההחלטות שלי, גם אם הן לא מושלמות."
+  },
+  {
+    "id": "pattern_023",
+    "category": "self_doubt",
+    "pattern_name": "inner_critic_dominance",
+    "example_sentences": [
+      "יש קול בתוכי שתמיד מוצא מה לא בסדר.",
+      "אני מבקר את עצמי יותר מכל אדם אחר.",
+      "גם כשאני שמח, הקול הפנימי שלי מוצא משהו לתקוף."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I must criticize myself harshly to prevent failure and shame.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "המבקר הפנימי חשב שהוא מגן עליך — עכשיו אפשר לתת לו לנוח.",
+    "helpful_sentence": "אני יכול לדבר עם עצמי באותה חמלה שהייתי מדבר עם חבר טוב."
+  },
+  {
+    "id": "pattern_024",
+    "category": "self_doubt",
+    "pattern_name": "capability_doubt",
+    "example_sentences": [
+      "אני לא בטוח שאני יכול לעשות את זה.",
+      "אולי אני פשוט לא מסוגל לדברים האלה.",
+      "כשמישהו מציע לי משהו חדש, המחשבה הראשונה היא 'אני לא יכול'."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "I do not have the capacity to handle challenges or grow.",
+    "balanced_trait": "capability",
+    "bridge_sentence": "תחושת 'אני לא יכול' לפעמים היא פחד בתחפושת — לא עובדה.",
+    "helpful_sentence": "יש בי יכולת שממשיכה להתגלות כשאני נותן לה הזדמנות."
+  },
+  {
+    "id": "pattern_025",
+    "category": "self_doubt",
+    "pattern_name": "worthiness_doubt",
+    "example_sentences": [
+      "אני לא בטוח שאני ראוי לדברים טובים.",
+      "כשמשהו טוב קורה לי אני מחכה שזה ייגמר.",
+      "לפעמים אני חושב שאנשים אחרים יותר ראויים ממני."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I am fundamentally less worthy of good things than others.",
+    "balanced_trait": "worthiness",
+    "bridge_sentence": "הראויות שלך לא תלויה בהישגים — היא חלק ממה שאתה.",
+    "helpful_sentence": "אני ראוי לדברים טובים, לאהבה ולשמחה — גם עכשיו."
+  },
+  {
+    "id": "pattern_026",
+    "category": "self_doubt",
+    "pattern_name": "intelligence_doubt",
+    "example_sentences": [
+      "אני חושב שאני פחות חכם מאנשים סביבי.",
+      "הם תופסים דברים כל כך מהר ואני מתבייש לשאול פעם שנייה.",
+      "תמיד הרגשתי שאני לא חכם מספיק לדברים האלה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I am not intelligent enough and my thinking has little value.",
+    "balanced_trait": "intellectual confidence",
+    "bridge_sentence": "מהירות הבנה אינה מדד לחוכמה — עומק החשיבה שלך שווה הרבה.",
+    "helpful_sentence": "הדרך שבה אני מעבד דברים היא הכוח שלי, לא חולשה."
+  },
+  {
+    "id": "pattern_027",
+    "category": "self_doubt",
+    "pattern_name": "social_competence_doubt",
+    "example_sentences": [
+      "אני תמיד מרגיש שאני לא יודע איך להתנהל חברתית.",
+      "אחרי כל שיחה אני חוזר וחושב מה אמרתי לא בסדר.",
+      "לאנשים אחרים נראה קל ושוטף — לי זה תמיד מאמץ."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I am socially incompetent and always say or do the wrong thing.",
+    "balanced_trait": "social ease",
+    "bridge_sentence": "רוב האנשים עסוקים יותר במה הם עצמם אומרים מאשר בטעויות שלך.",
+    "helpful_sentence": "אני יכול להיות נוכח בשיחה בלי לנהל אותה בשלמות."
+  },
+  {
+    "id": "pattern_028",
+    "category": "self_doubt",
+    "pattern_name": "achievement_minimization",
+    "example_sentences": [
+      "זה לא היה כזה גדול, כל אחד היה יכול לעשות את זה.",
+      "אני לא מצליח לשמוח על ההישגים שלי כי הם נראים לי קטנים.",
+      "כשמשבחים אותי אני מיד מחפש סיבות לומר שלא מגיע לי."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "My achievements are not real or significant and I do not deserve recognition.",
+    "balanced_trait": "recognition",
+    "bridge_sentence": "לא כל הישג צריך להיות אפי — הישג קטן הוא עדיין הישג.",
+    "helpful_sentence": "אני מתרגל לקבל הכרה על מה שעשיתי, גם מעצמי."
+  },
+  {
+    "id": "pattern_029",
+    "category": "self_doubt",
+    "pattern_name": "future_self_doubt",
+    "example_sentences": [
+      "אני לא מאמין שאני אצליח להתפתח ולהשתנות.",
+      "גם אם אשתדל, אני ספקן לגבי יכולתי לשנות דברים.",
+      "אני חושש שגם בעוד חמש שנים אהיה באותו מקום."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "I am incapable of meaningful growth or change in the future.",
+    "balanced_trait": "growth mindset",
+    "bridge_sentence": "השינוי לא קורה בבת אחת — הוא קורה בצעדים קטנים שכבר התחלת.",
+    "helpful_sentence": "הגרסה העתידית שלי מסוגלת לדברים שעוד אינני מדמיין."
+  },
+  {
+    "id": "pattern_030",
+    "category": "self_doubt",
+    "pattern_name": "validation_dependency",
+    "example_sentences": [
+      "אני צריך שמישהו יגיד לי שעשיתי טוב לפני שאני מרגיש בסדר.",
+      "בלי אישור מבחוץ אני לא יודע אם אני על הדרך הנכונה.",
+      "דעות של אחרים עלי משפיעות עלי יותר מהדעה שלי על עצמי."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I cannot trust my own judgment and need external validation to feel okay.",
+    "balanced_trait": "inner authority",
+    "bridge_sentence": "הקול שבתוכך יודע דברים שאחרים לא יכולים לדעת עבורך.",
+    "helpful_sentence": "אני מתרגל להקשיב לעצמי ולתת לאישור הפנימי שלי להספיק."
+  },
+  {
+    "id": "pattern_031",
+    "category": "rejection",
+    "pattern_name": "relationship_rejection_fear",
+    "example_sentences": [
+      "אני מפחד להתקרב לאנשים כי הם עלולים לעזוב.",
+      "לא אגיד לו שאני מרגישה כי הוא עלול להתרחק.",
+      "עדיף לי לא לפתח רגשות מאשר להיפגע בסוף."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Getting close to people will inevitably lead to rejection and pain.",
+    "balanced_trait": "openness",
+    "bridge_sentence": "קרבה כרוכה בסיכון — אבל הסיכון הוא גם הדרך לחיבור אמיתי.",
+    "helpful_sentence": "אני בוחר לפתוח את עצמי לחיבור, גם אם זה מפחיד."
+  },
+  {
+    "id": "pattern_032",
+    "category": "rejection",
+    "pattern_name": "rejection_hypersensitivity",
+    "example_sentences": [
+      "הוא לא ענה להודעה שלי זמן רב — בטוח כועס עלי.",
+      "ראיתי שהיא לא חייכה אלי ומיד חשבתי שעשיתי משהו לא בסדר.",
+      "רגישות שלי לדחייה גורמת לי לראות אותה בכל מקום."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Any neutral or ambiguous signal from others means they are rejecting me.",
+    "balanced_trait": "emotional regulation",
+    "bridge_sentence": "לאנשים יש ימים קשים, מחשבות שלהם — זה לרוב לא קשור אליך.",
+    "helpful_sentence": "אני יכול לחכות לעובדות לפני שאני מסיק מסקנות על יחס אחרים."
+  },
+  {
+    "id": "pattern_033",
+    "category": "rejection",
+    "pattern_name": "preemptive_self_rejection",
+    "example_sentences": [
+      "אני דוחה את עצמי לפני שהם יספיקו.",
+      "אני אגיד 'לא תודה' לפני שהם יגידו לי.",
+      "אני לא ניגש לאנשים כי אני כבר יודע שהם לא ירצו אותי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I will be rejected, so I should reject myself first to avoid the pain.",
+    "balanced_trait": "self-worth",
+    "bridge_sentence": "הדחייה שאתה מעניק לעצמך לפעמים כואבת יותר מאשר דחייה מבחוץ.",
+    "helpful_sentence": "אני ראוי לנסות — גם אם לא כל ניסיון מצליח."
+  },
+  {
+    "id": "pattern_034",
+    "category": "rejection",
+    "pattern_name": "rejection_as_fundamental_truth",
+    "example_sentences": [
+      "נדחיתי כל כך הרבה פעמים שכבר ברור לי שזה מי שאני.",
+      "הדחייה היא לא מקרה — זה מה שמגיע לי.",
+      "בסוף כולם עוזבים אותי — זה הדפוס שלי."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "Rejection is my destiny and reflects who I fundamentally am.",
+    "balanced_trait": "belonging",
+    "bridge_sentence": "דחיות שחווית בעבר הן חלק מהסיפור שלך — לא כל הסיפור.",
+    "helpful_sentence": "אני פתוח לאפשרות שיש מקומות ואנשים שדווקא רוצים אותי."
+  },
+  {
+    "id": "pattern_035",
+    "category": "rejection",
+    "pattern_name": "social_rejection_fear",
+    "example_sentences": [
+      "אני לא מצטרף לקבוצות חדשות כי מפחד שלא יקבלו אותי.",
+      "בכל מסיבה אני חושש שאני לא ממש שייך.",
+      "אם אגיד את דעתי ייתכן שהם יתרחקו."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "Social groups will not accept me if they truly know me.",
+    "balanced_trait": "belonging",
+    "bridge_sentence": "שייכות לא מגיעה רק כשאתה מתאים — היא מגיעה גם כשאתה מציג את עצמך בכנות.",
+    "helpful_sentence": "יש אנשים שיעריכו אותי בדיוק כפי שאני."
+  },
+  {
+    "id": "pattern_036",
+    "category": "rejection",
+    "pattern_name": "professional_rejection_fear",
+    "example_sentences": [
+      "אני לא שולח קורות חיים כי אני יודע שיסרבו לי.",
+      "אחרי שנדחיתי בראיון אחד, קשה לי לנסות שוב.",
+      "כל דחייה מקצועית מרגישה כמו הוכחה שאני לא מוכשר."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Professional rejection proves I am incompetent and not hireable.",
+    "balanced_trait": "perseverance",
+    "bridge_sentence": "דחייה מקצועית היא לרוב על ה-fit — לא על ערכך כאדם.",
+    "helpful_sentence": "כל 'לא' מקרב אותי ל'כן' הנכון עבורי."
+  },
+  {
+    "id": "pattern_037",
+    "category": "rejection",
+    "pattern_name": "rejection_avoidance",
+    "example_sentences": [
+      "אני נמנע מלבקש דברים כדי לא להסתכן בסירוב.",
+      "עדיף לי לא לנסות מאשר לשמוע 'לא'.",
+      "אני מוותר על צרכים שלי כדי לא לסכן דחייה."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Asking for anything opens me up to rejection which I cannot tolerate.",
+    "balanced_trait": "self-advocacy",
+    "bridge_sentence": "לבקש זה לא חולשה — זה אומץ להגיד מה אתה צריך.",
+    "helpful_sentence": "אני מסוגל לבקש ולקבל 'לא' מבלי שזה יהרוס אותי."
+  },
+  {
+    "id": "pattern_038",
+    "category": "rejection",
+    "pattern_name": "neutral_signals_as_rejection",
+    "example_sentences": [
+      "לא ענה לי מהר — כנראה שהוא לא רוצה לדבר איתי.",
+      "היא נראתה עייפה בשיחה, כנראה שנמאס לה ממני.",
+      "הוא לא שאל אותי שאלות — כנראה לא מעניין לו מה שיש לי לומר."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "When people are not actively warm, they must be rejecting me.",
+    "balanced_trait": "perspective-taking",
+    "bridge_sentence": "ניטרליות היא לא דחייה — לפעמים אנשים פשוט עסוקים בעצמם.",
+    "helpful_sentence": "אני נותן לאחרים את הטובת הספק שאני היית רוצה שיתנו לי."
+  },
+  {
+    "id": "pattern_039",
+    "category": "rejection",
+    "pattern_name": "rejection_shame_spiral",
+    "example_sentences": [
+      "נדחיתי ועכשיו אני מתבייש שבכלל ניסיתי.",
+      "אחרי שאמרו לי לא, השתיקה בתוכי רועמת.",
+      "כשדוחים אותי אני לא רק מרגיש כאב — אני מרגיש בושה עמוקה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Being rejected exposes something fundamentally shameful about who I am.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "דחייה כואבת — אבל היא לא אומרת שיש בך פגם שכולם רואים.",
+    "helpful_sentence": "גם אחרי דחייה, אני שלם ועומד."
+  },
+  {
+    "id": "pattern_040",
+    "category": "rejection",
+    "pattern_name": "rejection_overgeneralization",
+    "example_sentences": [
+      "פעם אחת דחו אותי וזה אומר שכולם תמיד ידחו אותי.",
+      "אחרי שנדחיתי פעם אחת בחברה, הגעתי למסקנה שאני לא ראוי לחברים.",
+      "כישלון אחד מציג לי את כל חיי כישלון."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "One rejection is proof that I will always be rejected by everyone.",
+    "balanced_trait": "nuanced thinking",
+    "bridge_sentence": "דחייה אחת היא נקודת מידע אחת — לא עובדה על כל חייך.",
+    "helpful_sentence": "אני יותר מאירוע אחד, ועתידי לא נקבע על ידו."
+  },
+  {
+    "id": "pattern_041",
+    "category": "procrastination",
+    "pattern_name": "avoidance_delay",
+    "example_sentences": [
+      "אני כל הזמן דוחה דברים שאני לא אוהב לעשות.",
+      "יש משימות שנמצאות ברשימה שלי כבר חודשים.",
+      "ככל שאני לא אוהב משהו, כך יותר קשה לי להתחיל אותו."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Avoiding uncomfortable tasks protects me from distress.",
+    "balanced_trait": "discipline",
+    "bridge_sentence": "ההימנעות לא מסירה את המשימה — היא רק מוסיפה משקל.",
+    "helpful_sentence": "אני יכול לעשות גם דברים לא נעימים ולהרגיש טוב לאחר מכן."
+  },
+  {
+    "id": "pattern_042",
+    "category": "procrastination",
+    "pattern_name": "perfectionism_delay",
+    "example_sentences": [
+      "אני לא מתחיל כי עדיין לא מצאתי את הדרך המושלמת לעשות זאת.",
+      "אם אעשה את זה, אני רוצה שיהיה מושלם — לכן אני מחכה.",
+      "כשתנאים יהיו מושלמים, אז אתחיל."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "It is better to not start than to produce something imperfect.",
+    "balanced_trait": "action",
+    "bridge_sentence": "מושלם הוא אויב של טוב מספיק — מה אפשר לעשות היום, גם בלי שיהיה שלם?",
+    "helpful_sentence": "אני מתחיל, ומתקן בדרך — זה איך דברים נבנים."
+  },
+  {
+    "id": "pattern_043",
+    "category": "procrastination",
+    "pattern_name": "overwhelm_delay",
+    "example_sentences": [
+      "המשימה כל כך גדולה שאני לא יודע מאיפה להתחיל.",
+      "כשאני רואה כמה יש לעשות, אני פשוט מוותר.",
+      "המחשבה על כל הצעדים גורמת לי ללכת לישון."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "The task is too big to start and I will never be able to finish it.",
+    "balanced_trait": "incremental action",
+    "bridge_sentence": "לא צריך לאכול את כל העוגה בבת אחת — איזה ביס קטן אפשר לקחת עכשיו?",
+    "helpful_sentence": "אני מפרק את הגדול לקטן, ומתחיל עם צעד אחד."
+  },
+  {
+    "id": "pattern_044",
+    "category": "procrastination",
+    "pattern_name": "fear_based_delay",
+    "example_sentences": [
+      "אני לא מתחיל כי פוחד ממה שיקרה אם אכשל.",
+      "הפחד מהתוצאה מקפיא אותי — אז אני פשוט לא עושה.",
+      "כל עוד לא התחלתי, אני עוד יכול לחלום שזה יצליח."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Not starting protects the dream from the risk of failure.",
+    "balanced_trait": "courage",
+    "bridge_sentence": "להתחיל זה לוותר על אשליה ולבחור במציאות — וזה אמיץ.",
+    "helpful_sentence": "אני בוחר לנוע גם כשאני מפחד, כי זה המקום שבו גדילה קורית."
+  },
+  {
+    "id": "pattern_045",
+    "category": "procrastination",
+    "pattern_name": "decision_delay",
+    "example_sentences": [
+      "אני לא מצליח להחליט, ולכן לא עושה כלום.",
+      "ההתלבטות כל כך ממושכת עד שבסוף הזמן עובר.",
+      "אני מחכה להחלטה מושלמת ובינתיים המשימה ממתינה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I must make the perfect decision before I can act.",
+    "balanced_trait": "decisiveness",
+    "bridge_sentence": "לפעמים להחליט ולהתקדם שווה יותר מלחכות להחלטה נכונה.",
+    "helpful_sentence": "אני יכול להחליט עכשיו, ולתקן את הכיוון אחר כך אם צריך."
+  },
+  {
+    "id": "pattern_046",
+    "category": "procrastination",
+    "pattern_name": "energy_depletion_delay",
+    "example_sentences": [
+      "אני תמיד עייף מדי לעשות את הדברים החשובים.",
+      "אחרי העבודה אין לי כוח לשום דבר אחר.",
+      "אני מחכה לרגע שתהיה לי אנרגיה — הוא אף פעם לא מגיע."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "I need to feel energized and ready before I can take action.",
+    "balanced_trait": "consistency",
+    "bridge_sentence": "מוטיבציה לא תמיד מגיעה לפני פעולה — לפעמים הפעולה יוצרת את המוטיבציה.",
+    "helpful_sentence": "אני מסוגל להתחיל גם כשהמצב רוח לא מושלם."
+  },
+  {
+    "id": "pattern_047",
+    "category": "procrastination",
+    "pattern_name": "distraction_loop",
+    "example_sentences": [
+      "ישבתי לעבוד אבל בסוף בדקתי טלפון שעה שלמה.",
+      "אני מתחיל ואז מוצא משהו אחר שנראה יותר מעניין.",
+      "יש לי רשימה ארוכה אבל הסלון צריך סידור דחוף."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Distractions are more appealing and less threatening than the task at hand.",
+    "balanced_trait": "focus",
+    "bridge_sentence": "הסחת הדעת היא לפעמים מנגנון מילוט מהמשימה הקשה — אפשר לבחור אחרת.",
+    "helpful_sentence": "אני מסוגל להישאר ממוקד לפרק זמן קצר ולהרגיש את ההשפעה."
+  },
+  {
+    "id": "pattern_048",
+    "category": "procrastination",
+    "pattern_name": "self_sabotage_delay",
+    "example_sentences": [
+      "אני כל כך קרוב לסיום ואז משהו בי מפריע.",
+      "לפני הגשה חשובה אני תמיד מוצא דרך להסתבך.",
+      "אני חושב שאני עושה את זה לעצמי בכוונה, גם אם לא מבין למה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I do not deserve to succeed, so I undermine myself before I can.",
+    "balanced_trait": "self-support",
+    "bridge_sentence": "חבלה עצמית לפעמים מגנה אותנו מפחד הצלחה — גם זה אפשר לשנות.",
+    "helpful_sentence": "אני בוחר לתמוך בעצמי ולתת לעצמי להצליח."
+  },
+  {
+    "id": "pattern_049",
+    "category": "procrastination",
+    "pattern_name": "deadline_crisis_only",
+    "example_sentences": [
+      "אני מצליח לעבוד רק כשיש לחץ אמיתי של דד-ליין.",
+      "בלי לחץ אני פשוט לא מצליח לזוז.",
+      "שעות לפני ההגשה אני הכי פרודוקטיבי — זה לא בריא."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I can only function under extreme pressure and I cannot trust myself otherwise.",
+    "balanced_trait": "proactivity",
+    "bridge_sentence": "עבודה תחת לחץ קיצוני אפשרית — אבל היא גובה מחיר מגוף ונפש.",
+    "helpful_sentence": "אני מתרגל לפעול לפני שהלחץ מגיע, צעד קטן בכל יום."
+  },
+  {
+    "id": "pattern_050",
+    "category": "procrastination",
+    "pattern_name": "chronic_postponement",
+    "example_sentences": [
+      "אני כבר שנים אומר שאעשה את זה ולא עושה.",
+      "הרשימה שלי לא גדלה — היא רק מתרחקת.",
+      "אחרים מתקדמים בזמן שאני עדיין מדבר על מה שאני הולך לעשות."
+    ],
+    "emotion": "guilt",
+    "limiting_belief": "I am fundamentally lazy and incapable of following through on my intentions.",
+    "balanced_trait": "follow-through",
+    "bridge_sentence": "דחיינות כרונית לרוב מגיעה מפחד, לא מעצלות — ומפחד אפשר לצאת.",
+    "helpful_sentence": "אני בוחר לעשות היום דבר אחד שדחיתי — ולראות מה קורה."
+  },
+  {
+    "id": "pattern_051",
+    "category": "perfectionism",
+    "pattern_name": "all_or_nothing",
+    "example_sentences": [
+      "אם אני לא יכול לעשות את זה נכון לגמרי, אין טעם בכלל.",
+      "עשיתי טעות אחת וזה הרס לי את כל היום.",
+      "אם אני לא אגיע לכל האימונים, לא כדאי שאתחיל בכלל."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "Partial effort or partial success has no value.",
+    "balanced_trait": "flexibility",
+    "bridge_sentence": "גם 70% זה ביצוע. גם ניסיון לא שלם שווה יותר מאפס.",
+    "helpful_sentence": "אני מעריך את המאמץ שלי גם כשהתוצאה לא מושלמת."
+  },
+  {
+    "id": "pattern_052",
+    "category": "perfectionism",
+    "pattern_name": "imperfection_paralysis",
+    "example_sentences": [
+      "אני לא שולח את הפרויקט כי עדיין לא מושלם.",
+      "ישבתי שעות על האימייל כי רציתי שיצא בדיוק נכון.",
+      "לא אביא את העוגה לעבודה כי יש לה פגם קטן."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Sharing imperfect work exposes me to judgment and rejection.",
+    "balanced_trait": "release",
+    "bridge_sentence": "שחרור עבודה לא מושלמת דורש אומץ — ואנשים מגיבים לאנושיות, לא לשלמות.",
+    "helpful_sentence": "אני שולח, מציג ומשתף — גם כשיש עוד מה לשפר."
+  },
+  {
+    "id": "pattern_053",
+    "category": "perfectionism",
+    "pattern_name": "harsh_self_criticism",
+    "example_sentences": [
+      "עשיתי טעות קטנה ואני עוד מכה את עצמי על זה שבועות.",
+      "אני לא סולח לעצמי על כישלונות, גם קטנים.",
+      "אחרים עוברים הלאה — אני נשאר תקוע עם הביקורת שלי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I must punish myself harshly for mistakes to prevent them from happening again.",
+    "balanced_trait": "self-forgiveness",
+    "bridge_sentence": "ביקורת עצמית קשה לא מלמדת — היא מחלישה. חמלה עצמית מלמדת.",
+    "helpful_sentence": "אני מתרגל לסלוח לעצמי ולמשוך ממנה לקחים בעדינות."
+  },
+  {
+    "id": "pattern_054",
+    "category": "perfectionism",
+    "pattern_name": "perfectionism_blocks_starting",
+    "example_sentences": [
+      "לא אתחיל לכתוב עד שיהיה לי רעיון מושלם.",
+      "אני ממתין לתנאים מושלמים שלעולם לא מגיעים.",
+      "כשאני יודע מה אני רוצה — רק אז אתחיל."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Starting imperfectly is worse than not starting at all.",
+    "balanced_trait": "initiation",
+    "bridge_sentence": "הרעיון המושלם לא מגיע לפני הכתיבה — הוא מגיע בתוכה.",
+    "helpful_sentence": "אני מתחיל עם מה שיש ונותן לתהליך לעצב את הכיוון."
+  },
+  {
+    "id": "pattern_055",
+    "category": "perfectionism",
+    "pattern_name": "exhaustion_from_standards",
+    "example_sentences": [
+      "אני כל כך עייף מהניסיון לעשות הכל כמו שצריך.",
+      "הסטנדרטים שלי גבוהים כל כך עד שאני תמיד נכשל בהם.",
+      "שומרתי על הכל בסדר כה רב — ועכשיו אין לי כוח."
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "I must maintain perfect standards at all times or I will fall apart.",
+    "balanced_trait": "rest",
+    "bridge_sentence": "להוריד את הסטנדרטים פעמים אחדות לא אומר שאתה מוותר — אומר שאתה מתחדש.",
+    "helpful_sentence": "אני מרשה לעצמי לנוח ולהיות פחות מושלם לעיתים."
+  },
+  {
+    "id": "pattern_056",
+    "category": "perfectionism",
+    "pattern_name": "never_satisfied",
+    "example_sentences": [
+      "גם כשיוצא טוב, אני תמיד רואה מה אפשר היה לשפר.",
+      "אף פעם לא מרגיש שסיימתי — תמיד יש עוד.",
+      "הצלחה מביאה רגע של שמחה ואז מיד אני מחפש את הבא."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "Nothing I produce is ever truly good enough.",
+    "balanced_trait": "satisfaction",
+    "bridge_sentence": "לעצור ולהגיד 'עשיתי טוב' הוא מיומנות שאפשר ללמוד.",
+    "helpful_sentence": "אני מתרגל לעצור ולהכיר בטוב שעשיתי, לפני שאני ממשיך."
+  },
+  {
+    "id": "pattern_057",
+    "category": "perfectionism",
+    "pattern_name": "ideal_comparison_trap",
+    "example_sentences": [
+      "אני משווה את עצמי לגרסה האידיאלית שלי ותמיד מפסיד.",
+      "הגרסה הדמיונית שלי היה עושה את זה הרבה יותר טוב.",
+      "יש לי ציפיות ממני שאף אחד לא יכול לעמוד בהן."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "My ideal self is the only acceptable version of me.",
+    "balanced_trait": "self-acceptance",
+    "bridge_sentence": "הגרסה האידיאלית היא מצפן, לא שופטת — היא שם לכוון, לא לגנות.",
+    "helpful_sentence": "אני מקבל את הגרסה הנוכחית שלי תוך שאני מתפתח."
+  },
+  {
+    "id": "pattern_058",
+    "category": "perfectionism",
+    "pattern_name": "performance_perfectionism",
+    "example_sentences": [
+      "אחרי כל הצגה אני מפרק לפרטים מה לא עבד.",
+      "אני לא מרגיש שיכול לנוח אחרי ביצוע עד שאני עובר על כל טעות.",
+      "אנשים מחאו כפיים אבל אני חשבתי על כל הדברים שאפשר היה לשפר."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "My performance must be flawless or it reflects poorly on my entire worth.",
+    "balanced_trait": "presence",
+    "bridge_sentence": "ניתוח אחרי ביצוע הוא טוב — ניתוח אובססיבי גוזל את השמחה שמגיע לך.",
+    "helpful_sentence": "אני מרשה לעצמי לחגוג את הביצוע לפני שאני מנתח אותו."
+  },
+  {
+    "id": "pattern_059",
+    "category": "perfectionism",
+    "pattern_name": "appearance_perfectionism",
+    "example_sentences": [
+      "אני לא יוצא מהבית עד שאני נראה בדיוק כמו שאני רוצה.",
+      "שעה שלמה בחרתי בגדים כי שום דבר לא נראה נכון.",
+      "אם הגוף שלי לא נראה כמו שהייתי רוצה, אני לא נוח בחברה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I must look perfect or others will judge and reject me.",
+    "balanced_trait": "body confidence",
+    "bridge_sentence": "אנשים רואים אותך — לא רק את המראה שלך.",
+    "helpful_sentence": "אני יוצא לעולם עם הגוף שיש לי עכשיו ומרגיש בסדר עם זה."
+  },
+  {
+    "id": "pattern_060",
+    "category": "perfectionism",
+    "pattern_name": "social_perfectionism",
+    "example_sentences": [
+      "אחרי כל שיחה אני עובר בראש מה אמרתי לא בסדר.",
+      "אני מתכנן מה להגיד לפני שיחות חשובות כדי שיצא מושלם.",
+      "פחד שאגיד משהו שגוי גורם לי לשתוק."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Social interactions must be perfect or people will think less of me.",
+    "balanced_trait": "spontaneity",
+    "bridge_sentence": "שיחות אמיתיות כוללות טעויות ועכבות — זה מה שגורם להן להרגיש אנושיות.",
+    "helpful_sentence": "אני נוכח בשיחה ומרשה לעצמי להיות אנושי ולא מתוכנן."
+  },
+  {
+    "id": "pattern_061",
+    "category": "loneliness",
+    "pattern_name": "isolation_feeling",
+    "example_sentences": [
+      "אני מרגיש לבד גם כשאני בחדר מלא אנשים.",
+      "יש לי חברים אבל עדיין מרגיש שאיש לא ממש מכיר אותי.",
+      "הבדידות לא קשורה למספר האנשים — היא קשורה לתחושת חיבור."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "I am fundamentally alone and no one truly knows or understands me.",
+    "balanced_trait": "connection",
+    "bridge_sentence": "בדידות לפעמים היא איתות שאתה צמא לחיבור עמוק — וזה ניתן.",
+    "helpful_sentence": "אני פתוח לחיבורים אמיתיים שמגיעים מנוכחות ומפגיעות."
+  },
+  {
+    "id": "pattern_062",
+    "category": "loneliness",
+    "pattern_name": "invisible_in_crowd",
+    "example_sentences": [
+      "הרגשתי בכל המסיבה שאני שקוף.",
+      "הם מדברים סביבי ולא אלי.",
+      "לא משנה כמה אנשים יש — הם לא רואים אותי."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "I am invisible and not worthy of others' attention or interest.",
+    "balanced_trait": "visibility",
+    "bridge_sentence": "ריאויות לפעמים מתחילה בצעד קטן — שאלה אחת, מחווה אחת.",
+    "helpful_sentence": "אני ראוי להיראות ולהיות מוכר, ואני מתחיל בהראות את עצמי."
+  },
+  {
+    "id": "pattern_063",
+    "category": "loneliness",
+    "pattern_name": "deep_connection_longing",
+    "example_sentences": [
+      "אני כמה לשיחות עמוקות שבהן ממש מרגישים נראים.",
+      "יש לי הרבה היכרויות אבל לא חיבורים אמיתיים.",
+      "אני לא זוכר מתי לאחרונה ישבתי עם מישהו ובאמת דיברנו."
+    ],
+    "emotion": "longing",
+    "limiting_belief": "Deep connection is not available to me and I will always be on the surface.",
+    "balanced_trait": "depth",
+    "bridge_sentence": "חיבור עמוק מתחיל בפגיעות — ואתה כבר מוכן לכך יותר ממה שאתה חושב.",
+    "helpful_sentence": "אני מסוגל ליצור ולקבל חיבורים עמוקים ואמיתיים."
+  },
+  {
+    "id": "pattern_064",
+    "category": "loneliness",
+    "pattern_name": "chronic_misunderstood",
+    "example_sentences": [
+      "אנשים לא מבינים אותי — גם כשאני מסביר.",
+      "לפעמים מרגיש שאני מדבר שפה אחרת מכולם.",
+      "ויתרתי על הסבר עצמי כי זה עייף."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "I am too different or complex to ever be truly understood.",
+    "balanced_trait": "expression",
+    "bridge_sentence": "מישהו בעולם מרגיש בדיוק כמוך — אולי הוא רק עדיין לא הגיע אליך.",
+    "helpful_sentence": "יש אנשים שיכולים להבין אותי — וחיפושם שווה את המאמץ."
+  },
+  {
+    "id": "pattern_065",
+    "category": "loneliness",
+    "pattern_name": "social_disconnection",
+    "example_sentences": [
+      "אני נמצא בקבוצות חברתיות אבל מרגיש מחוץ להן.",
+      "אנשים נהנים ואני מסתכל עליהם ולא מרגיש חלק.",
+      "שייכות חברתית מרגישה לי כמו דבר שאחרים יודעים לעשות ואני לא."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "I do not know how to belong and am always an outsider.",
+    "balanced_trait": "belonging",
+    "bridge_sentence": "שייכות לא תמיד מגיעה מטבע הדברים — לפעמים צריך לבנות אותה.",
+    "helpful_sentence": "אני בונה שייכות על ידי הצעד הקטן הבא — שיחה, חיוך, הזמנה."
+  },
+  {
+    "id": "pattern_066",
+    "category": "loneliness",
+    "pattern_name": "lonely_in_relationship",
+    "example_sentences": [
+      "אני בזוגיות ועדיין מרגיש בודד.",
+      "יש לנו שגרה אבל החיבור העמוק נעלם.",
+      "אני לא מרגיש שהוא ממש מכיר אותי — גם אחרי שנים."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "I am destined to be alone even when I am with someone.",
+    "balanced_trait": "intimacy",
+    "bridge_sentence": "בדידות בתוך זוגיות היא איתות — לא גזר דין. היא מזמינה שיחה.",
+    "helpful_sentence": "אני יכול לבקש חיבור עמוק — גם מתוך מערכת יחסים קיימת."
+  },
+  {
+    "id": "pattern_067",
+    "category": "loneliness",
+    "pattern_name": "existential_solitude",
+    "example_sentences": [
+      "בסופו של דבר כל אחד לבד עם עצמו.",
+      "אפילו כשיש לי אנשים, יש חלק בי שאף אחד לא יגיע אליו.",
+      "בדידות הקיומית שלי מרגישה כמו עובדה בסיסית."
+    ],
+    "emotion": "sadness",
+    "limiting_belief": "The core of who I am is unreachable and I will always be alone inside.",
+    "balanced_trait": "inner peace",
+    "bridge_sentence": "בדידות קיומית יכולה להיות מקור של עומק — לא רק של כאב.",
+    "helpful_sentence": "אני מסוגל להיות עם עצמי בשלום, ועדיין לרצות ולקבל חיבור."
+  },
+  {
+    "id": "pattern_068",
+    "category": "loneliness",
+    "pattern_name": "new_environment_loneliness",
+    "example_sentences": [
+      "עברתי עיר ואיני מכיר אף אחד.",
+      "הצטרפתי לעבודה חדשה ואני מרגיש זר.",
+      "כולם כבר יש להם חברים ואני מתחיל מאפס."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "Starting over socially is too hard and I will never fit in.",
+    "balanced_trait": "adaptability",
+    "bridge_sentence": "כולם היו פעם חדשים — וכולם בנו שייכות לאט לאט.",
+    "helpful_sentence": "אני מסוגל לבנות קשרים חדשים, גם אם לוקח זמן."
+  },
+  {
+    "id": "pattern_069",
+    "category": "loneliness",
+    "pattern_name": "grief_loneliness",
+    "example_sentences": [
+      "מאז שהוא נפטר אני מרגיש בדידות שאף אחד לא מבין.",
+      "אנשים ממשיכים עם חייהם ואני עדיין כאן תקוע בכאב.",
+      "הבדידות שלי אחרי האובדן לא נגמרת."
+    ],
+    "emotion": "grief",
+    "limiting_belief": "No one can understand my grief and I must carry this loneliness alone.",
+    "balanced_trait": "shared grief",
+    "bridge_sentence": "אבל הוא הכי אישי שיש — אבל הוא לא חייב להיות הכי בודד שיש.",
+    "helpful_sentence": "יש אנשים שיכולים לשבת איתי בתוך הכאב — אני לא חייב לשאתו לבד."
+  },
+  {
+    "id": "pattern_070",
+    "category": "loneliness",
+    "pattern_name": "digital_age_loneliness",
+    "example_sentences": [
+      "יש לי מאות חברים ברשת ועדיין מרגיש בודד.",
+      "אנחנו מחוברים תמיד לכולם ועדיין אין לי מישהו לדבר אליו.",
+      "לייקים ותגובות לא ממלאים את הצורך שלי בחיבור אמיתי."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "Digital connection can replace real intimacy, but since it does not, I must be broken.",
+    "balanced_trait": "presence",
+    "bridge_sentence": "חיבור דיגיטלי הוא תוספת — לא תחליף. הכמיהה שלך לאמיתי היא בריאה.",
+    "helpful_sentence": "אני מחפש חיבורים פנים אל פנים שמזינים אותי באמת."
+  },
+  {
+    "id": "pattern_071",
+    "category": "lack_of_control",
+    "pattern_name": "control_loss_fear",
+    "example_sentences": [
+      "אני מפחד ממצבים שאני לא שולט בהם.",
+      "כשהדברים לא הולכים לפי התוכנית אני מתפרק.",
+      "חוסר שליטה מרגיש לי כמו סכנה ממשית."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Without control, everything will fall apart and I will not be safe.",
+    "balanced_trait": "trust",
+    "bridge_sentence": "חלק מהחיים הוא מחוץ לשליטה — ואנחנו מסוגלים לשרוד ואף לשגשג בתוך זה.",
+    "helpful_sentence": "אני מסוגל לשחרר שליטה חלקית ועדיין להרגיש בטוח."
+  },
+  {
+    "id": "pattern_072",
+    "category": "lack_of_control",
+    "pattern_name": "unpredictability_anxiety",
+    "example_sentences": [
+      "אי ידיעה מה יקרה מחר גורמת לי לחרדה.",
+      "אני לא מצליח לנוח כשיש לי שאלות פתוחות.",
+      "שינויים לא מתוכננים מטרידים אותי כל כך."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Unpredictability is dangerous and must be eliminated.",
+    "balanced_trait": "adaptability",
+    "bridge_sentence": "הפתעות לא תמיד רעות — לפעמים הכי טוב שקרה לנו לא תוכנן.",
+    "helpful_sentence": "אני מתרגל לשבת עם אי-ודאות ולא לאבד את עצמי בתוכה."
+  },
+  {
+    "id": "pattern_073",
+    "category": "lack_of_control",
+    "pattern_name": "external_locus_of_control",
+    "example_sentences": [
+      "מה שקורה לי תלוי במזל ובאחרים, לא בי.",
+      "אני לא יכול לשנות כלום — זה פשוט ככה.",
+      "החיים שלי נשלטים על ידי נסיבות חיצוניות."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "My life is controlled by external forces and I have no real agency.",
+    "balanced_trait": "agency",
+    "bridge_sentence": "גם בתוך מגבלות קיימות בחירות — ולו הקטנות ביותר.",
+    "helpful_sentence": "אני בוחר כיצד להגיב, ובכך יש לי כוח אמיתי."
+  },
+  {
+    "id": "pattern_074",
+    "category": "lack_of_control",
+    "pattern_name": "learned_helplessness",
+    "example_sentences": [
+      "ניסיתי לשנות כמה פעמים ולא עבד — אז למה לנסות שוב?",
+      "אני כבר ויתרתי על הרעיון שאני יכול להשפיע.",
+      "כל ניסיון שלי להשתנות נגמר באותו מקום."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "My efforts to change are futile because nothing I do makes a difference.",
+    "balanced_trait": "persistence",
+    "bridge_sentence": "נסיונות שלא הצליחו לא מוכיחים שכישלון הוא גורל — הם מוכיחים שניסית.",
+    "helpful_sentence": "כל ניסיון חדש הוא הזדמנות ללמוד משהו שהפעם הקודמת לא לימד."
+  },
+  {
+    "id": "pattern_075",
+    "category": "lack_of_control",
+    "pattern_name": "chaos_intolerance",
+    "example_sentences": [
+      "אני לא מסוגל לתפקד כשהכל מבולגן.",
+      "כשהסביבה שלי לא מסודרת, ראשי מפסיק לעבוד.",
+      "הכאוס מסביב גורם לי לרצות לסגת ולא לעשות כלום."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Chaos is intolerable and I cannot function without perfect order.",
+    "balanced_trait": "tolerance",
+    "bridge_sentence": "חלק מהחיים הוא תמיד קצת כאוטי — ואפשר ללמוד לעבוד בתוכו.",
+    "helpful_sentence": "אני מסוגל לפעול גם בסביבה לא מושלמת."
+  },
+  {
+    "id": "pattern_076",
+    "category": "lack_of_control",
+    "pattern_name": "outcome_control_need",
+    "example_sentences": [
+      "אם אני לא יכול לשלוט בתוצאה, אני מעדיף לא להשתתף.",
+      "קשה לי להשקיע בדברים שהתוצאה שלהם לא ברורה.",
+      "אני עובד קשה כדי להבטיח שדברים ייצאו כמו שרציתי."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I can only feel safe if I can guarantee the outcome.",
+    "balanced_trait": "detachment",
+    "bridge_sentence": "אתה יכול לשלוט בניסיון — לא תמיד בתוצאה. וזה מספיק.",
+    "helpful_sentence": "אני משקיע את הטוב שלי בתהליך ומשחרר את התוצאה."
+  },
+  {
+    "id": "pattern_077",
+    "category": "lack_of_control",
+    "pattern_name": "over_planning_for_control",
+    "example_sentences": [
+      "אני מתכנן כל כך הרבה כדי לא להיות מופתע.",
+      "אני צריך לדעת כל פרט לפני שאני יכול להתקדם.",
+      "תוכנית ב' ו-ג' ו-ד' — כי מה אם התוכנית הראשונה לא תעבוד?"
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Thorough planning can eliminate all risk and protect me from harm.",
+    "balanced_trait": "spontaneity",
+    "bridge_sentence": "תכנון יתר יכול להיות צורת חרדה בתחפושת — גם האלתור הוא כוח.",
+    "helpful_sentence": "אני סומך על עצמי לאלתר ולהתאים כשהתוכנית משתנה."
+  },
+  {
+    "id": "pattern_078",
+    "category": "lack_of_control",
+    "pattern_name": "micromanagement_self",
+    "example_sentences": [
+      "אני שולט בכל פרט קטן של חיי כי פחד שמשהו ייצא לא כמו שצריך.",
+      "אני בודק ובודק שוב את אותם דברים.",
+      "לא מסוגל לאצול משימות כי חושש שלא ייעשו נכון."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "If I do not monitor everything closely, something will go catastrophically wrong.",
+    "balanced_trait": "delegation",
+    "bridge_sentence": "שחרור קצת שליטה לא אומר שאתה מוותר — לפעמים זה מה שמאפשר צמיחה.",
+    "helpful_sentence": "אני סומך על אחרים ועל התהליך ומשחרר בהדרגה."
+  },
+  {
+    "id": "pattern_079",
+    "category": "lack_of_control",
+    "pattern_name": "loss_of_agency",
+    "example_sentences": [
+      "אני מרגיש שאני חסר אונים מול הנסיבות.",
+      "דברים קורים לי — אני לא עושה אותם.",
+      "הרגשתי שלא היה לי שום בחירה בכל הסיפור הזה."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "I have no real choices and life is happening to me, not through me.",
+    "balanced_trait": "empowerment",
+    "bridge_sentence": "גם במצבים קשים — יש לך שליטה על הדרך שבה אתה מגיב.",
+    "helpful_sentence": "אני בוחר את עמדתי, ובזה יש לי כוח."
+  },
+  {
+    "id": "pattern_080",
+    "category": "lack_of_control",
+    "pattern_name": "future_uncertainty_spiral",
+    "example_sentences": [
+      "אני לא מצליח להפסיק לחשוב על כל מה שיכול להשתבש בעתיד.",
+      "מחשבות על עתיד לא בטוח שוכבות איתי בלילה.",
+      "ככל שאני מנסה לתכנן, כך מצא יותר דברים שאני לא יכול לשלוט בהם."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "The future is inherently threatening and I must prepare for every possible disaster.",
+    "balanced_trait": "present-focus",
+    "bridge_sentence": "העתיד מכיל אפשרויות טובות ממש כמו אתגרים — המחשבה בוחרת היכן להתמקד.",
+    "helpful_sentence": "אני בוחר לחיות את היום הזה במקום לחיות בעתיד שעוד לא קרה."
+  },
+  {
+    "id": "pattern_081",
+    "category": "hopelessness",
+    "pattern_name": "future_hopelessness",
+    "example_sentences": [
+      "אני לא רואה עתיד טוב לעצמי.",
+      "לא משנה מה אעשה, הדברים לא ישתפרו.",
+      "קשה לי לדמיין את עצמי מאושר בעוד שנה."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "The future holds nothing positive for me and things will not improve.",
+    "balanced_trait": "hope",
+    "bridge_sentence": "חוסר תקווה הוא תחושה, לא עובדה — ותחושות משתנות.",
+    "helpful_sentence": "אני פותח אפילו רק סדק קטן לאפשרות שדברים יכולים להשתפר."
+  },
+  {
+    "id": "pattern_082",
+    "category": "hopelessness",
+    "pattern_name": "patterns_never_change",
+    "example_sentences": [
+      "זה תמיד ככה ויהיה תמיד ככה.",
+      "אני חוזר על אותן טעויות כבר שנים.",
+      "הדפוסים שלי קבועים — אני לא יכול לשנות אותם."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "My patterns are permanent and I am incapable of real change.",
+    "balanced_trait": "growth",
+    "bridge_sentence": "הדפוסים נוצרו פעם אחת — הם לא חקוקים. מה שנלמד אפשר לשנות.",
+    "helpful_sentence": "אני מסוגל לשנות דפוסים לאט ובעקביות."
+  },
+  {
+    "id": "pattern_083",
+    "category": "hopelessness",
+    "pattern_name": "effort_feels_futile",
+    "example_sentences": [
+      "לא משנה כמה אני מנסה — זה לא עוזר.",
+      "השקעתי כל כך הרבה ולא ראיתי תוצאות.",
+      "מה הטעם להמשיך לנסות?"
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "No amount of effort will make a difference so why try.",
+    "balanced_trait": "persistence",
+    "bridge_sentence": "לפעמים המאמץ עובד מתחת לפני השטח — לפני שרואים אותו.",
+    "helpful_sentence": "כל מאמץ שאני משקיע נוגע במשהו, גם אם לא ניכר מיד."
+  },
+  {
+    "id": "pattern_084",
+    "category": "hopelessness",
+    "pattern_name": "permanently_stuck",
+    "example_sentences": [
+      "אני תקוע במקום הזה ולא רואה דרך לצאת.",
+      "תחושת התקיעות שלי היא כל כך עמוקה שהיא מרגישה קבועה.",
+      "כל כיוון שאני מנסה מוביל לאותו מקום."
+    ],
+    "emotion": "helplessness",
+    "limiting_belief": "I am permanently stuck and no path forward exists for me.",
+    "balanced_trait": "movement",
+    "bridge_sentence": "תקיעות היא לרוב עייפות שמחפשת כיוון — לא מצב קבוע.",
+    "helpful_sentence": "אני יכול לצאת מהתקיעות בצעד אחד קטן לצד, לא רק קדימה."
+  },
+  {
+    "id": "pattern_085",
+    "category": "hopelessness",
+    "pattern_name": "failure_history_predicts_future",
+    "example_sentences": [
+      "כישלתי בעבר — לכן ייכשל גם בעתיד.",
+      "הרצף של הכישלונות שלי מוכיח שלא מגיע לי להצליח.",
+      "ההיסטוריה שלי היא מרשם לעתידי."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "My past failures are evidence that future success is impossible for me.",
+    "balanced_trait": "fresh start",
+    "bridge_sentence": "ההיסטוריה מלמדת — אבל היא לא כותבת את הפרק הבא.",
+    "helpful_sentence": "כל יום הוא הזדמנות חדשה שלא נכתבה עדיין."
+  },
+  {
+    "id": "pattern_086",
+    "category": "hopelessness",
+    "pattern_name": "change_feels_impossible",
+    "example_sentences": [
+      "אני לא מאמין שדברים יכולים להיות אחרת.",
+      "שמעתי את זה כל כך הרבה פעמים שיכול להשתנות — אבל לא האמנתי.",
+      "שינוי מרגיש כמו דבר שקורה לאחרים, לא לי."
+    ],
+    "emotion": "hopelessness",
+    "limiting_belief": "Change is possible for others but not for someone like me.",
+    "balanced_trait": "belief",
+    "bridge_sentence": "שינוי לא קורה בבת אחת — הוא לפעמים כל כך הדרגתי שלא רואים אותו עד אחר כך.",
+    "helpful_sentence": "אני פתוח לאפשרות שאני משתנה, גם אם הוא לא נראה לי עכשיו."
+  },
+  {
+    "id": "pattern_087",
+    "category": "hopelessness",
+    "pattern_name": "happiness_unattainable",
+    "example_sentences": [
+      "אושר הוא לא משהו שמיועד לאנשים כמוני.",
+      "כבר ויתרתי על הרעיון שאני יכול להיות מאושר.",
+      "נראה לי שמאושר כמו שאחרים הוא פשוט מחוץ לטווח שלי."
+    ],
+    "emotion": "sadness",
+    "limiting_belief": "Happiness is not available to me and I have given up expecting it.",
+    "balanced_trait": "joy",
+    "bridge_sentence": "אושר לא מגיע כסטייק גדול — הוא מגיע ברגעים קטנים שאפשר לחפש.",
+    "helpful_sentence": "אני מחפש ומכיר ברגעי שמחה קטנים, גם ביום רגיל."
+  },
+  {
+    "id": "pattern_088",
+    "category": "hopelessness",
+    "pattern_name": "recovery_feels_impossible",
+    "example_sentences": [
+      "עברתי כל כך הרבה שאני לא מאמין שאוכל להתאושש.",
+      "הכאב הזה נראה קבוע ואין דרך לצאת ממנו.",
+      "ניסיתי הכל ושום דבר לא עוזר, אני נשבר."
+    ],
+    "emotion": "grief",
+    "limiting_belief": "אני שבור מדי ממה שעברתי כדי שאוכל אי פעם להחלים.",
+    "balanced_trait": "healing",
+    "bridge_sentence": "ריפוי לא אומר לשכוח מה שהיה — הוא אומר שנלמד לשאת את זה בצורה אחרת, קלה יותר.",
+    "helpful_sentence": "גם לאחר פצע עמוק, גוף ונפש יודעים לרפא עצמם בזמן שלהם."
+  },
+  {
+    "id": "pattern_089",
+    "category": "hopelessness",
+    "pattern_name": "meaning_loss",
+    "example_sentences": [
+      "אני לא מוצא טעם במה שאני עושה.",
+      "כל כך קשה לי לקום בבוקר כי אין לי למה.",
+      "פעם ידעתי מה חשוב לי — עכשיו הכל נראה ריק."
+    ],
+    "emotion": "emptiness",
+    "limiting_belief": "Nothing has meaning and there is no reason to invest in anything.",
+    "balanced_trait": "purpose",
+    "bridge_sentence": "משמעות לא תמיד קיימת — לפעמים צריך ליצור אותה בצעדים קטנים.",
+    "helpful_sentence": "אני מחפש פיסות קטנות של משמעות שעוד חיות בתוכי."
+  },
+  {
+    "id": "pattern_090",
+    "category": "hopelessness",
+    "pattern_name": "resigned_to_fate",
+    "example_sentences": [
+      "זה הגורל שלי ואין מה לעשות.",
+      "ויתרתי — ככה זה פשוט.",
+      "כבר לא מנסה לשנות כי מה שנכתב — נכתב."
+    ],
+    "emotion": "resignation",
+    "limiting_belief": "My fate is fixed and resistance or effort is pointless.",
+    "balanced_trait": "agency",
+    "bridge_sentence": "ויתור לפעמים הוא מנוחה — לא גורל. אחרי המנוחה, אפשר לבחור שוב.",
+    "helpful_sentence": "גם אם הכל מרגיש קבוע — אני בוחר לנסות שוב."
+  },
+  {
+    "id": "pattern_091",
+    "category": "identity_confusion",
+    "pattern_name": "role_confusion",
+    "example_sentences": [
+      "אני לא יודע מי אני מחוץ לתפקידים שלי.",
+      "כשאני לא עובד, לא הורה ולא חבר — מי אני?",
+      "הרגשתי שאיבדתי את עצמי בתוך כל הדברים שאני עושה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "Without my roles I have no identity of my own.",
+    "balanced_trait": "selfhood",
+    "bridge_sentence": "אתה קיים מעבר לתפקידים שאתה ממלא — מי אתה כשאף אחד לא מסתכל?",
+    "helpful_sentence": "יש לי עצמי אמיתי שקיים מתחת לכל התפקידים."
+  },
+  {
+    "id": "pattern_092",
+    "category": "identity_confusion",
+    "pattern_name": "unstable_self_concept",
+    "example_sentences": [
+      "אני מרגיש אחרת לגמרי עם אנשים שונים.",
+      "אני לא יודע מה באמת אני חושב כי זה משתנה כל הזמן.",
+      "לפעמים נדמה לי שאני פשוט מגיב לסביבה ולא חי מתוך עצמי."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I have no stable sense of self and I am different people in different contexts.",
+    "balanced_trait": "core identity",
+    "bridge_sentence": "לאדם יש גרסאות רבות — אבל יש ליבה שנשארת. מה שם בך שתמיד נשאר?",
+    "helpful_sentence": "יש בי ליבה יציבה שנמצאת מתחת לכל השכבות."
+  },
+  {
+    "id": "pattern_093",
+    "category": "identity_confusion",
+    "pattern_name": "purpose_fog",
+    "example_sentences": [
+      "אני לא יודע לאן אני הולך בחיים.",
+      "חסר לי כיוון ברור ואני מרגיש מבולבל.",
+      "אחרים נראים כאילו יש להם מטרה ואני תועה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I have no purpose and am drifting aimlessly through life.",
+    "balanced_trait": "direction",
+    "bridge_sentence": "מטרה לא תמיד מגיעה כהתגלות — לפעמים היא מתגלה תוך כדי תנועה.",
+    "helpful_sentence": "אני בדרך לגלות את הכיוון שלי, גם כשהוא עדיין לא ברור."
+  },
+  {
+    "id": "pattern_094",
+    "category": "identity_confusion",
+    "pattern_name": "value_confusion",
+    "example_sentences": [
+      "לא ברור לי מה באמת חשוב לי.",
+      "אני מוצא את עצמי חי לפי ערכים שאולי הם לא שלי.",
+      "פעמים רבות אני עושה דברים שלא מתאימים למי שאני — ולא יודע למה."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I do not know my own values and therefore cannot live authentically.",
+    "balanced_trait": "clarity",
+    "bridge_sentence": "הבלבול לגבי ערכים הוא שלב — לא כישלון. מה מרגיש נכון כשהכל שקט?",
+    "helpful_sentence": "אני מחפש ומוצא בהדרגה את הערכים שמניעים אותי מבפנים."
+  },
+  {
+    "id": "pattern_095",
+    "category": "identity_confusion",
+    "pattern_name": "identity_in_transition",
+    "example_sentences": [
+      "עברתי שינוי גדול ואני לא יודע מי אני עכשיו.",
+      "הגרסה הישנה שלי כבר לא קיימת — אבל החדשה עדיין לא ברורה.",
+      "נמצא בין לבין ומרגיש לא מעוגן."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Being in transition means I am lost and have no solid ground.",
+    "balanced_trait": "emergence",
+    "bridge_sentence": "המעבר הוא לא ריק — הוא המקום שבו הגרסה הבאה שלך מתעצבת.",
+    "helpful_sentence": "אני בתהליך עיצוב עצמי ואני סומך על התהליך הזה."
+  },
+  {
+    "id": "pattern_096",
+    "category": "identity_confusion",
+    "pattern_name": "comparison_erases_self",
+    "example_sentences": [
+      "כשאני מסתכל על אחרים אני שוכח מי אני.",
+      "ההשוואה מטשטשת את הקול הפנימי שלי.",
+      "אני מנסה להיות כמו אנשים שאני מעריץ ואובד את עצמי."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I need to be like others to have value, which erases who I truly am.",
+    "balanced_trait": "uniqueness",
+    "bridge_sentence": "הדמיון לאחרים לא הוא המטרה — היציאה לאור של מה שרק אתה הוא המטרה.",
+    "helpful_sentence": "אני ייחודי ובעל ערך בדיוק כפי שאני, לא כגרסת אחרים."
+  },
+  {
+    "id": "pattern_097",
+    "category": "identity_confusion",
+    "pattern_name": "authenticity_struggle",
+    "example_sentences": [
+      "אני לא מצליח להיות עצמי — תמיד מנסה להתאים.",
+      "אני חושש שאם אראה מי אני באמת, זה לא יהיה מספיק.",
+      "חיים בתוך תפקיד שאינו אני — וזה מותש."
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "My true self is not acceptable so I must perform a false version of myself.",
+    "balanced_trait": "authenticity",
+    "bridge_sentence": "לחיות את עצמך האמיתי — גם אם הוא לא מושלם — הוא הדרך החיה ביותר.",
+    "helpful_sentence": "אני בוחר להיות עצמי האמיתי, אחד קטן בכל פעם."
+  },
+  {
+    "id": "pattern_098",
+    "category": "identity_confusion",
+    "pattern_name": "role_conflict",
+    "example_sentences": [
+      "אני הורה, עובד, ילד וחבר — ולא יודע מה לשים ראשון.",
+      "התפקידים השונים שלי מושכים אותי לכיוונים מנוגדים.",
+      "אני מרגיש שאני מאכזב את כולם כי אין לי מספיק מעצמי לתת."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "I cannot fulfill all my roles well and will always be failing someone.",
+    "balanced_trait": "balance",
+    "bridge_sentence": "לא כל תפקיד צריך את כולך כל הזמן — חלוקת אנרגיה היא מיומנות.",
+    "helpful_sentence": "אני מחלק את עצמי בחוכמה ומסלח לעצמי על מה שלא הצלחתי."
+  },
+  {
+    "id": "pattern_099",
+    "category": "identity_confusion",
+    "pattern_name": "past_vs_present_self_disconnect",
+    "example_sentences": [
+      "אני לא מכיר את עצמי הישן יותר.",
+      "מי שהייתי לפני שלוש שנים נראה כמו זר.",
+      "שינוי כל כך עמוק שאני לא בטוח מי אני עכשיו."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "Changing means losing myself and I no longer know who I am.",
+    "balanced_trait": "continuity",
+    "bridge_sentence": "השינוי הוא חלק ממך — לא מחיקה. אתה כולל את כל הגרסאות.",
+    "helpful_sentence": "אני נושא את כל הגרסאות שהייתי ובונה את מי שאני הופך."
+  },
+  {
+    "id": "pattern_100",
+    "category": "identity_confusion",
+    "pattern_name": "fear_of_future_self",
+    "example_sentences": [
+      "אני מפחד ממי שאהיה אם אשנה.",
+      "מה אם הגרסה הבאה שלי לא תהיה אני?",
+      "אני נאחז בעצמי הנוכחי גם כשהוא כבר לא עובד."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Changing who I am means losing myself entirely.",
+    "balanced_trait": "evolution",
+    "bridge_sentence": "הגרסה הבאה שלך נבנית ממה שאתה עכשיו — לא מחליפה אותו.",
+    "helpful_sentence": "אני מאמין שהגרסה הבאה שלי תהיה עדיין אני — רק יותר."
+  },
+  {
+    "id": "pattern_101",
+    "category": "decision_paralysis",
+    "pattern_name": "choice_overload",
+    "example_sentences": [
+      "כשיש יותר מדי אפשרויות אני פשוט לא מצליח לבחור.",
+      "ריבוי אפשרויות גורם לי ללחץ במקום לשחרור.",
+      "עדיף פחות אפשרויות — כשיש הרבה אני קופא."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Having too many options makes any choice potentially wrong and overwhelming.",
+    "balanced_trait": "decisiveness",
+    "bridge_sentence": "אפשר לצמצם לשתיים-שלוש אפשרויות ולהחליט מתוכן — לא צריך לבחור מתוך אינסוף.",
+    "helpful_sentence": "אני מצמצם ובוחר — גם עם מידע חלקי, אני מסוגל להחליט."
+  },
+  {
+    "id": "pattern_102",
+    "category": "decision_paralysis",
+    "pattern_name": "fear_of_wrong_decision",
+    "example_sentences": [
+      "מה אם אחליט לא נכון ואצטער?",
+      "פחד לקבל החלטה שגויה גורם לי לדחות כל החלטה.",
+      "אני מחשב ומחשב כדי לא לטעות."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Making a wrong decision is catastrophic and must be avoided at all costs.",
+    "balanced_trait": "risk tolerance",
+    "bridge_sentence": "כמעט כל החלטה ניתנת לתיקון — הטעות הגדולה באמת היא לא להחליט.",
+    "helpful_sentence": "אני בוחר ומתחייב — ואם צריך לתקן, אתקן."
+  },
+  {
+    "id": "pattern_103",
+    "category": "decision_paralysis",
+    "pattern_name": "analysis_paralysis",
+    "example_sentences": [
+      "ככל שאני אוסף יותר מידע כך קשה לי יותר להחליט.",
+      "ניתוח מעמיק לא מוביל אותי להחלטה — הוא מרחיק אותי ממנה.",
+      "אני מחכה לנתון אחד נוסף שיבהיר הכל — הוא לא מגיע."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "More information will eventually reveal the perfect and risk-free decision.",
+    "balanced_trait": "action",
+    "bridge_sentence": "נקודת ה'מספיק מידע' לבוא להחלטה מגיעה הרבה לפני שאתה חושב.",
+    "helpful_sentence": "אני מחליט עם המידע שיש לי עכשיו ומשאיר מקום לתיקון."
+  },
+  {
+    "id": "pattern_104",
+    "category": "decision_paralysis",
+    "pattern_name": "regret_anticipation",
+    "example_sentences": [
+      "אני כבר חש חרטה על ההחלטה לפני שקיבלתי אותה.",
+      "מה אם אחרים יחשבו שטעיתי?",
+      "אני מדמיין את הצחצוח של עצמי בעתיד ולא מצליח להחליט."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Any decision I make will lead to regret, so avoidance is safer.",
+    "balanced_trait": "present-action",
+    "bridge_sentence": "אנשים מתחרטים הרבה יותר על מה שלא עשו מאשר על מה שעשו.",
+    "helpful_sentence": "אני מחליט מהמקום הטוב ביותר שלי עכשיו — וזה מספיק."
+  },
+  {
+    "id": "pattern_105",
+    "category": "decision_paralysis",
+    "pattern_name": "decision_avoidance",
+    "example_sentences": [
+      "אם לא אחליט — ייתכן שהדברים ייפתרו מעצמם.",
+      "אני מתחמק מהחלטות עד שמאוחר מדי.",
+      "קל לי יותר להישאר בסטטוס קוו מאשר לבחור."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Avoiding decisions protects me from being responsible for outcomes.",
+    "balanced_trait": "responsibility",
+    "bridge_sentence": "לא להחליט זו גם החלטה — בדרך כלל היא משאירה אותך במקום שלא בחרת.",
+    "helpful_sentence": "אני לוקח אחריות על בחירותי ומרגיש חופשי יותר."
+  },
+  {
+    "id": "pattern_106",
+    "category": "decision_paralysis",
+    "pattern_name": "approval_seeking_before_deciding",
+    "example_sentences": [
+      "אני שואל עשרה אנשים לפני שאני מחליט.",
+      "אני לא מרגיש בטוח בהחלטה עד שמישהו מאשר אותה.",
+      "דעות אחרים מבלבלות אותי, אבל אני ממשיך לשאול."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "My judgment alone is not trustworthy enough to make decisions.",
+    "balanced_trait": "self-trust",
+    "bridge_sentence": "ייעוץ הוא טוב — אבל ההחלטה צריכה לבוא ממך, לא מקונסנסוס.",
+    "helpful_sentence": "אני מקשיב לאחרים ואז מחליט מהמקום שלי."
+  },
+  {
+    "id": "pattern_107",
+    "category": "decision_paralysis",
+    "pattern_name": "reversibility_obsession",
+    "example_sentences": [
+      "אני בוחר רק בדברים שאפשר לבטל — אחרת אני מקפיא.",
+      "החלטות בלתי הפיכות ממלאות אותי בפחד.",
+      "אני מעדיף לא לכתוב, לא לחתום, לא להתחייב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Irreversible decisions are too dangerous and must be avoided.",
+    "balanced_trait": "commitment",
+    "bridge_sentence": "כמעט כל החלטה ניתנת לשינוי בדרך כלשהי — גמישות קיימת גם אחרי.",
+    "helpful_sentence": "אני בוחר ומתחייב, ויודע שתמיד יש דרך להסתגל."
+  },
+  {
+    "id": "pattern_108",
+    "category": "decision_paralysis",
+    "pattern_name": "minor_decision_catastrophizing",
+    "example_sentences": [
+      "הלכתי חצי שעה לאיזה מסעדה לבחור.",
+      "בחירת שומר שיאה נגרמה לי לחרדה.",
+      "אני מוציא אנרגיה ענקית על החלטות קטנות."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Even small decisions can have catastrophic consequences if made incorrectly.",
+    "balanced_trait": "proportion",
+    "bridge_sentence": "לרוב ההחלטות הקטנות אין עוצמה שמגיעה לרמת הפחד שאתה מרגיש.",
+    "helpful_sentence": "אני בוחר מהר את הדברים הקטנים ושומר את האנרגיה לחשובים."
+  },
+  {
+    "id": "pattern_109",
+    "category": "decision_paralysis",
+    "pattern_name": "major_life_decision_freeze",
+    "example_sentences": [
+      "כבר שנתיים אני לא מחליט אם לעזוב את העבודה.",
+      "ההחלטה הגדולה הזאת כל כך מפחידה שאני מקפיא.",
+      "כשמדובר בהחלטות חיים גדולות — אני פשוט לא מצליח."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Major life decisions are so consequential that making them is too dangerous.",
+    "balanced_trait": "courage",
+    "bridge_sentence": "ההחלטות הגדולות לא דורשות ודאות — הן דורשות אומץ ומחויבות.",
+    "helpful_sentence": "אני מסוגל לקבל החלטות גדולות, גם כשאין ערבויות."
+  },
+  {
+    "id": "pattern_110",
+    "category": "decision_paralysis",
+    "pattern_name": "post_decision_rumination",
+    "example_sentences": [
+      "כבר החלטתי — אבל אני לא מפסיק לשאול את עצמי אם הייתה עדיפה אחרת.",
+      "אחרי כל החלטה אני עובר על כל האפשרויות שדחיתי.",
+      "אי אפשר לי ליהנות מהבחירה כי אני עסוק בחרטה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I must review every decision endlessly to ensure I did not make a mistake.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "ההחלטה נעשתה — עכשיו האתגר הוא ליהנות מהדרך שבחרת.",
+    "helpful_sentence": "אני מקבל את ההחלטה שקיבלתי ומתחיל ללכת קדימה."
+  },
+  {
+    "id": "pattern_111",
+    "category": "overwhelm",
+    "pattern_name": "task_overwhelm",
+    "example_sentences": [
+      "יש לי כל כך הרבה לעשות שאני לא מתחיל שום דבר.",
+      "הרשימה שלי כל כך ארוכה שנראה בלתי אפשרי.",
+      "אני מביט ברשימה ומרגיש שקוע לפני שהתחלתי."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "The amount of tasks is too great to ever be manageable.",
+    "balanced_trait": "prioritization",
+    "bridge_sentence": "לא כל מה ברשימה חשוב באותה מידה — מה הדבר אחד שחשוב הכי הרבה?",
+    "helpful_sentence": "אני עוסק בדבר אחד בכל פעם ומרגיש כוח בכל ביצוע."
+  },
+  {
+    "id": "pattern_112",
+    "category": "overwhelm",
+    "pattern_name": "emotional_overwhelm",
+    "example_sentences": [
+      "הרגשות שלי חזקים כל כך שאני לא יודע מה לעשות איתם.",
+      "פעמים רבות אני מרגיש שאני טובע ברגשות.",
+      "כשהרגשות גדולים מדי, אני פשוט מנתק."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "My emotions are too intense to tolerate and I must shut down or escape.",
+    "balanced_trait": "emotional regulation",
+    "bridge_sentence": "רגשות עזים הם לא סכנה — הם מידע. אפשר לשבת איתם ולא להיסחף.",
+    "helpful_sentence": "אני יכול להרגיש רגשות גדולים ועדיין להישאר מעוגן."
+  },
+  {
+    "id": "pattern_113",
+    "category": "overwhelm",
+    "pattern_name": "information_overload",
+    "example_sentences": [
+      "יש כל כך הרבה מידע שאני לא יודע מה לאמץ.",
+      "כל מה שאני קורא סותר את מה שקראתי לפני כן.",
+      "אני מסכן להחליט כי אני לא בטוח שיש לי את כל המידע."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I need to process all available information before I can act or decide.",
+    "balanced_trait": "discernment",
+    "bridge_sentence": "לא כל מידע שווה את תשומת הלב שלך — אפשר לסנן ולבחור.",
+    "helpful_sentence": "אני בוחר את המקורות הטובים ביותר ופועל ממה שיש לי."
+  },
+  {
+    "id": "pattern_114",
+    "category": "overwhelm",
+    "pattern_name": "responsibility_overwhelm",
+    "example_sentences": [
+      "אני אחראי על כל כך הרבה אנשים ודברים שאיני יודע מאיפה להתחיל.",
+      "הנטל של כל האחריויות מרגיש שהוא מוחץ אותי.",
+      "אני לא יכול לעמוד בכל מה שמצפים ממני."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "I am solely responsible for everything and must manage it all perfectly.",
+    "balanced_trait": "delegation",
+    "bridge_sentence": "לא כל אחריות צריכה להיות שלך לבד — אפשר לבקש עזרה.",
+    "helpful_sentence": "אני מחלק אחריויות בחוכמה ומכיר בגבולותיי."
+  },
+  {
+    "id": "pattern_115",
+    "category": "overwhelm",
+    "pattern_name": "social_overwhelm",
+    "example_sentences": [
+      "יותר מדי אנשים ויותר מדי שיחות גורמים לי לרצות לברוח.",
+      "אחרי מפגשים חברתיים אני צריך ימים להתאושש.",
+      "כשיש יותר מדי גירוי חברתי אני פשוט מתנתק."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Social interaction is draining and I cannot manage the demands of others.",
+    "balanced_trait": "boundaries",
+    "bridge_sentence": "לדעת שצריך מנוחה חברתית זו מיומנות, לא חולשה.",
+    "helpful_sentence": "אני מכיר את הצרכים שלי ומאפשר לעצמי לנוח ולהתחדש."
+  },
+  {
+    "id": "pattern_116",
+    "category": "overwhelm",
+    "pattern_name": "change_overwhelm",
+    "example_sentences": [
+      "יש כל כך הרבה שינויים בבת אחת שאני לא מצליח לעמוד בקצב.",
+      "שינויים רבים מדי בזמן קצר מפרקים אותי.",
+      "אני יכול להתמודד עם שינוי — לא עם עשרה בבת אחת."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Too much change at once will destroy my ability to function.",
+    "balanced_trait": "adaptability",
+    "bridge_sentence": "גם תוך כדי שינוי גדול — יש אלמנטים יציבים שנשארים. מה הם?",
+    "helpful_sentence": "אני מסתמך על הדברים הקבועים שלי כעוגן בזמן שינוי."
+  },
+  {
+    "id": "pattern_117",
+    "category": "overwhelm",
+    "pattern_name": "deadline_overwhelm",
+    "example_sentences": [
+      "כשיש לחץ זמן אמיתי אני נכנס לפאניקה ולא מצליח לחשוב.",
+      "הדד-ליין מבהיל אותי כל כך שאני מקפיא.",
+      "תחת לחץ האיכות שלי נופלת בצורה דרמטית."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Time pressure eliminates my capacity to think clearly and perform.",
+    "balanced_trait": "calm performance",
+    "bridge_sentence": "הגוף שלך יודע לעבוד תחת לחץ — נשימה אחת יכולה לפתוח את הראש.",
+    "helpful_sentence": "אני מסוגל לעבוד גם תחת לחץ זמן ולסמוך על יכולתי."
+  },
+  {
+    "id": "pattern_118",
+    "category": "overwhelm",
+    "pattern_name": "life_transition_overwhelm",
+    "example_sentences": [
+      "המעבר הזה גדול עלי — לידת ילד, עבודה חדשה, דירה חדשה.",
+      "שינויי חיים גדולים מפרקים אותי גם אם הם חיוביים.",
+      "גם כשזה טוב — השינוי עצמו מכביד עלי."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Life transitions, even positive ones, are more than I can handle.",
+    "balanced_trait": "resilience",
+    "bridge_sentence": "מעברי חיים גדולים תמיד מרגישים עצומים — וכמעט תמיד עוברים.",
+    "helpful_sentence": "אני עובר שינויים גדולים ויוצא מהם עם כוחות שלא ידעתי שיש לי."
+  },
+  {
+    "id": "pattern_119",
+    "category": "overwhelm",
+    "pattern_name": "cumulative_stress_overwhelm",
+    "example_sentences": [
+      "לא קרה דבר גדול — זה פשוט הצטבר עד שנשברתי.",
+      "כל דבר קטן בנפרד ניתן לניהול, אבל יחד זה מוחץ.",
+      "ניקיתי את הבית ופרצתי בבכי — ולא הבנתי למה עד שחשבתי."
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "I must handle everything silently until I break.",
+    "balanced_trait": "self-care",
+    "bridge_sentence": "הצטברות לחץ היא אמיתית — הגוף שלך מבקש הפסקה לפני שהוא נשבר.",
+    "helpful_sentence": "אני מתנה לעצמי מנוחה לפני שאני מגיע לשבירה."
+  },
+  {
+    "id": "pattern_120",
+    "category": "overwhelm",
+    "pattern_name": "sensory_overwhelm",
+    "example_sentences": [
+      "רעש, אנשים, אורות — לפעמים הכל מרגיש יותר מדי.",
+      "בסביבות עמוסות אני הופך למותש ועצבני.",
+      "אני צריך שקט ורגיעה אחרי יום בחוץ יותר מאחרים."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "My sensitivity to the environment is a weakness and a burden.",
+    "balanced_trait": "self-awareness",
+    "bridge_sentence": "רגישות חושית היא לא פגם — היא מאפיין שדורש הכרה וניהול.",
+    "helpful_sentence": "אני מכיר את הצרכים החושיים שלי ומטפח את הסביבה שלי בהתאם."
+  },
+  {
+    "id": "pattern_121",
+    "category": "shame",
+    "pattern_name": "core_shame",
+    "example_sentences": [
+      "תחושה עמוקה שיש בי משהו לא בסדר — תמיד הייתה.",
+      "אני לא רק מרגיש שעשיתי משהו רע — אני מרגיש שאני רע.",
+      "הבושה שלי היא לא על מה שעשיתי — היא על מי שאני."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "There is something fundamentally wrong and shameful about who I am.",
+    "balanced_trait": "inherent worth",
+    "bridge_sentence": "הבושה העמוקה לא נולדה איתך — היא נלמדה. ומה שנלמד אפשר לשחרר.",
+    "helpful_sentence": "אני ראוי לאהבה ולחיבור בדיוק כפי שאני, ללא תנאים."
+  },
+  {
+    "id": "pattern_122",
+    "category": "shame",
+    "pattern_name": "public_exposure_shame",
+    "example_sentences": [
+      "הרגשתי שכולם רואים את הפגמים שלי.",
+      "בפגישות ציבוריות אני מרגיש שאני חשוף ועירום.",
+      "אם יראו מי אני באמת — יסתלקו."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Being seen means being judged and rejected for my flaws.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "אנשים מחפשים אנושיות — לא שלמות. הפגמים שלך הם חלק מהסיפור שלך.",
+    "helpful_sentence": "אני מסוגל להיראות, גם עם הפגמים, ועדיין להיות ראוי לקשר."
+  },
+  {
+    "id": "pattern_123",
+    "category": "shame",
+    "pattern_name": "family_origin_shame",
+    "example_sentences": [
+      "אני מתבייש מאיפה באתי.",
+      "כשמישהו שואל על המשפחה שלי, אני מנסה לשנות נושא.",
+      "יש דברים בעבר המשפחתי שלי שקשה לי לספר עליהם."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My family background is a source of shame that defines and limits me.",
+    "balanced_trait": "self-definition",
+    "bridge_sentence": "אתה לא המוצר של מוצאך — אתה מה שבנית מעצמך ממנו.",
+    "helpful_sentence": "אני מגדיר את עצמי, לא נמדד על ידי מוצאי."
+  },
+  {
+    "id": "pattern_124",
+    "category": "shame",
+    "pattern_name": "body_shame",
+    "example_sentences": [
+      "אני מתבייש מגופי ומנסה להסתיר אותו.",
+      "לא לובש דברים מסוימים כי לא אוהב איך הגוף שלי נראה בהם.",
+      "קשה לי להיות בחוף הים כי אני לא מסתדר עם המראה שלי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My body is shameful and unacceptable as it is.",
+    "balanced_trait": "body acceptance",
+    "bridge_sentence": "גופך הוא לא פרויקט לשיפור — הוא הבית שלך, עכשיו, כפי שהוא.",
+    "helpful_sentence": "אני מכבד את גופי ואת כל מה שהוא מאפשר לי לחיות."
+  },
+  {
+    "id": "pattern_125",
+    "category": "shame",
+    "pattern_name": "performance_shame",
+    "example_sentences": [
+      "אחרי שאכזבתי בעבודה, לא יכולתי להסתכל לעמיתים בעיניים.",
+      "הכישלון המקצועי שלי מילא אותי בבושה שקשה לתאר.",
+      "אני מרגיש שאני חייב להצטיין כי אחרת אבוש."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Poor performance reveals a shameful inadequacy that others will see.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "ביצוע פחות טוב הוא חלק מכל תחום — לא הוכחה לפגם בך.",
+    "helpful_sentence": "אני לומד מביצועים פחות מוצלחים מבלי לבדוק את ערכי כאדם."
+  },
+  {
+    "id": "pattern_126",
+    "category": "shame",
+    "pattern_name": "past_actions_shame",
+    "example_sentences": [
+      "יש דברים שעשיתי בעבר שאני לא יכול לסלוח לעצמי עליהם.",
+      "הבושה על מעשים ישנים עדיין מכרסמת בי.",
+      "אם אנשים היו יודעים מה עשיתי, הם לא היו רוצים אותי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My past actions permanently define my worth as a person.",
+    "balanced_trait": "self-forgiveness",
+    "bridge_sentence": "מה שעשית בעבר לא מגדיר מי אתה היום — אתה כבר לא אותו אדם.",
+    "helpful_sentence": "אני מסוגל לשאת את העבר שלי מבלי שיישא אותי."
+  },
+  {
+    "id": "pattern_127",
+    "category": "shame",
+    "pattern_name": "emotional_shame",
+    "example_sentences": [
+      "אני מתבייש כשאני בוכה, גם לבד.",
+      "הרגש שלי נראה לי חולשה שאני מנסה להסתיר.",
+      "אנשים לא צריכים לראות כמה אני מרגיש."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Having and showing emotions is shameful and means I am weak.",
+    "balanced_trait": "emotional freedom",
+    "bridge_sentence": "רגשות הם סימן לחיים — לא לחולשה. להרגיש עמוק זו צורת כוח.",
+    "helpful_sentence": "אני מרשה לעצמי להרגיש, לבטא ולקבל תמיכה כשצריך."
+  },
+  {
+    "id": "pattern_128",
+    "category": "shame",
+    "pattern_name": "comparison_based_shame",
+    "example_sentences": [
+      "כשאני מסתכל על אחרים, אני מתבייש ממה שאני.",
+      "ההשוואה לאחרים גורמת לי להרגיש קטן ולא ראוי.",
+      "אני לא יכול להתגאות בעצמי כל עוד הם מוצלחים ממני."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I am shamefully inferior to others based on what I see in comparison.",
+    "balanced_trait": "self-worth",
+    "bridge_sentence": "ערכך לא נמדד יחסית לאחרים — הוא מוחלט ואינו תלוי בהשוואה.",
+    "helpful_sentence": "אני עומד בערכי שלי, בלי שההשוואה תגדיר אותו."
+  },
+  {
+    "id": "pattern_129",
+    "category": "shame",
+    "pattern_name": "achievement_shame",
+    "example_sentences": [
+      "אני לא מספיק מוצלח בשביל לגאות בעצמי.",
+      "קשה לי לקבל מחמאות כי לא מרגיש שמגיע לי.",
+      "ההישגים שלי נראים לי לא ראויים לציון."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My achievements are not significant enough to be proud of.",
+    "balanced_trait": "pride",
+    "bridge_sentence": "גאווה בעצמך לא דורשת שיאים — היא מתחילה בהכרה בדברים שעשית.",
+    "helpful_sentence": "אני מרשה לעצמי להיות גאה במה שעשיתי, גם בקטן."
+  },
+  {
+    "id": "pattern_130",
+    "category": "shame",
+    "pattern_name": "vulnerability_shame",
+    "example_sentences": [
+      "כשאני פגיע בפני מישהו ומרגיש שגיתי, מתבייש.",
+      "אחרי שפתחתי את ליבי אני חוזר ומתחרט.",
+      "פגיעות מרגישה כמו חשיפה שאסורה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Being vulnerable exposes me to shame and rejection.",
+    "balanced_trait": "openness",
+    "bridge_sentence": "פגיעות היא הדלת לחיבור — לא החולשה שנדמית לך.",
+    "helpful_sentence": "אני מסוגל להיות פגיע ולהרוויח מזה חיבור עמוק."
+  },
+  {
+    "id": "pattern_131",
+    "category": "anger",
+    "pattern_name": "injustice_anger",
+    "example_sentences": [
+      "כשאני רואה עוולות אני מרגיש כעס עז שקשה לשחרר.",
+      "זה לא הוגן — ולכן אני כועס כל הזמן.",
+      "אני לא יכול לשחרר כעס על דברים שלא צדק בהם."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "The world is unjust and I must stay angry to fight or protect myself.",
+    "balanced_trait": "justice-seeking",
+    "bridge_sentence": "הכעס על עוולות יכול להיות דלק לשינוי — אם מכוונים אותו נכון.",
+    "helpful_sentence": "אני מפנה את הכעס שלי לפעולה משמעותית, לא רק לבעירה."
+  },
+  {
+    "id": "pattern_132",
+    "category": "anger",
+    "pattern_name": "helplessness_anger",
+    "example_sentences": [
+      "כשאני לא יכול לשנות משהו אני כועס על הכל.",
+      "חוסר אונים הופך אצלי לכעס.",
+      "אני מתפוצץ על קטנות כשמרגיש שאין לי שליטה."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Anger is the only response available when I feel powerless.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "מתחת לכעס יש לפעמים כאב של חוסר אונים — ולשניהם מגיעה עדינות.",
+    "helpful_sentence": "אני מכיר בחוסר האונים שלי ומוצא את מה שכן בשליטתי."
+  },
+  {
+    "id": "pattern_133",
+    "category": "anger",
+    "pattern_name": "unmet_expectations_anger",
+    "example_sentences": [
+      "אני כועס כשאנשים לא עומדים בציפיות שלי.",
+      "ציפיתי ממנו יותר — ועכשיו אני כועס.",
+      "כשדברים לא יוצאים כמו שתכננתי אני נעשה עצבני."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "When expectations are not met, others have failed me and deserve my anger.",
+    "balanced_trait": "flexibility",
+    "bridge_sentence": "לפעמים הציפיות שלנו לא תואמות את המציאות של אחרים — ואפשר לדבר על זה.",
+    "helpful_sentence": "אני מבטא את הציפיות שלי בבהירות ומגיב בגמישות כשהן לא מתממשות."
+  },
+  {
+    "id": "pattern_134",
+    "category": "anger",
+    "pattern_name": "self_directed_anger",
+    "example_sentences": [
+      "אני כועס על עצמי כשאני טועה.",
+      "אחרי טעות, אני מתקוף את עצמי בנחישות.",
+      "יש לי קשה לסלוח לעצמי — הכעס הפנימי נמשך זמן רב."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "I deserve to be punished with anger for my mistakes and failures.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "הכעס על עצמך לא מלמד — הוא רק פוגע. מה אפשר ללמוד בלי להעניש?",
+    "helpful_sentence": "אני מגיב לטעויות שלי בסקרנות ולמידה, לא בכעס."
+  },
+  {
+    "id": "pattern_135",
+    "category": "anger",
+    "pattern_name": "boundary_violation_anger",
+    "example_sentences": [
+      "כשמישהו חוצה גבולות שלי אני מתפוצץ.",
+      "קשה לי לומר 'לא' מוקדם — ולכן הכעס מצטבר ופורץ.",
+      "אני מרגיש שפגעו בי ולא יכול לעכל את זה."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "When my boundaries are crossed, explosive anger is the only way to protect myself.",
+    "balanced_trait": "assertion",
+    "bridge_sentence": "גבולות יכולים להיאמר בבהירות לפני שהכעס פורץ — ולפעמים זה יותר יעיל.",
+    "helpful_sentence": "אני מתרגל לציין את הגבולות שלי בשקט ובנחישות, לפני שמגיע הכעס."
+  },
+  {
+    "id": "pattern_136",
+    "category": "anger",
+    "pattern_name": "chronic_low_frustration",
+    "example_sentences": [
+      "אני כל הזמן קצת עצבני — לא פורץ, אבל גם לא שקט.",
+      "תחושה כרונית של תסכול שנמצאת שם ברקע.",
+      "דברים קטנים כמו תור ארוך או עיכוב מוציאים אותי מהכלים."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "The world consistently fails to meet my needs and I must stay on guard.",
+    "balanced_trait": "equanimity",
+    "bridge_sentence": "תסכול כרוני לפעמים הוא אנרגיה שלא מצאה את שדה הפעולה שלה.",
+    "helpful_sentence": "אני בוחן מה מאחורי התסכול ומחפש איפה לפנות את האנרגיה."
+  },
+  {
+    "id": "pattern_137",
+    "category": "anger",
+    "pattern_name": "suppressed_anger",
+    "example_sentences": [
+      "אני בולע כעסים ולא אומר כלום.",
+      "אני מחייך מבחוץ כשבפנים אני רותח.",
+      "אני מפחד מהכעס שלי אז אני לא מרשה לעצמי להרגיש אותו."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Expressing anger is dangerous or wrong, so I must suppress it.",
+    "balanced_trait": "healthy expression",
+    "bridge_sentence": "כעס מדוכא לא נעלם — הוא מצטבר ויוצא בדרכים אחרות. מה אם נדבר על זה?",
+    "helpful_sentence": "אני מרשה לעצמי להרגיש כעס ומוצא דרכים בריאות לבטא אותו."
+  },
+  {
+    "id": "pattern_138",
+    "category": "anger",
+    "pattern_name": "anger_shame_cycle",
+    "example_sentences": [
+      "כשאני כועס ומתפרץ — אני מיד מתבייש.",
+      "אחרי כל פריצת כעס אני חוזר ומוכה בעצמי.",
+      "הכעס שלי גורם לבושה ואז הבושה גורמת לעוד כעס."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My anger makes me a bad person and I deserve to be ashamed of it.",
+    "balanced_trait": "self-acceptance",
+    "bridge_sentence": "כעס הוא רגש אנושי — הבושה אחריו לא מועילה, אבל הבנה כן.",
+    "helpful_sentence": "אני לומד מהכעס שלי בלי להעניש את עצמי עליו."
+  },
+  {
+    "id": "pattern_139",
+    "category": "anger",
+    "pattern_name": "anger_as_protection",
+    "example_sentences": [
+      "הכעס שלי מרחיק אנשים — ולפעמים זה בדיוק מה שאני רוצה.",
+      "אם אהיה כועס, לא יגיעו אלי קרוב מדי.",
+      "כעס מרגיש לי כמו שריון."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Anger is necessary armor that keeps me from being hurt.",
+    "balanced_trait": "openness",
+    "bridge_sentence": "הכעס כשריון מגן — אבל גם מונע חיבור. מה יקרה אם תוריד אותו לרגע?",
+    "helpful_sentence": "אני מסוגל להגן על עצמי בדרכים שלא מרחיקות את האנשים שאני רוצה קרובי."
+  },
+  {
+    "id": "pattern_140",
+    "category": "anger",
+    "pattern_name": "anger_at_unwanted_change",
+    "example_sentences": [
+      "שינויים שלא בחרתי בהם מוציאים אותי מהכלים.",
+      "כשדברים משתנים בלי ששאלו אותי — אני מרגיש כועס.",
+      "שינוי שנכפה עלי הוא כמו הפרת גבול."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Unwanted change is a violation that justifies and requires my anger.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "שינויים כפויים הם חלק מהחיים — הכעס עליהם לגיטימי, אבל להישאר בו הוא בחירה.",
+    "helpful_sentence": "אני מקבל שינויים שלא בחרתי ומחפש בהם את מה שאפשר לבנות."
+  },
+  {
+    "id": "pattern_141",
+    "category": "avoidance",
+    "pattern_name": "social_avoidance",
+    "example_sentences": [
+      "אני מוצא תירוצים לא להגיע למפגשים חברתיים.",
+      "קל לי יותר להישאר בבית מאשר להתמודד עם האינטראקציה.",
+      "אני מוחק הזמנות ואז מתגעגע לחיבור."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Social situations are threatening and avoiding them keeps me safe.",
+    "balanced_trait": "social courage",
+    "bridge_sentence": "ההימנעות מספקת הקלה זמנית — אבל המחיר הוא בדידות שמצטברת.",
+    "helpful_sentence": "אני לוקח צעד קטן לכיוון חיבור, גם כשזה מפחיד."
+  },
+  {
+    "id": "pattern_142",
+    "category": "avoidance",
+    "pattern_name": "emotional_avoidance",
+    "example_sentences": [
+      "אני עסוק כדי שלא אצטרך לחשוב על מה שאני מרגיש.",
+      "קל לי יותר להיות פעיל מאשר לשבת עם הרגשות שלי.",
+      "כשהרגשות עולים אני מוצא דרך להסיח את הדעת."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Feeling my emotions is more painful than avoiding them.",
+    "balanced_trait": "emotional presence",
+    "bridge_sentence": "הרגשות שאנחנו מתחמקים מהם מוצאים דרך אחרת לצאת — בדרך כלל פחות נוחה.",
+    "helpful_sentence": "אני יושב עם הרגשות שלי ומגלה שאני מסוגל לשאת אותם."
+  },
+  {
+    "id": "pattern_143",
+    "category": "avoidance",
+    "pattern_name": "conflict_avoidance",
+    "example_sentences": [
+      "אני מעדיף לבלוע ולשתוק מאשר לגרום למתח.",
+      "אני לא אומר מה שאני חושב כדי לשמור על שלום.",
+      "פחד מעימות גורם לי לוותר על עצמי."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Conflict is dangerous and must be avoided at all costs, even at the cost of my needs.",
+    "balanced_trait": "assertiveness",
+    "bridge_sentence": "שיחות קשות שנמנעות לא נעלמות — הן מצטברות לטינה.",
+    "helpful_sentence": "אני מסוגל לנהל עימות בצורה ישירה ועדינה, מבלי לאבד את עצמי."
+  },
+  {
+    "id": "pattern_144",
+    "category": "avoidance",
+    "pattern_name": "task_avoidance",
+    "example_sentences": [
+      "יש משימות שאני מעדיף לעשות כל דבר חוץ מהן.",
+      "כשמשימה לא נעימה עומדת בפניי, אני מוצא כל תירוץ אחר.",
+      "ההימנעות ממשימות קשות גורמת לחרדה לצמוח."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Avoiding unpleasant tasks is preferable to the discomfort of doing them.",
+    "balanced_trait": "discipline",
+    "bridge_sentence": "ככל שאתה נמנע ממשימה — כך היא גדלה בתודעתך. ביצוע מכווץ אותה.",
+    "helpful_sentence": "אני עושה את הדבר הלא נוח ומגלה שהייתי יכול לעשות אותו כל הזמן."
+  },
+  {
+    "id": "pattern_145",
+    "category": "avoidance",
+    "pattern_name": "intimacy_avoidance",
+    "example_sentences": [
+      "כשמישהו מתקרב אלי מדי, אני מתרחק.",
+      "פחד מקרבה גורם לי להשאיר מרחק בכל מערכת יחסים.",
+      "אני לא מרשה לאנשים להכיר אותי ממש — זה מפחיד."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Closeness leads to pain, loss or rejection and must be kept at bay.",
+    "balanced_trait": "intimacy",
+    "bridge_sentence": "קרבה היא סיכון — אבל היא גם הדרך היחידה לחיבור עמוק שהנשמה כמהה אליו.",
+    "helpful_sentence": "אני פותח את עצמי לקרבה בהדרגה ומגלה שאני יכול לשאת אותה."
+  },
+  {
+    "id": "pattern_146",
+    "category": "avoidance",
+    "pattern_name": "feedback_avoidance",
+    "example_sentences": [
+      "אני לא שואל על פידבק כי מפחד ממה שיגידו.",
+      "ביקורת, גם בונה, מרגישה לי כמו מתקפה.",
+      "אני מעדיף לא לדעת מאשר לשמוע שאני לא מספיק טוב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Feedback will confirm my deepest fears about myself and is therefore dangerous.",
+    "balanced_trait": "growth orientation",
+    "bridge_sentence": "פידבק הוא כלי — לא גזר דין. הוא אומר לך כיצד להשתפר, לא מי אתה.",
+    "helpful_sentence": "אני מקבל פידבק כהזדמנות ללמוד, לא כהתקפה על ערכי."
+  },
+  {
+    "id": "pattern_147",
+    "category": "avoidance",
+    "pattern_name": "responsibility_avoidance",
+    "example_sentences": [
+      "אני לא מרים ידיים להובלה כדי שלא אצטרך לשאת אחריות.",
+      "אחריות מרגישה לי כנטל כבד מדי.",
+      "אם לא אתחייב, לא אוכל להיכשל."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Taking responsibility leads to failure and blame that I cannot handle.",
+    "balanced_trait": "ownership",
+    "bridge_sentence": "אחריות היא גם כוח — כשאתה אחראי, יש לך השפעה.",
+    "helpful_sentence": "אני לוקח אחריות על חיי ומרגיש את הכוח שבכך."
+  },
+  {
+    "id": "pattern_148",
+    "category": "avoidance",
+    "pattern_name": "change_avoidance",
+    "example_sentences": [
+      "אני מחזיק בשגרה גם כשאינה עובדת כי שינוי מפחיד.",
+      "אני מעדיף מוכר ולא נוח על פני לא ידוע ואולי טוב.",
+      "הפחד מהלא ידוע גורם לי להישאר במקום שאין לי בו טוב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "The unknown is more threatening than the familiar discomfort I know.",
+    "balanced_trait": "openness to change",
+    "bridge_sentence": "הלא ידוע מכיל גם אפשרויות שעדיין לא גילית — לא רק סכנות.",
+    "helpful_sentence": "אני פותח את עצמי לשינוי ומגלה מה מחכה מעבר לגבול הנוכחי שלי."
+  },
+  {
+    "id": "pattern_149",
+    "category": "avoidance",
+    "pattern_name": "success_avoidance",
+    "example_sentences": [
+      "כשאני קרוב להצלחה, משהו בי מחבל.",
+      "אני לא בטוח שאני ראוי להצלחה ולכן מונע ממנה.",
+      "הצלחה מפחידה אותי לפעמים יותר מכישלון."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Success is dangerous, undeserved, or will lead to expectations I cannot meet.",
+    "balanced_trait": "deservingness",
+    "bridge_sentence": "הצלחה לא שוברת — היא פותחת. מה מפחיד אותך בה ספציפית?",
+    "helpful_sentence": "אני ראוי להצליח ומרשה לעצמי לקבל את פירות המאמץ שלי."
+  },
+  {
+    "id": "pattern_150",
+    "category": "avoidance",
+    "pattern_name": "vulnerability_avoidance",
+    "example_sentences": [
+      "אני לא מראה חולשה — אף פעם.",
+      "קשה לי לבקש עזרה כי זה מרגיש כמו הכנסה.",
+      "אני מסתיר את הכאב שלי כי פחד מה יחשבו."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Being vulnerable means being weak, exposed, and open to harm.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "פגיעות אינה חולשה — היא הדרך שבה אנחנו מגיעים לחיבור אמיתי.",
+    "helpful_sentence": "אני מרשה לעצמי להיות פגיע ולגלות שזה מחזק ולא מחליש אותי."
+  }
+]

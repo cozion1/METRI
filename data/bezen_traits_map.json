@@ -1,0 +1,1202 @@
+[
+  {
+    "pattern_id": "pattern_001",
+    "category": "comparison",
+    "pattern_name": "social_progress_comparison",
+    "balanced_trait": "קצב עצמי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של קצב עצמי מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_002",
+    "category": "comparison",
+    "pattern_name": "success_envy",
+    "balanced_trait": "השראה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של השראה מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_003",
+    "category": "comparison",
+    "pattern_name": "appearance_comparison",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של קבלה עצמית מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_004",
+    "category": "comparison",
+    "pattern_name": "relationship_comparison",
+    "balanced_trait": "מוכנות",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של מוכנות מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_005",
+    "category": "comparison",
+    "pattern_name": "intelligence_comparison",
+    "balanced_trait": "סקרנות",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של סקרנות מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_006",
+    "category": "comparison",
+    "pattern_name": "happiness_comparison",
+    "balanced_trait": "סיפוק פנימי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של סיפוק פנימי מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_007",
+    "category": "comparison",
+    "pattern_name": "career_comparison",
+    "balanced_trait": "מכוונות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של מכוונות מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_008",
+    "category": "comparison",
+    "pattern_name": "achievement_comparison",
+    "balanced_trait": "הערכה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של הערכה מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_009",
+    "category": "comparison",
+    "pattern_name": "upward_social_comparison",
+    "balanced_trait": "הכרת תודה",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של הכרת תודה מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_010",
+    "category": "comparison",
+    "pattern_name": "social_media_comparison",
+    "balanced_trait": "אבחנה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של אבחנה מאפשרת לך למדוד את עצמך ביחס לדרך הייחודית שלך — לא ביחס לאחרים. זהו הבסיס לתחושת ערך שאינה תלויה בחיצוני."
+  },
+  {
+    "pattern_id": "pattern_011",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_starting",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של אומץ מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_012",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_judgment",
+    "balanced_trait": "אותנטיות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של אותנטיות מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_013",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_disappointing_others",
+    "balanced_trait": "נאמנות לעצמי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של נאמנות לעצמי מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_014",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_equals_rejection",
+    "balanced_trait": "שייכות ללא תנאים",
+    "higher_strength": "belonging",
+    "trait_explanation_he": "התכונה של שייכות ללא תנאים מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_015",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_brings_shame",
+    "balanced_trait": "חוסן",
+    "higher_strength": "resilience",
+    "trait_explanation_he": "התכונה של חוסן מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_016",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_revealing_incompetence",
+    "balanced_trait": "יושר אינטלקטואלי",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של יושר אינטלקטואלי מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_017",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_losing_respect",
+    "balanced_trait": "יציבות פנימית",
+    "higher_strength": "resilience",
+    "trait_explanation_he": "התכונה של יציבות פנימית מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_018",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_commitment",
+    "balanced_trait": "מחויבות",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של מחויבות מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_019",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_public_failure",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של פגיעות פתוחה מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_020",
+    "category": "fear_of_failure",
+    "pattern_name": "paralysis_by_fear",
+    "balanced_trait": "תנועה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של תנועה מעניקה לך את הכוח לנסות גם כשיש פחד — ולראות בכל ניסיון, גם זה שנכשל, חלק חשוב מהדרך."
+  },
+  {
+    "pattern_id": "pattern_021",
+    "category": "self_doubt",
+    "pattern_name": "imposter_syndrome",
+    "balanced_trait": "זיהוי עצמי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של זיהוי עצמי מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_022",
+    "category": "self_doubt",
+    "pattern_name": "constant_self_questioning",
+    "balanced_trait": "אמון",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של אמון מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_023",
+    "category": "self_doubt",
+    "pattern_name": "inner_critic_dominance",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של חמלה עצמית מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_024",
+    "category": "self_doubt",
+    "pattern_name": "capability_doubt",
+    "balanced_trait": "יכולת",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של יכולת מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_025",
+    "category": "self_doubt",
+    "pattern_name": "worthiness_doubt",
+    "balanced_trait": "ראויות",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ראויות מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_026",
+    "category": "self_doubt",
+    "pattern_name": "intelligence_doubt",
+    "balanced_trait": "ביטחון אינטלקטואלי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ביטחון אינטלקטואלי מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_027",
+    "category": "self_doubt",
+    "pattern_name": "social_competence_doubt",
+    "balanced_trait": "נינוחות חברתית",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של נינוחות חברתית מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_028",
+    "category": "self_doubt",
+    "pattern_name": "achievement_minimization",
+    "balanced_trait": "הכרה",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של הכרה מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_029",
+    "category": "self_doubt",
+    "pattern_name": "future_self_doubt",
+    "balanced_trait": "חשיבת צמיחה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של חשיבת צמיחה מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_030",
+    "category": "self_doubt",
+    "pattern_name": "validation_dependency",
+    "balanced_trait": "סמכות פנימית",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של סמכות פנימית מאפשרת לך לראות את עצמך בעיניים אחרות — לא בעיני הביקורת הפנימית, אלא בעיני האדם שמצמיח ומכיר בעצמו."
+  },
+  {
+    "pattern_id": "pattern_031",
+    "category": "rejection",
+    "pattern_name": "relationship_rejection_fear",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של פתיחות עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_032",
+    "category": "rejection",
+    "pattern_name": "rejection_hypersensitivity",
+    "balanced_trait": "ויסות רגשי",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של ויסות רגשי עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_033",
+    "category": "rejection",
+    "pattern_name": "preemptive_self_rejection",
+    "balanced_trait": "ערך עצמי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ערך עצמי עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_034",
+    "category": "rejection",
+    "pattern_name": "rejection_as_fundamental_truth",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "trait_explanation_he": "התכונה של שייכות עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_035",
+    "category": "rejection",
+    "pattern_name": "social_rejection_fear",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "trait_explanation_he": "התכונה של שייכות עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_036",
+    "category": "rejection",
+    "pattern_name": "professional_rejection_fear",
+    "balanced_trait": "התמדה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של התמדה עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_037",
+    "category": "rejection",
+    "pattern_name": "rejection_avoidance",
+    "balanced_trait": "עריכה עצמית",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של עריכה עצמית עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_038",
+    "category": "rejection",
+    "pattern_name": "neutral_signals_as_rejection",
+    "balanced_trait": "ראיית נקודות מבט",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של ראיית נקודות מבט עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_039",
+    "category": "rejection",
+    "pattern_name": "rejection_shame_spiral",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של חמלה עצמית עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_040",
+    "category": "rejection",
+    "pattern_name": "rejection_overgeneralization",
+    "balanced_trait": "חשיבה מורכבת",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של חשיבה מורכבת עוזרת לך לפתוח את עצמך לחיבור אמיתי גם כשיש פחד מכאב — כי חיבור אמיתי דורש נוכחות, לא ביטחון מלא."
+  },
+  {
+    "pattern_id": "pattern_041",
+    "category": "procrastination",
+    "pattern_name": "avoidance_delay",
+    "balanced_trait": "משמעת",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של משמעת עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_042",
+    "category": "procrastination",
+    "pattern_name": "perfectionism_delay",
+    "balanced_trait": "פעולה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של פעולה עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_043",
+    "category": "procrastination",
+    "pattern_name": "overwhelm_delay",
+    "balanced_trait": "פעולה הדרגתית",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של פעולה הדרגתית עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_044",
+    "category": "procrastination",
+    "pattern_name": "fear_based_delay",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של אומץ עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_045",
+    "category": "procrastination",
+    "pattern_name": "decision_delay",
+    "balanced_trait": "נחרצות בהחלטות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של נחרצות בהחלטות עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_046",
+    "category": "procrastination",
+    "pattern_name": "energy_depletion_delay",
+    "balanced_trait": "עקביות",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של עקביות עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_047",
+    "category": "procrastination",
+    "pattern_name": "distraction_loop",
+    "balanced_trait": "מיקוד",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של מיקוד עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_048",
+    "category": "procrastination",
+    "pattern_name": "self_sabotage_delay",
+    "balanced_trait": "תמיכה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של תמיכה עצמית עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_049",
+    "category": "procrastination",
+    "pattern_name": "deadline_crisis_only",
+    "balanced_trait": "יוזמה קדימה",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של יוזמה קדימה עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_050",
+    "category": "procrastination",
+    "pattern_name": "chronic_postponement",
+    "balanced_trait": "עמידה בהתחייבות",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של עמידה בהתחייבות עוזרת לך לעבור מהרהור לפעולה — גם צעד קטן משנה את מצב הרוח ומייצר תנועה פנימה."
+  },
+  {
+    "pattern_id": "pattern_051",
+    "category": "perfectionism",
+    "pattern_name": "all_or_nothing",
+    "balanced_trait": "גמישות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של גמישות מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_052",
+    "category": "perfectionism",
+    "pattern_name": "imperfection_paralysis",
+    "balanced_trait": "שחרור",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של שחרור מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_053",
+    "category": "perfectionism",
+    "pattern_name": "harsh_self_criticism",
+    "balanced_trait": "סליחה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של סליחה עצמית מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_054",
+    "category": "perfectionism",
+    "pattern_name": "perfectionism_blocks_starting",
+    "balanced_trait": "יוזמה",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של יוזמה מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_055",
+    "category": "perfectionism",
+    "pattern_name": "exhaustion_from_standards",
+    "balanced_trait": "מנוחה",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של מנוחה מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_056",
+    "category": "perfectionism",
+    "pattern_name": "never_satisfied",
+    "balanced_trait": "סיפוק",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של סיפוק מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_057",
+    "category": "perfectionism",
+    "pattern_name": "ideal_comparison_trap",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של קבלה עצמית מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_058",
+    "category": "perfectionism",
+    "pattern_name": "performance_perfectionism",
+    "balanced_trait": "נוכחות",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של נוכחות מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_059",
+    "category": "perfectionism",
+    "pattern_name": "appearance_perfectionism",
+    "balanced_trait": "ביטחון גופני",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ביטחון גופני מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_060",
+    "category": "perfectionism",
+    "pattern_name": "social_perfectionism",
+    "balanced_trait": "ספונטניות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של ספונטניות מאפשרת לך לשחרר את הלחץ לעשות הכל מושלם — ולגלות שגם עבודה מספיק טובה נושאת ערך אמיתי."
+  },
+  {
+    "pattern_id": "pattern_061",
+    "category": "loneliness",
+    "pattern_name": "isolation_feeling",
+    "balanced_trait": "חיבור",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של חיבור פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_062",
+    "category": "loneliness",
+    "pattern_name": "invisible_in_crowd",
+    "balanced_trait": "נראות",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של נראות פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_063",
+    "category": "loneliness",
+    "pattern_name": "deep_connection_longing",
+    "balanced_trait": "עומק",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של עומק פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_064",
+    "category": "loneliness",
+    "pattern_name": "chronic_misunderstood",
+    "balanced_trait": "ביטוי",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של ביטוי פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_065",
+    "category": "loneliness",
+    "pattern_name": "social_disconnection",
+    "balanced_trait": "שייכות",
+    "higher_strength": "belonging",
+    "trait_explanation_he": "התכונה של שייכות פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_066",
+    "category": "loneliness",
+    "pattern_name": "lonely_in_relationship",
+    "balanced_trait": "אינטימיות",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של אינטימיות פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_067",
+    "category": "loneliness",
+    "pattern_name": "existential_solitude",
+    "balanced_trait": "שלום פנימי",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של שלום פנימי פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_068",
+    "category": "loneliness",
+    "pattern_name": "new_environment_loneliness",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של גמישות הסתגלות פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_069",
+    "category": "loneliness",
+    "pattern_name": "grief_loneliness",
+    "balanced_trait": "אבל משותף",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של אבל משותף פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_070",
+    "category": "loneliness",
+    "pattern_name": "digital_age_loneliness",
+    "balanced_trait": "נוכחות",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של נוכחות פותחת את הדלת לחיבור אמיתי — לא חיבור שטחי, אלא נוכחות ממשית עם אחרים ועם עצמך."
+  },
+  {
+    "pattern_id": "pattern_071",
+    "category": "lack_of_control",
+    "pattern_name": "control_loss_fear",
+    "balanced_trait": "אמון",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של אמון מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_072",
+    "category": "lack_of_control",
+    "pattern_name": "unpredictability_anxiety",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של גמישות הסתגלות מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_073",
+    "category": "lack_of_control",
+    "pattern_name": "external_locus_of_control",
+    "balanced_trait": "כוח פעולה עצמי",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של כוח פעולה עצמי מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_074",
+    "category": "lack_of_control",
+    "pattern_name": "learned_helplessness",
+    "balanced_trait": "עקשנות חיובית",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של עקשנות חיובית מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_075",
+    "category": "lack_of_control",
+    "pattern_name": "chaos_intolerance",
+    "balanced_trait": "סבלנות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של סבלנות מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_076",
+    "category": "lack_of_control",
+    "pattern_name": "outcome_control_need",
+    "balanced_trait": "ניתוק בריא",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של ניתוק בריא מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_077",
+    "category": "lack_of_control",
+    "pattern_name": "over_planning_for_control",
+    "balanced_trait": "ספונטניות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של ספונטניות מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_078",
+    "category": "lack_of_control",
+    "pattern_name": "micromanagement_self",
+    "balanced_trait": "האצלה",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של האצלה מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_079",
+    "category": "lack_of_control",
+    "pattern_name": "loss_of_agency",
+    "balanced_trait": "העצמה",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של העצמה מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_080",
+    "category": "lack_of_control",
+    "pattern_name": "future_uncertainty_spiral",
+    "balanced_trait": "התמקדות בהווה",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של התמקדות בהווה מאפשרת לך לפעול בעולם לא ודאי מבלי שתאבד את עצמך — ולמצוא יציבות פנימית גם כשהחיצוני אינו בשליטה."
+  },
+  {
+    "pattern_id": "pattern_081",
+    "category": "hopelessness",
+    "pattern_name": "future_hopelessness",
+    "balanced_trait": "תקווה",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של תקווה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_082",
+    "category": "hopelessness",
+    "pattern_name": "patterns_never_change",
+    "balanced_trait": "צמיחה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של צמיחה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_083",
+    "category": "hopelessness",
+    "pattern_name": "effort_feels_futile",
+    "balanced_trait": "עקשנות חיובית",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של עקשנות חיובית מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_084",
+    "category": "hopelessness",
+    "pattern_name": "permanently_stuck",
+    "balanced_trait": "תנועה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של תנועה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_085",
+    "category": "hopelessness",
+    "pattern_name": "failure_history_predicts_future",
+    "balanced_trait": "התחלה מחדש",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של התחלה מחדש מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_086",
+    "category": "hopelessness",
+    "pattern_name": "change_feels_impossible",
+    "balanced_trait": "אמונה",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של אמונה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_087",
+    "category": "hopelessness",
+    "pattern_name": "happiness_unattainable",
+    "balanced_trait": "שמחה",
+    "higher_strength": "hope",
+    "trait_explanation_he": "התכונה של שמחה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_088",
+    "category": "hopelessness",
+    "pattern_name": "recovery_feels_impossible",
+    "balanced_trait": "ריפוי",
+    "higher_strength": "resilience",
+    "trait_explanation_he": "התכונה של ריפוי מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_089",
+    "category": "hopelessness",
+    "pattern_name": "meaning_loss",
+    "balanced_trait": "מטרה",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של מטרה מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_090",
+    "category": "hopelessness",
+    "pattern_name": "resigned_to_fate",
+    "balanced_trait": "כוח פעולה עצמי",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של כוח פעולה עצמי מזכירה לך שגם בתוך הכאב העמוק — יש תנועה אפשרית, ויש חלק בך שמחכה לצמוח."
+  },
+  {
+    "pattern_id": "pattern_091",
+    "category": "identity_confusion",
+    "pattern_name": "role_confusion",
+    "balanced_trait": "עצמיות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של עצמיות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_092",
+    "category": "identity_confusion",
+    "pattern_name": "unstable_self_concept",
+    "balanced_trait": "זהות עצמית",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של זהות עצמית עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_093",
+    "category": "identity_confusion",
+    "pattern_name": "purpose_fog",
+    "balanced_trait": "כיוון",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של כיוון עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_094",
+    "category": "identity_confusion",
+    "pattern_name": "value_confusion",
+    "balanced_trait": "בהירות",
+    "higher_strength": "clarity",
+    "trait_explanation_he": "התכונה של בהירות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_095",
+    "category": "identity_confusion",
+    "pattern_name": "identity_in_transition",
+    "balanced_trait": "הופעה",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של הופעה עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_096",
+    "category": "identity_confusion",
+    "pattern_name": "comparison_erases_self",
+    "balanced_trait": "ייחודיות",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ייחודיות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_097",
+    "category": "identity_confusion",
+    "pattern_name": "authenticity_struggle",
+    "balanced_trait": "אותנטיות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של אותנטיות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_098",
+    "category": "identity_confusion",
+    "pattern_name": "role_conflict",
+    "balanced_trait": "איזון",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של איזון עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_099",
+    "category": "identity_confusion",
+    "pattern_name": "past_vs_present_self_disconnect",
+    "balanced_trait": "רציפות",
+    "higher_strength": "resilience",
+    "trait_explanation_he": "התכונה של רציפות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_100",
+    "category": "identity_confusion",
+    "pattern_name": "fear_of_future_self",
+    "balanced_trait": "התפתחות",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של התפתחות עוזרת לך לאסוף את הפיסות של מי שאתה, ולבנות תחושת עצמי שיציבה גם בתוך שינויים."
+  },
+  {
+    "pattern_id": "pattern_101",
+    "category": "decision_paralysis",
+    "pattern_name": "choice_overload",
+    "balanced_trait": "נחרצות בהחלטות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של נחרצות בהחלטות מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_102",
+    "category": "decision_paralysis",
+    "pattern_name": "fear_of_wrong_decision",
+    "balanced_trait": "סבלנות לסיכון",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של סבלנות לסיכון מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_103",
+    "category": "decision_paralysis",
+    "pattern_name": "analysis_paralysis",
+    "balanced_trait": "פעולה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של פעולה מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_104",
+    "category": "decision_paralysis",
+    "pattern_name": "regret_anticipation",
+    "balanced_trait": "פעולה בהווה",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של פעולה בהווה מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_105",
+    "category": "decision_paralysis",
+    "pattern_name": "decision_avoidance",
+    "balanced_trait": "אחריות",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של אחריות מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_106",
+    "category": "decision_paralysis",
+    "pattern_name": "approval_seeking_before_deciding",
+    "balanced_trait": "אמון עצמי",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של אמון עצמי מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_107",
+    "category": "decision_paralysis",
+    "pattern_name": "reversibility_obsession",
+    "balanced_trait": "מחויבות",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של מחויבות מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_108",
+    "category": "decision_paralysis",
+    "pattern_name": "minor_decision_catastrophizing",
+    "balanced_trait": "פרופורציה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של פרופורציה מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_109",
+    "category": "decision_paralysis",
+    "pattern_name": "major_life_decision_freeze",
+    "balanced_trait": "אומץ",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של אומץ מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_110",
+    "category": "decision_paralysis",
+    "pattern_name": "post_decision_rumination",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של קבלה מאפשרת לך לקבל החלטות מתוך עמדה פנימית — גם כשאין ודאות מלאה, כי לחכות לוודאות לא תמיד עוזר."
+  },
+  {
+    "pattern_id": "pattern_111",
+    "category": "overwhelm",
+    "pattern_name": "task_overwhelm",
+    "balanced_trait": "תעדוף",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של תעדוף עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_112",
+    "category": "overwhelm",
+    "pattern_name": "emotional_overwhelm",
+    "balanced_trait": "ויסות רגשי",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של ויסות רגשי עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_113",
+    "category": "overwhelm",
+    "pattern_name": "information_overload",
+    "balanced_trait": "אבחנה",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של אבחנה עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_114",
+    "category": "overwhelm",
+    "pattern_name": "responsibility_overwhelm",
+    "balanced_trait": "האצלה",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של האצלה עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_115",
+    "category": "overwhelm",
+    "pattern_name": "social_overwhelm",
+    "balanced_trait": "גבולות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של גבולות עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_116",
+    "category": "overwhelm",
+    "pattern_name": "change_overwhelm",
+    "balanced_trait": "גמישות הסתגלות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של גמישות הסתגלות עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_117",
+    "category": "overwhelm",
+    "pattern_name": "deadline_overwhelm",
+    "balanced_trait": "ביצוע רגוע",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של ביצוע רגוע עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_118",
+    "category": "overwhelm",
+    "pattern_name": "life_transition_overwhelm",
+    "balanced_trait": "חוסן",
+    "higher_strength": "resilience",
+    "trait_explanation_he": "התכונה של חוסן עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_119",
+    "category": "overwhelm",
+    "pattern_name": "cumulative_stress_overwhelm",
+    "balanced_trait": "טיפול עצמי",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של טיפול עצמי עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_120",
+    "category": "overwhelm",
+    "pattern_name": "sensory_overwhelm",
+    "balanced_trait": "מודעות עצמית",
+    "higher_strength": "wisdom",
+    "trait_explanation_he": "התכונה של מודעות עצמית עוזרת לך לחלק את הגדול לקטן — ולהתמקד בצעד אחד במקום לנסות להכיל הכל בבת אחת."
+  },
+  {
+    "pattern_id": "pattern_121",
+    "category": "shame",
+    "pattern_name": "core_shame",
+    "balanced_trait": "ערך מולד",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ערך מולד מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_122",
+    "category": "shame",
+    "pattern_name": "public_exposure_shame",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של פגיעות פתוחה מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_123",
+    "category": "shame",
+    "pattern_name": "family_origin_shame",
+    "balanced_trait": "הגדרה עצמית",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של הגדרה עצמית מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_124",
+    "category": "shame",
+    "pattern_name": "body_shame",
+    "balanced_trait": "קבלת הגוף",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של קבלת הגוף מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_125",
+    "category": "shame",
+    "pattern_name": "performance_shame",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של חמלה עצמית מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_126",
+    "category": "shame",
+    "pattern_name": "past_actions_shame",
+    "balanced_trait": "סליחה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של סליחה עצמית מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_127",
+    "category": "shame",
+    "pattern_name": "emotional_shame",
+    "balanced_trait": "חופש רגשי",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של חופש רגשי מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_128",
+    "category": "shame",
+    "pattern_name": "comparison_based_shame",
+    "balanced_trait": "ערך עצמי",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ערך עצמי מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_129",
+    "category": "shame",
+    "pattern_name": "achievement_shame",
+    "balanced_trait": "גאווה",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של גאווה מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_130",
+    "category": "shame",
+    "pattern_name": "vulnerability_shame",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של פתיחות מאפשרת לך לגשת לעצמך ביושר ובחמלה — לא להיסחף לבושה, אלא לצמוח ממנה."
+  },
+  {
+    "pattern_id": "pattern_131",
+    "category": "anger",
+    "pattern_name": "injustice_anger",
+    "balanced_trait": "חיפוש צדק",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של חיפוש צדק עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_132",
+    "category": "anger",
+    "pattern_name": "helplessness_anger",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של קבלה עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_133",
+    "category": "anger",
+    "pattern_name": "unmet_expectations_anger",
+    "balanced_trait": "גמישות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של גמישות עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_134",
+    "category": "anger",
+    "pattern_name": "self_directed_anger",
+    "balanced_trait": "חמלה עצמית",
+    "higher_strength": "compassion",
+    "trait_explanation_he": "התכונה של חמלה עצמית עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_135",
+    "category": "anger",
+    "pattern_name": "boundary_violation_anger",
+    "balanced_trait": "עמידה על עצמי",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של עמידה על עצמי עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_136",
+    "category": "anger",
+    "pattern_name": "chronic_low_frustration",
+    "balanced_trait": "שלוות נפש",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של שלוות נפש עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_137",
+    "category": "anger",
+    "pattern_name": "suppressed_anger",
+    "balanced_trait": "ביטוי בריא",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של ביטוי בריא עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_138",
+    "category": "anger",
+    "pattern_name": "anger_shame_cycle",
+    "balanced_trait": "קבלה עצמית",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של קבלה עצמית עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_139",
+    "category": "anger",
+    "pattern_name": "anger_as_protection",
+    "balanced_trait": "פתיחות",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של פתיחות עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_140",
+    "category": "anger",
+    "pattern_name": "anger_at_unwanted_change",
+    "balanced_trait": "קבלה",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של קבלה עוזרת לך לשמוע את מה שהכעס מסמן — מה נפגע, מה חסר — ולהשתמש בזה לבנייה ולא להרס."
+  },
+  {
+    "pattern_id": "pattern_141",
+    "category": "avoidance",
+    "pattern_name": "social_avoidance",
+    "balanced_trait": "אומץ חברתי",
+    "higher_strength": "courage",
+    "trait_explanation_he": "התכונה של אומץ חברתי מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_142",
+    "category": "avoidance",
+    "pattern_name": "emotional_avoidance",
+    "balanced_trait": "נוכחות רגשית",
+    "higher_strength": "emotional_regulation",
+    "trait_explanation_he": "התכונה של נוכחות רגשית מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_143",
+    "category": "avoidance",
+    "pattern_name": "conflict_avoidance",
+    "balanced_trait": "נחרצות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של נחרצות מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_144",
+    "category": "avoidance",
+    "pattern_name": "task_avoidance",
+    "balanced_trait": "משמעת",
+    "higher_strength": "discipline",
+    "trait_explanation_he": "התכונה של משמעת מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_145",
+    "category": "avoidance",
+    "pattern_name": "intimacy_avoidance",
+    "balanced_trait": "אינטימיות",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של אינטימיות מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_146",
+    "category": "avoidance",
+    "pattern_name": "feedback_avoidance",
+    "balanced_trait": "כיוון לצמיחה",
+    "higher_strength": "perseverance",
+    "trait_explanation_he": "התכונה של כיוון לצמיחה מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_147",
+    "category": "avoidance",
+    "pattern_name": "responsibility_avoidance",
+    "balanced_trait": "בעלות",
+    "higher_strength": "self_direction",
+    "trait_explanation_he": "התכונה של בעלות מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_148",
+    "category": "avoidance",
+    "pattern_name": "change_avoidance",
+    "balanced_trait": "פתיחות לשינוי",
+    "higher_strength": "flexibility",
+    "trait_explanation_he": "התכונה של פתיחות לשינוי מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_149",
+    "category": "avoidance",
+    "pattern_name": "success_avoidance",
+    "balanced_trait": "ראויות",
+    "higher_strength": "self_worth",
+    "trait_explanation_he": "התכונה של ראויות מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  },
+  {
+    "pattern_id": "pattern_150",
+    "category": "avoidance",
+    "pattern_name": "vulnerability_avoidance",
+    "balanced_trait": "פגיעות פתוחה",
+    "higher_strength": "connection",
+    "trait_explanation_he": "התכונה של פגיעות פתוחה מעניקה לך את האומץ להתמודד עם מה שקשה — לא להיעלם ממנו, אלא לגשת אליו בצעדים קטנים."
+  }
+]

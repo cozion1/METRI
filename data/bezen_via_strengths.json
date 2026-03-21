@@ -1,0 +1,223 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-16T11:03:34Z",
+  "total_count": 24,
+  "strengths": [
+    {
+      "id": "creativity",
+      "label_he": "יצירתיות",
+      "label_en": "Creativity",
+      "virtue_id": "wisdom",
+      "description_he": "חשיבה מקורית ומציאת דרכים חדשות לעשות ולהביע",
+      "description_en": "Thinking of novel ways to do and express things",
+      "pattern_count": 6
+    },
+    {
+      "id": "curiosity",
+      "label_he": "סקרנות",
+      "label_en": "Curiosity",
+      "virtue_id": "wisdom",
+      "description_he": "עניין, חיפוש חוויות חדשות ופתיחות לרעיונות",
+      "description_en": "Interest, novelty-seeking, and openness to new ideas",
+      "pattern_count": 6
+    },
+    {
+      "id": "judgment",
+      "label_he": "שיפוט נכון",
+      "label_en": "Judgment",
+      "virtue_id": "wisdom",
+      "description_he": "חשיבה ביקורתית, שקילת ראיות ופתיחות לשינוי דעה",
+      "description_en": "Critical thinking, weighing evidence, open-mindedness",
+      "pattern_count": 6
+    },
+    {
+      "id": "love_of_learning",
+      "label_he": "אהבת למידה",
+      "label_en": "Love of Learning",
+      "virtue_id": "wisdom",
+      "description_he": "שליטה במיומנויות חדשות ורכישת ידע מתמיד",
+      "description_en": "Mastering new skills and bodies of knowledge",
+      "pattern_count": 6
+    },
+    {
+      "id": "perspective",
+      "label_he": "פרספקטיבה",
+      "label_en": "Perspective",
+      "virtue_id": "wisdom",
+      "description_he": "ראייה רחבה של המצב ומתן עצות חכמות לאחרים",
+      "description_en": "Providing wise counsel and seeing the bigger picture",
+      "pattern_count": 6
+    },
+    {
+      "id": "bravery",
+      "label_he": "אומץ לב",
+      "label_en": "Bravery",
+      "virtue_id": "courage",
+      "description_he": "פעולה בפני אתגר, ספק או כאב בלי לסגת",
+      "description_en": "Acting despite challenge, doubt, or pain without shrinking",
+      "pattern_count": 7
+    },
+    {
+      "id": "perseverance",
+      "label_he": "התמדה",
+      "label_en": "Perseverance",
+      "virtue_id": "courage",
+      "description_he": "המשך פעולה למרות קשיים עד להשגת המטרה",
+      "description_en": "Finishing what one starts despite obstacles",
+      "pattern_count": 7
+    },
+    {
+      "id": "honesty",
+      "label_he": "כנות",
+      "label_en": "Honesty",
+      "virtue_id": "courage",
+      "description_he": "דיבור האמת וחיים אותנטיים ללא מצגי שווא",
+      "description_en": "Speaking the truth and living authentically",
+      "pattern_count": 6
+    },
+    {
+      "id": "zest",
+      "label_he": "חיוניות",
+      "label_en": "Zest",
+      "virtue_id": "courage",
+      "description_he": "התמודדות עם החיים בהתרגשות ואנרגיה",
+      "description_en": "Approaching life with excitement and energy",
+      "pattern_count": 6
+    },
+    {
+      "id": "love",
+      "label_he": "אהבה",
+      "label_en": "Love",
+      "virtue_id": "humanity",
+      "description_he": "הערכה של קשרים קרובים עם אחרים ומתן טיפול הדדי",
+      "description_en": "Valuing close relationships and giving and receiving care",
+      "pattern_count": 7
+    },
+    {
+      "id": "kindness",
+      "label_he": "נדיבות",
+      "label_en": "Kindness",
+      "virtue_id": "humanity",
+      "description_he": "עשיית טובות ומעשי חסד לאחרים",
+      "description_en": "Doing favors and good deeds for others",
+      "pattern_count": 6
+    },
+    {
+      "id": "social_intelligence",
+      "label_he": "אינטליגנציה חברתית",
+      "label_en": "Social Intelligence",
+      "virtue_id": "humanity",
+      "description_he": "מודעות לרגשות ומניעים של עצמך ואחרים",
+      "description_en": "Awareness of the motives and feelings of self and others",
+      "pattern_count": 7
+    },
+    {
+      "id": "teamwork",
+      "label_he": "עבודת צוות",
+      "label_en": "Teamwork",
+      "virtue_id": "justice",
+      "description_he": "עבודה טובה כחלק מקבוצה ונאמנות לצוות",
+      "description_en": "Working well as a team member with loyalty",
+      "pattern_count": 6
+    },
+    {
+      "id": "fairness",
+      "label_he": "הגינות",
+      "label_en": "Fairness",
+      "virtue_id": "justice",
+      "description_he": "יחס שוויוני לכולם ואי-נתינת לרגשות להשפיע על החלטות",
+      "description_en": "Treating all people fairly without bias",
+      "pattern_count": 6
+    },
+    {
+      "id": "leadership",
+      "label_he": "מנהיגות",
+      "label_en": "Leadership",
+      "virtue_id": "justice",
+      "description_he": "ארגון פעילויות קבוצתיות והנעת אחרים להצלחה",
+      "description_en": "Organizing and directing group activities toward goals",
+      "pattern_count": 6
+    },
+    {
+      "id": "forgiveness",
+      "label_he": "סליחה",
+      "label_en": "Forgiveness",
+      "virtue_id": "temperance",
+      "description_he": "מחילה על שגיאות ומתן הזדמנות שנייה לאחרים",
+      "description_en": "Forgiving mistakes and giving second chances",
+      "pattern_count": 6
+    },
+    {
+      "id": "humility",
+      "label_he": "ענווה",
+      "label_en": "Humility",
+      "virtue_id": "temperance",
+      "description_he": "הכרה במגבלות עצמיות ופתיחות לדעות אחרות",
+      "description_en": "Acknowledging limitations and openness to others",
+      "pattern_count": 6
+    },
+    {
+      "id": "prudence",
+      "label_he": "שיקול דעת",
+      "label_en": "Prudence",
+      "virtue_id": "temperance",
+      "description_he": "בחירות זהירות, הימנעות מסיכונים מיותרים",
+      "description_en": "Being careful and avoiding unnecessary risks",
+      "pattern_count": 6
+    },
+    {
+      "id": "self_regulation",
+      "label_he": "ויסות עצמי",
+      "label_en": "Self-Regulation",
+      "virtue_id": "temperance",
+      "description_he": "שליטה בתגובות ובדחפים עצמיים",
+      "description_en": "Regulating one's own feelings and actions",
+      "pattern_count": 7
+    },
+    {
+      "id": "appreciation_of_beauty",
+      "label_he": "הערכת יופי",
+      "label_en": "Appreciation of Beauty",
+      "virtue_id": "transcendence",
+      "description_he": "הכרה בנפלאות היופי בטבע, באמנות ובחיי היומיום",
+      "description_en": "Noticing beauty in nature, art, and everyday life",
+      "pattern_count": 6
+    },
+    {
+      "id": "gratitude",
+      "label_he": "הכרת טובה",
+      "label_en": "Gratitude",
+      "virtue_id": "transcendence",
+      "description_he": "מודעות לדברים הטובים בחיים ונכונות להביע תודה",
+      "description_en": "Awareness of good things in life and expressing thanks",
+      "pattern_count": 6
+    },
+    {
+      "id": "hope",
+      "label_he": "תקווה",
+      "label_en": "Hope",
+      "virtue_id": "transcendence",
+      "description_he": "ציפייה לטוב ועבודה לקראת עתיד חיובי",
+      "description_en": "Expecting good things and working toward a positive future",
+      "pattern_count": 7
+    },
+    {
+      "id": "humor",
+      "label_he": "הומור",
+      "label_en": "Humor",
+      "virtue_id": "transcendence",
+      "description_he": "נטייה לצחוק, שובבות ואנשים אחרים בשמחה",
+      "description_en": "Liking laughter, playfulness, and brightening others",
+      "pattern_count": 6
+    },
+    {
+      "id": "spirituality",
+      "label_he": "רוחניות",
+      "label_en": "Spirituality",
+      "virtue_id": "transcendence",
+      "description_he": "אמונות על מטרת החיים ומקום האדם בעולם",
+      "description_en": "Beliefs about purpose in life and one's place in the universe",
+      "pattern_count": 6
+    }
+  ]
+}

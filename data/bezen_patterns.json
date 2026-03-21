@@ -1,0 +1,5858 @@
+{
+  "version": "v1.0.0",
+  "language": "he",
+  "generated_at": "2026-03-16T12:00:00Z",
+  "patterns": [
+    {
+      "id": "comparison_01",
+      "index": 1,
+      "label_he": "השוואה מכאיבה לאחרים",
+      "label_en": "Painful Social Comparison",
+      "short_description": "המשתמש מודד את ערכו דרך התקדמות או הצלחה של אחרים.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "self_doubt_01",
+        "worthlessness_01",
+        "belonging_01"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "הערך שלי לא נמדד לפי הקצב של אחרים.",
+      "bridge_sentences": [
+        "אני שם לב שאני משווה את עצמי לאחרים כרגע.",
+        "זה כואב לי, אבל ההשוואה הזאת לא מספרת את כל האמת עליי.",
+        "אני יכול לבדוק את הדרך שלי בלי למחוק את עצמי."
+      ],
+      "next_question": "מה דבר אחד קטן שכן התקדם אצלך לאחרונה?",
+      "tags": [
+        "השוואה",
+        "קצב",
+        "ערך עצמי",
+        "אחרים"
+      ],
+      "example_inputs": [
+        "כולם מתקדמים ואני תקוע",
+        "אני תמיד מאחור לעומת אחרים",
+        "למה כולם מצליחים ורק אני לא"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_01",
+      "index": 2,
+      "label_he": "ספק עצמי משתק",
+      "label_en": "Paralyzing Self-Doubt",
+      "short_description": "המשתמש מטיל ספק ביכולת שלו לפעול או להצליח.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "comparison_01",
+        "failure_01",
+        "helplessness_01"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "ספק הוא לא הוכחה לחוסר יכולת.",
+      "bridge_sentences": [
+        "אני מרגיש ספק, וזה מקשה עליי להתחיל.",
+        "הספק הזה לא בהכרח אומר שאני לא מסוגל.",
+        "אני יכול לבחור צעד קטן גם בלי ביטחון מלא."
+      ],
+      "next_question": "איזה צעד קטן אפשר לעשות גם בלי להרגיש מוכן לגמרי?",
+      "tags": [
+        "ספק עצמי",
+        "חוסר ביטחון",
+        "התחלה",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני לא בטוח שאני מסוגל",
+        "אולי אין לי את זה",
+        "אני מפחד לנסות כי אולי אכשל"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_01",
+      "index": 3,
+      "label_he": "תחושת דחייה אישית",
+      "label_en": "Personal Rejection Feeling",
+      "short_description": "המשתמש מפרש ריחוק או תגובה חלשה כדחייה של עצמו.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "belonging_01",
+        "shame_01"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "תגובה של מישהו אחר לא קובעת את הערך שלי.",
+      "bridge_sentences": [
+        "נפגעתי, וזה מרגיש כמו דחייה.",
+        "הכאב אמיתי, אבל לא כל ריחוק הוא דחייה מוחלטת.",
+        "אני יכול לבדוק מציאות לפני שאני מוחק את עצמי."
+      ],
+      "next_question": "איזו פרשנות נוספת יכולה להיות למה שקרה?",
+      "tags": [
+        "דחייה",
+        "פגיעה",
+        "קשר",
+        "פרשנות"
+      ],
+      "example_inputs": [
+        "הוא לא ענה לי אז כנראה הוא לא רוצה אותי",
+        "כנראה לא באמת חשוב להם אם אני שם",
+        "מרגיש לי שדחו אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_01",
+      "index": 4,
+      "label_he": "הצפה מוחלטת",
+      "label_en": "Total Overwhelm",
+      "short_description": "המשתמש חש הצפה מוחלטת שמונעת ממנו לפעול או לחשוב בבהירות.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "helplessness_01",
+        "control_01",
+        "fear_01"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "הצפה מוחלטת היא אות שצריך לעצור ולנשום לפני הכל.",
+      "bridge_sentences": [
+        "כשהכל נדמה בלתי נסבל בו-זמנית זה סימן שהמערכת שלך צריכה הפסקה.",
+        "הצפה כזו היא תגובה אנושית לעומס אמיתי ולא חולשה.",
+        "בחר דבר אחד קטן לעשות ורק אחד."
+      ],
+      "next_question": "מה הדבר הכי קטן שאפשר להניח בצד עכשיו?",
+      "tags": [
+        "הצפה",
+        "עומס",
+        "עצירה",
+        "נשימה"
+      ],
+      "example_inputs": [
+        "אני מוצף לגמרי",
+        "לא יודע מאיפה להתחיל",
+        "הכל קורה בו-זמנית ואני לא מסוגל"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_01",
+      "index": 5,
+      "label_he": "פחד מהעתיד",
+      "label_en": "Fear of the Future",
+      "short_description": "המשתמש מוצף בחרדה ופחד לגבי מה שעשוי לקרות בעתיד.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "uncertainty_01",
+        "self_doubt_01",
+        "control_01"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "העתיד לא נקבע עדיין הוא עדיין פתוח.",
+      "bridge_sentences": [
+        "פחד מהעתיד הוא אנושי לחלוטין המח שלנו מנסה להגן עלינו.",
+        "לא כל מה שמפחיד בעתיד יקרה ולא תמיד באופן שאנחנו מדמיינים.",
+        "מה אחד הדברים שאתה יכול לעשות היום שמכין אותך קצת טוב יותר?"
+      ],
+      "next_question": "מה הפחד הספציפי מהעתיד שהכי מכביד עליך עכשיו?",
+      "tags": [
+        "עתיד",
+        "פחד",
+        "חרדה",
+        "אי ודאות"
+      ],
+      "example_inputs": [
+        "אני מפחד ממה שיהיה",
+        "העתיד מפחיד אותי",
+        "אני לא יכול לחשוב על מה שיהיה"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_01",
+      "index": 6,
+      "label_he": "בושה מכווצת",
+      "label_en": "Shrinking Shame",
+      "short_description": "תחושת בושה עמוקה שגורמת למשתמש להתכווץ ולצמצם את עצמו.",
+      "pain_axis": "shame",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "worthlessness_01",
+        "rejection_01",
+        "alienation_01"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "בושה מכווצת לא מגינה היא מכלה.",
+      "bridge_sentences": [
+        "בושה שמכווצת אותך לוקחת הרבה אנרגיה לאורך זמן.",
+        "התכווצות מבושה מרגישה כמו הגנה ולרוב היא בדידות.",
+        "מה דבר אחד שיכולת לאמר בקול רם שכרגע אתה שומר רק לעצמך?"
+      ],
+      "next_question": "מה הגרוע ביותר שיכול לקרות אם מישהו יראה את מה שאתה מסתיר?",
+      "tags": [
+        "בושה",
+        "כיווץ",
+        "הסתרה",
+        "חשיפה"
+      ],
+      "example_inputs": [
+        "אני מתכווץ מבושה",
+        "אני לא מסוגל להיות עצמי כשאני מרגיש בושה",
+        "הבושה גורמת לי להיעלם"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_01",
+      "index": 7,
+      "label_he": "תחושת חוסר ערך פנימי",
+      "label_en": "Inner Worthlessness",
+      "short_description": "המשתמש חש באופן עמוק שאין לו ערך כאדם ללא קשר להישגים או לאחרים.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        3,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "shame_01",
+        "comparison_01",
+        "alienation_01"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "ערך לא נרכש הוא כבר שם.",
+      "bridge_sentences": [
+        "תחושת חוסר ערך פנימי היא כאב עמוק מאוד ולא אמת עובדתית.",
+        "ערך עצמי לא נרכש בהישגים הוא קיים ללא תנאי.",
+        "מה דבר אחד שאתה מאפשר לאחרים שאתה לא מאפשר לעצמך?"
+      ],
+      "next_question": "מה היית אומר לילד קטן שמרגיש שאין לו ערך?",
+      "tags": [
+        "ערך",
+        "פנים",
+        "בסיסי",
+        "קיום"
+      ],
+      "example_inputs": [
+        "אני לא שווה כלום",
+        "אין לי ערך כאדם",
+        "אני מרגיש שאני לא שווה"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_01",
+      "index": 8,
+      "label_he": "חוסר אונים נרכש",
+      "label_en": "Learned Helplessness",
+      "short_description": "מניסיונות עבר שנכשלו המשתמש למד שאין לו השפעה ואינו מנסה יותר.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "overwhelm_01",
+        "failure_01",
+        "self_doubt_01"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "גם אם אין לי שליטה על הכול יש לי השפעה על משהו.",
+      "bridge_sentences": [
+        "חוסר אונים נרכש הוא תגובה הגיונית לניסיון חוזר של כישלון לא עצלנות.",
+        "גם כשלמדנו שאין לנו השפעה יש תמיד תחום קטן שבו יש לנו קצת.",
+        "מה תחום קטן אחד שבו אתה מרגיש שיש לך מעט השפעה?"
+      ],
+      "next_question": "מה פעם שניסית ולמרות הקושי משהו קטן השתנה?",
+      "tags": [
+        "חוסר אונים",
+        "השפעה",
+        "ניסיון",
+        "אמונה"
+      ],
+      "example_inputs": [
+        "לא משנה מה אני עושה זה לא עוזר",
+        "אין לי שום השפעה",
+        "ניסיתי הכל וכלום לא עובד"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_01",
+      "index": 9,
+      "label_he": "ניכור ובדידות פנימית",
+      "label_en": "Alienation and Inner Loneliness",
+      "short_description": "המשתמש חש ניכור עמוק ובדידות פנימית גם כשנמצא בין אנשים.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "rejection_01",
+        "belonging_01",
+        "worthlessness_01"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "ניכור לא אומר שאין מי שיכול להבין אותי.",
+      "bridge_sentences": [
+        "ניכור פנימי הוא אחד הסוגים הכי בודדים של בדידות.",
+        "להרגיש מנוכר גם בנוכחות אחרים מסמן שמשהו עמוק מבקש ביטוי.",
+        "מה דבר אחד שאתה מרגיש שאף אחד לא יכול להבין?"
+      ],
+      "next_question": "אם מישהו היה יכול להבין אותך לגמרי מה הדבר הראשון שהיית רוצה שיבין?",
+      "tags": [
+        "ניכור",
+        "בדידות",
+        "פנים",
+        "הבנה"
+      ],
+      "example_inputs": [
+        "אני מרגיש מנוכר מהעולם",
+        "אפילו עם אנשים אני בודד",
+        "אף אחד לא יכול להבין אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_01",
+      "index": 10,
+      "label_he": "שייכות מערערת",
+      "label_en": "Undermined Sense of Belonging",
+      "short_description": "תחושת השייכות של המשתמש מתערערת בקלות ואינה מספקת בסיס יציב.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "rejection_01",
+        "comparison_01"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "שייכות אמיתית מתחילה בהשתייכות לעצמי.",
+      "bridge_sentences": [
+        "שייכות שמתערערת בקלות לרוב בנויה על אישור חיצוני ולא על תחושה פנימית.",
+        "שייכות שתלויה רק באחרים תמיד תהיה שברירית.",
+        "מה דבר שמחבר אותך לעצמך גם כשאין אחרים?"
+      ],
+      "next_question": "מה שייכות פנימית אחת שאתה יכול לבנות בלי תלות בקבוצה?",
+      "tags": [
+        "שייכות",
+        "יציבות",
+        "עצמי",
+        "קבוצה"
+      ],
+      "example_inputs": [
+        "אני לא מרגיש שייך לשום מקום",
+        "השייכות שלי תמיד מתערערת",
+        "אני תמיד בקצה של הקבוצה"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_01",
+      "index": 11,
+      "label_he": "כעס כבוש",
+      "label_en": "Suppressed Anger",
+      "short_description": "המשתמש מחזיק כעס שלא מובע ושמצטבר לתחושת לחץ פנימי.",
+      "pain_axis": "anger",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "helplessness_01",
+        "shame_01",
+        "worthlessness_01"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "כעס הוא מסר, לא חולשה.",
+      "bridge_sentences": [
+        "אני מרגיש כעס שקשה לי לבטא.",
+        "הכעס הזה מנסה לומר לי משהו חשוב.",
+        "אני יכול להתחיל לשמוע את הכעס בלי לפחד ממנו."
+      ],
+      "next_question": "על מה הכעס הזה מנסה להגן?",
+      "tags": [
+        "כעס",
+        "ביטוי",
+        "רגש",
+        "לחץ"
+      ],
+      "example_inputs": [
+        "אני בפנים רותח אבל לא אומר כלום",
+        "יש לי כעס שאני לא יכול לשחרר",
+        "אני כועס אבל לא יודע על מה בדיוק"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_02",
+      "index": 12,
+      "label_he": "כעס מופנה פנימה",
+      "label_en": "Inward-Directed Anger",
+      "short_description": "המשתמש מפנה כעס על עצמו, מה שמוביל לביקורת עצמית קשה.",
+      "pain_axis": "anger",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "shame_01",
+        "self_doubt_01",
+        "worthlessness_01"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "ביקורת עצמית קשה היא לעיתים כעס שלא מצא מקום.",
+      "bridge_sentences": [
+        "אני כועס על עצמי מאוד.",
+        "אולי הכעס הזה מגן על כאב עמוק יותר.",
+        "אפשר להיות ישיר עם עצמי בלי להיות אכזר."
+      ],
+      "next_question": "אם הכעס הזה יכול לדבר, מה הוא היה אומר?",
+      "tags": [
+        "כעס עצמי",
+        "ביקורת",
+        "פנים",
+        "כאב"
+      ],
+      "example_inputs": [
+        "אני כועס על עצמי שעשיתי את זה",
+        "למה אני כל כך טיפש",
+        "אני לא סולח לעצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_01",
+      "index": 13,
+      "label_he": "בדידות כרונית",
+      "label_en": "Chronic Loneliness",
+      "short_description": "המשתמש חווה תחושת בדידות עמוקה ומתמשכת גם בנוכחות אחרים.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "belonging_01",
+        "rejection_01"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "בדידות היא אות לצורך בקשר, לא ראיה לחוסר יכולת.",
+      "bridge_sentences": [
+        "אני מרגיש לבד עמוקות, גם כשיש אנשים.",
+        "הבדידות הזאת מרגישה כמו חלק ממני.",
+        "אפשר לנסות קשר קטן, גם אם זה מפחיד."
+      ],
+      "next_question": "מה צורת קשר אחת שהרגישה לך נכונה בעבר?",
+      "tags": [
+        "בדידות",
+        "ניתוק",
+        "קשר",
+        "כרוני"
+      ],
+      "example_inputs": [
+        "אני תמיד מרגיש לבד",
+        "אפילו עם אנשים אני מרגיש ריק",
+        "הבדידות שלי לא עוזבת אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_02",
+      "index": 14,
+      "label_he": "בדידות בתוך קשר",
+      "label_en": "Loneliness Within a Relationship",
+      "short_description": "המשתמש מרגיש בודד בתוך מערכת יחסים קיימת.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "rejection_01",
+        "belonging_01"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "להרגיש בודד בתוך קשר הוא כאב לגיטימי שמבקש תשומת לב.",
+      "bridge_sentences": [
+        "אני מרגיש לבד למרות שאני לא לבד.",
+        "הפער הזה כואב ואפשר להגיד אותו.",
+        "אפשר לנסות לגשר על הריחוק בצורה קטנה."
+      ],
+      "next_question": "מה דבר אחד שהיית רוצה שהצד השני יידע עכשיו?",
+      "tags": [
+        "בדידות",
+        "קשר",
+        "זוגיות",
+        "ריחוק"
+      ],
+      "example_inputs": [
+        "אני לבד גם כשאני עם בן הזוג שלי",
+        "אנחנו ביחד אבל אני מרגיש שאנחנו רחוקים",
+        "הכי בודד אני בבית"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_01",
+      "index": 15,
+      "label_he": "אי סבילות לאי ודאות",
+      "label_en": "Intolerance of Uncertainty",
+      "short_description": "המשתמש נסבל בקושי מצבי אי ודאות ומגיב אליהם בחרדה גבוהה.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "fear_01",
+        "control_01",
+        "helplessness_01"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "אי ודאות היא לא הוכחה לסכנה.",
+      "bridge_sentences": [
+        "אי סבילות לאי ודאות היא אחת הסיבות הנפוצות לחרדה.",
+        "אי ודאות היא חלק בלתי נפרד מהחיים לא איום ייחודי.",
+        "מה דבר אחד שיכולת לעשות גם בתוך האי ודאות?"
+      ],
+      "next_question": "מה היה קורה אם האי ודאות הזו נמשכת עוד חודש?",
+      "tags": [
+        "אי ודאות",
+        "חרדה",
+        "סבילות",
+        "שליטה"
+      ],
+      "example_inputs": [
+        "אני לא יכול לשאת לא לדעת",
+        "אי ודאות גורמת לי לחרדה",
+        "צריך שאדע מה יהיה"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_02",
+      "index": 16,
+      "label_he": "צורך לדעת הכל מראש",
+      "label_en": "Need to Know Everything First",
+      "short_description": "המשתמש מרגיש שחייב לדעת את כל המידע הרלוונטי לפני שמחליט או פועל.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "helplessness_01",
+        "self_doubt_01",
+        "fear_01"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "לצפות לדעת הכול מראש הוא ציפייה שהמציאות תמיד תנסה.",
+      "bridge_sentences": [
+        "הצורך לדעת הכל מראש מגן מהפתעות ועוצר את רוב ההתקדמות.",
+        "מידע מלא לפני פעולה הוא אידיאל שנדיר להשיג.",
+        "מה הדבר שחייב לדעת לפני הפעולה הבאה לעומת מה שאפשר ללמוד תוך כדי?"
+      ],
+      "next_question": "מה אחת ההחלטות הטובות שקיבלת ללא מידע מלא?",
+      "tags": [
+        "מידע",
+        "ודאות",
+        "החלטה",
+        "שליטה"
+      ],
+      "example_inputs": [
+        "אני צריך לדעת הכל לפני שאני פועל",
+        "אני לא יכול להתחיל בלי לדעת הכל",
+        "אני מחכה למידע מלא לפני שזז"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_01",
+      "index": 17,
+      "label_he": "צורך בשליטה מוחלטת",
+      "label_en": "Need for Total Control",
+      "short_description": "המשתמש זקוק לשליטה מוחלטת על סביבתו ומתקשה לתפקד כשהיא נפגעת.",
+      "pain_axis": "control",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "fear_01",
+        "uncertainty_01",
+        "overwhelm_01"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "שליטה מלאה היא אשליה שחרור חלקי ממנה הוא חיים.",
+      "bridge_sentences": [
+        "הצורך בשליטה מוחלטת לרוב נוצר מחוויה שבה חוסר שליטה גרם לנזק.",
+        "שליטה מוחלטת מגנה על אחד הדברים היקרים ביותר שיש.",
+        "מה אחד הדברים שיכולת לשחרר שליטה עליו לזמן קצוב?"
+      ],
+      "next_question": "מה קורה לך גופנית כשאתה מאבד שליטה?",
+      "tags": [
+        "שליטה",
+        "מוחלטת",
+        "אשליה",
+        "שחרור"
+      ],
+      "example_inputs": [
+        "אני צריך לשלוט על הכל",
+        "אי אפשר לי להרגיש בטוח בלי שליטה",
+        "אני מתקשה כשדברים לא בשליטה שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_02",
+      "index": 18,
+      "label_he": "פחד מאובדן אחיזה",
+      "label_en": "Fear of Losing Grip",
+      "short_description": "המשתמש חושש מאוד מלאבד אחיזה ושליטה על מה שקורה בחייו.",
+      "pain_axis": "control",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "helplessness_01",
+        "overwhelm_01",
+        "fear_01"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לאבד אחיזה לא אומר לאבד הכול.",
+      "bridge_sentences": [
+        "הפחד מאיבוד אחיזה לרוב גדול ממה שאיבוד האחיזה בפועל גורם.",
+        "אנשים רבים איבדו אחיזה בנקודה מסוימת ומצאו דרכים חדשות.",
+        "מה הייתה עושה אם הייתה מרפה אחיזה אחת?"
+      ],
+      "next_question": "מה פעם שאיבדת אחיזה ומצאת דרך חדשה?",
+      "tags": [
+        "אחיזה",
+        "פחד",
+        "שליטה",
+        "שחרור"
+      ],
+      "example_inputs": [
+        "אני מפחד לאבד שליטה",
+        "אני אוחז חזק בכל דבר",
+        "פחד גדול מלהרפות"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_01",
+      "index": 19,
+      "label_he": "פחד מכישלון",
+      "label_en": "Fear of Failure",
+      "short_description": "המשתמש נמנע מניסיון מחשש שייכשל ויאשש ספקות עצמיים.",
+      "pain_axis": "failure",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "self_doubt_01",
+        "shame_01",
+        "helplessness_01"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "כישלון הוא מידע, לא גזר דין.",
+      "bridge_sentences": [
+        "אני מפחד לנסות כי אולי אכשל.",
+        "הפחד מכישלון מגן עליי אבל גם מגביל אותי.",
+        "אני יכול להגדיר מחדש מה כישלון אומר."
+      ],
+      "next_question": "מה כישלון כזה היה מלמד אותך שניסיון לא מלמד?",
+      "tags": [
+        "כישלון",
+        "פחד",
+        "ניסיון",
+        "הימנעות"
+      ],
+      "example_inputs": [
+        "אני לא מנסה כי אני יודע שאכשל",
+        "מפחד לנסות ולהיכשל שוב",
+        "אם אכשל זה יוכיח שאני לא מסוגל"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_02",
+      "index": 20,
+      "label_he": "זהות של כישלון",
+      "label_en": "Failure Identity",
+      "short_description": "המשתמש הפנים כישלון כחלק מהגדרתו העצמית.",
+      "pain_axis": "failure",
+      "severity_range": [
+        3,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "worthlessness_01",
+        "shame_01",
+        "self_doubt_01"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "כישלון הוא דבר שקרה לך, לא מי שאתה.",
+      "bridge_sentences": [
+        "אני מרגיש שאני כישלון.",
+        "ניסיתי וזה לא הלך, ואני מחבר זאת לזהות שלי.",
+        "אני יכול להפריד בין מה שקרה לבין מי שאני."
+      ],
+      "next_question": "מה הבדל בין 'עשיתי דבר שלא הצליח' לבין 'אני כישלון'?",
+      "tags": [
+        "כישלון",
+        "זהות",
+        "הגדרה עצמית",
+        "בושה"
+      ],
+      "example_inputs": [
+        "אני תמיד נכשל",
+        "אני מאמין שאני כישלון",
+        "כל מה שאני עושה נגמר בכישלון"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_02",
+      "index": 21,
+      "label_he": "השוואה גופנית",
+      "label_en": "Physical Appearance Comparison",
+      "short_description": "המשתמש משווה את מראהו החיצוני לאחרים ומרגיש נחות.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "comparison_01",
+        "shame_01",
+        "worthlessness_01"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "הגוף שלי הוא לא תחרות.",
+      "bridge_sentences": [
+        "אני משווה את הגוף שלי לאחרים ומרגיש חסר.",
+        "ההשוואה הזאת מכאיבה ולעיתים מוגזמת.",
+        "אני יכול לנסות לראות את מה שהגוף שלי כן יכול."
+      ],
+      "next_question": "דבר אחד שהגוף שלך עשה היום שלקחת כמובן מאליו?",
+      "tags": [
+        "גוף",
+        "מראה",
+        "השוואה",
+        "ערך"
+      ],
+      "example_inputs": [
+        "כולם נראים טוב יותר ממני",
+        "אני לא אוהב איך אני נראה לעומת אחרים",
+        "אני מרגיש מכוער ליד אחרים"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_02",
+      "index": 22,
+      "label_he": "תסמונת המתחזה",
+      "label_en": "Impostor Syndrome",
+      "short_description": "המשתמש חש שהצלחותיו אינן אמיתיות ושמישהו יגלה שהוא מתחזה.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "self_doubt_01",
+        "fear_01",
+        "shame_01"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "ספק בהצלחה לא מבטל את ההצלחה עצמה.",
+      "bridge_sentences": [
+        "אני מרגיש שלא מגיע לי להיות כאן.",
+        "יש לי פחד שיגלו שאני לא טוב כמו שחשבו.",
+        "אני יכול לבדוק הוכחות אמיתיות לכישורים שיש לי."
+      ],
+      "next_question": "שלוש עדויות קונקרטיות שאתה אכן מסוגל לתפקיד?",
+      "tags": [
+        "מתחזה",
+        "הצלחה",
+        "ספק",
+        "חשיפה"
+      ],
+      "example_inputs": [
+        "אני מפחד שיגלו שאני לא באמת טוב",
+        "הצלחתי אבל זה היה מזל",
+        "אנשים חושבים עליי יותר ממה שאני שווה"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_02",
+      "index": 23,
+      "label_he": "דחייה רומנטית",
+      "label_en": "Romantic Rejection",
+      "short_description": "המשתמש חווה דחייה רומנטית ומפרש אותה כראיה לחוסר ערכו.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "rejection_01",
+        "worthlessness_01",
+        "shame_01"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "דחייה רומנטית אינה קביעה על ערכי כאדם.",
+      "bridge_sentences": [
+        "נדחיתי ואני מרגיש שאני לא מספיק.",
+        "הכאב הזה אמיתי, אבל הוא לא הוכחה לחוסר ערך.",
+        "אפשר לאפשר לעצמי לכאוב בלי להסיק על ערכי."
+      ],
+      "next_question": "מה אתה יודע על עצמך שנכון גם כשאתה נדחה?",
+      "tags": [
+        "דחייה",
+        "רומנטיקה",
+        "ערך",
+        "כאב"
+      ],
+      "example_inputs": [
+        "הוא או היא לא רוצה אותי אז אני כנראה לא שווה",
+        "נדחיתי ואני מרגיש כישלון",
+        "אף אחד לא רוצה אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_02",
+      "index": 24,
+      "label_he": "עומס מנטלי בלתי נסבל",
+      "label_en": "Unbearable Mental Load",
+      "short_description": "עומס מחשבתי כבד שמכביד על המשתמש ומקשה על תפקוד יומיומי.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        4
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "overwhelm_01",
+        "uncertainty_01",
+        "fear_01"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "עומס מנטלי יורד כשמחלקים אותו לחלקים קטנים יותר.",
+      "bridge_sentences": [
+        "הראש שלך מחזיק כרגע יותר מדי ולא תוכנן לזה לבד.",
+        "עומס מנטלי לא אומר שאתה חלש הוא אומר שהמשא גדול.",
+        "נסה לרשום על נייר את כל מה שמסתובב בראש רק כדי לפנות מקום."
+      ],
+      "next_question": "מה מהדברים שנושא הראש שלך אפשר לדחות לשבוע הבא?",
+      "tags": [
+        "עומס",
+        "מחשבות",
+        "נטל",
+        "ניהול"
+      ],
+      "example_inputs": [
+        "הראש שלי לא מפסיק",
+        "אני חושב על מיליון דברים בו-זמנית",
+        "עייף מהמחשבות שלא עוצרות"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_02",
+      "index": 25,
+      "label_he": "ציפייה לאסון",
+      "label_en": "Anticipating Disaster",
+      "short_description": "המשתמש צופה אסון בכל מצב חדש או לא ברור ומכין עצמו למקרה הגרוע ביותר.",
+      "pain_axis": "fear",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "rejection_01",
+        "shame_01",
+        "belonging_01"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "המח מנבא אסונות כי זה שמר אותנו בחיים לא כי זה מה שיקרה.",
+      "bridge_sentences": [
+        "הנטייה לצפות לאסון היא מנגנון הגנה ישן לא נבואה.",
+        "רוב האסונות שדמיינו מעולם לא התרחשו בדיוק כפי שדמיינו.",
+        "שאל מה ההסתברות הממשית שהתרחיש הגרוע ביותר יתממש?"
+      ],
+      "next_question": "כמה מהאסונות שחזית בעבר אכן התרחשו?",
+      "tags": [
+        "אסון",
+        "צפייה",
+        "תרחיש",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני תמיד מצפה שיקרה משהו רע",
+        "אני מתכונן כל הזמן למקרה הגרוע ביותר",
+        "הכל נראה לי כמו קטסטרופה ממתינה"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_02",
+      "index": 26,
+      "label_he": "תחושת פגם פנימי",
+      "label_en": "Internal Defect Feeling",
+      "short_description": "המשתמש מאמין שיש בו פגם יסודי ופנימי שהופך אותו לפחות ראוי מאחרים.",
+      "pain_axis": "shame",
+      "severity_range": [
+        3,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "shame_01",
+        "rejection_01",
+        "alienation_01"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "תחושת פגם פנימי היא פרשנות לא ממצא עובדתי.",
+      "bridge_sentences": [
+        "אמונה בפגם פנימי היא אחת מהאמונות הכואבות ביותר שאנשים נושאים.",
+        "תחושת הפגם לא נוצרה בחלל היא נולדה מחוויה מסוימת.",
+        "שאל מי היה הראשון שגרם לך להרגיש שיש בך פגם?"
+      ],
+      "next_question": "אם מישהו שמאוד אוהב אותך היה מתאר אותך האם הוא היה מזכיר פגם?",
+      "tags": [
+        "פגם",
+        "ערך",
+        "אמונה",
+        "בושה"
+      ],
+      "example_inputs": [
+        "אני מרגיש שיש בי משהו שבור",
+        "כמו שיש בי פגם בסיסי",
+        "אני לא כמו אחרים יש בי משהו לא תקין"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_02",
+      "index": 27,
+      "label_he": "תחושת מיותר",
+      "label_en": "Sense of Redundancy",
+      "short_description": "המשתמש מרגיש שנוכחותו מיותרת ואין לו תפקיד או מקום אמיתי בעולם.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "worthlessness_01",
+        "comparison_01",
+        "self_doubt_01"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "מיותר הוא תחושה לא מצב.",
+      "bridge_sentences": [
+        "תחושת מיותר יכולה להיות כואבת מאוד ולעיתים מגיעה מניסיון של לא להרגיש נראה.",
+        "אנשים לרוב לא יודעים כמה הם משמעותיים לאחרים.",
+        "מה דבר קטן שעשית שהשפיע על מישהו גם אם לא ידעת?"
+      ],
+      "next_question": "האם יש מישהו שהנוכחות שלך השפיעה עליו בצורה שאולי לא ידעת?",
+      "tags": [
+        "מיותר",
+        "נוכחות",
+        "משמעות",
+        "ערך"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאני מיותר",
+        "כאילו אף אחד לא יבחין אם אני לא שם",
+        "אין לי מקום אמיתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_02",
+      "index": 28,
+      "label_he": "אמונה שכלום לא ישתנה",
+      "label_en": "Belief Nothing Will Change",
+      "short_description": "המשתמש מאמין עמוקות שמצבו לא ישתנה לעולם גם אם ינסה.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        3,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "helplessness_01",
+        "failure_02",
+        "worthlessness_01"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "דבר שלא השתנה עד עכשיו לא אומר שלא יכול להשתנות.",
+      "bridge_sentences": [
+        "האמונה שכלום לא ישתנה מגנה מאכזבה ובמקביל מונעת שינוי.",
+        "מצבים שנדמו קבועים לחלוטין השתנו לאנשים רבים.",
+        "מה היה השינוי הכי קטן שיכולת לנסות לעשות?"
+      ],
+      "next_question": "מה מצב שהאמנת שלא ישתנה ובכל זאת השתנה?",
+      "tags": [
+        "שינוי",
+        "אמונה",
+        "עתיד",
+        "תקווה"
+      ],
+      "example_inputs": [
+        "זה לא ישתנה לעולם",
+        "לא יהיה טוב יותר",
+        "אין טעם לנסות זה תמיד אותו דבר"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_02",
+      "index": 29,
+      "label_he": "תחושת זרות בתוך קבוצה",
+      "label_en": "Foreignness Within a Group",
+      "short_description": "גם בתוך קבוצה שהמשתמש שייך אליה הוא חש זר ולא שייך באמת.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        2,
+        4
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "belonging_01",
+        "worthlessness_02"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "תחושת זרות בקבוצה לפעמים אומרת שצריך קבוצה אחרת.",
+      "bridge_sentences": [
+        "תחושת זרות בקבוצה יכולה לאמר שהקבוצה לא מתאימה לך לא שאתה לא מתאים.",
+        "לרוב תחושת הזרות מגיעה כשאנחנו מסתירים חלקים מעצמנו.",
+        "מה חלק ממך שאתה מסתיר בקבוצה הזו?"
+      ],
+      "next_question": "מה היה קורה אם היית מביא יותר מעצמך לקבוצה?",
+      "tags": [
+        "זרות",
+        "קבוצה",
+        "שייכות",
+        "אמיתי"
+      ],
+      "example_inputs": [
+        "אני מרגיש זר גם בין חברים",
+        "גם כשאני בחברה אני לא שייך",
+        "אני לא מרגיש שאני חלק מהקבוצה"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_02",
+      "index": 30,
+      "label_he": "אין לי מקום",
+      "label_en": "No Place for Me",
+      "short_description": "המשתמש מאמין שאין לו מקום אמיתי בקבוצה בסביבה או בעולם.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        2,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "belonging_01",
+        "rejection_01",
+        "alienation_01"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "תחושת אין לי מקום היא פרשנות שמתגשמת עצמית.",
+      "bridge_sentences": [
+        "תחושת אין לי מקום יכולה לנבא את עצמה כי היא מונעת ניסיון.",
+        "לפעמים מקום צריך לתבוע אותו לא לחכות שיינתן.",
+        "מה מקום קטן אחד שיכולת לתבוע בצורה עדינה?"
+      ],
+      "next_question": "מה היה קורה אם היית תובע מקום בצורה עדינה?",
+      "tags": [
+        "מקום",
+        "שייכות",
+        "תביעה",
+        "אמונה"
+      ],
+      "example_inputs": [
+        "אין לי מקום שם",
+        "אני לא שייך לשום קבוצה",
+        "אף אחד לא שמר לי מקום"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_03",
+      "index": 30,
+      "label_he": "תחושת פיגור מתמדת",
+      "label_en": "Constant Sense of Falling Behind",
+      "short_description": "המשתמש חש באופן עקבי שהוא מפגר מאחורי מסלול שאמור היה לעבור.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_04"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "להיות בתהליך זה לא פיגור.",
+      "bridge_sentences": [
+        "התחושה שאתה מאחור יכולה להיות כבדה מאוד.",
+        "כולנו יש לנו קצב שונה ולא תמיד אנחנו רואים את הדרך המלאה של אחרים.",
+        "בחר נקודת ייחוס שמשרתת אותך לא מחלישה אותך."
+      ],
+      "next_question": "ממי בדיוק אתה מרגיש מאחור ומי קבע את לוח הזמנים הזה?",
+      "tags": [
+        "פיגור",
+        "לוח זמנים",
+        "קצב",
+        "תהליך"
+      ],
+      "example_inputs": [
+        "כולם כבר התחתנו ואני עוד לא",
+        "היה לי להיות במקום אחר בגיל הזה",
+        "אני לא עומד בלוח הזמנים שהצבתי לעצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_04",
+      "index": 31,
+      "label_he": "מדידת ערך לפי הישגים",
+      "label_en": "Worth Measured by Achievements",
+      "short_description": "המשתמש מאמין שערכו כאדם נגזר ישירות מהישגיו ולא מקיומו.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "הישגים הם מה שעשיתי לא מי שאני.",
+      "bridge_sentences": [
+        "כשהערך שלך מחובר להישגים כל כישלון מאיים על הזהות שלך.",
+        "הקשר בין הישגים לערך עצמי הוא תפיסה לא אמת.",
+        "שאל מה היה ערכי אם לא הייתי יכול להשיג כלום?"
+      ],
+      "next_question": "אם לא היית מסוגל להשיג דבר האם היית ראוי לאהבה?",
+      "tags": [
+        "הישגים",
+        "ערך עצמי",
+        "זהות",
+        "ביצוע"
+      ],
+      "example_inputs": [
+        "אם אני לא מצליח אני כלום",
+        "ערכי נמדד לפי מה שאני עושה",
+        "בלי הצלחות אין לי מה להציע"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_05",
+      "index": 32,
+      "label_he": "מחיקה עצמית מול הצלחת אחרים",
+      "label_en": "Self-Erasure Before Others Success",
+      "short_description": "בנוכחות הצלחת אחרים המשתמש מבטל ומוחק את ערך נוכחותו שלו.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "ההצלחה שלהם לא מוחקת את הנוכחות שלך.",
+      "bridge_sentences": [
+        "קשה לראות אחרים מצליחים כשהפנס על עצמך מתעמעם.",
+        "ההצלחה של מישהו אחר לא מגרעת מהמה שיש לך.",
+        "נסה לקיים את שניהם בו-זמנית הם הצליחו ואני קיים."
+      ],
+      "next_question": "מה היית רוצה שיראו בך מעבר להישגים?",
+      "tags": [
+        "מחיקה עצמית",
+        "נוכחות",
+        "הצלחה",
+        "אחרים"
+      ],
+      "example_inputs": [
+        "בנוכחות מצליחנים אני מרגיש אפסי",
+        "ליד אנשים מוצלחים אני נעלם",
+        "אני לא מעז לדבר על עצמי ליד מוצלחים"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_06",
+      "index": 33,
+      "label_he": "רדיפה אחר סטנדרטים לא אנושיים",
+      "label_en": "Chasing Inhuman Standards",
+      "short_description": "המשתמש מנסה לעמוד בסטנדרטים שאינם מציאותיים לאף אדם ונכשל בהגדרה.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "סטנדרט שאף אחד לא עומד בו הוא לא סטנדרט.",
+      "bridge_sentences": [
+        "לרדוף אחר שלמות שלא קיימת זה מרוץ שאי אפשר לנצח.",
+        "הסטנדרטים שאנחנו מציבים לעצמנו לפעמים לא שייכים לנו מלכתחילה.",
+        "אפשר לשאוף לגדול בלי לקבוע קו שמחריב אותך."
+      ],
+      "next_question": "מאיפה הגיע הסטנדרט הזה ומי תועיל אם תעמוד בו?",
+      "tags": [
+        "שלמות",
+        "סטנדרטים",
+        "ציפיות",
+        "אכזבה"
+      ],
+      "example_inputs": [
+        "אני תמיד מרגיש שלא הגעתי מספיק רחוק",
+        "יש לי ציפיות ממני שאף אחד לא יכול לעמוד בהן",
+        "אני נכשל מול הסטנדרטים שהצבתי לעצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_07",
+      "index": 34,
+      "label_he": "פרשנות עצמית כנחות",
+      "label_en": "Self-Interpretation as Inferior",
+      "short_description": "המשתמש פרש באופן עקבי את מצבו כישוריו או מעמדו כנחות לעומת אחרים.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "פרשנות עצמית כנחות היא מחשבה לא עובדה.",
+      "bridge_sentences": [
+        "הנטייה לפרש את עצמך כנחות כואבת וגם לא מדויקת.",
+        "הערכה שלנו את עצמנו מושפעת מאוד מהמצב הרגשי שלנו.",
+        "שים לב האם אותה עדות יכולה לקבל גם פרשנות אחרת?"
+      ],
+      "next_question": "אם חבר טוב היה מתאר אותך האם הוא היה משתמש במילה נחות?",
+      "tags": [
+        "פרשנות",
+        "נחיתות",
+        "עצמי",
+        "מחשבה"
+      ],
+      "example_inputs": [
+        "אני תמיד הכי פחות מוכשר בחדר",
+        "כולם טובים ממני",
+        "אני מרגיש נחות מרוב האנשים שאני מכיר"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_08",
+      "index": 35,
+      "label_he": "תלות באישור חיצוני",
+      "label_en": "Dependence on External Validation",
+      "short_description": "המשתמש זקוק לאישור מתמיד מאנשים אחרים כדי להרגיש שהוא על המסלול הנכון.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "אישור מבחוץ הוא בונוס לא בסיס.",
+      "bridge_sentences": [
+        "לחפש אישור מאחרים זה טבעי אבל כשהוא הופך להכרחי הוא שולט בך.",
+        "כשהביטחון שלך תלוי באחרים הוא תמיד בסכנה.",
+        "נסה למצוא פעולה אחת שתיישם בגלל שאתה מאמין בה לא בגלל שמישהו אישר."
+      ],
+      "next_question": "מה היית עושה אחרת אם לא היית צריך שמישהו יאשר זאת?",
+      "tags": [
+        "אישור",
+        "אחרים",
+        "ביטחון",
+        "תלות"
+      ],
+      "example_inputs": [
+        "אני צריך שיגידו לי שאני בסדר",
+        "קשה לי לקבל החלטות בלי לקבל חוות דעת",
+        "אם אף אחד לא מגיב לי אני מרגיש שאני לא שווה"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_09",
+      "index": 36,
+      "label_he": "בושה על הקצב האישי",
+      "label_en": "Shame About Personal Pace",
+      "short_description": "המשתמש חש בושה על כך שאינו מתקדם בקצב שהוא מאמין שמצופה ממנו.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "הקצב שלך הוא הקצב הנכון עבורך.",
+      "bridge_sentences": [
+        "להתבייש בקצב שלך מוסיף כאב על תהליך שכבר מאתגר.",
+        "הקצב שלך לא אומר כלום על ערכך.",
+        "שאל קצב של מי אתה משווה לעצמך ומדוע הוא הסטנדרט?"
+      ],
+      "next_question": "מה היית אומר לחבר שמתבייש בקצב שלו?",
+      "tags": [
+        "קצב",
+        "בושה",
+        "תהליך",
+        "ציפיות"
+      ],
+      "example_inputs": [
+        "אני מתבייש כמה זמן לוקח לי",
+        "כולם מתקדמים מהר יותר ממני",
+        "הקצב שלי איטי מדי"
+      ],
+      "active": true
+    },
+    {
+      "id": "comparison_10",
+      "index": 37,
+      "label_he": "חוסר יכולת ליהנות ממה שיש",
+      "label_en": "Inability to Enjoy What I Have",
+      "short_description": "המשתמש אינו מצליח לחוש שמחה או סיפוק ממה שיש לו בשל התמקדות במה שחסר.",
+      "pain_axis": "comparison",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "comparison_01",
+        "comparison_02",
+        "comparison_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "שמחה בחלקי היא מיומנות שאפשר לפתח.",
+      "bridge_sentences": [
+        "כשמסתכלים תמיד על מה שחסר קשה לראות מה יש.",
+        "חוסר יכולת ליהנות ממה שיש הוא סימן לכאב לא לכפיות טובה.",
+        "נסה לרשום שלושה דברים שיש לך שאחרים עשויים לחפש."
+      ],
+      "next_question": "מה אחד הדברים שיש לך שלפני שנה רצית מאוד?",
+      "tags": [
+        "הכרת תודה",
+        "שמחה",
+        "חוסר",
+        "נוכחות"
+      ],
+      "example_inputs": [
+        "גם כשיש לי דברים טובים אני לא מצליח להיות מאושר",
+        "אני תמיד חושב על מה שחסר לי",
+        "אני לא יכול להנות מההצלחות שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_03",
+      "index": 38,
+      "label_he": "ספק לגבי הצלחות עבר",
+      "label_en": "Doubting Past Successes",
+      "short_description": "המשתמש מפקפק בהצלחות שהיו לו בעבר ואינו מאפשר להן לחזק את ביטחונו.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_04"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "הצלחות שעברו הן עובדה גם אם הספק מערער אותן.",
+      "bridge_sentences": [
+        "לפקפק בהצלחות שלך מרוקן אותן מהמשמעות שמגיעה להן.",
+        "הספק לגבי ההצלחות שלך לא הופך אותן לפחות אמיתיות.",
+        "נסה לרשום הצלחה אחת שאי אפשר להסביר אותה בלי כשרון שלך."
+      ],
+      "next_question": "אם לא היה לך שום חלק בהצלחות שלך איך הן קרו?",
+      "tags": [
+        "הצלחה",
+        "ספק",
+        "עבר",
+        "קרדיט"
+      ],
+      "example_inputs": [
+        "הצלחתי רק כי התמזל לי",
+        "ההצלחות שלי לא היו אמיתיות",
+        "אני לא זוכר למה הצלחתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_04",
+      "index": 39,
+      "label_he": "תחושה שאין בי את זה",
+      "label_en": "Feeling of Not Having What It Takes",
+      "short_description": "תחושה פנימית שלמשתמש חסרים הכישורים האנרגיה או האיכויות הנדרשות להצלחה.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "תחושת אין בי את זה היא מחשבה לא מציאות.",
+      "bridge_sentences": [
+        "התחושה שאין בי את זה יכולה להיות עצומה ועדיין שגויה.",
+        "רבים שהצליחו הרגישו בדיוק כך בנקודה מסוימת.",
+        "שאל את עצמך מה ראיתי בעצמי שגרם לי להאמין שאני לא מסוגל?"
+      ],
+      "next_question": "מה דבר אחד שכן יש בך שיכול לשרת את המשימה הזו?",
+      "tags": [
+        "יכולת",
+        "כישורים",
+        "ספק",
+        "פנים"
+      ],
+      "example_inputs": [
+        "אין לי מה שצריך כדי להצליח",
+        "אני לא מספיק טוב לזה",
+        "חסר לי משהו בסיסי שלאחרים יש"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_05",
+      "index": 40,
+      "label_he": "צורך להיות מוכן לגמרי",
+      "label_en": "Need to Be Fully Ready",
+      "short_description": "המשתמש מאמין שצריך להיות מוכן לחלוטין לפני כל פעולה ולכן נמנע מלפעול.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "להיות מוכן לגמרי הוא מיתוס שמשתק.",
+      "bridge_sentences": [
+        "הציפייה להיות מוכן לחלוטין לפני כל צעד מונעת מרוב הצעדים לקרות.",
+        "אף אחד לא מוכן לחלוטין מוכנות מספיקה היא מוכנות אמיתית.",
+        "מה 80 אחוז מוכנות היה נראה ואיך היה מספיק?"
+      ],
+      "next_question": "מה עוד צריך לקרות כדי שתרגיש מוכן ומה הסיכוי שזה יקרה?",
+      "tags": [
+        "מוכנות",
+        "שלמות",
+        "עיכוב",
+        "פעולה"
+      ],
+      "example_inputs": [
+        "אני צריך לדעת יותר לפני שאנסה",
+        "אני לא מוכן עדיין",
+        "אני מחכה שאהיה מוכן לגמרי"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_06",
+      "index": 41,
+      "label_he": "פחד מחשיפה",
+      "label_en": "Fear of Exposure",
+      "short_description": "המשתמש חושש שאם יציג את עצמו יגלו שאינו מוכשר או מתאים כפי שנראה.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "חולשה שנחשפת בפני אדם אמין לא הורסת אותך.",
+      "bridge_sentences": [
+        "הפחד מחשיפה הוא אחד הפחדים הכי נפוצים ואחד הכי מבודדים.",
+        "לחשוב שיגלו שאתה לא אמיתי הוא תחושה לא נבואה.",
+        "מה הדבר הכי קטן שיכולת לחשוף כדי לבדוק שהשמיים לא נופלים?"
+      ],
+      "next_question": "אם מישהו היה גלה חולשה אחת שלך מה היית רוצה שהוא יחשוב?",
+      "tags": [
+        "חשיפה",
+        "הונאה",
+        "פגיעות",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אם יכירו אותי לאמיתי יתאכזבו",
+        "אני מפחד שיגלו שאני לא באמת מוכשר",
+        "אני מרגיש כאילו אני מתחזה"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_07",
+      "index": 42,
+      "label_he": "דחיית החלטות",
+      "label_en": "Postponing Decisions",
+      "short_description": "המשתמש דוחה קבלת החלטות לאין קץ מחשש לבחור לא נכון.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לדחות היא גם בחירה עם מחיר משלה.",
+      "bridge_sentences": [
+        "לדחות החלטות מרגיש בטוח בטווח הקצר אבל עולה בטווח הארוך.",
+        "אי ההחלטה היא גם החלטה רק אחת שנעשתה בשבילך.",
+        "מה הכי גרוע שיכול לקרות אם תקבל החלטה לא מושלמת עכשיו?"
+      ],
+      "next_question": "כמה זמן כבר אתה דוחה את ההחלטה הזו ומה המחיר של הדחייה עד עכשיו?",
+      "tags": [
+        "דחייה",
+        "החלטות",
+        "פחד",
+        "שיתוק"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל לקבל החלטות",
+        "אני דוחה כל החלטה שמאיימת",
+        "אני תמיד בסוף מחכה שהמצב יחליט בשבילי"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_08",
+      "index": 43,
+      "label_he": "חוסר אמון בשיקול הדעת העצמי",
+      "label_en": "Distrusting Own Judgment",
+      "short_description": "המשתמש אינו סומך על שיקול הדעת שלו ומחפש תמיד אישור חיצוני לפני כל צעד.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "השיקול שלך כבר הוביל אותך עד לכאן.",
+      "bridge_sentences": [
+        "לא לסמוך על עצמך יכול להיות מנוחת נפש לזמן קצר ואחר כך מלכודת.",
+        "חוסר אמון בשיקול הדעת לרוב מסתיר ניסיון כואב שבו הסתמכת על עצמך ואכזב.",
+        "זכור החלטה אחת שלך שיצאה טוב מה גרם לזה?"
+      ],
+      "next_question": "מה ההחלטה הכי טובה שקיבלת לאחרונה ומה היה בה מהשיקול שלך?",
+      "tags": [
+        "שיקול דעת",
+        "אמון עצמי",
+        "ספק",
+        "החלטות"
+      ],
+      "example_inputs": [
+        "אני לא סומך על עצמי",
+        "תמיד אני צריך מישהו שיגיד לי מה לעשות",
+        "אני מפחד להסתמך על השיקול שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_09",
+      "index": 44,
+      "label_he": "דחיית הצלחות כמזל",
+      "label_en": "Dismissing Achievements as Luck",
+      "short_description": "המשתמש מייחס הצלחותיו למזל או לגורמים חיצוניים ולא מכיר בתרומתו האישית.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "מזל אולי פתח דלת אבל אתה נכנסת.",
+      "bridge_sentences": [
+        "לייחס הצלחות למזל בלבד שומר על ענווה ומוחק את עצמך.",
+        "כשמזל הוא ההסבר לכל הצלחה לא נשאר מקום ליכולת שלך.",
+        "חשוב על דבר שעשית שדרש מאמץ ושאף מזל לא היה יכול לעשות עבורך."
+      ],
+      "next_question": "אם זה היה רק מזל מה מנע מאנשים אחרים באותו מצב לקבל אותו תוצאה?",
+      "tags": [
+        "מזל",
+        "קרדיט",
+        "הצלחה",
+        "כישרון"
+      ],
+      "example_inputs": [
+        "הצלחתי רק כי התמזל לי",
+        "לא הצלחתי בזכות עצמי",
+        "פשוט הייתי במקום הנכון בזמן הנכון"
+      ],
+      "active": true
+    },
+    {
+      "id": "self_doubt_10",
+      "index": 45,
+      "label_he": "שיתוק מול בחירות",
+      "label_en": "Paralysis Before Choices",
+      "short_description": "בפני כל בחירה המשתמש קופא ואינו מצליח לפעול עקב ספק גורף בנוגע לנכונות כל האפשרויות.",
+      "pain_axis": "self_doubt",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "self_doubt_01",
+        "self_doubt_02",
+        "self_doubt_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "שיתוק מול בחירה הוא איתות שכל האפשרויות חשובות לך.",
+      "bridge_sentences": [
+        "לקפוא מול בחירה הוא סימן שאתה לוקח את ההחלטה ברצינות.",
+        "אי אפשר לדעת מראש איזו בחירה נכונה רק לגלות אחרי.",
+        "בחר את האפשרות שהכי פחות תצטער עליה זו בחירה טובה מספיק."
+      ],
+      "next_question": "אם שתי האפשרויות היו שוות איזו היית בוחר בלב?",
+      "tags": [
+        "בחירה",
+        "שיתוק",
+        "ספק",
+        "אפשרויות"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל לבחור",
+        "כשיש לי כמה אפשרויות אני קופא",
+        "כל בחירה מרגישה כמו טעות פוטנציאלית"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_03",
+      "index": 46,
+      "label_he": "חרדת נטישה נסתרת",
+      "label_en": "Hidden Abandonment Anxiety",
+      "short_description": "חרדת נטישה עמוקה ולא מדוברת מניעה את התנהגות המשתמש ביחסים.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_04"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "חרדת נטישה היא לעיתים זיכרון לא נבואה.",
+      "bridge_sentences": [
+        "פחד מנטישה הוא אחד הפחדים הכי ראשוניים שיש.",
+        "חרדת הנטישה שלך נוצרה מסיבה ולא חייבת להמשיך לשלוט.",
+        "שאל האם מה שמפחיד אותי כרגע קרה או שזה ציפייה ישנה?"
+      ],
+      "next_question": "מתי בפעם הראשונה הרגשת את הפחד הזה מנטישה?",
+      "tags": [
+        "נטישה",
+        "חרדה",
+        "יחסים",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני תמיד מפחד שיעזבו אותי",
+        "בכל קשר יש לי פחד שיגמר",
+        "אני לא יכול לישון כשמישהו קרוב לי לא עונה"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_04",
+      "index": 47,
+      "label_he": "רגישות יתר לאי הסכמה",
+      "label_en": "Over-Sensitivity to Disagreement",
+      "short_description": "אי הסכמה מצד אחרים מתפרשת על ידי המשתמש כפגיעה אישית ודחייה.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "אי הסכמה היא לא דחייה.",
+      "bridge_sentences": [
+        "כשאי הסכמה מרגישה כמו דחייה כל שיחה הופכת למסוכנת.",
+        "אנשים יכולים לא להסכים ועדיין לאהוב אותך ולכבד אותך.",
+        "נסה להפריד האם הם דחו את הרעיון או אותך?"
+      ],
+      "next_question": "האם פעם מישהו לא הסכים איתך ועדיין נשאר קרוב אליך?",
+      "tags": [
+        "אי הסכמה",
+        "רגישות",
+        "דחייה",
+        "שיחה"
+      ],
+      "example_inputs": [
+        "כשמישהו לא מסכים איתי אני מרגיש נדחה",
+        "כל ביקורת גורמת לי להרגיש לא רצוי",
+        "אם הם לא מסכימים זה אומר שהם נגדי"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_05",
+      "index": 48,
+      "label_he": "ציפייה לדחייה מראש",
+      "label_en": "Anticipating Rejection",
+      "short_description": "המשתמש מצפה לדחייה עוד לפני שהיא קרתה ולעיתים מוותר מראש.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "לצפות לדחייה לפעמים יוצר אותה.",
+      "bridge_sentences": [
+        "לצפות לדחייה לפני שהיא קרתה מגין ועוצר קשרים אמיתיים.",
+        "הציפייה לדחייה לרוב מגיעה מניסיון כואב מהעבר.",
+        "מה היה קורה אם היית ניגש בלי לצפות לתוצאה מסוימת?"
+      ],
+      "next_question": "מה ההנחה שאתה מחזיק לגבי מה שאחרים חושבים עליך?",
+      "tags": [
+        "ציפייה",
+        "דחייה",
+        "הגנה",
+        "קשרים"
+      ],
+      "example_inputs": [
+        "אני לא ניגש כי ממילא ידחו אותי",
+        "אני יודע מראש שזה לא יצליח",
+        "אני בטוח שלא ירצו אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_06",
+      "index": 49,
+      "label_he": "כיווץ אחרי מסר קריר",
+      "label_en": "Shrinking After Cold Message",
+      "short_description": "כשמקבל מסר קריר או לא חם המשתמש מתכווץ ומפסיק לפנות.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "קרירות לא תמיד מכוונת אליך.",
+      "bridge_sentences": [
+        "קרירות במסר יכולה לנבוע ממאה מקומות שאינם קשורים אליך.",
+        "התכווצות לאחר מסר קריר היא תגובה מובנת אבל לא תמיד מדויקת.",
+        "נסה לשאול בפשטות האם הכל בסדר בינינו?"
+      ],
+      "next_question": "מה היה קורה אם היית שואל אם הכל בסדר במקום להסיק שלא?",
+      "tags": [
+        "קרירות",
+        "פרשנות",
+        "כיווץ",
+        "קשר"
+      ],
+      "example_inputs": [
+        "קיבלתי תשובה קצרה ומאז אני מפחד לפנות",
+        "כשמישהו כתב לי בקצרה חשבתי שהוא כועס",
+        "אני לא שולח הודעות כשאני מרגיש שהם קרים"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_07",
+      "index": 50,
+      "label_he": "נסיגה לפני שנדחים",
+      "label_en": "Withdrawing Before Being Rejected",
+      "short_description": "כדי להימנע מכאב הדחייה המשתמש נוסג מרצון לפני שהאחר מגיב.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "לסגת ראשון גוזל ממך קשרים שיכלו להיות טובים.",
+      "bridge_sentences": [
+        "לסגת לפני הדחייה נראה הגיוני ולמעשה הוא גוזר את הסוף בעצמך.",
+        "כשאתה נסוג ראשון אתה לא נמנע מכאב אתה בוחר את זמנו.",
+        "מה היה קורה אם הישארת קצת יותר?"
+      ],
+      "next_question": "כמה פעמים נסגת ולאחר מכן הצטערת על זה?",
+      "tags": [
+        "נסיגה",
+        "הגנה",
+        "דחייה",
+        "קשר"
+      ],
+      "example_inputs": [
+        "אני מסיים קשרים לפני שהם מסיימים אותי",
+        "אני מתרחק לפני שיתרחקו ממני",
+        "אני מעדיף לפרוש ראשון כדי לא לסבול"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_08",
+      "index": 51,
+      "label_he": "פרשנות של ביקורת כדחייה",
+      "label_en": "Interpreting Criticism as Rejection",
+      "short_description": "המשתמש מפרש כל ביקורת גם קונסטרוקטיבית כאמירה שאינו רצוי.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "ביקורת יכולה לבוא מאהבה.",
+      "bridge_sentences": [
+        "כשביקורת מרגישה כמו דחייה כל משוב הופך לאיום.",
+        "ביקורת לא תמיד פירושה אני לא רוצה אותך לפעמים פירושה אכפת לי.",
+        "נסה לשאול האם האדם שביקר אותי מסתכל עליי לטובה?"
+      ],
+      "next_question": "מה אם הביקורת הזו נובעת מכך שמישהו מאמין שיש לך יכולת גדולה יותר?",
+      "tags": [
+        "ביקורת",
+        "דחייה",
+        "פרשנות",
+        "קשר"
+      ],
+      "example_inputs": [
+        "כשמישהו מבקר אותי אני מרגיש לא רצוי",
+        "ביקורת גורמת לי להרגיש שאני לא בסדר",
+        "אם ביקרו אותי זה אומר שהם לא אוהבים אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_09",
+      "index": 52,
+      "label_he": "חיפוש אישור כדי להימנע מדחייה",
+      "label_en": "Seeking Approval to Avoid Rejection",
+      "short_description": "המשתמש מחפש ללא הרף אישור מאחרים כמנגנון להגנה מדחייה.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "כל החיים לרדוף אחרי אישור הוא מרוץ ללא קו סיום.",
+      "bridge_sentences": [
+        "רדיפה אחר אישור כהגנה מדחייה לא מרגיעה היא מזינה את הפחד.",
+        "כשאישור הוא הדרך להרגיש בטוח הוא מעולם לא יספיק.",
+        "מה היה קורה אם היית עושה דבר אחד בלי לחכות לאישור?"
+      ],
+      "next_question": "מה היית עושה אחרת בחייך אם לא היית צריך אישור של אף אחד?",
+      "tags": [
+        "אישור",
+        "הגנה",
+        "דחייה",
+        "תלות"
+      ],
+      "example_inputs": [
+        "אני תמיד מחפש שיאשרו אותי לפני שאני פועל",
+        "אני לא יכול לעשות דברים בלי שמישהו יגיד לי שזה בסדר",
+        "אני זקוק לאישור תמידי כדי להרגיש שאני בסדר"
+      ],
+      "active": true
+    },
+    {
+      "id": "rejection_10",
+      "index": 53,
+      "label_he": "תחושת לא-רצוי",
+      "label_en": "Feeling Unwanted",
+      "short_description": "המשתמש מאמין באופן יסודי שאינו רצוי לא בקשרים לא בחברה ולא בסביבות שונות.",
+      "pain_axis": "rejection",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "rejection_01",
+        "rejection_02",
+        "rejection_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "תחושת לא רצוי היא עמדה פנימית לא עובדה חיצונית.",
+      "bridge_sentences": [
+        "התחושה שאינך רצוי יכולה להיות עמוקה ומכאיבה מאוד.",
+        "תחושת לא-רצוי לרוב מגיעה מניסיון ישן ולא תמיד מתאימה לנוכחות.",
+        "שאל מה האדם שבאמת מכיר אותי היה אומר על הערך שלי?"
+      ],
+      "next_question": "האם היה פעם מישהו שהרגיש לך שאתה רצוי מה היה שונה שם?",
+      "tags": [
+        "לא רצוי",
+        "דחייה",
+        "שייכות",
+        "ערך"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאף אחד לא רוצה אותי",
+        "אני לא מרגיש שאני שייך לשום מקום",
+        "תמיד מרגיש שאני מיותר"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_03",
+      "index": 54,
+      "label_he": "חוסר יכולת לתעדף",
+      "label_en": "Inability to Prioritize",
+      "short_description": "המשתמש אינו מצליח לקבוע מה חשוב יותר ומה פחות ולכן הכל נדמה שווה ודחוף.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_04"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "כשהכול בהול שום דבר לא באמת בהול.",
+      "bridge_sentences": [
+        "כשכל הדברים נראים דחופים באותה מידה קשה מאוד להתקדם.",
+        "חוסר יכולת לתעדף לעיתים מגיע מחרדה לא מחוסר יכולת ניהול.",
+        "שאל מה הדבר שאם לא תעשה היום תצטער עליו מחר."
+      ],
+      "next_question": "אם יכולת לעשות רק דבר אחד היום מה היה הכי חשוב?",
+      "tags": [
+        "תיעדוף",
+        "דחיפות",
+        "ניהול",
+        "בהירות"
+      ],
+      "example_inputs": [
+        "הכל נראה לי חשוב באותה מידה",
+        "אני לא יודע מה לעשות קודם",
+        "כל פעם שאני מנסה לתעדף אני מתבלבל"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_04",
+      "index": 55,
+      "label_he": "תחושת קריסה ממשמשת",
+      "label_en": "Sense of Impending Collapse",
+      "short_description": "המשתמש חש שהוא עומד לקרוס תחת העומס בכל רגע.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "תחושת קריסה מזמינה לעצור לא להמשיך מהיר יותר.",
+      "bridge_sentences": [
+        "התחושה שאתה עומד לקרוס היא אחת הכי מבהילות שיש.",
+        "גוף שמרגיש קריסה ממשמשת מבקש עצירה לא האצה.",
+        "מה הדבר הקטן ביותר שיכול לעזור לך להרגיש קצת יותר יציב?"
+      ],
+      "next_question": "מה אחד הדברים שיכול לעזור לך לנשום קצת עמוק יותר עכשיו?",
+      "tags": [
+        "קריסה",
+        "לחץ",
+        "גבול",
+        "עצירה"
+      ],
+      "example_inputs": [
+        "אני מרגיש שעוד מעט אני קורס",
+        "אין לי יותר כוח",
+        "אני על הגבול"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_05",
+      "index": 56,
+      "label_he": "הימנעות מהתמודדות בגלל עומס",
+      "label_en": "Avoiding Tasks Due to Overload",
+      "short_description": "העומס כה גדול עד שהמשתמש מתחיל להימנע מהתמודדות עם משימות.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "הימנעות מוסיפה על העומס לא מורידה ממנו.",
+      "bridge_sentences": [
+        "להימנע כשיש עומס מרגיש כמו הקלה רגעית ומוסיף עוד שכבה מאוחר יותר.",
+        "הימנעות היא תגובה מובנת לעומס לא חולשת אופי.",
+        "מה הצעד הכי קטן לכיוון אחת המשימות שנמנעת מהן?"
+      ],
+      "next_question": "מה המשימה הכי קלה שדחית ומה היה קורה אם תעשה אותה ב-5 דקות?",
+      "tags": [
+        "הימנעות",
+        "עומס",
+        "דחייה",
+        "משימות"
+      ],
+      "example_inputs": [
+        "אני לא מתקרב לדברים שצריך לעשות",
+        "יש לי ערימה של דברים שדחיתי",
+        "ככל שיש יותר לעשות כך אני פחות עושה"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_06",
+      "index": 57,
+      "label_he": "חנק מהתחייבויות",
+      "label_en": "Suffocating from Obligations",
+      "short_description": "המשתמש חש חנק ואין-מוצא בתוך רשימת התחייבויות שנדמית אינסופית.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "מחויבות שמחנקת ראויה לבחינה מחדש.",
+      "bridge_sentences": [
+        "להרגיש חנוק מהתחייבויות הוא סימן שמשהו בעומס צריך לשנות.",
+        "לא כל התחייבות שנלקחה בעבר חייבת להיות קיימת בהווה.",
+        "מה תחייבות אחת שיכולת לסיים לדחות או לבקש עזרה בה?"
+      ],
+      "next_question": "אם היית יכול להוריד תחייבות אחת מהרשימה מה היית מוריד?",
+      "tags": [
+        "התחייבויות",
+        "חנק",
+        "גבולות",
+        "בחירה"
+      ],
+      "example_inputs": [
+        "יש לי יותר מדי דברים שהבטחתי",
+        "אני לא יכול לנשום מכמות ההתחייבויות",
+        "כולם מצפים ממני ואין לי מקום"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_07",
+      "index": 58,
+      "label_he": "בלבול בין דחוף לחשוב",
+      "label_en": "Confusing Urgent with Important",
+      "short_description": "המשתמש מתנהל לפי מה שדחוף ומאבד מעין את מה שבאמת חשוב לו.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "דחוף לא תמיד חשוב וחשוב לא תמיד דחוף.",
+      "bridge_sentences": [
+        "כשאנחנו רצים אחרי הדחוף לרוב מה שחשוב לנו נדחק לשוליים.",
+        "הבלבול בין דחוף לחשוב גוזל את הדברים שבאמת אכפת לנו מהם.",
+        "שאל הדבר שאני רץ אחריו האם זה מה שבאמת חשוב לי?"
+      ],
+      "next_question": "מה דבר חשוב שדחוי כבר הרבה זמן כי דברים דחופים תמיד עוברים קודם?",
+      "tags": [
+        "דחיפות",
+        "חשיבות",
+        "עדיפויות",
+        "בלבול"
+      ],
+      "example_inputs": [
+        "אני כל הזמן על אש אבל לא מתקדם",
+        "דחוף תמיד מנצח על חשוב אצלי",
+        "אני מרגיש שאני עסוק אבל לא ממש מתקדם"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_08",
+      "index": 59,
+      "label_he": "קיפאון מול רשימות ארוכות",
+      "label_en": "Freezing Before Long Lists",
+      "short_description": "בפני רשימה ארוכה של משימות המשתמש קופא ואינו יכול להתחיל בשום אחת.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "רשימה ארוכה מתחילה בפריט אחד.",
+      "bridge_sentences": [
+        "קיפאון מול רשימה ארוכה הוא אחד הדפוסים הנפוצים ביותר בעידן הנוכחי.",
+        "הקיפאון לא אומר שאתה עצלן הוא אומר שהמוח שלך הוצף.",
+        "בחר את הפריט הכי קל ברשימה ועשה אותו ראשון רק כדי להתחיל לנוע."
+      ],
+      "next_question": "מה הפריט הכי קטן ברשימה שיכולת לסיים בפחות מ-3 דקות?",
+      "tags": [
+        "רשימות",
+        "קיפאון",
+        "התחלה",
+        "עומס"
+      ],
+      "example_inputs": [
+        "יש לי רשימה ארוכה ואני לא מתחיל שום דבר",
+        "כל פעם שאני פותח את הרשימה אני נסגר",
+        "המחשה של כמה יש לעשות משתקת אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_09",
+      "index": 60,
+      "label_he": "כעס על עצמי שלא מספיק",
+      "label_en": "Anger at Self for Not Being Enough",
+      "short_description": "המשתמש מפנה כעס פנימה על כך שאינו עומד בציפיות לאחר מאמץ רב.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "כעס על עצמי שאני לא מספיק הוא כאב מחופש בתלבושת כעס.",
+      "bridge_sentences": [
+        "כשאנחנו עובדים קשה ועדיין לא מגיעים לתוצאה הכעס העצמי מובן.",
+        "הכעס שאתה מפנה לעצמך לפעמים מסתיר כאב עמוק יותר על ציפייה שלא נענתה.",
+        "מה היית אומר לחבר שעשה את אותו מאמץ ועדיין לא הגיע לתוצאה?"
+      ],
+      "next_question": "מה קרה כאן שגרם לך לצפות כל כך הרבה מעצמך?",
+      "tags": [
+        "כעס",
+        "ציפיות",
+        "כאב",
+        "עצמי"
+      ],
+      "example_inputs": [
+        "אני כועס על עצמי שלא עמדתי בלוח הזמנים",
+        "אני מרגיש שאני לא מספיק גם כשמנסה",
+        "אני לא סולח לעצמי שלא עשיתי יותר"
+      ],
+      "active": true
+    },
+    {
+      "id": "overwhelm_10",
+      "index": 61,
+      "label_he": "איבוד כיוון בתוך העומס",
+      "label_en": "Losing Direction in Load",
+      "short_description": "תוך כדי העומס המשתמש מאבד את הכיוון ואת התחושה לאן הוא הולך.",
+      "pain_axis": "overwhelm",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "overwhelm_01",
+        "overwhelm_02",
+        "overwhelm_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "לאבד כיוון זמנית לא אומר שאיבדת את הדרך.",
+      "bridge_sentences": [
+        "בתוך עומס גדול קל לאבד את התמונה הגדולה.",
+        "לא לדעת לאן הולכים בתוך עומס הוא טבעי לא כישלון.",
+        "שאל מה דבר אחד שחשוב לך שהיית רוצה להתקדם בו?"
+      ],
+      "next_question": "אם העומס היה יורד לרגע מה היית רוצה להתמקד בו?",
+      "tags": [
+        "כיוון",
+        "עומס",
+        "תכלית",
+        "איבוד"
+      ],
+      "example_inputs": [
+        "אני לא יודע לאן אני הולך",
+        "בתוך כל הבלגן איבדתי את הכיוון",
+        "אני עסוק כל הזמן אבל לא יודע למה"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_03",
+      "index": 62,
+      "label_he": "פחד שטעות תהרוס הכול",
+      "label_en": "Fear Mistake Will Ruin Everything",
+      "short_description": "המשתמש מפחד שכל טעות קטנה תהרוס את כל מה שבנה.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_04"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "טעות יכולה לפגוע היא לא הורסת הכול.",
+      "bridge_sentences": [
+        "הפחד שטעות תהרוס הכול הוא לרוב גדול מהמציאות.",
+        "גם טעויות משמעותיות נדירות מהרסות הכול בדרך כלל יש מה שניתן לתקן.",
+        "מה הטעות הכי גדולה שעשית ומה נשאר אחריה?"
+      ],
+      "next_question": "מה הדבר הגרוע ביותר שיכול לקרות מטעות ואיך יכולת להתמודד איתו?",
+      "tags": [
+        "טעות",
+        "הרס",
+        "פחד",
+        "מחיר"
+      ],
+      "example_inputs": [
+        "אם אטעה הכל יתפרק",
+        "אני מפחד לקבל החלטה כי זה יכול לקלקל הכל",
+        "כל טעות יכולה להיות הרסנית"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_04",
+      "index": 63,
+      "label_he": "הימנעות מסיכון רגשי",
+      "label_en": "Avoiding Emotional Risk",
+      "short_description": "המשתמש נמנע מלהשקיע רגשית בקשרים או מצבים מחשש להיפגע.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "להימנע מסיכון רגשי עולה ביחסים שיכלו להיות חשובים.",
+      "bridge_sentences": [
+        "להימנע מסיכון רגשי מגן ובמקביל שומר על בדידות.",
+        "כל קשר אמיתי כולל סיכון רגשי זה לא חסרון זה מחיר הקרבה.",
+        "מה הסיכון הרגשי הקטן ביותר שיכולת לקחת היום?"
+      ],
+      "next_question": "מה יכולת להרוויח אם היית לוקח את הסיכון הרגשי הזה?",
+      "tags": [
+        "סיכון",
+        "רגש",
+        "הגנה",
+        "קשר"
+      ],
+      "example_inputs": [
+        "אני לא מרשה לעצמי להתקשר",
+        "אני לא פותח את הלב כי כבר נפגעתי",
+        "אני שומר מרחק רגשי מכולם"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_05",
+      "index": 64,
+      "label_he": "חרדה מהלא נודע",
+      "label_en": "Anxiety of the Unknown",
+      "short_description": "חרדה עמוקה שמתעוררת בכל מצב שבו אין מידע ברור על מה שעומד להגיע.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "חרדה מהלא נודע מגינה אבל גם מגבילה.",
+      "bridge_sentences": [
+        "חרדה מהלא נודע היא אחת הצורות הנפוצות ביותר של פחד.",
+        "לא לדעת מה יהיה זה אי נוחות לא בהכרח סכנה.",
+        "מה יכולת לעשות כדי להרגיש קצת יותר מבוסס גם מול הלא נודע?"
+      ],
+      "next_question": "מה הלא נודע שהכי מפחיד אותך ומה בידיך לעשות בנוגע לזה?",
+      "tags": [
+        "לא נודע",
+        "חרדה",
+        "עתיד",
+        "בטחון"
+      ],
+      "example_inputs": [
+        "אני מפחד ממה שאני לא יודע",
+        "הלא נודע מחריד אותי",
+        "אני לא יכול לשאת חוסר ידיעה"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_06",
+      "index": 65,
+      "label_he": "דריכות יתר לפני צעד חדש",
+      "label_en": "Hyper-Alertness Before New Step",
+      "short_description": "לפני כל צעד חדש המשתמש נכנס לדריכות מוגברת ומתח רב.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "דריכות לפני צעד חדש היא אנרגיה שאפשר לנצל.",
+      "bridge_sentences": [
+        "לפני כל דבר חדש יש לרוב מתח זה אות שאתה מקשיב לעצמך.",
+        "דריכות לא אומרת שמשהו רע יקרה היא אומרת שהמצב חשוב לך.",
+        "מה יכולת לעשות עם האנרגיה הזו במקום לתת לה לעצור אותך?"
+      ],
+      "next_question": "מה הדריכות הזו מנסה להגן עליך ממנה?",
+      "tags": [
+        "דריכות",
+        "חדש",
+        "מתח",
+        "אנרגיה"
+      ],
+      "example_inputs": [
+        "אני דרוך מאוד לפני כל דבר חדש",
+        "לפני שינויים אני מתמלא בחרדה",
+        "כל צעד חדש גורם לי ללחץ עצום"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_07",
+      "index": 66,
+      "label_he": "הצפה בתרחישים שליליים",
+      "label_en": "Flooding with Negative Scenarios",
+      "short_description": "המשתמש מוצא עצמו מוצף בתרחישים שליליים שמתפשטים ומגדלים.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "תרחיש שלילי הוא אפשרות לא תחזית.",
+      "bridge_sentences": [
+        "המח שלנו מיצר תרחישים שליליים כחלק ממנגנון ההגנה שלו.",
+        "לא כל תרחיש שעולה בדעתנו משקף מה שיקרה.",
+        "נסה לשאול מה הסיכוי הממשי שהתרחיש הזה יתרחש?"
+      ],
+      "next_question": "אם היית בוחן את ההסתברות הממשית לתרחיש הגרוע ביותר מה היית מקבל?",
+      "tags": [
+        "תרחישים",
+        "שליליות",
+        "פחד",
+        "מחשבה"
+      ],
+      "example_inputs": [
+        "הראש שלי מלא בתרחישים גרועים",
+        "אני תמיד חושב על מה הכי רע שיכול לקרות",
+        "אני לא מפסיק לדמיין דברים שיכולים להשתבש"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_08",
+      "index": 67,
+      "label_he": "צורך להבטיח שליטה מלאה",
+      "label_en": "Need to Guarantee Full Control",
+      "short_description": "המשתמש חש צורך לוודא שליטה על כל פרמטר לפני שמסכים לפעול.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לדרוש ודאות מלאה הוא ביטוח שלא קיים בפוליסה שום מקום.",
+      "bridge_sentences": [
+        "הצורך לשלוט על הכל לפני שזזים הוא הגנה ולרוב מניעה.",
+        "שליטה מלאה על מצב היא אשליה שקשה לוותר עליה.",
+        "מה הייתי יכול לאפשר לעצמי לעשות אפילו ללא שליטה מלאה?"
+      ],
+      "next_question": "מה אחד הדברים שתוכל להניח לתהליך לנהל בלי שתנהל אותו?",
+      "tags": [
+        "שליטה",
+        "ודאות",
+        "פחד",
+        "הגנה"
+      ],
+      "example_inputs": [
+        "אני לא פועל אם אני לא שולט על כל הפרטים",
+        "אני צריך לדעת שהכל תחת שליטה לפני שמתחיל",
+        "אי שליטה מבהיל אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_09",
+      "index": 68,
+      "label_he": "פחד מתקיעות נצחית",
+      "label_en": "Fear of Eternal Stagnation",
+      "short_description": "המשתמש מפחד שמצב הקושי הנוכחי לעולם לא ישתנה ויישאר כך לנצח.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "תקיעות תמיד זמנית גם כשמרגישה נצחית.",
+      "bridge_sentences": [
+        "הפחד שהמצב הנוכחי יישאר לנצח הוא כואב ולרוב לא מדויק.",
+        "כמעט כל מצב שנדמה נצחי השתנה בסופו של דבר.",
+        "מה שינוי קטן שיכול לחולל הבדל ולו מינורי?"
+      ],
+      "next_question": "מה מצב שנדמה לך נצחי בעבר ובסוף השתנה?",
+      "tags": [
+        "תקיעות",
+        "שינוי",
+        "עתיד",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני מפחד שתמיד יהיה לי ככה",
+        "הרגשה שזה לא ישתנה לעולם",
+        "אני בתקיעות כבר הרבה זמן ולא רואה שינוי"
+      ],
+      "active": true
+    },
+    {
+      "id": "fear_10",
+      "index": 69,
+      "label_he": "קיפאון מול סיכון קטן",
+      "label_en": "Freezing Before Small Risk",
+      "short_description": "גם בפני סיכון קטן יחסית המשתמש קופא ואינו מסוגל לנקוט פעולה.",
+      "pain_axis": "fear",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "fear_01",
+        "fear_02",
+        "fear_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "קיפאון מול סיכון קטן מגן ממה שיכול להיות מאוד טוב.",
+      "bridge_sentences": [
+        "קיפאון מול סיכון קטן לרוב אומר שסיכון גדול יותר בעבר פגע.",
+        "סיכון קטן בהגדרה כרוך בנזק מוגבל לפעמים הראש שלנו לא יודע את זה.",
+        "מה הסיכון הקטן ביותר שיכולת לקחת היום?"
+      ],
+      "next_question": "מה הכי גרוע שיכול לקרות אם תקח את הסיכון הקטן הזה?",
+      "tags": [
+        "סיכון",
+        "קיפאון",
+        "פחד",
+        "צעד"
+      ],
+      "example_inputs": [
+        "אני מפחד לנסות אפילו דברים קטנים",
+        "גם מסיכון קטן אני קופא",
+        "אפילו פעולה פשוטה גורמת לי לפחד"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_03",
+      "index": 70,
+      "label_he": "הסתרה עצמית מפני מבוכה",
+      "label_en": "Self-Concealment from Embarrassment",
+      "short_description": "מתוך פחד למבוכה המשתמש מסתיר חלקים ממנו מאנשים בסביבתו.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_04"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להסתיר את עצמי לא מאפשר לאחרים לראות אותי כפי שאני.",
+      "bridge_sentences": [
+        "להסתיר חלקים ממך כדי למנוע מבוכה הוא טבעי ועולה ביחסים.",
+        "כשאנחנו מסתירים את עצמנו הקשרים שנוצרים הם עם המסכה לא עם המהות.",
+        "האם יש אדם אחד שיכולת לחשוף בפניו משהו שאתה מסתיר?"
+      ],
+      "next_question": "מה הדבר שאתה הכי מסתיר ומה היה קורה אם האדם הנכון היה יודע?",
+      "tags": [
+        "הסתרה",
+        "מבוכה",
+        "חשיפה",
+        "אותנטיות"
+      ],
+      "example_inputs": [
+        "אני מסתיר חלקים ממני מפחד לבייש",
+        "אני לא יכול להראות כמה שאני באמת",
+        "אני מנסה לא להיתפס בחולשות שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_04",
+      "index": 71,
+      "label_he": "הלקאה עצמית לאחר טעות",
+      "label_en": "Self-Flagellation After Mistake",
+      "short_description": "לאחר טעות המשתמש פוגע בעצמו בביקורת קשה ובלתי פוסקת.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "הלקאה עצמית לא מתקנת את הטעות היא מוסיפה עליה.",
+      "bridge_sentences": [
+        "להלקות את עצמך אחרי טעות לא עוזר לאיש לא לך ולא לאחרים.",
+        "ביקורת עצמית קשה אחרי טעות היא ביטוי של כמה אכפת לך אבל יש דרך עדינה יותר.",
+        "מה היית אומר לחבר שעשה את אותה טעות?"
+      ],
+      "next_question": "מה הביקורת הקשה ביותר שאמרת לעצמך אחרי טעות ואיך היית מדבר עם אחר שעשה אותה?",
+      "tags": [
+        "הלקאה",
+        "טעות",
+        "ביקורת",
+        "עצמי"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל לסלוח לעצמי על טעויות",
+        "אני מלקה את עצמי הרבה אחרי כל טעות",
+        "אני חוזר שוב ושוב על הטעות בראש"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_05",
+      "index": 72,
+      "label_he": "קושי להרים עיניים",
+      "label_en": "Difficulty Looking People in Eyes",
+      "short_description": "מתוך בושה המשתמש נמנע ממגע עיני ומנוכחות ישירה מול אחרים.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "להרים את העיניים זה מעשה של אומץ לא תוצאה של ביטחון.",
+      "bridge_sentences": [
+        "קושי להרים עיניים מבושה הוא דרך הגוף לנסות להיעלם.",
+        "עיניים מורדות לא אומרות כלום על ערכך רק על כאב שנושא בך.",
+        "מה יכולת לנסות מגע עיני קצר עם אדם אחד היום?"
+      ],
+      "next_question": "מה אתה מפחד שיראו בך אם תרים את העיניים?",
+      "tags": [
+        "עיניים",
+        "בושה",
+        "נוכחות",
+        "אומץ"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל להסתכל לאנשים בעיניים",
+        "אני מוריד עיניים מבושה",
+        "קשה לי לשמור על קשר עיני"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_06",
+      "index": 73,
+      "label_he": "הזדהות מלאה עם כישלון",
+      "label_en": "Full Identification with Failure",
+      "short_description": "המשתמש מזדהה לחלוטין עם כישלון ספציפי ותופס אותו כהגדרה של מי שהוא.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "להזדהות עם כישלון זה לנבול עם פרי שנפל.",
+      "bridge_sentences": [
+        "כישלון הוא דבר שקרה לא מי שאתה.",
+        "הזדהות מלאה עם כישלון מחריבה את הזהות ולא רק את האירוע.",
+        "שאל האם הגדרת עצמך לפי הכישלון הזה או לפי מה שלמדת ממנו?"
+      ],
+      "next_question": "מה הכישלון לימד אותך שהיית עושה אחרת?",
+      "tags": [
+        "כישלון",
+        "זהות",
+        "הזדהות",
+        "בושה"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאני הכישלון",
+        "אי אפשר להפריד ביני לבין הטעויות שעשיתי",
+        "ההצלחה אני לא הכישלון אני כן"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_07",
+      "index": 74,
+      "label_he": "פחד מחשיפת חולשה",
+      "label_en": "Fear of Exposing Weakness",
+      "short_description": "המשתמש מפחד שאם יחשוף חולשה יאבד כבוד אהבה או מעמד.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "לחשוף חולשה בפני אדם אמין זה עוצמה לא חולשה.",
+      "bridge_sentences": [
+        "הפחד מחשיפת חולשה מגן ומרחיק אנשים שיכלו לקרב.",
+        "חולשה שנחשפת בפני מישהו שראוי לכך מחזקת קשרים לא מחלישה.",
+        "מה הייתה החולשה הכי קטנה שיכולת לחשוף בבטחה?"
+      ],
+      "next_question": "מה פעם חשפת חולשה ולא קרה הדבר הגרוע שפחדת ממנו?",
+      "tags": [
+        "חולשה",
+        "חשיפה",
+        "כבוד",
+        "אמון"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל להראות שאני חלש",
+        "פחד לחשוף כשאני לא בסדר",
+        "לאחרים אני תמיד נראה חזק"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_08",
+      "index": 75,
+      "label_he": "דחף להיעלם לאחר מבוכה",
+      "label_en": "Urge to Disappear After Embarrassment",
+      "short_description": "לאחר רגע מביך המשתמש חש דחף עצום להיעלם ולא להיות נראה.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "לרצות להיעלם אחרי מבוכה זה אנושי לגמרי.",
+      "bridge_sentences": [
+        "הדחף להיעלם אחרי מבוכה הוא תגובה גופנית וגם נפשית אנושית לחלוטין.",
+        "מבוכה עוברת גם אם ברגע זה מרגישה נצחית.",
+        "מה אחד הדברים שעזרו לך לעבור מבוכה בעבר?"
+      ],
+      "next_question": "פעם שעברת מבוכה ונשארת מה קרה אחרי?",
+      "tags": [
+        "מבוכה",
+        "היעלמות",
+        "בושה",
+        "אנושי"
+      ],
+      "example_inputs": [
+        "אחרי מבוכה אני רוצה להיעלם",
+        "כשמתביישים אני רוצה שהאדמה תבלע אותי",
+        "לא מסוגל להישאר בחדר אחרי מבוכה"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_09",
+      "index": 76,
+      "label_he": "תיוג עצמי כפגום",
+      "label_en": "Labeling Self as Flawed",
+      "short_description": "המשתמש שם תוית קבועה על עצמו כפגום שלא ניתן לשנות.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "תיוג עצמי מקשיח שחרורו מאפשר גמישות.",
+      "bridge_sentences": [
+        "תיוג עצמי כפגום הוא אחד הנטלים הכבדים ביותר לשאת.",
+        "תויות הן קיצורי דרך שהמח יוצר לא מציאות.",
+        "מה אחת התכונות שלך שהיא ממש לא חלק מהתייג פגום?"
+      ],
+      "next_question": "מי נתן לך את התייג הזה לראשונה ומה היה המניע שלו?",
+      "tags": [
+        "תיוג",
+        "פגם",
+        "זהות",
+        "קביעות"
+      ],
+      "example_inputs": [
+        "אני פגום בסיס",
+        "יש בי משהו שלא תיקון",
+        "אני לא כמו אחרים"
+      ],
+      "active": true
+    },
+    {
+      "id": "shame_10",
+      "index": 77,
+      "label_he": "קיפאון חברתי מבושה",
+      "label_en": "Social Freeze from Shame",
+      "short_description": "בושה גורמת למשתמש לקפוא במצבים חברתיים ולא להצליח לפעול.",
+      "pain_axis": "shame",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "shame_01",
+        "shame_02",
+        "shame_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "קיפאון חברתי מבושה מבקש רחמים לא ביקורת.",
+      "bridge_sentences": [
+        "קיפאון חברתי מבושה הוא תגובה שמגינה ולפעמים מבודדת.",
+        "להקפא חברתית מבושה לא אומר שאתה לא ראוי לקשרים.",
+        "מה הסיטואציה החברתית שהכי גורמת לך לקפוא?"
+      ],
+      "next_question": "אם בושה לא הייתה שם מה היית עושה אחרת בסיטואציה החברתית?",
+      "tags": [
+        "קיפאון",
+        "חברה",
+        "בושה",
+        "קשרים"
+      ],
+      "example_inputs": [
+        "בסיטואציות חברתיות אני קופא",
+        "בושה גורמת לי לא להיות מסוגל לדבר",
+        "אני נסגר בחברה בגלל בושה"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_03",
+      "index": 78,
+      "label_he": "מחיקת נוכחות עצמית",
+      "label_en": "Erasing Own Presence",
+      "short_description": "המשתמש מצמצם את נוכחותו עד למינימום כדי לא להפריע או לא להיות נטל.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_04"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "למחוק את עצמי לא מגן הוא מפסיד.",
+      "bridge_sentences": [
+        "לצמצם את נוכחותך כדי לא להטריח זה אחד הדברים הכי כואבים שאדם יכול לעשות לעצמו.",
+        "מחיקת נוכחות גוזלת ממך את הזכות לתפוס מקום שמגיע לך.",
+        "מה מרגיש לתפוס מקום אמיתי בשיחה או בחדר?"
+      ],
+      "next_question": "מתי בפעם האחרונה תפסת מקום בצורה שהרגישה לגיטימית?",
+      "tags": [
+        "נוכחות",
+        "מחיקה",
+        "מקום",
+        "ערך"
+      ],
+      "example_inputs": [
+        "אני מנסה לא להפריע",
+        "אני מצמצם את עצמי כדי לא להיות נטל",
+        "אני לא לוקח מקום כדי שאחרים יוכלו"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_04",
+      "index": 79,
+      "label_he": "אמונה שאין לי מה לתת",
+      "label_en": "Belief of Nothing to Offer",
+      "short_description": "המשתמש מאמין שאין לו תרומה כלשהי שיכולה להועיל לאחרים.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לכל אדם יש משהו לתת גם בלי לדעת מה זה.",
+      "bridge_sentences": [
+        "אמונה שאין לך מה לתת לרוב מסתירה פחד שמה שיש לך לא יתקבל.",
+        "רבים מאנשים שנראים שאין להם מה לתת הם מקור עצום עבור אנשים אחרים.",
+        "מה אחד הדברים שנתת בעבר שהיה משמעותי למישהו גם אם בקטן?"
+      ],
+      "next_question": "מה דבר שנתת לאחרים שהם ציינו בחיוב גם אם בפשטות?",
+      "tags": [
+        "תרומה",
+        "תת",
+        "ערך",
+        "אמונה"
+      ],
+      "example_inputs": [
+        "אין לי מה להציע לאחרים",
+        "אני לא יכול לעזור לאף אחד",
+        "אין לי כישורים שמועילים"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_05",
+      "index": 80,
+      "label_he": "ערך המבוסס על הישגים",
+      "label_en": "Worth Based on Achievement",
+      "short_description": "המשתמש מאמין שערכו תלוי לחלוטין בהישגיו ונשבר כשאינו מצליח.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "ערך שתלוי בהישגים הוא ערך בתנאי.",
+      "bridge_sentences": [
+        "כשהערך שלך בנוי על הישגים כל תקופה קשה מאיימת על עצם הזהות.",
+        "ערך עצמי אמיתי לא יכול להיות מותנה בתוצאות.",
+        "מה היה נשאר ממך אם לא היו הישגים?"
+      ],
+      "next_question": "אם לא יכולת להשיג שום דבר היום האם היית ראוי לאהבה?",
+      "tags": [
+        "הישגים",
+        "ערך",
+        "זהות",
+        "תנאי"
+      ],
+      "example_inputs": [
+        "אני שווה רק כשאני מצליח",
+        "בלי הצלחות אני כלום",
+        "הערך שלי נמדד רק לפי מה שהשגתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_06",
+      "index": 81,
+      "label_he": "תחושת ריקנות זהותית",
+      "label_en": "Sense of Identity Emptiness",
+      "short_description": "המשתמש חש ריקנות פנימית עמוקה בנוגע לזהותו ואינו יודע מי הוא.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "ריקנות זהותית מזמינה בנייה לא ניהול אבל.",
+      "bridge_sentences": [
+        "ריקנות פנימית יכולה להיות מבהילה וגם כרטיס כניסה לגילוי.",
+        "לא לדעת בדיוק מי אתה זה לא כישלון זה שלב.",
+        "מה דבר אחד שאתה יודע שאמיתי לגביך גם אם קטן?"
+      ],
+      "next_question": "מה אחת האמיתות הקטנות שאתה יודע על עצמך גם בתוך הריקנות?",
+      "tags": [
+        "זהות",
+        "ריקנות",
+        "עצמי",
+        "גילוי"
+      ],
+      "example_inputs": [
+        "אני לא יודע מי אני",
+        "אני מרגיש ריק מבפנים",
+        "אין לי זהות אמיתית"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_07",
+      "index": 82,
+      "label_he": "אמונה שאני נטל",
+      "label_en": "Believing I Am a Burden",
+      "short_description": "המשתמש מאמין שנוכחותו מכבידה על אחרים ושהיה עדיף לולא היה שם.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "לחשוב שאני נטל מעיד על כמה אכפת לך לא להכביד.",
+      "bridge_sentences": [
+        "אמונה שאתה נטל היא כאב עמוק שלרוב מגיע מניסיון של לא להרגיש רצוי.",
+        "רוב האנשים שחושבים שהם נטל הם בעצם עמוקים ורגישים ולא נטל.",
+        "מה היה קורה אם היית שואל מישהו קרוב האם אתה נטל עבורו?"
+      ],
+      "next_question": "מי בחייך הביע שהוא שמח שאתה נמצא גם אם בצורה קטנה?",
+      "tags": [
+        "נטל",
+        "אמונה",
+        "נוכחות",
+        "רצוי"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאני מכביד על אחרים",
+        "הייתם טובים יותר בלעדיי",
+        "אני עול על כולם"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_08",
+      "index": 83,
+      "label_he": "זלזול בצרכים עצמיים",
+      "label_en": "Dismissing Own Needs",
+      "short_description": "המשתמש מבטל את הצרכים שלו כלא לגיטימיים או פחות חשובים מצרכי אחרים.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "לזלזל בצרכים שלי מלמד אחרים לעשות אותו הדבר.",
+      "bridge_sentences": [
+        "לבטל את הצרכים שלך לא הופך אותם ללא קיימים הוא רק מעלים אותם.",
+        "צרכים שלא נענים צוברים ולרוב יוצאים בדרכים לא ישירות.",
+        "מה צורך אחד קטן שלך שיכולת לפגוש היום?"
+      ],
+      "next_question": "מה הצורך שהכי ממהר אתה לבטל כשהוא עולה?",
+      "tags": [
+        "צרכים",
+        "זלזול",
+        "לגיטימיות",
+        "עצמי"
+      ],
+      "example_inputs": [
+        "הצרכים שלי לא חשובים",
+        "אחרים קודם אז לא חשוב מה אני צריך",
+        "אני לא מתעכב על מה שאני רוצה"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_09",
+      "index": 84,
+      "label_he": "קושי בקבלת טוב מאחרים",
+      "label_en": "Difficulty Receiving Goodness",
+      "short_description": "המשתמש מתקשה לקבל עזרה מחמאות או אהבה מאחרים ומסיט אותם הצידה.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "לקבל טוב מאחרים זה חלק מהקשר לא חולשה.",
+      "bridge_sentences": [
+        "קושי לקבל טוב מאחרים לרוב קשור לתחושה שאתה לא ראוי לו.",
+        "כשאתה דוחה טוב שאחרים רוצים לתת לך אתה גם קוצץ בקשר.",
+        "נסה לקבל מחמאה אחת היום בלי להסיט אותה."
+      ],
+      "next_question": "מה קורה לך פנימית כשמישהו מציע לך עזרה או מחמאה?",
+      "tags": [
+        "קבלה",
+        "טוב",
+        "ראוי",
+        "קשר"
+      ],
+      "example_inputs": [
+        "אני לא יכול לקבל עזרה",
+        "כשמשבחים אותי אני לא מאמין",
+        "אני מרגיש לא ראוי לקבל דברים טובים"
+      ],
+      "active": true
+    },
+    {
+      "id": "worthlessness_10",
+      "index": 85,
+      "label_he": "ביטול כל תרומה עצמית",
+      "label_en": "Canceling Every Contribution",
+      "short_description": "המשתמש מבטל ומפחית כל תרומה שנתן ואינו מאפשר לה להיות משמעותית.",
+      "pain_axis": "worthlessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "worthlessness_01",
+        "worthlessness_02",
+        "worthlessness_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "לבטל את התרומה שלי לא הופך אותה לקיימת פחות.",
+      "bridge_sentences": [
+        "לבטל תרומות שלך מונע ממך לראות את ההשפעה האמיתית שיש לך.",
+        "ביטול עצמי עקבי הוא דפוס שאפשר ללמוד לזהות ולאתגר.",
+        "שאל האם מישהו אחר היה מבטל תרומה כזו?"
+      ],
+      "next_question": "מה תרומה אחת שנתת שמישהו ציין כמשמעותית?",
+      "tags": [
+        "תרומה",
+        "ביטול",
+        "ערך",
+        "זיהוי"
+      ],
+      "example_inputs": [
+        "מה שאני עשיתי לא היה כלום",
+        "אחרים היו עושים את זה הרבה יותר טוב",
+        "התרומה שלי לא משמעותית"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_03",
+      "index": 86,
+      "label_he": "ויתור מוקדם",
+      "label_en": "Giving Up Early",
+      "short_description": "המשתמש מוותר על מטרות בשלב מוקדם לפני שנתן לעצמו סיכוי אמיתי.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_04"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לוותר מוקדם מונע ממני לגלות מה יכול היה לקרות.",
+      "bridge_sentences": [
+        "ויתור מוקדם לרוב מסתיר פחד מכישלון שיבוא בהמשך.",
+        "הרגע שמוותרים מוקדם הוא לרוב הרגע שהדבר היה הולך להשתנות.",
+        "מה הייתי מפסיד אם הייתי נותן לזה עוד כמה ניסיונות?"
+      ],
+      "next_question": "מה ויתרת עליו מוקדם שאתה כיום מצטער עליו?",
+      "tags": [
+        "ויתור",
+        "נסיון",
+        "מוקדם",
+        "מחיר"
+      ],
+      "example_inputs": [
+        "אני מוותר מהר",
+        "לא כדאי להתמיד זה לא יעבוד",
+        "אני מפסיק לפני שמנסה עד הסוף"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_04",
+      "index": 87,
+      "label_he": "תלות בהצלה חיצונית",
+      "label_en": "Depending on Others to Rescue",
+      "short_description": "המשתמש ממתין שמישהו חיצוני יציל אותו מהמצב ואינו לוקח יוזמה עצמית.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לחכות שיצילו אותי שמים את הכוח במקום הלא נכון.",
+      "bridge_sentences": [
+        "לחכות שמישהו יציל אותך מובן אבל גם שומר אותך תלוי.",
+        "ההמתנה להצלה חיצונית מונעת ממך לגלות כמה כוח יש לך בעצם.",
+        "מה צעד קטן אחד שאפשר לקחת גם בלי עזרה?"
+      ],
+      "next_question": "מה הייתי יכול לעשות לבד גם אם זה רק חלק קטן?",
+      "tags": [
+        "תלות",
+        "הצלה",
+        "אחרים",
+        "יוזמה"
+      ],
+      "example_inputs": [
+        "אני מחכה שמישהו יפתור לי את זה",
+        "אני צריך שמישהו יציל אותי",
+        "בלי עזרה חיצונית אני לא יכול"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_05",
+      "index": 88,
+      "label_he": "תחושת נעילה מוחלטת",
+      "label_en": "Total Lock-Up Feeling",
+      "short_description": "המשתמש חש נעול לחלוטין ללא יכולת לנוע לכיוון כלשהו.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "נעילה מוחלטת לרוב מסמנת עצירה הכרחית לא כישלון.",
+      "bridge_sentences": [
+        "תחושת נעילה מוחלטת יכולה להיות מבהילה ומוכרת בו-זמנית.",
+        "נעילה מלאה לפעמים אומרת שהגוף והנפש מבקשים עצירה אמיתית.",
+        "מה הצעד הכי קטן שיכול לפתוח סדק קטן בנעילה?"
+      ],
+      "next_question": "מה הייתה אומרת לך הנעילה אם יכולה היית לשמוע אותה?",
+      "tags": [
+        "נעילה",
+        "שיתוק",
+        "עצירה",
+        "גוף"
+      ],
+      "example_inputs": [
+        "אני לגמרי תקוע",
+        "אני לא מסוגל לזוז לשום כיוון",
+        "הכל סגור בפניי"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_06",
+      "index": 89,
+      "label_he": "אמונה שאין לי השפעה",
+      "label_en": "Believing I Have No Influence",
+      "short_description": "המשתמש מאמין שפעולותיו אינן משפיעות על דבר בסביבתו.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "להאמין שאין לי השפעה היא אחת התפיסות המגבילות ביותר.",
+      "bridge_sentences": [
+        "אמונה שאין לך השפעה מרדימה את הכוח שיש לך.",
+        "גם פעולות קטנות משפיעות לפעמים בדרכים שלא ניתן לראות מיד.",
+        "מה פעולה קטנה אחת שיכולת לנסות שיכולה להשפיע על משהו?"
+      ],
+      "next_question": "מה פעם עשית שהיה לו השפעה גם אם לא ציפית לזה?",
+      "tags": [
+        "השפעה",
+        "אמונה",
+        "פעולה",
+        "כוח"
+      ],
+      "example_inputs": [
+        "מה שאני עושה לא משפיע על כלום",
+        "אין לי כוח לשנות שום דבר",
+        "לא משנה מה אני עושה זה לא עוזר"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_07",
+      "index": 90,
+      "label_he": "קיפאון מול בעיה חוזרת",
+      "label_en": "Freezing Before Recurring Problem",
+      "short_description": "כשמופיעה שוב בעיה חוזרת המשתמש קופא ואינו מוצא גישה חדשה.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "בעיה חוזרת שואלת מה בגישה שלי צריך לשנות.",
+      "bridge_sentences": [
+        "בעיה שחוזרת שוב ושוב לרוב מבקשת גישה אחרת לא מאמץ גדול יותר.",
+        "הקיפאון מול אותה בעיה חוזרת הוא אנושי ואפשר לשבור אותו.",
+        "מה תגובה אחת שונה לבעיה הזו שלא ניסית?"
+      ],
+      "next_question": "מה גישה שונה שלא ניסית עדיין לבעיה הזו?",
+      "tags": [
+        "בעיה",
+        "חוזרת",
+        "גישה",
+        "שינוי"
+      ],
+      "example_inputs": [
+        "שוב אותה בעיה ואני לא יודע מה לעשות",
+        "הבעיה הזו חוזרת וחוזרת",
+        "כל פעם שהבעיה הזו מופיעה אני קופא"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_08",
+      "index": 91,
+      "label_he": "תשישות המתחפשת לייאוש",
+      "label_en": "Exhaustion Disguised as Despair",
+      "short_description": "מה שנראה כייאוש הוא לעיתים תשישות עמוקה שצריכה מנוחה לא עזרה נפשית.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "תשישות מתחפשת לייאוש לפעמים הגוף רק צריך מנוחה.",
+      "bridge_sentences": [
+        "ייאוש ותשישות נראים דומה אבל המענה שלהם שונה לגמרי.",
+        "לפני שמסיקים מסקנות כדאי לשאול מתי ישנת לאחרונה שינה אמיתית?",
+        "מה מנוחה אמיתית אחת שיכולת לתת לעצמך היום?"
+      ],
+      "next_question": "מתי ישנת לאחרונה שינה שבאמת איכשהו ריקנה את הסוללה?",
+      "tags": [
+        "תשישות",
+        "ייאוש",
+        "מנוחה",
+        "גוף"
+      ],
+      "example_inputs": [
+        "אני ייאוש גמור",
+        "אין לי כוח לכלום",
+        "אני מרגיש שנגמרתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_09",
+      "index": 92,
+      "label_he": "ויתור לפני הניסיון",
+      "label_en": "Giving Up Before Trying",
+      "short_description": "המשתמש מוותר על ניסיון עוד לפני שהתחיל בגלל ודאות מוקדמת לכישלון.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "לוותר לפני ניסיון הוא ייאוש שמסתיר פחד.",
+      "bridge_sentences": [
+        "לוותר לפני שניסית מבטיח כישלון הוא רק שקט.",
+        "הניסיון עצמו גם כשנכשל נותן מידע יקר שוויתור לא נותן.",
+        "מה הדבר הקטן ביותר שיכולת לנסות מבלי ללחוץ על עצמך?"
+      ],
+      "next_question": "מה דבר שהנחת שלא יעבוד ולא ניסית שאולי שווה לנסות?",
+      "tags": [
+        "ויתור",
+        "ניסיון",
+        "פחד",
+        "כישלון"
+      ],
+      "example_inputs": [
+        "אין טעם לנסות",
+        "אני יודע שזה לא יעבוד עוד לפני שמתחיל",
+        "לא כדאי להתאמץ"
+      ],
+      "active": true
+    },
+    {
+      "id": "helplessness_10",
+      "index": 93,
+      "label_he": "פרשנות של קושי כסוף",
+      "label_en": "Interpreting Difficulty as the End",
+      "short_description": "כשנתקל בקושי המשתמש מפרש אותו כסוף הדרך ולא כחלק מהתהליך.",
+      "pain_axis": "helplessness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "helplessness_01",
+        "helplessness_02",
+        "helplessness_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "קושי הוא חלק מהדרך לא סוף הדרך.",
+      "bridge_sentences": [
+        "כשקושי מרגיש כמו הסוף זה בדרך כלל הסוף של פרק לא של הסיפור.",
+        "פרשנות קושי כסוף גורמת לעצירה שלא תמיד נחוצה.",
+        "מה למדת מקשיים שעברת שלא ידעת בזמן שהיו?"
+      ],
+      "next_question": "מה קושי שעברת שבסוף הפך להיות חלק מהצמיחה שלך?",
+      "tags": [
+        "קושי",
+        "סוף",
+        "פרשנות",
+        "תהליך"
+      ],
+      "example_inputs": [
+        "כשקשה לי אני מרגיש שהגעתי לסוף",
+        "הקושי אומר לי שאני לא מסוגל",
+        "כל מכשול נראה לי כסוף הדרך"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_03",
+      "index": 94,
+      "label_he": "אף אחד לא מבין אותי",
+      "label_en": "Nobody Understands Me",
+      "short_description": "המשתמש מאמין שאף אדם אינו מסוגל להבין את חוויתו הפנימית.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_04"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "לא להבין ולא להיות מובן הן שתי חוויות שונות.",
+      "bridge_sentences": [
+        "להאמין שאף אחד לא מבין אותך מבודד ולרוב מונע ניסיון לשתף.",
+        "לפעמים אנחנו לא נותנים לאנשים הזדמנות להבין.",
+        "מה הדבר שהכי קשה להסביר לאחרים לגביך?"
+      ],
+      "next_question": "אם היית מנסה להסביר את עצמך לאדם אחד מה הייתה האמת הכי עמוקה שהיית רוצה שיבין?",
+      "tags": [
+        "הבנה",
+        "בדידות",
+        "שיתוף",
+        "ניכור"
+      ],
+      "example_inputs": [
+        "אף אחד לא מבין אותי",
+        "לא שווה לנסות להסביר",
+        "אני תמיד מרגיש לא מובן"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_04",
+      "index": 95,
+      "label_he": "הסתגרות כהגנה",
+      "label_en": "Withdrawal as Protection",
+      "short_description": "המשתמש מסתגר ומתרחק מאחרים כדי להגן על עצמו מכאב פוטנציאלי.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "הסתגרות מגינה ובמקביל גוזרת בדידות.",
+      "bridge_sentences": [
+        "הסתגרות כהגנה הגיונית מאוד כשנפגעת מקשרים בעבר.",
+        "הגנה על עצמך חשובה וגם כדאי לבחון מה היא עולה לך.",
+        "מה הייתה הנזק הכי קטן שהיית יכול לקחת בחשבון כדי לא להיות לבד?"
+      ],
+      "next_question": "מה מגן עליך ההסתגרות ממנו ומה היא עולה לך?",
+      "tags": [
+        "הסתגרות",
+        "הגנה",
+        "בדידות",
+        "קשר"
+      ],
+      "example_inputs": [
+        "אני מעדיף להיות לבד",
+        "אני סוגר את עצמי מהעולם",
+        "אני מסתגר כדי לא להיפגע"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_05",
+      "index": 96,
+      "label_he": "קושי לשתף כאב",
+      "label_en": "Difficulty Sharing Pain",
+      "short_description": "המשתמש מתקשה לחשוף כאב או קושי בפני אחרים ונושא אותם לבד.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "לשתף כאב לא מחליש לרוב הוא מחזק קשרים.",
+      "bridge_sentences": [
+        "לשאת כאב לבד מגן על הפרטיות שלך ובמקביל מגביר את הבדידות.",
+        "שיתוף כאב עם אדם נכון יכול להפחית אותו בצורה מפתיעה.",
+        "מה הכאב הקטן ביותר שיכולת לשתף עם מישהו בטוח?"
+      ],
+      "next_question": "מתי בפעם האחרונה שיתפת כאב עם מישהו ומה קרה?",
+      "tags": [
+        "כאב",
+        "שיתוף",
+        "בדידות",
+        "חשיפה"
+      ],
+      "example_inputs": [
+        "אני לא יכול לספר לאף אחד מה אני עובר",
+        "אני נושא הכל לבד",
+        "לא נוח לי לשתף קשיים"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_06",
+      "index": 97,
+      "label_he": "התרחקות גם מהטובים",
+      "label_en": "Distancing from Good People",
+      "short_description": "המשתמש מתרחק גם מאנשים שמיטיבים איתו מפחד מקרבה או אכזבה.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להתרחק גם מטובים מגן מפני קירבה שנדרשת.",
+      "bridge_sentences": [
+        "להתרחק גם מאנשים שמיטיבים איתך הוא סימן שהפגיעה בעבר הייתה גדולה.",
+        "לפעמים הכי קשה לסמוך על מי שנראה טוב כי הפחד מאכזבה גדול.",
+        "מה אדם אחד בחייך שנראה בטוח שיכולת לאפשר לעצמך קצת יותר קרוב?"
+      ],
+      "next_question": "מה מונע ממך לאפשר לאנשים טובים להיות קרובים אליך?",
+      "tags": [
+        "ריחוק",
+        "טובים",
+        "פחד",
+        "קרבה"
+      ],
+      "example_inputs": [
+        "אני מתרחק מכולם גם מהקרובים",
+        "גם כשמישהו טוב אלי אני שומר מרחק",
+        "אני לא מאפשר לאנשים להיות קרובים"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_07",
+      "index": 98,
+      "label_he": "בדידות גם בנוכחות אחרים",
+      "label_en": "Lonely Even with Others Present",
+      "short_description": "גם כשנמצא בין אנשים המשתמש חש בדידות עמוקה ואינו מרגיש חיבור.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "בדידות בנוכחות אחרים מסמנת נתק מעצמי לא רק מאחרים.",
+      "bridge_sentences": [
+        "להיות בודד בין אנשים יכול להיות גרוע מלהיות בודד לבד.",
+        "בדידות בנוכחות לרוב מגיעה כשאנחנו מסתירים את עצמנו.",
+        "מה חלק ממך שהיית יכול להביא לשיחה הבאה?"
+      ],
+      "next_question": "מה מרגיש כשאתה נמצא בין אנשים ועדיין בודד?",
+      "tags": [
+        "בדידות",
+        "נוכחות",
+        "חיבור",
+        "נתק"
+      ],
+      "example_inputs": [
+        "אני בודד גם כשאני עם אנשים",
+        "גם בחברה אני לא מרגיש קשר",
+        "להיות בין אנשים לא מפחית את הבדידות שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_08",
+      "index": 99,
+      "label_he": "חשד בסיסי כלפי קשר",
+      "label_en": "Basic Suspicion Toward Connection",
+      "short_description": "המשתמש ניגש לכל קשר עם חשד וזהירות יתר שמונעים ממנו להתחבר.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "חשד בסיסי כלפי קשר נוצר מניסיון ניתן לשחרר אותו.",
+      "bridge_sentences": [
+        "חשד בסיסי לקשרים לרוב נוצר מניסיון של פגיעה שחשבת שתוכל לסמוך.",
+        "להיות זהיר הגיוני ולפעמים הוא חוסם גם קשרים טובים.",
+        "מה קשר אחד שנראה בטוח ויכולת לנסות בו פתיחות קטנה?"
+      ],
+      "next_question": "מה הסימן שיצביע לך שאדם ראוי לאמון?",
+      "tags": [
+        "חשד",
+        "אמון",
+        "קשר",
+        "פגיעה"
+      ],
+      "example_inputs": [
+        "אני לא סומך על אנשים",
+        "כל קשר נראה לי מסוכן",
+        "אני חשדן מטבעי כלפי אנשים"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_09",
+      "index": 100,
+      "label_he": "תחושת אי נראות",
+      "label_en": "Feeling Invisible",
+      "short_description": "המשתמש מרגיש שאינו נראה לאחרים ושנוכחותו אינה רשומה.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "להרגיש בלתי נראה מבקש מישהו שיראה אותי.",
+      "bridge_sentences": [
+        "תחושת אי נראות היא כואבת מאוד ולעיתים היא תוצאה של הסתרה שלנו.",
+        "כשאנחנו מסתירים את עצמנו אנחנו גם מבקשים להיות נראים.",
+        "מה דבר שיכולת לחשוף שיאפשר לאנשים לראות אותך יותר?"
+      ],
+      "next_question": "מה חלק ממך שאם הראית אותו אנשים יכלו לראות אותך יותר?",
+      "tags": [
+        "נראות",
+        "אי נראות",
+        "חשיפה",
+        "ראייה"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאף אחד לא רואה אותי",
+        "כאילו אני שקוף",
+        "אני עובר בין אנשים ולאף אחד לא אכפת"
+      ],
+      "active": true
+    },
+    {
+      "id": "alienation_10",
+      "index": 101,
+      "label_he": "ויתור על שייכות",
+      "label_en": "Giving Up on Belonging",
+      "short_description": "לאחר ניסיונות כושלים המשתמש ויתר על הרצון לשייכות.",
+      "pain_axis": "alienation",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "alienation_01",
+        "alienation_02",
+        "alienation_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "לוותר על השתייכות גוזר בדידות גדולה יותר מאשר ניסיון וכישלון.",
+      "bridge_sentences": [
+        "ויתור על שייכות מגן מאכזבה ובו-זמנית מבטיח אותה.",
+        "כשמוותרים על שייכות מוותרים על משהו עמוק בצרכים האנושיים.",
+        "מה שייכות אחת קטנה שיכולת לנסות מבלי להשקיע יותר מדי?"
+      ],
+      "next_question": "מה ניסיון לשייכות שנכשל ולמדת ממנו משהו?",
+      "tags": [
+        "שייכות",
+        "ויתור",
+        "בדידות",
+        "ניסיון"
+      ],
+      "example_inputs": [
+        "וויתרתי על הרצון להשתייך",
+        "לא מנסה יותר להתחבר",
+        "אין לי יותר כוח לחפש שייכות"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_03",
+      "index": 102,
+      "label_he": "חיפוש זהות דרך קבוצה",
+      "label_en": "Seeking Identity Through Group",
+      "short_description": "המשתמש מחפש את זהותו ואת תחושת ערכו דרך השתייכות לקבוצה.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_04"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "זהות שתלויה בקבוצה בלבד היא זהות שאפשר לגנוב.",
+      "bridge_sentences": [
+        "לבנות זהות דרך קבוצה זה טבעי ולרוב מוביל לזהות שאינה יציבה.",
+        "זהות שמבוססת רק על השתייכות חיצונית נשברת עם הקבוצה.",
+        "מה אחת התכונות שלך שאינה תלויה בקבוצה כלל?"
+      ],
+      "next_question": "מה חלק מזהותך שאינו תלוי בשום קבוצה?",
+      "tags": [
+        "זהות",
+        "קבוצה",
+        "עצמי",
+        "שייכות"
+      ],
+      "example_inputs": [
+        "אני מגדיר את עצמי לפי הקבוצה שאני שייך אליה",
+        "בלי הקבוצה אני לא יודע מי אני",
+        "הזהות שלי היא להיות חלק מהחבורה"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_04",
+      "index": 103,
+      "label_he": "פחד להיות מחוץ",
+      "label_en": "Fear of Being Outside",
+      "short_description": "המשתמש חושש מאוד מלהיות מחוץ לקבוצה ומשלם מחיר גבוה כדי לא לצאת ממנה.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "להיות בחוץ לפעמים נותן פרספקטיבה שאי-אפשר לקבל מבפנים.",
+      "bridge_sentences": [
+        "הפחד להיות בחוץ גורם לפעמים להשאר במקום שכבר לא מתאים.",
+        "להיות בחוץ לא אומר להיות לבד לנצח.",
+        "מה הדבר שהכי מפחיד אותך בלהיות מחוץ לקבוצה?"
+      ],
+      "next_question": "מה היה קורה אם היית מחוץ לקבוצה הזו לזמן מה?",
+      "tags": [
+        "חוץ",
+        "פחד",
+        "קבוצה",
+        "בדידות"
+      ],
+      "example_inputs": [
+        "אני מפחד להיות בחוץ",
+        "אני עושה הכל כדי לא לצאת מהקבוצה",
+        "הכי גרוע בשבילי זה להיות בחוץ"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_05",
+      "index": 104,
+      "label_he": "הסתגלות עצמית קיצונית",
+      "label_en": "Extreme Self-Adaptation",
+      "short_description": "המשתמש משנה את עצמו באופן קיצוני כדי להתאים לסביבה ומאבד את עצמו בתהליך.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "להתאים את עצמי קיצונית מוחק את מי שביקשתי להשתלב איתו.",
+      "bridge_sentences": [
+        "הסתגלות קיצונית מגנה על השייכות ומוחקת את האדם שביקשת להיות.",
+        "כשמסתגלים לגמרי לאחרים לא נשאר מה שאחרים אוהבים בך.",
+        "מה דבר שלך שיכולת לשמור גם בתוך הצורך לשתלב?"
+      ],
+      "next_question": "מה ויתרת עליו כדי להתאים לאחרים שאתה מצטער עליו?",
+      "tags": [
+        "הסתגלות",
+        "עצמי",
+        "שייכות",
+        "מחיקה"
+      ],
+      "example_inputs": [
+        "אני משנה את עצמי לפי מי שאני איתו",
+        "אני לא יודע מה האמת שלי כי תמיד מסתגל",
+        "אני הופך להיות מה שאחרים צריכים"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_06",
+      "index": 105,
+      "label_he": "אובדן קול אישי",
+      "label_en": "Losing Personal Voice",
+      "short_description": "בתוך קבוצה או מערכת יחסים המשתמש איבד את הקול האישי שלו.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "לאבד קול אישי בתוך קבוצה זה להיות נוכח-נעדר.",
+      "bridge_sentences": [
+        "לאבד את הקול האישי שלך בתוך קבוצה הוא אחד הצורות הסמויות של בדידות.",
+        "קול שנשתק לאורך זמן יוצר לחץ שמחפש מוצא.",
+        "מה אמת אחת שלך שעדיין לא אמרת בקבוצה?"
+      ],
+      "next_question": "מה הייתי רוצה שישמעו ממני שלא הבאת עדיין לביטוי?",
+      "tags": [
+        "קול",
+        "ביטוי",
+        "קבוצה",
+        "אמת"
+      ],
+      "example_inputs": [
+        "אני לא מביע את דעתי האמיתית",
+        "אני שותק כדי לא לגרום לבעיות",
+        "הקול שלי לא נשמע"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_07",
+      "index": 106,
+      "label_he": "זיוף חברתי",
+      "label_en": "Social Fakery",
+      "short_description": "המשתמש חש שהוא מתחזה בסיטואציות חברתיות ולא מביא את עצמו האמיתי.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "תחושת זיוף חברתי שואלת מה אמיתי בי שלא מוצא ביטוי.",
+      "bridge_sentences": [
+        "הרגשת זיוף חברתי מוכרת לאנשים רבים ולרוב מגיעה מהסתרת חלקים.",
+        "לא להביא את עצמך האמיתי גורם לאינטראקציות להרגיש ריקות.",
+        "מה חלק ממך שהיית יכול להביא קצת יותר לסיטואציה חברתית?"
+      ],
+      "next_question": "מה אחת האמיתות שלך שהחברה שלך לא יודעת?",
+      "tags": [
+        "זיוף",
+        "אמיתי",
+        "חברה",
+        "חשיפה"
+      ],
+      "example_inputs": [
+        "אני מרגיש שאני מתחזה חברתית",
+        "אני לא עצמי בחברה",
+        "אני מציג פנים שאינן שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_08",
+      "index": 107,
+      "label_he": "קנאה בשייכות של אחרים",
+      "label_en": "Envy of Others Belonging",
+      "short_description": "המשתמש מקנא בשייכות ובחיבור שנראה לאחרים ואינו מצליח לייצר לעצמו.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "לקנא בשייכות של אחרים מסמן כמה זה חשוב לי.",
+      "bridge_sentences": [
+        "קנאה בשייכות של אחרים מסמנת כמה שייכות חשובה לך.",
+        "הקנאה הזו יכולה להיות מצפן לכיוון שאתה רוצה ללכת.",
+        "מה צעד קטן אחד לכיוון שייכות שיכולת לקחת?"
+      ],
+      "next_question": "מה הקנאה הזו בשייכות של אחרים מנסה לומר לך?",
+      "tags": [
+        "קנאה",
+        "שייכות",
+        "אחרים",
+        "רצון"
+      ],
+      "example_inputs": [
+        "אני קנאי בחבורות של אחרים",
+        "כולם נראה שיש להם חברים ואני לא",
+        "אני מסתכל על אחרים ומקנא בחיבור שיש להם"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_09",
+      "index": 108,
+      "label_he": "רגישות לפערי מעמד",
+      "label_en": "Sensitivity to Status Gaps",
+      "short_description": "המשתמש רגיש מאוד לפערי מעמד בקבוצה ומרגיש שנמצא תמיד בתחתית.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "רגישות לפערי מעמד מגנה מפני כאב ופוגעת בחיבור.",
+      "bridge_sentences": [
+        "להרגיש תמיד בתחתית ההיררכיה הוא כאב מיותר שיוצר ריחוק.",
+        "פערי מעמד קיימים בכל קבוצה ולרוב פחות חדים ממה שהם נראים.",
+        "מה היה קורה אם התייחסת לפערי המעמד כפחות מדויקים ממה שנראים?"
+      ],
+      "next_question": "מה גורם לך להרגיש בתחתית הקבוצה ומה ההוכחה לכך?",
+      "tags": [
+        "מעמד",
+        "היררכיה",
+        "קבוצה",
+        "רגישות"
+      ],
+      "example_inputs": [
+        "אני תמיד בתחתית ההיררכיה",
+        "אני מרגיש שלכולם יש מעמד גבוה ממני",
+        "אני מרגיש פחות מכולם בקבוצה"
+      ],
+      "active": true
+    },
+    {
+      "id": "belonging_10",
+      "index": 109,
+      "label_he": "תלות בזהות חברתית חיצונית",
+      "label_en": "Depending on External Social Identity",
+      "short_description": "זהותו של המשתמש תלויה לחלוטין בזהות החברתית החיצונית שלו ונשברת איתה.",
+      "pain_axis": "belonging",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "belonging_01",
+        "belonging_02",
+        "belonging_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "תלות בזהות חברתית חיצונית מותירה אותי ריק כשהיא נסדקת.",
+      "bridge_sentences": [
+        "זהות שמבוססת כולה על המעמד החברתי החיצוני נשברת עם כל שינוי.",
+        "לבנות זהות פנימית במקביל לחיצונית היא עבודה שמשתלמת.",
+        "מה יחיד אחד שיכול לאפיין אותך ללא קשר לאנשים סביבך?"
+      ],
+      "next_question": "מה היה נשאר ממך אם הזהות החברתית הנוכחית שלך הייתה נעלמת?",
+      "tags": [
+        "זהות",
+        "חיצוני",
+        "תלות",
+        "עצמי"
+      ],
+      "example_inputs": [
+        "אני מי שאני בגלל הקבוצה שלי",
+        "בלי הסטטוס החברתי שלי אני כלום",
+        "הזהות שלי היא מה שאחרים חושבים עליי"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_03",
+      "index": 110,
+      "label_he": "חרדה ללא תשובה מיידית",
+      "label_en": "Anxiety Without Immediate Answer",
+      "short_description": "כשאין תשובה מיידית לשאלה פתוחה המשתמש חש חרדה שמסלימה.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_04"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "לחיות בשאלה לפעמים הוא הגדרה של חוסן.",
+      "bridge_sentences": [
+        "חרדה מחוסר תשובה מיידית מובנת ולרוב מגדילה את הסבל.",
+        "לא לדעת היא חוויה שאפשר לשבת בה בלי שתהרוס.",
+        "מה שאלה פתוחה שיכולת לשבת בה קצת בלי חרדה?"
+      ],
+      "next_question": "מה שאלה שהייתה פתוחה זמן רב ובסוף נענתה מעצמה?",
+      "tags": [
+        "חרדה",
+        "תשובה",
+        "פתוח",
+        "שאלה"
+      ],
+      "example_inputs": [
+        "אני לא יכול לחיות עם שאלות פתוחות",
+        "כשאין תשובה אני נעשה חרד",
+        "צריך שיהיו תשובות ברורות"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_04",
+      "index": 111,
+      "label_he": "קושי לבחור ללא ערובה",
+      "label_en": "Difficulty Choosing Without Guarantee",
+      "short_description": "המשתמש מתקשה לקבל החלטות כשאין ערובה לתוצאה הרצויה.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "בחירה ללא הבטחה היא הבחירה היחידה שיש.",
+      "bridge_sentences": [
+        "בחירה עם ערובה מלאה לא קיימת כמעט.",
+        "ההסתייגות מבחירה ללא ערובה מונעת מרוב הבחירות לקרות.",
+        "מה בחירה שעשית ללא ערובה ויצאה טוב?"
+      ],
+      "next_question": "מה הבחירה שכדאי לעשות גם ללא ערובה?",
+      "tags": [
+        "בחירה",
+        "ערובה",
+        "ודאות",
+        "החלטה"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל לבחור בלי ביטחון",
+        "צריך לוודא לפני שבוחרים",
+        "אני מחכה לוודאות לפני שאחליט"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_05",
+      "index": 112,
+      "label_he": "שיתוק מול עמימות",
+      "label_en": "Paralysis Facing Ambiguity",
+      "short_description": "מצבים עמומים ולא מוגדרים גורמים למשתמש לקפוא ולא לפעול.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "עמימות היא מרחב לא מלכודת.",
+      "bridge_sentences": [
+        "עמימות קשה לרוב האנשים ושיתוק מולה מובן.",
+        "מצבים עמומים לרוב מתבהרים עם הזמן ועם פעולה.",
+        "מה צעד קטן שיכולת לעשות גם בתוך העמימות?"
+      ],
+      "next_question": "מה עמימות שהייתה לך בעבר שהתבהרה בסוף?",
+      "tags": [
+        "עמימות",
+        "שיתוק",
+        "פעולה",
+        "בהירות"
+      ],
+      "example_inputs": [
+        "כשדברים לא ברורים אני קופא",
+        "עמימות משתקת אותי",
+        "אני לא יכול לפעול בלי בהירות מלאה"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_06",
+      "index": 113,
+      "label_he": "חיפוש ודאות דרך שליטה",
+      "label_en": "Seeking Certainty via Excessive Control",
+      "short_description": "המשתמש מנסה להשיג ודאות על ידי שליטה מוגברת בכל היבט של חייו.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "לחפש ודאות דרך שליטה הוא להילחם עם הטבע של החיים.",
+      "bridge_sentences": [
+        "לחפש ודאות דרך שליטה הגיוני אבל החיים נדיר שמשתפים פעולה.",
+        "שליטה מוגברת מתישה ולא מספקת את הוודאות שמחפשים.",
+        "מה תחום שיכולת לשחרר קצת שליטה ולראות מה קורה?"
+      ],
+      "next_question": "מה קרה פעם שוויתרת על שליטה ודברים יצאו בסדר?",
+      "tags": [
+        "שליטה",
+        "ודאות",
+        "שחרור",
+        "חיים"
+      ],
+      "example_inputs": [
+        "אני צריך לשלוט על הכל כדי להרגיש בטוח",
+        "אם אני לא שולט אני חרד",
+        "אני מנסה לשלוט על כל הפרטים"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_07",
+      "index": 114,
+      "label_he": "פרשנות של עמימות כאיום",
+      "label_en": "Interpreting Ambiguity as Threat",
+      "short_description": "המשתמש מפרש באופן אוטומטי מצבים עמומים כמסוכנים או מאיימים.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "לא כל עמימות מסכנת חלק מהן מזמינה.",
+      "bridge_sentences": [
+        "לפרש עמימות כאיום הוא תגובה ישנה שנוצרה כדי להגן.",
+        "עמימות יכולה להיות מסוכנת ויכולה להיות הזמנה לגילוי.",
+        "מה עמימות אחת שפירשת כאיום ובסוף הייתה ניטרלית?"
+      ],
+      "next_question": "מה עמימות שהייתה לך שפירשת כרע ובסוף לא הייתה?",
+      "tags": [
+        "עמימות",
+        "איום",
+        "פרשנות",
+        "פחד"
+      ],
+      "example_inputs": [
+        "כשדברים לא ברורים אני מניח הכי גרוע",
+        "עמימות מרגישה לי מסוכנת",
+        "אני מפרש אי בהירות כסכנה"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_08",
+      "index": 115,
+      "label_he": "עומס מחשבתי מהתלבטות",
+      "label_en": "Mental Overload from Deliberation",
+      "short_description": "התלבטות בין אפשרויות יוצרת עומס מחשבתי שמשתק את המשתמש.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "עומס מהתלבטות מסמן שכל האפשרויות חשובות צמצם.",
+      "bridge_sentences": [
+        "עומס מהתלבטות מגיע כשאנחנו מעריכים כל אפשרות שוב ושוב.",
+        "כשהכל מרגיש שווה חשוב לפשט לא להוסיף.",
+        "מה הייתה עושה עם שתי אפשרויות בלבד?"
+      ],
+      "next_question": "מה הקריטריון החשוב ביותר לבחירה הזו ומה הוא אומר?",
+      "tags": [
+        "התלבטות",
+        "עומס",
+        "מחשבה",
+        "בחירה"
+      ],
+      "example_inputs": [
+        "אני נוטה להתלבט ולא להחליט",
+        "אני מסתחרר מהרבה אפשרויות",
+        "אני חושב על זה שוב ושוב ולא מגיע להחלטה"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_09",
+      "index": 116,
+      "label_he": "עיכוב עד למידע מושלם",
+      "label_en": "Delaying Until Perfect Information",
+      "short_description": "המשתמש מעכב פעולה עד שיהיה לו המידע המושלם שלעולם אינו מגיע.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "מידע מושלם לא מגיע לפני ההחלטה הוא נוצר בגללה.",
+      "bridge_sentences": [
+        "לחכות למידע מושלם מבטיח שהפעולה לעולם לא תגיע.",
+        "מידע שמספיק הוא לרוב כבר זמין הוא פשוט לא מושלם.",
+        "מה המידע המינימלי שצריך לפעול עכשיו?"
+      ],
+      "next_question": "מה הייתי עושה אם ידעתי ש-80 אחוז מהמידע הוא מה שאשיג?",
+      "tags": [
+        "מידע",
+        "עיכוב",
+        "שלמות",
+        "פעולה"
+      ],
+      "example_inputs": [
+        "אני מחכה למידע מלא לפני שאז",
+        "אני לא פועל בלי שיהיה לי הכל",
+        "אני צריך יותר מידע לפני שמחליטים"
+      ],
+      "active": true
+    },
+    {
+      "id": "uncertainty_10",
+      "index": 117,
+      "label_he": "הימנעות מפתיחות מחוסר בהירות",
+      "label_en": "Avoiding Openness from Lack of Clarity",
+      "short_description": "מחוסר בהירות לגבי מצב או אדם המשתמש נמנע מפתיחות ומהתקרבות.",
+      "pain_axis": "uncertainty",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "uncertainty_01",
+        "uncertainty_02",
+        "uncertainty_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להימנע מפתיחות עקב אי-בהירות משמר בדידות.",
+      "bridge_sentences": [
+        "הימנעות מפתיחות כשאין בהירות מגנה ומרחיקה.",
+        "לפעמים הפתיחות עצמה היא מה שיוצר את הבהירות.",
+        "מה שיחה אחת שיכולת לנהל שהייתה יוצרת בהירות?"
+      ],
+      "next_question": "מה שאלה אחת שיכולת לשאול שהייתה פותחת בהירות?",
+      "tags": [
+        "פתיחות",
+        "בהירות",
+        "הימנעות",
+        "קשר"
+      ],
+      "example_inputs": [
+        "כשאני לא בטוח אני נסוג",
+        "בלי בהירות אני לא יכול להיפתח",
+        "אני שומר מרחק כשאני לא מבין את המצב"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_03",
+      "index": 118,
+      "label_he": "קושי לסמוך על התהליך",
+      "label_en": "Difficulty Trusting the Process",
+      "short_description": "המשתמש מתקשה לסמוך על תהליכים שאינו שולט בהם ומתערב בכל שלב.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_04"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "לסמוך על תהליך דורש ויתור על תוצאה ידועה.",
+      "bridge_sentences": [
+        "קושי לסמוך על תהליך מגיע לרוב מניסיון שבו תהליך לא עבד.",
+        "לסמוך על תהליך לא אומר לוותר על מעורבות הוא רק להרפות מהתוצאה.",
+        "מה תהליך אחד שסמכת עליו ויצא טוב?"
+      ],
+      "next_question": "מה יכולת להשאיר לתהליך גם בלי שתתערב?",
+      "tags": [
+        "תהליך",
+        "אמון",
+        "שליטה",
+        "ויתור"
+      ],
+      "example_inputs": [
+        "אני לא יכול לסמוך על תהליכים",
+        "אני צריך לפקח על כל שלב",
+        "קשה לי להניח לדברים להתנהל"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_04",
+      "index": 119,
+      "label_he": "מיקרו-ניהול עצמי ואחרים",
+      "label_en": "Micro-managing Self and Others",
+      "short_description": "המשתמש מנהל בצורה מפורטת מדי כל היבט של עצמו ושל אחרים סביבו.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "מיקרו-ניהול מגן מטעויות ומחמיץ צמיחה.",
+      "bridge_sentences": [
+        "מיקרו-ניהול עצמי ואחרים מגיע מרצון עמוק לוודא שדברים יוצאים נכון.",
+        "עצמות שנמנהלות בצורה קפדנית מדי לא מפתחות עצמאות.",
+        "מה אחד הדברים שיכולת לוותר על ניהולו?"
+      ],
+      "next_question": "מה קרה פעם שנתת לאדם אחר לעשות דבר בדרכו שלו?",
+      "tags": [
+        "ניהול",
+        "פיקוח",
+        "שליטה",
+        "אחרים"
+      ],
+      "example_inputs": [
+        "אני מפקח על כל פרט",
+        "אני לא יכול להאציל משימות",
+        "אני צריך שהכל יהיה כמו שאני רוצה"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_05",
+      "index": 120,
+      "label_he": "מתח פנימי כשדברים משתנים",
+      "label_en": "Internal Tension When Things Change",
+      "short_description": "כל שינוי גורם למשתמש למתח פנימי חזק גם כשהשינוי הוא חיובי.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "מתח כשדברים משתנים הוא איתות לגוף לא הוכחה לסכנה.",
+      "bridge_sentences": [
+        "מתח מול שינוי הוא תגובה אנושית ולרוב חולף עם ההסתגלות.",
+        "גם שינויים חיוביים יכולים ליצור מתח כי הם מאתגרים את הנוחות.",
+        "מה שינוי שהוביל להסתגלות טובה בסוף?"
+      ],
+      "next_question": "מה שינוי שפחדת ממנו ובסוף הסתגלת אליו?",
+      "tags": [
+        "שינוי",
+        "מתח",
+        "הסתגלות",
+        "גוף"
+      ],
+      "example_inputs": [
+        "שינויים יוצרים לי מתח גדול",
+        "אני לא אוהב שינויים",
+        "כל שינוי גורם לי לאי נוחות"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_06",
+      "index": 121,
+      "label_he": "חוסר גמישות קוגניטיבית",
+      "label_en": "Lack of Cognitive Flexibility",
+      "short_description": "המשתמש מתקשה לשנות דפוסי חשיבה או נקודת מבט אפילו כשנדרש.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "חוסר גמישות מחשבתית היא לעיתים הגנה על מה שבנית.",
+      "bridge_sentences": [
+        "גמישות קוגניטיבית קשה לרוב האנשים ובמיוחד תחת לחץ.",
+        "להחזיק בדעה אחת בעקביות יכול להיות כוח וגם מגבלה.",
+        "מה עמדה אחת שיכולת לבחון מחדש?"
+      ],
+      "next_question": "מה עמדה שהחזקת בה זמן רב ואז שינית ואיך זה הרגיש?",
+      "tags": [
+        "גמישות",
+        "מחשבה",
+        "שינוי",
+        "עמדות"
+      ],
+      "example_inputs": [
+        "אני לא מסוגל לשנות דעה",
+        "כשאני מחליט לא אשתנה",
+        "אני נוקשה בדרך שאני רואה דברים"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_07",
+      "index": 122,
+      "label_he": "התפרקות מול שיבוש קטן",
+      "label_en": "Falling Apart over Small Disruption",
+      "short_description": "שיבוש קטן יחסית גורם למשתמש להתפרק ולאבד יציבות רגשית.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "שיבוש קטן שמפרק מסמן שיש עומס בסיסי הדורש טיפול.",
+      "bridge_sentences": [
+        "כששיבוש קטן מפרק אותנו לרוב הוא נוחת על עומס שכבר קיים.",
+        "ההתפרקות לא נובעת מהשיבוש עצמו אלא מהמה שכבר עמוס.",
+        "מה עוד נמצא בעומס שלך שהשיבוש הקטן נגע בו?"
+      ],
+      "next_question": "מה היה בעומס שלך שגרם לשיבוש הקטן הזה לתחושה כזאת גדולה?",
+      "tags": [
+        "שיבוש",
+        "התפרקות",
+        "עומס",
+        "יציבות"
+      ],
+      "example_inputs": [
+        "שינוי קטן יכול לפרק אותי",
+        "אני מאבד שיווי משקל בקלות",
+        "כשמשהו לא הולך לפי התכנית אני מתפרק"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_08",
+      "index": 123,
+      "label_he": "קושי להרפות כשעייף",
+      "label_en": "Difficulty Letting Go When Tired",
+      "short_description": "גם כשמותש ועייף המשתמש מתקשה לשחרר שליטה ולנוח.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "להרפות כשעייף הוא לא כישלון הוא חוכמה.",
+      "bridge_sentences": [
+        "קושי להרפות שליטה כשעייף הוא אחד הסימנים לאדם שמחזיק יותר מדי.",
+        "כשהגוף עייף והנפש ממשיכה לאחוז זה כרטיס אדום.",
+        "מה הרפאה קטנה שיכולת לאפשר לעצמך כשאתה עייף?"
+      ],
+      "next_question": "מה קורה לך כשאתה מנסה להרפות כשעייף?",
+      "tags": [
+        "עייפות",
+        "שחרור",
+        "שליטה",
+        "מנוחה"
+      ],
+      "example_inputs": [
+        "גם כשאני עייף אני לא מצליח לנוח",
+        "אני ממשיך לדאוג גם כשאני מותש",
+        "אני לא יכול להרפות גם כשכלה אנרגיה"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_09",
+      "index": 124,
+      "label_he": "שליטה ברגש במקום לפגוש אותו",
+      "label_en": "Controlling Emotion Instead of Meeting It",
+      "short_description": "המשתמש מנסה לשלוט ברגשותיו ולדחוק אותם במקום לפגוש ולעבד אותם.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "לנסות לשלוט ברגש במקום לפגוש אותו מגביר אותו.",
+      "bridge_sentences": [
+        "ניסיון לשלוט ברגש לרוב מגביר אותו כי הוא לא מוצא ביטוי.",
+        "רגש שנפגש ומוכר מתמוסס לאט לאט.",
+        "מה רגש שיכולת לתת לו קצת מקום גם אם רק לרגע?"
+      ],
+      "next_question": "מה קורה לך כשאתה מנסה להדחיק רגש?",
+      "tags": [
+        "רגש",
+        "שליטה",
+        "פגישה",
+        "ביטוי"
+      ],
+      "example_inputs": [
+        "אני שולט ברגשות שלי",
+        "אני לא מרשה לרגשות לשלוט בי",
+        "אני מדחיק רגשות כדי לתפקד"
+      ],
+      "active": true
+    },
+    {
+      "id": "control_10",
+      "index": 125,
+      "label_he": "זהות הנשענת על שליטה",
+      "label_en": "Identity Resting on Control",
+      "short_description": "תחושת הזהות של המשתמש בנויה על יכולת שליטה ומתפרקת כשהיא נפגעת.",
+      "pain_axis": "control",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "control_01",
+        "control_02",
+        "control_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "זהות שנשענת על שליטה נשברת כשהשליטה מתמוטטת.",
+      "bridge_sentences": [
+        "זהות שבנויה על שליטה היא זהות שכל אי ודאות מאיימת עליה.",
+        "לבנות זהות נוספת שאינה תלויה בשליטה מעניקה יציבות גדולה יותר.",
+        "מה עוד מאפיין אותך מחוץ לתפקידך כמי ששולט?"
+      ],
+      "next_question": "מה עוד מגדיר אותך מעבר ליכולת שלך לשלוט?",
+      "tags": [
+        "זהות",
+        "שליטה",
+        "יציבות",
+        "עצמי"
+      ],
+      "example_inputs": [
+        "כשאני לא שולט אני לא יודע מי אני",
+        "הזהות שלי מבוססת על שליטה",
+        "כשאני מאבד שליטה אני מאבד את עצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_03",
+      "index": 126,
+      "label_he": "תיוג עצמי ככישלון",
+      "label_en": "Labeling Self as Failure",
+      "short_description": "המשתמש מגדיר את עצמו ככישלון ומתקשה להפריד בין זהותו לבין תוצאות ספציפיות.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_04"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "לתייג את עצמי ככישלון הוא לסגור שאלה שצריכה להישאר פתוחה.",
+      "bridge_sentences": [
+        "להגדיר את עצמך ככישלון על בסיס תוצאות ספציפיות הוא פשטנות שכואבת.",
+        "אתה לא התוצאה שקיבלת אתה האדם שמנסה.",
+        "מה תכונה אחת שלך שאינה קשורה לתוצאה?"
+      ],
+      "next_question": "מה הכישלון הספציפי שגרם לך לתייג את עצמך בכלל ולא רק את הנסיון?",
+      "tags": [
+        "תיוג",
+        "כישלון",
+        "זהות",
+        "הפרדה"
+      ],
+      "example_inputs": [
+        "אני פשוט כישלון",
+        "אין לי מה לנסות כי אני תמיד נכשל",
+        "הכישלון הוא חלק ממי שאני"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_04",
+      "index": 127,
+      "label_he": "ראיית טעות כהתרסקות",
+      "label_en": "Seeing Mistake as Crash",
+      "short_description": "כל טעות נתפסת על ידי המשתמש כהתרסקות מוחלטת ולא כחלק נורמלי מתהליך.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "טעות היא נתיחה לא התרסקות.",
+      "bridge_sentences": [
+        "כשכל טעות מרגישה כמו התרסקות קשה מאוד לנסות שוב.",
+        "טעויות הן מידע חיוני לתהליך לא עדות לכישלון.",
+        "מה למדת מהטעות הזו שלא ידעת לפניה?"
+      ],
+      "next_question": "אם הייתה רואה את הטעות כמידע בלבד מה היה הנתון החשוב שהיא נותנת?",
+      "tags": [
+        "טעות",
+        "התרסקות",
+        "מידע",
+        "תהליך"
+      ],
+      "example_inputs": [
+        "כשאני טועה אני מרגיש שהכל נהרס",
+        "כל טעות מרגישה כמו אסון",
+        "אי אפשר לי לגשת לזה אחרי שטעיתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_05",
+      "index": 128,
+      "label_he": "חוסר יכולת להתאושש לאחר כישלון",
+      "label_en": "Inability to Recover After Failure",
+      "short_description": "לאחר כישלון המשתמש אינו מצליח להתאושש ולחזור לתפקוד.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "חוסר התאוששות לרוב אומר שלא נתת לעצמך מספיק זמן.",
+      "bridge_sentences": [
+        "להתאושש לאחר כישלון לוקח זמן שונה לכל אחד.",
+        "חוסר יכולת להתאושש לא אומר שאתה שבור הוא אומר שהמכה הייתה כבדה.",
+        "מה עזר לך להתאושש מקשיים בעבר?"
+      ],
+      "next_question": "מה הדבר שעזר לך הכי הרבה לקום אחרי נפילה בעבר?",
+      "tags": [
+        "התאוששות",
+        "כישלון",
+        "זמן",
+        "חוסן"
+      ],
+      "example_inputs": [
+        "אחרי כישלון אני לא מצליח לקום",
+        "לוקח לי נצח להתאושש מכישלון",
+        "אני תקוע בכישלון ולא יכול להמשיך"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_06",
+      "index": 129,
+      "label_he": "פרפקציוניזם משתק",
+      "label_en": "Paralyzing Perfectionism",
+      "short_description": "הדרישה לשלמות מונעת מהמשתמש להתחיל לפעול מחשש שהתוצאה לא תהיה מושלמת.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "פרפקציוניזם משתק מסתיר פחד מכישלון בגלימה של סטנדרטים.",
+      "bridge_sentences": [
+        "פרפקציוניזם נראה כמו שאיפה לגדולה אבל לרוב הוא הגנה מכישלון.",
+        "שלמות שמונעת התחלה גרועה מניסיון לא מושלם.",
+        "מה תוצאה שהיא 80 אחוז מושלמת ועדיין שווה לייצר?"
+      ],
+      "next_question": "מה יכולת להשלים שכבר עיכבת כי לא היה מושלם?",
+      "tags": [
+        "פרפקציוניזם",
+        "שלמות",
+        "עיכוב",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני לא מגיש כי זה לא מושלם",
+        "אני מחכה שיהיה מושלם לפני שמשתף",
+        "אני לא מתחיל כי אני יודע שלא אצליח לעשות בצורה מושלמת"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_07",
+      "index": 130,
+      "label_he": "בושה לאחר ביצוע חלש",
+      "label_en": "Shame After Weak Performance",
+      "short_description": "ביצוע שאינו עומד בסטנדרטים הפנימיים של המשתמש מוביל לבושה עמוקה.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "ביצוע חלש הוא חלק מהעקומה של צמיחה.",
+      "bridge_sentences": [
+        "בושה אחרי ביצוע חלש מוסיפה נטל על כישלון שכבר כואב.",
+        "כל אחד שהצליח עבר ביצועים חלשים בדרך.",
+        "מה ביצוע חלש שעברת שבסוף הוביל לשיפור?"
+      ],
+      "next_question": "מה הביצוע החלש הזה מלמד אותך על מה שצריך לשפר?",
+      "tags": [
+        "ביצוע",
+        "בושה",
+        "שיפור",
+        "תהליך"
+      ],
+      "example_inputs": [
+        "אני מתבייש כשאני לא מצליח כמו שרציתי",
+        "ביצוע חלש גורם לי לבושה עמוקה",
+        "כשלא הצלחתי כמו שציפיתי אני מתמלא בבושה"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_08",
+      "index": 131,
+      "label_he": "ויתור על מטרות גדולות",
+      "label_en": "Giving Up on Big Goals",
+      "short_description": "מפחד מכישלון המשתמש מוותר על מטרות גדולות ומסתפק בקטן.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לוותר על מטרות גדולות מוחק חלומות לפני שהחל המסע.",
+      "bridge_sentences": [
+        "לוותר על מטרות גדולות מגן מאכזבה ועולה בחלומות שלא נוצרו.",
+        "חלומות גדולים שמוותרים עליהם לעיתים לא נעלמים הם מכאיבים בשקט.",
+        "מה מטרה גדולה שאתה מוכן לצעד קטן ראשון לכיוונה?"
+      ],
+      "next_question": "מה מטרה גדולה שוויתרת עליה שעדיין מהדהדת בך?",
+      "tags": [
+        "מטרות",
+        "חלומות",
+        "ויתור",
+        "פחד"
+      ],
+      "example_inputs": [
+        "אני לא מנסה להגיע למטרות גדולות",
+        "פחד מכישלון גדול גורם לי לשאוף קטן",
+        "אני מסתפק בפחות כדי לא להתאכזב"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_09",
+      "index": 132,
+      "label_he": "כיווץ חלומות כדי להימנע מאכזבה",
+      "label_en": "Shrinking Dreams to Avoid Disappointment",
+      "short_description": "המשתמש מצמצם את חלומותיו כדי לא לסבול מאכזבה.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "חלום מוקטן לא מאכזב הוא גם לא מממש.",
+      "bridge_sentences": [
+        "לכווץ חלומות כהגנה מאכזבה הגיוני ומגביל.",
+        "חלום מוקטן לא כואב כשלא מתממש אבל גם לא שמח כשמגיע.",
+        "מה הגרסה הגדולה יותר של החלום שכיווצת?"
+      ],
+      "next_question": "מה החלום שהיה לך לפני שהתחלת לכווץ?",
+      "tags": [
+        "חלומות",
+        "כיווץ",
+        "אכזבה",
+        "שאיפה"
+      ],
+      "example_inputs": [
+        "אני כווצתי את הציפיות שלי כדי לא להתאכזב",
+        "אני לא מאמין יותר בחלומות גדולים",
+        "למדתי לרצות פחות כדי לסבול פחות"
+      ],
+      "active": true
+    },
+    {
+      "id": "failure_10",
+      "index": 133,
+      "label_he": "הזדהות עם כישלונות עבר",
+      "label_en": "Identifying with Past Failures",
+      "short_description": "המשתמש מזדהה עם כישלונות עברו ורואה בהם הגדרה של מי שהוא כיום.",
+      "pain_axis": "failure",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "failure_01",
+        "failure_02",
+        "failure_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "להזדהות עם כישלונות עבר זה להיות שבוי בתסריט שכבר נגמר.",
+      "bridge_sentences": [
+        "כישלונות עבר הם פרקים שהסתיימו לא ההגדרה שלך.",
+        "הזדהות עם כישלונות עבר גוזרת עתיד שכבר ידוע.",
+        "מה למדת מהכישלונות שאף אחד לא יכול היה ללמד אותך אחרת?"
+      ],
+      "next_question": "מה הסיפור שאתה מספר לעצמך על עצמך שמבוסס על כישלונות ישנים?",
+      "tags": [
+        "כישלון",
+        "עבר",
+        "זהות",
+        "שחרור"
+      ],
+      "example_inputs": [
+        "הכישלונות שלי מגדירים אותי",
+        "אני כזה שנכשל זה הסיפור שלי",
+        "הכישלונות הקודמים שלי מספרים מי אני"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_03",
+      "index": 134,
+      "label_he": "פרשנות מהירה לפגיעה",
+      "label_en": "Quick Interpretation as Offense",
+      "short_description": "המשתמש נוטה לפרש מהר מאוד מצבים ניטרליים כפגיעה מכוונת.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "thought_pattern",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_04"
+      ],
+      "balanced_trait_id": "emotional_resilience",
+      "higher_strength_id": "relational_security",
+      "helpful_sentence": "פרשנות מהירה לפגיעה לפעמים מגינה ולפעמים מחריבה.",
+      "bridge_sentences": [
+        "הנטייה לפרש מהר כפגיעה לרוב נוצרה מניסיון שבו ציפייה הייתה נכונה.",
+        "לא כל מה שכואב נעשה בכוונה לפגוע.",
+        "שאל מה ההסבר הטוב ביותר שיכול להסביר את ההתנהגות הזו?"
+      ],
+      "next_question": "האם יש הסבר אחר לדבר שפרשת כפגיעה מכוונת?",
+      "tags": [
+        "פרשנות",
+        "פגיעה",
+        "כעס",
+        "כוונה"
+      ],
+      "example_inputs": [
+        "אני מיד מרגיש שפגעו בי",
+        "אני לוקח הכל אישית",
+        "כל דבר קטן מרגיש לי כפגיעה"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_04",
+      "index": 135,
+      "label_he": "קושי לעצור לפני תגובה",
+      "label_en": "Difficulty Stopping Before Reacting",
+      "short_description": "המשתמש מגיב מהר מאוד לפני שיש לו זמן לעבד ולבחור תגובה מדודה.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "inner_confidence",
+      "higher_strength_id": "courage",
+      "helpful_sentence": "לעצור לפני תגובה היא המיומנות הקשה והחשובה ביותר.",
+      "bridge_sentences": [
+        "לעצור לפני תגובה הוא אחד הדברים הקשים ביותר לבני אדם.",
+        "תגובה מהירה נובעת מהמח הרגשי שמנסה להגן.",
+        "מה משפט אחד שיכולת לאמר לעצמך לפני שאתה מגיב?"
+      ],
+      "next_question": "מה היה קורה שונה בסיטואציה האחרונה אם היית עוצר שנייה לפני?",
+      "tags": [
+        "תגובה",
+        "עצירה",
+        "רגש",
+        "שליטה"
+      ],
+      "example_inputs": [
+        "אני מגיב מהר מדי",
+        "אני אומר דברים ואחר כך מתחרט",
+        "אני לא יכול לעצור את עצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_05",
+      "index": 136,
+      "label_he": "כעס על עצמי במקום כאב",
+      "label_en": "Anger at Self Instead of Pain",
+      "short_description": "המשתמש מפנה כעס כלפי עצמו כשבאמת יש תחת הכעס כאב שלא מוכר.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "self_compassion",
+      "higher_strength_id": "dignity",
+      "helpful_sentence": "כעס על עצמי הוא לרוב כאב שלא מצא שפה.",
+      "bridge_sentences": [
+        "כעס עצמי לרוב הוא כאב שלא נמצאה לו שפה.",
+        "להפנות כעס פנימה מרגיש יותר בשליטה מלהכיר בכאב.",
+        "מה הכאב שמסתתר מאחורי הכעס על עצמך?"
+      ],
+      "next_question": "אם הכעס הזה על עצמך היה כאב בלבד מה היה אומר?",
+      "tags": [
+        "כעס",
+        "כאב",
+        "עצמי",
+        "הפנמה"
+      ],
+      "example_inputs": [
+        "אני כועס על עצמי",
+        "אני מאשים את עצמי על הכל",
+        "אני לא סולח לעצמי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_06",
+      "index": 137,
+      "label_he": "צורך לנצח בעימות",
+      "label_en": "Need to Win Conflict",
+      "short_description": "המשתמש חש צורך עז לנצח בכל עימות ומתקשה לוותר גם כשיש מחיר גבוה.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "לנצח בעימות זה לרוב לאבד את הקשר.",
+      "bridge_sentences": [
+        "הצורך לנצח בעימות לרוב בא מצורך עמוק יותר להרגיש שנשמעים.",
+        "ניצחון בעימות לעיתים עולה בניצחון קשר.",
+        "מה היה חשוב יותר לנצח בעימות הזה או לשמור על הקשר?"
+      ],
+      "next_question": "מה היה חשוב יותר בעימות האחרון לנצח או להיות מובן?",
+      "tags": [
+        "עימות",
+        "ניצחון",
+        "קשר",
+        "כעס"
+      ],
+      "example_inputs": [
+        "אני צריך לנצח בויכוחים",
+        "אני לא יכול לוותר בעימות",
+        "חשוב לי שיהיה ברור שאני צדקתי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_07",
+      "index": 138,
+      "label_he": "נוקשות תחת איום",
+      "label_en": "Rigidity Under Threat",
+      "short_description": "כשמרגיש מאוים המשתמש נעשה נוקשה ומסרב להתגמש.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "barrier",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "grounded_hope",
+      "higher_strength_id": "hope",
+      "helpful_sentence": "נוקשות תחת איום הגיונית גם כשפוגעת ביחסים.",
+      "bridge_sentences": [
+        "להפוך נוקשה תחת איום הוא תגובת הגנה עתיקה.",
+        "נוקשות מגנה על מה שנדמה כחשוב ולעיתים מרחיקה מה שחשוב יותר.",
+        "מה יכולת לשמור ועדיין להכניס קצת גמישות?"
+      ],
+      "next_question": "מה אתה מגן עליו בנוקשות ומה הוא עולה לך?",
+      "tags": [
+        "נוקשות",
+        "איום",
+        "גמישות",
+        "הגנה"
+      ],
+      "example_inputs": [
+        "כשמאיימים עליי אני נסגר",
+        "אני הופך נוקשה כשמרגיש בלחץ",
+        "אני לא מוכן לזוז כשמשהו מאיים עליי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_08",
+      "index": 139,
+      "label_he": "תחושת עוול בוערת",
+      "label_en": "Burning Sense of Injustice",
+      "short_description": "המשתמש סובל מתחושת עוול בוערת שאינה מוצאת פורקן מתאים.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "תחושת חוסר צדק בוערת מזמינה ביטוי לא הדחקה.",
+      "bridge_sentences": [
+        "תחושת עוול חזקה היא אנרגיה שצריכה מוצא.",
+        "עוול שלא מוצא ביטוי מצטבר ולעיתים מתפרץ בזמן הלא נכון.",
+        "מה הביטוי המתאים ביותר לתחושת העוול הזו?"
+      ],
+      "next_question": "מה הדרך שהכי תהייה מכבדת לתחושת העוול שלך לקבל ביטוי?",
+      "tags": [
+        "עוול",
+        "צדק",
+        "ביטוי",
+        "כעס"
+      ],
+      "example_inputs": [
+        "זה לא הוגן",
+        "אני מרגיש שנפגעתי לא בצדק",
+        "יש לי תחושת עוול שלא עוזבת אותי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_09",
+      "index": 140,
+      "label_he": "הטחת אשמה במקום בקשה",
+      "label_en": "Blaming Instead of Requesting",
+      "short_description": "המשתמש מטיח אשמה באחרים במקום לבטא צורך ולבקש ישירות.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להטיח אשמה מרחיק לבקש מקרב.",
+      "bridge_sentences": [
+        "הטחת אשמה לרוב מגיעה כשלא מדובר הצורך שמתחתיה.",
+        "כשאנחנו מאשימים אנחנו בעצם אומרים לא קיבלתי מה שצריכי.",
+        "מה הצורך שיש מאחורי ההאשמה הזו?"
+      ],
+      "next_question": "מה היית יכול לבקש ישירות במקום להטיח אשמה?",
+      "tags": [
+        "אשמה",
+        "בקשה",
+        "תקשורת",
+        "כעס"
+      ],
+      "example_inputs": [
+        "אני מאשים אחרים כשכועס",
+        "אני לא יכול לבקש אז אני מטיח",
+        "אני מאשים במקום לדבר על מה שצריך לי"
+      ],
+      "active": true
+    },
+    {
+      "id": "anger_10",
+      "index": 141,
+      "label_he": "פיצוץ לאחר הצטברות",
+      "label_en": "Explosion After Accumulation",
+      "short_description": "המשתמש צובר כעס לאורך זמן עד לפיצוץ גדול שפוגע ביחסים.",
+      "pain_axis": "anger",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "anger_01",
+        "anger_02",
+        "anger_03"
+      ],
+      "balanced_trait_id": "stepwise_focus",
+      "higher_strength_id": "self_regulation",
+      "helpful_sentence": "פיצוץ אחרי הצטברות הוא קריאה לשינוי מבנה לא רק מצב.",
+      "bridge_sentences": [
+        "פיצוץ אחרי הצטברות מגיע כשלא היה מקום לכעס קטן בזמן אמת.",
+        "כשלא מתבטאים קטנות הן מתחברות לגדולה.",
+        "איפה יכולת לבטא כעס קטן לפני שהצטבר?"
+      ],
+      "next_question": "מה האיתות הראשון שכעס מתחיל להצטבר ואיפה יכולת לפנות אותו אז?",
+      "tags": [
+        "כעס",
+        "הצטברות",
+        "פיצוץ",
+        "ביטוי"
+      ],
+      "example_inputs": [
+        "אני צובר ואז מתפוצץ",
+        "אני שותק עד שאני מתפרץ",
+        "אני אוגר כעסים ובסוף מתפוצץ"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_03",
+      "index": 142,
+      "label_he": "ניתוק ממעגלים חברתיים",
+      "label_en": "Disconnection from Social Circles",
+      "short_description": "המשתמש התנתק ממעגלים חברתיים שהיו לו ומתקשה לבנות חדשים.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_04"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "ניתוק ממעגלים חברתיים יכול להיות בחירה או גלישה.",
+      "bridge_sentences": [
+        "ניתוק ממעגלים חברתיים יכול להגיע בהדרגה מבלי לשים לב.",
+        "לבנות מחדש קשרים חברתיים אחרי ניתוק דורש אומץ ולוקח זמן.",
+        "מה מעגל חברתי קטן שיכולת לחדש קשר אחד בתוכו?"
+      ],
+      "next_question": "מה גרם לניתוק ממעגלים חברתיים ומה יכלת לעשות שונה?",
+      "tags": [
+        "ניתוק",
+        "חברה",
+        "מעגלים",
+        "בידוד"
+      ],
+      "example_inputs": [
+        "איבדתי את כל החברים שלי",
+        "הפסקתי להיות בקשר עם אנשים",
+        "אני לא יוצר יותר עם אנשים"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_04",
+      "index": 143,
+      "label_he": "התרגלות לבדידות כהגנה",
+      "label_en": "Habituation to Loneliness as Protection",
+      "short_description": "המשתמש הסתגל לבדידות כמצב קבוע שמגן אותו מפגיעה נוספת.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להתרגל לבדידות כהגנה הוא לשכור מנעול מבפנים.",
+      "bridge_sentences": [
+        "להתרגל לבדידות הגיוני כשנפגעת מקשרים ועולה ביחסים.",
+        "בדידות כהגנה מגנה מכאב ומונעת חיבור.",
+        "מה צעד קטן שיכולת לעשות גם מבלי לוותר לגמרי על ההגנה?"
+      ],
+      "next_question": "מה הגנה שהבדידות מספקת לך שלא מצאת אחרת?",
+      "tags": [
+        "בדידות",
+        "הגנה",
+        "התרגלות",
+        "קשר"
+      ],
+      "example_inputs": [
+        "אני כבר רגיל להיות לבד",
+        "לבד זה המצב הטבעי שלי",
+        "אני לא צריך אנשים כבר"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_05",
+      "index": 144,
+      "label_he": "אמונה שאף אחד לא יבין",
+      "label_en": "Belief No One Will Understand",
+      "short_description": "המשתמש מאמין שחוויתו הפנימית כה ייחודית עד שאף אחד לא יכול להבין אותה.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "relational_openness",
+      "higher_strength_id": "connection",
+      "helpful_sentence": "להאמין שאין מי שיבין מונע ניסיון ממנו מתחיל הבנה.",
+      "bridge_sentences": [
+        "האמונה שאף אחד לא יבין מונעת ניסיון לשתף.",
+        "לרוב כשמשתפים מגלים שאחרים עברו דברים דומים.",
+        "מה החלק שאתה הכי בטוח שאף אחד לא יבין?"
+      ],
+      "next_question": "מה הדבר שנדמה לך הכי ייחודי שאתה חושב שאי אפשר לשתף?",
+      "tags": [
+        "הבנה",
+        "אמונה",
+        "שיתוף",
+        "ייחודיות"
+      ],
+      "example_inputs": [
+        "אף אחד לא מבין אותי",
+        "לא שווה לנסות להסביר את עצמי",
+        "אני יחיד עם הדברים שאני מרגיש"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_06",
+      "index": 145,
+      "label_he": "געגוע לקשר שלא מתממש",
+      "label_en": "Longing for Connection That Doesnt Materialize",
+      "short_description": "המשתמש מתגעגע לקשר עמוק אך אינו מצליח לממש אותו.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "secure_belonging",
+      "higher_strength_id": "relational_identity",
+      "helpful_sentence": "געגוע לקשר שלא מתממש הוא עדות לכמה קשר חשוב לך.",
+      "bridge_sentences": [
+        "הגעגוע לקשר שלא מגיע כואב כי הצורך אמיתי ועמוק.",
+        "הגעגוע מסמן שיש בך רצון חי לקשר זה לא כישלון.",
+        "מה צעד קטן שיכולת לעשות לכיוון קשר כזה?"
+      ],
+      "next_question": "מה הקשר שאתה מתגעגע אליו ומה מונע ממנו להתממש?",
+      "tags": [
+        "געגוע",
+        "קשר",
+        "ציפייה",
+        "חיבור"
+      ],
+      "example_inputs": [
+        "אני רוצה קשר אמיתי אבל לא מוצא",
+        "אני מתגעגע לחיבור שאין לי",
+        "אני רוצה שמישהו יראה אותי באמת"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_07",
+      "index": 146,
+      "label_he": "הימנעות מיוזמה לקשר",
+      "label_en": "Avoiding Initiative for Connection",
+      "short_description": "המשתמש נמנע מלקחת יוזמה ליצירת קשר מחשש לדחייה או מכישלון קודם.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "behavior",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "active_agency",
+      "higher_strength_id": "empowerment",
+      "helpful_sentence": "להימנע מיוזמה לקשר מבטיח שהקשר לא יקרה.",
+      "bridge_sentences": [
+        "הימנעות מיוזמה לקשר מגנה מדחייה ומבטיחה בדידות.",
+        "הצעד הראשון לקשר הוא תמיד פגיע ושווה.",
+        "מה היוזמה הכי קטנה שיכולת לקחת לכיוון מישהו?"
+      ],
+      "next_question": "מה יוזמה קטנה שיכולת לקחת לכיוון מישהו שאתה רוצה קשר איתו?",
+      "tags": [
+        "יוזמה",
+        "קשר",
+        "פחד",
+        "דחייה"
+      ],
+      "example_inputs": [
+        "אני לא מתחיל שיחות",
+        "אני מחכה שאחרים יפנו אליי",
+        "אני מפחד להציע להיפגש"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_08",
+      "index": 147,
+      "label_he": "חוויה של ריק חברתי",
+      "label_en": "Experience of Social Void",
+      "short_description": "המשתמש חש ריקנות חברתית עמוקה ומחסור בחיבורים משמעותיים.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "sensation",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "ריק חברתי מזמין בנייה לא תמיד אבל.",
+      "bridge_sentences": [
+        "ריק חברתי הוא כאב אמיתי ואינו אומר שדברים לא יכולים להיבנות.",
+        "ריקנות חברתית יכולה להיות נקודת התחלה לבנייה מכוונת.",
+        "מה חיבור אחד שיכולת לנסות לבנות מחדש?"
+      ],
+      "next_question": "מה החיבור החברתי שחסר לך הכי הרבה?",
+      "tags": [
+        "ריק",
+        "חברה",
+        "חיבור",
+        "בנייה"
+      ],
+      "example_inputs": [
+        "אין לי חיים חברתיים",
+        "אני מרגיש ריק חברתית",
+        "אין לי אנשים בחיים שלי"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_09",
+      "index": 148,
+      "label_he": "קנאה בחיבור של אחרים",
+      "label_en": "Envy of Others Connection",
+      "short_description": "המשתמש מקנא בחיבורים ובקשרים שנראים לאחרים ואין לו.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "emotion",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "self_acceptance",
+      "higher_strength_id": "self_worth",
+      "helpful_sentence": "לקנא בחיבור של אחרים מסמן שמשהו בך מבקש קשר.",
+      "bridge_sentences": [
+        "קנאה בחיבור של אחרים כואבת ומסמנת כמה קשר חשוב לך.",
+        "הקנאה הזו היא מצפן לא עדות לכישלון שלך.",
+        "מה צעד אחד שיכולת לעשות לכיוון קשר כזה?"
+      ],
+      "next_question": "מה מהחיבור שרואה אצל אחרים שהכי מכאיב לך בהיעדרו?",
+      "tags": [
+        "קנאה",
+        "חיבור",
+        "קשר",
+        "אחרים"
+      ],
+      "example_inputs": [
+        "אני מקנא בחברויות של אחרים",
+        "כולם נראים מחוברים ואני לא",
+        "אני רואה אנשים עם חברים ומכאיב לי"
+      ],
+      "active": true
+    },
+    {
+      "id": "loneliness_10",
+      "index": 149,
+      "label_he": "פרשנות של בדידות כחוסר ערך",
+      "label_en": "Interpreting Loneliness as Worthlessness",
+      "short_description": "המשתמש מפרש את בדידותו כעדות לכך שאינו ראוי לקשרים.",
+      "pain_axis": "loneliness",
+      "severity_range": [
+        1,
+        5
+      ],
+      "stage": "belief",
+      "related_patterns": [
+        "loneliness_01",
+        "loneliness_02",
+        "loneliness_03"
+      ],
+      "balanced_trait_id": "self_value_recognition",
+      "higher_strength_id": "human_value",
+      "helpful_sentence": "לפרש בדידות כחוסר ערך מכפיל את הכאב.",
+      "bridge_sentences": [
+        "לפרש בדידות כחוסר ערך מוסיף כאב על כאב.",
+        "בדידות יכולה להיות מצב גם עבור אנשים שרבים אוהבים ומעריכים.",
+        "מה עדות אחת שסותרת את הפרשנות שבדידות שלך אומרת על ערכך?"
+      ],
+      "next_question": "האם מישהו בחייך שמעריך אותך גם כשאתה מרגיש בדיד?",
+      "tags": [
+        "בדידות",
+        "ערך",
+        "פרשנות",
+        "כאב"
+      ],
+      "example_inputs": [
+        "אני בודד כי אין לי ערך",
+        "אף אחד לא רוצה להיות איתי",
+        "הבדידות שלי מוכיחה שאני לא מספיק טוב"
+      ],
+      "active": true
+    }
+  ],
+  "total_count": 150
+}

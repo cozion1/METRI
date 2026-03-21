@@ -1,0 +1,3320 @@
+{
+  "version": "v2.0.0",
+  "language": "he",
+  "generated_at": "2026-03-16T10:24:13Z",
+  "total_count": 552,
+  "edges": [
+    {
+      "source": "comparison_01",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_acceptance",
+      "target": "self_worth",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "self_doubt_01",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "inner_confidence",
+      "target": "courage",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "rejection_01",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "emotional_resilience",
+      "target": "relational_security",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "overwhelm_01",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "stepwise_focus",
+      "target": "self_regulation",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "fear_01",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "grounded_hope",
+      "target": "hope",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "shame_01",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_compassion",
+      "target": "dignity",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "worthlessness_01",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_value_recognition",
+      "target": "human_value",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "helplessness_01",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "active_agency",
+      "target": "empowerment",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "alienation_01",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "relational_openness",
+      "target": "connection",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "belonging_01",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "secure_belonging",
+      "target": "relational_identity",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "anger_01",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_02",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_01",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_02",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "relational_openness",
+      "target": "relational_identity",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "uncertainty_01",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_02",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_01",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "grounded_hope",
+      "target": "self_regulation",
+      "relation_type": "elevated_to_strength",
+      "weight": 0.9
+    },
+    {
+      "source": "control_02",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_01",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_02",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_02",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_02",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_02",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_02",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_02",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_02",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_02",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_02",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_02",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_02",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_03",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_04",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_05",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_06",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_07",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_08",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_09",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_10",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_03",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_04",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_05",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_06",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_07",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_08",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_09",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "self_doubt_10",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_03",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_04",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_05",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_06",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_07",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_08",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_09",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "rejection_10",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_03",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_04",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_05",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_06",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_07",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_08",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_09",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "overwhelm_10",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_03",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_04",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_05",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_06",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_07",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_08",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_09",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "fear_10",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_03",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_04",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_05",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_06",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_07",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_08",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_09",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "shame_10",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_03",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_04",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_05",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_06",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_07",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_08",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_09",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "worthlessness_10",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_03",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_04",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_05",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_06",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_07",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_08",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_09",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "helplessness_10",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_03",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_04",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_05",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_06",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_07",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_08",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_09",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "alienation_10",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_03",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_04",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_05",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_06",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_07",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_08",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_09",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "belonging_10",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_03",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_04",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_05",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_06",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_07",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_08",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_09",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "uncertainty_10",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_03",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_04",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_05",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_06",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_07",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_08",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_09",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "control_10",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_03",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_04",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_05",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_06",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_07",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_08",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_09",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "failure_10",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_03",
+      "target": "emotional_resilience",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_04",
+      "target": "inner_confidence",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_05",
+      "target": "self_compassion",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_06",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_07",
+      "target": "grounded_hope",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_08",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_09",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "anger_10",
+      "target": "stepwise_focus",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_03",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_04",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_05",
+      "target": "relational_openness",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_06",
+      "target": "secure_belonging",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_07",
+      "target": "active_agency",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_08",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_09",
+      "target": "self_acceptance",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "loneliness_10",
+      "target": "self_value_recognition",
+      "relation_type": "balanced_by_trait",
+      "weight": 1.0
+    },
+    {
+      "source": "comparison_01",
+      "target": "comparison_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_02",
+      "target": "comparison_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_02",
+      "target": "comparison_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_03",
+      "target": "comparison_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_03",
+      "target": "comparison_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_04",
+      "target": "comparison_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_04",
+      "target": "comparison_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_05",
+      "target": "comparison_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_05",
+      "target": "comparison_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_06",
+      "target": "comparison_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_06",
+      "target": "comparison_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_07",
+      "target": "comparison_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_07",
+      "target": "comparison_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_08",
+      "target": "comparison_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_08",
+      "target": "comparison_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_09",
+      "target": "comparison_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_09",
+      "target": "comparison_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "comparison_10",
+      "target": "comparison_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_01",
+      "target": "self_doubt_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_02",
+      "target": "self_doubt_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_02",
+      "target": "self_doubt_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_03",
+      "target": "self_doubt_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_03",
+      "target": "self_doubt_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_04",
+      "target": "self_doubt_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_04",
+      "target": "self_doubt_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_05",
+      "target": "self_doubt_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_05",
+      "target": "self_doubt_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_06",
+      "target": "self_doubt_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_06",
+      "target": "self_doubt_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_07",
+      "target": "self_doubt_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_07",
+      "target": "self_doubt_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_08",
+      "target": "self_doubt_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_08",
+      "target": "self_doubt_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_09",
+      "target": "self_doubt_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_09",
+      "target": "self_doubt_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_10",
+      "target": "self_doubt_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_01",
+      "target": "rejection_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_02",
+      "target": "rejection_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_02",
+      "target": "rejection_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_03",
+      "target": "rejection_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_03",
+      "target": "rejection_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_04",
+      "target": "rejection_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_04",
+      "target": "rejection_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_05",
+      "target": "rejection_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_05",
+      "target": "rejection_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_06",
+      "target": "rejection_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_06",
+      "target": "rejection_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_07",
+      "target": "rejection_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_07",
+      "target": "rejection_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_08",
+      "target": "rejection_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_08",
+      "target": "rejection_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_09",
+      "target": "rejection_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_09",
+      "target": "rejection_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_10",
+      "target": "rejection_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_01",
+      "target": "overwhelm_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_02",
+      "target": "overwhelm_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_02",
+      "target": "overwhelm_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_03",
+      "target": "overwhelm_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_03",
+      "target": "overwhelm_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_04",
+      "target": "overwhelm_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_04",
+      "target": "overwhelm_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_05",
+      "target": "overwhelm_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_05",
+      "target": "overwhelm_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_06",
+      "target": "overwhelm_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_06",
+      "target": "overwhelm_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_07",
+      "target": "overwhelm_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_07",
+      "target": "overwhelm_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_08",
+      "target": "overwhelm_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_08",
+      "target": "overwhelm_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_09",
+      "target": "overwhelm_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_09",
+      "target": "overwhelm_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_10",
+      "target": "overwhelm_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_01",
+      "target": "fear_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_02",
+      "target": "fear_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_02",
+      "target": "fear_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_03",
+      "target": "fear_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_03",
+      "target": "fear_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_04",
+      "target": "fear_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_04",
+      "target": "fear_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_05",
+      "target": "fear_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_05",
+      "target": "fear_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_06",
+      "target": "fear_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_06",
+      "target": "fear_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_07",
+      "target": "fear_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_07",
+      "target": "fear_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_08",
+      "target": "fear_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_08",
+      "target": "fear_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_09",
+      "target": "fear_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_09",
+      "target": "fear_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_10",
+      "target": "fear_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_01",
+      "target": "shame_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_02",
+      "target": "shame_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_02",
+      "target": "shame_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_03",
+      "target": "shame_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_03",
+      "target": "shame_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_04",
+      "target": "shame_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_04",
+      "target": "shame_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_05",
+      "target": "shame_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_05",
+      "target": "shame_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_06",
+      "target": "shame_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_06",
+      "target": "shame_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_07",
+      "target": "shame_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_07",
+      "target": "shame_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_08",
+      "target": "shame_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_08",
+      "target": "shame_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_09",
+      "target": "shame_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_09",
+      "target": "shame_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_10",
+      "target": "shame_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_01",
+      "target": "worthlessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_02",
+      "target": "worthlessness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_02",
+      "target": "worthlessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_03",
+      "target": "worthlessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_03",
+      "target": "worthlessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_04",
+      "target": "worthlessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_04",
+      "target": "worthlessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_05",
+      "target": "worthlessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_05",
+      "target": "worthlessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_06",
+      "target": "worthlessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_06",
+      "target": "worthlessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_07",
+      "target": "worthlessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_07",
+      "target": "worthlessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_08",
+      "target": "worthlessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_08",
+      "target": "worthlessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_09",
+      "target": "worthlessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_09",
+      "target": "worthlessness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_10",
+      "target": "worthlessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_01",
+      "target": "helplessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_02",
+      "target": "helplessness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_02",
+      "target": "helplessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_03",
+      "target": "helplessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_03",
+      "target": "helplessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_04",
+      "target": "helplessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_04",
+      "target": "helplessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_05",
+      "target": "helplessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_05",
+      "target": "helplessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_06",
+      "target": "helplessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_06",
+      "target": "helplessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_07",
+      "target": "helplessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_07",
+      "target": "helplessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_08",
+      "target": "helplessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_08",
+      "target": "helplessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_09",
+      "target": "helplessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_09",
+      "target": "helplessness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_10",
+      "target": "helplessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_01",
+      "target": "alienation_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_02",
+      "target": "alienation_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_02",
+      "target": "alienation_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_03",
+      "target": "alienation_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_03",
+      "target": "alienation_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_04",
+      "target": "alienation_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_04",
+      "target": "alienation_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_05",
+      "target": "alienation_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_05",
+      "target": "alienation_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_06",
+      "target": "alienation_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_06",
+      "target": "alienation_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_07",
+      "target": "alienation_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_07",
+      "target": "alienation_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_08",
+      "target": "alienation_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_08",
+      "target": "alienation_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_09",
+      "target": "alienation_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_09",
+      "target": "alienation_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_10",
+      "target": "alienation_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_01",
+      "target": "belonging_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_02",
+      "target": "belonging_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_02",
+      "target": "belonging_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_03",
+      "target": "belonging_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_03",
+      "target": "belonging_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_04",
+      "target": "belonging_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_04",
+      "target": "belonging_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_05",
+      "target": "belonging_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_05",
+      "target": "belonging_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_06",
+      "target": "belonging_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_06",
+      "target": "belonging_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_07",
+      "target": "belonging_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_07",
+      "target": "belonging_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_08",
+      "target": "belonging_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_08",
+      "target": "belonging_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_09",
+      "target": "belonging_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_09",
+      "target": "belonging_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_10",
+      "target": "belonging_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_01",
+      "target": "uncertainty_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_02",
+      "target": "uncertainty_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_02",
+      "target": "uncertainty_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_03",
+      "target": "uncertainty_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_03",
+      "target": "uncertainty_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_04",
+      "target": "uncertainty_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_04",
+      "target": "uncertainty_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_05",
+      "target": "uncertainty_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_05",
+      "target": "uncertainty_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_06",
+      "target": "uncertainty_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_06",
+      "target": "uncertainty_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_07",
+      "target": "uncertainty_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_07",
+      "target": "uncertainty_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_08",
+      "target": "uncertainty_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_08",
+      "target": "uncertainty_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_09",
+      "target": "uncertainty_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_09",
+      "target": "uncertainty_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "uncertainty_10",
+      "target": "uncertainty_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_01",
+      "target": "control_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_02",
+      "target": "control_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_02",
+      "target": "control_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_03",
+      "target": "control_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_03",
+      "target": "control_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_04",
+      "target": "control_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_04",
+      "target": "control_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_05",
+      "target": "control_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_05",
+      "target": "control_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_06",
+      "target": "control_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_06",
+      "target": "control_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_07",
+      "target": "control_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_07",
+      "target": "control_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_08",
+      "target": "control_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_08",
+      "target": "control_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_09",
+      "target": "control_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_09",
+      "target": "control_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_10",
+      "target": "control_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_01",
+      "target": "failure_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_02",
+      "target": "failure_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_02",
+      "target": "failure_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_03",
+      "target": "failure_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_03",
+      "target": "failure_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_04",
+      "target": "failure_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_04",
+      "target": "failure_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_05",
+      "target": "failure_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_05",
+      "target": "failure_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_06",
+      "target": "failure_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_06",
+      "target": "failure_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_07",
+      "target": "failure_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_07",
+      "target": "failure_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_08",
+      "target": "failure_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_08",
+      "target": "failure_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_09",
+      "target": "failure_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_09",
+      "target": "failure_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "failure_10",
+      "target": "failure_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_01",
+      "target": "anger_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_02",
+      "target": "anger_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_02",
+      "target": "anger_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_03",
+      "target": "anger_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_03",
+      "target": "anger_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_04",
+      "target": "anger_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_04",
+      "target": "anger_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_05",
+      "target": "anger_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_05",
+      "target": "anger_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_06",
+      "target": "anger_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_06",
+      "target": "anger_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_07",
+      "target": "anger_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_07",
+      "target": "anger_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_08",
+      "target": "anger_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_08",
+      "target": "anger_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_09",
+      "target": "anger_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_09",
+      "target": "anger_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_10",
+      "target": "anger_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_01",
+      "target": "loneliness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_02",
+      "target": "loneliness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_02",
+      "target": "loneliness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_03",
+      "target": "loneliness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_03",
+      "target": "loneliness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_04",
+      "target": "loneliness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_04",
+      "target": "loneliness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_05",
+      "target": "loneliness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_05",
+      "target": "loneliness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_06",
+      "target": "loneliness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_06",
+      "target": "loneliness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_07",
+      "target": "loneliness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_07",
+      "target": "loneliness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_08",
+      "target": "loneliness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_08",
+      "target": "loneliness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_09",
+      "target": "loneliness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_09",
+      "target": "loneliness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_10",
+      "target": "loneliness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_01",
+      "target": "fear_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_01",
+      "target": "self_doubt_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_02",
+      "target": "fear_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_02",
+      "target": "self_doubt_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_03",
+      "target": "fear_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_03",
+      "target": "self_doubt_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_04",
+      "target": "fear_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_04",
+      "target": "self_doubt_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_05",
+      "target": "fear_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_05",
+      "target": "self_doubt_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_06",
+      "target": "fear_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_06",
+      "target": "self_doubt_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_07",
+      "target": "fear_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_07",
+      "target": "self_doubt_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_08",
+      "target": "fear_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_08",
+      "target": "self_doubt_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_09",
+      "target": "fear_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_09",
+      "target": "self_doubt_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "self_doubt_10",
+      "target": "fear_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "fear_10",
+      "target": "self_doubt_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_01",
+      "target": "worthlessness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_01",
+      "target": "shame_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_02",
+      "target": "worthlessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_02",
+      "target": "shame_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_03",
+      "target": "worthlessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_03",
+      "target": "shame_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_04",
+      "target": "worthlessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_04",
+      "target": "shame_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_05",
+      "target": "worthlessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_05",
+      "target": "shame_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_06",
+      "target": "worthlessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_06",
+      "target": "shame_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_07",
+      "target": "worthlessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_07",
+      "target": "shame_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_08",
+      "target": "worthlessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_08",
+      "target": "shame_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_09",
+      "target": "worthlessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_09",
+      "target": "shame_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "shame_10",
+      "target": "worthlessness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "worthlessness_10",
+      "target": "shame_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_01",
+      "target": "helplessness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_01",
+      "target": "overwhelm_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_02",
+      "target": "helplessness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_02",
+      "target": "overwhelm_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_03",
+      "target": "helplessness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_03",
+      "target": "overwhelm_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_04",
+      "target": "helplessness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_04",
+      "target": "overwhelm_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_05",
+      "target": "helplessness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_05",
+      "target": "overwhelm_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_06",
+      "target": "helplessness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_06",
+      "target": "overwhelm_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_07",
+      "target": "helplessness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_07",
+      "target": "overwhelm_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_08",
+      "target": "helplessness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_08",
+      "target": "overwhelm_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_09",
+      "target": "helplessness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_09",
+      "target": "overwhelm_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "overwhelm_10",
+      "target": "helplessness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "helplessness_10",
+      "target": "overwhelm_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_01",
+      "target": "loneliness_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_01",
+      "target": "rejection_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_02",
+      "target": "loneliness_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_02",
+      "target": "rejection_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_03",
+      "target": "loneliness_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_03",
+      "target": "rejection_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_04",
+      "target": "loneliness_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_04",
+      "target": "rejection_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_05",
+      "target": "loneliness_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_05",
+      "target": "rejection_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_06",
+      "target": "loneliness_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_06",
+      "target": "rejection_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_07",
+      "target": "loneliness_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_07",
+      "target": "rejection_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_08",
+      "target": "loneliness_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_08",
+      "target": "rejection_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_09",
+      "target": "loneliness_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_09",
+      "target": "rejection_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "rejection_10",
+      "target": "loneliness_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "loneliness_10",
+      "target": "rejection_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_01",
+      "target": "belonging_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_01",
+      "target": "alienation_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_02",
+      "target": "belonging_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_02",
+      "target": "alienation_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_03",
+      "target": "belonging_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_03",
+      "target": "alienation_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_04",
+      "target": "belonging_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_04",
+      "target": "alienation_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_05",
+      "target": "belonging_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_05",
+      "target": "alienation_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_06",
+      "target": "belonging_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_06",
+      "target": "alienation_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_07",
+      "target": "belonging_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_07",
+      "target": "alienation_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_08",
+      "target": "belonging_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_08",
+      "target": "alienation_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_09",
+      "target": "belonging_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_09",
+      "target": "alienation_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "alienation_10",
+      "target": "belonging_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "belonging_10",
+      "target": "alienation_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_01",
+      "target": "anger_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_01",
+      "target": "control_01",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_02",
+      "target": "anger_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_02",
+      "target": "control_02",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_03",
+      "target": "anger_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_03",
+      "target": "control_03",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_04",
+      "target": "anger_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_04",
+      "target": "control_04",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_05",
+      "target": "anger_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_05",
+      "target": "control_05",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_06",
+      "target": "anger_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_06",
+      "target": "control_06",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_07",
+      "target": "anger_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_07",
+      "target": "control_07",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_08",
+      "target": "anger_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_08",
+      "target": "control_08",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_09",
+      "target": "anger_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_09",
+      "target": "control_09",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "control_10",
+      "target": "anger_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    },
+    {
+      "source": "anger_10",
+      "target": "control_10",
+      "relation_type": "related_pattern",
+      "weight": 0.7
+    }
+  ]
+}

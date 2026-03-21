@@ -1,0 +1,302 @@
+[
+  {
+    "id": "pattern_001",
+    "category": "comparison",
+    "pattern_name": "social_progress_comparison",
+    "example_sentences": [
+      "כולם כבר קדימה בחיים ואני עדיין במקום אחד.",
+      "חברה שלי כבר קנתה דירה ואני עוד גרה עם הורים.",
+      "נדמה לי שכולם מתקדמים חוץ ממני."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I am falling behind everyone else in life and something is wrong with me.",
+    "balanced_trait": "self-pacing",
+    "bridge_sentence": "כל אחד הולך בקצב שלו, והקצב שלך אינו פחות תקין.",
+    "helpful_sentence": "אני מתקדם בדרכי שלי, וזה מספיק."
+  },
+  {
+    "id": "pattern_002",
+    "category": "comparison",
+    "pattern_name": "success_envy",
+    "example_sentences": [
+      "כשאני שומע על הצלחה של מישהו אחר אני מרגיש קטן.",
+      "למה לו מגיע ולי לא?",
+      "ההצלחה שלהם מזכירה לי כמה אני לא מצליח."
+    ],
+    "emotion": "envy",
+    "limiting_belief": "Others' success is evidence of my own lack of worth.",
+    "balanced_trait": "inspiration",
+    "bridge_sentence": "ההצלחה שלהם לא גוזלת ממך כלום — יש מספיק מקום לכולם.",
+    "helpful_sentence": "הצלחה של אחרים יכולה לעורר בי השראה, לא לאיים עלי."
+  },
+  {
+    "id": "pattern_003",
+    "category": "comparison",
+    "pattern_name": "appearance_comparison",
+    "example_sentences": [
+      "היא נראית כל כך טוב ואני תמיד מרגישה לא מספיק.",
+      "בכל תמונה שאני רואה אני שם לב כמה אני נראה אחרת.",
+      "למה אני לא יכולה להיראות ככה?"
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My appearance is inferior and therefore I am less valuable.",
+    "balanced_trait": "self-acceptance",
+    "bridge_sentence": "הגוף שלך הוא הבית שלך — הוא עושה כל כך הרבה בשבילך.",
+    "helpful_sentence": "אני מכבד את הגוף שלי על כל מה שהוא מאפשר לי."
+  },
+  {
+    "id": "pattern_004",
+    "category": "comparison",
+    "pattern_name": "relationship_comparison",
+    "example_sentences": [
+      "כולם סביבי בזוגיות ואני לבד.",
+      "הזוגות האלה נראים כל כך מאושרים, למה אני לא מוצא את זה?",
+      "אולי יש בי משהו שמונע ממני לבנות מערכת יחסים טובה."
+    ],
+    "emotion": "loneliness",
+    "limiting_belief": "Everyone else can find love easily except me, which means I am fundamentally unlovable.",
+    "balanced_trait": "readiness",
+    "bridge_sentence": "מה שנראה בחוץ לא תמיד משקף את המציאות האמיתית של הזוגות האלה.",
+    "helpful_sentence": "אני ראוי לאהבה ואני פתוח לה כשהזמן יהיה נכון."
+  },
+  {
+    "id": "pattern_005",
+    "category": "comparison",
+    "pattern_name": "intelligence_comparison",
+    "example_sentences": [
+      "כולם בקבוצה הזו נראים חכמים ממני.",
+      "הם תופסים דברים מהר ואני צריך הרבה זמן להבין.",
+      "בישיבות אני לא מעז לדבר כי אני בטוח שמה שאגיד יישמע טיפשי."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "I am less intelligent than others and my contributions have no value.",
+    "balanced_trait": "curiosity",
+    "bridge_sentence": "לכל אחד יש אינטליגנציה אחרת — השאלה שלך היא הוכחה לחשיבה שלך.",
+    "helpful_sentence": "הדרך שבה אני חושב היא ייחודית ויש לה ערך."
+  },
+  {
+    "id": "pattern_006",
+    "category": "comparison",
+    "pattern_name": "happiness_comparison",
+    "example_sentences": [
+      "נדמה לי שכולם יותר מאושרים ממני.",
+      "אנשים נראים כל כך שלמים עם החיים שלהם ואני מתקשה.",
+      "אולי אני פשוט לא מסוגל להיות מאושר כמו כולם."
+    ],
+    "emotion": "sadness",
+    "limiting_belief": "Happiness comes naturally to others but is inaccessible to me.",
+    "balanced_trait": "contentment",
+    "bridge_sentence": "האושר לא נראה אותו אצל כולם — אולי גם שלך נמצא כאן, רק בצורה אחרת.",
+    "helpful_sentence": "אני מסוגל למצוא שמחה קטנה ואמיתית בתוך היום שלי."
+  },
+  {
+    "id": "pattern_007",
+    "category": "comparison",
+    "pattern_name": "career_comparison",
+    "example_sentences": [
+      "חבר שלי כבר מנהל ואני עדיין עובד שורה.",
+      "הם עשו כבר כל כך הרבה בגיל הזה ואני תקוע.",
+      "לפעמים אני מתבייש לספר לאנשים מה אני עושה בעבודה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My career progress is a measure of my worth and I am failing.",
+    "balanced_trait": "purposefulness",
+    "bridge_sentence": "הקריירה שלך לא מגדירה אותך — ערכך גדול בהרבה ממשרה.",
+    "helpful_sentence": "אני בונה את הדרך המקצועית שלי בקצב שנכון לי."
+  },
+  {
+    "id": "pattern_008",
+    "category": "comparison",
+    "pattern_name": "achievement_comparison",
+    "example_sentences": [
+      "הם כבר סיימו תואר שני ואני עדיין לא סיימתי ראשון.",
+      "בגיל הזה הם כבר השיגו כל כך הרבה.",
+      "ההישגים שלי נראים כל כך מיותרים לעומת שלהם."
+    ],
+    "emotion": "inadequacy",
+    "limiting_belief": "My achievements are insignificant and I have not accomplished enough.",
+    "balanced_trait": "appreciation",
+    "bridge_sentence": "כל צעד שעשית הוא הישג אמיתי, גם אם הוא לא עולה על רשימה.",
+    "helpful_sentence": "אני רואה ומכיר בדברים שהשגתי, גם הקטנים שבהם."
+  },
+  {
+    "id": "pattern_009",
+    "category": "comparison",
+    "pattern_name": "upward_social_comparison",
+    "example_sentences": [
+      "אני תמיד מסתכל על מי שיש לו יותר ממני.",
+      "קשה לי להיות מרוצה כי תמיד יש מישהו שמצבו טוב יותר.",
+      "ככל שאני מסתכל על אנשים מצליחים אני מרגיש יותר קטן."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "There is always someone better and therefore I will never be enough.",
+    "balanced_trait": "gratitude",
+    "bridge_sentence": "ההשוואה לגבוה תמיד תשאיר אותך מתוסכל — מה יש לך עכשיו שאפשר להכיר בו?",
+    "helpful_sentence": "אני בוחר להכיר בטוב שכבר קיים בחיי."
+  },
+  {
+    "id": "pattern_010",
+    "category": "comparison",
+    "pattern_name": "social_media_comparison",
+    "example_sentences": [
+      "אחרי כל גלילה ברשתות אני מרגיש גרוע יותר עם עצמי.",
+      "החיים שלהם נראים כל כך מושלמים בהשוואה לשלי.",
+      "אני יודע שזה מסנן אבל עדיין זה מכאיב לראות."
+    ],
+    "emotion": "envy",
+    "limiting_belief": "Other people's lives are genuinely better than mine.",
+    "balanced_trait": "discernment",
+    "bridge_sentence": "מה שרואים ברשת הוא רק הרגע שבחרו לשתף — לא המלאות של חייהם.",
+    "helpful_sentence": "החיים שלי, כפי שהם, מלאים בדברים שלא צריכים לקבל לייק."
+  },
+  {
+    "id": "pattern_011",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_starting",
+    "example_sentences": [
+      "אני רוצה להתחיל את הפרויקט הזה אבל לא מצליח להתחיל.",
+      "מה אם אתחיל ואכשל? עדיף לא לנסות.",
+      "רעיון הפרויקט נמצא בראש שלי כבר חודשים ואני לא זזה."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Starting means risking failure, and failure is unbearable.",
+    "balanced_trait": "courage",
+    "bridge_sentence": "הצעד הראשון לא חייב להיות מושלם — הוא רק חייב להיות.",
+    "helpful_sentence": "אני יכול להתחיל בקטן, ולתת לתהליך להוביל אותי."
+  },
+  {
+    "id": "pattern_012",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_judgment",
+    "example_sentences": [
+      "מה יגידו עלי אם אכשל בפומבי?",
+      "אני מפחד שיראו אותי נכשל ויחשבו שאני לא מוכשר.",
+      "לפני כל הצגה אני חושב רק על מה יחשבו אם אשגה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "If others see me fail, they will reject or judge me permanently.",
+    "balanced_trait": "authenticity",
+    "bridge_sentence": "אנשים בדרך כלל עסוקים מדי בעצמם כדי לשפוט אותך כמו שאתה חושש.",
+    "helpful_sentence": "מה שאחרים חושבים עלי הוא מחוץ לשליטתי ולא מגדיר אותי."
+  },
+  {
+    "id": "pattern_013",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_disappointing_others",
+    "example_sentences": [
+      "אני לא יכול להכזיב את ההורים שלי אחרי כל מה שהשקיעו בי.",
+      "הם כל כך מאמינים בי, אם אכשל אני אהרוס להם את זה.",
+      "פחד שאכזיב אחרים גדול יותר מהפחד שאכזיב את עצמי."
+    ],
+    "emotion": "guilt",
+    "limiting_belief": "My failure will harm those who love me and destroy their trust in me.",
+    "balanced_trait": "self-loyalty",
+    "bridge_sentence": "האנשים שאוהבים אותך רוצים שתהיה בסדר — לא רק שתצליח.",
+    "helpful_sentence": "אני יכול לאכזב ציפיות מבלי לאכזב אנשים."
+  },
+  {
+    "id": "pattern_014",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_equals_rejection",
+    "example_sentences": [
+      "אם אכשל הם לא ירצו אותי יותר.",
+      "ההצלחה שלי זה מה שגורם לאנשים לאהוב אותי.",
+      "כשנכשלתי פעם אחרונה, אנשים התרחקו."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "I am only lovable and accepted when I succeed.",
+    "balanced_trait": "unconditional belonging",
+    "bridge_sentence": "ערכך כאדם לא נמדד בתוצאות — אנשים שאוהבים אותך לא יעזבו אחרי כישלון.",
+    "helpful_sentence": "אני ראוי לחיבה גם כשאני טועה ונכשל."
+  },
+  {
+    "id": "pattern_015",
+    "category": "fear_of_failure",
+    "pattern_name": "failure_brings_shame",
+    "example_sentences": [
+      "אם אכשל, אני אבוש בעצמי.",
+      "כישלון הוא לא רק תוצאה — הוא מה שאני.",
+      "אחרי שנכשלתי לא יכולתי להסתכל בראי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Failure is not something that happens to me — it is what I am.",
+    "balanced_trait": "resilience",
+    "bridge_sentence": "כישלון הוא חלק מהניסיון — הוא לא סימן על זהותך.",
+    "helpful_sentence": "אני יותר מהתוצאות שלי, גם בזמנים קשים."
+  },
+  {
+    "id": "pattern_016",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_revealing_incompetence",
+    "example_sentences": [
+      "אם ינסו אותי יגלו שאני לא יודע מה שהם חושבים שאני יודע.",
+      "אני מנסה לא לשאול שאלות כדי שלא יבינו שאני לא מבין.",
+      "כל פעם שמישהו שואל אותי שאלה מקצועית אני נכנס לפאניקה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "If people find out what I do not know, they will see I am a fraud.",
+    "balanced_trait": "intellectual honesty",
+    "bridge_sentence": "לא לדעת משהו זה תחילת הלמידה — לא סוף האמינות שלך.",
+    "helpful_sentence": "אני מסוגל לשאול, ללמוד ולהתפתח בלי שזה יאיים על ערכי."
+  },
+  {
+    "id": "pattern_017",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_losing_respect",
+    "example_sentences": [
+      "אם אכשל, אנשים יפסיקו לכבד אותי.",
+      "הכבוד שקיבלתי הוא על בסיס ההישגים שלי בלבד.",
+      "אני מפחד שטעות אחת תהרוס את כל מה שבניתי."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Respect is conditional on my performance and one failure will erase it.",
+    "balanced_trait": "groundedness",
+    "bridge_sentence": "כבוד אמיתי לא נבנה על מופע — הוא נבנה על אמון ועל אדם.",
+    "helpful_sentence": "הכבוד שאני נותן לעצמי לא תלוי בהצלחה אחת."
+  },
+  {
+    "id": "pattern_018",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_commitment",
+    "example_sentences": [
+      "אם אתחייב ואכשל, יהיה גרוע יותר מאם לא ניסיתי.",
+      "אני נמנע מלהתחייב לדברים כי פחד מלא לעמוד בהם.",
+      "קל לי לעזוב לפני שמתחייבים מאשר להישאר ולהכזיב."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Commitment exposes me to the risk of failure that I cannot handle.",
+    "balanced_trait": "commitment",
+    "bridge_sentence": "התחייבות לא מבטיחה הצלחה — אבל היא מבטיחה שניסית.",
+    "helpful_sentence": "אני בוחר להתחייב לדברים שחשובים לי, גם אם זה מפחיד."
+  },
+  {
+    "id": "pattern_019",
+    "category": "fear_of_failure",
+    "pattern_name": "fear_of_public_failure",
+    "example_sentences": [
+      "לכשול בפני אנשים זה הדבר הכי מביך שאני יכול לחשוב עליו.",
+      "אם ישמעו אותי טועה בהרצאה אני לא אוכל לחזור לשם.",
+      "אני מעדיף לא להציג בכלל מאשר להיכשל בפומבי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "A public mistake is a permanent mark of shame that I will never recover from.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "אנשים שנופלים ומתקימים בפומבי מהווים השראה — לא לגיחוך.",
+    "helpful_sentence": "אני יכול לטעות בפני אחרים ועדיין לקום ולהמשיך."
+  },
+  {
+    "id": "pattern_020",
+    "category": "fear_of_failure",
+    "pattern_name": "paralysis_by_fear",
+    "example_sentences": [
+      "אני כל כך פוחד לטעות שאני פשוט לא עושה כלום.",
+      "הפחד מכישלון מקפיא אותי לחלוטין.",
+      "כשאני צריך לקבל החלטה חשובה, הגוף שלי פשוט לא מגיב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Action leads to failure, and inaction is the only safe choice.",
+    "balanced_trait": "movement",
+    "bridge_sentence": "הקיפאון הוא גם בחירה — אולי הגיע הזמן לנוע אפילו בצעד קטן.",
+    "helpful_sentence": "כל צעד קטן לקדימה שווה יותר מחיכוי מושלם."
+  }
+]

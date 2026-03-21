@@ -1,0 +1,302 @@
+[
+  {
+    "id": "pattern_101",
+    "category": "decision_paralysis",
+    "pattern_name": "choice_overload",
+    "example_sentences": [
+      "כשיש יותר מדי אפשרויות אני פשוט לא מצליח לבחור.",
+      "ריבוי אפשרויות גורם לי ללחץ במקום לשחרור.",
+      "עדיף פחות אפשרויות — כשיש הרבה אני קופא."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Having too many options makes any choice potentially wrong and overwhelming.",
+    "balanced_trait": "decisiveness",
+    "bridge_sentence": "אפשר לצמצם לשתיים-שלוש אפשרויות ולהחליט מתוכן — לא צריך לבחור מתוך אינסוף.",
+    "helpful_sentence": "אני מצמצם ובוחר — גם עם מידע חלקי, אני מסוגל להחליט."
+  },
+  {
+    "id": "pattern_102",
+    "category": "decision_paralysis",
+    "pattern_name": "fear_of_wrong_decision",
+    "example_sentences": [
+      "מה אם אחליט לא נכון ואצטער?",
+      "פחד לקבל החלטה שגויה גורם לי לדחות כל החלטה.",
+      "אני מחשב ומחשב כדי לא לטעות."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Making a wrong decision is catastrophic and must be avoided at all costs.",
+    "balanced_trait": "risk tolerance",
+    "bridge_sentence": "כמעט כל החלטה ניתנת לתיקון — הטעות הגדולה באמת היא לא להחליט.",
+    "helpful_sentence": "אני בוחר ומתחייב — ואם צריך לתקן, אתקן."
+  },
+  {
+    "id": "pattern_103",
+    "category": "decision_paralysis",
+    "pattern_name": "analysis_paralysis",
+    "example_sentences": [
+      "ככל שאני אוסף יותר מידע כך קשה לי יותר להחליט.",
+      "ניתוח מעמיק לא מוביל אותי להחלטה — הוא מרחיק אותי ממנה.",
+      "אני מחכה לנתון אחד נוסף שיבהיר הכל — הוא לא מגיע."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "More information will eventually reveal the perfect and risk-free decision.",
+    "balanced_trait": "action",
+    "bridge_sentence": "נקודת ה'מספיק מידע' לבוא להחלטה מגיעה הרבה לפני שאתה חושב.",
+    "helpful_sentence": "אני מחליט עם המידע שיש לי עכשיו ומשאיר מקום לתיקון."
+  },
+  {
+    "id": "pattern_104",
+    "category": "decision_paralysis",
+    "pattern_name": "regret_anticipation",
+    "example_sentences": [
+      "אני כבר חש חרטה על ההחלטה לפני שקיבלתי אותה.",
+      "מה אם אחרים יחשבו שטעיתי?",
+      "אני מדמיין את הצחצוח של עצמי בעתיד ולא מצליח להחליט."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Any decision I make will lead to regret, so avoidance is safer.",
+    "balanced_trait": "present-action",
+    "bridge_sentence": "אנשים מתחרטים הרבה יותר על מה שלא עשו מאשר על מה שעשו.",
+    "helpful_sentence": "אני מחליט מהמקום הטוב ביותר שלי עכשיו — וזה מספיק."
+  },
+  {
+    "id": "pattern_105",
+    "category": "decision_paralysis",
+    "pattern_name": "decision_avoidance",
+    "example_sentences": [
+      "אם לא אחליט — ייתכן שהדברים ייפתרו מעצמם.",
+      "אני מתחמק מהחלטות עד שמאוחר מדי.",
+      "קל לי יותר להישאר בסטטוס קוו מאשר לבחור."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Avoiding decisions protects me from being responsible for outcomes.",
+    "balanced_trait": "responsibility",
+    "bridge_sentence": "לא להחליט זו גם החלטה — בדרך כלל היא משאירה אותך במקום שלא בחרת.",
+    "helpful_sentence": "אני לוקח אחריות על בחירותי ומרגיש חופשי יותר."
+  },
+  {
+    "id": "pattern_106",
+    "category": "decision_paralysis",
+    "pattern_name": "approval_seeking_before_deciding",
+    "example_sentences": [
+      "אני שואל עשרה אנשים לפני שאני מחליט.",
+      "אני לא מרגיש בטוח בהחלטה עד שמישהו מאשר אותה.",
+      "דעות אחרים מבלבלות אותי, אבל אני ממשיך לשאול."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "My judgment alone is not trustworthy enough to make decisions.",
+    "balanced_trait": "self-trust",
+    "bridge_sentence": "ייעוץ הוא טוב — אבל ההחלטה צריכה לבוא ממך, לא מקונסנסוס.",
+    "helpful_sentence": "אני מקשיב לאחרים ואז מחליט מהמקום שלי."
+  },
+  {
+    "id": "pattern_107",
+    "category": "decision_paralysis",
+    "pattern_name": "reversibility_obsession",
+    "example_sentences": [
+      "אני בוחר רק בדברים שאפשר לבטל — אחרת אני מקפיא.",
+      "החלטות בלתי הפיכות ממלאות אותי בפחד.",
+      "אני מעדיף לא לכתוב, לא לחתום, לא להתחייב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Irreversible decisions are too dangerous and must be avoided.",
+    "balanced_trait": "commitment",
+    "bridge_sentence": "כמעט כל החלטה ניתנת לשינוי בדרך כלשהי — גמישות קיימת גם אחרי.",
+    "helpful_sentence": "אני בוחר ומתחייב, ויודע שתמיד יש דרך להסתגל."
+  },
+  {
+    "id": "pattern_108",
+    "category": "decision_paralysis",
+    "pattern_name": "minor_decision_catastrophizing",
+    "example_sentences": [
+      "הלכתי חצי שעה לאיזה מסעדה לבחור.",
+      "בחירת שומר שיאה נגרמה לי לחרדה.",
+      "אני מוציא אנרגיה ענקית על החלטות קטנות."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Even small decisions can have catastrophic consequences if made incorrectly.",
+    "balanced_trait": "proportion",
+    "bridge_sentence": "לרוב ההחלטות הקטנות אין עוצמה שמגיעה לרמת הפחד שאתה מרגיש.",
+    "helpful_sentence": "אני בוחר מהר את הדברים הקטנים ושומר את האנרגיה לחשובים."
+  },
+  {
+    "id": "pattern_109",
+    "category": "decision_paralysis",
+    "pattern_name": "major_life_decision_freeze",
+    "example_sentences": [
+      "כבר שנתיים אני לא מחליט אם לעזוב את העבודה.",
+      "ההחלטה הגדולה הזאת כל כך מפחידה שאני מקפיא.",
+      "כשמדובר בהחלטות חיים גדולות — אני פשוט לא מצליח."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Major life decisions are so consequential that making them is too dangerous.",
+    "balanced_trait": "courage",
+    "bridge_sentence": "ההחלטות הגדולות לא דורשות ודאות — הן דורשות אומץ ומחויבות.",
+    "helpful_sentence": "אני מסוגל לקבל החלטות גדולות, גם כשאין ערבויות."
+  },
+  {
+    "id": "pattern_110",
+    "category": "decision_paralysis",
+    "pattern_name": "post_decision_rumination",
+    "example_sentences": [
+      "כבר החלטתי — אבל אני לא מפסיק לשאול את עצמי אם הייתה עדיפה אחרת.",
+      "אחרי כל החלטה אני עובר על כל האפשרויות שדחיתי.",
+      "אי אפשר לי ליהנות מהבחירה כי אני עסוק בחרטה."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "I must review every decision endlessly to ensure I did not make a mistake.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "ההחלטה נעשתה — עכשיו האתגר הוא ליהנות מהדרך שבחרת.",
+    "helpful_sentence": "אני מקבל את ההחלטה שקיבלתי ומתחיל ללכת קדימה."
+  },
+  {
+    "id": "pattern_111",
+    "category": "overwhelm",
+    "pattern_name": "task_overwhelm",
+    "example_sentences": [
+      "יש לי כל כך הרבה לעשות שאני לא מתחיל שום דבר.",
+      "הרשימה שלי כל כך ארוכה שנראה בלתי אפשרי.",
+      "אני מביט ברשימה ומרגיש שקוע לפני שהתחלתי."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "The amount of tasks is too great to ever be manageable.",
+    "balanced_trait": "prioritization",
+    "bridge_sentence": "לא כל מה ברשימה חשוב באותה מידה — מה הדבר אחד שחשוב הכי הרבה?",
+    "helpful_sentence": "אני עוסק בדבר אחד בכל פעם ומרגיש כוח בכל ביצוע."
+  },
+  {
+    "id": "pattern_112",
+    "category": "overwhelm",
+    "pattern_name": "emotional_overwhelm",
+    "example_sentences": [
+      "הרגשות שלי חזקים כל כך שאני לא יודע מה לעשות איתם.",
+      "פעמים רבות אני מרגיש שאני טובע ברגשות.",
+      "כשהרגשות גדולים מדי, אני פשוט מנתק."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "My emotions are too intense to tolerate and I must shut down or escape.",
+    "balanced_trait": "emotional regulation",
+    "bridge_sentence": "רגשות עזים הם לא סכנה — הם מידע. אפשר לשבת איתם ולא להיסחף.",
+    "helpful_sentence": "אני יכול להרגיש רגשות גדולים ועדיין להישאר מעוגן."
+  },
+  {
+    "id": "pattern_113",
+    "category": "overwhelm",
+    "pattern_name": "information_overload",
+    "example_sentences": [
+      "יש כל כך הרבה מידע שאני לא יודע מה לאמץ.",
+      "כל מה שאני קורא סותר את מה שקראתי לפני כן.",
+      "אני מסכן להחליט כי אני לא בטוח שיש לי את כל המידע."
+    ],
+    "emotion": "confusion",
+    "limiting_belief": "I need to process all available information before I can act or decide.",
+    "balanced_trait": "discernment",
+    "bridge_sentence": "לא כל מידע שווה את תשומת הלב שלך — אפשר לסנן ולבחור.",
+    "helpful_sentence": "אני בוחר את המקורות הטובים ביותר ופועל ממה שיש לי."
+  },
+  {
+    "id": "pattern_114",
+    "category": "overwhelm",
+    "pattern_name": "responsibility_overwhelm",
+    "example_sentences": [
+      "אני אחראי על כל כך הרבה אנשים ודברים שאיני יודע מאיפה להתחיל.",
+      "הנטל של כל האחריויות מרגיש שהוא מוחץ אותי.",
+      "אני לא יכול לעמוד בכל מה שמצפים ממני."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "I am solely responsible for everything and must manage it all perfectly.",
+    "balanced_trait": "delegation",
+    "bridge_sentence": "לא כל אחריות צריכה להיות שלך לבד — אפשר לבקש עזרה.",
+    "helpful_sentence": "אני מחלק אחריויות בחוכמה ומכיר בגבולותיי."
+  },
+  {
+    "id": "pattern_115",
+    "category": "overwhelm",
+    "pattern_name": "social_overwhelm",
+    "example_sentences": [
+      "יותר מדי אנשים ויותר מדי שיחות גורמים לי לרצות לברוח.",
+      "אחרי מפגשים חברתיים אני צריך ימים להתאושש.",
+      "כשיש יותר מדי גירוי חברתי אני פשוט מתנתק."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Social interaction is draining and I cannot manage the demands of others.",
+    "balanced_trait": "boundaries",
+    "bridge_sentence": "לדעת שצריך מנוחה חברתית זו מיומנות, לא חולשה.",
+    "helpful_sentence": "אני מכיר את הצרכים שלי ומאפשר לעצמי לנוח ולהתחדש."
+  },
+  {
+    "id": "pattern_116",
+    "category": "overwhelm",
+    "pattern_name": "change_overwhelm",
+    "example_sentences": [
+      "יש כל כך הרבה שינויים בבת אחת שאני לא מצליח לעמוד בקצב.",
+      "שינויים רבים מדי בזמן קצר מפרקים אותי.",
+      "אני יכול להתמודד עם שינוי — לא עם עשרה בבת אחת."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Too much change at once will destroy my ability to function.",
+    "balanced_trait": "adaptability",
+    "bridge_sentence": "גם תוך כדי שינוי גדול — יש אלמנטים יציבים שנשארים. מה הם?",
+    "helpful_sentence": "אני מסתמך על הדברים הקבועים שלי כעוגן בזמן שינוי."
+  },
+  {
+    "id": "pattern_117",
+    "category": "overwhelm",
+    "pattern_name": "deadline_overwhelm",
+    "example_sentences": [
+      "כשיש לחץ זמן אמיתי אני נכנס לפאניקה ולא מצליח לחשוב.",
+      "הדד-ליין מבהיל אותי כל כך שאני מקפיא.",
+      "תחת לחץ האיכות שלי נופלת בצורה דרמטית."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Time pressure eliminates my capacity to think clearly and perform.",
+    "balanced_trait": "calm performance",
+    "bridge_sentence": "הגוף שלך יודע לעבוד תחת לחץ — נשימה אחת יכולה לפתוח את הראש.",
+    "helpful_sentence": "אני מסוגל לעבוד גם תחת לחץ זמן ולסמוך על יכולתי."
+  },
+  {
+    "id": "pattern_118",
+    "category": "overwhelm",
+    "pattern_name": "life_transition_overwhelm",
+    "example_sentences": [
+      "המעבר הזה גדול עלי — לידת ילד, עבודה חדשה, דירה חדשה.",
+      "שינויי חיים גדולים מפרקים אותי גם אם הם חיוביים.",
+      "גם כשזה טוב — השינוי עצמו מכביד עלי."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "Life transitions, even positive ones, are more than I can handle.",
+    "balanced_trait": "resilience",
+    "bridge_sentence": "מעברי חיים גדולים תמיד מרגישים עצומים — וכמעט תמיד עוברים.",
+    "helpful_sentence": "אני עובר שינויים גדולים ויוצא מהם עם כוחות שלא ידעתי שיש לי."
+  },
+  {
+    "id": "pattern_119",
+    "category": "overwhelm",
+    "pattern_name": "cumulative_stress_overwhelm",
+    "example_sentences": [
+      "לא קרה דבר גדול — זה פשוט הצטבר עד שנשברתי.",
+      "כל דבר קטן בנפרד ניתן לניהול, אבל יחד זה מוחץ.",
+      "ניקיתי את הבית ופרצתי בבכי — ולא הבנתי למה עד שחשבתי."
+    ],
+    "emotion": "exhaustion",
+    "limiting_belief": "I must handle everything silently until I break.",
+    "balanced_trait": "self-care",
+    "bridge_sentence": "הצטברות לחץ היא אמיתית — הגוף שלך מבקש הפסקה לפני שהוא נשבר.",
+    "helpful_sentence": "אני מתנה לעצמי מנוחה לפני שאני מגיע לשבירה."
+  },
+  {
+    "id": "pattern_120",
+    "category": "overwhelm",
+    "pattern_name": "sensory_overwhelm",
+    "example_sentences": [
+      "רעש, אנשים, אורות — לפעמים הכל מרגיש יותר מדי.",
+      "בסביבות עמוסות אני הופך למותש ועצבני.",
+      "אני צריך שקט ורגיעה אחרי יום בחוץ יותר מאחרים."
+    ],
+    "emotion": "overwhelm",
+    "limiting_belief": "My sensitivity to the environment is a weakness and a burden.",
+    "balanced_trait": "self-awareness",
+    "bridge_sentence": "רגישות חושית היא לא פגם — היא מאפיין שדורש הכרה וניהול.",
+    "helpful_sentence": "אני מכיר את הצרכים החושיים שלי ומטפח את הסביבה שלי בהתאם."
+  }
+]

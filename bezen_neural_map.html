@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEZEN Galaxy Neural Brain</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #04060f;
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      direction: rtl;
+    }
+
+    #canvas {
+      position: fixed;
+      inset: 0;
+      cursor: default;
+    }
+
+    /* ── Side Panel ───────────────────────────────────────────────── */
+    #panel {
+      position: fixed;
+      top: 0; right: 0;
+      width: 300px;
+      height: 100vh;
+      background: rgba(6, 9, 22, 0.94);
+      border-left: 1px solid rgba(50, 70, 150, 0.35);
+      backdrop-filter: blur(16px);
+      transform: translateX(100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-y: auto;
+      z-index: 200;
+      scrollbar-width: thin;
+      scrollbar-color: #1e2a50 transparent;
+    }
+    #panel.open { transform: translateX(0); }
+    #panel::-webkit-scrollbar { width: 5px; }
+    #panel::-webkit-scrollbar-thumb { background: #1e2a50; border-radius: 3px; }
+
+    #panel-close {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px 14px;
+      background: rgba(6, 9, 22, 0.9);
+      z-index: 10;
+      border-bottom: 1px solid rgba(50, 70, 150, 0.2);
+    }
+    #panel-close button {
+      background: transparent;
+      border: 1px solid rgba(80, 100, 180, 0.4);
+      color: #6080c0;
+      padding: 4px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 12px;
+      transition: all 0.2s;
+    }
+    #panel-close button:hover { background: rgba(80, 100, 180, 0.15); color: #90b0e0; }
+
+    #panel-content { padding: 16px; }
+
+    .p-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 3px 10px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .p-badge.pattern  { background: rgba(255,50,80,0.15);  color: #ff6080; border: 1px solid rgba(255,50,80,0.3); }
+    .p-badge.trait    { background: rgba(60,120,255,0.15); color: #80a8ff; border: 1px solid rgba(60,120,255,0.3); }
+    .p-badge.strength { background: rgba(255,170,30,0.15); color: #ffc060; border: 1px solid rgba(255,170,30,0.3); }
+
+    .p-title   { font-size: 17px; font-weight: 700; color: #e8edf8; line-height: 1.4; }
+    .p-title-en{ font-size: 11px; color: #4a5880; margin-top: 3px; direction: ltr; text-align: right; }
+
+    .p-divider { height: 1px; background: rgba(50,70,150,0.25); margin: 14px 0; }
+
+    .p-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: #384070; text-transform: uppercase; margin-bottom: 5px; }
+
+    .p-text { font-size: 13px; color: #b0bcd8; line-height: 1.65; }
+
+    .p-highlight {
+      font-size: 14px; color: #dde3f5; line-height: 1.6;
+      border-right: 3px solid #4070d0;
+      padding-right: 10px;
+    }
+
+    .p-axis-badge {
+      display: inline-block;
+      background: rgba(255,50,80,0.1);
+      color: #ff6080;
+      border: 1px solid rgba(255,50,80,0.25);
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      direction: ltr;
+    }
+
+    .p-bridge { background: rgba(18,25,55,0.7); border-radius: 6px; padding: 8px 12px; margin-bottom: 6px; font-size: 12px; color: #8898c8; line-height: 1.55; border-right: 2px solid rgba(50,80,180,0.4); }
+
+    .p-chip {
+      display: inline-flex; align-items: center;
+      padding: 4px 12px; border-radius: 12px;
+      font-size: 12px; cursor: pointer;
+      margin-left: 6px; margin-bottom: 5px;
+      transition: filter 0.15s, transform 0.15s;
+    }
+    .p-chip:hover { filter: brightness(1.4); transform: scale(1.04); }
+    .p-chip.trait    { background: rgba(40,80,200,0.2); color: #80a8ff; border: 1px solid rgba(60,110,255,0.35); }
+    .p-chip.strength { background: rgba(200,130,20,0.2); color: #ffc060; border: 1px solid rgba(255,170,30,0.35); }
+
+    /* ── Controls ─────────────────────────────────────────────────── */
+    #controls {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      gap: 8px;
+      z-index: 200;
+    }
+    .ctrl {
+      background: rgba(8,12,30,0.85);
+      border: 1px solid rgba(50,70,140,0.4);
+      color: #6080c0;
+      width: 34px; height: 34px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s;
+    }
+    .ctrl:hover { background: rgba(30,50,120,0.5); color: #a0c0ff; border-color: rgba(80,120,220,0.5); }
+
+    /* ── Legend ───────────────────────────────────────────────────── */
+    #legend {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(6,9,22,0.8);
+      border: 1px solid rgba(50,70,140,0.3);
+      border-radius: 10px;
+      padding: 12px 14px;
+      backdrop-filter: blur(10px);
+      z-index: 150;
+      font-size: 11px;
+    }
+    .leg-row { display: flex; align-items: center; gap: 8px; color: #5060a0; margin-bottom: 5px; }
+    .leg-row:last-child { margin-bottom: 0; }
+    .leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── Title Overlay ────────────────────────────────────────────── */
+    #title-overlay {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      pointer-events: none;
+      z-index: 100;
+    }
+    #title-overlay .t-main {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: transparent;
+      background: linear-gradient(90deg, #ffcc40, #ff9020, #ff4060, #c040ff, #4080ff, #40e0c0, #ffcc40);
+      background-size: 300% 100%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    #title-overlay .t-sub {
+      font-size: 12px;
+      color: rgba(160, 180, 240, 0.55);
+      letter-spacing: 0.08em;
+      margin-top: 3px;
+      direction: rtl;
+    }
+    @keyframes shimmer { to { background-position: -300% 0; } }
+
+    /* ── Detection Bar ────────────────────────────────────────────── */
+    #detect-bar {
+      position: fixed;
+      top: 78px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      z-index: 150;
+      direction: rtl;
+    }
+    #detect-bar input {
+      width: 300px; padding: 7px 14px;
+      background: rgba(8,12,30,0.85); color: #c8d8f8;
+      border: 1px solid rgba(80,100,180,0.4); border-radius: 20px;
+      font-size: 13px; outline: none; backdrop-filter: blur(8px);
+      text-align: right; direction: rtl;
+      transition: border-color 0.2s;
+    }
+    #detect-bar input:focus { border-color: rgba(255,80,100,0.6); }
+    #detect-bar button {
+      padding: 5px 20px; border-radius: 14px; cursor: pointer;
+      background: rgba(255,40,70,0.15); color: #ff7090;
+      border: 1px solid rgba(255,40,70,0.4); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; backdrop-filter: blur(6px);
+      transition: all 0.2s;
+    }
+    #detect-bar button:hover { background: rgba(255,40,70,0.3); color: #ffb0c0; }
+    #detect-result {
+      font-size: 12px; color: rgba(140,160,220,0.7); min-height: 16px;
+      direction: rtl;
+    }
+    #detect-result .det-id { color: #ff6080; font-weight: 700; letter-spacing: 0.04em; }
+
+    /* ── Loading ──────────────────────────────────────────────────── */
+    #loading {
+      position: fixed; inset: 0;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      background: #04060f;
+      z-index: 999;
+      gap: 16px;
+      color: #3050a0;
+      font-size: 14px;
+    }
+    .load-ring {
+      width: 40px; height: 40px;
+      border: 2px solid rgba(40,70,160,0.2);
+      border-top-color: #4070d0;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Panel header gradient ────────────────────────────────────── */
+    #panel-close {
+      background: linear-gradient(135deg, rgba(20,10,40,0.95) 0%, rgba(8,12,40,0.92) 100%) !important;
+    }
+
+    /* ── Tooltip ──────────────────────────────────────────────────── */
+    #tooltip {
+      position: fixed;
+      background: rgba(8,12,30,0.9);
+      border: 1px solid rgba(60,80,160,0.4);
+      color: #a0b8e0;
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 300;
+      direction: rtl;
+    }
+    #tooltip.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="load-ring"></div>
+  <span>טוען מפה נוירלית...</span>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<div id="title-overlay">
+  <div class="t-main">BEZEN Galaxy Neural Brain</div>
+  <div class="t-sub">מפת התודעה החיה של BEZEN</div>
+</div>
+
+<div id="detect-bar">
+  <input id="detect-input" type="text" placeholder="כתוב משפט שעובר לך בראש...">
+  <button id="detect-btn">נתח</button>
+  <div id="detect-result"></div>
+</div>
+
+<div id="legend">
+  <div class="leg-row"><div class="leg-dot" style="background:#ff4060;box-shadow:0 0 6px #ff4060"></div><span>תבנית כאב &nbsp;·&nbsp; מסלול חיצוני</span></div>
+  <div class="leg-row"><div class="leg-dot" style="background:#4080ff;box-shadow:0 0 6px #4080ff"></div><span>תכונה מאזנת &nbsp;·&nbsp; מסלול אמצעי</span></div>
+  <div class="leg-row"><div class="leg-dot" style="background:#ffb030;box-shadow:0 0 10px #ffb030"></div><span>כוח עליון &nbsp;·&nbsp; לב הגלקסיה</span></div>
+</div>
+
+<div id="controls">
+  <button class="ctrl" id="btn-plus"  title="Zoom in">+</button>
+  <button class="ctrl" id="btn-minus" title="Zoom out">−</button>
+  <button class="ctrl" id="btn-fit"   title="Fit" style="font-size:12px">⊙</button>
+  <button class="ctrl" id="btn-path"  title="Animate path" style="font-size:11px">▶</button>
+</div>
+
+<div id="panel">
+  <div id="panel-close"><button onclick="closePanel()">✕ סגור</button></div>
+  <div id="panel-content"></div>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+'use strict';
+
+// ── Config ─────────────────────────────────────────────────────────────────
+const FEATURED_PATTERN_ID = 'comparison_01'; // path animation seed
+const PARTICLE_COUNT      = 120;
+const DATA_BASE           = 'data/';
+
+// Radii for galaxy rings (set after resize)
+let TRAIT_RADIUS   = 180;
+let OUTER_RADIUS   = 380;
+
+// Color per node type
+const TYPE_COLOR = {
+  pattern:  { core: '#ff4050', glow: '#ff2040', dim: 'rgba(255,50,70,',  r: 11 },
+  trait:    { core: '#3a7aff', glow: '#2060e0', dim: 'rgba(50,110,255,', r: 14 },
+  strength: { core: '#ffbb20', glow: '#ff9800', dim: 'rgba(255,180,20,', r: 20 }
+};
+
+// Subtle cluster tint per axis
+const AXIS_TINT = {
+  comparison:'#ff6040', self_doubt:'#ff4060', rejection:'#c040ff',
+  shame:'#a030d0', worthlessness:'#ff3070', alienation:'#7040ff',
+  belonging:'#5040e0', fear:'#3090ff', uncertainty:'#30c0e0',
+  control:'#30c090', helplessness:'#ff8030', failure:'#ff5020',
+  anger:'#ff3030', loneliness:'#a040b0', overwhelm:'#ffaa30'
+};
+
+// Keyword → pattern node ID mapping for sentence detection
+const PATTERN_KEYWORDS = {
+  comparison_01: ["השוואה מכאיבה לאחרים", "השוואה מכאיבה"],
+  comparison_02: ["קנאה בהתקדמות של אחרים", "קנאה בהתקדמות"],
+  comparison_03: ["תחושת פיגור תמידי", "תחושת פיגור"],
+  comparison_04: ["מדידת ערך לפי הישגים חיצוניים", "מדידת ערך"],
+  comparison_05: ["מחיקה עצמית מול הצלחת אחרים", "מחיקה עצמית"],
+  comparison_06: ["מרדף אחרי סטנדרט לא אנושי", "מרדף אחרי"],
+  comparison_07: ["פרשנות עצמית כפחות טוב", "פרשנות עצמית"],
+  comparison_08: ["תלות באישור חיצוני", "תלות באישור"],
+  comparison_09: ["בושה על קצב אישי", "בושה על"],
+  comparison_10: ["חוסר יכולת לשמוח בחלקי", "חוסר יכולת"],
+  self_doubt_01: ["ספק עצמי משתק", "ספק עצמי"],
+  self_doubt_02: ["פחד להתחיל בלי ודאות", "פחד להתחיל"],
+  self_doubt_03: ["הטלת ספק בכל הצלחה קודמת", "הטלת ספק"],
+  self_doubt_04: ["תחושת אין בי את זה", "תחושת אין"],
+  self_doubt_05: ["צורך להיות מוכן לגמרי לפני פעולה", "צורך להיות"],
+  self_doubt_06: ["פחד להיחשף כחסר יכולת", "פחד להיחשף"],
+  self_doubt_07: ["דחיית החלטות בגלל ספק", "דחיית החלטות"],
+  self_doubt_08: ["חוסר אמון בשיקול הדעת שלי", "חוסר אמון"],
+  self_doubt_09: ["ביטול הישגים כמזל", "ביטול הישגים"],
+  self_doubt_10: ["שיתוק מול בחירה", "שיתוק מול"],
+  rejection_01: ["תחושת דחייה אישית", "תחושת דחייה"],
+  rejection_02: ["פירוש שתיקה כדחייה", "פירוש שתיקה"],
+  rejection_03: ["חרדת נטישה סמויה", "חרדת נטישה"],
+  rejection_04: ["רגישות־יתר לאי הסכמה", "רגישות־יתר לאי"],
+  rejection_05: ["ציפייה לדחייה מראש", "ציפייה לדחייה"],
+  rejection_06: ["התכווצות אחרי מסר קר", "התכווצות אחרי"],
+  rejection_07: ["ויתור על קשר לפני שידחו אותי", "ויתור על"],
+  rejection_08: ["פירוש ביקורת כאי־אהבה", "פירוש ביקורת"],
+  rejection_09: ["מרדף אחרי אישור כדי לא להידחות", "מרדף אחרי"],
+  rejection_10: ["תחושת אני לא רצוי", "תחושת אני"],
+  overwhelm_01: ["הצפה מוחלטת"],
+  overwhelm_02: ["עומס מנטלי בלתי נסבל", "עומס מנטלי"],
+  overwhelm_03: ["חוסר יכולת לבחור מה קודם", "חוסר יכולת"],
+  overwhelm_04: ["תחושת קריסה מתקרבת", "תחושת קריסה"],
+  overwhelm_05: ["הימנעות ממשימות בגלל גודש", "הימנעות ממשימות"],
+  overwhelm_06: ["תחושת מחנק ממחויבויות", "תחושת מחנק"],
+  overwhelm_07: ["ערבוב בין חשוב לדחוף", "ערבוב בין"],
+  overwhelm_08: ["קיפאון מול רשימות ארוכות", "קיפאון מול"],
+  overwhelm_09: ["כעס על עצמי שאני לא מספיק", "כעס על"],
+  overwhelm_10: ["אובדן כיוון בתוך עומס", "אובדן כיוון"],
+  fear_01: ["פחד מהעתיד"],
+  fear_02: ["ציפייה לאסון מתקרב", "ציפייה לאסון"],
+  fear_03: ["פחד מטעות שתהרוס הכול", "פחד מטעות"],
+  fear_04: ["הימנעות מסיכון רגשי", "הימנעות מסיכון"],
+  fear_05: ["חרדה מהלא נודע", "חרדה מהלא"],
+  fear_06: ["דריכות יתר לפני צעד חדש", "דריכות יתר"],
+  fear_07: ["הצפה מתרחישים שליליים", "הצפה מתרחישים"],
+  fear_08: ["צורך להבטיח שליטה מלאה", "צורך להבטיח"],
+  fear_09: ["פחד מתקיעות נצחית", "פחד מתקיעות"],
+  fear_10: ["קפיאה מול סיכון קטן", "קפיאה מול"],
+  shame_01: ["בושה מכווצת"],
+  shame_02: ["תחושת פגם פנימי", "תחושת פגם"],
+  shame_03: ["הסתרה עצמית מתוך מבוכה", "הסתרה עצמית"],
+  shame_04: ["הלקאה עצמית אחרי טעות", "הלקאה עצמית"],
+  shame_05: ["קושי להביט לאנשים בעיניים", "קושי להביט"],
+  shame_06: ["הזדהות מלאה עם כישלון", "הזדהות מלאה"],
+  shame_07: ["פחד מחשיפה של חולשה", "פחד מחשיפה"],
+  shame_08: ["דחף להיעלם אחרי מבוכה", "דחף להיעלם"],
+  shame_09: ["תיוג עצמי כלא בסדר", "תיוג עצמי"],
+  shame_10: ["קיפאון חברתי מתוך בושה", "קיפאון חברתי"],
+  worthlessness_01: ["חוסר ערך פנימי", "חוסר ערך"],
+  worthlessness_02: ["תחושת מיותרות"],
+  worthlessness_03: ["מחיקת נוכחות עצמית", "מחיקת נוכחות"],
+  worthlessness_04: ["אמונה שאין לי מה לתת", "אמונה שאין"],
+  worthlessness_05: ["תלות בערך שמבוסס הישג", "תלות בערך"],
+  worthlessness_06: ["תחושת ריקנות זהותית", "תחושת ריקנות"],
+  worthlessness_07: ["שכנוע עצמי שאני נטל", "שכנוע עצמי"],
+  worthlessness_08: ["זלזול בצרכים שלי", "זלזול בצרכים"],
+  worthlessness_09: ["קושי לקבל טוב מאחרים", "קושי לקבל"],
+  worthlessness_10: ["ביטול כל תרומה שלי", "ביטול כל"],
+  helplessness_01: ["חוסר אונים נלמד", "חוסר אונים"],
+  helplessness_02: ["אמונה ששום דבר לא ישתנה", "אמונה ששום"],
+  helplessness_03: ["ויתור מוקדם מראש", "ויתור מוקדם"],
+  helplessness_04: ["תלות באחרים שיצילו אותי", "תלות באחרים"],
+  helplessness_05: ["תחושת נעילה מוחלטת", "תחושת נעילה"],
+  helplessness_06: ["שכנוע שאין לי השפעה", "שכנוע שאין"],
+  helplessness_07: ["קיפאון מול בעיה חוזרת", "קיפאון מול"],
+  helplessness_08: ["תשישות שמתחזה לייאוש", "תשישות שמתחזה"],
+  helplessness_09: ["נטייה לוותר לפני ניסיון", "נטייה לוותר"],
+  helplessness_10: ["פרשנות קושי כסוף הדרך", "פרשנות קושי"],
+  alienation_01: ["ניכור ובדידות פנימית", "ניכור ובדידות"],
+  alienation_02: ["תחושת זרות בתוך קבוצה", "תחושת זרות"],
+  alienation_03: ["חוויית אף אחד לא מבין אותי", "חוויית אף"],
+  alienation_04: ["הסתגרות כהגנה"],
+  alienation_05: ["קושי לשתף כאב", "קושי לשתף"],
+  alienation_06: ["התרחקות גם מאנשים טובים", "התרחקות גם"],
+  alienation_07: ["בדידות גם בנוכחות אחרים", "בדידות גם"],
+  alienation_08: ["חשד בסיסי כלפי קשר", "חשד בסיסי"],
+  alienation_09: ["תחושת אי־נראות"],
+  alienation_10: ["ויתור על השתייכות", "ויתור על"],
+  belonging_01: ["ערעור תחושת שייכות", "ערעור תחושת"],
+  belonging_02: ["חוויית אין לי מקום", "חוויית אין"],
+  belonging_03: ["חיפוש זהות דרך קבוצה בלבד", "חיפוש זהות"],
+  belonging_04: ["פחד להיות בחוץ", "פחד להיות"],
+  belonging_05: ["התאמה עצמית קיצונית כדי להשתלב", "התאמה עצמית"],
+  belonging_06: ["אובדן קול אישי בתוך קבוצה", "אובדן קול"],
+  belonging_07: ["תחושת זיוף חברתי", "תחושת זיוף"],
+  belonging_08: ["קנאה בשייכות של אחרים", "קנאה בשייכות"],
+  belonging_09: ["רגישות לפערי מעמד", "רגישות לפערי"],
+  belonging_10: ["תלות בזהות חברתית חיצונית", "תלות בזהות"],
+  uncertainty_01: ["חוסר סבילות לאי־ודאות", "חוסר סבילות"],
+  uncertainty_02: ["צורך לדעת הכול מראש", "צורך לדעת"],
+  uncertainty_03: ["חרדה כשאין תשובה מיידית", "חרדה כשאין"],
+  uncertainty_04: ["קושי לבחור בלי הבטחה", "קושי לבחור"],
+  uncertainty_05: ["שיתוק מול עמימות", "שיתוק מול"],
+  uncertainty_06: ["חיפוש ודאות דרך שליטה מופרזת", "חיפוש ודאות"],
+  uncertainty_07: ["פרשנות עמימות כאיום", "פרשנות עמימות"],
+  uncertainty_08: ["עומס חשיבתי מהתלבטות", "עומס חשיבתי"],
+  uncertainty_09: ["דחיית פעולה עד מידע מושלם", "דחיית פעולה"],
+  uncertainty_10: ["הימנעות מפתיחות בגלל אי־בהירות", "הימנעות מפתיחות"],
+  control_01: ["צורך בשליטה מלאה", "צורך בשליטה"],
+  control_02: ["פחד לאבד אחיזה", "פחד לאבד"],
+  control_03: ["קושי לסמוך על תהליך", "קושי לסמוך"],
+  control_04: ["מיקרו־ניהול עצמי ואחרים", "מיקרו־ניהול עצמי"],
+  control_05: ["מתח פנימי כשדברים משתנים", "מתח פנימי"],
+  control_06: ["חוסר גמישות מחשבתית", "חוסר גמישות"],
+  control_07: ["התפרקות מול שיבוש קטן", "התפרקות מול"],
+  control_08: ["קושי להרפות גם כשעייף", "קושי להרפות"],
+  control_09: ["ניסיון לשלוט ברגש במקום לפגוש אותו", "ניסיון לשלוט"],
+  control_10: ["זהות שנשענת על שליטה", "זהות שנשענת"],
+  failure_01: ["פחד מכישלון"],
+  failure_02: ["הימנעות מניסיון כדי לא להיכשל", "הימנעות מניסיון"],
+  failure_03: ["תיוג עצמי ככישלון", "תיוג עצמי"],
+  failure_04: ["ראיית טעות כהתרסקות", "ראיית טעות"],
+  failure_05: ["חוסר התאוששות אחרי כישלון", "חוסר התאוששות"],
+  failure_06: ["פרפקציוניזם משתק"],
+  failure_07: ["בושה אחרי ביצוע חלש", "בושה אחרי"],
+  failure_08: ["ויתור על מטרות גדולות", "ויתור על"],
+  failure_09: ["הקטנת חלומות כדי לא להתאכזב", "הקטנת חלומות"],
+  failure_10: ["הזדהות עם כישלונות עבר", "הזדהות עם"],
+  anger_01: ["כעס מתפרץ"],
+  anger_02: ["אגירה שקטה של טינה", "אגירה שקטה"],
+  anger_03: ["פרשנות מהירה כפגיעה", "פרשנות מהירה"],
+  anger_04: ["קושי לעצור לפני תגובה", "קושי לעצור"],
+  anger_05: ["כעס על עצמי במקום כאב", "כעס על"],
+  anger_06: ["צורך לנצח בעימות", "צורך לנצח"],
+  anger_07: ["נוקשות תחת איום", "נוקשות תחת"],
+  anger_08: ["תחושת חוסר צדק בוערת", "תחושת חוסר"],
+  anger_09: ["הטחת אשמה במקום בקשה", "הטחת אשמה"],
+  anger_10: ["פיצוץ אחרי הצטברות", "פיצוץ אחרי"],
+  loneliness_01: ["בדידות שקטה"],
+  loneliness_02: ["כאב שאין עם מי לשתף", "כאב שאין"],
+  loneliness_03: ["תחושת נתק ממעגלים חברתיים", "תחושת נתק"],
+  loneliness_04: ["התרגלות לבדידות כהגנה", "התרגלות לבדידות"],
+  loneliness_05: ["שכנוע שאין מי שיבין אותי", "שכנוע שאין"],
+  loneliness_06: ["געגוע לקשר שלא מתממש", "געגוע לקשר"],
+  loneliness_07: ["הימנעות מיוזמה לקשר", "הימנעות מיוזמה"],
+  loneliness_08: ["חוויית ריק חברתי", "חוויית ריק"],
+  loneliness_09: ["קנאה בחיבור של אחרים", "קנאה בחיבור"],
+  loneliness_10: ["פרשנות בדידות כחוסר ערך", "פרשנות בדידות"]
+};
+
+// ── State ──────────────────────────────────────────────────────────────────
+let canvas, ctx, W, H;
+let transform = d3.zoomIdentity;
+let nodes = [], edges = [], sim;
+let hoveredId = null, selectedId = null;
+let particles = [];
+let patternMap = {}, traitMap = {}, strengthMap = {}, nodeById = {};
+let pathAnimT = 0, pathActive = false;
+let featuredEdges = []; // [{src, tgt}] for path animation
+let detectedId     = null;
+let detectionEdges = [];
+let detectionAnimT = 0;
+let detectionActive = false;
+
+// ── Load data ──────────────────────────────────────────────────────────────
+const loadJSON = url => fetch(url).then(r => { if (!r.ok) throw new Error(url); return r.json(); });
+
+Promise.all([
+  loadJSON(DATA_BASE + 'mind_map_nodes.json'),
+  loadJSON(DATA_BASE + 'mind_map_edges.json'),
+  loadJSON(DATA_BASE + 'bezen_patterns.json'),
+  loadJSON(DATA_BASE + 'bezen_traits_definitions.json')
+    .catch(() => loadJSON(DATA_BASE + 'bezen_traits_map.json')),
+  loadJSON(DATA_BASE + 'bezen_strengths_map.json')
+]).then(([nodesD, edgesD, patternsD, traitsD, strengthsD]) => {
+  // Build lookup maps
+  patternsD.patterns.forEach(p  => patternMap[p.id]  = p);
+  (traitsD.traits || []).forEach(t => traitMap[t.id]    = t);
+  strengthsD.strengths.forEach(s => strengthMap[s.id] = s);
+
+  nodes = nodesD.nodes.map(n => ({ ...n }));
+  edges = edgesD.edges.map(e => ({ ...e }));
+  nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  // Pre-build featured path edges
+  const fp = nodeById[FEATURED_PATTERN_ID];
+  if (fp) {
+    const pd = patternMap[fp.id] || {};
+    const traitId    = pd.balanced_trait_id;
+    const strengthId = pd.higher_strength_id;
+    if (traitId && strengthId) {
+      featuredEdges = [
+        { src: FEATURED_PATTERN_ID, tgt: traitId },
+        { src: traitId,             tgt: strengthId }
+      ];
+    }
+  }
+
+  document.getElementById('loading').style.display = 'none';
+  init();
+}).catch(err => {
+  document.getElementById('loading').innerHTML =
+    `<span style="color:#ff4060">שגיאה בטעינה: ${err.message}<br>הרץ מ-server ולא מ-file://</span>`;
+});
+
+// ── Init ───────────────────────────────────────────────────────────────────
+function init() {
+  canvas = document.getElementById('canvas');
+  ctx    = canvas.getContext('2d');
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Particle system
+  for (let i = 0; i < PARTICLE_COUNT; i++) spawnParticle(true);
+
+  // Galaxy radii based on viewport
+  TRAIT_RADIUS = Math.min(W, H) * 0.20;
+  OUTER_RADIUS = Math.min(W, H) * 0.44;
+
+  // D3 force simulation
+  const validEdges = edges.filter(e => nodeById[e.source] && nodeById[e.target]);
+
+  sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(validEdges).id(d => d.id)
+      .distance(d => {
+        const t = d.relation_type;
+        if (t === 'supported_by_trait') return 55;
+        if (t === 'balanced_by_trait' || t === 'elevated_to_strength') return 70;
+        if (t === 'connected_to_axis') return 40;
+        return 80;
+      })
+      .strength(d => {
+        const t = d.relation_type;
+        if (t === 'supported_by_trait') return 0.4;
+        if (t === 'balanced_by_trait' || t === 'elevated_to_strength') return 0.25;
+        if (t === 'connected_to_axis') return 0.15;
+        return 0.06;
+      })
+    )
+    .force('charge', d3.forceManyBody().strength(d =>
+      d.node_type === 'strength' ? -80 : d.node_type === 'trait' ? -120 : -60
+    ))
+    .force('center', d3.forceCenter(W / 2, H / 2).strength(0.04))
+    .force('collision', d3.forceCollide().radius(d =>
+      TYPE_COLOR[d.node_type].r + 10
+    ))
+    // Galaxy radial forces — strengths to center, traits to mid ring, patterns to outer ring
+    .force('radial-strength', d3.forceRadial(0, W / 2, H / 2)
+      .strength(d => d.node_type === 'strength' ? 1.2 : 0))
+    .force('radial-trait', d3.forceRadial(TRAIT_RADIUS, W / 2, H / 2)
+      .strength(d => d.node_type === 'trait' ? 0.9 : 0))
+    .force('radial-pattern', d3.forceRadial(OUTER_RADIUS, W / 2, H / 2)
+      .strength(d => d.node_type === 'pattern' ? 0.55 : 0))
+    .alphaDecay(0.018);
+
+  // Zoom
+  const zoom = d3.zoom()
+    .scaleExtent([0.1, 5])
+    .on('zoom', e => { transform = e.transform; });
+  d3.select(canvas).call(zoom);
+
+  // Zoom controls
+  document.getElementById('btn-plus') .addEventListener('click', () => d3.select(canvas).transition().call(zoom.scaleBy, 1.35));
+  document.getElementById('btn-minus').addEventListener('click', () => d3.select(canvas).transition().call(zoom.scaleBy, 0.75));
+  document.getElementById('btn-fit')  .addEventListener('click', fitView);
+  document.getElementById('btn-path') .addEventListener('click', () => { pathActive = !pathActive; pathAnimT = 0; });
+  document.getElementById('detect-btn').addEventListener('click', runDetection);
+  document.getElementById('detect-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') runDetection();
+  });
+
+  // Canvas interactions
+  canvas.addEventListener('mousemove', onMouseMove);
+  canvas.addEventListener('click',     onCanvasClick);
+  canvas.addEventListener('mouseleave',() => { hoveredId = null; hideTooltip(); });
+
+  // Fit after sim settles
+  sim.on('end', () => { if (transform === d3.zoomIdentity) fitView(); });
+
+  // Drag (D3 drag on canvas)
+  d3.select(canvas).call(
+    d3.drag()
+      .subject(evt => {
+        const [mx, my] = screenToSim(evt.x, evt.y);
+        return nodes.find(n => Math.hypot(n.x - mx, n.y - my) < TYPE_COLOR[n.node_type].r + 5) || null;
+      })
+      .on('start', (evt, d) => {
+        if (!d) return;
+        if (!evt.active) sim.alphaTarget(0.3).restart();
+        d.fx = d.x; d.fy = d.y;
+      })
+      .on('drag', (evt, d) => {
+        if (!d) return;
+        const [mx, my] = screenToSim(evt.x, evt.y);
+        d.fx = mx; d.fy = my;
+      })
+      .on('end', (evt, d) => {
+        if (!d) return;
+        if (!evt.active) sim.alphaTarget(0);
+        d.fx = null; d.fy = null;
+      })
+  );
+
+  requestAnimationFrame(loop);
+}
+
+// ── Pattern detection ──────────────────────────────────────────────────────
+function detectPattern(text) {
+  for (const [id, keywords] of Object.entries(PATTERN_KEYWORDS)) {
+    for (const kw of keywords) {
+      if (text.includes(kw)) return id;
+    }
+  }
+  return null;
+}
+
+function runDetection() {
+  const text     = document.getElementById('detect-input').value.trim();
+  const resultEl = document.getElementById('detect-result');
+  if (!text) { resultEl.innerHTML = ''; return; }
+
+  const matched = detectPattern(text);
+  if (!matched) {
+    resultEl.innerHTML = '<span style="color:#3a4070">לא זוהה דפוס מחשבה</span>';
+    detectedId = null; detectionEdges = []; detectionActive = false;
+    return;
+  }
+
+  resultEl.innerHTML = `דפוס מחשבה מזוהה: <span class="det-id">${matched}</span>`;
+  detectedId = matched;
+
+  const pd = patternMap[matched] || {};
+  detectionEdges = [];
+  if (pd.balanced_trait_id)
+    detectionEdges.push({ src: matched,            tgt: pd.balanced_trait_id });
+  if (pd.higher_strength_id)
+    detectionEdges.push({ src: pd.balanced_trait_id, tgt: pd.higher_strength_id });
+  detectionActive = true;
+  detectionAnimT  = 0;
+
+  const node = nodeById[matched];
+  if (node) { selectedId = matched; openPanel(node); panTo(node); }
+}
+
+// ── Axis cluster halos (drawn in world space) ──────────────────────────────
+function drawAxisHalos() {
+  const centers = {};
+  nodes.forEach(n => {
+    if (n.node_type !== 'pattern' || !n.x) return;
+    if (!centers[n.group]) centers[n.group] = { x: 0, y: 0, count: 0 };
+    centers[n.group].x += n.x;
+    centers[n.group].y += n.y;
+    centers[n.group].count++;
+  });
+
+  Object.entries(centers).forEach(([axis, c]) => {
+    if (!c.count) return;
+    c.x /= c.count; c.y /= c.count;
+    const hex = AXIS_TINT[axis] || '#8860ff';
+    const r = parseInt(hex.slice(1,3),16);
+    const g = parseInt(hex.slice(3,5),16);
+    const b = parseInt(hex.slice(5,7),16);
+    const haloR = 72;
+    const grd = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, haloR);
+    grd.addColorStop(0,   `rgba(${r},${g},${b},0.13)`);
+    grd.addColorStop(0.45,`rgba(${r},${g},${b},0.06)`);
+    grd.addColorStop(1,   `rgba(${r},${g},${b},0)`);
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, haloR, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+// ── Particle system ────────────────────────────────────────────────────────
+function spawnParticle(randomPos) {
+  particles.push({
+    x:  randomPos ? Math.random() * W : (Math.random() > 0.5 ? Math.random() * 50 : W - Math.random() * 50),
+    y:  randomPos ? Math.random() * H : Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.22,
+    vy: (Math.random() - 0.5) * 0.12,
+    r:  Math.random() * 1.4 + 0.2,
+    baseA: Math.random() * 0.4 + 0.05,
+    a:  Math.random() * 0.4 + 0.05,
+    tw: Math.random() * Math.PI * 2,      // twinkle phase
+    twSpeed: 0.02 + Math.random() * 0.04  // twinkle speed
+  });
+}
+
+// ── Main render loop ───────────────────────────────────────────────────────
+function loop(ts) {
+  requestAnimationFrame(loop);
+
+  ctx.save();
+  ctx.clearRect(0, 0, W, H);
+
+  // Deep background
+  ctx.fillStyle = '#04060f';
+  ctx.fillRect(0, 0, W, H);
+
+  // Nebula blobs (fixed positions in screen space)
+  drawNebula();
+
+  // Particles (screen space)
+  updateParticles();
+
+  // Apply zoom transform
+  ctx.translate(transform.x, transform.y);
+  ctx.scale(transform.k, transform.k);
+
+  // Axis cluster halos (world space, under edges)
+  drawAxisHalos();
+
+  // Draw edges
+  drawEdges();
+
+  // Draw featured path animation
+  if (pathActive && featuredEdges.length) {
+    pathAnimT = (pathAnimT + 0.008) % 1;
+    drawFeaturedPath(ts);
+  }
+
+  // Draw detection path animation
+  if (detectionActive && detectionEdges.length) {
+    drawDetectionPath();
+  }
+
+  // Draw nodes
+  drawNodes(ts);
+
+  ctx.restore();
+}
+
+// ── Nebula background ──────────────────────────────────────────────────────
+const NEBULA_HUES = [220, 260, 300, 30, 180, 10]; // blue, purple, pink, orange, cyan, red
+const NEBULAS = Array.from({ length: 6 }, (_, i) => ({
+  x: Math.random(), y: Math.random(),
+  r: 220 + Math.random() * 320,
+  h: NEBULA_HUES[i]
+}));
+
+function drawNebula() {
+  NEBULAS.forEach(n => {
+    const grd = ctx.createRadialGradient(
+      n.x * W, n.y * H, 0,
+      n.x * W, n.y * H, n.r
+    );
+    grd.addColorStop(0,   `hsla(${n.h},80%,35%,0.07)`);
+    grd.addColorStop(0.4, `hsla(${n.h},65%,25%,0.04)`);
+    grd.addColorStop(1,   'transparent');
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.arc(n.x * W, n.y * H, n.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
+// ── Particles ─────────────────────────────────────────────────────────────
+function updateParticles() {
+  particles = particles.filter(p => p.baseA > 0.01);
+  while (particles.length < PARTICLE_COUNT) spawnParticle(false);
+
+  particles.forEach(p => {
+    p.x  += p.vx; p.y += p.vy;
+    p.tw += p.twSpeed;
+    // Twinkle: oscillate actual alpha around baseA
+    const twinkle = 0.5 + 0.5 * Math.sin(p.tw);
+    p.a = p.baseA * (0.35 + 0.65 * twinkle);
+    if (p.x < 0 || p.x > W || p.y < 0 || p.y > H) { p.baseA *= 0.92; }
+    // Mix white and blue for star-like look
+    const bright = Math.floor(180 + twinkle * 75);
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${bright},${bright + 20},255,${p.a})`;
+    ctx.fill();
+  });
+}
+
+// ── Edges ──────────────────────────────────────────────────────────────────
+function drawEdges() {
+  const connectedIds = getConnectedIds(hoveredId || selectedId);
+
+  edges.forEach(e => {
+    const src = typeof e.source === 'object' ? e.source : nodeById[e.source];
+    const tgt = typeof e.target === 'object' ? e.target : nodeById[e.target];
+    if (!src || !tgt) return;
+
+    const isActive = connectedIds.has(src.id) && connectedIds.has(tgt.id);
+    const isFeatured = pathActive && featuredEdges.some(fe =>
+      (fe.src === src.id && fe.tgt === tgt.id)
+    );
+
+    if (isFeatured) return; // drawn separately
+
+    const isDetEdge = detectionActive && detectionEdges.some(de =>
+      de.src === src.id && de.tgt === tgt.id);
+    if (isDetEdge) return; // drawn separately by drawDetectionPath
+
+    const t = e.relation_type;
+    let color, alpha, width;
+
+    if (t === 'balanced_by_trait') {
+      color = '80,120,255'; alpha = isActive ? 0.75 : 0.2; width = isActive ? 1.8 : 0.9;
+    } else if (t === 'elevated_to_strength') {
+      color = '255,170,30'; alpha = isActive ? 0.75 : 0.2; width = isActive ? 1.8 : 0.9;
+    } else if (t === 'supported_by_trait') {
+      color = '60,200,140'; alpha = isActive ? 0.85 : 0.3; width = isActive ? 2.2 : 1.1;
+    } else if (t === 'connected_to_axis') {
+      color = '200,60,80'; alpha = isActive ? 0.5 : 0.1; width = isActive ? 1.2 : 0.6;
+    } else {
+      color = '120,130,180'; alpha = isActive ? 0.45 : 0.1; width = isActive ? 1.4 : 0.6;
+    }
+
+    ctx.save();
+    if (isActive) {
+      ctx.shadowColor = `rgba(${color},0.8)`;
+      ctx.shadowBlur = 6;
+    }
+    ctx.strokeStyle = `rgba(${color},${alpha})`;
+    ctx.lineWidth = width / transform.k;
+    ctx.beginPath();
+    ctx.moveTo(src.x, src.y);
+    ctx.lineTo(tgt.x, tgt.y);
+    ctx.stroke();
+    ctx.restore();
+  });
+}
+
+// ── Featured path animation ────────────────────────────────────────────────
+function drawFeaturedPath(ts) {
+  const totalLen = featuredEdges.length;
+  const globalT  = (Math.sin(ts * 0.0012) + 1) / 2; // 0→1 cycle
+  const segT     = globalT * totalLen;
+
+  featuredEdges.forEach((fe, i) => {
+    const src = nodeById[fe.src], tgt = nodeById[fe.tgt];
+    if (!src || !tgt) return;
+
+    // Bright glowing edge
+    ctx.save();
+    ctx.shadowColor = '#ffe060';
+    ctx.shadowBlur  = 18;
+    ctx.strokeStyle = 'rgba(255,220,80,0.9)';
+    ctx.lineWidth   = 2.5 / transform.k;
+    ctx.beginPath();
+    ctx.moveTo(src.x, src.y);
+    ctx.lineTo(tgt.x, tgt.y);
+    ctx.stroke();
+    ctx.restore();
+
+    // Traveling pulse dot on this segment
+    if (segT >= i && segT < i + 1) {
+      const t  = segT - i;
+      const px = src.x + (tgt.x - src.x) * t;
+      const py = src.y + (tgt.y - src.y) * t;
+      ctx.save();
+      ctx.shadowColor = '#ffffa0';
+      ctx.shadowBlur  = 24;
+      ctx.fillStyle   = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(px, py, 5 / transform.k, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+  });
+}
+
+// ── Detection path animation ───────────────────────────────────────────────
+function drawDetectionPath() {
+  const totalLen = detectionEdges.length;
+  detectionAnimT = (detectionAnimT + 0.01) % 1;
+  const segT = detectionAnimT * totalLen;
+
+  detectionEdges.forEach((de, i) => {
+    const src = nodeById[de.src], tgt = nodeById[de.tgt];
+    if (!src || !tgt) return;
+
+    ctx.save();
+    ctx.shadowColor = '#ff3060'; ctx.shadowBlur = 20;
+    ctx.strokeStyle = 'rgba(255,60,90,0.9)';
+    ctx.lineWidth   = 2.5 / transform.k;
+    ctx.beginPath(); ctx.moveTo(src.x, src.y); ctx.lineTo(tgt.x, tgt.y);
+    ctx.stroke(); ctx.restore();
+
+    if (segT >= i && segT < i + 1) {
+      const t  = segT - i;
+      const px = src.x + (tgt.x - src.x) * t;
+      const py = src.y + (tgt.y - src.y) * t;
+      ctx.save();
+      ctx.shadowColor = '#ffffff'; ctx.shadowBlur = 24;
+      ctx.fillStyle   = '#ff9090';
+      ctx.beginPath(); ctx.arc(px, py, 5 / transform.k, 0, Math.PI * 2);
+      ctx.fill(); ctx.restore();
+    }
+  });
+}
+
+// ── Nodes ──────────────────────────────────────────────────────────────────
+function drawNodes(ts) {
+  const ms = ts;
+  const connectedIds = getConnectedIds(hoveredId || selectedId);
+  const hasSelection = hoveredId !== null || selectedId !== null;
+
+  nodes.forEach(n => {
+    const tc  = TYPE_COLOR[n.node_type];
+    const r   = tc.r;
+    const dim = tc.dim;
+    const glow= tc.glow;
+    const isConn   = connectedIds.has(n.id);
+    const isSel    = n.id === selectedId || n.id === hoveredId;
+    const isFeat   = pathActive && (n.id === FEATURED_PATTERN_ID ||
+      featuredEdges.some(fe => fe.src === n.id || fe.tgt === n.id));
+    const isDet    = n.id === detectedId;
+    const opacity  = hasSelection ? (isConn ? 1 : 0.2) : 1;
+
+    ctx.save();
+    ctx.globalAlpha = opacity;
+
+    // Detection aura — bright red pulsing rings when this node was detected
+    if (isDet) {
+      const dp = 0.5 + 0.5 * Math.sin(ms * 0.005);
+      [r * 4.5, r * 3.0, r * 1.9].forEach((ar, i) => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, ar, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255,0,40,${[0.05, 0.12, 0.22][i] * (0.7 + 0.3 * dp)})`;
+        ctx.fill();
+      });
+    }
+
+    // Pulse ring for patterns
+    if (n.node_type === 'pattern') {
+      const pulse = 0.5 + 0.5 * Math.sin(ms * 0.002 + n.index * 1.3);
+      const pr    = r + 6 + pulse * 5;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, pr, 0, Math.PI * 2);
+      ctx.fillStyle = `${dim}${0.06 + pulse * 0.05})`;
+      ctx.fill();
+    }
+
+    // Outer aura for strengths — cinematic core-sun layers
+    if (n.node_type === 'strength') {
+      const pulse  = 0.5 + 0.5 * Math.sin(ms * 0.0015 + (n.index || 0) * 0.9);
+      const layers = [
+        { r: r * 5.0, a: 0.02 + pulse * 0.02 },
+        { r: r * 3.5, a: 0.05 + pulse * 0.03 },
+        { r: r * 2.5, a: 0.10 + pulse * 0.04 },
+        { r: r * 1.8, a: 0.18 + pulse * 0.06 },
+        { r: r * 1.3, a: 0.30 }
+      ];
+      layers.forEach(l => {
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, l.r, 0, Math.PI * 2);
+        ctx.fillStyle = `${dim}${l.a})`;
+        ctx.fill();
+      });
+      // Extra corona ring
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r * 2.2, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(255,210,80,${0.12 + pulse * 0.10})`;
+      ctx.lineWidth = 1.5 / transform.k;
+      ctx.stroke();
+    }
+
+    // Featured node extra halo
+    if (isFeat) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r * 2.8, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,220,80,0.08)';
+      ctx.fill();
+    }
+
+    // Glow shadow
+    ctx.shadowColor = isDet ? '#ff0030' : (isSel ? '#ffffff' : glow);
+    ctx.shadowBlur  = isDet ? 55 : (isSel ? 32 : (n.node_type === 'strength' ? 40 : n.node_type === 'trait' ? 18 : 14));
+
+    // Core circle
+    const grd = ctx.createRadialGradient(n.x - r * 0.25, n.y - r * 0.25, 0, n.x, n.y, r);
+    if (n.node_type === 'pattern') {
+      if (isDet) {
+        grd.addColorStop(0,   '#ffffff');
+        grd.addColorStop(0.3, '#ff8090');
+        grd.addColorStop(1,   '#ff0030');
+      } else {
+        grd.addColorStop(0, '#ff9090');
+        grd.addColorStop(1, tc.core);
+      }
+    } else if (n.node_type === 'trait') {
+      grd.addColorStop(0, '#90b8ff');
+      grd.addColorStop(1, tc.core);
+    } else {
+      grd.addColorStop(0, '#fff4b0');
+      grd.addColorStop(0.5, '#ffcc40');
+      grd.addColorStop(1, tc.core);
+    }
+    const drawR = isDet ? r * 1.6 : r;
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, drawR, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    // Axis cluster tint ring
+    if (n.node_type === 'pattern' && AXIS_TINT[n.group]) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, r + 2.5, 0, Math.PI * 2);
+      ctx.strokeStyle = AXIS_TINT[n.group] + '55';
+      ctx.lineWidth = 1.5 / transform.k;
+      ctx.stroke();
+    }
+
+    ctx.shadowBlur = 0;
+
+    // Label
+    const lbl = (n.label_he || n.id).slice(0, 9);
+    ctx.font = `${n.node_type === 'strength' ? 11 : 9}px 'Segoe UI',Arial`;
+    ctx.fillStyle = isSel ? '#ffffff' : `rgba(200,215,255,${opacity * 0.85})`;
+    ctx.textAlign = 'center';
+    ctx.fillText(lbl, n.x, n.y + r + 11);
+
+    ctx.restore();
+  });
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function getConnectedIds(id) {
+  const set = new Set();
+  if (!id) return set;
+  set.add(id);
+  edges.forEach(e => {
+    const sid = typeof e.source === 'object' ? e.source.id : e.source;
+    const tid = typeof e.target === 'object' ? e.target.id : e.target;
+    if (sid === id) set.add(tid);
+    if (tid === id) set.add(sid);
+  });
+  return set;
+}
+
+function screenToSim(sx, sy) {
+  return [(sx - transform.x) / transform.k, (sy - transform.y) / transform.k];
+}
+
+function nodeAt(sx, sy) {
+  const [mx, my] = screenToSim(sx, sy);
+  let best = null, bestD = Infinity;
+  nodes.forEach(n => {
+    const d = Math.hypot(n.x - mx, n.y - my);
+    const hitR = TYPE_COLOR[n.node_type].r + 6;
+    if (d < hitR && d < bestD) { best = n; bestD = d; }
+  });
+  return best;
+}
+
+function resize() {
+  W = canvas.width  = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+
+function fitView() {
+  const xs = nodes.map(n => n.x).filter(Boolean);
+  const ys = nodes.map(n => n.y).filter(Boolean);
+  if (!xs.length) return;
+  const x0 = Math.min(...xs), x1 = Math.max(...xs);
+  const y0 = Math.min(...ys), y1 = Math.max(...ys);
+  const pad = 60;
+  const s = Math.min(0.88, Math.min((W - pad*2) / (x1-x0), (H - pad*2) / (y1-y0)));
+  const tx = (W - s*(x0+x1)) / 2, ty = (H - s*(y0+y1)) / 2;
+  d3.select(canvas)
+    .transition().duration(700)
+    .call(d3.zoom().transform, d3.zoomIdentity.translate(tx, ty).scale(s));
+}
+
+// ── Interactions ───────────────────────────────────────────────────────────
+function onMouseMove(evt) {
+  const n = nodeAt(evt.clientX, evt.clientY);
+  hoveredId = n ? n.id : null;
+  canvas.style.cursor = n ? 'pointer' : 'default';
+  if (n) showTooltip(evt.clientX, evt.clientY, n);
+  else   hideTooltip();
+}
+
+function onCanvasClick(evt) {
+  const n = nodeAt(evt.clientX, evt.clientY);
+  if (!n) { selectedId = null; closePanel(); return; }
+  selectedId = n.id;
+  openPanel(n);
+}
+
+// ── Tooltip ────────────────────────────────────────────────────────────────
+const tooltip = document.getElementById('tooltip');
+function showTooltip(x, y, n) {
+  tooltip.textContent = n.label_he || n.id;
+  tooltip.style.left  = (x + 14) + 'px';
+  tooltip.style.top   = (y - 12) + 'px';
+  tooltip.classList.add('show');
+}
+function hideTooltip() { tooltip.classList.remove('show'); }
+
+// ── Panel ──────────────────────────────────────────────────────────────────
+function openPanel(n) {
+  const panel   = document.getElementById('panel');
+  const content = document.getElementById('panel-content');
+  let html = '';
+
+  const typeLabel = n.node_type === 'pattern' ? 'תבנית' : n.node_type === 'trait' ? 'תכונה' : 'כוח';
+  html += `<div class="p-badge ${n.node_type}">${typeLabel}</div>`;
+  html += `<div class="p-title">${n.label_he || n.id}</div>`;
+  if (n.label_en) html += `<div class="p-title-en">${n.label_en}</div>`;
+
+  if (n.node_type === 'pattern') {
+    const p = patternMap[n.id] || {};
+    const traitNode    = nodeById[p.balanced_trait_id];
+    const strengthNode = nodeById[p.higher_strength_id];
+
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">תיאור</div>
+             <div class="p-text">${p.short_description || '—'}</div>`;
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">ציר כאב</div>
+             <span class="p-axis-badge">${p.pain_axis || n.group || '—'}</span>`;
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">משפט מסייע</div>
+             <div class="p-highlight">${p.helpful_sentence || '—'}</div>`;
+
+    if (p.bridge_sentences && p.bridge_sentences.length) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">משפטי גישור</div>`;
+      p.bridge_sentences.forEach(s => html += `<div class="p-bridge">${s}</div>`);
+    }
+
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">תכונה מאזנת</div>`;
+    if (traitNode)
+      html += `<span class="p-chip trait" data-id="${traitNode.id}">${traitNode.label_he}</span>`;
+    else html += `<div class="p-text">${p.balanced_trait_id || '—'}</div>`;
+
+    html += `<div style="height:8px"></div>`;
+    html += `<div class="p-label">כוח עליון</div>`;
+    if (strengthNode)
+      html += `<span class="p-chip strength" data-id="${strengthNode.id}">${strengthNode.label_he}</span>`;
+    else html += `<div class="p-text">${p.higher_strength_id || '—'}</div>`;
+
+    if (p.next_question) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">שאלה הבאה</div>
+               <div class="p-text" style="font-style:italic">${p.next_question}</div>`;
+    }
+
+  } else if (n.node_type === 'trait') {
+    const t = traitMap[n.id] || {};
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">הגדרה</div>
+             <div class="p-text">${t.definition || '—'}</div>`;
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">למה היא מאזנת</div>
+             <div class="p-text">${t.why_it_balances || '—'}</div>`;
+    if (t.bridge_sentences && t.bridge_sentences.length) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">משפטי גישור</div>`;
+      t.bridge_sentences.forEach(s => html += `<div class="p-bridge">${s}</div>`);
+    }
+    if (t.micro_actions && t.micro_actions.length) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">מיקרו פעולות</div>`;
+      t.micro_actions.forEach(a => html += `<div class="p-bridge">✦ ${a}</div>`);
+    }
+    if (t.core_message) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">מסר ליבה</div>
+               <div class="p-highlight">${t.core_message}</div>`;
+    }
+
+  } else { // strength
+    const s = strengthMap[n.id] || {};
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">הגדרה</div>
+             <div class="p-text">${s.definition || '—'}</div>`;
+    html += `<div class="p-divider"></div>`;
+    html += `<div class="p-label">ערך לאורך זמן</div>
+             <div class="p-text">${s.long_term_value || '—'}</div>`;
+    if (s.anchor_sentence) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">עוגן</div>
+               <div class="p-highlight">${s.anchor_sentence}</div>`;
+    }
+    if (s.growth_indicators && s.growth_indicators.length) {
+      html += `<div class="p-divider"></div>`;
+      html += `<div class="p-label">מחוונים לצמיחה</div>`;
+      s.growth_indicators.forEach(g => html += `<div class="p-bridge">↑ ${g}</div>`);
+    }
+  }
+
+  content.innerHTML = html;
+  panel.classList.add('open');
+
+  // Chip navigation
+  content.querySelectorAll('.p-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const targetNode = nodeById[chip.dataset.id];
+      if (targetNode) { selectedId = targetNode.id; openPanel(targetNode); panTo(targetNode); }
+    });
+  });
+}
+
+function closePanel() {
+  document.getElementById('panel').classList.remove('open');
+  selectedId = null;
+}
+
+function panTo(n) {
+  d3.select(canvas).transition().duration(500).call(
+    d3.zoom().transform,
+    d3.zoomIdentity.translate(W/2 - n.x * transform.k, H/2 - n.y * transform.k).scale(transform.k)
+  );
+}
+
+// Expose closePanel globally (used in onclick)
+window.closePanel = closePanel;
+
+console.log('BEZEN Brain Detection Active');
+</script>
+</body>
+</html>

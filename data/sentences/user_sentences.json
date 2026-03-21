@@ -1,0 +1,160 @@
+[
+  {
+   
+  "sentence_id": "comparison_001",
+  "text": "כולם מתקדמים בחיים ואני תקוע במקום",
+  "feature": "thought",
+  "related_pattern_family": "השוואה והתמקדות",
+
+  "emotion": "קנאה ותחושת פיגור",
+  "limiting_belief": "אם אני לא מתקדם כמו אחרים סימן שאני כישלון",
+  "helpful_sentence": "לכל אדם קצב התקדמות אחר וגם הדרך שלי מתפתחת"
+  },
+  {
+    "sentence_id": "comparison_002",
+    "text": "באינסטגרם כולם נראים כל כך מאושרים",
+    "feature": "emotion",
+    "related_pattern_family": "השוואה חברתית",
+    "emotion": "קנאה",
+    "limiting_belief": "החיים של אחרים טובים יותר",
+    "helpful_sentence": "כל אחד חווה את החיים שלו"
+  },
+  {
+    "sentence_id": "loneliness_001",
+    "text": "אני מרגיש כל כך בודד גם כשאני עם אנשים",
+    "feature": "emotion",
+    "related_pattern_family": "בדידות"
+  },
+  {
+    "sentence_id": "loneliness_002",
+    "text": "אף אחד לא מבין אותי באמת",
+    "feature": "belief",
+    "related_pattern_family": "בדידות"
+  },
+  {
+    "sentence_id": "rejection_001",
+    "text": "אני מפחד שידחו אותי אם אבקש עזרה",
+    "feature": "emotion",
+    "related_pattern_family": "רגישות לדחייה"
+  },
+  {
+    "sentence_id": "rejection_002",
+    "text": "כל פעם שאני מתקרב למישהו הוא מתרחק",
+    "feature": "behavior",
+    "related_pattern_family": "רגישות לדחייה"
+  },
+  {
+    "sentence_id": "self_doubt_001",
+    "text": "אני לא מספיק טוב בשביל זה",
+    "feature": "belief",
+    "related_pattern_family": "ספק עצמי"
+  },
+  {
+    "sentence_id": "self_doubt_002",
+    "text": "אני מפחד לקבל החלטות כי אני עלול לטעות",
+    "feature": "emotion",
+    "related_pattern_family": "ספק עצמי"
+  },
+  {
+    "sentence_id": "overwhelm_001",
+    "text": "יש לי כל כך הרבה דברים לעשות שאני לא יודע מאיפה להתחיל",
+    "feature": "thought",
+    "related_pattern_family": "עומס יתר"
+  },
+  {
+    "sentence_id": "overwhelm_002",
+    "text": "הראש שלי מלא במידע ואני לא מצליח לחשוב",
+    "feature": "sensation",
+    "related_pattern_family": "עומס יתר"
+  },
+  {
+    "sentence_id": "control_001",
+    "text": "אני מרגיש חסר אונים מול כל מה שקורה",
+    "feature": "emotion",
+    "related_pattern_family": "חוסר שליטה"
+  },
+  {
+    "sentence_id": "control_002",
+    "text": "העתיד מפחיד אותי כי אני לא יכול לשלוט בו",
+    "feature": "belief",
+    "related_pattern_family": "חוסר שליטה"
+  },
+  {
+    "sentence_id": "fear_failure_001",
+    "text": "אני מפחד לנסות כי אני עלול להיכשל",
+    "feature": "emotion",
+    "related_pattern_family": "פחד מכישלון"
+  },
+  {
+    "sentence_id": "fear_failure_002",
+    "text": "אני חייב להיות מושלם בכל דבר שאני עושה",
+    "feature": "belief",
+    "related_pattern_family": "שלמותנות"
+  },
+  {
+    "sentence_id": "worthlessness_001",
+    "text": "אני מרגיש שאני לא שווה כלום",
+    "feature": "emotion",
+    "related_pattern_family": "חוסר ערך"
+  },
+  {
+    "sentence_id": "worthlessness_002",
+    "text": "התרומה שלי לא חשובה לאף אחד",
+    "feature": "belief",
+    "related_pattern_family": "חוסר ערך"
+  },
+  {
+    "sentence_id": "social_anxiety_001",
+    "text": "כולם בוחנים אותי כשאני מדבר",
+    "feature": "thought",
+    "related_pattern_family": "חרדה חברתית"
+  },
+  {
+    "sentence_id": "social_anxiety_002",
+    "text": "הפנים שלי מאדימות כשאני עם אנשים",
+    "feature": "sensation",
+    "related_pattern_family": "חרדה חברתית"
+  },
+  {
+    "sentence_id": "hopelessness_001",
+    "text": "שום דבר לא ישתנה בחיים שלי",
+    "feature": "belief",
+    "related_pattern_family": "ייאוש"
+  },
+  {
+    "sentence_id": "hopelessness_002",
+    "text": "אני מרגיש כל כך עייף שאני לא רוצה לנסות יותר",
+    "feature": "emotion",
+    "related_pattern_family": "ייאוש"
+  },
+  {
+    "sentence_id": "imposter_001",
+    "text": "אני מרגיש שאני מתחזה והצלחה שלי היא מקרית",
+    "feature": "emotion",
+    "related_pattern_family": "תסמונת המתחזה"
+  },
+  {
+    "sentence_id": "procrastination_001",
+    "text": "אני תמיד דוחה דברים לח завтра",
+    "feature": "behavior",
+    "related_pattern_family": "דחיינות"
+  },
+  {
+    "sentence_id": "negative_talk_001",
+    "text": "אני תמיד מתבקר ומדבר אל עצמי בצורה קשה",
+    "feature": "behavior",
+    "related_pattern_family": "שיח עצמי שלילי"
+  },
+  {
+    "sentence_id": "overthinking_001",
+    "text": "אני חושב על אותו דבר שוב ושוב בלי הפסקה",
+    "feature": "behavior",
+    "related_pattern_family": "הגזמה בחשיבה"
+  },
+  {
+    "sentence_id": "barrier_001",
+    "text": "אני מרגיש חסום ולא מצליח להתקדם",
+    "feature": "barrier",
+    "related_pattern_family": "השוואה והתקדמות"
+  }
+]

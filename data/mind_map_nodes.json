@@ -1,0 +1,1368 @@
+{
+  "version": "v2.0.0",
+  "language": "he",
+  "generated_at": "2026-03-16T10:24:13Z",
+  "total_count": 170,
+  "nodes": [
+    {
+      "id": "comparison_01",
+      "node_type": "pattern",
+      "label_he": "השוואה מכאיבה לאחרים",
+      "label_en": "Painful Social Comparison",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "self_doubt_01",
+      "node_type": "pattern",
+      "label_he": "ספק עצמי משתק",
+      "label_en": "Paralyzing Self-Doubt",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "rejection_01",
+      "node_type": "pattern",
+      "label_he": "תחושת דחייה אישית",
+      "label_en": "Personal Rejection Feeling",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "overwhelm_01",
+      "node_type": "pattern",
+      "label_he": "הצפה מוחלטת",
+      "label_en": "Total Overwhelm",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "fear_01",
+      "node_type": "pattern",
+      "label_he": "פחד מהעתיד",
+      "label_en": "Fear of the Future",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "shame_01",
+      "node_type": "pattern",
+      "label_he": "בושה מכווצת",
+      "label_en": "Shrinking Shame",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "worthlessness_01",
+      "node_type": "pattern",
+      "label_he": "תחושת חוסר ערך פנימי",
+      "label_en": "Inner Worthlessness",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_01",
+      "node_type": "pattern",
+      "label_he": "חוסר אונים נרכש",
+      "label_en": "Learned Helplessness",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "alienation_01",
+      "node_type": "pattern",
+      "label_he": "ניכור ובדידות פנימית",
+      "label_en": "Alienation and Inner Loneliness",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "belonging_01",
+      "node_type": "pattern",
+      "label_he": "שייכות מערערת",
+      "label_en": "Undermined Sense of Belonging",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "anger_01",
+      "node_type": "pattern",
+      "label_he": "כעס כבוש",
+      "label_en": "Suppressed Anger",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_02",
+      "node_type": "pattern",
+      "label_he": "כעס מופנה פנימה",
+      "label_en": "Inward-Directed Anger",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "loneliness_01",
+      "node_type": "pattern",
+      "label_he": "בדידות כרונית",
+      "label_en": "Chronic Loneliness",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_02",
+      "node_type": "pattern",
+      "label_he": "בדידות בתוך קשר",
+      "label_en": "Loneliness Within a Relationship",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "uncertainty_01",
+      "node_type": "pattern",
+      "label_he": "אי סבילות לאי ודאות",
+      "label_en": "Intolerance of Uncertainty",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_02",
+      "node_type": "pattern",
+      "label_he": "צורך לדעת הכל מראש",
+      "label_en": "Need to Know Everything First",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "control_01",
+      "node_type": "pattern",
+      "label_he": "צורך בשליטה מוחלטת",
+      "label_en": "Need for Total Control",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_02",
+      "node_type": "pattern",
+      "label_he": "פחד מאובדן אחיזה",
+      "label_en": "Fear of Losing Grip",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "failure_01",
+      "node_type": "pattern",
+      "label_he": "פחד מכישלון",
+      "label_en": "Fear of Failure",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_02",
+      "node_type": "pattern",
+      "label_he": "זהות של כישלון",
+      "label_en": "Failure Identity",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "comparison_02",
+      "node_type": "pattern",
+      "label_he": "השוואה גופנית",
+      "label_en": "Physical Appearance Comparison",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "self_doubt_02",
+      "node_type": "pattern",
+      "label_he": "תסמונת המתחזה",
+      "label_en": "Impostor Syndrome",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "rejection_02",
+      "node_type": "pattern",
+      "label_he": "דחייה רומנטית",
+      "label_en": "Romantic Rejection",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "overwhelm_02",
+      "node_type": "pattern",
+      "label_he": "עומס מנטלי בלתי נסבל",
+      "label_en": "Unbearable Mental Load",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "fear_02",
+      "node_type": "pattern",
+      "label_he": "ציפייה לאסון",
+      "label_en": "Anticipating Disaster",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "shame_02",
+      "node_type": "pattern",
+      "label_he": "תחושת פגם פנימי",
+      "label_en": "Internal Defect Feeling",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "worthlessness_02",
+      "node_type": "pattern",
+      "label_he": "תחושת מיותר",
+      "label_en": "Sense of Redundancy",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_02",
+      "node_type": "pattern",
+      "label_he": "אמונה שכלום לא ישתנה",
+      "label_en": "Belief Nothing Will Change",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "alienation_02",
+      "node_type": "pattern",
+      "label_he": "תחושת זרות בתוך קבוצה",
+      "label_en": "Foreignness Within a Group",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "belonging_02",
+      "node_type": "pattern",
+      "label_he": "אין לי מקום",
+      "label_en": "No Place for Me",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "comparison_03",
+      "node_type": "pattern",
+      "label_he": "תחושת פיגור מתמדת",
+      "label_en": "Constant Sense of Falling Behind",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_04",
+      "node_type": "pattern",
+      "label_he": "מדידת ערך לפי הישגים",
+      "label_en": "Worth Measured by Achievements",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_05",
+      "node_type": "pattern",
+      "label_he": "מחיקה עצמית מול הצלחת אחרים",
+      "label_en": "Self-Erasure Before Others Success",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_06",
+      "node_type": "pattern",
+      "label_he": "רדיפה אחר סטנדרטים לא אנושיים",
+      "label_en": "Chasing Inhuman Standards",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_07",
+      "node_type": "pattern",
+      "label_he": "פרשנות עצמית כנחות",
+      "label_en": "Self-Interpretation as Inferior",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_08",
+      "node_type": "pattern",
+      "label_he": "תלות באישור חיצוני",
+      "label_en": "Dependence on External Validation",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_09",
+      "node_type": "pattern",
+      "label_he": "בושה על הקצב האישי",
+      "label_en": "Shame About Personal Pace",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "comparison_10",
+      "node_type": "pattern",
+      "label_he": "חוסר יכולת ליהנות ממה שיש",
+      "label_en": "Inability to Enjoy What I Have",
+      "group": "comparison",
+      "active": true
+    },
+    {
+      "id": "self_doubt_03",
+      "node_type": "pattern",
+      "label_he": "ספק לגבי הצלחות עבר",
+      "label_en": "Doubting Past Successes",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_04",
+      "node_type": "pattern",
+      "label_he": "תחושה שאין בי את זה",
+      "label_en": "Feeling of Not Having What It Takes",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_05",
+      "node_type": "pattern",
+      "label_he": "צורך להיות מוכן לגמרי",
+      "label_en": "Need to Be Fully Ready",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_06",
+      "node_type": "pattern",
+      "label_he": "פחד מחשיפה",
+      "label_en": "Fear of Exposure",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_07",
+      "node_type": "pattern",
+      "label_he": "דחיית החלטות",
+      "label_en": "Postponing Decisions",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_08",
+      "node_type": "pattern",
+      "label_he": "חוסר אמון בשיקול הדעת העצמי",
+      "label_en": "Distrusting Own Judgment",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_09",
+      "node_type": "pattern",
+      "label_he": "דחיית הצלחות כמזל",
+      "label_en": "Dismissing Achievements as Luck",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "self_doubt_10",
+      "node_type": "pattern",
+      "label_he": "שיתוק מול בחירות",
+      "label_en": "Paralysis Before Choices",
+      "group": "self_doubt",
+      "active": true
+    },
+    {
+      "id": "rejection_03",
+      "node_type": "pattern",
+      "label_he": "חרדת נטישה נסתרת",
+      "label_en": "Hidden Abandonment Anxiety",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_04",
+      "node_type": "pattern",
+      "label_he": "רגישות יתר לאי הסכמה",
+      "label_en": "Over-Sensitivity to Disagreement",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_05",
+      "node_type": "pattern",
+      "label_he": "ציפייה לדחייה מראש",
+      "label_en": "Anticipating Rejection",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_06",
+      "node_type": "pattern",
+      "label_he": "כיווץ אחרי מסר קריר",
+      "label_en": "Shrinking After Cold Message",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_07",
+      "node_type": "pattern",
+      "label_he": "נסיגה לפני שנדחים",
+      "label_en": "Withdrawing Before Being Rejected",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_08",
+      "node_type": "pattern",
+      "label_he": "פרשנות של ביקורת כדחייה",
+      "label_en": "Interpreting Criticism as Rejection",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_09",
+      "node_type": "pattern",
+      "label_he": "חיפוש אישור כדי להימנע מדחייה",
+      "label_en": "Seeking Approval to Avoid Rejection",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "rejection_10",
+      "node_type": "pattern",
+      "label_he": "תחושת לא-רצוי",
+      "label_en": "Feeling Unwanted",
+      "group": "rejection",
+      "active": true
+    },
+    {
+      "id": "overwhelm_03",
+      "node_type": "pattern",
+      "label_he": "חוסר יכולת לתעדף",
+      "label_en": "Inability to Prioritize",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_04",
+      "node_type": "pattern",
+      "label_he": "תחושת קריסה ממשמשת",
+      "label_en": "Sense of Impending Collapse",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_05",
+      "node_type": "pattern",
+      "label_he": "הימנעות מהתמודדות בגלל עומס",
+      "label_en": "Avoiding Tasks Due to Overload",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_06",
+      "node_type": "pattern",
+      "label_he": "חנק מהתחייבויות",
+      "label_en": "Suffocating from Obligations",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_07",
+      "node_type": "pattern",
+      "label_he": "בלבול בין דחוף לחשוב",
+      "label_en": "Confusing Urgent with Important",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_08",
+      "node_type": "pattern",
+      "label_he": "קיפאון מול רשימות ארוכות",
+      "label_en": "Freezing Before Long Lists",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_09",
+      "node_type": "pattern",
+      "label_he": "כעס על עצמי שלא מספיק",
+      "label_en": "Anger at Self for Not Being Enough",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "overwhelm_10",
+      "node_type": "pattern",
+      "label_he": "איבוד כיוון בתוך העומס",
+      "label_en": "Losing Direction in Load",
+      "group": "overwhelm",
+      "active": true
+    },
+    {
+      "id": "fear_03",
+      "node_type": "pattern",
+      "label_he": "פחד שטעות תהרוס הכול",
+      "label_en": "Fear Mistake Will Ruin Everything",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_04",
+      "node_type": "pattern",
+      "label_he": "הימנעות מסיכון רגשי",
+      "label_en": "Avoiding Emotional Risk",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_05",
+      "node_type": "pattern",
+      "label_he": "חרדה מהלא נודע",
+      "label_en": "Anxiety of the Unknown",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_06",
+      "node_type": "pattern",
+      "label_he": "דריכות יתר לפני צעד חדש",
+      "label_en": "Hyper-Alertness Before New Step",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_07",
+      "node_type": "pattern",
+      "label_he": "הצפה בתרחישים שליליים",
+      "label_en": "Flooding with Negative Scenarios",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_08",
+      "node_type": "pattern",
+      "label_he": "צורך להבטיח שליטה מלאה",
+      "label_en": "Need to Guarantee Full Control",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_09",
+      "node_type": "pattern",
+      "label_he": "פחד מתקיעות נצחית",
+      "label_en": "Fear of Eternal Stagnation",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "fear_10",
+      "node_type": "pattern",
+      "label_he": "קיפאון מול סיכון קטן",
+      "label_en": "Freezing Before Small Risk",
+      "group": "fear",
+      "active": true
+    },
+    {
+      "id": "shame_03",
+      "node_type": "pattern",
+      "label_he": "הסתרה עצמית מפני מבוכה",
+      "label_en": "Self-Concealment from Embarrassment",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_04",
+      "node_type": "pattern",
+      "label_he": "הלקאה עצמית לאחר טעות",
+      "label_en": "Self-Flagellation After Mistake",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_05",
+      "node_type": "pattern",
+      "label_he": "קושי להרים עיניים",
+      "label_en": "Difficulty Looking People in Eyes",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_06",
+      "node_type": "pattern",
+      "label_he": "הזדהות מלאה עם כישלון",
+      "label_en": "Full Identification with Failure",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_07",
+      "node_type": "pattern",
+      "label_he": "פחד מחשיפת חולשה",
+      "label_en": "Fear of Exposing Weakness",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_08",
+      "node_type": "pattern",
+      "label_he": "דחף להיעלם לאחר מבוכה",
+      "label_en": "Urge to Disappear After Embarrassment",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_09",
+      "node_type": "pattern",
+      "label_he": "תיוג עצמי כפגום",
+      "label_en": "Labeling Self as Flawed",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "shame_10",
+      "node_type": "pattern",
+      "label_he": "קיפאון חברתי מבושה",
+      "label_en": "Social Freeze from Shame",
+      "group": "shame",
+      "active": true
+    },
+    {
+      "id": "worthlessness_03",
+      "node_type": "pattern",
+      "label_he": "מחיקת נוכחות עצמית",
+      "label_en": "Erasing Own Presence",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_04",
+      "node_type": "pattern",
+      "label_he": "אמונה שאין לי מה לתת",
+      "label_en": "Belief of Nothing to Offer",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_05",
+      "node_type": "pattern",
+      "label_he": "ערך המבוסס על הישגים",
+      "label_en": "Worth Based on Achievement",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_06",
+      "node_type": "pattern",
+      "label_he": "תחושת ריקנות זהותית",
+      "label_en": "Sense of Identity Emptiness",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_07",
+      "node_type": "pattern",
+      "label_he": "אמונה שאני נטל",
+      "label_en": "Believing I Am a Burden",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_08",
+      "node_type": "pattern",
+      "label_he": "זלזול בצרכים עצמיים",
+      "label_en": "Dismissing Own Needs",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_09",
+      "node_type": "pattern",
+      "label_he": "קושי בקבלת טוב מאחרים",
+      "label_en": "Difficulty Receiving Goodness",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "worthlessness_10",
+      "node_type": "pattern",
+      "label_he": "ביטול כל תרומה עצמית",
+      "label_en": "Canceling Every Contribution",
+      "group": "worthlessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_03",
+      "node_type": "pattern",
+      "label_he": "ויתור מוקדם",
+      "label_en": "Giving Up Early",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_04",
+      "node_type": "pattern",
+      "label_he": "תלות בהצלה חיצונית",
+      "label_en": "Depending on Others to Rescue",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_05",
+      "node_type": "pattern",
+      "label_he": "תחושת נעילה מוחלטת",
+      "label_en": "Total Lock-Up Feeling",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_06",
+      "node_type": "pattern",
+      "label_he": "אמונה שאין לי השפעה",
+      "label_en": "Believing I Have No Influence",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_07",
+      "node_type": "pattern",
+      "label_he": "קיפאון מול בעיה חוזרת",
+      "label_en": "Freezing Before Recurring Problem",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_08",
+      "node_type": "pattern",
+      "label_he": "תשישות המתחפשת לייאוש",
+      "label_en": "Exhaustion Disguised as Despair",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_09",
+      "node_type": "pattern",
+      "label_he": "ויתור לפני הניסיון",
+      "label_en": "Giving Up Before Trying",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "helplessness_10",
+      "node_type": "pattern",
+      "label_he": "פרשנות של קושי כסוף",
+      "label_en": "Interpreting Difficulty as the End",
+      "group": "helplessness",
+      "active": true
+    },
+    {
+      "id": "alienation_03",
+      "node_type": "pattern",
+      "label_he": "אף אחד לא מבין אותי",
+      "label_en": "Nobody Understands Me",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_04",
+      "node_type": "pattern",
+      "label_he": "הסתגרות כהגנה",
+      "label_en": "Withdrawal as Protection",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_05",
+      "node_type": "pattern",
+      "label_he": "קושי לשתף כאב",
+      "label_en": "Difficulty Sharing Pain",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_06",
+      "node_type": "pattern",
+      "label_he": "התרחקות גם מהטובים",
+      "label_en": "Distancing from Good People",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_07",
+      "node_type": "pattern",
+      "label_he": "בדידות גם בנוכחות אחרים",
+      "label_en": "Lonely Even with Others Present",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_08",
+      "node_type": "pattern",
+      "label_he": "חשד בסיסי כלפי קשר",
+      "label_en": "Basic Suspicion Toward Connection",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_09",
+      "node_type": "pattern",
+      "label_he": "תחושת אי נראות",
+      "label_en": "Feeling Invisible",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "alienation_10",
+      "node_type": "pattern",
+      "label_he": "ויתור על שייכות",
+      "label_en": "Giving Up on Belonging",
+      "group": "alienation",
+      "active": true
+    },
+    {
+      "id": "belonging_03",
+      "node_type": "pattern",
+      "label_he": "חיפוש זהות דרך קבוצה",
+      "label_en": "Seeking Identity Through Group",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_04",
+      "node_type": "pattern",
+      "label_he": "פחד להיות מחוץ",
+      "label_en": "Fear of Being Outside",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_05",
+      "node_type": "pattern",
+      "label_he": "הסתגלות עצמית קיצונית",
+      "label_en": "Extreme Self-Adaptation",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_06",
+      "node_type": "pattern",
+      "label_he": "אובדן קול אישי",
+      "label_en": "Losing Personal Voice",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_07",
+      "node_type": "pattern",
+      "label_he": "זיוף חברתי",
+      "label_en": "Social Fakery",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_08",
+      "node_type": "pattern",
+      "label_he": "קנאה בשייכות של אחרים",
+      "label_en": "Envy of Others Belonging",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_09",
+      "node_type": "pattern",
+      "label_he": "רגישות לפערי מעמד",
+      "label_en": "Sensitivity to Status Gaps",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "belonging_10",
+      "node_type": "pattern",
+      "label_he": "תלות בזהות חברתית חיצונית",
+      "label_en": "Depending on External Social Identity",
+      "group": "belonging",
+      "active": true
+    },
+    {
+      "id": "uncertainty_03",
+      "node_type": "pattern",
+      "label_he": "חרדה ללא תשובה מיידית",
+      "label_en": "Anxiety Without Immediate Answer",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_04",
+      "node_type": "pattern",
+      "label_he": "קושי לבחור ללא ערובה",
+      "label_en": "Difficulty Choosing Without Guarantee",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_05",
+      "node_type": "pattern",
+      "label_he": "שיתוק מול עמימות",
+      "label_en": "Paralysis Facing Ambiguity",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_06",
+      "node_type": "pattern",
+      "label_he": "חיפוש ודאות דרך שליטה",
+      "label_en": "Seeking Certainty via Excessive Control",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_07",
+      "node_type": "pattern",
+      "label_he": "פרשנות של עמימות כאיום",
+      "label_en": "Interpreting Ambiguity as Threat",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_08",
+      "node_type": "pattern",
+      "label_he": "עומס מחשבתי מהתלבטות",
+      "label_en": "Mental Overload from Deliberation",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_09",
+      "node_type": "pattern",
+      "label_he": "עיכוב עד למידע מושלם",
+      "label_en": "Delaying Until Perfect Information",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "uncertainty_10",
+      "node_type": "pattern",
+      "label_he": "הימנעות מפתיחות מחוסר בהירות",
+      "label_en": "Avoiding Openness from Lack of Clarity",
+      "group": "uncertainty",
+      "active": true
+    },
+    {
+      "id": "control_03",
+      "node_type": "pattern",
+      "label_he": "קושי לסמוך על התהליך",
+      "label_en": "Difficulty Trusting the Process",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_04",
+      "node_type": "pattern",
+      "label_he": "מיקרו-ניהול עצמי ואחרים",
+      "label_en": "Micro-managing Self and Others",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_05",
+      "node_type": "pattern",
+      "label_he": "מתח פנימי כשדברים משתנים",
+      "label_en": "Internal Tension When Things Change",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_06",
+      "node_type": "pattern",
+      "label_he": "חוסר גמישות קוגניטיבית",
+      "label_en": "Lack of Cognitive Flexibility",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_07",
+      "node_type": "pattern",
+      "label_he": "התפרקות מול שיבוש קטן",
+      "label_en": "Falling Apart over Small Disruption",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_08",
+      "node_type": "pattern",
+      "label_he": "קושי להרפות כשעייף",
+      "label_en": "Difficulty Letting Go When Tired",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_09",
+      "node_type": "pattern",
+      "label_he": "שליטה ברגש במקום לפגוש אותו",
+      "label_en": "Controlling Emotion Instead of Meeting It",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "control_10",
+      "node_type": "pattern",
+      "label_he": "זהות הנשענת על שליטה",
+      "label_en": "Identity Resting on Control",
+      "group": "control",
+      "active": true
+    },
+    {
+      "id": "failure_03",
+      "node_type": "pattern",
+      "label_he": "תיוג עצמי ככישלון",
+      "label_en": "Labeling Self as Failure",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_04",
+      "node_type": "pattern",
+      "label_he": "ראיית טעות כהתרסקות",
+      "label_en": "Seeing Mistake as Crash",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_05",
+      "node_type": "pattern",
+      "label_he": "חוסר יכולת להתאושש לאחר כישלון",
+      "label_en": "Inability to Recover After Failure",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_06",
+      "node_type": "pattern",
+      "label_he": "פרפקציוניזם משתק",
+      "label_en": "Paralyzing Perfectionism",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_07",
+      "node_type": "pattern",
+      "label_he": "בושה לאחר ביצוע חלש",
+      "label_en": "Shame After Weak Performance",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_08",
+      "node_type": "pattern",
+      "label_he": "ויתור על מטרות גדולות",
+      "label_en": "Giving Up on Big Goals",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_09",
+      "node_type": "pattern",
+      "label_he": "כיווץ חלומות כדי להימנע מאכזבה",
+      "label_en": "Shrinking Dreams to Avoid Disappointment",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "failure_10",
+      "node_type": "pattern",
+      "label_he": "הזדהות עם כישלונות עבר",
+      "label_en": "Identifying with Past Failures",
+      "group": "failure",
+      "active": true
+    },
+    {
+      "id": "anger_03",
+      "node_type": "pattern",
+      "label_he": "פרשנות מהירה לפגיעה",
+      "label_en": "Quick Interpretation as Offense",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_04",
+      "node_type": "pattern",
+      "label_he": "קושי לעצור לפני תגובה",
+      "label_en": "Difficulty Stopping Before Reacting",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_05",
+      "node_type": "pattern",
+      "label_he": "כעס על עצמי במקום כאב",
+      "label_en": "Anger at Self Instead of Pain",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_06",
+      "node_type": "pattern",
+      "label_he": "צורך לנצח בעימות",
+      "label_en": "Need to Win Conflict",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_07",
+      "node_type": "pattern",
+      "label_he": "נוקשות תחת איום",
+      "label_en": "Rigidity Under Threat",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_08",
+      "node_type": "pattern",
+      "label_he": "תחושת עוול בוערת",
+      "label_en": "Burning Sense of Injustice",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_09",
+      "node_type": "pattern",
+      "label_he": "הטחת אשמה במקום בקשה",
+      "label_en": "Blaming Instead of Requesting",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "anger_10",
+      "node_type": "pattern",
+      "label_he": "פיצוץ לאחר הצטברות",
+      "label_en": "Explosion After Accumulation",
+      "group": "anger",
+      "active": true
+    },
+    {
+      "id": "loneliness_03",
+      "node_type": "pattern",
+      "label_he": "ניתוק ממעגלים חברתיים",
+      "label_en": "Disconnection from Social Circles",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_04",
+      "node_type": "pattern",
+      "label_he": "התרגלות לבדידות כהגנה",
+      "label_en": "Habituation to Loneliness as Protection",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_05",
+      "node_type": "pattern",
+      "label_he": "אמונה שאף אחד לא יבין",
+      "label_en": "Belief No One Will Understand",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_06",
+      "node_type": "pattern",
+      "label_he": "געגוע לקשר שלא מתממש",
+      "label_en": "Longing for Connection That Doesnt Materialize",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_07",
+      "node_type": "pattern",
+      "label_he": "הימנעות מיוזמה לקשר",
+      "label_en": "Avoiding Initiative for Connection",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_08",
+      "node_type": "pattern",
+      "label_he": "חוויה של ריק חברתי",
+      "label_en": "Experience of Social Void",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_09",
+      "node_type": "pattern",
+      "label_he": "קנאה בחיבור של אחרים",
+      "label_en": "Envy of Others Connection",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "loneliness_10",
+      "node_type": "pattern",
+      "label_he": "פרשנות של בדידות כחוסר ערך",
+      "label_en": "Interpreting Loneliness as Worthlessness",
+      "group": "loneliness",
+      "active": true
+    },
+    {
+      "id": "self_acceptance",
+      "node_type": "trait",
+      "label_he": "קבלה עצמית",
+      "label_en": "Self Acceptance",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "inner_confidence",
+      "node_type": "trait",
+      "label_he": "ביטחון פנימי מדורג",
+      "label_en": "Gradual Inner Confidence",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "emotional_resilience",
+      "node_type": "trait",
+      "label_he": "חוסן רגשי",
+      "label_en": "Emotional Resilience",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "stepwise_focus",
+      "node_type": "trait",
+      "label_he": "מיקוד בצעד אחד",
+      "label_en": "Stepwise Focus",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "grounded_hope",
+      "node_type": "trait",
+      "label_he": "תקווה מעוגנת",
+      "label_en": "Grounded Hope",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "self_compassion",
+      "node_type": "trait",
+      "label_he": "חמלה עצמית",
+      "label_en": "Self Compassion",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "self_value_recognition",
+      "node_type": "trait",
+      "label_he": "הכרה בערך עצמי",
+      "label_en": "Recognition of Self Value",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "active_agency",
+      "node_type": "trait",
+      "label_he": "מסוגלות פעילה",
+      "label_en": "Active Agency",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "relational_openness",
+      "node_type": "trait",
+      "label_he": "פתיחות לקשר",
+      "label_en": "Relational Openness",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "secure_belonging",
+      "node_type": "trait",
+      "label_he": "שייכות בטוחה",
+      "label_en": "Secure Belonging",
+      "group": "traits",
+      "active": true
+    },
+    {
+      "id": "self_worth",
+      "node_type": "strength",
+      "label_he": "ערך עצמי",
+      "label_en": "Self Worth",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "courage",
+      "node_type": "strength",
+      "label_he": "אומץ",
+      "label_en": "Courage",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "relational_security",
+      "node_type": "strength",
+      "label_he": "ביטחון בקשר",
+      "label_en": "Relational Security",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "self_regulation",
+      "node_type": "strength",
+      "label_he": "ויסות עצמי",
+      "label_en": "Self Regulation",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "hope",
+      "node_type": "strength",
+      "label_he": "תקווה",
+      "label_en": "Hope",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "dignity",
+      "node_type": "strength",
+      "label_he": "כבוד אנושי",
+      "label_en": "Dignity",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "human_value",
+      "node_type": "strength",
+      "label_he": "ערך אנושי בסיסי",
+      "label_en": "Basic Human Value",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "empowerment",
+      "node_type": "strength",
+      "label_he": "העצמה",
+      "label_en": "Empowerment",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "connection",
+      "node_type": "strength",
+      "label_he": "חיבור אנושי",
+      "label_en": "Connection",
+      "group": "strengths",
+      "active": true
+    },
+    {
+      "id": "relational_identity",
+      "node_type": "strength",
+      "label_he": "זהות שייכת",
+      "label_en": "Relational Identity",
+      "group": "strengths",
+      "active": true
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEZEN Mind Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #0f1117;
+      color: #e8eaf0;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      direction: rtl;
+    }
+
+    #graph-container {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      cursor: grab;
+    }
+    svg:active { cursor: grabbing; }
+
+    /* Nodes */
+    .node circle {
+      stroke-width: 2;
+      transition: r 0.15s, filter 0.15s;
+      cursor: pointer;
+    }
+    .node circle:hover { filter: brightness(1.4); }
+    .node.selected circle { stroke: #fff; stroke-width: 3; filter: brightness(1.5); }
+
+    .node.pattern circle  { fill: #e05060; stroke: #ff8090; }
+    .node.trait    circle { fill: #4a7fd4; stroke: #80aaff; }
+    .node.strength circle { fill: #d4a93a; stroke: #ffd060; }
+
+    .node text {
+      font-size: 10px;
+      fill: #ccc;
+      pointer-events: none;
+      text-anchor: middle;
+      dominant-baseline: central;
+      direction: rtl;
+    }
+
+    /* Edges */
+    .link { stroke-opacity: 0.35; }
+    .link.related_pattern    { stroke: #888; stroke-width: 1; }
+    .link.balanced_by_trait  { stroke: #4a7fd4; stroke-width: 1.5; stroke-dasharray: 4 2; }
+    .link.elevated_to_strength { stroke: #d4a93a; stroke-width: 1.5; stroke-dasharray: 4 2; }
+    .link.supported_by_trait { stroke: #7fbbaa; stroke-width: 2; }
+    .link.connected_to_axis  { stroke: #e05060; stroke-width: 1; stroke-dasharray: 2 3; }
+
+    /* Highlight connected edges */
+    .link.highlight { stroke-opacity: 0.85; stroke-width: 2.5; }
+
+    /* Side Panel */
+    #panel {
+      width: 320px;
+      min-width: 300px;
+      background: #181c28;
+      border-right: 1px solid #2a2f42;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #panel-header {
+      padding: 18px 16px 12px;
+      border-bottom: 1px solid #2a2f42;
+      background: #1e2334;
+    }
+
+    #panel-type-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .badge-pattern  { background: #5a1520; color: #ff8090; }
+    .badge-trait    { background: #1a2a5a; color: #80aaff; }
+    .badge-strength { background: #4a3800; color: #ffd060; }
+
+    #panel-title {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #fff;
+    }
+
+    #panel-title-en {
+      font-size: 12px;
+      color: #7a8099;
+      margin-top: 3px;
+      direction: ltr;
+      text-align: right;
+    }
+
+    #panel-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    #panel-body::-webkit-scrollbar { width: 6px; }
+    #panel-body::-webkit-scrollbar-thumb { background: #2a2f42; border-radius: 3px; }
+
+    .panel-empty {
+      color: #4a5070;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 60px;
+      line-height: 1.7;
+    }
+
+    .field-group {
+      margin-bottom: 16px;
+    }
+
+    .field-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5a6080;
+      margin-bottom: 5px;
+    }
+
+    .field-value {
+      font-size: 13px;
+      color: #c8ccd8;
+      line-height: 1.6;
+    }
+
+    .field-value.highlight-text {
+      color: #e8eaf0;
+      font-size: 14px;
+      border-right: 3px solid #4a7fd4;
+      padding-right: 10px;
+    }
+
+    .badge-axis {
+      display: inline-block;
+      background: #2a1a20;
+      color: #e05060;
+      border: 1px solid #5a2030;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      direction: ltr;
+    }
+
+    .bridge-item {
+      background: #1e2334;
+      border-radius: 6px;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: #b0b8d0;
+      line-height: 1.5;
+      border-right: 2px solid #2a3050;
+    }
+
+    .linked-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-left: 6px;
+      margin-bottom: 4px;
+      transition: filter 0.15s;
+    }
+    .linked-chip:hover { filter: brightness(1.3); }
+    .chip-trait    { background: #1a2a5a; color: #80aaff; border: 1px solid #2a3a7a; }
+    .chip-strength { background: #4a3800; color: #ffd060; border: 1px solid #6a5000; }
+
+    .divider {
+      height: 1px;
+      background: #2a2f42;
+      margin: 14px 0;
+    }
+
+    /* Legend */
+    #legend {
+      padding: 12px 16px;
+      border-top: 1px solid #2a2f42;
+      font-size: 11px;
+    }
+    .legend-title { color: #5a6080; margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+    .legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; color: #8890a8; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .legend-line { width: 24px; height: 2px; flex-shrink: 0; }
+    .legend-dot.pattern  { background: #e05060; }
+    .legend-dot.trait    { background: #4a7fd4; }
+    .legend-dot.strength { background: #d4a93a; }
+    .line-related   { background: #888; }
+    .line-balanced  { background: #4a7fd4; }
+    .line-elevated  { background: #d4a93a; }
+    .line-supported { background: #7fbbaa; }
+    .line-axis      { background: #e05060; }
+
+    /* Controls */
+    #controls {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 10;
+    }
+    .ctrl-btn {
+      background: #1e2334;
+      border: 1px solid #2a2f42;
+      color: #c8ccd8;
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+    }
+    .ctrl-btn:hover { background: #2a3050; }
+
+    /* Filter bar */
+    #filter-bar {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    .filter-btn {
+      background: #1e2334;
+      border: 1px solid #2a2f42;
+      color: #c8ccd8;
+      padding: 5px 12px;
+      border-radius: 14px;
+      font-size: 11px;
+      cursor: pointer;
+      transition: background 0.15s;
+      font-family: inherit;
+    }
+    .filter-btn.active { background: #2a3a6a; border-color: #4a7fd4; color: #80aaff; }
+    .filter-btn.active.pattern  { background: #3a1520; border-color: #e05060; color: #ff8090; }
+    .filter-btn.active.strength { background: #3a2800; border-color: #d4a93a; color: #ffd060; }
+
+    #loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f1117;
+      z-index: 100;
+      font-size: 14px;
+      color: #5a6080;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Side Panel -->
+<div id="panel">
+  <div id="panel-header">
+    <div id="panel-type-badge" class="badge-pattern" style="display:none"></div>
+    <div id="panel-title" style="color:#4a5070;font-size:14px">לחץ על צומת לפרטים</div>
+    <div id="panel-title-en"></div>
+  </div>
+  <div id="panel-body">
+    <div class="panel-empty">
+      בחר תבנית, תכונה או כוח<br>כדי לראות את הפרטים שלו
+    </div>
+  </div>
+  <div id="legend">
+    <div class="legend-title">מקרא</div>
+    <div class="legend-row"><div class="legend-dot pattern"></div> תבנית כאב</div>
+    <div class="legend-row"><div class="legend-dot trait"></div> תכונה מאזנת</div>
+    <div class="legend-row"><div class="legend-dot strength"></div> כוח עליון</div>
+    <div style="height:6px"></div>
+    <div class="legend-row"><div class="legend-line line-balanced"></div> מאוזן ע"י תכונה</div>
+    <div class="legend-row"><div class="legend-line line-elevated"></div> מועלה לכוח</div>
+    <div class="legend-row"><div class="legend-line line-supported"></div> נתמך ע"י תכונה</div>
+    <div class="legend-row"><div class="legend-line line-related" style="opacity:.6"></div> תבנית קשורה</div>
+  </div>
+</div>
+
+<!-- Graph -->
+<div id="graph-container">
+  <div id="loading">טוען נתונים...</div>
+
+  <div id="controls">
+    <button class="ctrl-btn" id="zoom-in"  title="Zoom in">+</button>
+    <button class="ctrl-btn" id="zoom-out" title="Zoom out">−</button>
+    <button class="ctrl-btn" id="zoom-fit" title="Fit" style="font-size:12px">⊙</button>
+  </div>
+
+  <div id="filter-bar">
+    <button class="filter-btn active pattern"  data-type="pattern">תבניות</button>
+    <button class="filter-btn active trait"    data-type="trait">תכונות</button>
+    <button class="filter-btn active strength" data-type="strength">כוחות</button>
+  </div>
+
+  <svg id="svg"></svg>
+</div>
+
+<script>
+// ── Data loading ─────────────────────────────────────────────────────────────
+const FILES = {
+  nodes:     'data/mind_map_nodes.json',
+  edges:     'data/mind_map_edges.json',
+  patterns:  'data/bezen_patterns.json',
+  traits:    'data/bezen_traits_definitions.json',
+  strengths: 'data/bezen_strengths_map.json'
+};
+
+Promise.all(Object.entries(FILES).map(([k, url]) =>
+  fetch(url).then(r => r.json()).then(d => [k, d])
+)).then(entries => {
+  const data = Object.fromEntries(entries);
+  document.getElementById('loading').style.display = 'none';
+  init(data);
+}).catch(err => {
+  document.getElementById('loading').textContent =
+    'שגיאה בטעינת נתונים. הרץ מ-server (לא file://)';
+  console.error(err);
+});
+
+// ── Lookup maps ──────────────────────────────────────────────────────────────
+function buildLookups(data) {
+  const patternMap  = {};
+  const traitMap    = {};
+  const strengthMap = {};
+  data.patterns.patterns.forEach(p  => patternMap[p.id]  = p);
+  data.traits.traits.forEach(t      => traitMap[t.id]    = t);
+  data.strengths.strengths.forEach(s=> strengthMap[s.id] = s);
+  return { patternMap, traitMap, strengthMap };
+}
+
+// ── Main init ─────────────────────────────────────────────────────────────────
+function init(data) {
+  const { patternMap, traitMap, strengthMap } = buildLookups(data);
+
+  const nodes = data.nodes.nodes.map(n => ({ ...n }));
+  const edges = data.edges.edges.map(e => ({ ...e }));
+
+  const svg    = d3.select('#svg');
+  const width  = svg.node().clientWidth  || window.innerWidth - 320;
+  const height = svg.node().clientHeight || window.innerHeight;
+
+  // Arrow markers
+  const defs = svg.append('defs');
+  ['balanced_by_trait','elevated_to_strength','supported_by_trait'].forEach(t => {
+    defs.append('marker')
+      .attr('id', `arrow-${t}`)
+      .attr('viewBox', '0 -4 8 8')
+      .attr('refX', 18).attr('refY', 0)
+      .attr('markerWidth', 5).attr('markerHeight', 5)
+      .attr('orient', 'auto')
+      .append('path')
+        .attr('d', 'M0,-4L8,0L0,4')
+        .attr('fill', t === 'elevated_to_strength' ? '#d4a93a'
+                    : t === 'supported_by_trait'   ? '#7fbbaa'
+                    :                                '#4a7fd4')
+        .attr('opacity', 0.7);
+  });
+
+  const g = svg.append('g');
+
+  // Zoom
+  const zoom = d3.zoom()
+    .scaleExtent([0.1, 4])
+    .on('zoom', e => g.attr('transform', e.transform));
+  svg.call(zoom);
+
+  d3.select('#zoom-in') .on('click', () => svg.transition().call(zoom.scaleBy, 1.35));
+  d3.select('#zoom-out').on('click', () => svg.transition().call(zoom.scaleBy, 0.75));
+  d3.select('#zoom-fit').on('click', fitView);
+
+  // ── Force simulation ────────────────────────────────────────────────────────
+  const nodeById = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  // Use only edges that match actual nodes
+  const validEdges = edges.filter(e =>
+    nodeById[e.source] && nodeById[e.target]
+  );
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(validEdges)
+      .id(d => d.id)
+      .distance(d => {
+        const t = d.relation_type;
+        if (t === 'balanced_by_trait' || t === 'elevated_to_strength') return 90;
+        if (t === 'supported_by_trait') return 70;
+        if (t === 'connected_to_axis')  return 55;
+        return 110; // related_pattern
+      })
+      .strength(d => {
+        const t = d.relation_type;
+        if (t === 'balanced_by_trait' || t === 'elevated_to_strength') return 0.6;
+        if (t === 'supported_by_trait') return 0.8;
+        if (t === 'connected_to_axis')  return 0.4;
+        return 0.15;
+      })
+    )
+    .force('charge', d3.forceManyBody().strength(d =>
+      d.node_type === 'pattern' ? -220 : d.node_type === 'strength' ? -180 : -150
+    ))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d =>
+      d.node_type === 'pattern' ? 24 : 22
+    ));
+
+  // ── Edges ───────────────────────────────────────────────────────────────────
+  const linkG = g.append('g').attr('class', 'links');
+  const link = linkG.selectAll('line')
+    .data(validEdges)
+    .join('line')
+      .attr('class', d => `link ${d.relation_type}`)
+      .attr('marker-end', d =>
+        ['balanced_by_trait','elevated_to_strength','supported_by_trait'].includes(d.relation_type)
+          ? `url(#arrow-${d.relation_type})` : null
+      );
+
+  // ── Nodes ───────────────────────────────────────────────────────────────────
+  const nodeG = g.append('g').attr('class', 'nodes');
+  const node = nodeG.selectAll('g')
+    .data(nodes)
+    .join('g')
+      .attr('class', d => `node ${d.node_type}`)
+      .call(d3.drag()
+        .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on('drag',  (e, d) => { d.fx = e.x; d.fy = e.y; })
+        .on('end',   (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; })
+      )
+      .on('click', (e, d) => {
+        e.stopPropagation();
+        selectNode(d, { patternMap, traitMap, strengthMap });
+        highlightConnections(d);
+      });
+
+  node.append('circle')
+    .attr('r', d =>
+      d.node_type === 'pattern' ? 18 : d.node_type === 'strength' ? 16 : 14
+    );
+
+  node.append('text')
+    .text(d => {
+      const label = d.label_he || d.id;
+      return label.length > 10 ? label.slice(0, 10) + '…' : label;
+    })
+    .attr('dy', d => (d.node_type === 'pattern' ? 18 : d.node_type === 'strength' ? 16 : 14) + 12);
+
+  // Clear selection on background click
+  svg.on('click', () => {
+    clearSelection();
+    clearPanel();
+  });
+
+  // ── Tick ─────────────────────────────────────────────────────────────────────
+  sim.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    node.attr('transform', d => `translate(${d.x},${d.y})`);
+  });
+
+  // ── Filter buttons ────────────────────────────────────────────────────────────
+  const visible = { pattern: true, trait: true, strength: true };
+  d3.selectAll('.filter-btn').on('click', function() {
+    const type = this.dataset.type;
+    visible[type] = !visible[type];
+    this.classList.toggle('active', visible[type]);
+    node.style('display', d => visible[d.node_type] ? null : 'none');
+    link.style('display', d => {
+      const s = typeof d.source === 'object' ? d.source : nodeById[d.source];
+      const t = typeof d.target === 'object' ? d.target : nodeById[d.target];
+      return (s && visible[s.node_type] && t && visible[t.node_type]) ? null : 'none';
+    });
+  });
+
+  // ── Fit view ──────────────────────────────────────────────────────────────────
+  function fitView() {
+    const svgEl = svg.node();
+    const w = svgEl.clientWidth, h = svgEl.clientHeight;
+    const xs = nodes.map(n => n.x).filter(Boolean);
+    const ys = nodes.map(n => n.y).filter(Boolean);
+    if (!xs.length) return;
+    const x0 = Math.min(...xs) - 40, x1 = Math.max(...xs) + 40;
+    const y0 = Math.min(...ys) - 40, y1 = Math.max(...ys) + 40;
+    const scale = Math.min(0.9, 0.9 / Math.max((x1-x0)/w, (y1-y0)/h));
+    const tx = (w - scale*(x0+x1))/2, ty = (h - scale*(y0+y1))/2;
+    svg.transition().duration(600).call(zoom.transform,
+      d3.zoomIdentity.translate(tx,ty).scale(scale));
+  }
+
+  // Initial fit after simulation settles
+  sim.on('end', fitView);
+
+  // ── Highlight connections ─────────────────────────────────────────────────────
+  let selectedId = null;
+
+  function highlightConnections(d) {
+    selectedId = d.id;
+    const connectedIds = new Set([d.id]);
+    link.classed('highlight', e => {
+      const sid = typeof e.source === 'object' ? e.source.id : e.source;
+      const tid = typeof e.target === 'object' ? e.target.id : e.target;
+      if (sid === d.id || tid === d.id) {
+        connectedIds.add(sid); connectedIds.add(tid);
+        return true;
+      }
+      return false;
+    });
+    link.style('stroke-opacity', e => {
+      const sid = typeof e.source === 'object' ? e.source.id : e.source;
+      const tid = typeof e.target === 'object' ? e.target.id : e.target;
+      return (sid === d.id || tid === d.id) ? 0.9 : 0.1;
+    });
+    node.classed('selected', n => n.id === d.id);
+    node.style('opacity', n => connectedIds.has(n.id) ? 1 : 0.25);
+  }
+
+  function clearSelection() {
+    selectedId = null;
+    link.classed('highlight', false).style('stroke-opacity', null);
+    node.classed('selected', false).style('opacity', null);
+  }
+
+  // ── Panel ──────────────────────────────────────────────────────────────────────
+  function selectNode(d, maps) {
+    const badge = document.getElementById('panel-type-badge');
+    const title = document.getElementById('panel-title');
+    const titleEn = document.getElementById('panel-title-en');
+    const body = document.getElementById('panel-body');
+
+    badge.style.display = 'inline-block';
+    badge.className = `badge-${d.node_type}`;
+    badge.textContent = d.node_type === 'pattern' ? 'תבנית' : d.node_type === 'trait' ? 'תכונה' : 'כוח';
+
+    title.style.color = '';
+    title.style.fontSize = '';
+    title.textContent = d.label_he || d.id;
+    titleEn.textContent = d.label_en || '';
+
+    if (d.node_type === 'pattern') {
+      const p = maps.patternMap[d.id] || {};
+      body.innerHTML = renderPattern(p, d, maps);
+    } else if (d.node_type === 'trait') {
+      const t = maps.traitMap[d.id] || {};
+      body.innerHTML = renderTrait(t, d);
+    } else {
+      const s = maps.strengthMap[d.id] || {};
+      body.innerHTML = renderStrength(s, d);
+    }
+  }
+
+  function clearPanel() {
+    document.getElementById('panel-type-badge').style.display = 'none';
+    document.getElementById('panel-title').textContent = 'לחץ על צומת לפרטים';
+    document.getElementById('panel-title').style.color = '#4a5070';
+    document.getElementById('panel-title').style.fontSize = '14px';
+    document.getElementById('panel-title-en').textContent = '';
+    document.getElementById('panel-body').innerHTML =
+      '<div class="panel-empty">בחר תבנית, תכונה או כוח<br>כדי לראות את הפרטים שלו</div>';
+  }
+
+  function renderPattern(p, d) {
+    const traitId    = p.balanced_trait_id || '';
+    const strengthId = p.higher_strength_id || '';
+    const traitNode    = nodeById[traitId];
+    const strengthNode = nodeById[strengthId];
+    return `
+      <div class="field-group">
+        <div class="field-label">תיאור קצר</div>
+        <div class="field-value">${p.short_description || '—'}</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">ציר כאב</div>
+        <span class="badge-axis">${p.pain_axis || d.group || '—'}</span>
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">משפט מסייע</div>
+        <div class="field-value highlight-text">${p.helpful_sentence || '—'}</div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">תכונה מאזנת</div>
+        ${traitNode
+          ? `<span class="linked-chip chip-trait" data-id="${traitId}">${traitNode.label_he}</span>`
+          : `<span class="field-value">${traitId || '—'}</span>`}
+      </div>
+      <div class="field-group">
+        <div class="field-label">כוח עליון</div>
+        ${strengthNode
+          ? `<span class="linked-chip chip-strength" data-id="${strengthId}">${strengthNode.label_he}</span>`
+          : `<span class="field-value">${strengthId || '—'}</span>`}
+      </div>
+      ${p.stage ? `
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">שלב</div>
+        <div class="field-value">${p.stage}</div>
+      </div>` : ''}
+    `;
+  }
+
+  function renderTrait(t, d) {
+    const bridges = (t.bridge_sentences || []).map(s =>
+      `<div class="bridge-item">${s}</div>`).join('');
+    const actions = (t.micro_actions || []).map((a,i) =>
+      `<div class="bridge-item">✦ ${a}</div>`).join('');
+    return `
+      <div class="field-group">
+        <div class="field-label">הגדרה</div>
+        <div class="field-value">${t.definition || '—'}</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">למה היא מאזנת</div>
+        <div class="field-value">${t.why_it_balances || '—'}</div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">משפטי גישור</div>
+        ${bridges || '<div class="field-value">—</div>'}
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">מיקרו פעולות</div>
+        ${actions || '<div class="field-value">—</div>'}
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">מסר ליבה</div>
+        <div class="field-value highlight-text">${t.core_message || '—'}</div>
+      </div>
+    `;
+  }
+
+  function renderStrength(s, d) {
+    const indicators = (s.growth_indicators || []).map(g =>
+      `<div class="bridge-item">↑ ${g}</div>`).join('');
+    return `
+      <div class="field-group">
+        <div class="field-label">הגדרה</div>
+        <div class="field-value">${s.definition || '—'}</div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">ערך לאורך זמן</div>
+        <div class="field-value">${s.long_term_value || '—'}</div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">עוגן</div>
+        <div class="field-value highlight-text">${s.anchor_sentence || '—'}</div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-group">
+        <div class="field-label">מחוונים לצמיחה</div>
+        ${indicators || '<div class="field-value">—</div>'}
+      </div>
+    `;
+  }
+
+  // Chip click → navigate to that node
+  document.getElementById('panel-body').addEventListener('click', e => {
+    const chip = e.target.closest('.linked-chip');
+    if (!chip) return;
+    const id = chip.dataset.id;
+    const nd = nodeById[id];
+    if (!nd) return;
+    selectNode(nd, { patternMap, traitMap, strengthMap });
+    highlightConnections(nd);
+    // Pan to node
+    const svgEl = svg.node();
+    svg.transition().duration(500).call(
+      zoom.transform,
+      d3.zoomIdentity
+        .translate(svgEl.clientWidth/2 - nd.x, svgEl.clientHeight/2 - nd.y)
+        .scale(1.2)
+    );
+  });
+}
+</script>
+</body>
+</html>

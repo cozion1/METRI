@@ -1,0 +1,100 @@
+{
+  "version": "v1.0.0",
+  "language": "he",
+  "generated_at": "2026-03-15T20:00:00Z",
+  "description": "Rules for computing the dominant pain axis from detected patterns in a session.",
+  "scoring_formula": "axis_score = sum_over_patterns_on_axis( confidence × severity × repetition_bonus(count) )",
+  "multipliers": {
+    "confidence_weight": 1.0,
+    "severity_weight": 1.0,
+    "repetition_bonus": {
+      "description": "Applied when a pattern has been detected more than once in the session",
+      "threshold_count": 2,
+      "multiplier": 1.2
+    }
+  },
+  "minimum_confidence_threshold": 0.5,
+  "minimum_patterns_to_score": 1,
+  "axis_base_scores": {
+    "comparison":   1.0,
+    "self_doubt":   1.0,
+    "rejection":    1.0,
+    "overwhelm":    1.0,
+    "fear":         1.0,
+    "shame":        1.0,
+    "worthlessness":1.0,
+    "helplessness": 1.0,
+    "alienation":   1.0,
+    "belonging":    1.0,
+    "anger":        1.0,
+    "loneliness":   1.0,
+    "uncertainty":  1.0,
+    "control":      1.0,
+    "failure":      1.0
+  },
+  "tie_break": {
+    "strategy": "highest_severity",
+    "description": "When two axes score equally, prefer the axis whose patterns have the highest individual severity rating",
+    "secondary_strategy": "highest_confidence",
+    "secondary_description": "If severity is also equal, prefer the axis whose patterns have the highest confidence score",
+    "fallback_axis": "comparison",
+    "fallback_description": "If all strategies yield a tie, default to comparison axis"
+  },
+  "score_per_pattern": {
+    "formula": "pattern_score = confidence × severity × repetition_bonus",
+    "fields": {
+      "confidence": "float [0.0, 1.0] — model certainty that this pattern is present",
+      "severity": "integer [1, 5] — reported or inferred intensity of the pattern",
+      "repetition_bonus": "1.0 if count < threshold_count, else multiplier (1.2)"
+    }
+  },
+  "axis_aggregation": {
+    "method": "sum",
+    "description": "All pattern_scores belonging to the same pain_axis are summed to produce the axis_score"
+  },
+  "scoring_example": {
+    "description": "Session with three detected patterns, two on the same axis",
+    "detected_patterns": [
+      {
+        "pattern_id": "comparison_01",
+        "pain_axis": "comparison",
+        "confidence": 0.95,
+        "severity": 4,
+        "count": 2
+      },
+      {
+        "pattern_id": "comparison_02",
+        "pain_axis": "comparison",
+        "confidence": 0.78,
+        "severity": 3,
+        "count": 1
+      },
+      {
+        "pattern_id": "self_doubt_01",
+        "pain_axis": "self_doubt",
+        "confidence": 0.82,
+        "severity": 4,
+        "count": 1
+      }
+    ],
+    "axis_score_calculation": {
+      "comparison": {
+        "comparison_01": "0.95 × 4 × 1.2 (count=2 ≥ threshold 2) = 4.56",
+        "comparison_02": "0.78 × 3 × 1.0 (count=1 < threshold 2) = 2.34",
+        "total": 6.90
+      },
+      "self_doubt": {
+        "self_doubt_01": "0.82 × 4 × 1.0 (count=1 < threshold 2) = 3.28",
+        "total": 3.28
+      }
+    },
+    "result": {
+      "dominant_axis": "comparison",
+      "axis_scores": {
+        "comparison": 6.90,
+        "self_doubt": 3.28
+      },
+      "reasoning": "comparison axis scored 6.90 vs self_doubt 3.28; repetition bonus on comparison_01 amplified the gap"
+    }
+  }
+}

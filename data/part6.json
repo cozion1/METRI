@@ -1,0 +1,452 @@
+[
+  {
+    "id": "pattern_121",
+    "category": "shame",
+    "pattern_name": "core_shame",
+    "example_sentences": [
+      "תחושה עמוקה שיש בי משהו לא בסדר — תמיד הייתה.",
+      "אני לא רק מרגיש שעשיתי משהו רע — אני מרגיש שאני רע.",
+      "הבושה שלי היא לא על מה שעשיתי — היא על מי שאני."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "There is something fundamentally wrong and shameful about who I am.",
+    "balanced_trait": "inherent worth",
+    "bridge_sentence": "הבושה העמוקה לא נולדה איתך — היא נלמדה. ומה שנלמד אפשר לשחרר.",
+    "helpful_sentence": "אני ראוי לאהבה ולחיבור בדיוק כפי שאני, ללא תנאים."
+  },
+  {
+    "id": "pattern_122",
+    "category": "shame",
+    "pattern_name": "public_exposure_shame",
+    "example_sentences": [
+      "הרגשתי שכולם רואים את הפגמים שלי.",
+      "בפגישות ציבוריות אני מרגיש שאני חשוף ועירום.",
+      "אם יראו מי אני באמת — יסתלקו."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Being seen means being judged and rejected for my flaws.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "אנשים מחפשים אנושיות — לא שלמות. הפגמים שלך הם חלק מהסיפור שלך.",
+    "helpful_sentence": "אני מסוגל להיראות, גם עם הפגמים, ועדיין להיות ראוי לקשר."
+  },
+  {
+    "id": "pattern_123",
+    "category": "shame",
+    "pattern_name": "family_origin_shame",
+    "example_sentences": [
+      "אני מתבייש מאיפה באתי.",
+      "כשמישהו שואל על המשפחה שלי, אני מנסה לשנות נושא.",
+      "יש דברים בעבר המשפחתי שלי שקשה לי לספר עליהם."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My family background is a source of shame that defines and limits me.",
+    "balanced_trait": "self-definition",
+    "bridge_sentence": "אתה לא המוצר של מוצאך — אתה מה שבנית מעצמך ממנו.",
+    "helpful_sentence": "אני מגדיר את עצמי, לא נמדד על ידי מוצאי."
+  },
+  {
+    "id": "pattern_124",
+    "category": "shame",
+    "pattern_name": "body_shame",
+    "example_sentences": [
+      "אני מתבייש מגופי ומנסה להסתיר אותו.",
+      "לא לובש דברים מסוימים כי לא אוהב איך הגוף שלי נראה בהם.",
+      "קשה לי להיות בחוף הים כי אני לא מסתדר עם המראה שלי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My body is shameful and unacceptable as it is.",
+    "balanced_trait": "body acceptance",
+    "bridge_sentence": "גופך הוא לא פרויקט לשיפור — הוא הבית שלך, עכשיו, כפי שהוא.",
+    "helpful_sentence": "אני מכבד את גופי ואת כל מה שהוא מאפשר לי לחיות."
+  },
+  {
+    "id": "pattern_125",
+    "category": "shame",
+    "pattern_name": "performance_shame",
+    "example_sentences": [
+      "אחרי שאכזבתי בעבודה, לא יכולתי להסתכל לעמיתים בעיניים.",
+      "הכישלון המקצועי שלי מילא אותי בבושה שקשה לתאר.",
+      "אני מרגיש שאני חייב להצטיין כי אחרת אבוש."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Poor performance reveals a shameful inadequacy that others will see.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "ביצוע פחות טוב הוא חלק מכל תחום — לא הוכחה לפגם בך.",
+    "helpful_sentence": "אני לומד מביצועים פחות מוצלחים מבלי לבדוק את ערכי כאדם."
+  },
+  {
+    "id": "pattern_126",
+    "category": "shame",
+    "pattern_name": "past_actions_shame",
+    "example_sentences": [
+      "יש דברים שעשיתי בעבר שאני לא יכול לסלוח לעצמי עליהם.",
+      "הבושה על מעשים ישנים עדיין מכרסמת בי.",
+      "אם אנשים היו יודעים מה עשיתי, הם לא היו רוצים אותי."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My past actions permanently define my worth as a person.",
+    "balanced_trait": "self-forgiveness",
+    "bridge_sentence": "מה שעשית בעבר לא מגדיר מי אתה היום — אתה כבר לא אותו אדם.",
+    "helpful_sentence": "אני מסוגל לשאת את העבר שלי מבלי שיישא אותי."
+  },
+  {
+    "id": "pattern_127",
+    "category": "shame",
+    "pattern_name": "emotional_shame",
+    "example_sentences": [
+      "אני מתבייש כשאני בוכה, גם לבד.",
+      "הרגש שלי נראה לי חולשה שאני מנסה להסתיר.",
+      "אנשים לא צריכים לראות כמה אני מרגיש."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Having and showing emotions is shameful and means I am weak.",
+    "balanced_trait": "emotional freedom",
+    "bridge_sentence": "רגשות הם סימן לחיים — לא לחולשה. להרגיש עמוק זו צורת כוח.",
+    "helpful_sentence": "אני מרשה לעצמי להרגיש, לבטא ולקבל תמיכה כשצריך."
+  },
+  {
+    "id": "pattern_128",
+    "category": "shame",
+    "pattern_name": "comparison_based_shame",
+    "example_sentences": [
+      "כשאני מסתכל על אחרים, אני מתבייש ממה שאני.",
+      "ההשוואה לאחרים גורמת לי להרגיש קטן ולא ראוי.",
+      "אני לא יכול להתגאות בעצמי כל עוד הם מוצלחים ממני."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "I am shamefully inferior to others based on what I see in comparison.",
+    "balanced_trait": "self-worth",
+    "bridge_sentence": "ערכך לא נמדד יחסית לאחרים — הוא מוחלט ואינו תלוי בהשוואה.",
+    "helpful_sentence": "אני עומד בערכי שלי, בלי שההשוואה תגדיר אותו."
+  },
+  {
+    "id": "pattern_129",
+    "category": "shame",
+    "pattern_name": "achievement_shame",
+    "example_sentences": [
+      "אני לא מספיק מוצלח בשביל לגאות בעצמי.",
+      "קשה לי לקבל מחמאות כי לא מרגיש שמגיע לי.",
+      "ההישגים שלי נראים לי לא ראויים לציון."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My achievements are not significant enough to be proud of.",
+    "balanced_trait": "pride",
+    "bridge_sentence": "גאווה בעצמך לא דורשת שיאים — היא מתחילה בהכרה בדברים שעשית.",
+    "helpful_sentence": "אני מרשה לעצמי להיות גאה במה שעשיתי, גם בקטן."
+  },
+  {
+    "id": "pattern_130",
+    "category": "shame",
+    "pattern_name": "vulnerability_shame",
+    "example_sentences": [
+      "כשאני פגיע בפני מישהו ומרגיש שגיתי, מתבייש.",
+      "אחרי שפתחתי את ליבי אני חוזר ומתחרט.",
+      "פגיעות מרגישה כמו חשיפה שאסורה."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "Being vulnerable exposes me to shame and rejection.",
+    "balanced_trait": "openness",
+    "bridge_sentence": "פגיעות היא הדלת לחיבור — לא החולשה שנדמית לך.",
+    "helpful_sentence": "אני מסוגל להיות פגיע ולהרוויח מזה חיבור עמוק."
+  },
+  {
+    "id": "pattern_131",
+    "category": "anger",
+    "pattern_name": "injustice_anger",
+    "example_sentences": [
+      "כשאני רואה עוולות אני מרגיש כעס עז שקשה לשחרר.",
+      "זה לא הוגן — ולכן אני כועס כל הזמן.",
+      "אני לא יכול לשחרר כעס על דברים שלא צדק בהם."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "The world is unjust and I must stay angry to fight or protect myself.",
+    "balanced_trait": "justice-seeking",
+    "bridge_sentence": "הכעס על עוולות יכול להיות דלק לשינוי — אם מכוונים אותו נכון.",
+    "helpful_sentence": "אני מפנה את הכעס שלי לפעולה משמעותית, לא רק לבעירה."
+  },
+  {
+    "id": "pattern_132",
+    "category": "anger",
+    "pattern_name": "helplessness_anger",
+    "example_sentences": [
+      "כשאני לא יכול לשנות משהו אני כועס על הכל.",
+      "חוסר אונים הופך אצלי לכעס.",
+      "אני מתפוצץ על קטנות כשמרגיש שאין לי שליטה."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Anger is the only response available when I feel powerless.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "מתחת לכעס יש לפעמים כאב של חוסר אונים — ולשניהם מגיעה עדינות.",
+    "helpful_sentence": "אני מכיר בחוסר האונים שלי ומוצא את מה שכן בשליטתי."
+  },
+  {
+    "id": "pattern_133",
+    "category": "anger",
+    "pattern_name": "unmet_expectations_anger",
+    "example_sentences": [
+      "אני כועס כשאנשים לא עומדים בציפיות שלי.",
+      "ציפיתי ממנו יותר — ועכשיו אני כועס.",
+      "כשדברים לא יוצאים כמו שתכננתי אני נעשה עצבני."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "When expectations are not met, others have failed me and deserve my anger.",
+    "balanced_trait": "flexibility",
+    "bridge_sentence": "לפעמים הציפיות שלנו לא תואמות את המציאות של אחרים — ואפשר לדבר על זה.",
+    "helpful_sentence": "אני מבטא את הציפיות שלי בבהירות ומגיב בגמישות כשהן לא מתממשות."
+  },
+  {
+    "id": "pattern_134",
+    "category": "anger",
+    "pattern_name": "self_directed_anger",
+    "example_sentences": [
+      "אני כועס על עצמי כשאני טועה.",
+      "אחרי טעות, אני מתקוף את עצמי בנחישות.",
+      "יש לי קשה לסלוח לעצמי — הכעס הפנימי נמשך זמן רב."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "I deserve to be punished with anger for my mistakes and failures.",
+    "balanced_trait": "self-compassion",
+    "bridge_sentence": "הכעס על עצמך לא מלמד — הוא רק פוגע. מה אפשר ללמוד בלי להעניש?",
+    "helpful_sentence": "אני מגיב לטעויות שלי בסקרנות ולמידה, לא בכעס."
+  },
+  {
+    "id": "pattern_135",
+    "category": "anger",
+    "pattern_name": "boundary_violation_anger",
+    "example_sentences": [
+      "כשמישהו חוצה גבולות שלי אני מתפוצץ.",
+      "קשה לי לומר 'לא' מוקדם — ולכן הכעס מצטבר ופורץ.",
+      "אני מרגיש שפגעו בי ולא יכול לעכל את זה."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "When my boundaries are crossed, explosive anger is the only way to protect myself.",
+    "balanced_trait": "assertion",
+    "bridge_sentence": "גבולות יכולים להיאמר בבהירות לפני שהכעס פורץ — ולפעמים זה יותר יעיל.",
+    "helpful_sentence": "אני מתרגל לציין את הגבולות שלי בשקט ובנחישות, לפני שמגיע הכעס."
+  },
+  {
+    "id": "pattern_136",
+    "category": "anger",
+    "pattern_name": "chronic_low_frustration",
+    "example_sentences": [
+      "אני כל הזמן קצת עצבני — לא פורץ, אבל גם לא שקט.",
+      "תחושה כרונית של תסכול שנמצאת שם ברקע.",
+      "דברים קטנים כמו תור ארוך או עיכוב מוציאים אותי מהכלים."
+    ],
+    "emotion": "frustration",
+    "limiting_belief": "The world consistently fails to meet my needs and I must stay on guard.",
+    "balanced_trait": "equanimity",
+    "bridge_sentence": "תסכול כרוני לפעמים הוא אנרגיה שלא מצאה את שדה הפעולה שלה.",
+    "helpful_sentence": "אני בוחן מה מאחורי התסכול ומחפש איפה לפנות את האנרגיה."
+  },
+  {
+    "id": "pattern_137",
+    "category": "anger",
+    "pattern_name": "suppressed_anger",
+    "example_sentences": [
+      "אני בולע כעסים ולא אומר כלום.",
+      "אני מחייך מבחוץ כשבפנים אני רותח.",
+      "אני מפחד מהכעס שלי אז אני לא מרשה לעצמי להרגיש אותו."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Expressing anger is dangerous or wrong, so I must suppress it.",
+    "balanced_trait": "healthy expression",
+    "bridge_sentence": "כעס מדוכא לא נעלם — הוא מצטבר ויוצא בדרכים אחרות. מה אם נדבר על זה?",
+    "helpful_sentence": "אני מרשה לעצמי להרגיש כעס ומוצא דרכים בריאות לבטא אותו."
+  },
+  {
+    "id": "pattern_138",
+    "category": "anger",
+    "pattern_name": "anger_shame_cycle",
+    "example_sentences": [
+      "כשאני כועס ומתפרץ — אני מיד מתבייש.",
+      "אחרי כל פריצת כעס אני חוזר ומוכה בעצמי.",
+      "הכעס שלי גורם לבושה ואז הבושה גורמת לעוד כעס."
+    ],
+    "emotion": "shame",
+    "limiting_belief": "My anger makes me a bad person and I deserve to be ashamed of it.",
+    "balanced_trait": "self-acceptance",
+    "bridge_sentence": "כעס הוא רגש אנושי — הבושה אחריו לא מועילה, אבל הבנה כן.",
+    "helpful_sentence": "אני לומד מהכעס שלי בלי להעניש את עצמי עליו."
+  },
+  {
+    "id": "pattern_139",
+    "category": "anger",
+    "pattern_name": "anger_as_protection",
+    "example_sentences": [
+      "הכעס שלי מרחיק אנשים — ולפעמים זה בדיוק מה שאני רוצה.",
+      "אם אהיה כועס, לא יגיעו אלי קרוב מדי.",
+      "כעס מרגיש לי כמו שריון."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Anger is necessary armor that keeps me from being hurt.",
+    "balanced_trait": "openness",
+    "bridge_sentence": "הכעס כשריון מגן — אבל גם מונע חיבור. מה יקרה אם תוריד אותו לרגע?",
+    "helpful_sentence": "אני מסוגל להגן על עצמי בדרכים שלא מרחיקות את האנשים שאני רוצה קרובי."
+  },
+  {
+    "id": "pattern_140",
+    "category": "anger",
+    "pattern_name": "anger_at_unwanted_change",
+    "example_sentences": [
+      "שינויים שלא בחרתי בהם מוציאים אותי מהכלים.",
+      "כשדברים משתנים בלי ששאלו אותי — אני מרגיש כועס.",
+      "שינוי שנכפה עלי הוא כמו הפרת גבול."
+    ],
+    "emotion": "anger",
+    "limiting_belief": "Unwanted change is a violation that justifies and requires my anger.",
+    "balanced_trait": "acceptance",
+    "bridge_sentence": "שינויים כפויים הם חלק מהחיים — הכעס עליהם לגיטימי, אבל להישאר בו הוא בחירה.",
+    "helpful_sentence": "אני מקבל שינויים שלא בחרתי ומחפש בהם את מה שאפשר לבנות."
+  },
+  {
+    "id": "pattern_141",
+    "category": "avoidance",
+    "pattern_name": "social_avoidance",
+    "example_sentences": [
+      "אני מוצא תירוצים לא להגיע למפגשים חברתיים.",
+      "קל לי יותר להישאר בבית מאשר להתמודד עם האינטראקציה.",
+      "אני מוחק הזמנות ואז מתגעגע לחיבור."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Social situations are threatening and avoiding them keeps me safe.",
+    "balanced_trait": "social courage",
+    "bridge_sentence": "ההימנעות מספקת הקלה זמנית — אבל המחיר הוא בדידות שמצטברת.",
+    "helpful_sentence": "אני לוקח צעד קטן לכיוון חיבור, גם כשזה מפחיד."
+  },
+  {
+    "id": "pattern_142",
+    "category": "avoidance",
+    "pattern_name": "emotional_avoidance",
+    "example_sentences": [
+      "אני עסוק כדי שלא אצטרך לחשוב על מה שאני מרגיש.",
+      "קל לי יותר להיות פעיל מאשר לשבת עם הרגשות שלי.",
+      "כשהרגשות עולים אני מוצא דרך להסיח את הדעת."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Feeling my emotions is more painful than avoiding them.",
+    "balanced_trait": "emotional presence",
+    "bridge_sentence": "הרגשות שאנחנו מתחמקים מהם מוצאים דרך אחרת לצאת — בדרך כלל פחות נוחה.",
+    "helpful_sentence": "אני יושב עם הרגשות שלי ומגלה שאני מסוגל לשאת אותם."
+  },
+  {
+    "id": "pattern_143",
+    "category": "avoidance",
+    "pattern_name": "conflict_avoidance",
+    "example_sentences": [
+      "אני מעדיף לבלוע ולשתוק מאשר לגרום למתח.",
+      "אני לא אומר מה שאני חושב כדי לשמור על שלום.",
+      "פחד מעימות גורם לי לוותר על עצמי."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Conflict is dangerous and must be avoided at all costs, even at the cost of my needs.",
+    "balanced_trait": "assertiveness",
+    "bridge_sentence": "שיחות קשות שנמנעות לא נעלמות — הן מצטברות לטינה.",
+    "helpful_sentence": "אני מסוגל לנהל עימות בצורה ישירה ועדינה, מבלי לאבד את עצמי."
+  },
+  {
+    "id": "pattern_144",
+    "category": "avoidance",
+    "pattern_name": "task_avoidance",
+    "example_sentences": [
+      "יש משימות שאני מעדיף לעשות כל דבר חוץ מהן.",
+      "כשמשימה לא נעימה עומדת בפניי, אני מוצא כל תירוץ אחר.",
+      "ההימנעות ממשימות קשות גורמת לחרדה לצמוח."
+    ],
+    "emotion": "anxiety",
+    "limiting_belief": "Avoiding unpleasant tasks is preferable to the discomfort of doing them.",
+    "balanced_trait": "discipline",
+    "bridge_sentence": "ככל שאתה נמנע ממשימה — כך היא גדלה בתודעתך. ביצוע מכווץ אותה.",
+    "helpful_sentence": "אני עושה את הדבר הלא נוח ומגלה שהייתי יכול לעשות אותו כל הזמן."
+  },
+  {
+    "id": "pattern_145",
+    "category": "avoidance",
+    "pattern_name": "intimacy_avoidance",
+    "example_sentences": [
+      "כשמישהו מתקרב אלי מדי, אני מתרחק.",
+      "פחד מקרבה גורם לי להשאיר מרחק בכל מערכת יחסים.",
+      "אני לא מרשה לאנשים להכיר אותי ממש — זה מפחיד."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Closeness leads to pain, loss or rejection and must be kept at bay.",
+    "balanced_trait": "intimacy",
+    "bridge_sentence": "קרבה היא סיכון — אבל היא גם הדרך היחידה לחיבור עמוק שהנשמה כמהה אליו.",
+    "helpful_sentence": "אני פותח את עצמי לקרבה בהדרגה ומגלה שאני יכול לשאת אותה."
+  },
+  {
+    "id": "pattern_146",
+    "category": "avoidance",
+    "pattern_name": "feedback_avoidance",
+    "example_sentences": [
+      "אני לא שואל על פידבק כי מפחד ממה שיגידו.",
+      "ביקורת, גם בונה, מרגישה לי כמו מתקפה.",
+      "אני מעדיף לא לדעת מאשר לשמוע שאני לא מספיק טוב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Feedback will confirm my deepest fears about myself and is therefore dangerous.",
+    "balanced_trait": "growth orientation",
+    "bridge_sentence": "פידבק הוא כלי — לא גזר דין. הוא אומר לך כיצד להשתפר, לא מי אתה.",
+    "helpful_sentence": "אני מקבל פידבק כהזדמנות ללמוד, לא כהתקפה על ערכי."
+  },
+  {
+    "id": "pattern_147",
+    "category": "avoidance",
+    "pattern_name": "responsibility_avoidance",
+    "example_sentences": [
+      "אני לא מרים ידיים להובלה כדי שלא אצטרך לשאת אחריות.",
+      "אחריות מרגישה לי כנטל כבד מדי.",
+      "אם לא אתחייב, לא אוכל להיכשל."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Taking responsibility leads to failure and blame that I cannot handle.",
+    "balanced_trait": "ownership",
+    "bridge_sentence": "אחריות היא גם כוח — כשאתה אחראי, יש לך השפעה.",
+    "helpful_sentence": "אני לוקח אחריות על חיי ומרגיש את הכוח שבכך."
+  },
+  {
+    "id": "pattern_148",
+    "category": "avoidance",
+    "pattern_name": "change_avoidance",
+    "example_sentences": [
+      "אני מחזיק בשגרה גם כשאינה עובדת כי שינוי מפחיד.",
+      "אני מעדיף מוכר ולא נוח על פני לא ידוע ואולי טוב.",
+      "הפחד מהלא ידוע גורם לי להישאר במקום שאין לי בו טוב."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "The unknown is more threatening than the familiar discomfort I know.",
+    "balanced_trait": "openness to change",
+    "bridge_sentence": "הלא ידוע מכיל גם אפשרויות שעדיין לא גילית — לא רק סכנות.",
+    "helpful_sentence": "אני פותח את עצמי לשינוי ומגלה מה מחכה מעבר לגבול הנוכחי שלי."
+  },
+  {
+    "id": "pattern_149",
+    "category": "avoidance",
+    "pattern_name": "success_avoidance",
+    "example_sentences": [
+      "כשאני קרוב להצלחה, משהו בי מחבל.",
+      "אני לא בטוח שאני ראוי להצלחה ולכן מונע ממנה.",
+      "הצלחה מפחידה אותי לפעמים יותר מכישלון."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Success is dangerous, undeserved, or will lead to expectations I cannot meet.",
+    "balanced_trait": "deservingness",
+    "bridge_sentence": "הצלחה לא שוברת — היא פותחת. מה מפחיד אותך בה ספציפית?",
+    "helpful_sentence": "אני ראוי להצליח ומרשה לעצמי לקבל את פירות המאמץ שלי."
+  },
+  {
+    "id": "pattern_150",
+    "category": "avoidance",
+    "pattern_name": "vulnerability_avoidance",
+    "example_sentences": [
+      "אני לא מראה חולשה — אף פעם.",
+      "קשה לי לבקש עזרה כי זה מרגיש כמו הכנסה.",
+      "אני מסתיר את הכאב שלי כי פחד מה יחשבו."
+    ],
+    "emotion": "fear",
+    "limiting_belief": "Being vulnerable means being weak, exposed, and open to harm.",
+    "balanced_trait": "vulnerability",
+    "bridge_sentence": "פגיעות אינה חולשה — היא הדרך שבה אנחנו מגיעים לחיבור אמיתי.",
+    "helpful_sentence": "אני מרשה לעצמי להיות פגיע ולגלות שזה מחזק ולא מחליש אותי."
+  }
+]

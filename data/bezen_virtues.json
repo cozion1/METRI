@@ -1,0 +1,97 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-16T11:03:34Z",
+  "total_count": 6,
+  "virtues": [
+    {
+      "id": "wisdom",
+      "label_he": "חוכמה",
+      "label_en": "Wisdom",
+      "description_he": "השגת ידע ושימוש בו לטובת עצמך ואחרים",
+      "description_en": "Acquiring and using knowledge for the benefit of self and others",
+      "strength_ids": [
+        "creativity",
+        "curiosity",
+        "judgment",
+        "love_of_learning",
+        "perspective"
+      ],
+      "strength_count": 5,
+      "pattern_count": 30
+    },
+    {
+      "id": "courage",
+      "label_he": "אומץ",
+      "label_en": "Courage",
+      "description_he": "הפעלת רצון להשיג מטרות בפני חסמים חיצוניים ופנימיים",
+      "description_en": "Exercising will to accomplish goals despite obstacles",
+      "strength_ids": [
+        "bravery",
+        "perseverance",
+        "honesty",
+        "zest"
+      ],
+      "strength_count": 4,
+      "pattern_count": 26
+    },
+    {
+      "id": "humanity",
+      "label_he": "אנושיות",
+      "label_en": "Humanity",
+      "description_he": "טיפוח ועזרה לאחרים דרך קשרים בינאישיים",
+      "description_en": "Caring for and helping others through interpersonal connection",
+      "strength_ids": [
+        "love",
+        "kindness",
+        "social_intelligence"
+      ],
+      "strength_count": 3,
+      "pattern_count": 20
+    },
+    {
+      "id": "justice",
+      "label_he": "צדק",
+      "label_en": "Justice",
+      "description_he": "חיים בריאים ותרומה לחיי קהילה צודקים",
+      "description_en": "Living well in community through civic responsibility",
+      "strength_ids": [
+        "teamwork",
+        "fairness",
+        "leadership"
+      ],
+      "strength_count": 3,
+      "pattern_count": 18
+    },
+    {
+      "id": "temperance",
+      "label_he": "מתינות",
+      "label_en": "Temperance",
+      "description_he": "הגנה מפני עודפות ושמירה על איזון",
+      "description_en": "Protection against excess and maintaining balance",
+      "strength_ids": [
+        "forgiveness",
+        "humility",
+        "prudence",
+        "self_regulation"
+      ],
+      "strength_count": 4,
+      "pattern_count": 25
+    },
+    {
+      "id": "transcendence",
+      "label_he": "עלייה רוחנית",
+      "label_en": "Transcendence",
+      "description_he": "יצירת קשרים עם יקום רחב יותר ומתן משמעות עמוקה לחיים",
+      "description_en": "Creating connections to the larger universe and providing meaning",
+      "strength_ids": [
+        "appreciation_of_beauty",
+        "gratitude",
+        "hope",
+        "humor",
+        "spirituality"
+      ],
+      "strength_count": 5,
+      "pattern_count": 31
+    }
+  ]
+}

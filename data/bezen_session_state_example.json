@@ -1,0 +1,72 @@
+{
+  "session_id": "session_001",
+  "user_id": "user_demo_001",
+  "started_at": "2026-03-15T12:10:00Z",
+  "updated_at": "2026-03-15T12:18:00Z",
+  "current_input": "אני מרגיש שכולם מתקדמים ואני נשאר מאחור, ואולי פשוט אין בי מספיק",
+  "detected_patterns": [
+    {
+      "pattern_id": "comparison_01",
+      "confidence": 0.95,
+      "severity": 4,
+      "count": 2,
+      "last_detected_at": "2026-03-15T12:18:00Z"
+    },
+    {
+      "pattern_id": "self_doubt_01",
+      "confidence": 0.89,
+      "severity": 4,
+      "count": 1,
+      "last_detected_at": "2026-03-15T12:18:00Z"
+    },
+    {
+      "pattern_id": "worthlessness_01",
+      "confidence": 0.71,
+      "severity": 3,
+      "count": 1,
+      "last_detected_at": "2026-03-15T12:18:00Z"
+    }
+  ],
+  "dominant_axis": "comparison",
+  "current_pattern_id": "comparison_01",
+  "current_trait_id": "self_acceptance",
+  "current_strength_id": "self_worth",
+  "progress": {
+    "stage_index": 2,
+    "stage_label": "naming",
+    "completion_percent": 38,
+    "movement_direction": "improving"
+  },
+  "history": [
+    {
+      "ts": "2026-03-15T12:11:10Z",
+      "input": "כולם מתקדמים ואני תקוע",
+      "pattern_id": "comparison_01",
+      "axis": "comparison",
+      "bridge_sentence": "אני שם לב שאני משווה את עצמי לאחרים כרגע.",
+      "helpful_sentence": "הערך שלי לא נמדד לפי הקצב של אחרים.",
+      "user_response": "כן, זה ממש מה שקורה לי"
+    },
+    {
+      "ts": "2026-03-15T12:14:00Z",
+      "input": "אולי פשוט אין בי את מה שצריך",
+      "pattern_id": "self_doubt_01",
+      "axis": "self_doubt",
+      "bridge_sentence": "אני מרגיש ספק, וזה מקשה עליי להתחיל.",
+      "helpful_sentence": "ספק הוא לא הוכחה לחוסר יכולת.",
+      "user_response": "אני מבין את זה, אבל קשה לי להאמין בזה"
+    },
+    {
+      "ts": "2026-03-15T12:17:20Z",
+      "input": "אולי אני פשוט פחות טוב",
+      "pattern_id": "worthlessness_01",
+      "axis": "worthlessness",
+      "bridge_sentence": "אני מרגיש ריק מערך כרגע.",
+      "helpful_sentence": "הקיום שלי לא צריך הוכחה כדי להיות בעל ערך.",
+      "user_response": "זה נוגע בי, אבל זה עדיין רחוק ממני"
+    }
+  ],
+  "status": "active",
+  "summary": "המשתמש נמצא בעיקר בציר השוואה, עם הסתעפות לספק עצמי ולחוסר ערך. כרגע המוקד המאזן המתאים הוא קבלה עצמית, ובהמשך מעבר מדורג לערך עצמי.",
+  "recommended_next_action": "להציג שאלה אחת ממוקדת על התקדמות אישית קטנה, ואז להציע מיקרו-פעולה שמנתקת השוואה."
+}

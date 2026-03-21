@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEZEN — Neural Mind Map</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #080810;
+      color: #c8d0f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* ── Top bar ── */
+    #topbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 54px;
+      background: rgba(6, 6, 18, 0.94);
+      border-bottom: 1px solid rgba(80, 120, 255, 0.18);
+      display: flex; align-items: center;
+      padding: 0 18px; gap: 12px;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    #topbar .brand {
+      font-size: 13px; font-weight: 700;
+      color: #6688ee; letter-spacing: 2px;
+      text-transform: uppercase; white-space: nowrap;
+    }
+
+    #topbar .sep {
+      width: 1px; height: 22px;
+      background: rgba(80,120,255,0.2);
+      flex-shrink: 0;
+    }
+
+    #detect-input {
+      flex: 1; max-width: 420px;
+      background: rgba(16, 20, 48, 0.85);
+      border: 1px solid rgba(80, 120, 255, 0.28);
+      border-radius: 6px;
+      padding: 6px 12px;
+      color: #c8d0f4; font-size: 13px;
+      direction: rtl; outline: none;
+      transition: border-color 0.2s;
+    }
+    #detect-input:focus { border-color: rgba(100, 140, 255, 0.65); }
+    #detect-input::placeholder { color: rgba(140, 155, 200, 0.45); }
+
+    #detect-btn {
+      background: rgba(50, 90, 200, 0.38);
+      border: 1px solid rgba(80, 120, 255, 0.38);
+      color: #99aaff; padding: 5px 16px;
+      border-radius: 6px; cursor: pointer;
+      font-size: 12px; transition: background 0.2s;
+      white-space: nowrap;
+    }
+    #detect-btn:hover { background: rgba(60,100,220,0.6); }
+
+    #detect-result {
+      font-size: 12px; min-width: 110px;
+      color: #ffdd88; direction: rtl;
+    }
+
+    /* ── Stats ── */
+    #stats {
+      position: fixed; top: 54px; left: 0;
+      padding: 5px 18px;
+      font-size: 11px; color: rgba(140,155,200,0.45);
+      z-index: 99; direction: ltr;
+    }
+
+    /* ── SVG canvas ── */
+    #graph-svg {
+      position: fixed;
+      top: 54px; left: 0; right: 0; bottom: 0;
+      width: 100%; height: calc(100vh - 54px);
+    }
+
+    /* ── Tooltip ── */
+    #tooltip {
+      position: fixed; pointer-events: none;
+      background: rgba(8, 10, 28, 0.96);
+      border: 1px solid rgba(80, 120, 255, 0.28);
+      border-radius: 8px; padding: 9px 13px;
+      font-size: 12px; max-width: 270px;
+      z-index: 200; display: none;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+    }
+    #tooltip .tt-he  { font-size: 14px; font-weight: 600; color: #dde4ff; margin-bottom: 3px; direction: rtl; }
+    #tooltip .tt-en  { font-size: 11px; color: rgba(180,190,220,0.65); margin-bottom: 5px; direction: ltr; }
+    #tooltip .tt-badge {
+      display: inline-block; padding: 2px 8px;
+      border-radius: 4px; font-size: 10px;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    #tooltip .tt-axis { font-size: 11px; color: rgba(170,185,220,0.55); margin-top: 4px; direction: rtl; }
+    #tooltip .tt-conn { font-size: 11px; color: rgba(150,165,200,0.5); margin-top: 3px; direction: ltr; }
+
+    /* ── Legend ── */
+    #legend {
+      position: fixed; bottom: 18px; right: 16px;
+      background: rgba(6, 8, 22, 0.88);
+      border: 1px solid rgba(80,120,255,0.14);
+      border-radius: 9px; padding: 11px 14px;
+      font-size: 11px; z-index: 100;
+      backdrop-filter: blur(8px);
+      direction: rtl;
+    }
+    .leg-sec { margin-bottom: 9px; }
+    .leg-sec:last-child { margin-bottom: 0; }
+    .leg-title {
+      font-size: 9px; color: rgba(140,155,200,0.45);
+      text-transform: uppercase; letter-spacing: 1.5px;
+      margin-bottom: 5px;
+    }
+    .leg-row {
+      display: flex; align-items: center;
+      gap: 7px; margin-bottom: 4px;
+      color: rgba(190,205,235,0.75);
+    }
+    .leg-dot  { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .leg-line { width: 22px; height: 2px; flex-shrink: 0; border-radius: 1px; }
+
+    /* ── Controls hint ── */
+    #hint {
+      position: fixed; bottom: 18px; left: 16px;
+      font-size: 10px; color: rgba(120,135,180,0.4);
+      line-height: 1.8; z-index: 99;
+      direction: ltr;
+    }
+
+    /* ── Activated patterns side panel ── */
+    #side-panel {
+      position: fixed; top: 80px; left: 16px;
+      width: 248px; max-height: calc(100vh - 130px);
+      background: rgba(6, 8, 22, 0.93);
+      border: 1px solid rgba(255, 110, 30, 0.28);
+      border-radius: 10px;
+      padding: 12px 13px;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      direction: rtl;
+      overflow-y: auto;
+      display: none;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.55), 0 0 18px rgba(255,80,20,0.08);
+    }
+    #side-panel.visible { display: block; }
+    #side-panel .sp-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255,100,30,0.14);
+    }
+    #side-panel .sp-title {
+      font-size: 10px; color: rgba(255,150,70,0.85);
+      text-transform: uppercase; letter-spacing: 1.8px; font-weight: 700;
+    }
+    #side-panel .sp-count {
+      background: rgba(255,90,20,0.22);
+      color: #ff9955; font-size: 11px; font-weight: 700;
+      padding: 2px 9px; border-radius: 10px;
+      border: 1px solid rgba(255,100,30,0.25);
+    }
+    .sp-item {
+      padding: 7px 9px; margin-bottom: 5px;
+      background: rgba(255,90,20,0.07);
+      border: 1px solid rgba(255,100,30,0.14);
+      border-radius: 7px; cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .sp-item:hover { background: rgba(255,100,30,0.17); border-color: rgba(255,110,30,0.32); }
+    .sp-item:last-child { margin-bottom: 0; }
+    .sp-he { font-size: 12px; color: #ffd0a0; font-weight: 600; line-height: 1.3; }
+    .sp-en { font-size: 10px; color: rgba(190,165,135,0.6); margin-top: 2px; direction: ltr; }
+    .sp-axis {
+      font-size: 9px; color: rgba(255,140,60,0.45);
+      margin-top: 3px; letter-spacing: 0.5px;
+    }
+
+    /* ── MRI button ── */
+    #mri-btn {
+      background: rgba(90, 60, 180, 0.32);
+      border: 1px solid rgba(120, 90, 220, 0.38);
+      color: #bb99ff; padding: 5px 14px;
+      border-radius: 6px; cursor: pointer;
+      font-size: 12px; transition: background 0.2s;
+      white-space: nowrap;
+    }
+    #mri-btn:hover  { background: rgba(100,70,200,0.55); }
+    #mri-btn.active { background: rgba(100,70,200,0.48); border-color: rgba(150,120,255,0.7); color: #d4bfff; }
+    #mri-btn:disabled { opacity: 0.35; cursor: default; }
+
+    /* ── Virtue Balance panel ── */
+    #virtue-panel {
+      position: fixed; top: 80px; right: 16px;
+      width: 244px; max-height: calc(100vh - 240px);
+      background: rgba(6, 8, 22, 0.93);
+      border: 1px solid rgba(120, 90, 220, 0.24);
+      border-radius: 10px; padding: 12px 13px;
+      z-index: 100; backdrop-filter: blur(10px);
+      direction: rtl; overflow-y: auto;
+      display: none;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.55), 0 0 22px rgba(100,70,220,0.07);
+    }
+    #virtue-panel.visible { display: block; }
+    .vp-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 10px; padding-bottom: 8px;
+      border-bottom: 1px solid rgba(120,90,220,0.14);
+    }
+    .vp-title {
+      font-size: 10px; color: rgba(185,160,255,0.88);
+      text-transform: uppercase; letter-spacing: 1.8px; font-weight: 700;
+    }
+    .vp-close {
+      font-size: 12px; color: rgba(150,130,220,0.45);
+      cursor: pointer; padding: 0 4px; line-height: 1;
+      transition: color 0.15s;
+    }
+    .vp-close:hover { color: rgba(210,185,255,0.9); }
+
+    /* Radar */
+    #radar-container { width: 100%; display: flex; justify-content: center; margin-bottom: 11px; }
+    #radar-container svg { width: 100%; height: auto; max-width: 220px; }
+
+    /* MRI section */
+    .mri-section { border-top: 1px solid rgba(120,90,220,0.1); padding-top: 9px; }
+    .mri-label {
+      font-size: 9px; color: rgba(155,140,205,0.45);
+      text-transform: uppercase; letter-spacing: 1.5px;
+      margin-top: 8px; margin-bottom: 4px;
+    }
+    .mri-label:first-child { margin-top: 0; }
+    .mri-virtue {
+      display: flex; align-items: center; gap: 8px;
+      padding: 6px 9px; border-radius: 7px;
+      border: 1px solid transparent;
+    }
+    .mri-virtue.dominant {
+      background: rgba(120,90,220,0.09);
+      border-color: rgba(120,90,220,0.19);
+    }
+    .mri-virtue.weakest {
+      background: rgba(60,130,240,0.07);
+      border-color: rgba(60,130,240,0.17);
+    }
+    .mv-bar  { width: 4px; height: 34px; border-radius: 2px; flex-shrink: 0; }
+    .mv-info { flex: 1; min-width: 0; }
+    .mv-he   { font-size: 13px; font-weight: 700; color: #d8ccff; line-height: 1.2; }
+    .mv-desc { font-size: 9px; color: rgba(155,145,200,0.52); margin-top: 2px; line-height: 1.3; }
+    .mv-track  { margin-top: 5px; height: 3px; background: rgba(80,70,130,0.28); border-radius: 2px; overflow: hidden; }
+    .mv-fill   { height: 100%; border-radius: 2px; transition: width 0.7s ease; }
+
+    /* Recommended strengths */
+    .mri-str {
+      display: flex; align-items: flex-start; gap: 7px;
+      padding: 5px 8px; margin-bottom: 4px;
+      background: rgba(75,65,130,0.07);
+      border: 1px solid rgba(100,85,160,0.11);
+      border-radius: 6px;
+    }
+    .mri-str:last-child { margin-bottom: 0; }
+    .mri-str-n  { font-size: 9px; color: rgba(165,150,220,0.45); font-weight: 700; min-width: 13px; padding-top: 1px; }
+    .mri-str-body { flex: 1; min-width: 0; }
+    .mri-str-he { font-size: 11px; font-weight: 600; color: #c4b8ff; }
+    .mri-str-why { font-size: 9px; color: rgba(155,145,200,0.52); margin-top: 2px; line-height: 1.3; }
+
+    /* ── Loading ── */
+    #loading {
+      position: fixed; inset: 0;
+      background: #080810;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 14px;
+      z-index: 300;
+      color: rgba(140,155,210,0.6); font-size: 14px;
+    }
+    .spinner {
+      width: 38px; height: 38px;
+      border: 2px solid rgba(80,120,255,0.2);
+      border-top-color: rgba(100,150,255,0.75);
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">
+  <div class="spinner"></div>
+  <div>טוען מפת הנפש הנוירונית...</div>
+</div>
+
+<!-- Top bar -->
+<div id="topbar">
+  <span class="brand">BEZEN Neural</span>
+  <div class="sep"></div>
+  <input id="detect-input" type="text" placeholder="הקלד משפט לזיהוי דפוס מחשבה..." />
+  <button id="detect-btn">נתח</button>
+  <span id="detect-result"></span>
+  <div class="sep"></div>
+  <button id="mri-btn" disabled>MRI רגשי</button>
+</div>
+
+<!-- Stats -->
+<div id="stats" id="stats"></div>
+
+<!-- Graph -->
+<svg id="graph-svg"></svg>
+
+<!-- Tooltip -->
+<div id="tooltip">
+  <div class="tt-he"  id="tt-he"></div>
+  <div class="tt-en"  id="tt-en"></div>
+  <span class="tt-badge" id="tt-badge"></span>
+  <div class="tt-axis" id="tt-axis"></div>
+  <div class="tt-conn" id="tt-conn"></div>
+</div>
+
+<!-- Legend -->
+<div id="legend">
+  <div class="leg-sec">
+    <div class="leg-title">צמתים</div>
+    <div class="leg-row"><div class="leg-dot" style="background:#5b87f5"></div><span>דפוס מחשבה</span></div>
+    <div class="leg-row"><div class="leg-dot" style="background:#3dbb77"></div><span>תכונה מאזנת</span></div>
+    <div class="leg-row"><div class="leg-dot" style="background:#e8b830"></div><span>כוח</span></div>
+  </div>
+  <div class="leg-sec">
+    <div class="leg-title">קשרים</div>
+    <div class="leg-row"><div class="leg-line" style="background:#2a3a55"></div><span>קשר בציר / צולב</span></div>
+    <div class="leg-row"><div class="leg-line" style="background:#4477cc"></div><span>אל תכונה</span></div>
+    <div class="leg-row"><div class="leg-line" style="background:#cc9922"></div><span>אל כוח</span></div>
+  </div>
+</div>
+
+<!-- Hint -->
+<div id="hint">
+  scroll = zoom &nbsp;·&nbsp; drag = pan &nbsp;·&nbsp; drag node = move &nbsp;·&nbsp; click = highlight
+</div>
+
+<!-- Virtue Balance / Emotional MRI panel -->
+<div id="virtue-panel">
+  <div class="vp-header">
+    <span class="vp-title">MRI רגשי</span>
+    <span class="vp-close" id="vp-close">✕</span>
+  </div>
+  <div id="radar-container"></div>
+  <div class="mri-section">
+    <div class="mri-label">דומיננטי</div>
+    <div class="mri-virtue dominant">
+      <div class="mv-bar" id="mri-dom-bar"></div>
+      <div class="mv-info">
+        <div class="mv-he"  id="mri-dom-he">—</div>
+        <div class="mv-desc" id="mri-dom-desc"></div>
+        <div class="mv-track"><div class="mv-fill" id="mri-dom-fill"></div></div>
+      </div>
+    </div>
+    <div class="mri-label">שקט</div>
+    <div class="mri-virtue weakest">
+      <div class="mv-bar" id="mri-wk-bar" style="background:#4d90ff"></div>
+      <div class="mv-info">
+        <div class="mv-he"  id="mri-wk-he">—</div>
+        <div class="mv-desc" id="mri-wk-desc"></div>
+        <div class="mv-track"><div class="mv-fill" id="mri-wk-fill" style="background:#4d90ff"></div></div>
+      </div>
+    </div>
+    <div class="mri-label">כוחות מאזנים</div>
+    <div id="mri-strengths"></div>
+  </div>
+</div>
+
+<!-- Activated patterns panel -->
+<div id="side-panel">
+  <div class="sp-header">
+    <span class="sp-title">דפוסים מופעלים</span>
+    <span class="sp-count" id="sp-count">0</span>
+  </div>
+  <div id="sp-list"></div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════
+//  CONFIG
+// ════════════════════════════════════════════════════════
+const NODE_R = { pattern: 5, trait: 13, strength: 21 };
+
+const NODE_BASE_COLOR = { trait: '#3dbb77', strength: '#e8b830' };
+
+const EDGE_STYLE = {
+  related_pattern:      { color: '#1e2e44', opacity: 0.3,  width: 0.7 },
+  balanced_by_trait:    { color: '#3366bb', opacity: 0.72, width: 1.6 },
+  elevated_to_strength: { color: '#bb8811', opacity: 0.88, width: 2.4 },
+};
+
+// Per-axis hue for pattern nodes
+const AXIS_HUE = {
+  comparison: 215, self_doubt: 200, rejection: 355, overwhelm: 28,
+  fear: 18,   shame: 300,  worthlessness: 275, helplessness: 248,
+  alienation: 188, belonging: 155, uncertainty: 82,  control: 338,
+  failure: 14, anger: 3,  loneliness: 212,
+};
+
+function patternColor(group) {
+  const h = AXIS_HUE[group] ?? 215;
+  return `hsl(${h},68%,62%)`;
+}
+
+const HIGHLIGHT_STROKE      = '#ff7733';
+const DETECTED_COLOR        = '#ff6820';   // bright orange — matched patterns
+const SOFT_HIGHLIGHT_COLOR  = '#ff9944';   // softer orange — connected nodes
+
+// Per-virtue colors for MRI overlay mode
+const VIRTUE_COLORS = {
+  wisdom:        { fill: '#9977ff', dim: 'rgba(153,119,255,0.38)', label_he: 'חוכמה'       },
+  courage:       { fill: '#ff5533', dim: 'rgba(255,85,51,0.38)',   label_he: 'אומץ'         },
+  humanity:      { fill: '#ff77bb', dim: 'rgba(255,119,187,0.38)', label_he: 'אנושיות'      },
+  justice:       { fill: '#33dd88', dim: 'rgba(51,221,136,0.38)',  label_he: 'צדק'          },
+  temperance:    { fill: '#55aaff', dim: 'rgba(85,170,255,0.38)',  label_he: 'מתינות'       },
+  transcendence: { fill: '#ffcc33', dim: 'rgba(255,204,51,0.38)',  label_he: 'עלייה רוחנית' },
+};
+const WEAKEST_VIRTUE_COLOR = 'rgba(77, 144, 255, 0.72)'; // calm blue for weakest cluster
+
+// ════════════════════════════════════════════════════════
+//  STATE
+// ════════════════════════════════════════════════════════
+let selectedNode     = null;
+let detectedIds      = new Set();
+let softHighlightIds = new Set();
+
+// Virtue mode — callbacks are set by render() via closure
+let virtueMode        = false;
+let patternVirtueMap  = {};          // pattern_id → virtue_id (built from pattern_to_strength_map)
+let _applyVirtueColor = null;        // injected by render()
+let _clearVirtueColor = null;        // injected by render()
+
+// ════════════════════════════════════════════════════════
+//  LOAD DATA
+// ════════════════════════════════════════════════════════
+Promise.all([
+  fetch('data/mind_map_nodes.json').then(r => r.json()),
+  fetch('data/mind_map_edges.json').then(r => r.json()),
+  fetch('data/bezen_patterns.json').then(r => r.json()).catch(() => null),
+  fetch('data/bezen_virtue_balance.json').then(r => r.json()).catch(() => null),
+  fetch('data/bezen_pattern_to_strength_map.json').then(r => r.json()).catch(() => null),
+]).then(([nodesData, edgesData, patternsData, virtueBalanceData, patternStrengthMapData]) => {
+  document.getElementById('loading').style.display = 'none';
+  render(nodesData, edgesData, patternsData);
+  if (virtueBalanceData && patternStrengthMapData) {
+    initVirtueBalance(virtueBalanceData, patternStrengthMapData);
+  }
+}).catch(err => {
+  document.getElementById('loading').innerHTML =
+    `<div style="color:#ff6644;padding:20px">שגיאה: ${err.message}<br><small>יש להריץ מתוך שרת (לא file://)</small></div>`;
+});
+
+// ════════════════════════════════════════════════════════
+//  RENDER
+// ════════════════════════════════════════════════════════
+function render(nodesData, edgesData, patternsData) {
+  const nodes = nodesData.nodes.map(d => ({ ...d }));
+  const edges = edgesData.edges;
+
+  // ── Keyword map for detection ─────────────────────────────────────────
+  const kwMap = buildKeywordMap(patternsData);
+
+  // ── Build adjacency for tooltip ───────────────────────────────────────
+  const adjCount = {};
+  edges.forEach(e => {
+    adjCount[e.source] = (adjCount[e.source] || 0) + 1;
+    adjCount[e.target] = (adjCount[e.target] || 0) + 1;
+  });
+
+  // ── Stats bar ─────────────────────────────────────────────────────────
+  const nP = nodes.filter(n => n.node_type === 'pattern').length;
+  const nT = nodes.filter(n => n.node_type === 'trait').length;
+  const nS = nodes.filter(n => n.node_type === 'strength').length;
+  document.getElementById('stats').textContent =
+    `nodes: ${nodes.length}  ·  edges: ${edges.length}  ·  patterns ${nP}  traits ${nT}  strengths ${nS}`;
+
+  // ── SVG ───────────────────────────────────────────────────────────────
+  const svg = d3.select('#graph-svg');
+  const W = () => window.innerWidth;
+  const H = () => window.innerHeight - 54;
+
+  // Defs – glow filters
+  const defs = svg.append('defs');
+  addGlowFilter(defs, 'glow-sm', 2.5);
+  addGlowFilter(defs, 'glow-md', 5);
+  addGlowFilter(defs, 'glow-lg', 9);
+
+  // Root container (receives zoom transform)
+  const root = svg.append('g').attr('class', 'root');
+
+  svg.call(
+    d3.zoom().scaleExtent([0.05, 12])
+      .on('zoom', e => root.attr('transform', e.transform))
+  ).on('dblclick.zoom', null);
+
+  // ── Force simulation ──────────────────────────────────────────────────
+  const linkObjs = edges.map(e => ({
+    source: e.source, target: e.target,
+    relation_type: e.relation_type,
+  }));
+
+  const cx = W() / 2, cy = H() / 2;
+  const halfMin = Math.min(W(), H()) / 2;
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(linkObjs).id(d => d.id)
+      .distance(d => {
+        if (d.relation_type === 'elevated_to_strength') return 100;
+        if (d.relation_type === 'balanced_by_trait')    return 75;
+        return 26;
+      })
+      .strength(d => {
+        if (d.relation_type === 'elevated_to_strength') return 0.12;
+        if (d.relation_type === 'balanced_by_trait')    return 0.18;
+        return 0.10;
+      })
+    )
+    .force('charge', d3.forceManyBody()
+      .strength(d =>
+        d.node_type === 'strength' ? -700 :
+        d.node_type === 'trait'    ? -320 : -55
+      )
+    )
+    .force('radial-s', d3.forceRadial(0, cx, cy)
+      .strength(d => d.node_type === 'strength' ? 1.8 : 0))
+    .force('radial-t', d3.forceRadial(halfMin * 0.23, cx, cy)
+      .strength(d => d.node_type === 'trait' ? 1.4 : 0))
+    .force('radial-p', d3.forceRadial(halfMin * 0.47, cx, cy)
+      .strength(d => d.node_type === 'pattern' ? 0.4 : 0))
+    .force('collide', d3.forceCollide().radius(d => NODE_R[d.node_type] + 2.5))
+    .force('center', d3.forceCenter(cx, cy).strength(0.04))
+    .alphaDecay(0.018)
+    .velocityDecay(0.38);
+
+  // ── Edges ─────────────────────────────────────────────────────────────
+  const linkLayer = root.append('g').attr('class', 'g-links');
+
+  const linkSel = linkLayer.selectAll('line')
+    .data(linkObjs)
+    .join('line')
+    .attr('stroke', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).color)
+    .attr('stroke-opacity', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity)
+    .attr('stroke-width', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width);
+
+  // ── Nodes ─────────────────────────────────────────────────────────────
+  const nodeLayer = root.append('g').attr('class', 'g-nodes');
+
+  const nodeSel = nodeLayer.selectAll('g.node')
+    .data(nodes, d => d.id)
+    .join('g')
+    .attr('class', 'node')
+    .style('cursor', 'pointer');
+
+  // Aura (only for trait + strength)
+  nodeSel.filter(d => d.node_type !== 'pattern')
+    .append('circle')
+    .attr('class', 'aura')
+    .attr('r', d => NODE_R[d.node_type] * 2.2)
+    .attr('fill', d => d.node_type === 'strength'
+      ? 'rgba(230,180,30,0.06)' : 'rgba(60,190,120,0.06)')
+    .attr('pointer-events', 'none');
+
+  // Main circle
+  nodeSel.append('circle')
+    .attr('class', 'body')
+    .attr('r', d => NODE_R[d.node_type])
+    .attr('fill', d =>
+      d.node_type === 'pattern'  ? patternColor(d.group) :
+      d.node_type === 'trait'    ? NODE_BASE_COLOR.trait :
+                                   NODE_BASE_COLOR.strength
+    )
+    .attr('stroke', d =>
+      d.node_type === 'strength' ? 'rgba(255,220,80,0.55)' :
+      d.node_type === 'trait'    ? 'rgba(80,220,140,0.45)' : 'none'
+    )
+    .attr('stroke-width', d => d.node_type === 'pattern' ? 0 : 1.8)
+    .attr('filter', d =>
+      d.node_type === 'strength' ? 'url(#glow-lg)' :
+      d.node_type === 'trait'    ? 'url(#glow-md)' : null
+    );
+
+  // Permanent labels (trait + strength only)
+  nodeSel.filter(d => d.node_type !== 'pattern')
+    .append('text')
+    .attr('class', 'label-perm')
+    .attr('text-anchor', 'middle')
+    .attr('dy', d => NODE_R[d.node_type] + 11)
+    .attr('font-size', d => d.node_type === 'strength' ? '11px' : '10px')
+    .attr('fill', d => d.node_type === 'strength' ? '#f0cc44' : '#55dd99')
+    .attr('pointer-events', 'none')
+    .attr('paint-order', 'stroke')
+    .attr('stroke', '#08080f')
+    .attr('stroke-width', 3)
+    .text(d => d.label_he);
+
+  // ── Drag ─────────────────────────────────────────────────────────────
+  nodeSel.call(
+    d3.drag()
+      .on('start', (ev, d) => { if (!ev.active) sim.alphaTarget(0.25).restart(); d.fx = d.x; d.fy = d.y; })
+      .on('drag',  (ev, d) => { d.fx = ev.x; d.fy = ev.y; })
+      .on('end',   (ev, d) => { if (!ev.active) sim.alphaTarget(0); d.fx = null; d.fy = null; })
+  );
+
+  // ── Tooltip refs ──────────────────────────────────────────────────────
+  const ttEl   = document.getElementById('tooltip');
+  const ttHe   = document.getElementById('tt-he');
+  const ttEn   = document.getElementById('tt-en');
+  const ttBadge= document.getElementById('tt-badge');
+  const ttAxis = document.getElementById('tt-axis');
+  const ttConn = document.getElementById('tt-conn');
+
+  const BADGE_STYLE = {
+    pattern:  { bg: 'rgba(70,110,240,0.25)', color: '#88aaff', text: 'דפוס מחשבה' },
+    trait:    { bg: 'rgba(40,180,100,0.22)', color: '#55dd99', text: 'תכונה מאזנת' },
+    strength: { bg: 'rgba(210,160,20,0.22)', color: '#f0cc44', text: 'כוח' },
+  };
+
+  // ── Hover ─────────────────────────────────────────────────────────────
+  nodeSel
+    .on('mouseenter', function(ev, d) {
+      d3.select(this).raise();
+      d3.select(this).select('.body')
+        .transition().duration(100)
+        .attr('r', NODE_R[d.node_type] * 1.55);
+
+      const bs = BADGE_STYLE[d.node_type];
+      ttHe.textContent = d.label_he;
+      ttEn.textContent = d.label_en;
+      ttBadge.textContent = bs.text;
+      ttBadge.style.cssText = `background:${bs.bg};color:${bs.color};display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;text-transform:uppercase;letter-spacing:1px`;
+      ttAxis.textContent = d.node_type === 'pattern' ? `ציר: ${d.group}` : '';
+      ttConn.textContent = `קשרים: ${adjCount[d.id] || 0}`;
+      ttEl.style.display = 'block';
+    })
+    .on('mousemove', ev => {
+      ttEl.style.left = (ev.clientX + 15) + 'px';
+      ttEl.style.top  = (ev.clientY - 8)  + 'px';
+    })
+    .on('mouseleave', function(ev, d) {
+      ttEl.style.display = 'none';
+      if (d.id !== (selectedNode?.id) && !detectedIds.has(d.id)) {
+        d3.select(this).select('.body')
+          .transition().duration(200)
+          .attr('r', NODE_R[d.node_type]);
+      }
+    });
+
+  // ── Click – highlight subgraph ────────────────────────────────────────
+  nodeSel.on('click', function(ev, d) {
+    ev.stopPropagation();
+    if (selectedNode?.id === d.id) {
+      selectedNode = null;
+      resetVisuals();
+    } else {
+      selectedNode = d;
+      highlightNode(d);
+    }
+  });
+
+  svg.on('click', () => {
+    if (selectedNode) { selectedNode = null; resetVisuals(); }
+  });
+
+  function highlightNode(node) {
+    const connIds = new Set([node.id]);
+    const connEdgeBits = new Set();
+
+    linkObjs.forEach((l, i) => {
+      const s = l.source.id ?? l.source;
+      const t = l.target.id ?? l.target;
+      if (s === node.id || t === node.id) {
+        connIds.add(s); connIds.add(t);
+        connEdgeBits.add(i);
+      }
+    });
+
+    nodeSel.select('.body')
+      .transition().duration(220)
+      .attr('opacity', d => connIds.has(d.id) ? 1 : 0.07)
+      .attr('r', d => {
+        if (d.id === node.id) return NODE_R[d.node_type] * 2.0;
+        if (connIds.has(d.id)) return NODE_R[d.node_type] * 1.3;
+        return NODE_R[d.node_type];
+      });
+
+    nodeSel.select('.label-perm')
+      .transition().duration(220)
+      .attr('opacity', d => connIds.has(d.id) ? 1 : 0.07);
+
+    nodeSel.filter(d => d.id === node.id).select('.body')
+      .attr('stroke', HIGHLIGHT_STROKE)
+      .attr('stroke-width', 2.5);
+
+    linkSel.transition().duration(220)
+      .attr('stroke-opacity', (d, i) => {
+        if (!connEdgeBits.has(i)) return 0.03;
+        const base = (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity;
+        return Math.min(base * 2.8, 1);
+      })
+      .attr('stroke-width', (d, i) => {
+        const base = (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width;
+        return connEdgeBits.has(i) ? base * 2 : base;
+      });
+  }
+
+  function resetVisuals() {
+    nodeSel.select('.body')
+      .transition().duration(280)
+      .attr('opacity', d => {
+        if (detectedIds.size === 0) return 1;
+        if (detectedIds.has(d.id) || softHighlightIds.has(d.id)) return 1;
+        return 0.28;
+      })
+      .attr('r', d => {
+        if (detectedIds.has(d.id))      return NODE_R[d.node_type] * 2.4;
+        if (softHighlightIds.has(d.id)) return NODE_R[d.node_type] * 1.5;
+        return NODE_R[d.node_type];
+      })
+      .attr('fill', d => {
+        if (detectedIds.has(d.id))      return DETECTED_COLOR;
+        if (softHighlightIds.has(d.id)) return SOFT_HIGHLIGHT_COLOR;
+        return d.node_type === 'pattern' ? patternColor(d.group) :
+               d.node_type === 'trait'   ? NODE_BASE_COLOR.trait :
+                                           NODE_BASE_COLOR.strength;
+      })
+      .attr('stroke', d => {
+        if (detectedIds.has(d.id))      return 'rgba(255,130,40,0.95)';
+        if (softHighlightIds.has(d.id)) return 'rgba(255,175,80,0.65)';
+        return d.node_type === 'strength' ? 'rgba(255,220,80,0.55)' :
+               d.node_type === 'trait'    ? 'rgba(80,220,140,0.45)' : 'none';
+      })
+      .attr('stroke-width', d => {
+        if (detectedIds.has(d.id))      return 2.5;
+        if (softHighlightIds.has(d.id)) return 2.0;
+        return d.node_type === 'pattern' ? 0 : 1.8;
+      })
+      .attr('filter', d => {
+        if (detectedIds.has(d.id))      return 'url(#glow-lg)';
+        if (softHighlightIds.has(d.id)) return 'url(#glow-md)';
+        return d.node_type === 'strength' ? 'url(#glow-lg)' :
+               d.node_type === 'trait'    ? 'url(#glow-md)' : null;
+      });
+
+    nodeSel.select('.label-perm')
+      .transition().duration(280).attr('opacity', 1);
+
+    linkSel.transition().duration(280)
+      .attr('stroke-opacity', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity)
+      .attr('stroke-width',   d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width);
+  }
+
+  // ── Simulation tick ───────────────────────────────────────────────────
+  sim.on('tick', () => {
+    linkSel
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    nodeSel.attr('transform', d => `translate(${d.x ?? 0},${d.y ?? 0})`);
+  });
+
+  // ── Resize ────────────────────────────────────────────────────────────
+  window.addEventListener('resize', () => {
+    const nCx = W() / 2, nCy = H() / 2, nHalf = Math.min(W(), H()) / 2;
+    sim
+      .force('center',   d3.forceCenter(nCx, nCy).strength(0.04))
+      .force('radial-s', d3.forceRadial(0,            nCx, nCy).strength(d => d.node_type === 'strength' ? 1.8 : 0))
+      .force('radial-t', d3.forceRadial(nHalf * 0.23, nCx, nCy).strength(d => d.node_type === 'trait'    ? 1.4 : 0))
+      .force('radial-p', d3.forceRadial(nHalf * 0.47, nCx, nCy).strength(d => d.node_type === 'pattern'  ? 0.4 : 0))
+      .alpha(0.08).restart();
+  });
+
+  // ════════════════════════════════════════════════════════
+  //  PATTERN DETECTION
+  // ════════════════════════════════════════════════════════
+  function buildKeywordMap(pData) {
+    if (!pData?.patterns) return {};
+    const map = {};
+    pData.patterns.forEach(p => {
+      map[p.id] = [
+        p.label_he,
+        p.label_en,
+        ...(p.tags          || []),
+        ...(p.example_inputs|| []),
+      ].map(s => s.toLowerCase());
+    });
+    return map;
+  }
+
+  function detectPatterns(text) {
+    if (!text.trim() || !Object.keys(kwMap).length) return [];
+    const lower = text.toLowerCase().trim();
+    // Split into tokens for better matching
+    const tokens = lower.split(/[\s,،.!?]+/).filter(Boolean);
+    const matched = [];
+    Object.entries(kwMap).forEach(([id, keywords]) => {
+      const hit = keywords.some(kw =>
+        lower.includes(kw) ||
+        tokens.some(tok => kw.includes(tok) && tok.length >= 3)
+      );
+      if (hit) matched.push(id);
+    });
+    return matched;
+  }
+
+  function applyDetection(matchedIds) {
+    detectedIds = new Set(matchedIds);
+
+    // Find nodes directly connected to any matched pattern (trait/strength neighbors)
+    softHighlightIds = new Set();
+    if (matchedIds.length > 0) {
+      linkObjs.forEach(l => {
+        const s = l.source.id ?? l.source;
+        const t = l.target.id ?? l.target;
+        if (detectedIds.has(s) && !detectedIds.has(t)) softHighlightIds.add(t);
+        if (detectedIds.has(t) && !detectedIds.has(s)) softHighlightIds.add(s);
+      });
+    }
+
+    if (!selectedNode) {
+      linkSel.interrupt()
+        .attr('stroke-opacity', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity)
+        .attr('stroke-width',   d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width);
+    }
+
+    if (matchedIds.length === 0) return;
+
+    nodeSel.select('.body')
+      .transition().duration(380)
+      .attr('fill', d => {
+        if (detectedIds.has(d.id))     return DETECTED_COLOR;
+        if (softHighlightIds.has(d.id)) return SOFT_HIGHLIGHT_COLOR;
+        return d.node_type === 'pattern' ? patternColor(d.group) :
+               d.node_type === 'trait'   ? NODE_BASE_COLOR.trait :
+                                           NODE_BASE_COLOR.strength;
+      })
+      .attr('r', d => {
+        if (detectedIds.has(d.id))     return NODE_R[d.node_type] * 2.4;
+        if (softHighlightIds.has(d.id)) return NODE_R[d.node_type] * 1.5;
+        return NODE_R[d.node_type];
+      })
+      .attr('opacity', d => {
+        if (detectedIds.has(d.id) || softHighlightIds.has(d.id)) return 1;
+        return 0.28;
+      })
+      .attr('stroke', d => {
+        if (detectedIds.has(d.id))     return 'rgba(255,130,40,0.95)';
+        if (softHighlightIds.has(d.id)) return 'rgba(255,175,80,0.65)';
+        return d.node_type === 'strength' ? 'rgba(255,220,80,0.55)' :
+               d.node_type === 'trait'    ? 'rgba(80,220,140,0.45)' : 'none';
+      })
+      .attr('stroke-width', d => {
+        if (detectedIds.has(d.id))     return 2.5;
+        if (softHighlightIds.has(d.id)) return 2.0;
+        return d.node_type === 'pattern' ? 0 : 1.8;
+      })
+      .attr('filter', d => {
+        if (detectedIds.has(d.id))     return 'url(#glow-lg)';
+        if (softHighlightIds.has(d.id)) return 'url(#glow-md)';
+        return null;
+      });
+
+    // Brighten edges touching detected nodes; fade the rest
+    linkSel.transition().duration(380)
+      .attr('stroke-opacity', d => {
+        const s = d.source.id ?? d.source;
+        const t = d.target.id ?? d.target;
+        if (detectedIds.has(s) || detectedIds.has(t))
+          return Math.min((EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity * 2.8, 1);
+        if (softHighlightIds.has(s) || softHighlightIds.has(t))
+          return (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity * 0.8;
+        return 0.04;
+      })
+      .attr('stroke-width', d => {
+        const s = d.source.id ?? d.source;
+        const t = d.target.id ?? d.target;
+        const base = (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width;
+        return (detectedIds.has(s) || detectedIds.has(t)) ? base * 2 : base;
+      });
+  }
+
+  function clearDetection() {
+    detectedIds      = new Set();
+    softHighlightIds = new Set();
+    nodeSel.select('.body')
+      .transition().duration(300)
+      .attr('opacity', 1)
+      .attr('fill', d =>
+        d.node_type === 'pattern'  ? patternColor(d.group) :
+        d.node_type === 'trait'    ? NODE_BASE_COLOR.trait :
+                                     NODE_BASE_COLOR.strength)
+      .attr('r', d => NODE_R[d.node_type])
+      .attr('stroke', d =>
+        d.node_type === 'strength' ? 'rgba(255,220,80,0.55)' :
+        d.node_type === 'trait'    ? 'rgba(80,220,140,0.45)' : 'none')
+      .attr('stroke-width', d => d.node_type === 'pattern' ? 0 : 1.8)
+      .attr('filter', d =>
+        d.node_type === 'strength' ? 'url(#glow-lg)' :
+        d.node_type === 'trait'    ? 'url(#glow-md)' : null);
+    linkSel.transition().duration(300)
+      .attr('stroke-opacity', d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).opacity)
+      .attr('stroke-width',   d => (EDGE_STYLE[d.relation_type] ?? EDGE_STYLE.related_pattern).width);
+    document.getElementById('detect-result').textContent = '';
+    hideSidePanel();
+  }
+
+  // ── Side panel helpers ────────────────────────────────────────────────
+  function updateSidePanel(matchedIds, nodeById) {
+    const panel = document.getElementById('side-panel');
+    const list  = document.getElementById('sp-list');
+    const count = document.getElementById('sp-count');
+
+    if (!matchedIds.length) { hideSidePanel(); return; }
+
+    count.textContent = matchedIds.length;
+    list.innerHTML = '';
+    matchedIds.forEach(id => {
+      const nd = nodeById[id];
+      if (!nd) return;
+      const item = document.createElement('div');
+      item.className = 'sp-item';
+      item.innerHTML =
+        `<div class="sp-he">${nd.label_he}</div>` +
+        `<div class="sp-en">${nd.label_en}</div>` +
+        `<div class="sp-axis">${nd.group || ''}</div>`;
+      // Click on side-panel item → highlight that node in the graph
+      item.addEventListener('click', () => {
+        const nodeObj = nodes.find(n => n.id === id);
+        if (!nodeObj) return;
+        selectedNode = nodeObj;
+        highlightNode(nodeObj);
+      });
+      list.appendChild(item);
+    });
+
+    panel.classList.add('visible');
+  }
+
+  function hideSidePanel() {
+    document.getElementById('side-panel').classList.remove('visible');
+  }
+
+  // ── Detection trigger ─────────────────────────────────────────────────
+  // Build a quick lookup map by node id
+  const nodeById = {};
+  nodes.forEach(n => { nodeById[n.id] = n; });
+
+  function runDetection() {
+    const text = document.getElementById('detect-input').value.trim();
+    const el   = document.getElementById('detect-result');
+    if (!text) { clearDetection(); return; }
+    const matched = detectPatterns(text);
+    applyDetection(matched);
+    updateSidePanel(matched, nodeById);
+    if (matched.length === 0) {
+      el.textContent = 'לא זוהה דפוס';
+      el.style.color = '#7788aa';
+    } else {
+      el.textContent = `${matched.length} דפוס${matched.length !== 1 ? 'ים' : ''} זוהה${matched.length !== 1 ? 'ו' : ''}`;
+      el.style.color = '#ff9944';
+    }
+  }
+
+  document.getElementById('detect-btn').addEventListener('click', runDetection);
+
+  // Real-time detection while typing (debounced 280 ms)
+  let debounceTimer = null;
+  document.getElementById('detect-input').addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(runDetection, 280);
+  });
+
+  document.getElementById('detect-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { clearTimeout(debounceTimer); runDetection(); }
+    if (e.key === 'Escape') {
+      clearTimeout(debounceTimer);
+      document.getElementById('detect-input').value = '';
+      clearDetection();
+    }
+  });
+
+  // ── Virtue coloring callbacks (injected for use by initVirtueBalance) ──
+  _applyVirtueColor = function(domId, wkId) {
+    nodeSel.select('.body').transition().duration(500)
+      .attr('fill', d => {
+        if (d.node_type !== 'pattern') return
+          d.node_type === 'strength' ? NODE_BASE_COLOR.strength : NODE_BASE_COLOR.trait;
+        const vid = patternVirtueMap[d.id];
+        if (!vid) return patternColor(d.group);
+        if (vid === domId) return VIRTUE_COLORS[vid]?.fill ?? patternColor(d.group);
+        if (vid === wkId)  return WEAKEST_VIRTUE_COLOR;
+        return VIRTUE_COLORS[vid]?.dim ?? patternColor(d.group);
+      })
+      .attr('opacity', d => {
+        if (d.node_type !== 'pattern') return 1;
+        const vid = patternVirtueMap[d.id];
+        if (vid === domId) return 1;
+        if (vid === wkId)  return 0.58;
+        return 0.42;
+      });
+  };
+
+  _clearVirtueColor = function() {
+    nodeSel.select('.body').transition().duration(400)
+      .attr('fill', d =>
+        d.node_type === 'pattern'  ? patternColor(d.group) :
+        d.node_type === 'trait'    ? NODE_BASE_COLOR.trait :
+                                     NODE_BASE_COLOR.strength)
+      .attr('opacity', 1);
+  };
+}
+
+// ════════════════════════════════════════════════════════
+//  VIRTUE BALANCE  ·  init + radar + MRI panel
+// ════════════════════════════════════════════════════════
+
+function initVirtueBalance(vb, pmData) {
+  // Build pattern → virtue lookup
+  pmData.mappings.forEach(m => { patternVirtueMap[m.pattern_id] = m.virtue_id; });
+
+  // Populate MRI panel
+  populateMRIPanel(vb);
+
+  // Draw radar chart
+  drawRadar(document.getElementById('radar-container'), vb);
+
+  // Enable MRI button
+  const btn = document.getElementById('mri-btn');
+  btn.disabled = false;
+  btn.addEventListener('click', () => toggleVirtuePanel(vb));
+  document.getElementById('vp-close').addEventListener('click', () => {
+    if (virtueMode) toggleVirtuePanel(vb);
+  });
+}
+
+function toggleVirtuePanel(vb) {
+  const panel = document.getElementById('virtue-panel');
+  const btn   = document.getElementById('mri-btn');
+  virtueMode = !virtueMode;
+  if (virtueMode) {
+    panel.classList.add('visible');
+    btn.classList.add('active');
+    if (_applyVirtueColor) _applyVirtueColor(vb.dominant_virtue?.id, vb.weakest_virtue?.id);
+  } else {
+    panel.classList.remove('visible');
+    btn.classList.remove('active');
+    if (_clearVirtueColor) _clearVirtueColor();
+  }
+}
+
+// ── Populate MRI text panel ───────────────────────────────────────────────
+function populateMRIPanel(vb) {
+  const dom = vb.dominant_virtue;
+  const wk  = vb.weakest_virtue;
+  const vc  = VIRTUE_COLORS;
+
+  // Dominant
+  const domColor = vc[dom.id]?.fill ?? '#9977ff';
+  document.getElementById('mri-dom-bar').style.background   = domColor;
+  document.getElementById('mri-dom-he').textContent          = vc[dom.id]?.label_he ?? dom.label_he;
+  document.getElementById('mri-dom-desc').textContent        = vb.virtue_scores[dom.id]?.activation_description_he ?? '';
+  const domFill = document.getElementById('mri-dom-fill');
+  domFill.style.background = domColor;
+  setTimeout(() => { domFill.style.width = dom.score + '%'; }, 80);
+
+  // Weakest
+  document.getElementById('mri-wk-he').textContent           = vc[wk.id]?.label_he ?? wk.label_he;
+  document.getElementById('mri-wk-desc').textContent         = vb.virtue_scores[wk.id]?.activation_description_he ?? '';
+  const wkFill = document.getElementById('mri-wk-fill');
+  setTimeout(() => { wkFill.style.width = Math.max(wk.score, 4) + '%'; }, 120);
+
+  // Recommended strengths (top 3)
+  const list = document.getElementById('mri-strengths');
+  list.innerHTML = '';
+  (vb.recommended_strengths || []).slice(0, 3).forEach(r => {
+    const row = document.createElement('div');
+    row.className = 'mri-str';
+    row.innerHTML =
+      `<div class="mri-str-n">${r.priority}</div>` +
+      `<div class="mri-str-body">` +
+        `<div class="mri-str-he">${r.label_he}</div>` +
+        `<div class="mri-str-why">${r.reason_he}</div>` +
+      `</div>`;
+    list.appendChild(row);
+  });
+}
+
+// ── Radar chart ──────────────────────────────────────────────────────────
+function drawRadar(container, vb) {
+  const VIRTUE_ORDER = ['wisdom', 'courage', 'humanity', 'justice', 'temperance', 'transcendence'];
+  const ns = 'http://www.w3.org/2000/svg';
+  const S = 220, cx = 110, cy = 110, R = 78;
+  const n = VIRTUE_ORDER.length;
+
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${S} ${S}`);
+
+  function angle(i) { return (i / n) * 2 * Math.PI - Math.PI / 2; }
+  function pt(i, r) {
+    return [cx + r * Math.cos(angle(i)), cy + r * Math.sin(angle(i))];
+  }
+  function mkEl(tag, attrs) {
+    const el = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+    return el;
+  }
+
+  // Grid rings (5 levels)
+  for (let ring = 1; ring <= 5; ring++) {
+    const r = R * ring / 5;
+    const pts = VIRTUE_ORDER.map((_, i) => pt(i, r).join(',')).join(' ');
+    svg.appendChild(mkEl('polygon', {
+      points: pts, fill: 'none',
+      stroke: ring === 5 ? 'rgba(110,90,190,0.22)' : 'rgba(90,75,155,0.13)',
+      'stroke-width': '1',
+    }));
+  }
+
+  // Axis lines
+  VIRTUE_ORDER.forEach((_, i) => {
+    const [x2, y2] = pt(i, R);
+    svg.appendChild(mkEl('line', {
+      x1: cx, y1: cy, x2, y2,
+      stroke: 'rgba(110,90,190,0.18)', 'stroke-width': '1',
+    }));
+  });
+
+  // Data polygon
+  const scores = VIRTUE_ORDER.map(v => ((vb.virtue_scores[v]?.normalized ?? 0) / 100));
+  const dataPts = VIRTUE_ORDER.map((_, i) => pt(i, R * scores[i]).join(',')).join(' ');
+  svg.appendChild(mkEl('polygon', {
+    points: dataPts,
+    fill: 'rgba(130,100,255,0.16)',
+    stroke: 'rgba(160,130,255,0.75)',
+    'stroke-width': '1.8',
+  }));
+
+  // Dots + labels per virtue
+  VIRTUE_ORDER.forEach((v, i) => {
+    const score = scores[i];
+    const vc    = VIRTUE_COLORS[v];
+    const [dx, dy] = pt(i, R * score);
+    const [lx, ly] = pt(i, R + 16);
+    const a = angle(i) * 180 / Math.PI;
+
+    // Score dot (color = virtue)
+    svg.appendChild(mkEl('circle', { cx: dx, cy: dy, r: '3.8', fill: vc.fill }));
+
+    // Label
+    const lbl = mkEl('text', {
+      x: lx, y: ly,
+      'text-anchor': 'middle',
+      'dominant-baseline': 'middle',
+      'font-size': '8.5',
+      'font-family': 'Segoe UI,Arial,sans-serif',
+      fill: score >= 0.5 ? vc.fill : 'rgba(160,150,200,0.55)',
+    });
+    lbl.textContent = vc.label_he;
+    svg.appendChild(lbl);
+
+    // Score % text (only if > 0)
+    if (score > 0.05) {
+      const [sx, sy] = pt(i, R * score - 9);
+      const stxt = mkEl('text', {
+        x: sx, y: sy,
+        'text-anchor': 'middle', 'dominant-baseline': 'middle',
+        'font-size': '7', 'font-family': 'Segoe UI,Arial,sans-serif',
+        fill: 'rgba(220,210,255,0.65)',
+      });
+      stxt.textContent = Math.round(score * 100);
+      svg.appendChild(stxt);
+    }
+  });
+
+  // Center dot
+  svg.appendChild(mkEl('circle', { cx, cy, r: '3', fill: 'rgba(140,120,255,0.35)' }));
+
+  container.innerHTML = '';
+  container.appendChild(svg);
+}
+
+// ── SVG glow filter helper ────────────────────────────────────────────────
+function addGlowFilter(defs, id, std) {
+  const f = defs.append('filter')
+    .attr('id', id)
+    .attr('x', '-60%').attr('y', '-60%')
+    .attr('width', '220%').attr('height', '220%');
+  f.append('feGaussianBlur').attr('stdDeviation', std).attr('result', 'blur');
+  const m = f.append('feMerge');
+  m.append('feMergeNode').attr('in', 'blur');
+  m.append('feMergeNode').attr('in', 'SourceGraphic');
+}
+</script>
+</body>
+</html>
