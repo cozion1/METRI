@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אילון דיגיטל סטודיו ו-AI — דברו איתנו</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #070b14;
+      --surface: #0f1520;
+      --surface2: #162030;
+      --border: #1e2d42;
+      --accent: #00c6ff;
+      --accent2: #0072ff;
+      --accent-glow: #00c6ff33;
+      --text: #e8f0fe;
+      --muted: #6b7a99;
+      --user-bubble: #0072ff;
+      --bot-bubble: #162030;
+      --green: #00e5a0;
+      --yellow: #fbbf24;
+      --red: #ff4d6d;
+      --blue: #60a5fa;
+      --wa: #25d366;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse, #0072ff18 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .logo-icon {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+    .logo span { color: var(--accent); }
+    .nav-live {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      color: var(--green);
+      background: #00e5a012;
+      border: 1px solid #00e5a030;
+      border-radius: 99px;
+      padding: 5px 14px;
+    }
+    .nav-live::before { content: "●"; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* ─── HERO ─── */
+    .hero {
+      padding: 64px 24px 48px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #00c6ff12;
+      border: 1px solid #00c6ff30;
+      border-radius: 99px;
+      padding: 6px 18px;
+      font-size: 13px;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(30px, 5.5vw, 54px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #e8f0fe 20%, var(--accent) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 580px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero p strong { color: var(--text); }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .stat-num { font-size: 28px; font-weight: 800; color: var(--accent); }
+    .stat-lbl { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* ─── MODE CHIPS ─── */
+    .modes {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 0 24px 44px;
+      position: relative;
+      z-index: 1;
+    }
+    .mode-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--muted);
+      font-family: inherit;
+    }
+    .mode-chip:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: var(--surface2);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-sales    { background: var(--green); }
+    .dot-support  { background: var(--red); }
+    .dot-lead     { background: var(--yellow); }
+    .dot-schedule { background: var(--blue); }
+
+    /* ─── CHAT ─── */
+    .chat-wrap {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px 48px;
+      position: relative;
+      z-index: 1;
+    }
+    .chat-box {
+      width: 100%;
+      max-width: 740px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 32px 80px #00000088, 0 0 0 1px #ffffff08;
+    }
+
+    /* ─── CHAT HEADER ─── */
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface2);
+    }
+    .agent-avatar {
+      width: 46px; height: 46px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      box-shadow: 0 0 20px var(--accent-glow);
+    }
+    .agent-name  { font-weight: 700; font-size: 16px; }
+    .agent-role  { font-size: 13px; color: var(--muted); }
+    .header-actions {
+      margin-right: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .agent-online {
+      font-size: 12px;
+      color: var(--green);
+      display: flex; align-items: center; gap: 6px;
+      background: #00e5a010;
+      border: 1px solid #00e5a025;
+      border-radius: 99px;
+      padding: 4px 12px;
+    }
+    .agent-online::before { content: "●"; animation: pulse 2s infinite; font-size: 8px; }
+
+    .icon-btn {
+      width: 34px; height: 34px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      transition: all .2s;
+      position: relative;
+    }
+    .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .icon-btn[title]:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -32px;
+      right: 50%;
+      transform: translateX(50%);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      white-space: nowrap;
+      color: var(--text);
+      z-index: 99;
+    }
+
+    #modeBadge {
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-weight: 600;
+      display: none;
+    }
+    .mode-sales    { background:#00e5a018; color:var(--green);  border:1px solid #00e5a030; }
+    .mode-support  { background:#ff4d6d18; color:var(--red);    border:1px solid #ff4d6d30; }
+    .mode-lead     { background:#fbbf2418; color:var(--yellow); border:1px solid #fbbf2430; }
+    .mode-schedule { background:#60a5fa18; color:var(--blue);   border:1px solid #60a5fa30; }
+    .mode-general  { background:#00c6ff18; color:var(--accent); border:1px solid #00c6ff30; }
+
+    /* ─── MESSAGES ─── */
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 400px;
+      max-height: 520px;
+    }
+    .messages::-webkit-scrollbar { width: 4px; }
+    .messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+    .msg {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      animation: fadeUp .28s ease;
+    }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+    .msg.user { flex-direction: row-reverse; }
+
+    .msg-av {
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+    }
+    .msg.bot  .msg-av { background: linear-gradient(135deg, var(--accent2), var(--accent)); box-shadow: 0 0 12px var(--accent-glow); }
+    .msg.user .msg-av { background: var(--surface2); border: 1px solid var(--border); }
+
+    .bubble {
+      max-width: 76%;
+      padding: 13px 17px;
+      border-radius: 18px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .msg.bot  .bubble { background: var(--bot-bubble); border: 1px solid var(--border); border-bottom-right-radius: 5px; }
+    .msg.user .bubble { background: var(--user-bubble); border-bottom-left-radius: 5px; color: #fff; }
+
+    .bubble-meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .msg.user .bubble-meta { justify-content: flex-end; }
+    .mode-tag-inline {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 99px;
+      font-weight: 600;
+    }
+
+    /* ─── TYPING ─── */
+    .typing-bbl {
+      background: var(--bot-bubble);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      border-bottom-right-radius: 5px;
+      padding: 14px 18px;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .typing-bbl span {
+      width: 7px; height: 7px;
+      background: var(--muted);
+      border-radius: 50%;
+      animation: bounce .9s infinite;
+    }
+    .typing-bbl span:nth-child(2) { animation-delay: .18s; }
+    .typing-bbl span:nth-child(3) { animation-delay: .36s; }
+    @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-7px)} }
+
+    /* ─── QUICK REPLIES ─── */
+    .quick-wrap {
+      padding: 0 24px 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .q-btn {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 7px 15px;
+      font-size: 13px;
+      color: var(--text);
+      cursor: pointer;
+      transition: all .2s;
+      font-family: inherit;
+    }
+    .q-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ─── INPUT ─── */
+    .input-area {
+      padding: 16px 20px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface2);
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+    }
+    textarea {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 13px 17px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--text);
+      resize: none;
+      min-height: 50px;
+      max-height: 140px;
+      line-height: 1.5;
+      outline: none;
+      transition: border .2s, box-shadow .2s;
+      direction: rtl;
+    }
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    textarea::placeholder { color: var(--muted); }
+
+    .send-btn {
+      width: 50px; height: 50px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      border: none;
+      border-radius: 14px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 20px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all .2s;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .send-btn:hover  { transform: scale(1.05); box-shadow: 0 6px 24px var(--accent-glow); }
+    .send-btn:disabled { opacity: .35; transform: none; box-shadow: none; }
+
+    /* ─── EMPTY STATE ─── */
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--muted);
+      padding: 40px;
+      text-align: center;
+    }
+    .empty-icon { font-size: 52px; }
+    .empty-state h3 { color: var(--text); font-size: 20px; font-weight: 700; }
+    .empty-state p  { font-size: 15px; line-height: 1.7; max-width: 380px; }
+
+    /* ─── SERVICES ─── */
+    .services {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 0 24px 64px;
+      position: relative;
+      z-index: 1;
+    }
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      width: 220px;
+      text-align: center;
+      transition: all .2s;
+    }
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px var(--accent-glow);
+    }
+    .service-card .icon { font-size: 32px; margin-bottom: 10px; }
+    .service-card h4  { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .service-card p   { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── WHATSAPP FLOATING BUTTON ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .wa-bubble {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--text);
+      max-width: 200px;
+      line-height: 1.5;
+      box-shadow: 0 8px 24px #00000060;
+      animation: popIn .4s ease;
+      position: relative;
+    }
+    .wa-bubble::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 20px;
+      width: 0; height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 8px solid var(--border);
+    }
+    @keyframes popIn { from{opacity:0;transform:scale(.8) translateY(10px)} to{opacity:1;transform:none} }
+
+    .wa-btn {
+      width: 58px; height: 58px;
+      background: var(--wa);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 6px 24px #25d36660;
+      transition: all .2s;
+      text-decoration: none;
+      animation: popIn .4s ease .2s both;
+    }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 8px 32px #25d36680; }
+    .wa-close {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      width: 22px; height: 22px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .wa-close:hover { color: var(--red); }
+
+    /* ─── SUMMARY MODAL ─── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: #000000bb;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      backdrop-filter: blur(4px);
+    }
+    .modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 32px 80px #00000099;
+      animation: fadeUp .3s ease;
+    }
+    .modal h2 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+    .modal p.sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+    .modal-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      flex: 1;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      border: none;
+      border-radius: 12px;
+      padding: 13px 20px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--accent-glow); }
+    .btn-secondary {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 20px;
+      color: var(--text);
+      font-size: 15px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-wa {
+      background: var(--wa);
+      border: none;
+      border-radius: 12px;
+      padding: 13px 20px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s;
+      display: flex; align-items: center; gap: 8px;
+      text-decoration: none;
+    }
+    .btn-wa:hover { opacity: .9; }
+
+    .summary-preview {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--muted);
+      max-height: 180px;
+      overflow-y: auto;
+      line-height: 1.7;
+      text-align: right;
+      direction: rtl;
+    }
+    .summary-preview .s-user { color: var(--text); }
+    .summary-preview .s-bot  { color: var(--accent); }
+
+    /* ─── TOAST ─── */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--surface2);
+      border: 1px solid var(--green);
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-size: 14px;
+      color: var(--green);
+      z-index: 300;
+      animation: fadeUp .3s ease;
+      box-shadow: 0 8px 24px #00000060;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      position: relative;
+      z-index: 1;
+    }
+    footer strong { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- ══ HIDDEN NETLIFY FORM (לאיסוף שיחות ב-Netlify) ══ -->
+<form name="chat-leads" netlify netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="timestamp" />
+  <input type="hidden" name="summary" />
+  <input type="hidden" name="mode" />
+</form>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="logo">
+    <div class="logo-icon">⚡</div>
+    אילון <span>דיגיטל</span>&nbsp;סטודיו&nbsp;ו-AI
+  </div>
+  <div class="nav-live">הסוכן פעיל עכשיו</div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-tag">⚡ סוכן AI חכם — מחובר ומוכן</div>
+  <h1>שירות לקוחות<br />שחושב לבד</h1>
+  <p>
+    הסוכן שלנו מנתח כל פנייה בזמן אמת ומחליט לבד<br />
+    איך לעזור — <strong>מכירות, תמיכה, תיאום פגישה</strong> או איסוף פרטים.<br />
+    זה בדיוק מה שאנחנו בונים לעסק שלכם.
+  </p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">24/7</div><div class="stat-lbl">זמינות מלאה</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">תת-סוכנים חכמים</div></div>
+    <div class="stat"><div class="stat-num">< 2s</div><div class="stat-lbl">זמן תגובה</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-lbl">מותאם לעסק שלך</div></div>
+  </div>
+</div>
+
+<!-- ══ MODE CHIPS ══ -->
+<div class="modes">
+  <button class="mode-chip" data-msg="אני מעוניין לשמוע על השירותים שלכם">
+    <span class="dot dot-sales"></span> שאלות על שירות
+  </button>
+  <button class="mode-chip" data-msg="יש לי בעיה טכנית שאני צריך עזרה בה">
+    <span class="dot dot-support"></span> תמיכה טכנית
+  </button>
+  <button class="mode-chip" data-msg="אשמח לקבל הצעת מחיר ולהשאיר פרטים">
+    <span class="dot dot-lead"></span> הצעת מחיר
+  </button>
+  <button class="mode-chip" data-msg="אני רוצה לתאם שיחת היכרות או הדגמה">
+    <span class="dot dot-schedule"></span> תיאום פגישה
+  </button>
+</div>
+
+<!-- ══ CHAT ══ -->
+<div class="chat-wrap">
+  <div class="chat-box">
+
+    <div class="chat-header">
+      <div class="agent-avatar">🤖</div>
+      <div>
+        <div class="agent-name">אילון — הסוכן החכם</div>
+        <div class="agent-role">אילון דיגיטל סטודיו ו-AI</div>
+      </div>
+      <div class="header-actions">
+        <div class="agent-online">מחובר</div>
+        <span id="modeBadge"></span>
+        <button class="icon-btn" id="summaryBtn" title="שמור שיחה" style="display:none">💾</button>
+      </div>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">💬</div>
+        <h3>שלום! אני אילון 👋</h3>
+        <p>
+          אני הסוכן הדיגיטלי של החברה.<br />
+          שאל אותי על השירותים שלנו, מחירים, הדגמות —
+          או סתם תגיד שלום, אני כאן.
+        </p>
+      </div>
+    </div>
+
+    <div class="quick-wrap" id="quickWrap">
+      <button class="q-btn" data-msg="מה אתם מציעים?">מה אתם מציעים?</button>
+      <button class="q-btn" data-msg="מה המחיר של צ'אטבוט?">מחיר צ'אטבוט?</button>
+      <button class="q-btn" data-msg="אני רוצה הדגמה">אני רוצה הדגמה</button>
+      <button class="q-btn" data-msg="יש לי תקלה">יש לי תקלה</button>
+      <button class="q-btn" data-msg="למה לבחור בכם?">למה לבחור בכם?</button>
+    </div>
+
+    <div class="input-area">
+      <textarea id="input" placeholder="כתוב הודעה לאילון..." rows="1"></textarea>
+      <button class="send-btn" id="sendBtn" title="שלח">➤</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══ SERVICES ══ -->
+<div class="services">
+  <div class="service-card">
+    <div class="icon">🌐</div>
+    <h4>בניית אתרים</h4>
+    <p>אתרים מהירים, מעוצבים ומותאמים לכל מכשיר</p>
+  </div>
+  <div class="service-card">
+    <div class="icon">🤖</div>
+    <h4>סוכני AI</h4>
+    <p>צ'אטבוטים ואוטומציות חכמות לעסק שלך</p>
+  </div>
+  <div class="service-card">
+    <div class="icon">📱</div>
+    <h4>שיווק דיגיטלי</h4>
+    <p>מדיה חברתית, קמפיינים ותוכן שמביא לקוחות</p>
+  </div>
+  <div class="service-card">
+    <div class="icon">🎓</div>
+    <h4>הדרכות AI</h4>
+    <p>קורסים וייעוץ להטמעת AI בתוך העסק</p>
+  </div>
+</div>
+
+<footer>
+  <strong>אילון דיגיטל סטודיו ו-AI</strong> · כל הזכויות שמורות ©2025
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ══ -->
+<div class="wa-float" id="waFloat">
+  <div class="wa-bubble" id="waBubble">
+    <button class="wa-close" id="waClose">✕</button>
+    מעדיפים וואטסאפ?<br />
+    <strong>נשמח לדבר שם!</strong> 💬
+  </div>
+  <a
+    id="waLink"
+    class="wa-btn"
+    href="https://wa.me/972549199344?text=שלום%2C+ראיתי+את+האתר+ואשמח+לשמוע+עוד"
+    target="_blank"
+    rel="noopener"
+    title="שלחו לנו בוואטסאפ"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- ══ SUMMARY MODAL ══ -->
+<div class="modal-overlay" id="summaryModal" style="display:none">
+  <div class="modal">
+    <h2>📋 סיכום השיחה</h2>
+    <p class="sub">תוכל להוריד את השיחה כקובץ או לשלוח אותה לוואטסאפ</p>
+    <div class="summary-preview" id="summaryPreview"></div>
+    <div class="modal-actions">
+      <button class="btn-primary" id="downloadBtn">⬇️ הורד כקובץ</button>
+      <a class="btn-wa" id="summaryWaBtn" href="#" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        שלח לוואטסאפ
+      </a>
+      <button class="btn-secondary" id="closeModal">סגור</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ══ CONFIG ══
+  // !!! החלף את המספר הזה במספר הוואטסאפ האמיתי של החברה !!!
+  const WA_PHONE = "972549199344";
+
+  // ══ ELEMENTS ══
+  const messagesEl  = document.getElementById("messages");
+  const inputEl     = document.getElementById("input");
+  const sendBtn     = document.getElementById("sendBtn");
+  const modeBadge   = document.getElementById("modeBadge");
+  const quickWrap   = document.getElementById("quickWrap");
+  const summaryBtn  = document.getElementById("summaryBtn");
+  const summaryModal= document.getElementById("summaryModal");
+  const summaryPrev = document.getElementById("summaryPreview");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const closeModal  = document.getElementById("closeModal");
+  const summaryWaBtn= document.getElementById("summaryWaBtn");
+  const waClose     = document.getElementById("waClose");
+  const waBubble    = document.getElementById("waBubble");
+
+  const MODES = {
+    sales:    { label: "מכירות",       cls: "mode-sales" },
+    support:  { label: "תמיכה",        cls: "mode-support" },
+    lead:     { label: "איסוף פרטים",  cls: "mode-lead" },
+    schedule: { label: "תיאום",        cls: "mode-schedule" },
+    general:  { label: "כללי",         cls: "mode-general" },
+  };
+
+  let history = [];
+  let busy = false;
+  let lastMode = "general";
+
+  // ══ 1. הודעת פתיחה אוטומטית אחרי 3 שניות ══
+  setTimeout(() => {
+    if (history.length === 0) {
+      addMsg("bot",
+        "שלום! 👋 אני אילון, הסוכן החכם של אילון דיגיטל סטודיו.\n" +
+        "אשמח לעזור לך — שאל על השירותים שלנו, מחיר, הדגמה, או כל דבר אחר!",
+        "general"
+      );
+    }
+  }, 3000);
+
+  // ══ TEXTAREA AUTO-RESIZE ══
+  inputEl.addEventListener("input", () => {
+    inputEl.style.height = "auto";
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 140) + "px";
+  });
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); }
+  });
+  sendBtn.addEventListener("click", send);
+
+  document.querySelectorAll("[data-msg]").forEach((btn) => {
+    btn.addEventListener("click", () => { inputEl.value = btn.dataset.msg; send(); });
+  });
+
+  // ══ WHATSAPP CLOSE ══
+  waClose.addEventListener("click", () => { waBubble.style.display = "none"; });
+
+  // ══ SUMMARY MODAL ══
+  summaryBtn.addEventListener("click", openSummary);
+  closeModal.addEventListener("click", () => { summaryModal.style.display = "none"; });
+  summaryModal.addEventListener("click", (e) => {
+    if (e.target === summaryModal) summaryModal.style.display = "none";
+  });
+
+  downloadBtn.addEventListener("click", () => {
+    const text = buildPlainText();
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href = url;
+    a.download = `שיחה-אילון-${new Date().toLocaleDateString("he-IL").replace(/\//g,"-")}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast("✅ הקובץ הורד בהצלחה");
+    summaryModal.style.display = "none";
+  });
+
+  function openSummary() {
+    // Build HTML preview
+    summaryPrev.innerHTML = history.map((m) =>
+      `<div class="${m.role === "user" ? "s-user" : "s-bot"}">
+        ${m.role === "user" ? "👤 לקוח" : "🤖 אילון"}: ${m.content.replace(/\n/g,"<br>")}
+      </div>`
+    ).join("<hr style='border-color:#1e2d42;margin:8px 0'/>");
+
+    // WhatsApp link with summary
+    const waText = encodeURIComponent("סיכום שיחה עם אילון:\n\n" + buildPlainText().slice(0, 800));
+    summaryWaBtn.href = `https://wa.me/${WA_PHONE}?text=${waText}`;
+
+    summaryModal.style.display = "flex";
+
+    // Submit to Netlify Forms silently
+    submitToNetlify();
+  }
+
+  function buildPlainText() {
+    const date = new Date().toLocaleString("he-IL");
+    const lines = history.map((m) =>
+      `[${m.role === "user" ? "לקוח" : "אילון"}]: ${m.content}`
+    ).join("\n\n");
+    return `שיחה עם אילון דיגיטל סטודיו\nתאריך: ${date}\n\n${lines}`;
+  }
+
+  function submitToNetlify() {
+    if (history.length === 0) return;
+    const formData = new FormData();
+    formData.append("form-name", "chat-leads");
+    formData.append("timestamp", new Date().toISOString());
+    formData.append("summary", buildPlainText());
+    formData.append("mode", lastMode);
+    fetch("/", { method: "POST", body: formData }).catch(() => {});
+  }
+
+  // ══ HELPERS ══
+  function ts() {
+    return new Date().toLocaleTimeString("he-IL", { hour: "2-digit", minute: "2-digit" });
+  }
+
+  function esc(s) {
+    return s
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\n/g, "<br>");
+  }
+
+  function showToast(msg) {
+    const t = document.createElement("div");
+    t.className = "toast";
+    t.textContent = msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+  }
+
+  function addMsg(role, text, mode) {
+    document.getElementById("emptyState")?.remove();
+    quickWrap.style.display = "none";
+    summaryBtn.style.display = "flex";
+
+    const m   = MODES[mode] || MODES.general;
+    lastMode  = mode || "general";
+    const div = document.createElement("div");
+    div.className = `msg ${role}`;
+
+    const av    = role === "bot" ? "🤖" : "👤";
+    const badge = role === "bot"
+      ? `<span class="mode-tag-inline ${m.cls}">${m.label}</span>`
+      : "";
+
+    div.innerHTML = `
+      <div class="msg-av">${av}</div>
+      <div>
+        <div class="bubble">${esc(text)}</div>
+        <div class="bubble-meta">${ts()} ${badge}</div>
+      </div>`;
+
+    messagesEl.appendChild(div);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    modeBadge.textContent   = m.label;
+    modeBadge.className     = `mode-tag-inline ${m.cls}`;
+    modeBadge.style.display = "inline";
+  }
+
+  function showTyping() {
+    const el = document.createElement("div");
+    el.className = "msg bot"; el.id = "typing";
+    el.innerHTML = `<div class="msg-av">🤖</div><div class="typing-bbl"><span></span><span></span><span></span></div>`;
+    messagesEl.appendChild(el);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  // ══ SEND ══
+  async function send() {
+    const text = inputEl.value.trim();
+    if (!text || busy) return;
+
+    busy = true;
+    sendBtn.disabled = true;
+    inputEl.value = "";
+    inputEl.style.height = "auto";
+
+    addMsg("user", text, null);
+    history.push({ role: "user", content: text });
+    showTyping();
+
+    try {
+      const res  = await fetch("/.netlify/functions/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: history }),
+      });
+      const data = await res.json();
+      document.getElementById("typing")?.remove();
+
+      if (data.error) {
+        addMsg("bot", "מצטער, הייתה שגיאה. אנא נסה שוב.", "general");
+      } else {
+        addMsg("bot", data.text, data.mode);
+        history.push({ role: "assistant", content: data.text });
+      }
+    } catch {
+      document.getElementById("typing")?.remove();
+      addMsg("bot", "לא הצלחתי להתחבר. בדוק את החיבור ונסה שוב.", "general");
+    }
+
+    busy = false;
+    sendBtn.disabled = false;
+    inputEl.focus();
+  }
+</script>
+</body>
+</html>
