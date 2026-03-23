@@ -1022,6 +1022,11 @@
       } else {
         addMsg("bot", data.text, data.mode);
         history.push({ role: "assistant", content: data.text });
+
+        // אם נאסף ליד — שלח לוואטסאפ אוטומטית
+        if (data.leadData) {
+          setTimeout(() => sendLeadToWhatsapp(data.leadData), 1000);
+        }
       }
     } catch {
       document.getElementById("typing")?.remove();
@@ -1031,6 +1036,23 @@
     busy = false;
     sendBtn.disabled = false;
     inputEl.focus();
+  }
+
+  // ══ שליחת סיכום לוואטסאפ כשנאסף ליד ══
+  function sendLeadToWhatsapp(leadData) {
+    const date = new Date().toLocaleString("he-IL");
+    const convo = history
+      .map((m) => `${m.role === "user" ? "לקוח" : "אילון"}: ${m.content}`)
+      .join("\n");
+
+    const msg = `📋 פנייה חדשה מהאתר!\n` +
+                `🕐 ${date}\n\n` +
+                `👤 ${leadData}\n\n` +
+                `💬 תמצית השיחה:\n${convo.slice(0, 600)}`;
+
+    const url = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(msg)}`;
+    window.open(url, "_blank");
+    showToast("✅ הפרטים נשלחו לוואטסאפ שלך!");
   }
 </script>
 </body>
