@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>אילון דיגיטל סטודיו ו-AI — דברו איתנו</title>
+  <title>אביב הסוכן החכם — דברו איתנו</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -668,7 +668,7 @@
 <nav>
   <div class="logo">
     <div class="logo-icon">⚡</div>
-    אילון <span>דיגיטל</span>&nbsp;סטודיו&nbsp;ו-AI
+    אביב <span>הסוכן</span>&nbsp;החכם
   </div>
   <div class="nav-live">הסוכן פעיל עכשיו</div>
 </nav>
@@ -713,8 +713,8 @@
     <div class="chat-header">
       <div class="agent-avatar">🤖</div>
       <div>
-        <div class="agent-name">אילון — הסוכן החכם</div>
-        <div class="agent-role">אילון דיגיטל סטודיו ו-AI</div>
+        <div class="agent-name">אביב — הסוכן החכם</div>
+        <div class="agent-role">אביב הסוכן החכם</div>
       </div>
       <div class="header-actions">
         <div class="agent-online">מחובר</div>
@@ -726,7 +726,7 @@
     <div class="messages" id="messages">
       <div class="empty-state" id="emptyState">
         <div class="empty-icon">💬</div>
-        <h3>שלום! אני אילון 👋</h3>
+        <h3>שלום! אני אביב 👋</h3>
         <p>
           אני הסוכן הדיגיטלי של החברה.<br />
           שאל אותי על השירותים שלנו, מחירים, הדגמות —
@@ -744,7 +744,7 @@
     </div>
 
     <div class="input-area">
-      <textarea id="input" placeholder="כתוב הודעה לאילון..." rows="1"></textarea>
+      <textarea id="input" placeholder="כתוב הודעה לאביב..." rows="1"></textarea>
       <button class="send-btn" id="sendBtn" title="שלח">➤</button>
     </div>
 
@@ -813,9 +813,9 @@
 
     <div class="how-card how-card-result">
       <div class="how-icon">🤖</div>
-      <div class="how-card-title">אילון — הסוכן החכם</div>
+      <div class="how-card-title">אביב — הסוכן החכם</div>
       <div class="how-card-role">תפקיד: לייצג את העסק שלך 24/7</div>
-      <p>אילון הוא הסוכן שהלקוח רואה. הוא מחבר בין BEZEN ל-Gemini ומנהל את השיחה בצורה חלקה.</p>
+      <p>אביב הוא הסוכן שהלקוח רואה. הוא מחבר בין BEZEN ל-Gemini ומנהל את השיחה בצורה חלקה.</p>
       <ul class="how-list">
         <li>✅ מזהה סוג פנייה — מכירה / תמיכה / ליד</li>
         <li>✅ אוסף פרטי לקוח ושולח לוואטסאפ</li>
@@ -934,7 +934,7 @@
 </style>
 
 <footer>
-  <strong>אילון דיגיטל סטודיו ו-AI</strong> · כל הזכויות שמורות ©2025
+  <strong>אביב הסוכן החכם</strong> · כל הזכויות שמורות ©2025
 </footer>
 
 <!-- ══ BEZEN + TOKEN PANEL ══ -->
@@ -1037,7 +1037,7 @@
   setTimeout(() => {
     if (history.length === 0) {
       addMsg("bot",
-        "שלום! 👋 אני אילון, הסוכן החכם של אילון דיגיטל סטודיו.\n" +
+        "שלום! 👋 אני אביב, הסוכן החכם של אביב הסוכן החכם.\n" +
         "אשמח לעזור לך — שאל על השירותים שלנו, מחיר, הדגמה, או כל דבר אחר!",
         "general"
       );
@@ -1074,7 +1074,7 @@
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement("a");
     a.href = url;
-    a.download = `שיחה-אילון-${new Date().toLocaleDateString("he-IL").replace(/\//g,"-")}.txt`;
+    a.download = `שיחה-אביב-${new Date().toLocaleDateString("he-IL").replace(/\//g,"-")}.txt`;
     a.click();
     URL.revokeObjectURL(url);
     showToast("✅ הקובץ הורד בהצלחה");
@@ -1085,12 +1085,12 @@
     // Build HTML preview
     summaryPrev.innerHTML = history.map((m) =>
       `<div class="${m.role === "user" ? "s-user" : "s-bot"}">
-        ${m.role === "user" ? "👤 לקוח" : "🤖 אילון"}: ${m.content.replace(/\n/g,"<br>")}
+        ${m.role === "user" ? "👤 לקוח" : "🤖 אביב"}: ${m.content.replace(/\n/g,"<br>")}
       </div>`
     ).join("<hr style='border-color:#1e2d42;margin:8px 0'/>");
 
     // WhatsApp link with summary
-    const waText = encodeURIComponent("סיכום שיחה עם אילון:\n\n" + buildPlainText().slice(0, 800));
+    const waText = encodeURIComponent("סיכום שיחה עם אביב:\n\n" + buildPlainText().slice(0, 800));
     summaryWaBtn.href = `https://wa.me/${WA_PHONE}?text=${waText}`;
 
     summaryModal.style.display = "flex";
@@ -1102,9 +1102,9 @@
   function buildPlainText() {
     const date = new Date().toLocaleString("he-IL");
     const lines = history.map((m) =>
-      `[${m.role === "user" ? "לקוח" : "אילון"}]: ${m.content}`
+      `[${m.role === "user" ? "לקוח" : "אביב"}]: ${m.content}`
     ).join("\n\n");
-    return `שיחה עם אילון דיגיטל סטודיו\nתאריך: ${date}\n\n${lines}`;
+    return `שיחה עם אביב הסוכן החכם\nתאריך: ${date}\n\n${lines}`;
   }
 
   function submitToNetlify() {
@@ -1271,7 +1271,7 @@
   function sendLeadToWhatsapp(leadData) {
     const date = new Date().toLocaleString("he-IL");
     const convo = history
-      .map((m) => `${m.role === "user" ? "לקוח" : "אילון"}: ${m.content}`)
+      .map((m) => `${m.role === "user" ? "לקוח" : "אביב"}: ${m.content}`)
       .join("\n");
 
     const msg = `📋 פנייה חדשה מהאתר!\n` +
