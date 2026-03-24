@@ -8,21 +8,21 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #070b14;
-      --surface: #0f1520;
-      --surface2: #162030;
-      --border: #1e2d42;
-      --accent: #00c6ff;
-      --accent2: #0072ff;
-      --accent-glow: #00c6ff33;
-      --text: #e8f0fe;
-      --muted: #6b7a99;
-      --user-bubble: #0072ff;
-      --bot-bubble: #162030;
-      --green: #00e5a0;
-      --yellow: #fbbf24;
-      --red: #ff4d6d;
-      --blue: #60a5fa;
+      --bg: #f0f4ff;
+      --surface: #ffffff;
+      --surface2: #e8eeff;
+      --border: #c8d5f0;
+      --accent: #2563eb;
+      --accent2: #1d4ed8;
+      --accent-glow: #2563eb22;
+      --text: #1e293b;
+      --muted: #64748b;
+      --user-bubble: #2563eb;
+      --bot-bubble: #ffffff;
+      --green: #059669;
+      --yellow: #d97706;
+      --red: #dc2626;
+      --blue: #3b82f6;
       --wa: #25d366;
     }
 
@@ -780,27 +780,27 @@
 </footer>
 
 <!-- ══ BEZEN + TOKEN PANEL ══ -->
-<div id="tokenPanel" style="display:none;position:fixed;bottom:90px;left:16px;background:#0f1520;border:1px solid #1e2d42;border-radius:12px;padding:12px 16px;font-size:12px;color:#6b7a99;z-index:999;min-width:180px;direction:rtl;">
-  <div style="color:#00c6ff;font-weight:700;margin-bottom:8px;font-size:13px;">📊 ניתוח שיחה</div>
+<div id="tokenPanel" style="display:none;position:fixed;bottom:90px;left:16px;background:#ffffff;border:1px solid #c8d5f0;border-radius:12px;padding:12px 16px;font-size:12px;color:#64748b;z-index:999;min-width:180px;direction:rtl;box-shadow:0 4px 20px #2563eb18;">
+  <div style="color:#2563eb;font-weight:700;margin-bottom:8px;font-size:13px;">📊 ניתוח שיחה</div>
   <div style="display:flex;flex-direction:column;gap:5px;">
-    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬆️ prompt</span><span id="tPrompt" style="color:#e8f0fe;font-weight:600;">0</span></div>
-    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬇️ תשובה</span><span id="tResponse" style="color:#e8f0fe;font-weight:600;">0</span></div>
-    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #1e2d42;padding-top:5px;"><span>🔢 סה"כ קריאה</span><span id="tTotal" style="color:#00e5a0;font-weight:700;">0</span></div>
-    <div style="display:flex;justify-content:space-between;gap:16px;"><span>💎 סה"כ שיחה</span><span id="tSession" style="color:#fbbf24;font-weight:700;">0</span></div>
-    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #1e2d42;padding-top:5px;"><span>🧠 BEZEN hits</span><span id="tBezen" style="color:#a78bfa;font-weight:700;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬆️ prompt</span><span id="tPrompt" style="color:#1e293b;font-weight:600;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬇️ תשובה</span><span id="tResponse" style="color:#1e293b;font-weight:600;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #c8d5f0;padding-top:5px;"><span>🔢 סה"כ קריאה</span><span id="tTotal" style="color:#059669;font-weight:700;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>💎 סה"כ שיחה</span><span id="tSession" style="color:#d97706;font-weight:700;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #c8d5f0;padding-top:5px;"><span>🧠 BEZEN hits</span><span id="tBezen" style="color:#7c3aed;font-weight:700;">0</span></div>
   </div>
 </div>
 
-<div id="bezenPanel" style="display:none;position:fixed;top:80px;left:16px;background:#0f1520;border:1px solid #1e2d42;border-radius:12px;padding:12px 16px;font-size:12px;color:#6b7a99;z-index:999;max-width:220px;direction:rtl;max-height:60vh;overflow-y:auto;">
-  <div style="color:#a78bfa;font-weight:700;margin-bottom:8px;font-size:13px;">🧠 ניתוח BEZEN</div>
+<div id="bezenPanel" style="display:none;position:fixed;top:80px;left:16px;background:#ffffff;border:1px solid #c8d5f0;border-radius:12px;padding:12px 16px;font-size:12px;color:#64748b;z-index:999;max-width:220px;direction:rtl;max-height:60vh;overflow-y:auto;box-shadow:0 4px 20px #2563eb18;">
+  <div style="color:#7c3aed;font-weight:700;margin-bottom:8px;font-size:13px;">🧠 ניתוח BEZEN</div>
   <div class="bezen-patterns"></div>
 </div>
 
 <style>
-.bezen-card { background:#162030; border-radius:8px; padding:8px; margin-bottom:8px; }
+.bezen-card { background:#f0f4ff; border-radius:8px; padding:8px; margin-bottom:8px; border:1px solid #c8d5f0; }
 .bezen-row  { display:flex; justify-content:space-between; gap:8px; margin-bottom:3px; line-height:1.4; }
-.bezen-row span:last-child { color:#e8f0fe; text-align:left; max-width:120px; }
-.bl { color:#a78bfa; white-space:nowrap; }
+.bezen-row span:last-child { color:#1e293b; text-align:left; max-width:120px; }
+.bl { color:#7c3aed; white-space:nowrap; }
 </style>
 
 <!-- ══ WHATSAPP FLOAT ══ -->
