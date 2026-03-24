@@ -1085,13 +1085,27 @@
     const el = document.getElementById("bezenPanel");
     if (!el || !analysis?.top_patterns?.length) return;
     el.style.display = "block";
-    el.querySelector(".bezen-patterns").innerHTML = analysis.top_patterns.map((p) => `
+    el.querySelector(".bezen-patterns").innerHTML = analysis.top_patterns.map((p, i) => `
       <div class="bezen-card">
-        <div class="bezen-row"><span class="bl">🧠 דפוס</span><span>${p.pattern_id}</span></div>
-        <div class="bezen-row"><span class="bl">💛 רגש</span><span>${p.emotion}</span></div>
-        <div class="bezen-row"><span class="bl">🔄 התנהגות</span><span>${p.behavior}</span></div>
-        <div class="bezen-row"><span class="bl">🌉 גשר</span><span>${p.bridge_sentence}</span></div>
-        <div class="bezen-row"><span class="bl">✨ תכונה</span><span>${p.helpful_trait}</span></div>
+        <div style="font-size:11px;color:#94a3b8;margin-bottom:6px;">
+          ${i === 0 ? "הדפוס הדומיננטי שזוהה" : "דפוס נוסף שזוהה"}
+        </div>
+        <div class="bezen-row">
+          <span class="bl">💛 הלקוח מרגיש</span>
+          <span>${p.emotion}</span>
+        </div>
+        <div class="bezen-row">
+          <span class="bl">🔄 הוא נוטה ל</span>
+          <span>${p.behavior}</span>
+        </div>
+        <div class="bezen-row">
+          <span class="bl">🌉 מה יעזור לו</span>
+          <span>${p.bridge_sentence}</span>
+        </div>
+        <div class="bezen-row">
+          <span class="bl">✨ כוח פנימי</span>
+          <span>${p.helpful_trait}</span>
+        </div>
       </div>`).join("");
   }
 
