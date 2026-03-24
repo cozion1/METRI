@@ -1,0 +1,802 @@
+[
+  {
+    "pattern_id": "stuck_progress",
+    "pattern_family": "השוואה והתקדמות",
+    "primary_feature": "תחושת תקיעות",
+    "emotion": "תסכול וקנאה",
+    "body_sensation": "כבדות בחזה",
+    "behavior": "הימנעות מפעולה",
+    "limiting_belief": "אני לא מספיק טוב",
+    "bridge_sentence": "זה בסדר להרגיש תקוע לפעמים",
+    "helpful_sentence": "כל אחד מתקדם בקצב שלו",
+    "helpful_trait": "סבלנות",
+    "experience_templates": [
+      "סיפור על מישהו שהתקדם לאט אבל הצליח",
+      "תרגיל נשימה להרגעת התסכול"
+    ],
+    "environment_options": [
+      "חדר שקט עם מוזיקה מרגיעה",
+      "הליכה בטבע"
+    ]
+  },
+  {
+    "pattern_id": "comparison_trap",
+    "pattern_family": "השוואה חברתית",
+    "primary_feature": "השוואה לאחרים",
+    "emotion": "קנאה וחוסר ביטחון",
+    "body_sensation": "מתח בבטן",
+    "behavior": "ביקורת עצמית",
+    "limiting_belief": "האחרים טובים יותר ממני",
+    "bridge_sentence": "השוואה היא טבעית אבל לא מועילה",
+    "helpful_sentence": "המסע שלי הוא ייחודי",
+    "helpful_trait": "קבלה עצמית",
+    "experience_templates": [
+      "השוואת הצלחות עם אתגרים אישיים",
+      "רשימת הישגים אישיים"
+    ],
+    "environment_options": [
+      "מראה עם תאורה רכה",
+      "יומן אישי"
+    ]
+  },
+  {
+    "pattern_id": "comparison_social_media",
+    "pattern_family": "השוואה חברתית",
+    "primary_feature": "השוואה ברשתות חברתיות",
+    "emotion": "קנאה ודיכאון",
+    "body_sensation": "כאב בחזה",
+    "behavior": "השוואה מתמדת",
+    "limiting_belief": "החיים שלהם מושלמים",
+    "bridge_sentence": "רואים רק את החלק היפה",
+    "helpful_sentence": "גם לי יש חיים מלאים",
+    "helpful_trait": "מודעות",
+    "experience_templates": [
+      "ניתוק זמני מרשתות",
+      "רשימת דברים טובים בחיי"
+    ],
+    "environment_options": [
+      "חדר ללא מסכים",
+      "זמן איכות עם עצמי"
+    ]
+  },
+  {
+    "pattern_id": "comparison_achievement",
+    "pattern_family": "השוואה חברתית",
+    "primary_feature": "השוואת הישגים",
+    "emotion": "תסכול וקנאה",
+    "body_sensation": "מתח בגב",
+    "behavior": "הפחתת הישגים עצמיים",
+    "limiting_belief": "ההישגים שלי לא מספיקים",
+    "bridge_sentence": "כל אחד מתחיל מנקודה שונה",
+    "helpful_sentence": "אני גאה בהישגיי",
+    "helpful_trait": "גאווה עצמית",
+    "experience_templates": [
+      "חגיגת הישגים קטנים",
+      "השוואה עם עצמי בעבר"
+    ],
+    "environment_options": [
+      "לוח הישגים אישי",
+      "חדר תצוגה"
+    ]
+  },
+  {
+    "pattern_id": "comparison_relationships",
+    "pattern_family": "השוואה חברתית",
+    "primary_feature": "השוואת קשרים",
+    "emotion": "בדידות וקנאה",
+    "body_sensation": "כאב לב",
+    "behavior": "ביקורת על הקשרים שלי",
+    "limiting_belief": "הקשרים שלי לא מספיק טובים",
+    "bridge_sentence": "כל קשר הוא ייחודי",
+    "helpful_sentence": "הקשרים שלי בעלי ערך",
+    "helpful_trait": "הערכה",
+    "experience_templates": [
+      "רשימת דברים טובים בקשריי",
+      "שיחה עם חבר על רגשות"
+    ],
+    "environment_options": [
+      "מפגש עם חברים קרובים",
+      "יומן קשרים"
+    ]
+  },
+  {
+    "pattern_id": "loneliness_isolation",
+    "pattern_family": "בדידות",
+    "primary_feature": "תחושת בדידות",
+    "emotion": "עצב ובדידות",
+    "body_sensation": "ריקנות בחזה",
+    "behavior": "הימנעות מאנשים",
+    "limiting_belief": "אף אחד לא רוצה להיות איתי",
+    "bridge_sentence": "בדידות היא תחושה זמנית",
+    "helpful_sentence": "אני יכול ליצור קשרים",
+    "helpful_trait": "פתיחות",
+    "experience_templates": [
+      "צעד קטן לכיוון חבר",
+      "תרגיל הכרת אנשים חדשים"
+    ],
+    "environment_options": [
+      "מקום ציבורי בטוח",
+      "קבוצת תמיכה"
+    ]
+  },
+  {
+    "pattern_id": "loneliness_emotional",
+    "pattern_family": "בדידות",
+    "primary_feature": "בדידות רגשית",
+    "emotion": "ריקנות רגשית",
+    "body_sensation": "כבדות בגוף",
+    "behavior": "הסתגרות רגשית",
+    "limiting_belief": "אף אחד לא מבין אותי",
+    "bridge_sentence": "רגשות הם אוניברסליים",
+    "helpful_sentence": "אני יכול לשתף ולהתחבר",
+    "helpful_trait": "פגיעות",
+    "experience_templates": [
+      "שיתוף רגשות עם אדם אמון",
+      "כתיבת יומן רגשות"
+    ],
+    "environment_options": [
+      "חדר שקט לביטוי",
+      "שיחה טלפונית"
+    ]
+  },
+  {
+    "pattern_id": "loneliness_social",
+    "pattern_family": "בדידות",
+    "primary_feature": "בדידות חברתית",
+    "emotion": "געגוע לקשרים",
+    "body_sensation": "כאב בבטן",
+    "behavior": "הימנעות מפעילויות חברתיות",
+    "limiting_belief": "אני לא שייך לקבוצה",
+    "bridge_sentence": "קשרים נבנים בהדרגה",
+    "helpful_sentence": "אני יכול להצטרף לקהילה",
+    "helpful_trait": "חברותיות",
+    "experience_templates": [
+      "הצטרפות לקבוצה קטנה",
+      "פעילות חברתית קלה"
+    ],
+    "environment_options": [
+      "מועדון או קבוצה",
+      "אירוע קהילתי"
+    ]
+  },
+  {
+    "pattern_id": "loneliness_intimacy",
+    "pattern_family": "בדידות",
+    "primary_feature": "חוסר קרבה רגשית",
+    "emotion": "געגוע לקרבה",
+    "body_sensation": "ריקנות רגשית",
+    "behavior": "הימנעות מקשרים עמוקים",
+    "limiting_belief": "אני לא ראוי לקרבה",
+    "bridge_sentence": "קרבה נבנית בביטחון",
+    "helpful_sentence": "אני ראוי לקשרים עמוקים",
+    "helpful_trait": "אמון",
+    "experience_templates": [
+      "בניית קשר עם אדם אחד",
+      "תרגיל פתיחה הדרגתית"
+    ],
+    "environment_options": [
+      "מפגש אינטימי",
+      "שיחה עמוקה"
+    ]
+  },
+  {
+    "pattern_id": "rejection_sensitivity",
+    "pattern_family": "רגישות לדחייה",
+    "primary_feature": "פחד מדחייה",
+    "emotion": "פחד וחרדה",
+    "body_sensation": "כאב בחזה",
+    "behavior": "הימנעות מקשרים",
+    "limiting_belief": "דחייה תהרוס אותי",
+    "bridge_sentence": "דחייה היא חלק מהחיים",
+    "helpful_sentence": "אני שורד ומתקדם",
+    "helpful_trait": "חוסן רגשי",
+    "experience_templates": [
+      "סיפורי דחייה שהובילו להצלחה",
+      "תרגיל בניית ביטחון"
+    ],
+    "environment_options": [
+      "סביבה תומכת",
+      "יומן חוסן"
+    ]
+  },
+  {
+    "pattern_id": "rejection_past_trauma",
+    "pattern_family": "רגישות לדחייה",
+    "primary_feature": "טראומה מדחייה בעבר",
+    "emotion": "פחד וטראומה",
+    "body_sensation": "כיווץ בבטן",
+    "behavior": "הגנה יתר מפני דחייה",
+    "limiting_belief": "כולם ידחו אותי בסוף",
+    "bridge_sentence": "העבר לא קובע את ההווה",
+    "helpful_sentence": "אני יכול לבחור קשרים בריאים",
+    "helpful_trait": "ריפוי",
+    "experience_templates": [
+      "עיבוד טראומה עם מקצוען",
+      "תרגיל ריפוי רגשי"
+    ],
+    "environment_options": [
+      "טיפול מקצועי",
+      "סביבה בטוחה"
+    ]
+  },
+  {
+    "pattern_id": "rejection_relationship",
+    "pattern_family": "רגישות לדחייה",
+    "primary_feature": "פחד מדחייה בקשרים",
+    "emotion": "חרדה ופחד",
+    "body_sensation": "מתח בגוף",
+    "behavior": "הימנעות מהתחייבות",
+    "limiting_belief": "הקשר יסתיים בדחייה",
+    "bridge_sentence": "לא כל קשר מסתיים בדחייה",
+    "helpful_sentence": "אני יכול לבנות קשרים בריאים",
+    "helpful_trait": "אמון",
+    "experience_templates": [
+      "בניית קשר הדרגתי",
+      "שיחה על פחדים"
+    ],
+    "environment_options": [
+      "מפגש בטוח",
+      "קשר עם גבולות"
+    ]
+  },
+  {
+    "pattern_id": "self_doubt_capability",
+    "pattern_family": "ספק עצמי",
+    "primary_feature": "ספק בכישורי",
+    "emotion": "חוסר ביטחון",
+    "body_sensation": "רעד פנימי",
+    "behavior": "הימנעות מאתגרים",
+    "limiting_belief": "אני לא מספיק מוכשר",
+    "bridge_sentence": "כישורים מתפתחים עם תרגול",
+    "helpful_sentence": "אני יכול ללמוד ולהשתפר",
+    "helpful_trait": "למידה",
+    "experience_templates": [
+      "רשימת כישורים קיימים",
+      "ניסיון קטן של אתגר"
+    ],
+    "environment_options": [
+      "סביבה למידה",
+      "מנטור תומך"
+    ]
+  },
+  {
+    "pattern_id": "self_doubt_decisions",
+    "pattern_family": "ספק עצמי",
+    "primary_feature": "ספק בהחלטות",
+    "emotion": "בלבול וחרדה",
+    "body_sensation": "כאב ראש",
+    "behavior": "עיכוב החלטות",
+    "limiting_belief": "ההחלטות שלי יהיו שגויות",
+    "bridge_sentence": "לא החלטה מושלמת קיימת",
+    "helpful_sentence": "אני יכול לקבל החלטות טובות",
+    "helpful_trait": "ביטחון",
+    "experience_templates": [
+      "תרגיל קבלת החלטות קטנות",
+      "רשימת יתרונות וחסרונות"
+    ],
+    "environment_options": [
+      "נייר ועט",
+      "זמן שקט"
+    ]
+  },
+  {
+    "pattern_id": "self_doubt_worth",
+    "pattern_family": "ספק עצמי",
+    "primary_feature": "ספק בערך העצמי",
+    "emotion": "חוסר ערך",
+    "body_sensation": "כבדות בגוף",
+    "behavior": "הפחתת עצמי",
+    "limiting_belief": "אני לא שווה מספיק",
+    "bridge_sentence": "הערך שלי הוא מולד",
+    "helpful_sentence": "אני ראוי לכבוד ולטוב",
+    "helpful_trait": "הערכה עצמית",
+    "experience_templates": [
+      "רשימת תכונות חיוביות",
+      "תרגיל חמלה עצמית"
+    ],
+    "environment_options": [
+      "מראה עם חיוך",
+      "יומן הערכה"
+    ]
+  },
+  {
+    "pattern_id": "self_doubt_future",
+    "pattern_family": "ספק עצמי",
+    "primary_feature": "ספק בעתיד",
+    "emotion": "חוסר וודאות",
+    "body_sensation": "מתח בבטן",
+    "behavior": "הימנעות מתכנון",
+    "limiting_belief": "העתיד שלי יהיה גרוע",
+    "bridge_sentence": "העתיד נוצר מהיום",
+    "helpful_sentence": "אני יכול לבנות עתיד טוב",
+    "helpful_trait": "תקווה",
+    "experience_templates": [
+      "תכנון צעדים קטנים",
+      "דמיון חיובי לעתיד"
+    ],
+    "environment_options": [
+      "לוח חזון",
+      "שיחה עם יועץ"
+    ]
+  },
+  {
+    "pattern_id": "overwhelm_tasks",
+    "pattern_family": "עומס יתר",
+    "primary_feature": "עומס משימות",
+    "emotion": "לחץ וחרדה",
+    "body_sensation": "כאב ראש",
+    "behavior": "שיתוק והימנעות",
+    "limiting_belief": "אני לא מסוגל להתמודד",
+    "bridge_sentence": "אפשר להתמודד צעד אחר צעד",
+    "helpful_sentence": "אני יכול לנהל את המשימות",
+    "helpful_trait": "ארגון",
+    "experience_templates": [
+      "פירוק משימות לחלקים",
+      "תעדוף ברור"
+    ],
+    "environment_options": [
+      "שולחן עבודה נקי",
+      "רשימת משימות"
+    ]
+  },
+  {
+    "pattern_id": "overwhelm_emotional",
+    "pattern_family": "עומס יתר",
+    "primary_feature": "עומס רגשי",
+    "emotion": "בלבול וחרדה",
+    "body_sensation": "כבדות בחזה",
+    "behavior": "הסתגרות רגשית",
+    "limiting_belief": "הרגשות שלי חזקים מדי",
+    "bridge_sentence": "רגשות הם זמניים",
+    "helpful_sentence": "אני יכול לעבד רגשות",
+    "helpful_trait": "ויסות רגשי",
+    "experience_templates": [
+      "תרגיל נשימה עמוקה",
+      "כתיבת רגשות"
+    ],
+    "environment_options": [
+      "חדר שקט",
+      "יומן רגשות"
+    ]
+  },
+  {
+    "pattern_id": "overwhelm_information",
+    "pattern_family": "עומס יתר",
+    "primary_feature": "עומס מידע",
+    "emotion": "בלבול ותסכול",
+    "body_sensation": "כאב ראש",
+    "behavior": "הימנעות מקבלת החלטות",
+    "limiting_belief": "יש יותר מדי מידע",
+    "bridge_sentence": "אפשר לבחור מה חשוב",
+    "helpful_sentence": "אני יכול לסנן מידע",
+    "helpful_trait": "מיקוד",
+    "experience_templates": [
+      "סינון מידע לפי חשיבות",
+      "הגבלת זמן מידע"
+    ],
+    "environment_options": [
+      "סביבה ללא הפרעות",
+      "כלי ארגון דיגיטלי"
+    ]
+  },
+  {
+    "pattern_id": "overwhelm_responsibility",
+    "pattern_family": "עומס יתר",
+    "primary_feature": "עומס אחריות",
+    "emotion": "לחץ ואשמה",
+    "body_sensation": "מתח בגב",
+    "behavior": "נטילת יותר מדי אחריות",
+    "limiting_belief": "אני חייב לדאוג לכל דבר",
+    "bridge_sentence": "לא הכל תלוי בי",
+    "helpful_sentence": "אני יכול לבקש עזרה",
+    "helpful_trait": "גבולות",
+    "experience_templates": [
+      "חלוקת משימות",
+      "בקשת עזרה מאחרים"
+    ],
+    "environment_options": [
+      "פגישה עם קבוצה",
+      "רשימת תמיכה"
+    ]
+  },
+  {
+    "pattern_id": "lack_control_situation",
+    "pattern_family": "חוסר שליטה",
+    "primary_feature": "חוסר שליטה במצב",
+    "emotion": "חרדה ופחד",
+    "body_sensation": "רעד בגוף",
+    "behavior": "ניסיונות שליטה מוגזמים",
+    "limiting_belief": "אני חייב לשלוט בכל דבר",
+    "bridge_sentence": "לא הכל בשליטתי",
+    "helpful_sentence": "אני יכול לשלוט בתגובותיי",
+    "helpful_trait": "קבלה",
+    "experience_templates": [
+      "רשימת דברים בשליטתי",
+      "תרגיל הרפיה"
+    ],
+    "environment_options": [
+      "חדר שקט",
+      "מדיטציה"
+    ]
+  },
+  {
+    "pattern_id": "lack_control_future",
+    "pattern_family": "חוסר שליטה",
+    "primary_feature": "חוסר שליטה בעתיד",
+    "emotion": "חוסר וודאות",
+    "body_sensation": "מתח בבטן",
+    "behavior": "דאגה מתמדת",
+    "limiting_belief": "העתיד לא בטוח",
+    "bridge_sentence": "הווה הוא מה שיש לי",
+    "helpful_sentence": "אני יכול להשפיע על העתיד",
+    "helpful_trait": "אופטימיות",
+    "experience_templates": [
+      "תכנון תרחישים",
+      "מיקוד בהווה"
+    ],
+    "environment_options": [
+      "יומן תכנון",
+      "שיחה עם יועץ"
+    ]
+  },
+  {
+    "pattern_id": "lack_control_others",
+    "pattern_family": "חוסר שליטה",
+    "primary_feature": "חוסר שליטה באחרים",
+    "emotion": "תסכול וכעס",
+    "body_sensation": "כיווץ בלסת",
+    "behavior": "ניסיונות שינוי אנשים",
+    "limiting_belief": "אני חייב לשנות את האחרים",
+    "bridge_sentence": "אני יכול לשנות רק את עצמי",
+    "helpful_sentence": "אני מקבל את האחרים",
+    "helpful_trait": "סובלנות",
+    "experience_templates": [
+      "שיחה על גבולות",
+      "תרגיל קבלה"
+    ],
+    "environment_options": [
+      "שיחה פתוחה",
+      "גבולות ברורים"
+    ]
+  },
+  {
+    "pattern_id": "fear_failure",
+    "pattern_family": "פחד מכישלון",
+    "primary_feature": "חשש מכישלון",
+    "emotion": "חרדה ופחד",
+    "body_sensation": "רעד בידיים",
+    "behavior": "הימנעות מסיכונים",
+    "limiting_belief": "כישלון הוא סוף העולם",
+    "bridge_sentence": "כישלון הוא חלק מהלמידה",
+    "helpful_sentence": "כל צעד קטן מביא להתקדמות",
+    "helpful_trait": "אומץ",
+    "experience_templates": [
+      "סיפור על כישלונות שהובילו להצלחה",
+      "תרגיל דמיון חיובי"
+    ],
+    "environment_options": [
+      "חדר עם כריות רכות",
+      "סביבה תומכת"
+    ]
+  },
+  {
+    "pattern_id": "fear_failure_perfection",
+    "pattern_family": "פחד מכישלון",
+    "primary_feature": "פחד מאי שלמות",
+    "emotion": "חרדה ולחץ",
+    "body_sensation": "מתח בגוף",
+    "behavior": "עבודה מושלמת על חשבון זמן",
+    "limiting_belief": "רק הצלחה מושלמת מקובלת",
+    "bridge_sentence": "שלמות היא אשליה",
+    "helpful_sentence": "מספיק טוב הוא מספיק",
+    "helpful_trait": "גמישות",
+    "experience_templates": [
+      "הגשת עבודה לא מושלמת",
+      "חגיגת ניסיונות"
+    ],
+    "environment_options": [
+      "זמן מוגבל",
+      "משוב חיובי"
+    ]
+  },
+  {
+    "pattern_id": "fear_failure_judgment",
+    "pattern_family": "פחד מכישלון",
+    "primary_feature": "פחד משיפוט",
+    "emotion": "בושה וחרדה",
+    "body_sensation": "אודם בפנים",
+    "behavior": "הימנעות מביקורת",
+    "limiting_belief": "האחרים יחשבו שאני כישלון",
+    "bridge_sentence": "השיפוט הוא שלהם",
+    "helpful_sentence": "הצלחה שלי היא שלי",
+    "helpful_trait": "ביטחון עצמי",
+    "experience_templates": [
+      "שיתוף כישלון עם חבר",
+      "רשימת הצלחות"
+    ],
+    "environment_options": [
+      "סביבה תומכת",
+      "יומן ביטחון"
+    ]
+  },
+  {
+    "pattern_id": "worthlessness_inadequate",
+    "pattern_family": "חוסר ערך",
+    "primary_feature": "תחושת חוסר ערך",
+    "emotion": "עצב וייאוש",
+    "body_sensation": "ריקנות פנימית",
+    "behavior": "הפחתת עצמי",
+    "limiting_belief": "אני לא שווה כלום",
+    "bridge_sentence": "הערך שלי הוא מולד",
+    "helpful_sentence": "אני ראוי לחיים מלאים",
+    "helpful_trait": "הערכה עצמית",
+    "experience_templates": [
+      "רשימת תכונות חיוביות",
+      "תרגיל חמלה עצמית"
+    ],
+    "environment_options": [
+      "מראה עם חיוך",
+      "יומן הערכה"
+    ]
+  },
+  {
+    "pattern_id": "worthlessness_contribution",
+    "pattern_family": "חוסר ערך",
+    "primary_feature": "תחושת חוסר תרומה",
+    "emotion": "אשמה וחוסר ערך",
+    "body_sensation": "כבדות בגוף",
+    "behavior": "הימנעות מתרומה",
+    "limiting_belief": "התרומה שלי לא חשובה",
+    "bridge_sentence": "כל תרומה קטנה חשובה",
+    "helpful_sentence": "אני יכול לתרום לעולם",
+    "helpful_trait": "ערך עצמי",
+    "experience_templates": [
+      "מעשה חסד קטן",
+      "רשימת תרומות קודמות"
+    ],
+    "environment_options": [
+      "פעילות התנדבותית",
+      "שיתוף עם קהילה"
+    ]
+  },
+  {
+    "pattern_id": "worthlessness_comparison",
+    "pattern_family": "חוסר ערך",
+    "primary_feature": "השוואה שיוצרת חוסר ערך",
+    "emotion": "קנאה וחוסר ערך",
+    "body_sensation": "כאב בחזה",
+    "behavior": "השוואה מתמדת",
+    "limiting_belief": "האחרים שווים יותר ממני",
+    "bridge_sentence": "כל אחד ייחודי בערכו",
+    "helpful_sentence": "הערך שלי הוא ייחודי",
+    "helpful_trait": "ייחודיות",
+    "experience_templates": [
+      "רשימת תכונות ייחודיות",
+      "השוואה עם עצמי"
+    ],
+    "environment_options": [
+      "יומן ייחודיות",
+      "שיחה עם חבר"
+    ]
+  },
+  {
+    "pattern_id": "social_anxiety",
+    "pattern_family": "חרדה חברתית",
+    "primary_feature": "פחד משיפוט",
+    "emotion": "בושה וחרדה",
+    "body_sensation": "אודם בפנים",
+    "behavior": "הימנעות מאינטראקציות",
+    "limiting_belief": "כולם שופטים אותי",
+    "bridge_sentence": "אנשים עסוקים בעצמם",
+    "helpful_sentence": "אני ראוי לקשרים",
+    "helpful_trait": "ביטחון חברתי",
+    "experience_templates": [
+      "תרגיל מבט בעיניים",
+      "שיחה עם אדם אחד"
+    ],
+    "environment_options": [
+      "קבוצה קטנה",
+      "סביבה בטוחה"
+    ]
+  },
+  {
+    "pattern_id": "social_anxiety_performance",
+    "pattern_family": "חרדה חברתית",
+    "primary_feature": "פחד מהופעה חברתית",
+    "emotion": "חרדה ובושה",
+    "body_sensation": "רעד בגוף",
+    "behavior": "הימנעות מהופעות",
+    "limiting_belief": "אני איראה טיפש",
+    "bridge_sentence": "כולם עושים טעויות",
+    "helpful_sentence": "אני יכול להיות עצמי",
+    "helpful_trait": "קבלה עצמית",
+    "experience_templates": [
+      "הופעה קטנה מול חבר",
+      "תרגיל נשימה לפני הופעה"
+    ],
+    "environment_options": [
+      "חדר קטן",
+      "קהל תומך"
+    ]
+  },
+  {
+    "pattern_id": "social_anxiety_rejection",
+    "pattern_family": "חרדה חברתית",
+    "primary_feature": "פחד מדחייה חברתית",
+    "emotion": "פחד וחרדה",
+    "behavior": "הימנעות מקשרים",
+    "body_sensation": "כאב בחזה",
+    "limiting_belief": "אף אחד לא ירצה להיות איתי",
+    "bridge_sentence": "דחייה היא אפשרית אבל לא ודאית",
+    "helpful_sentence": "אני ראוי לחברות",
+    "helpful_trait": "ערך חברתי",
+    "experience_templates": [
+      "הזמנה לאירוע קטן",
+      "שיחה עם חבר חדש"
+    ],
+    "environment_options": [
+      "מפגש קבוצתי קטן",
+      "פעילות משותפת"
+    ]
+  },
+  {
+    "pattern_id": "hopelessness_future",
+    "pattern_family": "ייאוש",
+    "primary_feature": "ייאוש מהעתיד",
+    "emotion": "ייאוש ודיכאון",
+    "body_sensation": "כבדות בכל הגוף",
+    "behavior": "אדישות וחוסר מוטיבציה",
+    "limiting_belief": "שום דבר לא ישתנה",
+    "bridge_sentence": "העתיד נוצר מהיום",
+    "helpful_sentence": "אני יכול ליצור שינוי",
+    "helpful_trait": "תקווה",
+    "experience_templates": [
+      "צעד קטן לכיוון מטרה",
+      "רשימת אפשרויות"
+    ],
+    "environment_options": [
+      "סביבה מעודדת",
+      "מנטור או יועץ"
+    ]
+  },
+  {
+    "pattern_id": "hopelessness_situation",
+    "pattern_family": "ייאוש",
+    "primary_feature": "ייאוש מהמצב הנוכחי",
+    "emotion": "ייאוש ותסכול",
+    "body_sensation": "ריקנות פנימית",
+    "behavior": "כניעה למצב",
+    "limiting_belief": "המצב הזה לעולם לא ישתנה",
+    "bridge_sentence": "שינוי מתחיל בבחירה",
+    "helpful_sentence": "אני יכול לבחור איך להגיב",
+    "helpful_trait": "סוכנות",
+    "experience_templates": [
+      "זיהוי דברים בשליטתי",
+      "תכנון צעד ראשון"
+    ],
+    "environment_options": [
+      "חדר שקט לתכנון",
+      "שיחה עם תומך"
+    ]
+  },
+  {
+    "pattern_id": "hopelessness_self",
+    "pattern_family": "ייאוש",
+    "primary_feature": "ייאוש מעצמי",
+    "emotion": "ייאוש וחוסר ערך",
+    "body_sensation": "כבדות בנשמה",
+    "behavior": "התנהגות הרסנית",
+    "limiting_belief": "אני לעולם לא אשתנה",
+    "bridge_sentence": "שינוי הוא אפשרי",
+    "helpful_sentence": "אני ראוי לשינוי ולטוב",
+    "helpful_trait": "ריפוי",
+    "experience_templates": [
+      "מעשה טוב קטן לעצמי",
+      "שיחה עם מטפל"
+    ],
+    "environment_options": [
+      "סביבה בטוחה",
+      "טיפול מקצועי"
+    ]
+  },
+  {
+    "pattern_id": "perfectionism",
+    "pattern_family": "שלמותנות",
+    "primary_feature": "דרישה לשלמות",
+    "emotion": "לחץ ומתח",
+    "body_sensation": "כאב ראש",
+    "behavior": "עיכוב בעבודה",
+    "limiting_belief": "רק שלמות מקובלת",
+    "bridge_sentence": "שלמות היא אשליה",
+    "helpful_sentence": "התקדמות טובה משלמות",
+    "helpful_trait": "גמישות",
+    "experience_templates": [
+      "פירוק משימה לחלקים קטנים",
+      "חגיגת צעדים קטנים"
+    ],
+    "environment_options": [
+      "שולחן עבודה נקי",
+      "זמן מוגבל למשימות"
+    ]
+  },
+  {
+    "pattern_id": "imposter_syndrome",
+    "pattern_family": "תסמונת המתחזה",
+    "primary_feature": "תחושת זיוף",
+    "emotion": "חוסר ביטחון",
+    "body_sensation": "חוסר יציבות",
+    "behavior": "הפחתת הישגים",
+    "limiting_belief": "אני לא ראוי להצלחה",
+    "bridge_sentence": "הצלחה מגיעה מהמאמץ",
+    "helpful_sentence": "ההישגים שלי אמיתיים",
+    "helpful_trait": "ביטחון עצמי",
+    "experience_templates": [
+      "רשימת הישגים מוכחים",
+      "שיתוף עם אמון"
+    ],
+    "environment_options": [
+      "חדר שקט",
+      "יומן הישגים"
+    ]
+  },
+  {
+    "pattern_id": "procrastination",
+    "pattern_family": "דחיינות",
+    "primary_feature": "עיכוב בעשייה",
+    "emotion": "אשמה וחרטה",
+    "body_sensation": "כבדות בגפיים",
+    "behavior": "גלישה באינטרנט",
+    "limiting_belief": "אני יכול לעשות זאת מאוחר יותר",
+    "bridge_sentence": "התחלה קטנה מביאה לתנופה",
+    "helpful_sentence": "היום הוא הזמן הטוב ביותר",
+    "helpful_trait": "משמעת",
+    "experience_templates": [
+      "טכניקת 5 דקות",
+      "פירוק למשימות קטנות"
+    ],
+    "environment_options": [
+      "שולחן עבודה",
+      "טיימר"
+    ]
+  },
+  {
+    "pattern_id": "negative_self_talk",
+    "pattern_family": "שיח עצמי שלילי",
+    "primary_feature": "ביקורת עצמית",
+    "emotion": "עצב וזעם עצמי",
+    "body_sensation": "כיווץ בחזה",
+    "behavior": "השוואה עצמית",
+    "limiting_belief": "אני לא מספיק",
+    "bridge_sentence": "המחשבות הן רק מחשבות",
+    "helpful_sentence": "אני ראוי לטוב",
+    "helpful_trait": "חמלה עצמית",
+    "experience_templates": [
+      "החלפת מחשבות שליליות",
+      "תרגיל חמלה עצמית"
+    ],
+    "environment_options": [
+      "מראה עם חיוך",
+      "רשימת תכונות חיוביות"
+    ]
+  },
+  {
+    "pattern_id": "overthinking",
+    "pattern_family": "הגזמה בחשיבה",
+    "primary_feature": "מחשבות לולאה",
+    "emotion": "בלבול וחרדה",
+    "body_sensation": "כאב ראש",
+    "behavior": "ניתוח יתר",
+    "limiting_belief": "חייב למצוא פתרון מושלם",
+    "bridge_sentence": "לא כל שאלה צריכה תשובה",
+    "helpful_sentence": "אני יכול לבחור מתי לחשוב",
+    "helpful_trait": "הווה נוכח",
+    "experience_templates": [
+      "תרגיל נשימה 4-7-8",
+      "הפסקת מחשבות"
+    ],
+    "environment_options": [
+      "חדר שקט",
+      "מדיטציה מודרכת"
+    ]
+  }
+]

@@ -779,6 +779,30 @@
   <strong>אילון דיגיטל סטודיו ו-AI</strong> · כל הזכויות שמורות ©2025
 </footer>
 
+<!-- ══ BEZEN + TOKEN PANEL ══ -->
+<div id="tokenPanel" style="display:none;position:fixed;bottom:90px;left:16px;background:#0f1520;border:1px solid #1e2d42;border-radius:12px;padding:12px 16px;font-size:12px;color:#6b7a99;z-index:999;min-width:180px;direction:rtl;">
+  <div style="color:#00c6ff;font-weight:700;margin-bottom:8px;font-size:13px;">📊 ניתוח שיחה</div>
+  <div style="display:flex;flex-direction:column;gap:5px;">
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬆️ prompt</span><span id="tPrompt" style="color:#e8f0fe;font-weight:600;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>⬇️ תשובה</span><span id="tResponse" style="color:#e8f0fe;font-weight:600;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #1e2d42;padding-top:5px;"><span>🔢 סה"כ קריאה</span><span id="tTotal" style="color:#00e5a0;font-weight:700;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;"><span>💎 סה"כ שיחה</span><span id="tSession" style="color:#fbbf24;font-weight:700;">0</span></div>
+    <div style="display:flex;justify-content:space-between;gap:16px;border-top:1px solid #1e2d42;padding-top:5px;"><span>🧠 BEZEN hits</span><span id="tBezen" style="color:#a78bfa;font-weight:700;">0</span></div>
+  </div>
+</div>
+
+<div id="bezenPanel" style="display:none;position:fixed;top:80px;left:16px;background:#0f1520;border:1px solid #1e2d42;border-radius:12px;padding:12px 16px;font-size:12px;color:#6b7a99;z-index:999;max-width:220px;direction:rtl;max-height:60vh;overflow-y:auto;">
+  <div style="color:#a78bfa;font-weight:700;margin-bottom:8px;font-size:13px;">🧠 ניתוח BEZEN</div>
+  <div class="bezen-patterns"></div>
+</div>
+
+<style>
+.bezen-card { background:#162030; border-radius:8px; padding:8px; margin-bottom:8px; }
+.bezen-row  { display:flex; justify-content:space-between; gap:8px; margin-bottom:3px; line-height:1.4; }
+.bezen-row span:last-child { color:#e8f0fe; text-align:left; max-width:120px; }
+.bl { color:#a78bfa; white-space:nowrap; }
+</style>
+
 <!-- ══ WHATSAPP FLOAT ══ -->
 <div class="wa-float" id="waFloat">
   <div class="wa-bubble" id="waBubble">
@@ -1023,6 +1047,10 @@
         addMsg("bot", data.text, data.mode);
         history.push({ role: "assistant", content: data.text });
 
+        // עדכן פאנל BEZEN + טוקנים
+        if (data.tokens)       updateStats(data.tokens);
+        if (data.bezenAnalysis) updateBezen(data.bezenAnalysis);
+
         // אם נאסף ליד — שלח לוואטסאפ אוטומטית
         if (data.leadData) {
           setTimeout(() => sendLeadToWhatsapp(data.leadData), 1000);
@@ -1036,6 +1064,35 @@
     busy = false;
     sendBtn.disabled = false;
     inputEl.focus();
+  }
+
+  // ══ עדכון סטטיסטיקות טוקנים ══
+  let totalTokens = 0;
+  function updateStats(tokens) {
+    totalTokens += tokens.total || 0;
+    const el = document.getElementById("tokenPanel");
+    if (!el) return;
+    el.style.display = "block";
+    document.getElementById("tPrompt").textContent   = tokens.prompt    || 0;
+    document.getElementById("tResponse").textContent = tokens.response  || 0;
+    document.getElementById("tTotal").textContent    = tokens.total     || 0;
+    document.getElementById("tSession").textContent  = totalTokens;
+    document.getElementById("tBezen").textContent    = tokens.bezen_hit || 0;
+  }
+
+  // ══ עדכון פאנל BEZEN ══
+  function updateBezen(analysis) {
+    const el = document.getElementById("bezenPanel");
+    if (!el || !analysis?.top_patterns?.length) return;
+    el.style.display = "block";
+    el.querySelector(".bezen-patterns").innerHTML = analysis.top_patterns.map((p) => `
+      <div class="bezen-card">
+        <div class="bezen-row"><span class="bl">🧠 דפוס</span><span>${p.pattern_id}</span></div>
+        <div class="bezen-row"><span class="bl">💛 רגש</span><span>${p.emotion}</span></div>
+        <div class="bezen-row"><span class="bl">🔄 התנהגות</span><span>${p.behavior}</span></div>
+        <div class="bezen-row"><span class="bl">🌉 גשר</span><span>${p.bridge_sentence}</span></div>
+        <div class="bezen-row"><span class="bl">✨ תכונה</span><span>${p.helpful_trait}</span></div>
+      </div>`).join("");
   }
 
   // ══ שליחת סיכום לוואטסאפ כשנאסף ליד ══
