@@ -775,6 +775,164 @@
   </div>
 </div>
 
+<!-- ══ HOW IT WORKS SECTION ══ -->
+<section class="how-section">
+  <div class="how-title">⚙️ איך המערכת עובדת?</div>
+  <div class="how-subtitle">שני מנועים שעובדים יחד — כל אחד עם תפקיד ייחודי</div>
+
+  <div class="how-cards">
+
+    <div class="how-card">
+      <div class="how-icon">🧠</div>
+      <div class="how-card-title">BEZEN — מנוע ההבנה האנושית</div>
+      <div class="how-card-role">תפקיד: להבין מה הלקוח <em>מרגיש</em></div>
+      <p>BEZEN הוא מאגר של 150 דפוסי חשיבה אנושיים — רגשות, אמונות מגבילות, ודפוסי התנהגות.</p>
+      <p>כאשר לקוח שולח הודעה, BEZEN סורק אותה ומזהה את הדפוס הרגשי שמאחוריה — לא רק את המילים, אלא את הכוונה האמיתית.</p>
+      <div class="how-example">
+        <span class="how-ex-label">לדוגמה:</span>
+        לקוח כותב "כבר ניסיתי ולא הצלחתי" ←
+        BEZEN מזהה: <strong>תסכול + פחד מכישלון + נטייה להימנעות</strong>
+      </div>
+    </div>
+
+    <div class="how-arrow">→</div>
+
+    <div class="how-card">
+      <div class="how-icon">✨</div>
+      <div class="how-card-title">Gemini — מנוע התשובה החכמה</div>
+      <div class="how-card-role">תפקיד: לענות בצורה הנכונה ביותר</div>
+      <p>Gemini הוא מודל השפה של Google — הוא יודע לכתוב, להסביר, לשכנע ולהוביל שיחה.</p>
+      <p>אחרי שBEZEN מזהה את הדפוס הרגשי, הוא מעביר את הניתוח ל-Gemini — וכך התשובה מותאמת לא רק לשאלה, אלא גם לרגש שמאחוריה.</p>
+      <div class="how-example">
+        <span class="how-ex-label">התוצאה:</span>
+        במקום תשובה גנרית — תשובה שמרגישה <strong>אישית, אמפתית ומדויקת</strong>
+      </div>
+    </div>
+
+    <div class="how-arrow">→</div>
+
+    <div class="how-card how-card-result">
+      <div class="how-icon">🤖</div>
+      <div class="how-card-title">אילון — הסוכן החכם</div>
+      <div class="how-card-role">תפקיד: לייצג את העסק שלך 24/7</div>
+      <p>אילון הוא הסוכן שהלקוח רואה. הוא מחבר בין BEZEN ל-Gemini ומנהל את השיחה בצורה חלקה.</p>
+      <ul class="how-list">
+        <li>✅ מזהה סוג פנייה — מכירה / תמיכה / ליד</li>
+        <li>✅ אוסף פרטי לקוח ושולח לוואטסאפ</li>
+        <li>✅ זמין כל הזמן, עונה תוך שניות</li>
+        <li>✅ מתאים את עצמו לכל לקוח</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.how-section {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 40px 24px;
+  direction: rtl;
+}
+.how-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.how-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 36px;
+}
+.how-cards {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.how-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  flex: 1;
+  min-width: 240px;
+  max-width: 300px;
+  box-shadow: 0 2px 16px #2563eb0d;
+}
+.how-card-result {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, #fff 80%, #eff6ff);
+}
+.how-icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.how-card-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.how-card-role {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 3px 8px;
+  background: #eff6ff;
+  border-radius: 6px;
+  display: inline-block;
+}
+.how-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.how-example {
+  font-size: 12px;
+  background: #f0f4ff;
+  border-right: 3px solid var(--accent);
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-top: 8px;
+}
+.how-ex-label {
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 2px;
+}
+.how-arrow {
+  font-size: 24px;
+  color: var(--border);
+  align-self: center;
+  padding-top: 20px;
+}
+.how-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.how-list li {
+  font-size: 13px;
+  color: var(--text);
+  padding: 4px 0;
+  line-height: 1.5;
+}
+@media(max-width:700px) {
+  .how-arrow { display: none; }
+  .how-card { max-width: 100%; }
+}
+</style>
+
 <footer>
   <strong>אילון דיגיטל סטודיו ו-AI</strong> · כל הזכויות שמורות ©2025
 </footer>
