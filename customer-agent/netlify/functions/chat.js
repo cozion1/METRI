@@ -1,12 +1,9 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
-const path = require("path");
-const fs   = require("fs");
 
 // ══ טעינת דפוסי BEZEN ══
 let BEZEN_PATTERNS = [];
 try {
-  const p = path.join(__dirname, "pattern_map.json");
-  BEZEN_PATTERNS = JSON.parse(fs.readFileSync(p, "utf8"));
+  BEZEN_PATTERNS = require("./pattern_map.json");
 } catch (e) {
   console.warn("BEZEN patterns not loaded:", e.message);
 }
