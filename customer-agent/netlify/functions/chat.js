@@ -11,10 +11,43 @@ try {
   console.warn("BEZEN patterns not loaded:", e.message);
 }
 
-// ══ ניתוח BEZEN — מוצא דפוסים רלוונטיים בהודעת הלקוח ══
+// ══ מילות מפתח רגשיות — ממפות ביטויים נפוצים לדפוסי BEZEN ══
+const EMOTION_KEYWORDS = {
+  "לא בטוח":      ["doubt","fear","comparison"],
+  "לא הצלחתי":    ["stuck_progress","failure_fear","self_criticism"],
+  "לא הצליח":     ["stuck_progress","failure_fear"],
+  "ניסיתי":       ["stuck_progress","giving_up"],
+  "לא מתאים":     ["doubt","avoidance"],
+  "כבר ניסיתי":   ["stuck_progress","giving_up","avoidance"],
+  "לא יודע":      ["doubt","confusion"],
+  "מפחד":         ["fear_rejection","fear_failure"],
+  "דואג":         ["anxiety","control"],
+  "עייף":         ["burnout","avoidance"],
+  "תסכול":        ["stuck_progress","comparison_trap"],
+  "לבד":          ["loneliness","no_value"],
+  "לא שווה":      ["no_value","self_criticism"],
+  "ביקורת":       ["self_criticism","perfectionism"],
+  "השוואה":       ["comparison_trap","comparison_social_media"],
+  "אחרים":        ["comparison_trap","comparison_social_media"],
+  "לוותר":        ["giving_up","avoidance"],
+  "לדחות":        ["procrastination","avoidance"],
+};
+
+// ══ ניתוח BEZEN — שורש עברי + מילות מפתח ══
 function analyzeWithBezen(text) {
   if (!BEZEN_PATTERNS.length) return null;
-  const words = text.toLowerCase().split(/\s+/);
+
+  const clean = text.replace(/[",'.!?״׳]/g, " ").toLowerCase();
+  const words = clean.split(/\s+/).filter((w) => w.length > 2);
+
+  // שורשים: 3 אותיות ראשונות
+  const stems = words.map((w) => w.slice(0, 3));
+
+  // IDs שזוהו דרך מילות מפתח
+  const keywordHits = new Set();
+  Object.entries(EMOTION_KEYWORDS).forEach(([phrase, ids]) => {
+    if (clean.includes(phrase)) ids.forEach((id) => keywordHits.add(id));
+  });
 
   const scored = BEZEN_PATTERNS.map((p) => {
     const fields = [
@@ -23,7 +56,16 @@ function analyzeWithBezen(text) {
     ].join(" ").toLowerCase();
 
     let score = 0;
-    words.forEach((w) => { if (w.length > 2 && fields.includes(w)) score++; });
+
+    // התאמת מילת מפתח מלאה — ניקוד גבוה
+    if (keywordHits.has(p.pattern_id)) score += 5;
+
+    // התאמת מילה מלאה
+    words.forEach((w) => { if (fields.includes(w)) score += 2; });
+
+    // התאמת שורש (3 אותיות)
+    stems.forEach((s) => { if (fields.includes(s)) score += 1; });
+
     return { ...p, score };
   }).filter((p) => p.score > 0)
     .sort((a, b) => b.score - a.score)
