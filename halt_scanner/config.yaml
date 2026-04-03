@@ -1,0 +1,66 @@
+# ============================================================
+# HaltScanner Pro - תצורה מלאה
+# ============================================================
+# מדריך מהיר: הגדר telegram + anthropic → הרץ python main.py --test
+
+telegram:
+  bot_token: "YOUR_BOT_TOKEN_HERE"         # צור בוט: t.me/BotFather → /newbot → העתק token
+  chat_id: "YOUR_CHAT_ID_HERE"             # שלח הודעה לבוט, אז פתח: api.telegram.org/bot<TOKEN>/getUpdates
+
+email:
+  enabled: true
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  username: "your_email@gmail.com"         # כתובת Gmail שלך
+  password: "YOUR_APP_PASSWORD"            # Google → Security → App Passwords → צור סיסמה
+  recipients:
+    - "your_email@gmail.com"
+
+anthropic:
+  api_key: "YOUR_ANTHROPIC_API_KEY"        # console.anthropic.com → API Keys
+  model: "claude-sonnet-4-20250514"        # חסכוני יותר מ-Opus, מספיק טוב לניתוח
+  max_daily_budget_usd: 5.0                # תקרת עלות יומית (דולר)
+
+scanning:
+  interval_minutes: 5                      # כל כמה דקות לסרוק
+  halt_duration_minutes: 45               # אורך הפסקת מסחר סטנדרטית
+  price_lag_threshold: 0.6                # ספק שעלה פחות מ-60% מהמניה הראשית = הזדמנות
+  max_suppliers_to_check: 5              # כמה ספקים לבדוק
+  lookback_hours: 2                       # כמה שעות אחורה לחפש הפסקות
+  trading_hours_only: true                # סרוק רק בשעות מסחר (09:45-17:30)
+  retry_on_error: 3                       # כמה פעמים לנסות שוב אם יש שגיאה
+
+alerts:
+  enable_telegram: true
+  enable_email: true
+  min_price_change_pct: 1.0              # התראה רק אם המניה הראשית עלתה לפחות 1%
+  daily_summary: true                     # סיכום יומי ב-17:45
+  daily_summary_time: "17:45"
+
+safety:
+  min_confidence: "medium"                # medium/high - סף מינימלי לביטחון AI
+  max_api_calls_per_hour: 20             # הגנה מפני שימוש מוגזם
+  cooldown_minutes: 2                     # המתנה מינימלית בין התראות
+
+maya:
+  rss_urls:
+    - "https://www.bizportal.co.il/rss/bursamessages"
+  halt_keywords:
+    - "הפסקת מסחר"
+    - "עצירת מסחר"
+    - "45 דקות"
+    - "halt"
+    - "trading halt"
+  material_keywords:
+    - "הודעה מהותית"
+    - "עסקה מהותית"
+    - "דוח כספי"
+    - "הנפקה"
+    - "רכישה"
+    - "מיזוג"
+    - "פיצול"
+    - "שותפות"
+    - "חוזה"
+    - "הסכם"
+    - "דיבידנד"
+    - "הקצאה"
