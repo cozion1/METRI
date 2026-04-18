@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEZEN FLOW — Live Demo</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+header {
+  text-align: center;
+  padding: 30px 0 40px;
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #a78bfa;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(24px, 4vw, 40px);
+  color: white;
+  margin-bottom: 12px;
+}
+
+h1 span { color: #a78bfa; }
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.demo-box {
+  background: #1a1035;
+  border: 1px solid #2d1f5e;
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.input-section { margin-bottom: 24px; }
+
+label {
+  display: block;
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  width: 100%;
+  background: #0f0f1a;
+  border: 2px solid #2d1f5e;
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: border 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+.examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.example-btn {
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: #c4b5fd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.example-btn:hover {
+  background: rgba(124,58,237,0.3);
+  transform: translateY(-1px);
+}
+
+.run-btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+  transition: all 0.2s;
+}
+
+.run-btn:hover { transform: translateY(-2px); }
+.run-btn:disabled { opacity: 0.5; cursor: wait; }
+
+.results { display: none; margin-top: 24px; }
+.results.active { display: block; }
+
+.flow-step {
+  background: #0f0f1a;
+  border-right: 4px solid #7c3aed;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.flow-num {
+  display: inline-block;
+  background: #7c3aed;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.flow-name {
+  color: #a78bfa;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.flow-content {
+  color: #e0e0e0;
+  font-size: 15px;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.final-response {
+  background: linear-gradient(135deg, #1a1035, #2d1f5e);
+  border: 2px solid #7c3aed;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.final-response h3 {
+  color: #a78bfa;
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.final-response pre {
+  color: white;
+  font-family: inherit;
+  white-space: pre-wrap;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #a78bfa;
+}
+
+.loading::after {
+  content: '...';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
+
+.comparison {
+  background: #1a1035;
+  border: 1px solid #2d1f5e;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 30px;
+}
+
+.comparison h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.compare-card {
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.compare-card.bad {
+  background: rgba(239,68,68,0.08);
+  border: 1px solid rgba(239,68,68,0.2);
+}
+
+.compare-card.good {
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.2);
+}
+
+.compare-card h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.compare-card.bad h4 { color: #f87171; }
+.compare-card.good h4 { color: #86efac; }
+
+.compare-card p {
+  color: #d1d5db;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+footer a { color: #a78bfa; text-decoration: none; margin: 0 10px; }
+
+@media (max-width: 600px) {
+  .compare-grid { grid-template-columns: 1fr; }
+  .demo-box { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">BEZEN FLOW</div>
+    <h1>נסה את <span>BEZEN בחיים</span></h1>
+    <p class="subtitle">
+      Runtime Alignment בפעולה. כתוב משהו, ראה איך 6 שלבי FLOW
+      הופכים תגובה רגילה לתגובה מאוזנת ובת-ביצוע.
+    </p>
+  </header>
+
+  <div class="demo-box">
+    <div class="input-section">
+      <label>📝 כתוב כאן (עברית או אנגלית):</label>
+      <textarea id="userInput" placeholder="לדוגמה: אני מפחד שAI יחליף אותי בעבודה..."></textarea>
+
+      <div class="examples">
+        <button class="example-btn" onclick="setExample('עברית-בדידות')">עברית: בדידות</button>
+        <button class="example-btn" onclick="setExample('עברית-עבודה')">עברית: חרדת עבודה</button>
+        <button class="example-btn" onclick="setExample('en-extreme')">EN: Extreme</button>
+        <button class="example-btn" onclick="setExample('en-neutral')">EN: Neutral question</button>
+      </div>
+
+      <button class="run-btn" id="runBtn" onclick="runBezen()">▶ הפעל BEZEN FLOW</button>
+    </div>
+
+    <div class="results" id="results"></div>
+  </div>
+
+  <div class="comparison">
+    <h2>🆚 ההבדל המעשי</h2>
+    <div class="compare-grid">
+      <div class="compare-card bad">
+        <h4>❌ מודל רגיל</h4>
+        <p>זורק 10 טיפים. מציל. מבטיח שהכל יהיה בסדר. אין מבנה. אין צעד מעשי. רץ לכל כיוון = personality drift.</p>
+      </div>
+      <div class="compare-card good">
+        <h4>✅ עם BEZEN FLOW</h4>
+        <p>6 תחנות חובה. 1% שליטה בכל שלב. צעד אחד מעשי שאפשר לבצע ב-5 דקות. אפס drift. יציב לאורך זמן.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>BEZEN AI © 2026</p>
+    <p style="margin-top: 8px;">
+      <a href="/alignment.html">המנוע המלא</a> |
+      <a href="https://wa.me/972549199344">WhatsApp</a> |
+      <a href="mailto:cozion@gmail.com">Email</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+const examples = {
+  'עברית-בדידות': 'אני מרגיש שאף אחד לא מבין אותי. אני לבד עם המחשבות שלי. אין לי עם מי לדבר.',
+  'עברית-עבודה': 'אני מפחד שAI יחליף אותי בעבודה. אין לי סיכוי. אני לא מספיק טכנולוגי.',
+  'en-extreme': "Everything is falling apart. My whole life is ruined. There's no point in trying anymore.",
+  'en-neutral': "Should I learn Python or JavaScript first? I'm a complete beginner."
+};
+
+function setExample(key) {
+  document.getElementById('userInput').value = examples[key];
+}
+
+const flowNames = {
+  flow_0_opening: 'פתיחה שקטה',
+  flow_1_pain: 'זיהוי כאב',
+  flow_2_bridge: 'גשר (1% שליטה)',
+  flow_3_transform: 'טרנספורמציה למאוזן',
+  flow_4_trait: 'תכונה מאזנת',
+  flow_5_action: 'מיקרו-אקשן',
+};
+
+async function runBezen() {
+  const input = document.getElementById('userInput').value.trim();
+  if (!input) {
+    alert('אנא כתוב משהו קודם');
+    return;
+  }
+
+  const btn = document.getElementById('runBtn');
+  const results = document.getElementById('results');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ מעבד...';
+  results.classList.add('active');
+  results.innerHTML = '<div class="loading">BEZEN FLOW פועל - 6 שלבים, ~30 שניות</div>';
+
+  try {
+    const r = await fetch('/agent', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({input: input})
+    });
+    const data = await r.json();
+
+    if (data.error) {
+      results.innerHTML = `<div class="loading">שגיאה: ${data.error}</div>`;
+      return;
+    }
+
+    let html = '';
+    let stepNum = 0;
+    for (const [key, value] of Object.entries(data.trace)) {
+      const name = flowNames[key] || key;
+      html += `
+        <div class="flow-step">
+          <span class="flow-num">${stepNum}</span>
+          <span class="flow-name">${name}</span>
+          <div class="flow-content">${value}</div>
+        </div>
+      `;
+      stepNum++;
+    }
+
+    html += `
+      <div class="final-response">
+        <h3>📤 התגובה הסופית (מה שהמשתמש רואה):</h3>
+        <pre>${data.response}</pre>
+      </div>
+    `;
+
+    results.innerHTML = html;
+
+  } catch (e) {
+    results.innerHTML = `<div class="loading">שגיאת רשת: ${e.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '▶ הפעל BEZEN FLOW';
+  }
+}
+</script>
+
+</body>
+</html>
