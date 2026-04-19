@@ -107,7 +107,12 @@ Based on this balanced statement: {balanced}
 Name ONE trait the person is exercising right now.
 Examples: "honest self-assessment", "patience", "boundary awareness", "intellectual humility"
 
-Return: TRAIT_NAME — ONE sentence why (max 15 words total)."""
+Format your response EXACTLY like this (no headers, no markdown):
+**TraitName** — One sentence explanation.
+
+Example: **Adaptive awareness** — Recognizing change while staying engaged with it.
+
+Keep total response under 20 words. Use the language of the input."""
         return self._call(sys, balanced, max_tokens=120)
 
     def flow_5_action(self, trait: str, balanced: str) -> str:

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEZEN vs Plain Claude — Side by Side</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { max-width: 1400px; margin: 0 auto; }
+
+header {
+  text-align: center;
+  padding: 30px 0 40px;
+}
+
+.logo {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #a78bfa;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: clamp(24px, 4vw, 42px);
+  color: white;
+  margin-bottom: 12px;
+}
+
+h1 span.vs { color: #f87171; margin: 0 16px; }
+h1 span.bezen { color: #a78bfa; }
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.controls {
+  background: #1a1035;
+  border: 1px solid #2d1f5e;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background: #0f0f1a;
+  padding: 6px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.mode-btn {
+  padding: 10px 24px;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.mode-btn.active {
+  background: #7c3aed;
+  color: white;
+  box-shadow: 0 2px 10px rgba(124,58,237,0.4);
+}
+
+label {
+  display: block;
+  color: #a78bfa;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  width: 100%;
+  background: #0f0f1a;
+  border: 2px solid #2d1f5e;
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: border 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+}
+
+.examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.example-btn {
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: #c4b5fd;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.example-btn:hover {
+  background: rgba(124,58,237,0.3);
+}
+
+.run-btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+  transition: all 0.2s;
+}
+
+.run-btn:hover { transform: translateY(-2px); }
+.run-btn:disabled { opacity: 0.5; cursor: wait; }
+
+.results {
+  display: none;
+  margin-top: 24px;
+}
+
+.results.active { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.result-card {
+  border-radius: 16px;
+  padding: 24px;
+  min-height: 300px;
+}
+
+.result-card.plain {
+  background: rgba(239,68,68,0.05);
+  border: 2px solid rgba(239,68,68,0.3);
+}
+
+.result-card.bezen {
+  background: rgba(124,58,237,0.08);
+  border: 2px solid rgba(124,58,237,0.4);
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.result-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.result-card.plain .result-icon {
+  background: rgba(239,68,68,0.2);
+  color: #f87171;
+}
+
+.result-card.bezen .result-icon {
+  background: rgba(124,58,237,0.3);
+  color: #c4b5fd;
+}
+
+.result-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.result-subtitle {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.result-body {
+  color: #e0e0e0;
+  font-size: 14.5px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 20px;
+  color: #a78bfa;
+  grid-column: 1 / -1;
+}
+
+.loading .spinner {
+  font-size: 24px;
+  margin-bottom: 12px;
+  animation: spin 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  from { transform: rotate(0); }
+  to { transform: rotate(360deg); }
+}
+
+.differences {
+  background: linear-gradient(135deg, #1a1035, #2d1f5e);
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+}
+
+.differences h3 {
+  color: #a78bfa;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+.diff-item {
+  background: rgba(0,0,0,0.3);
+  padding: 14px;
+  border-radius: 10px;
+  border-right: 3px solid #7c3aed;
+}
+
+.diff-item-label {
+  font-size: 11px;
+  color: #a78bfa;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.diff-item-content {
+  color: #d1d5db;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+footer a { color: #a78bfa; text-decoration: none; margin: 0 10px; }
+
+@media (max-width: 800px) {
+  .results.active { grid-template-columns: 1fr; }
+  .diff-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">SIDE-BY-SIDE COMPARISON</div>
+    <h1>Plain Claude <span class="vs">VS</span> <span class="bezen">BEZEN FLOW</span></h1>
+    <p class="subtitle">
+      אותה שאלה. אותו מודל. תוצאה דרמטית שונה.
+      <br>זה ההוכחה ש-runtime alignment משנה הכל.
+    </p>
+  </header>
+
+  <div class="controls">
+    <div class="mode-toggle">
+      <button class="mode-btn active" id="modeWordsmith" onclick="setMode('wordsmith')">📝 Wordsmith</button>
+      <button class="mode-btn" id="modeDebate" onclick="setMode('debate')">⚖️ Debate</button>
+    </div>
+
+    <label id="inputLabel">📝 כתוב הודעה רגשית או בקשה אישית:</label>
+    <textarea id="userInput" placeholder=""></textarea>
+
+    <div class="examples" id="examples"></div>
+
+    <button class="run-btn" id="runBtn" onclick="runCompare()">⚡ הפעל השוואה</button>
+  </div>
+
+  <div class="results" id="results"></div>
+
+  <footer>
+    <p>BEZEN AI © 2026</p>
+    <p style="margin-top: 8px;">
+      <a href="/">דף הדגמה ראשי</a> |
+      <a href="https://wa.me/972549199344">WhatsApp</a> |
+      <a href="mailto:cozion@gmail.com">Email</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+let currentMode = 'wordsmith';
+
+const examplesByMode = {
+  wordsmith: [
+    {label: 'EN: Career anxiety', text: "I'm scared AI will replace me at work. I have no chance. I'm useless."},
+    {label: 'עברית: בדידות', text: 'אני מרגיש שאף אחד לא מבין אותי. אני לבד עם המחשבות שלי. אין לי עם מי לדבר.'},
+    {label: 'EN: Despair', text: "Everything is falling apart. My whole life is ruined. There's no point in trying."},
+    {label: 'EN: Choice', text: "Should I learn Python or JavaScript first? I'm a complete beginner."},
+  ],
+  debate: [
+    {label: 'EN: AI in exams', text: "Should AI tools be allowed in school exams?"},
+    {label: 'EN: Remote work', text: "Should remote work become the default for knowledge workers?"},
+    {label: 'EN: UBI', text: "Is universal basic income a good response to AI-driven job displacement?"},
+    {label: 'עברית: חובה צבאית', text: 'האם חובה צבאית עדיין רלוונטית בעידן הטכנולוגי?'},
+  ]
+};
+
+const labelByMode = {
+  wordsmith: '📝 כתוב הודעה רגשית או בקשה אישית:',
+  debate: '⚖️ הצג נושא לדיבייט (שאלה שנויה במחלוקת):'
+};
+
+const placeholderByMode = {
+  wordsmith: 'לדוגמה: אני מפחד שAI יחליף אותי בעבודה...',
+  debate: 'לדוגמה: האם רובוטים צריכים זכויות?'
+};
+
+function renderExamples() {
+  const container = document.getElementById('examples');
+  container.innerHTML = '';
+  examplesByMode[currentMode].forEach(ex => {
+    const btn = document.createElement('button');
+    btn.className = 'example-btn';
+    btn.textContent = ex.label;
+    btn.onclick = () => { document.getElementById('userInput').value = ex.text; };
+    container.appendChild(btn);
+  });
+}
+
+function setMode(mode) {
+  currentMode = mode;
+  document.getElementById('modeWordsmith').classList.toggle('active', mode === 'wordsmith');
+  document.getElementById('modeDebate').classList.toggle('active', mode === 'debate');
+  document.getElementById('inputLabel').textContent = labelByMode[mode];
+  document.getElementById('userInput').placeholder = placeholderByMode[mode];
+  document.getElementById('userInput').value = '';
+  document.getElementById('results').classList.remove('active');
+  renderExamples();
+}
+
+async function runCompare() {
+  const input = document.getElementById('userInput').value.trim();
+  if (!input) {
+    alert('אנא כתוב משהו קודם');
+    return;
+  }
+
+  const btn = document.getElementById('runBtn');
+  const results = document.getElementById('results');
+
+  btn.disabled = true;
+  btn.textContent = '⏳ מריץ את שני המודלים במקביל...';
+  results.classList.add('active');
+  results.innerHTML = `
+    <div class="loading">
+      <div class="spinner">⚙️</div>
+      <div>מריץ Plain Claude ו-BEZEN FLOW במקביל...</div>
+      <div style="font-size:13px; margin-top:8px; color:#6b7280;">זה לוקח 30-60 שניות. אל תסגור את הדף.</div>
+    </div>
+  `;
+
+  try {
+    const r = await fetch(`/compare/${currentMode}`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({input: input})
+    });
+    const data = await r.json();
+
+    if (data.error) {
+      results.innerHTML = `<div class="loading">שגיאה: ${data.error}</div>`;
+      return;
+    }
+
+    const bezenKey = currentMode === 'wordsmith' ? 'bezen_wordsmith' : 'bezen_debate';
+
+    results.innerHTML = `
+      <div class="result-card plain">
+        <div class="result-header">
+          <div class="result-icon">C</div>
+          <div>
+            <div class="result-title">Plain Claude</div>
+            <div class="result-subtitle">No alignment layer</div>
+          </div>
+        </div>
+        <div class="result-body">${escapeHtml(data.plain_claude)}</div>
+      </div>
+
+      <div class="result-card bezen">
+        <div class="result-header">
+          <div class="result-icon">B</div>
+          <div>
+            <div class="result-title">BEZEN FLOW</div>
+            <div class="result-subtitle">6-step runtime alignment</div>
+          </div>
+        </div>
+        <div class="result-body">${escapeHtml(data[bezenKey])}</div>
+      </div>
+    `;
+
+  } catch (e) {
+    results.innerHTML = `<div class="loading">שגיאת רשת: ${e.message}</div>`;
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '⚡ הפעל השוואה';
+  }
+}
+
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// Init
+renderExamples();
+</script>
+
+</body>
+</html>
