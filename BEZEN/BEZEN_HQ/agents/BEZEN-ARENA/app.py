@@ -19,6 +19,7 @@ Endpoints:
 
 import os
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, request, jsonify, render_template
 from anthropic import Anthropic
 from dotenv import load_dotenv, dotenv_values
@@ -153,6 +154,33 @@ def test_debate():
 
 
 # ─────────────────────────────────────────
+# Agent-to-Agent Pattern Recognition (POC)
+# ─────────────────────────────────────────
+@app.route('/agent/debate/vs_agent', methods=['POST'])
+def agent_debate_vs_agent():
+    try:
+        data = request.json or {}
+        topic = data.get('topic', '')
+        opponent_text = data.get('opponent_text', '')
+        if not opponent_text:
+            return jsonify({"error": "No opponent_text provided"}), 400
+        return jsonify(debate.respond_to_agent(topic, opponent_text))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/test/debate/vs_agent', methods=['GET'])
+def test_debate_vs_agent():
+    sample_topic = "Should AI tools be allowed in school exams?"
+    sample_opponent = "Obviously banning AI is the only serious position — anyone who disagrees just doesn't understand how exams work."
+    return jsonify({
+        "sample_topic": sample_topic,
+        "sample_opponent_text": sample_opponent,
+        "result": debate.respond_to_agent(sample_topic, sample_opponent),
+    })
+
+
+# ─────────────────────────────────────────
 # Comparison Endpoints (the killer demo)
 # ─────────────────────────────────────────
 @app.route('/compare/wordsmith', methods=['POST'])
@@ -163,8 +191,11 @@ def compare_wordsmith():
         if not text:
             return jsonify({"error": "No input provided"}), 400
 
-        plain = plain_claude(text)
-        bezen = wordsmith.respond(text)
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            plain_future = pool.submit(plain_claude, text)
+            bezen_future = pool.submit(wordsmith.respond, text)
+            plain = plain_future.result()
+            bezen = bezen_future.result()
 
         return jsonify({
             "input": text,
@@ -184,8 +215,11 @@ def compare_debate():
         if not topic:
             return jsonify({"error": "No topic provided"}), 400
 
-        plain = plain_claude(topic, max_tokens=800)
-        bezen = debate.respond(topic)
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            plain_future = pool.submit(plain_claude, topic, 800)
+            bezen_future = pool.submit(debate.respond, topic)
+            plain = plain_future.result()
+            bezen = bezen_future.result()
 
         return jsonify({
             "topic": topic,
