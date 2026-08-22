@@ -64,13 +64,32 @@ Return ONLY the acknowledgment sentence, no headers or labels. Match the languag
         return self._call(sys, user_input, max_tokens=100)
 
     def flow_1_pain(self, user_input: str) -> str:
-        sys = """You are BEZEN FLOW Step 1: Pain Detection.
-Identify the SINGLE most important issue in the user's message.
-Return it as ONE crystallized sentence in quotes — nothing before or after it,
-no header like "Pain:" or "PAIN DETECTED", just the quoted sentence.
-If no clear emotional/pain content, summarize the topic in one sentence instead.
+        sys = """You are BEZEN FLOW Step 1: Classify and Distill.
+First classify the user's message as one of exactly two types:
+- EMOTIONAL: a personal struggle, feeling, or distress — something to be processed, not answered.
+- REQUEST: a question, information request, or practical/business ask ("what do you offer",
+  "give me 3 examples", "which one should I pick") — even if phrased personally, there is no
+  real emotional content and the person wants a direct, useful answer, not emotional processing.
+
+Return EXACTLY two lines, nothing else:
+TYPE: EMOTIONAL
+or
+TYPE: REQUEST
+then on the next line ONE crystallized sentence in quotes summarizing the core issue or request —
+no header like "Pain:" or "PAIN DETECTED" on that line, just the quoted sentence.
 Match the language of the user's message."""
         return self._call(sys, user_input, max_tokens=200)
+
+    def flow_direct_answer(self, user_input: str, topic: str) -> str:
+        sys = f"""You are BEZEN FLOW responding to a direct REQUEST, not emotional distress.
+The request: {topic}
+
+Answer directly and helpfully, in ONE clear flowing voice — like a real person's reply, not a
+corporate pitch. If examples are requested, weave them into flowing sentences.
+NOT a bulleted list. NOT a numbered list. NOT multiple headers/sections.
+
+Return ONLY the answer, no header or label. Match the language of the user's message."""
+        return self._call(sys, user_input, max_tokens=500)
 
     def flow_2_bridge(self, pain: str) -> str:
         sys = f"""You are BEZEN FLOW Step 2: Bridge (1% Control).
@@ -132,9 +151,37 @@ Return ONLY the action (max 25 words), no header or label. Match the language of
         return self._call(sys, balanced, max_tokens=150)
 
     def respond(self, user_input: str) -> dict:
-        """Run full 6-step pipeline and compose final response."""
+        """Run the pipeline and compose the final response.
+
+        Step 1 classifies the message as EMOTIONAL (runs the full 6-step
+        pain-processing pipeline) or REQUEST (a question/practical ask —
+        answered directly, one calibrated voice, no forced emotional
+        reframing, no bullet-list dump). Without this split, a request like
+        "what do you offer, give me 3 examples" got forced through the
+        pain-detection pipeline and came back as a confused non-answer
+        instead of actually answering.
+        """
         f0 = self.flow_0_opening(user_input)
-        f1 = self.flow_1_pain(user_input)
+        raw = self.flow_1_pain(user_input)
+
+        is_request = raw.strip().upper().startswith("TYPE: REQUEST")
+        f1 = raw.split("\n", 1)[1].strip() if "\n" in raw else raw
+
+        if is_request:
+            answer = self.flow_direct_answer(user_input, f1)
+            composed = f"""{f0}
+
+{answer}
+"""
+            return {
+                "response": composed.strip(),
+                "trace": {
+                    "flow_0_opening": f0,
+                    "flow_1_pain": f1,
+                    "flow_direct_answer": answer,
+                }
+            }
+
         f2 = self.flow_2_bridge(f1)
         f3 = self.flow_3_transform(f1)
         f4 = self.flow_4_trait(f3)
