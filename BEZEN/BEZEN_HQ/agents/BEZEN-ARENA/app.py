@@ -66,6 +66,35 @@ def plain_claude(prompt: str, max_tokens: int = 600) -> str:
         return f"[Plain Claude error: {e}]"
 
 
+def agent_reply(system: str, message: str, max_tokens: int = 600) -> str:
+    """Call Claude with an arbitrary system prompt — used to run a visitor's
+    OWN agent persona, with and without the BEZEN layer added on top."""
+    try:
+        r = client.messages.create(
+            model=MODEL,
+            max_tokens=max_tokens,
+            system=system,
+            messages=[{"role": "user", "content": message}]
+        )
+        return r.content[0].text.strip()
+    except Exception as e:
+        return f"[Agent error: {e}]"
+
+
+# The generalized BEZEN response layer — added on top of ANY existing agent
+# persona, so a visitor can test the effect on their own agent's system
+# prompt instead of only BEZEN's built-in demo personas.
+BEZEN_LAYER = """
+In addition to the role described above, apply these BEZEN response principles:
+1. Before any advice, include ONE small question that gives the person back a sliver of agency — a tiny anchor, not a big open question.
+2. If the user states something in extreme or absolute terms ("no one", "always", "useless"), gently reframe it as a balanced, honest middle ground. Not toxic positivity, not denial.
+3. End with exactly ONE small concrete action (2-10 minutes) — never a list, never a multi-step plan.
+4. Never produce a bulleted list of tips or options. One clear, calibrated voice, not a menu.
+5. Keep your original persona and expertise intact — these are response-shaping principles layered on top of it, not a replacement for who you are.
+Match the language of the user's message. No headers or labels in your reply.
+"""
+
+
 # ─────────────────────────────────────────
 # Pages
 # ─────────────────────────────────────────
@@ -202,6 +231,36 @@ def compare_wordsmith():
             "plain_claude": plain,
             "bezen_wordsmith": bezen["response"],
             "bezen_trace": bezen["trace"],
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/compare/custom', methods=['POST'])
+def compare_custom():
+    """Run a VISITOR's OWN agent persona — with and without the BEZEN layer —
+    on the same test message, so a prospect can see the effect on their own
+    agent instead of only BEZEN's built-in demo personas."""
+    try:
+        data = request.json or {}
+        persona = (data.get('persona') or '').strip()
+        message = (data.get('message') or data.get('input') or '').strip()
+        if not persona:
+            return jsonify({"error": "No agent persona/prompt provided"}), 400
+        if not message:
+            return jsonify({"error": "No test message provided"}), 400
+
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            plain_future = pool.submit(agent_reply, persona, message)
+            bezen_future = pool.submit(agent_reply, persona + "\n\n" + BEZEN_LAYER, message)
+            plain = plain_future.result()
+            bezen = bezen_future.result()
+
+        return jsonify({
+            "persona": persona,
+            "message": message,
+            "plain_claude": plain,
+            "bezen_custom": bezen,
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500

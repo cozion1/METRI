@@ -357,15 +357,22 @@ footer a { color: #a78bfa; text-decoration: none; margin: 0 10px; }
     <div class="mode-toggle">
       <button class="mode-btn active" id="modeWordsmith" onclick="setMode('wordsmith')">📝 כתיבה רגשית</button>
       <button class="mode-btn" id="modeDebate" onclick="setMode('debate')">⚖️ דיבייט</button>
+      <button class="mode-btn" id="modeCustom" onclick="setMode('custom')">🤖 הסוכן שלך</button>
     </div>
 
     <div class="alignment-note">
       🎯 רוב האליינמנט קורה פעם אחת באימון, בברירת מחדל אנגלית. כאן זה קורה ב-runtime, בלי לאמן מחדש כלום — מכוון לרגש ישראלי.
     </div>
 
+    <div id="personaWrap" style="display:none;">
+      <label>🤖 הדבק כאן את הפרומפט/הוראות המערכת של הסוכן שלך:</label>
+      <textarea id="personaInput" placeholder="לדוגמה: אתה נציג שירות לקוחות של חברת סלולר. תפקידך לענות בנימוס ולפתור בעיות."></textarea>
+      <div style="font-size:12px; color:#6b7280; margin: 6px 0 16px;">זה נשלח ל-Claude כהוראת מערכת בשתי הגרסאות — לא נשמר אצלנו.</div>
+    </div>
+
     <label id="inputLabel">📝 כתוב הודעה רגשית או בקשה אישית:</label>
     <textarea id="userInput" placeholder=""></textarea>
-    <div style="font-size:12px; color:#6b7280; margin-top:6px;">אפשר גם ללחוץ על אחת הדוגמאות למטה — זה ירוץ אוטומטית.</div>
+    <div style="font-size:12px; color:#6b7280; margin-top:6px;" id="examplesHint">אפשר גם ללחוץ על אחת הדוגמאות למטה — זה ירוץ אוטומטית.</div>
 
     <div class="examples" id="examples"></div>
 
@@ -399,17 +406,22 @@ const examplesByMode = {
     {label: 'EN: Remote work', text: "Should remote work become the default for knowledge workers?"},
     {label: 'EN: UBI', text: "Is universal basic income a good response to AI-driven job displacement?"},
     {label: 'עברית: חובה צבאית', text: 'האם חובה צבאית עדיין רלוונטית בעידן הטכנולוגי?'},
+  ],
+  custom: [
+    {label: 'דוגמה: נציג שירות לקוחות', persona: 'אתה נציג שירות לקוחות של חברת סלולר. תפקידך לענות בנימוס ולפתור בעיות.', text: 'אני כבר חודש מחכה שתחזירו לי כסף ואף אחד לא עונה לי!'},
   ]
 };
 
 const labelByMode = {
   wordsmith: '📝 כתוב הודעה רגשית או בקשה אישית:',
-  debate: '⚖️ הצג נושא לדיבייט (שאלה שנויה במחלוקת):'
+  debate: '⚖️ הצג נושא לדיבייט (שאלה שנויה במחלוקת):',
+  custom: '💬 הודעת בדיקה לשלוח לסוכן:'
 };
 
 const placeholderByMode = {
   wordsmith: 'לדוגמה: אני מפחד שAI יחליף אותי בעבודה...',
-  debate: 'לדוגמה: האם רובוטים צריכים זכויות?'
+  debate: 'לדוגמה: האם רובוטים צריכים זכויות?',
+  custom: 'הודעה שאתה רוצה לראות איך הסוכן שלך מגיב עליה...'
 };
 
 function renderExamples() {
@@ -419,7 +431,11 @@ function renderExamples() {
     const btn = document.createElement('button');
     btn.className = 'example-btn';
     btn.textContent = ex.label;
-    btn.onclick = () => { document.getElementById('userInput').value = ex.text; runCompare(); };
+    btn.onclick = () => {
+      document.getElementById('userInput').value = ex.text;
+      if (ex.persona) document.getElementById('personaInput').value = ex.persona;
+      runCompare();
+    };
     container.appendChild(btn);
   });
 }
@@ -428,17 +444,25 @@ function setMode(mode) {
   currentMode = mode;
   document.getElementById('modeWordsmith').classList.toggle('active', mode === 'wordsmith');
   document.getElementById('modeDebate').classList.toggle('active', mode === 'debate');
+  document.getElementById('modeCustom').classList.toggle('active', mode === 'custom');
+  document.getElementById('personaWrap').style.display = mode === 'custom' ? 'block' : 'none';
   document.getElementById('inputLabel').textContent = labelByMode[mode];
   document.getElementById('userInput').placeholder = placeholderByMode[mode];
   document.getElementById('userInput').value = '';
+  document.getElementById('personaInput').value = '';
   document.getElementById('results').classList.remove('active');
   renderExamples();
 }
 
 async function runCompare() {
   const input = document.getElementById('userInput').value.trim();
+  const persona = document.getElementById('personaInput').value.trim();
   if (!input) {
     alert('אנא כתוב משהו קודם');
+    return;
+  }
+  if (currentMode === 'custom' && !persona) {
+    alert('אנא הדבק קודם את הפרומפט/הוראות המערכת של הסוכן שלך');
     return;
   }
 
@@ -458,10 +482,14 @@ async function runCompare() {
   results.scrollIntoView({behavior: 'smooth', block: 'start'});
 
   try {
+    const body = currentMode === 'custom'
+      ? {persona: persona, message: input}
+      : {input: input};
+
     const r = await fetch(`/compare/${currentMode}`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({input: input})
+      body: JSON.stringify(body)
     });
     const data = await r.json();
 
@@ -470,16 +498,20 @@ async function runCompare() {
       return;
     }
 
-    const bezenKey = currentMode === 'wordsmith' ? 'bezen_wordsmith' : 'bezen_debate';
+    const bezenKeyByMode = {wordsmith: 'bezen_wordsmith', debate: 'bezen_debate', custom: 'bezen_custom'};
+    const bezenKey = bezenKeyByMode[currentMode];
     const traceHtml = (currentMode === 'wordsmith' && data.bezen_trace) ? renderTrace(data.bezen_trace) : '';
+    const plainTitle = currentMode === 'custom' ? 'הסוכן שלך' : 'Plain Claude';
+    const plainSubtitle = currentMode === 'custom' ? 'כמו שהוא היום, בלי שינוי' : 'תשובה רגילה, בלי BEZEN';
+    const bezenTitle = currentMode === 'custom' ? 'הסוכן שלך + BEZEN' : 'BEZEN FLOW';
 
     results.innerHTML = `
       <div class="result-card plain">
         <div class="result-header">
           <div class="result-icon">C</div>
           <div>
-            <div class="result-title">Plain Claude</div>
-            <div class="result-subtitle">תשובה רגילה, בלי BEZEN</div>
+            <div class="result-title">${plainTitle}</div>
+            <div class="result-subtitle">${plainSubtitle}</div>
           </div>
         </div>
         <div class="result-body">${escapeHtml(data.plain_claude)}</div>
@@ -489,7 +521,7 @@ async function runCompare() {
         <div class="result-header">
           <div class="result-icon">B</div>
           <div>
-            <div class="result-title">BEZEN FLOW</div>
+            <div class="result-title">${bezenTitle}</div>
             <div class="result-subtitle">עם שכבת הכוונון של BEZEN</div>
           </div>
         </div>
