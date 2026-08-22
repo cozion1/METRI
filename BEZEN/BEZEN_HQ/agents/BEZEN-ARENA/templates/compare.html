@@ -91,6 +91,17 @@ label {
   letter-spacing: 1px;
 }
 
+.alignment-note {
+  background: rgba(124,58,237,0.1);
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #c4b5fd;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
 textarea {
   width: 100%;
   background: #0f0f1a;
@@ -346,6 +357,10 @@ footer a { color: #a78bfa; text-decoration: none; margin: 0 10px; }
     <div class="mode-toggle">
       <button class="mode-btn active" id="modeWordsmith" onclick="setMode('wordsmith')">📝 כתיבה רגשית</button>
       <button class="mode-btn" id="modeDebate" onclick="setMode('debate')">⚖️ דיבייט</button>
+    </div>
+
+    <div class="alignment-note">
+      🎯 רוב האליינמנט קורה פעם אחת באימון, בברירת מחדל אנגלית. כאן זה קורה ב-runtime, בלי לאמן מחדש כלום — מכוון לרגש ישראלי.
     </div>
 
     <label id="inputLabel">📝 כתוב הודעה רגשית או בקשה אישית:</label>
