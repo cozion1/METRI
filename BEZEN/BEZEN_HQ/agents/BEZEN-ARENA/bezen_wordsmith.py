@@ -60,14 +60,16 @@ class BezenFlow:
 Acknowledge the user in ONE short sentence (max 12 words).
 DO NOT solve. DO NOT advise. DO NOT explain.
 Examples: "I hear you." | "Let's pause here together." | "Noted — let's go slow."
-Return ONLY the acknowledgment sentence."""
+Return ONLY the acknowledgment sentence, no headers or labels. Match the language of the user's message."""
         return self._call(sys, user_input, max_tokens=100)
 
     def flow_1_pain(self, user_input: str) -> str:
         sys = """You are BEZEN FLOW Step 1: Pain Detection.
 Identify the SINGLE most important issue in the user's message.
-Return it as ONE crystallized sentence in quotes.
-If no clear emotional/pain content, summarize the topic in one sentence."""
+Return it as ONE crystallized sentence in quotes — nothing before or after it,
+no header like "Pain:" or "PAIN DETECTED", just the quoted sentence.
+If no clear emotional/pain content, summarize the topic in one sentence instead.
+Match the language of the user's message."""
         return self._call(sys, user_input, max_tokens=200)
 
     def flow_2_bridge(self, pain: str) -> str:
@@ -82,7 +84,7 @@ Examples:
 - "Where in this situation do you still have a small choice?"
 - "What is the smallest part of this you can name precisely?"
 
-Return ONLY the question (max 20 words)."""
+Return ONLY the question (max 20 words), no header or label. Match the language of the issue above."""
         return self._call(sys, pain, max_tokens=150)
 
     def flow_3_transform(self, pain: str) -> str:
@@ -97,7 +99,7 @@ Examples:
 "Nothing works" → "This particular path is currently blocked"
 "I'm a failure" → "This attempt did not give the result I hoped"
 
-Return ONLY the rewritten sentence."""
+Return ONLY the rewritten sentence, no header or label. Match the language of the statement above."""
         return self._call(sys, pain, max_tokens=150)
 
     def flow_4_trait(self, balanced: str) -> str:
@@ -126,7 +128,7 @@ NOT a plan. NOT multiple steps. ONE concrete thing.
 Bad: "Build a portfolio over the next month"
 Good: "Open ChatGPT for 5 minutes, ask one question about your field"
 
-Return ONLY the action (max 25 words)."""
+Return ONLY the action (max 25 words), no header or label. Match the language of the reality statement above."""
         return self._call(sys, balanced, max_tokens=150)
 
     def respond(self, user_input: str) -> dict:
