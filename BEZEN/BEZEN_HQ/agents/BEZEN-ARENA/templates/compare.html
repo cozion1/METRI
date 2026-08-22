@@ -213,6 +213,41 @@ textarea:focus {
   color: #9ca3af;
 }
 
+.trace-toggle {
+  margin-top: 16px;
+  background: none;
+  border: 1px solid rgba(124,58,237,0.4);
+  color: #c4b5fd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.trace-toggle:hover { background: rgba(124,58,237,0.15); }
+
+.trace-panel {
+  display: none;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255,255,255,0.15);
+  font-size: 13px;
+}
+
+.trace-panel.open { display: block; }
+
+.trace-step { margin-bottom: 10px; }
+
+.trace-step-label {
+  color: #a78bfa;
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.trace-step-value { color: #cbd5e1; white-space: pre-wrap; }
+
 .result-body {
   color: #e0e0e0;
   font-size: 14.5px;
@@ -421,6 +456,7 @@ async function runCompare() {
     }
 
     const bezenKey = currentMode === 'wordsmith' ? 'bezen_wordsmith' : 'bezen_debate';
+    const traceHtml = (currentMode === 'wordsmith' && data.bezen_trace) ? renderTrace(data.bezen_trace) : '';
 
     results.innerHTML = `
       <div class="result-card plain">
@@ -443,6 +479,7 @@ async function runCompare() {
           </div>
         </div>
         <div class="result-body">${escapeHtml(data[bezenKey])}</div>
+        ${traceHtml}
       </div>
     `;
 
@@ -458,6 +495,41 @@ function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
+}
+
+const traceLabels = {
+  flow_0_opening: 'פתיחה',
+  flow_1_pain: 'זיהוי הכאב המרכזי',
+  flow_2_bridge: 'שאלת עוגן (1% שליטה)',
+  flow_3_transform: 'ניסוח מאוזן',
+  flow_4_trait: 'התכונה שמופעלת',
+  flow_5_action: 'הצעד הקטן',
+};
+
+let traceCounter = 0;
+
+function renderTrace(trace) {
+  traceCounter++;
+  const panelId = `trace-panel-${traceCounter}`;
+  const steps = Object.keys(traceLabels)
+    .filter(key => trace[key])
+    .map(key => `
+      <div class="trace-step">
+        <div class="trace-step-label">${traceLabels[key]}</div>
+        <div class="trace-step-value">${escapeHtml(trace[key])}</div>
+      </div>
+    `).join('');
+
+  return `
+    <button class="trace-toggle" onclick="toggleTrace('${panelId}', this)">🔍 הצג את 6 השלבים הפנימיים שיצרו את התשובה</button>
+    <div class="trace-panel" id="${panelId}">${steps}</div>
+  `;
+}
+
+function toggleTrace(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  const open = panel.classList.toggle('open');
+  btn.textContent = open ? '🔼 הסתר את השלבים הפנימיים' : '🔍 הצג את 6 השלבים הפנימיים שיצרו את התשובה';
 }
 
 // Init

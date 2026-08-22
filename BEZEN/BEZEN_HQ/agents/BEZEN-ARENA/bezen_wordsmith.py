@@ -138,36 +138,18 @@ Return ONLY the action (max 25 words)."""
         f4 = self.flow_4_trait(f3)
         f5 = self.flow_5_action(f4, f3)
 
-        # Compose final wordsmith-quality response, labels matched to input language
-        hebrew_chars = sum(1 for ch in user_input if '֐' <= ch <= '׿')
-        if hebrew_chars > len(user_input) / 4:
-            labels = {
-                "core": "הליבה",
-                "question": "כיוון למחשבה (חלק מההדגמה, לא שאלה שצריך לענות עליה כאן)",
-                "balanced": "ניסוח מאוזן יותר",
-                "trait": "מה זה מראה עליך",
-                "action": "צעד קטן אחד (2-10 דקות)",
-            }
-        else:
-            labels = {
-                "core": "The core",
-                "question": "A direction to consider (part of the demo, not a question to answer here)",
-                "balanced": "A more balanced framing",
-                "trait": "What this shows about you",
-                "action": "One small step (2-10 minutes)",
-            }
-
+        # Compose as ONE natural flowing reply — no internal-step labels shown to
+        # the reader. The 6-step breakdown (with f1/f4 pain diagnosis + trait
+        # naming) stays available in `trace` for anyone who wants to see the
+        # mechanism; showing it inline read as a clinical worksheet, not a
+        # message a person would actually receive.
         composed = f"""{f0}
 
-{labels['core']}: {f1}
+{f3}
 
-{labels['question']}: {f2}
+{f2}
 
-{labels['balanced']}: {f3}
-
-{labels['trait']}: {f4}
-
-{labels['action']}: {f5}
+{f5}
 """
 
         return {
