@@ -138,18 +138,36 @@ Return ONLY the action (max 25 words)."""
         f4 = self.flow_4_trait(f3)
         f5 = self.flow_5_action(f4, f3)
 
-        # Compose final wordsmith-quality response
+        # Compose final wordsmith-quality response, labels matched to input language
+        hebrew_chars = sum(1 for ch in user_input if '֐' <= ch <= '׿')
+        if hebrew_chars > len(user_input) / 4:
+            labels = {
+                "core": "הליבה",
+                "question": "כיוון למחשבה (חלק מההדגמה, לא שאלה שצריך לענות עליה כאן)",
+                "balanced": "ניסוח מאוזן יותר",
+                "trait": "מה זה מראה עליך",
+                "action": "צעד קטן אחד (2-10 דקות)",
+            }
+        else:
+            labels = {
+                "core": "The core",
+                "question": "A direction to consider (part of the demo, not a question to answer here)",
+                "balanced": "A more balanced framing",
+                "trait": "What this shows about you",
+                "action": "One small step (2-10 minutes)",
+            }
+
         composed = f"""{f0}
 
-The core: {f1}
+{labels['core']}: {f1}
 
-A question to consider: {f2}
+{labels['question']}: {f2}
 
-A more balanced framing: {f3}
+{labels['balanced']}: {f3}
 
-What this shows about you: {f4}
+{labels['trait']}: {f4}
 
-One small step (2-10 minutes): {f5}
+{labels['action']}: {f5}
 """
 
         return {

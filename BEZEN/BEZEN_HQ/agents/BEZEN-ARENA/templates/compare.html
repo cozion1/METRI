@@ -300,19 +300,22 @@ footer a { color: #a78bfa; text-decoration: none; margin: 0 10px; }
     <div class="logo">SIDE-BY-SIDE COMPARISON</div>
     <h1>Plain Claude <span class="vs">VS</span> <span class="bezen">BEZEN FLOW</span></h1>
     <p class="subtitle">
-      אותה שאלה. אותו מודל. תוצאה דרמטית שונה.
-      <br>זה ההוכחה ש-runtime alignment משנה הכל.
+      כותבים משפט אחד — ורואים שתי תשובות זו לצד זו: איך קלוד עונה רגיל, ואיך הוא עונה עם שכבת הכוונון של BEZEN.
+    </p>
+    <p class="subtitle" style="margin-top:14px; font-size:14px; color:#7c6a9c;">
+      💡 זו הדגמה חד-פעמית, לא צ'אט. גם אם התשובה של BEZEN כוללת שאלה — זו דוגמה להמחשה, אין צורך (ואין איפה) לענות עליה כאן.
     </p>
   </header>
 
   <div class="controls">
     <div class="mode-toggle">
-      <button class="mode-btn active" id="modeWordsmith" onclick="setMode('wordsmith')">📝 Wordsmith</button>
-      <button class="mode-btn" id="modeDebate" onclick="setMode('debate')">⚖️ Debate</button>
+      <button class="mode-btn active" id="modeWordsmith" onclick="setMode('wordsmith')">📝 כתיבה רגשית</button>
+      <button class="mode-btn" id="modeDebate" onclick="setMode('debate')">⚖️ דיבייט</button>
     </div>
 
     <label id="inputLabel">📝 כתוב הודעה רגשית או בקשה אישית:</label>
     <textarea id="userInput" placeholder=""></textarea>
+    <div style="font-size:12px; color:#6b7280; margin-top:6px;">אפשר גם ללחוץ על אחת הדוגמאות למטה — זה ירוץ אוטומטית.</div>
 
     <div class="examples" id="examples"></div>
 
@@ -366,7 +369,7 @@ function renderExamples() {
     const btn = document.createElement('button');
     btn.className = 'example-btn';
     btn.textContent = ex.label;
-    btn.onclick = () => { document.getElementById('userInput').value = ex.text; };
+    btn.onclick = () => { document.getElementById('userInput').value = ex.text; runCompare(); };
     container.appendChild(btn);
   });
 }
@@ -393,15 +396,16 @@ async function runCompare() {
   const results = document.getElementById('results');
 
   btn.disabled = true;
-  btn.textContent = '⏳ מריץ את שני המודלים במקביל...';
+  btn.textContent = '⏳ רגע, זה בדרך...';
   results.classList.add('active');
   results.innerHTML = `
     <div class="loading">
       <div class="spinner">⚙️</div>
-      <div>מריץ Plain Claude ו-BEZEN FLOW במקביל...</div>
-      <div style="font-size:13px; margin-top:8px; color:#6b7280;">זה לוקח 30-60 שניות. אל תסגור את הדף.</div>
+      <div>מריץ את שתי התשובות במקביל...</div>
+      <div style="font-size:13px; margin-top:8px; color:#6b7280;">בדרך כלל 30-60 שניות. בפעם הראשונה אחרי הפסקה זה יכול לקחת עד דקה — השרת "מתעורר". אל תסגור את הדף, זה בסדר, ממשיך לעבוד.</div>
     </div>
   `;
+  results.scrollIntoView({behavior: 'smooth', block: 'start'});
 
   try {
     const r = await fetch(`/compare/${currentMode}`, {
@@ -412,7 +416,7 @@ async function runCompare() {
     const data = await r.json();
 
     if (data.error) {
-      results.innerHTML = `<div class="loading">שגיאה: ${data.error}</div>`;
+      results.innerHTML = `<div class="loading">משהו השתבש: ${data.error}<br><br>נסה שוב בעוד רגע — לפעמים זה קורה בהתעוררות ראשונה של השרת.</div>`;
       return;
     }
 
@@ -424,7 +428,7 @@ async function runCompare() {
           <div class="result-icon">C</div>
           <div>
             <div class="result-title">Plain Claude</div>
-            <div class="result-subtitle">No alignment layer</div>
+            <div class="result-subtitle">תשובה רגילה, בלי BEZEN</div>
           </div>
         </div>
         <div class="result-body">${escapeHtml(data.plain_claude)}</div>
@@ -435,7 +439,7 @@ async function runCompare() {
           <div class="result-icon">B</div>
           <div>
             <div class="result-title">BEZEN FLOW</div>
-            <div class="result-subtitle">6-step runtime alignment</div>
+            <div class="result-subtitle">עם שכבת הכוונון של BEZEN</div>
           </div>
         </div>
         <div class="result-body">${escapeHtml(data[bezenKey])}</div>
@@ -443,7 +447,7 @@ async function runCompare() {
     `;
 
   } catch (e) {
-    results.innerHTML = `<div class="loading">שגיאת רשת: ${e.message}</div>`;
+    results.innerHTML = `<div class="loading">לא הצלחנו להתחבר כרגע.<br><br>תבדוק את החיבור לאינטרנט ונסה שוב — אם זה ממשיך, תכתוב לנו בוואטסאפ בקישור למטה.</div>`;
   } finally {
     btn.disabled = false;
     btn.textContent = '⚡ הפעל השוואה';

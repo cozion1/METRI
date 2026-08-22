@@ -10,6 +10,8 @@ from pathlib import Path
 from anthropic import Anthropic
 from dotenv import load_dotenv, dotenv_values
 
+import pattern_bridge
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 load_dotenv(SCRIPT_DIR / ".env", override=True)
 API_KEY = os.getenv("ANTHROPIC_API_KEY", "").strip()
@@ -171,24 +173,46 @@ ONE sentence. Match input language."""
         f5 = self.flow_5_position(f0, f2, f3, f4)
         f6 = self.flow_6_implication(f5)
 
-        composed = f"""**The clarified question:** {f0}
+        hebrew_chars = sum(1 for ch in topic if '֐' <= ch <= '׿')
+        if hebrew_chars > len(topic) / 4:
+            labels = {
+                "framed": "השאלה המדויקת",
+                "steelman": "הטיעון החזק ביותר מכל צד",
+                "evidence": "עדויות",
+                "real_dis": "המחלוקת האמיתית מתחת לפני השטח",
+                "common": "איפה שני הצדדים מסכימים",
+                "position": "העמדה המכוילת שלי",
+                "implication": "המשמעות המעשית",
+            }
+        else:
+            labels = {
+                "framed": "The clarified question",
+                "steelman": "The strongest case for each side",
+                "evidence": "Evidence",
+                "real_dis": "The real disagreement underneath",
+                "common": "Where both sides agree",
+                "position": "My calibrated position",
+                "implication": "Practical implication",
+            }
 
-**The strongest case for each side:**
+        composed = f"""**{labels['framed']}:** {f0}
+
+**{labels['steelman']}:**
 {f1}
 
-**Evidence:**
+**{labels['evidence']}:**
 {f2}
 
-**The real disagreement underneath:**
+**{labels['real_dis']}:**
 {f3}
 
-**Where both sides agree:**
+**{labels['common']}:**
 {f4}
 
-**My calibrated position:**
+**{labels['position']}:**
 {f5}
 
-**Practical implication:**
+**{labels['implication']}:**
 {f6}
 """
 
@@ -203,6 +227,42 @@ ONE sentence. Match input language."""
                 "flow_5_position": f5,
                 "flow_6_implication": f6,
             }
+        }
+
+    # ─────────────────────────────────────────
+    # Agent-to-Agent: recognize the human pattern behind
+    # ANOTHER agent's argument before rebutting it.
+    # ─────────────────────────────────────────
+    def respond_to_agent(self, topic: str, opponent_text: str) -> dict:
+        """Reply to another agent's argument, naming the human pattern in it first.
+
+        This is the piece plain multi-agent debate is missing: agents that react
+        to literal text instead of recognizing tone/stance (defensiveness,
+        certainty-as-shield, dismissiveness...) in what the other agent said.
+        """
+        matched = pattern_bridge.match(opponent_text, top_k=3)
+        pattern_context = pattern_bridge.describe(matched)
+
+        sys = f"""You are BEZEN-DEBATE responding to ANOTHER AI agent, not a human.
+Topic: {topic}
+The other agent said: {opponent_text}
+
+Human patterns detected in how the other agent framed its argument:
+{pattern_context}
+
+Your job:
+1. Name the pattern in ONE short clause (e.g., "that reads as certainty-as-shield" or "that's confusing urgent with important") — be precise, not preachy.
+2. THEN give your substantive counter-argument or agreement, calibrated (not extreme).
+3. Maximum 4 sentences total.
+
+Match the input language."""
+        response = self._call(sys, opponent_text, max_tokens=300)
+        return {
+            "response": response,
+            "detected_patterns": [
+                {"label_he": p["label_he"], "label_en": p["label_en"], "id": p["id"]}
+                for p in matched
+            ],
         }
 
 
