@@ -26,6 +26,7 @@ from dotenv import load_dotenv, dotenv_values
 
 from bezen_wordsmith import BezenFlow as BezenWordsmith
 from bezen_debate import BezenDebate
+from bezen_support import BezenSupport
 
 # ─────────────────────────────────────────
 # Setup
@@ -48,6 +49,7 @@ client = Anthropic(api_key=API_KEY)
 
 wordsmith = BezenWordsmith(client, MODEL)
 debate = BezenDebate(client, MODEL)
+support = BezenSupport(client, MODEL)
 
 
 # ─────────────────────────────────────────
@@ -106,6 +108,11 @@ def home():
 @app.route('/compare', methods=['GET'])
 def compare_page():
     return render_template('compare.html')
+
+
+@app.route('/support', methods=['GET'])
+def support_page():
+    return render_template('support.html')
 
 
 # ─────────────────────────────────────────
@@ -231,6 +238,56 @@ def compare_wordsmith():
             "plain_claude": plain,
             "bezen_wordsmith": bezen["response"],
             "bezen_trace": bezen["trace"],
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/agent/support', methods=['POST'])
+def agent_support():
+    """Live multi-turn customer service agent with the BEZEN layer.
+
+    Body: {message, history: [{role, content}], business: {name, domain, policies, escalation}}
+    Unlike the one-shot compare demo, this holds a real conversation.
+    """
+    try:
+        data = request.json or {}
+        message = (data.get('message') or data.get('input') or '').strip()
+        if not message:
+            return jsonify({"error": "No message provided"}), 400
+
+        history = data.get('history') or []
+        business = data.get('business') or {}
+
+        result = support.respond(message, history=history, business=business)
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/compare/support', methods=['POST'])
+def compare_support():
+    """Same customer-service agent, with and without the BEZEN layer."""
+    try:
+        data = request.json or {}
+        message = (data.get('message') or data.get('input') or '').strip()
+        if not message:
+            return jsonify({"error": "No message provided"}), 400
+
+        history = data.get('history') or []
+        business = data.get('business') or {}
+
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            plain_future = pool.submit(support.plain_reply, message, history, business)
+            bezen_future = pool.submit(support.respond, message, history, business)
+            plain = plain_future.result()
+            bezen = bezen_future.result()
+
+        return jsonify({
+            "message": message,
+            "plain_claude": plain,
+            "bezen_support": bezen["response"],
+            "detected_patterns": bezen["detected_patterns"],
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500

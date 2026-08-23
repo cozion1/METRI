@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>סוכן שירות לקוחות BEZEN — דמו חי</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { max-width: 1100px; margin: 0 auto; }
+
+header { text-align: center; padding: 24px 0 28px; }
+
+.logo {
+  font-size: 12px; font-weight: 700; letter-spacing: 5px;
+  color: #a78bfa; margin-bottom: 12px;
+}
+
+h1 { font-size: clamp(22px, 3.5vw, 34px); color: white; margin-bottom: 10px; }
+
+.subtitle { color: #9ca3af; font-size: 15px; max-width: 700px; margin: 0 auto; line-height: 1.6; }
+
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+
+.panel {
+  background: #1a1035;
+  border: 1px solid #2d1f5e;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.panel h3 {
+  font-size: 14px; color: #a78bfa; margin-bottom: 4px;
+}
+
+.panel .hint { font-size: 12px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
+
+label {
+  display: block; color: #c4b5fd; font-size: 12px;
+  font-weight: 600; margin: 12px 0 5px;
+}
+
+input, textarea {
+  width: 100%;
+  background: #0f0f1a;
+  border: 1px solid #2d1f5e;
+  border-radius: 8px;
+  padding: 9px 11px;
+  color: #fff;
+  font-size: 13px;
+  font-family: inherit;
+}
+
+textarea { resize: vertical; min-height: 68px; line-height: 1.5; }
+
+input:focus, textarea:focus { outline: none; border-color: #7c3aed; }
+
+.apply-btn {
+  width: 100%; margin-top: 16px;
+  background: rgba(124,58,237,0.2);
+  border: 1px solid rgba(124,58,237,0.5);
+  color: #c4b5fd;
+  padding: 9px; border-radius: 8px;
+  font-size: 13px; font-weight: 600; cursor: pointer;
+}
+
+.apply-btn:hover { background: rgba(124,58,237,0.35); }
+
+.chat-wrap {
+  background: #1a1035;
+  border: 1px solid #2d1f5e;
+  border-radius: 16px;
+  display: flex; flex-direction: column;
+  height: 620px;
+}
+
+.chat-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #2d1f5e;
+  display: flex; align-items: center; gap: 12px;
+}
+
+.avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; color: white; font-size: 15px;
+}
+
+.chat-title { font-weight: 700; color: white; font-size: 15px; }
+.chat-status { font-size: 12px; color: #6ee7b7; }
+
+.messages {
+  flex: 1; overflow-y: auto; padding: 20px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+.msg { max-width: 78%; padding: 12px 15px; border-radius: 14px; line-height: 1.65; font-size: 14.5px; white-space: pre-wrap; }
+
+.msg.user {
+  align-self: flex-start;
+  background: #2d1f5e;
+  color: #ede9fe;
+  border-bottom-right-radius: 4px;
+}
+
+.msg.bot {
+  align-self: flex-end;
+  background: rgba(124,58,237,0.14);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: #e9e5ff;
+  border-bottom-left-radius: 4px;
+}
+
+.msg.system {
+  align-self: center; background: none; color: #6b7280;
+  font-size: 12.5px; text-align: center; max-width: 90%;
+}
+
+.patterns {
+  align-self: flex-end; font-size: 11.5px; color: #8b7bb8;
+  margin-top: -8px; padding: 0 4px;
+}
+
+.typing { align-self: flex-end; color: #a78bfa; font-size: 13px; padding: 8px 4px; }
+
+.composer {
+  border-top: 1px solid #2d1f5e;
+  padding: 14px; display: flex; gap: 10px;
+}
+
+.composer input {
+  flex: 1; padding: 12px 14px; font-size: 14px; border-radius: 22px;
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white; border: none; padding: 0 24px;
+  border-radius: 22px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+
+.send-btn:disabled { opacity: 0.45; cursor: wait; }
+
+.starters { padding: 0 14px 14px; display: flex; gap: 7px; flex-wrap: wrap; }
+
+.starter {
+  background: rgba(124,58,237,0.12);
+  border: 1px solid rgba(124,58,237,0.3);
+  color: #c4b5fd; padding: 6px 12px; border-radius: 16px;
+  font-size: 12px; cursor: pointer;
+}
+
+.starter:hover { background: rgba(124,58,237,0.28); }
+
+footer { text-align: center; padding: 26px 0; color: #6b7280; font-size: 13px; }
+footer a { color: #a78bfa; text-decoration: none; margin: 0 9px; }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .chat-wrap { height: 540px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">LIVE CUSTOMER SERVICE AGENT</div>
+    <h1>סוכן שירות לקוחות <span style="color:#a78bfa;">עם BEZEN</span></h1>
+    <p class="subtitle">
+      זה לא הדגמה חד-פעמית — זו שיחה אמיתית. הגדר את העסק שלך משמאל, ותתחיל לדבר איתו כאילו אתה הלקוח.
+    </p>
+  </header>
+
+  <div class="layout">
+    <div class="panel">
+      <h3>⚙️ הגדרת העסק</h3>
+      <div class="hint">מלא את הפרטים של העסק שלך — הסוכן יתאים את עצמו אליהם מיד.</div>
+
+      <label>שם העסק</label>
+      <input id="bizName" value="סלקום">
+
+      <label>תחום הפעילות</label>
+      <input id="bizDomain" value="חברת סלולר — חבילות, חשבוניות, תקלות רשת">
+
+      <label>מדיניות ועובדות שהסוכן יכול להסתמך עליהן</label>
+      <textarea id="bizPolicies">זיכוי כספי מטופל תוך 14 ימי עסקים. ניתן לבדוק סטטוס פנייה עם מספר פנייה. ביטול חבילה — עד 30 יום מהחיוב.</textarea>
+
+      <label>מה קורה כשצריך אדם אמיתי</label>
+      <input id="bizEscalation" value="נציג בכיר יחזור אליך תוך יום עסקים אחד">
+
+      <button class="apply-btn" onclick="resetChat()">↻ החל והתחל שיחה חדשה</button>
+    </div>
+
+    <div class="chat-wrap">
+      <div class="chat-header">
+        <div class="avatar">B</div>
+        <div>
+          <div class="chat-title" id="chatTitle">סלקום — שירות לקוחות</div>
+          <div class="chat-status">● מקוון · מופעל על ידי BEZEN</div>
+        </div>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="msg system">השיחה מתחילה כאן. כתוב כלקוח — הסוכן זוכר את כל מה שנאמר.</div>
+      </div>
+
+      <div class="starters" id="starters">
+        <button class="starter" onclick="useStarter(this)">אני כבר חודש מחכה שתחזירו לי כסף ואף אחד לא עונה!</button>
+        <button class="starter" onclick="useStarter(this)">חייבתם אותי פעמיים על אותו חודש</button>
+        <button class="starter" onclick="useStarter(this)">אני רוצה לבטל, נמאס לי מכם</button>
+      </div>
+
+      <div class="composer">
+        <input id="userMsg" placeholder="כתוב הודעה כלקוח..." onkeydown="if(event.key==='Enter')sendMsg()">
+        <button class="send-btn" id="sendBtn" onclick="sendMsg()">שלח</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>BEZEN AI © 2026</p>
+    <p style="margin-top:8px;">
+      <a href="/compare">השוואה זו לצד זו</a> |
+      <a href="/">דף הדגמה ראשי</a> |
+      <a href="https://wa.me/972549199344">WhatsApp</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+let history = [];
+
+function business() {
+  return {
+    name: document.getElementById('bizName').value.trim() || 'השירות',
+    domain: document.getElementById('bizDomain').value.trim(),
+    policies: document.getElementById('bizPolicies').value.trim(),
+    escalation: document.getElementById('bizEscalation').value.trim(),
+  };
+}
+
+function resetChat() {
+  history = [];
+  document.getElementById('chatTitle').textContent = business().name + ' — שירות לקוחות';
+  document.getElementById('messages').innerHTML =
+    '<div class="msg system">השיחה מתחילה כאן. כתוב כלקוח — הסוכן זוכר את כל מה שנאמר.</div>';
+  document.getElementById('starters').style.display = 'flex';
+}
+
+function useStarter(btn) {
+  document.getElementById('userMsg').value = btn.textContent;
+  sendMsg();
+}
+
+function addMsg(text, cls) {
+  const box = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'msg ' + cls;
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+
+async function sendMsg() {
+  const input = document.getElementById('userMsg');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const btn = document.getElementById('sendBtn');
+  document.getElementById('starters').style.display = 'none';
+
+  addMsg(text, 'user');
+  input.value = '';
+  btn.disabled = true;
+
+  const box = document.getElementById('messages');
+  const typing = document.createElement('div');
+  typing.className = 'typing';
+  typing.textContent = 'מקליד…';
+  box.appendChild(typing);
+  box.scrollTop = box.scrollHeight;
+
+  try {
+    const r = await fetch('/agent/support', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({message: text, history: history, business: business()})
+    });
+    const data = await r.json();
+    typing.remove();
+
+    if (data.error) {
+      addMsg('שגיאה: ' + data.error, 'system');
+      return;
+    }
+
+    addMsg(data.response, 'bot');
+    history.push({role: 'user', content: text});
+    history.push({role: 'assistant', content: data.response});
+
+    if (data.detected_patterns && data.detected_patterns.length) {
+      const p = document.createElement('div');
+      p.className = 'patterns';
+      p.textContent = '🔍 דפוסים שזוהו: ' + data.detected_patterns.map(x => x.label_he).join(' · ');
+      box.appendChild(p);
+      box.scrollTop = box.scrollHeight;
+    }
+  } catch (e) {
+    typing.remove();
+    addMsg('לא הצלחנו להתחבר. נסה שוב בעוד רגע — בפעם הראשונה השרת מתעורר וזה לוקח קצת.', 'system');
+  } finally {
+    btn.disabled = false;
+    input.focus();
+  }
+}
+</script>
+
+</body>
+</html>
