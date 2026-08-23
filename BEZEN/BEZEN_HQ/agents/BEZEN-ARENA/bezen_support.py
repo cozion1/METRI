@@ -180,7 +180,7 @@ do not diagnose them, and never tell the customer what they are feeling.
 if __name__ == "__main__":
     client = Anthropic(api_key=API_KEY)
     support = BezenSupport(client, "claude-sonnet-4-5-20250929", {
-        "name": "סלקום",
+        "name": "יופיטר",
         "domain": "חברת סלולר — חבילות, חשבוניות, תקלות רשת",
         "policies": "זיכוי כספי מטופל תוך 14 ימי עסקים. ניתן לבדוק סטטוס פנייה עם מספר הפנייה.",
         "escalation": "נציג בכיר יחזור אליך תוך יום עסקים אחד",
