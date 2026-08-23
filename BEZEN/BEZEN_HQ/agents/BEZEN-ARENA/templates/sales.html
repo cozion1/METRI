@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEZEN לאימון מכירות — תדריך, אימון, משוב</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 100%);
+  color: #e0e0e0; min-height: 100vh; padding: 20px;
+}
+
+.container { max-width: 1200px; margin: 0 auto; }
+header { text-align: center; padding: 22px 0 26px; }
+.logo { font-size: 12px; font-weight: 700; letter-spacing: 5px; color: #a78bfa; margin-bottom: 12px; }
+h1 { font-size: clamp(21px, 3.4vw, 32px); color: white; margin-bottom: 10px; }
+.subtitle { color: #9ca3af; font-size: 14.5px; max-width: 760px; margin: 0 auto; line-height: 1.65; }
+
+.layout { display: grid; grid-template-columns: 320px 1fr; gap: 20px; align-items: start; }
+
+.panel { background: #1a1035; border: 1px solid #2d1f5e; border-radius: 16px; padding: 20px; }
+.panel h3 { font-size: 14px; color: #a78bfa; margin-bottom: 4px; }
+.panel .hint { font-size: 12px; color: #6b7280; margin-bottom: 14px; line-height: 1.5; }
+
+label { display: block; color: #c4b5fd; font-size: 12px; font-weight: 600; margin: 12px 0 5px; }
+
+input, textarea {
+  width: 100%; background: #0f0f1a; border: 1px solid #2d1f5e; border-radius: 8px;
+  padding: 9px 11px; color: #fff; font-size: 13px; font-family: inherit;
+}
+textarea { resize: vertical; min-height: 62px; line-height: 1.5; }
+input:focus, textarea:focus { outline: none; border-color: #7c3aed; }
+
+.tabs { display: flex; gap: 7px; background: #0f0f1a; padding: 6px; border-radius: 50px; width: fit-content; margin-bottom: 18px; }
+.tab {
+  padding: 9px 20px; background: transparent; border: none; color: #9ca3af;
+  border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 13.5px;
+}
+.tab.active { background: #7c3aed; color: white; }
+
+.stage { background: #1a1035; border: 1px solid #2d1f5e; border-radius: 16px; padding: 22px; min-height: 480px; }
+.stage-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 6px; flex-wrap: wrap; }
+.stage h2 { font-size: 17px; color: white; }
+.stage .desc { font-size: 13px; color: #9ca3af; margin-bottom: 18px; line-height: 1.6; }
+
+.btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa); color: white; border: none;
+  padding: 11px 26px; border-radius: 50px; font-size: 14px; font-weight: 600; cursor: pointer;
+}
+.btn:disabled { opacity: 0.45; cursor: wait; }
+.btn.ghost { background: rgba(124,58,237,0.16); border: 1px solid rgba(124,58,237,0.45); color: #c4b5fd; }
+.btn.mic { background: linear-gradient(135deg, #059669, #10b981); }
+.btn.mic.live { background: linear-gradient(135deg, #dc2626, #ef4444); animation: pulse 1.3s infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.65; } }
+
+.ab { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #9ca3af; cursor: pointer; white-space: nowrap; }
+.ab input { width: auto; margin: 0; cursor: pointer; }
+
+.out { margin-top: 18px; display: grid; gap: 16px; }
+.out.split { grid-template-columns: 1fr 1fr; }
+
+.card { border-radius: 14px; padding: 18px; line-height: 1.75; font-size: 14.5px; white-space: pre-wrap; }
+.card.bezen { background: rgba(124,58,237,0.09); border: 1px solid rgba(124,58,237,0.4); }
+.card.plain { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.3); }
+.card .tag { display: block; font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; margin-bottom: 10px; }
+.card.bezen .tag { color: #a78bfa; }
+.card.plain .tag { color: #f87171; }
+
+.messages { display: flex; flex-direction: column; gap: 13px; max-height: 400px; overflow-y: auto; padding: 4px; margin-bottom: 16px; }
+.msg { max-width: 80%; padding: 11px 15px; border-radius: 14px; line-height: 1.65; font-size: 14.5px; white-space: pre-wrap; }
+.msg.rep { align-self: flex-start; background: #2d1f5e; color: #ede9fe; border-bottom-right-radius: 4px; }
+.msg.cust { align-self: flex-end; background: rgba(124,58,237,0.14); border: 1px solid rgba(124,58,237,0.3); color: #e9e5ff; border-bottom-left-radius: 4px; }
+.msg.custplain { align-self: flex-end; background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.28); color: #f5d5d5; border-bottom-left-radius: 4px; }
+.msg .tag { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 5px; opacity: 0.85; }
+.msg.cust .tag { color: #a78bfa; }
+.msg.custplain .tag { color: #f87171; }
+.msg.note { align-self: center; background: none; color: #6b7280; font-size: 12.5px; text-align: center; max-width: 92%; }
+
+.composer { display: flex; gap: 9px; align-items: center; }
+.composer input { flex: 1; padding: 12px 15px; border-radius: 22px; font-size: 14px; }
+
+.patterns { font-size: 11.5px; color: #8b7bb8; margin-top: 12px; }
+.loading { text-align: center; padding: 40px 20px; color: #a78bfa; }
+.spin { font-size: 22px; display: inline-block; animation: rot 2s linear infinite; }
+@keyframes rot { to { transform: rotate(360deg); } }
+
+.voice-note { font-size: 11.5px; color: #6b7280; margin-top: 10px; line-height: 1.55; }
+
+.export { direction: ltr; text-align: left; font-family: Consolas, monospace; font-size: 11.5px;
+  background: #0f0f1a; border: 1px solid #2d1f5e; border-radius: 10px; padding: 14px;
+  max-height: 340px; overflow: auto; white-space: pre-wrap; color: #c9d1d9; }
+
+footer { text-align: center; padding: 26px 0; color: #6b7280; font-size: 13px; }
+footer a { color: #a78bfa; text-decoration: none; margin: 0 9px; }
+
+@media (max-width: 950px) {
+  .layout { grid-template-columns: 1fr; }
+  .out.split { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">SALES ENABLEMENT · BEZEN LAYER</div>
+    <h1>תדריך · אימון · משוב</h1>
+    <p class="subtitle">
+      שכבת BEZEN לכלי אימון מכירות: תדריך שקורא את הלקוח ולא רק מסכם אותו, לקוח מדומה שלא מתקפל,
+      ומשוב לאיש המכירות אחרי האימון.
+    </p>
+  </header>
+
+  <div class="layout">
+    <div class="panel">
+      <h3>🗂️ תיק הלקוח</h3>
+      <div class="hint">המידע שיש לאיש המכירות לפני השיחה — בדרך כלל מגיע מה-CRM.</div>
+
+      <label>מה מוכרים</label>
+      <input id="offering" value="מערכת ניהול מלאי לחנויות קמעונאיות">
+
+      <label>החברה המוכרת</label>
+      <input id="vendor" value="קלאוד-סקיל">
+
+      <label>שם הלקוח</label>
+      <input id="custName" value="דנה לוי">
+
+      <label>תפקיד</label>
+      <input id="custRole" value="מנהלת תפעול ברשת חנויות בגדים, 12 סניפים">
+
+      <label>מצב נוכחי</label>
+      <textarea id="situation">בודקת החלפת מערכת קיימת. יש לה מערכת ותיקה שעובדת אבל מסורבלת.</textarea>
+
+      <label>שיחות עד עכשיו</label>
+      <textarea id="history">שיחה 1: התעניינה, ביקשה מחיר. שיחה 2: אמרה שהמחיר גבוה ושהיא צריכה לחשוב. מאז לא חזרה שבועיים.</textarea>
+    </div>
+
+    <div>
+      <div class="tabs">
+        <button class="tab active" id="tabBrief" onclick="setTab('brief')">1 · תדריך</button>
+        <button class="tab" id="tabPractice" onclick="setTab('practice')">2 · אימון</button>
+        <button class="tab" id="tabDebrief" onclick="setTab('debrief')">3 · משוב</button>
+        <button class="tab" id="tabExport" onclick="setTab('export')">⚙️ הטמעה</button>
+      </div>
+
+      <!-- BRIEF -->
+      <div class="stage" id="stageBrief">
+        <div class="stage-head">
+          <h2>תדריך לפני השיחה</h2>
+          <label class="ab"><input type="checkbox" id="briefAB" checked> הצג גם בלי BEZEN</label>
+        </div>
+        <p class="desc">מה שסוכן תדריך רגיל נותן זה סיכום של ה-CRM. מה שחסר זה מה שהלקוח מגן עליו.</p>
+        <button class="btn" id="briefBtn" onclick="runBrief()">⚡ תדרך אותי</button>
+        <div class="out" id="briefOut"></div>
+      </div>
+
+      <!-- PRACTICE -->
+      <div class="stage" id="stagePractice" style="display:none;">
+        <div class="stage-head">
+          <h2>אימון מול הלקוח</h2>
+          <label class="ab"><input type="checkbox" id="practiceAB"> הצג גם לקוח בלי BEZEN</label>
+        </div>
+        <p class="desc">אתה איש המכירות. דבר או הקלד — הלקוח המדומה מחזיק עמדה ולא מתקפל אחרי משפט אחד.</p>
+
+        <div class="messages" id="messages">
+          <div class="msg note">התחל את השיחה. לחץ על המיקרופון כדי לדבר, או הקלד.</div>
+        </div>
+
+        <div class="composer">
+          <button class="btn mic" id="micBtn" onclick="toggleMic()">🎙️ דבר</button>
+          <input id="repMsg" placeholder="מה אתה אומר ללקוח..." onkeydown="if(event.key==='Enter')sendTurn()">
+          <button class="btn" id="sendBtn" onclick="sendTurn()">שלח</button>
+        </div>
+        <div class="voice-note" id="voiceNote"></div>
+      </div>
+
+      <!-- DEBRIEF -->
+      <div class="stage" id="stageDebrief" style="display:none;">
+        <h2>משוב על האימון</h2>
+        <p class="desc">זה החלק שאין בסטאפ של שני סוכנים: ניתוח של מה שאיש המכירות עשה מול מה שהלקוח באמת הגן עליו.</p>
+        <button class="btn" id="debriefBtn" onclick="runDebrief()">📋 נתח את השיחה</button>
+        <div class="out" id="debriefOut"></div>
+      </div>
+
+      <!-- EXPORT -->
+      <div class="stage" id="stageExport" style="display:none;">
+        <h2>הטמעה בסוכן קולי קיים</h2>
+        <p class="desc">
+          זיהוי הדפוס רץ פעם אחת לפני השיחה, לא בכל תור — כך שאפשר להזריק את זה ל-<code>instructions</code>
+          של סשן Realtime בלי להוסיף שום השהיה ללולאה הקולית.
+        </p>
+        <button class="btn ghost" id="exportBtn" onclick="runExport()">⬇️ הפק הוראות ללקוח המדומה</button>
+        <div class="out" id="exportOut"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>BEZEN AI © 2026</p>
+    <p style="margin-top:8px;">
+      <a href="/support">סוכן שירות לקוחות</a> |
+      <a href="/compare">השוואה זו לצד זו</a> |
+      <a href="/">דף ראשי</a>
+    </p>
+  </footer>
+</div>
+
+<script>
+let transcript = [];
+let recog = null, listening = false;
+
+function deal() {
+  return {
+    vendor: document.getElementById('vendor').value.trim(),
+    offering: document.getElementById('offering').value.trim(),
+    customer_name: document.getElementById('custName').value.trim(),
+    customer_role: document.getElementById('custRole').value.trim(),
+    situation: document.getElementById('situation').value.trim(),
+    history: document.getElementById('history').value.trim(),
+  };
+}
+
+function setTab(t) {
+  ['brief','practice','debrief','export'].forEach(x => {
+    document.getElementById('stage' + x[0].toUpperCase() + x.slice(1)).style.display = (x === t) ? 'block' : 'none';
+    document.getElementById('tab' + x[0].toUpperCase() + x.slice(1)).classList.toggle('active', x === t);
+  });
+}
+
+function spinner(el, text) {
+  el.className = 'out';
+  el.innerHTML = '<div class="loading"><div class="spin">⚙️</div><div style="margin-top:10px;">' + text + '</div>' +
+    '<div style="font-size:12.5px;color:#6b7280;margin-top:8px;">בפעם הראשונה השרת מתעורר — זה יכול לקחת עד דקה.</div></div>';
+}
+
+// ── 1. Brief ──────────────────────────────────────────────────────────
+async function runBrief() {
+  const btn = document.getElementById('briefBtn');
+  const out = document.getElementById('briefOut');
+  const ab = document.getElementById('briefAB').checked;
+  btn.disabled = true;
+  spinner(out, 'מכין תדריך…');
+
+  try {
+    const r = await fetch('/sales/brief', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({deal: deal(), compare: ab})
+    });
+    const d = await r.json();
+    if (d.error) { out.innerHTML = '<div class="card plain">שגיאה: ' + esc(d.error) + '</div>'; return; }
+
+    let html = '';
+    if (ab && d.plain) {
+      out.className = 'out split';
+      html += card('plain', 'תדריך רגיל', d.plain);
+    } else {
+      out.className = 'out';
+    }
+    html += card('bezen', 'תדריך עם BEZEN', d.bezen);
+    if (d.detected_patterns && d.detected_patterns.length) {
+      html += '<div class="patterns">🔍 דפוסים שזוהו אצל הלקוח: ' +
+        d.detected_patterns.map(p => esc(p.label_he)).join(' · ') + '</div>';
+    }
+    out.innerHTML = html;
+  } catch (e) {
+    out.innerHTML = '<div class="card plain">לא הצלחנו להתחבר. נסה שוב.</div>';
+  } finally { btn.disabled = false; }
+}
+
+function card(cls, tag, body) {
+  return '<div class="card ' + cls + '"><span class="tag">' + esc(tag) + '</span>' + esc(body) + '</div>';
+}
+
+function esc(t) { const d = document.createElement('div'); d.textContent = t == null ? '' : t; return d.innerHTML; }
+
+// ── 2. Practice ───────────────────────────────────────────────────────
+function addTurn(text, cls, tag) {
+  const box = document.getElementById('messages');
+  const div = document.createElement('div');
+  div.className = 'msg ' + cls;
+  if (tag) {
+    const s = document.createElement('span'); s.className = 'tag'; s.textContent = tag;
+    div.appendChild(s); div.appendChild(document.createTextNode(text));
+  } else { div.textContent = text; }
+  box.appendChild(div); box.scrollTop = box.scrollHeight;
+}
+
+async function sendTurn() {
+  const input = document.getElementById('repMsg');
+  const text = input.value.trim();
+  if (!text) return;
+
+  const ab = document.getElementById('practiceAB').checked;
+  const btn = document.getElementById('sendBtn');
+  const note = document.querySelector('.msg.note');
+  if (note) note.remove();
+
+  addTurn(text, 'rep');
+  input.value = '';
+  btn.disabled = true;
+
+  const box = document.getElementById('messages');
+  const wait = document.createElement('div');
+  wait.className = 'msg note'; wait.textContent = 'הלקוח חושב…';
+  box.appendChild(wait); box.scrollTop = box.scrollHeight;
+
+  try {
+    const r = await fetch('/sales/roleplay', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({message: text, history: transcript, deal: deal(), compare: ab})
+    });
+    const d = await r.json();
+    wait.remove();
+    if (d.error) { addTurn('שגיאה: ' + d.error, 'note'); return; }
+
+    if (ab && d.plain) {
+      addTurn(d.plain, 'custplain', 'לקוח מדומה — בלי BEZEN');
+      addTurn(d.bezen, 'cust', 'לקוח מדומה — עם BEZEN');
+    } else {
+      addTurn(d.bezen, 'cust');
+    }
+
+    transcript.push({role: 'user', content: text});
+    transcript.push({role: 'assistant', content: d.bezen});
+    speak(d.bezen);
+  } catch (e) {
+    wait.remove();
+    addTurn('לא הצלחנו להתחבר. נסה שוב.', 'note');
+  } finally { btn.disabled = false; input.focus(); }
+}
+
+// ── Voice: browser speech in and out ──────────────────────────────────
+// Aviv's own agent runs on a realtime speech-to-speech model; this is the
+// browser's built-in speech, which is enough to feel the interaction here
+// without standing up a second voice stack just for a demo.
+function initVoice() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const note = document.getElementById('voiceNote');
+  if (!SR) {
+    document.getElementById('micBtn').style.display = 'none';
+    note.textContent = 'זיהוי דיבור לא נתמך בדפדפן הזה — אפשר להקליד. (עובד ב-Chrome)';
+    return;
+  }
+  recog = new SR();
+  recog.lang = 'he-IL';
+  recog.interimResults = false;
+  recog.continuous = false;
+
+  recog.onresult = e => {
+    const t = e.results[0][0].transcript;
+    document.getElementById('repMsg').value = t;
+    sendTurn();
+  };
+  recog.onerror = e => {
+    note.textContent = e.error === 'not-allowed'
+      ? 'הגישה למיקרופון נחסמה — אפשר לאשר אותה בשורת הכתובת, או פשוט להקליד.'
+      : 'זיהוי הדיבור נכשל (' + e.error + '). אפשר להקליד במקום.';
+    stopMic();
+  };
+  recog.onend = () => stopMic();
+  note.textContent = 'הקול רץ בדפדפן (Chrome). האימון האמיתי אצלכם רץ על המודל הקולי שלכם — כאן זה רק כדי להרגיש את השיחה.';
+}
+
+function toggleMic() { listening ? stopMic() : startMic(); }
+
+function startMic() {
+  if (!recog) return;
+  try { recog.start(); listening = true;
+    const b = document.getElementById('micBtn');
+    b.classList.add('live'); b.textContent = '⏹️ עצור';
+  } catch (e) {}
+}
+
+function stopMic() {
+  listening = false;
+  const b = document.getElementById('micBtn');
+  b.classList.remove('live'); b.textContent = '🎙️ דבר';
+  try { recog && recog.stop(); } catch (e) {}
+}
+
+function speak(text) {
+  if (!window.speechSynthesis) return;
+  try {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'he-IL';
+    const he = speechSynthesis.getVoices().find(v => v.lang && v.lang.startsWith('he'));
+    if (he) u.voice = he;
+    window.speechSynthesis.speak(u);
+  } catch (e) {}
+}
+
+// ── 3. Debrief ────────────────────────────────────────────────────────
+async function runDebrief() {
+  const btn = document.getElementById('debriefBtn');
+  const out = document.getElementById('debriefOut');
+  btn.disabled = true;
+  spinner(out, 'מנתח את השיחה…');
+  try {
+    const r = await fetch('/sales/debrief', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({transcript: transcript, deal: deal()})
+    });
+    const d = await r.json();
+    out.className = 'out';
+    out.innerHTML = d.error ? '<div class="card plain">שגיאה: ' + esc(d.error) + '</div>'
+                            : card('bezen', 'משוב לאיש המכירות', d.response);
+  } catch (e) {
+    out.innerHTML = '<div class="card plain">לא הצלחנו להתחבר. נסה שוב.</div>';
+  } finally { btn.disabled = false; }
+}
+
+// ── Export ────────────────────────────────────────────────────────────
+async function runExport() {
+  const btn = document.getElementById('exportBtn');
+  const out = document.getElementById('exportOut');
+  btn.disabled = true;
+  spinner(out, 'מפיק הוראות…');
+  try {
+    const r = await fetch('/sales/instructions', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({deal: deal()})
+    });
+    const d = await r.json();
+    out.className = 'out';
+    if (d.error) { out.innerHTML = '<div class="card plain">שגיאה: ' + esc(d.error) + '</div>'; return; }
+    out.innerHTML = '<div class="export">' + esc(d.instructions) + '</div>' +
+      '<div class="patterns">מדביקים את זה כ-<code>instructions</code> בסשן הקולי. ' +
+      'זיהוי הדפוס כבר נעשה — אין מה להריץ באמצע השיחה.</div>';
+  } catch (e) {
+    out.innerHTML = '<div class="card plain">לא הצלחנו להתחבר. נסה שוב.</div>';
+  } finally { btn.disabled = false; }
+}
+
+initVoice();
+if (window.speechSynthesis) speechSynthesis.onvoiceschanged = () => {};
+</script>
+
+</body>
+</html>

@@ -27,6 +27,7 @@ from dotenv import load_dotenv, dotenv_values
 from bezen_wordsmith import BezenFlow as BezenWordsmith
 from bezen_debate import BezenDebate
 from bezen_support import BezenSupport
+from bezen_sales import BezenSales
 
 # ─────────────────────────────────────────
 # Setup
@@ -50,6 +51,7 @@ client = Anthropic(api_key=API_KEY)
 wordsmith = BezenWordsmith(client, MODEL)
 debate = BezenDebate(client, MODEL)
 support = BezenSupport(client, MODEL)
+sales = BezenSales(client, MODEL)
 
 
 # ─────────────────────────────────────────
@@ -113,6 +115,11 @@ def compare_page():
 @app.route('/support', methods=['GET'])
 def support_page():
     return render_template('support.html')
+
+
+@app.route('/sales', methods=['GET'])
+def sales_page():
+    return render_template('sales.html')
 
 
 # ─────────────────────────────────────────
@@ -261,6 +268,79 @@ def agent_support():
 
         result = support.respond(message, history=history, business=business)
         return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/sales/brief', methods=['POST'])
+def sales_brief():
+    """Pre-call briefing on a customer, with and without the pattern read."""
+    try:
+        data = request.json or {}
+        deal = data.get('deal') or {}
+        if not any((deal.get('customer_name'), deal.get('situation'), deal.get('history'))):
+            return jsonify({"error": "No customer details provided"}), 400
+
+        if data.get('compare'):
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                plain_future = pool.submit(sales.brief, deal, False)
+                bezen_future = pool.submit(sales.brief, deal, True)
+                plain = plain_future.result()
+                bezen = bezen_future.result()
+            return jsonify({
+                "plain": plain["response"],
+                "bezen": bezen["response"],
+                "detected_patterns": bezen["detected_patterns"],
+            })
+
+        out = sales.brief(deal, use_bezen=True)
+        return jsonify({"bezen": out["response"], "detected_patterns": out["detected_patterns"]})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/sales/roleplay', methods=['POST'])
+def sales_roleplay():
+    """One turn of the simulated customer the rep practises against."""
+    try:
+        data = request.json or {}
+        message = (data.get('message') or '').strip()
+        if not message:
+            return jsonify({"error": "No message provided"}), 400
+
+        deal = data.get('deal') or {}
+        history = data.get('history') or []
+
+        if data.get('compare'):
+            with ThreadPoolExecutor(max_workers=2) as pool:
+                plain_future = pool.submit(sales.roleplay, message, history, deal, False)
+                bezen_future = pool.submit(sales.roleplay, message, history, deal, True)
+                plain = plain_future.result()
+                bezen = bezen_future.result()
+            return jsonify({"plain": plain, "bezen": bezen})
+
+        return jsonify({"bezen": sales.roleplay(message, history, deal, True)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/sales/debrief', methods=['POST'])
+def sales_debrief():
+    """Coach the rep on the practice call they just had."""
+    try:
+        data = request.json or {}
+        out = sales.debrief(data.get('transcript') or [], data.get('deal') or {})
+        return jsonify(out)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/sales/instructions', methods=['POST'])
+def sales_instructions():
+    """Export the simulated-customer prompt for an existing voice agent."""
+    try:
+        data = request.json or {}
+        return jsonify(sales.realtime_instructions(data.get('deal') or {}))
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
