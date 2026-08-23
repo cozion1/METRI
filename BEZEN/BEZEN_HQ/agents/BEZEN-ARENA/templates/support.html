@@ -74,6 +74,26 @@ input:focus, textarea:focus { outline: none; border-color: #7c3aed; }
 
 .apply-btn:hover { background: rgba(124,58,237,0.35); }
 
+.share-btn {
+  margin-top: 8px;
+  background: rgba(16,185,129,0.12);
+  border-color: rgba(16,185,129,0.45);
+  color: #6ee7b7;
+}
+
+.share-btn:hover { background: rgba(16,185,129,0.25); }
+
+.share-out { margin-top: 10px; display: none; }
+
+.share-out.open { display: block; }
+
+.share-out input {
+  font-size: 11px; direction: ltr; text-align: left;
+  border-color: rgba(16,185,129,0.4);
+}
+
+.share-out .note { font-size: 11px; color: #6ee7b7; margin-top: 6px; line-height: 1.5; }
+
 .chat-wrap {
   background: #1a1035;
   border: 1px solid #2d1f5e;
@@ -124,6 +144,30 @@ input:focus, textarea:focus { outline: none; border-color: #7c3aed; }
   align-self: center; background: none; color: #6b7280;
   font-size: 12.5px; text-align: center; max-width: 90%;
 }
+
+.ab-toggle {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11.5px; color: #9ca3af; cursor: pointer;
+  margin: 0; font-weight: 500; white-space: nowrap;
+}
+
+.ab-toggle input { width: auto; margin: 0; cursor: pointer; }
+
+.msg.plain {
+  align-self: flex-end;
+  background: rgba(239,68,68,0.07);
+  border: 1px solid rgba(239,68,68,0.28);
+  color: #f5d5d5;
+  border-bottom-left-radius: 4px;
+}
+
+.msg-tag {
+  display: block; font-size: 10.5px; font-weight: 700;
+  letter-spacing: 0.5px; margin-bottom: 6px; opacity: 0.85;
+}
+
+.msg.plain .msg-tag { color: #f87171; }
+.msg.bot .msg-tag { color: #a78bfa; }
 
 .patterns {
   align-self: flex-end; font-size: 11.5px; color: #8b7bb8;
@@ -198,15 +242,21 @@ footer a { color: #a78bfa; text-decoration: none; margin: 0 9px; }
       <input id="bizEscalation" value="נציג בכיר יחזור אליך תוך יום עסקים אחד">
 
       <button class="apply-btn" onclick="resetChat()">↻ החל והתחל שיחה חדשה</button>
+      <button class="apply-btn share-btn" onclick="makeLink()">🔗 צור קישור מוכן ללקוח</button>
+      <div class="share-out" id="shareOut"></div>
     </div>
 
     <div class="chat-wrap">
       <div class="chat-header">
         <div class="avatar">B</div>
-        <div>
+        <div style="flex:1;">
           <div class="chat-title" id="chatTitle">יופיטר — שירות לקוחות</div>
           <div class="chat-status">● מקוון · מופעל על ידי BEZEN</div>
         </div>
+        <label class="ab-toggle" title="בכל תשובה יוצג גם מה אותו סוכן בדיוק היה עונה בלי שכבת BEZEN">
+          <input type="checkbox" id="abMode" onchange="resetChat()">
+          <span>מצב A/B — הצג גם בלי BEZEN</span>
+        </label>
       </div>
 
       <div class="messages" id="messages">
@@ -256,16 +306,76 @@ function resetChat() {
   document.getElementById('starters').style.display = 'flex';
 }
 
+// ── Shareable pre-configured link ──────────────────────────────────────
+// The whole business config travels in the URL, so a prospect can open a
+// link and find their OWN agent already set up — nothing to fill in, and
+// no database or accounts needed on our side.
+
+function encodeConfig(obj) {
+  const json = JSON.stringify(obj);
+  const bytes = new TextEncoder().encode(json);
+  let bin = '';
+  bytes.forEach(b => bin += String.fromCharCode(b));
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function decodeConfig(str) {
+  try {
+    let s = str.replace(/-/g, '+').replace(/_/g, '/');
+    while (s.length % 4) s += '=';
+    const bin = atob(s);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return JSON.parse(new TextDecoder().decode(bytes));
+  } catch (e) {
+    return null;
+  }
+}
+
+function makeLink() {
+  const link = location.origin + location.pathname + '?c=' + encodeConfig(business());
+  const out = document.getElementById('shareOut');
+  out.className = 'share-out open';
+  out.innerHTML = '<input readonly value="' + link.replace(/"/g, '&quot;') + '">' +
+    '<div class="note">✓ שלח את הקישור ללקוח — הוא ייפתח עם הסוכן שלו כבר מוגדר.</div>';
+  const field = out.querySelector('input');
+  field.focus();
+  field.select();
+  try { navigator.clipboard.writeText(link); } catch (e) {}
+}
+
+function loadFromUrl() {
+  const c = new URLSearchParams(location.search).get('c');
+  if (!c) return;
+  const cfg = decodeConfig(c);
+  if (!cfg) return;
+  if (cfg.name) document.getElementById('bizName').value = cfg.name;
+  if (cfg.domain) document.getElementById('bizDomain').value = cfg.domain;
+  if (cfg.policies) document.getElementById('bizPolicies').value = cfg.policies;
+  if (cfg.escalation) document.getElementById('bizEscalation').value = cfg.escalation;
+  document.getElementById('chatTitle').textContent = (cfg.name || 'השירות') + ' — שירות לקוחות';
+}
+
+loadFromUrl();
+
 function useStarter(btn) {
   document.getElementById('userMsg').value = btn.textContent;
   sendMsg();
 }
 
-function addMsg(text, cls) {
+function addMsg(text, cls, tag) {
   const box = document.getElementById('messages');
   const div = document.createElement('div');
   div.className = 'msg ' + cls;
-  div.textContent = text;
+  if (tag) {
+    const label = document.createElement('span');
+    label.className = 'msg-tag';
+    label.textContent = tag;
+    div.appendChild(label);
+    div.appendChild(document.createTextNode(text));
+  } else {
+    div.textContent = text;
+  }
   box.appendChild(div);
   box.scrollTop = box.scrollHeight;
   return div;
@@ -290,8 +400,10 @@ async function sendMsg() {
   box.appendChild(typing);
   box.scrollTop = box.scrollHeight;
 
+  const ab = document.getElementById('abMode').checked;
+
   try {
-    const r = await fetch('/agent/support', {
+    const r = await fetch(ab ? '/compare/support' : '/agent/support', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({message: text, history: history, business: business()})
@@ -304,9 +416,20 @@ async function sendMsg() {
       return;
     }
 
-    addMsg(data.response, 'bot');
+    const reply = ab ? data.bezen_support : data.response;
+
+    if (ab) {
+      addMsg(data.plain_claude, 'plain', 'אותו סוכן — בלי BEZEN');
+      addMsg(reply, 'bot', 'אותו סוכן — עם BEZEN');
+    } else {
+      addMsg(reply, 'bot');
+    }
+
+    // In A/B mode the conversation continues on the BEZEN branch, so the two
+    // sides stay comparable turn after turn rather than diverging into two
+    // different conversations.
     history.push({role: 'user', content: text});
-    history.push({role: 'assistant', content: data.response});
+    history.push({role: 'assistant', content: reply});
 
     if (data.detected_patterns && data.detected_patterns.length) {
       const p = document.createElement('div');
