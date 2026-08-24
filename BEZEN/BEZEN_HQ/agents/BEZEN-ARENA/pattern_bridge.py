@@ -28,7 +28,19 @@ _CACHE = None
 _INDEX = None
 
 # Minimum score before a pattern is considered a real hit rather than noise.
-MIN_SCORE = 2.0
+#
+# Raised from 2.0 after a live session surfaced the limit of lexical matching:
+# an accountancy firm described as doing "ביקורת" (auditing) matched the pattern
+# "עמידה בפני ביקורת" (withstanding criticism) — same word, unrelated sense —
+# and a neutral "what does a course cost?" matched "fear that a mistake will
+# ruin everything". Word-sense disambiguation is not something scoring can fix.
+#
+# The cost is real and not a free win: a genuine comparison-pattern hit scored
+# 2.4, the same as that audit false positive, so this bar drops it too. Recall
+# is traded for precision deliberately — a wrong pattern both misleads the
+# agent and, in a demo, is visible to the person being shown the product.
+# Semantic matching is what actually lifts recall here; see the module note.
+MIN_SCORE = 2.5
 
 # Hebrew glues prefixes onto words (ב/ל/מ/ה/ש/ו/כ), so "מהבית" and "בית" are
 # the same lexical item. Stripping them raises recall, but on its own it also
