@@ -17,7 +17,9 @@ Endpoints:
   GET  /test/debate          → Quick test
 """
 
+import json
 import os
+import re
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, request, jsonify, render_template
@@ -120,6 +122,33 @@ def support_page():
 @app.route('/sales', methods=['GET'])
 def sales_page():
     return render_template('sales.html')
+
+
+CONFIG_DIR = SCRIPT_DIR / "configs"
+_SLUG_OK = re.compile(r"^[a-z0-9][a-z0-9_-]{0,63}$")
+
+
+@app.route('/config/<slug>', methods=['GET'])
+def get_config(slug):
+    """Load a named client config so a prospect gets /support?c=almaya rather
+    than their entire business config base64'd into a 1,800-character URL."""
+    if not _SLUG_OK.match(slug or ""):
+        return jsonify({"error": "bad config name"}), 400
+
+    path = (CONFIG_DIR / f"{slug}.json").resolve()
+    try:
+        path.relative_to(CONFIG_DIR.resolve())
+    except ValueError:
+        return jsonify({"error": "bad config name"}), 400
+
+    if not path.is_file():
+        return jsonify({"error": "not found"}), 404
+
+    try:
+        with open(path, encoding="utf-8") as f:
+            return jsonify(json.load(f))
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 # ─────────────────────────────────────────

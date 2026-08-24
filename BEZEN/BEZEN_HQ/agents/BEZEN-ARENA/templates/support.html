@@ -344,16 +344,29 @@ function makeLink() {
   try { navigator.clipboard.writeText(link); } catch (e) {}
 }
 
-function loadFromUrl() {
-  const c = new URLSearchParams(location.search).get('c');
-  if (!c) return;
-  const cfg = decodeConfig(c);
+function applyConfig(cfg) {
   if (!cfg) return;
   if (cfg.name) document.getElementById('bizName').value = cfg.name;
   if (cfg.domain) document.getElementById('bizDomain').value = cfg.domain;
   if (cfg.policies) document.getElementById('bizPolicies').value = cfg.policies;
   if (cfg.escalation) document.getElementById('bizEscalation').value = cfg.escalation;
   document.getElementById('chatTitle').textContent = (cfg.name || 'השירות') + ' — שירות לקוחות';
+}
+
+async function loadFromUrl() {
+  const c = new URLSearchParams(location.search).get('c');
+  if (!c) return;
+
+  // A short name refers to a stored client config (/support?c=almaya); anything
+  // longer is a self-contained encoded one. Named configs keep the link short
+  // enough to survive being sent through a messaging app.
+  if (/^[a-z0-9][a-z0-9_-]{0,63}$/.test(c)) {
+    try {
+      const r = await fetch('/config/' + encodeURIComponent(c));
+      if (r.ok) { applyConfig(await r.json()); return; }
+    } catch (e) {}
+  }
+  applyConfig(decodeConfig(c));
 }
 
 loadFromUrl();
