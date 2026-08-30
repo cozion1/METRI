@@ -50,6 +50,24 @@ _STOPWORDS = {
 }
 
 
+# The movement's Hebrew translation keeps the German terms in Latin letters —
+# across the 12 teaching pages, "Einstellen" appears 16 times and "התכווננות"
+# zero. Israelis type the Hebrew, which is also the vocabulary of Cozio's videos.
+# Without this bridge a search in the words people actually use returns nothing.
+_SYNONYMS = {
+    "התכווננות": ["einstellen"], "התכוונות": ["einstellen"],
+    "להתכוונן": ["einstellen"], "מתכוונן": ["einstellen"],
+    "התכוונן": ["einstellen"], "כיוונון": ["einstellen"],
+    "רגלונג": ["regelungen"], "ויסות": ["regelungen"], "הוויסות": ["regelungen"],
+    "מרפא": ["heilstrom", "regelungen"], "טיהור": ["regelungen"],
+    "זרם": ["heilstrom"], "הזרם": ["heilstrom"],
+    "כאב": ["regelungen"], "כאבים": ["regelungen"], "החמרה": ["regelungen"],
+    "רפואי": ["רופא", "רופאים"], "רפואה": ["רופא", "רופאים"],
+    "טיפול": ["רופא", "רופאים"],
+    "משפט": ["אישום", "תביעה"], "תביעה": ["אישום"], "דין": ["אישום", "משפט"],
+}
+
+
 def _forms(word: str) -> set:
     """A word plus its plausible un-prefixed forms, so 'והכאב' matches 'כאב'."""
     out = {word}
@@ -173,7 +191,7 @@ def load() -> list:
 # largest section by volume and would otherwise drown everything else out.
 _SECTION_WEIGHT = {
     "teaching": 1.6,
-    "medical": 1.4,
+    "medical": 2.6,
     "biography": 1.1,
     "topics": 1.0,
     "healings": 0.7,
@@ -185,6 +203,8 @@ def search(query: str, top_k: int = 6, min_score: float = MIN_SCORE) -> list:
     q = _words(query)
     if not q:
         return []
+    for w in list(q):
+        q.update(_SYNONYMS.get(w, ()))
     scored = []
     for c in load():
         hits = q & c["words"]

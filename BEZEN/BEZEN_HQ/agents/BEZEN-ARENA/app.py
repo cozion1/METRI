@@ -136,6 +136,18 @@ def groening_page():
     return render_template('groening.html')
 
 
+@app.route('/groening/box', methods=['GET'])
+def groening_box():
+    """The closed box: one self-contained file, no server and no API needed once
+    downloaded. Served here only so it has a link to send. Built by
+    build_closed_box.py."""
+    from flask import send_file, abort
+    f = SCRIPT_DIR / 'static' / 'groening-closed-box.html'
+    if not f.exists():
+        abort(404, 'not built yet — run build_closed_box.py')
+    return send_file(f, mimetype='text/html')
+
+
 @app.route('/config/<slug>', methods=['GET'])
 def get_config(slug):
     """Load a named client config so a prospect gets /support?c=almaya rather
