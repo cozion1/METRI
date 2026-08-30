@@ -28,6 +28,17 @@ DATA_DIR = SCRIPT_DIR.parents[3] / "data"
 OFFICIAL_DIR = DATA_DIR / "groening_official"
 ARCHIVE_DIR = DATA_DIR / "groening_corpus"
 
+# The teaching section in the movement's own authorized translations. Without
+# these the agent could answer in Russian only by translating Hebrew itself and
+# presenting the result as Bruno Gröning's words. Now a Russian reader gets the
+# text the movement itself publishes in Russian.
+TRANSLATED = {
+    "de": DATA_DIR / "groening_official_de",
+    "en": DATA_DIR / "groening_official_en",
+    "ru": DATA_DIR / "groening_official_ru",
+    "ar": DATA_DIR / "groening_official_ar",
+}
+
 MIN_SCORE = 1.5
 MAX_CHUNK = 1100          # characters — roughly one idea
 MIN_CHUNK = 120
@@ -68,6 +79,32 @@ _SYNONYMS = {
 }
 
 
+# Hebrew, Arabic, Cyrillic and Latin — the scripts of the corpus languages.
+# The Hebrew-only class this replaced silently tokenised Arabic questions to
+# nothing, so Arabic search returned no results at all.
+_WORD_RE = r"[֐-׿؀-ۿЀ-ӿa-zA-Z]{2,}"
+
+# Function words in the translated corpora. Without these, "what are the" match
+# every page and the ranking collapses to whichever page is longest.
+_STOPWORDS |= {
+    "the", "and", "for", "are", "was", "were", "that", "this", "with", "from",
+    "his", "her", "you", "your", "our", "not", "but", "can", "has", "have",
+    "had", "who", "what", "how", "why", "all", "one", "out", "about", "into",
+    "der", "die", "das", "und", "ist", "sind", "war", "den", "dem", "des",
+    "ein", "eine", "einen", "einem", "einer", "nicht", "auch", "aber", "wie",
+    "was", "wer", "sich", "auf", "mit", "von", "für", "durch", "über", "man",
+    "это", "как", "что", "или", "она", "они", "его", "все", "так", "για",
+    "من", "في", "على", "هو", "هي", "أن", "إلى", "عن", "ما", "هذا", "هذه",
+}
+
+
+_GERMAN_MARKERS = {
+    "ist", "das", "der", "und", "nicht", "ich", "wie", "ein", "eine", "sind",
+    "wird", "kann", "fur", "uber", "mit", "von", "auch", "aber", "sich", "dem",
+    "den", "des", "wer", "warum", "welche", "bedeutet", "gibt",
+}
+
+
 def _forms(word: str) -> set:
     """A word plus its plausible un-prefixed forms, so 'והכאב' matches 'כאב'."""
     out = {word}
@@ -78,7 +115,7 @@ def _forms(word: str) -> set:
 
 
 def _words(text: str) -> set:
-    raw = re.findall(r"[֐-׿a-zA-Z]{2,}", text)
+    raw = re.findall(_WORD_RE, text)
     out = set()
     for w in raw:
         w = w.lower()
@@ -181,10 +218,55 @@ def load() -> list:
                     "url": url,
                     "section": section,
                     "authority": authority,
+                    "lang": "he",
                     "words": _words(f"{title} {piece}"),
                 })
+
+    for lang, directory in TRANSLATED.items():
+        if not directory.exists():
+            continue
+        for path in sorted(directory.rglob("*.md")):
+            try:
+                title, url, body = _read(path)
+            except Exception:
+                continue
+            for piece in _split(body):
+                chunks.append({
+                    "text": piece,
+                    "title": title,
+                    "url": url,
+                    "section": "teaching",
+                    "authority": "official",
+                    "lang": lang,
+                    "words": _words(f"{title} {piece}"),
+                })
+
     _CHUNKS = chunks
     return _CHUNKS
+
+
+def detect_lang(text: str) -> str:
+    """Which corpus language a question should be answered from.
+
+    Script is enough here: the four translations use Hebrew, Cyrillic, Arabic
+    and Latin. Latin is ambiguous between German and English, so it selects
+    both and the word overlap decides.
+    """
+    if re.search(r"[֐-׿]", text):
+        return "he"
+    if re.search(r"[Ѐ-ӿ]", text):
+        return "ru"
+    if re.search(r"[؀-ۿ]", text):
+        return "ar"
+    if re.search(r"[A-Za-z]", text):
+        # German and English share the alphabet. These markers are German words
+        # that are not also English words, so one hit is enough to decide.
+        if re.search(r"[äöüßÄÖÜ]", text) or (
+            _GERMAN_MARKERS & {w.lower() for w in re.findall(r"[A-Za-zäöüß]+", text)}
+        ):
+            return "de"
+        return "en"
+    return "he"
 
 
 # The teaching pages are the doctrine itself; healing testimonials are the
@@ -205,6 +287,12 @@ def search(query: str, top_k: int = 6, min_score: float = MIN_SCORE) -> list:
         return []
     for w in list(q):
         q.update(_SYNONYMS.get(w, ()))
+
+    # "Einstellen", "Regelungen" and "Heilstrom" appear untranslated in every
+    # language, so without this a Hebrew question would pull German and Russian
+    # passages it can't use.
+    detected = detect_lang(query)
+    prefer = {detected}
     scored = []
     for c in load():
         hits = q & c["words"]
@@ -217,6 +305,7 @@ def search(query: str, top_k: int = 6, min_score: float = MIN_SCORE) -> list:
         score *= _SECTION_WEIGHT.get(c["section"], 1.0)
         if c["authority"] == "official":
             score *= 1.35
+        score *= 2.0 if c.get("lang", "he") in prefer else 0.3
         if score >= min_score:
             scored.append((score, c))
     scored.sort(key=lambda x: -x[0])
@@ -256,9 +345,13 @@ def stats() -> dict:
     by = {}
     for c in chunks:
         by[c["section"]] = by.get(c["section"], 0) + 1
+    langs = {}
+    for c in chunks:
+        langs[c.get("lang", "he")] = langs.get(c.get("lang", "he"), 0) + 1
     return {
         "chunks": len(chunks),
         "by_section": by,
+        "by_lang": langs,
         "chars": sum(len(c["text"]) for c in chunks),
     }
 

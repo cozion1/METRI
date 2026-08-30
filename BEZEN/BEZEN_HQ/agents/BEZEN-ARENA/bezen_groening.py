@@ -66,6 +66,9 @@ def _load_videos() -> dict:
 
 VIDEOS = _load_videos()
 
+_LANG_NAMES = {"he": "Hebrew", "en": "English", "de": "German",
+               "ru": "Russian", "ar": "Arabic"}
+
 
 SYSTEM = """אתה סוכן מלווה של חוג ידידי ברונו גרונינג. אתה עונה על שאלות אודות שיטתו של ברונו גרונינג מתוך החומר הרשמי של התנועה בלבד.
 
@@ -104,8 +107,9 @@ SYSTEM = """אתה סוכן מלווה של חוג ידידי ברונו גרו�
 
 ## שפות — כלל קריטי
 - ענה תמיד בשפה שבה פנו אליך.
-- **הקורפוס שברשותך הוא בעברית בלבד.** מותר לך להסביר את התוכן בכל שפה — אבל **אסור לך להציג תרגום משלך כציטוט של ברונו גרונינג.** תרגום שלך אינו המקור.
-- כשאתה רוצה לצטט ואתה עונה בשפה שאינה עברית: הבא את הציטוט **בעברית כלשונו**, ולידו הסבר בשפת השואל — או הימנע מציטוט והסבר במילים שלך תוך שאתה אומר שזה תיאור ולא ציטוט.
+- **אסור לך להציג תרגום משלך כציטוט של ברונו גרונינג.** תרגום שלך אינו המקור.
+- ברשותך התרגומים הרשמיים של סעיף המשנה ב**עברית, גרמנית, אנגלית, רוסית וערבית**. אם הקטע שקיבלת הוא כבר בשפת השואל — צטט אותו כלשונו, זה הנוסח המאושר של התנועה.
+- אם הקטע בשפה אחרת מזו שבה אתה עונה: הבא את הציטוט **בשפת המקור כלשונו**, ולידו הסבר בשפת השואל — או הסבר במילים שלך תוך שאתה אומר במפורש שזה תיאור ולא ציטוט.
 - ציין שהאתר הרשמי של התנועה קיים ב-33 שפות, ושכדאי לקרוא שם את הנוסח המאושר בשפתו.
 
 אל תשתמש בכותרות, בתוויות, בכוכביות, בהדגשות markdown או ברשימות. טקסט רץ בלבד."""
@@ -145,11 +149,23 @@ class BezenGroening:
             if role in ("user", "assistant") and content:
                 msgs.append({"role": role, "content": content})
 
+        # The whole system prompt is Hebrew, which pulled replies into Hebrew even
+        # when the question was English — the "answer in the user's language" rule
+        # was buried under it. This directive goes last, where it carries the most
+        # weight, and names the language when the script tells us which it is.
+        named = _LANG_NAMES.get(groening_corpus.detect_lang(message))
+        directive = (
+            "IMPORTANT: Write your ENTIRE reply in the same language the user "
+            "wrote their question in — every sentence, not only the quotations."
+        )
+        if named and re.search(r"[Ѐ-ӿ֐-׿؀-ۿA-Za-z]", message):
+            directive += f" That language is {named}."
+
         msgs.append({
             "role": "user",
             "content": (
                 f"קטעים מהקורפוס שאותרו עבור השאלה הזו:\n\n{context}\n\n"
-                f"---\n\nהשאלה של המשתמש:\n{message}"
+                f"---\n\nהשאלה של המשתמש:\n{message}\n\n---\n{directive}"
             ),
         })
 
