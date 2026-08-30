@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ברונו גרונינג — עזרה והחלמה בדרך הרוחנית</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1035 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { max-width: 1050px; margin: 0 auto; }
+
+header { text-align: center; padding: 22px 0 20px; }
+h1 { font-size: clamp(30px, 5.4vw, 48px); color: #fff; margin-bottom: 7px; font-weight: 600; letter-spacing: .5px; }
+.tagline { color: #c4b5fd; font-size: clamp(14px, 2vw, 17px); margin-bottom: 13px; letter-spacing: .4px; }
+.subtitle { color: #9ca3af; font-size: 14px; max-width: 640px; margin: 0 auto; line-height: 1.65; }
+
+.credit {
+  text-align: center; margin: 26px 0 8px;
+  font-size: 12px; color: #4b5563; letter-spacing: .4px;
+}
+.credit b { color: #6d5f8f; font-weight: 600; letter-spacing: 2px; }
+
+.review {
+  background: #2a1f10; border: 1px solid #78500f; border-radius: 12px;
+  padding: 13px 17px; margin: 0 0 18px; font-size: 13px; color: #fcd9a0; line-height: 1.6;
+}
+.review strong { color: #fbbf24; }
+
+.layout { display: grid; grid-template-columns: 1fr 268px; gap: 18px; align-items: start; }
+
+.panel {
+  background: #1a1035; border: 1px solid #2d1f5e;
+  border-radius: 16px; padding: 18px;
+}
+.panel h3 { font-size: 13px; color: #a78bfa; margin-bottom: 10px; letter-spacing: .3px; }
+
+#chat {
+  min-height: 380px; max-height: 58vh; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 13px; padding-left: 6px;
+}
+
+.msg { max-width: 88%; padding: 12px 15px; border-radius: 14px; font-size: 15px; line-height: 1.75; white-space: pre-wrap; }
+.msg.user { align-self: flex-start; background: #2d1f5e; color: #ede9fe; border-bottom-right-radius: 4px; }
+.msg.bot  { align-self: flex-end; background: #0f0f1a; border: 1px solid #2d1f5e; color: #e5e7eb; border-bottom-left-radius: 4px; }
+.msg.err  { align-self: center; background: #3b1220; border: 1px solid #7f1d3a; color: #fca5a5; font-size: 13px; }
+
+.after { align-self: flex-end; max-width: 88%; display: flex; flex-direction: column; gap: 7px; margin-top: -5px; }
+
+.sources { font-size: 12px; color: #7c7f8a; line-height: 1.75; }
+.sources a { color: #a78bfa; text-decoration: none; }
+.sources a:hover { text-decoration: underline; }
+
+.video {
+  background: #14243a; border: 1px solid #1e4976; border-radius: 11px;
+  padding: 11px 14px; font-size: 13px; color: #bfdbfe; line-height: 1.6;
+}
+.video a { color: #7dd3fc; font-weight: 600; text-decoration: none; }
+.video a:hover { text-decoration: underline; }
+
+.composer { display: flex; gap: 9px; margin-top: 15px; }
+textarea {
+  flex: 1; background: #0f0f1a; border: 1px solid #2d1f5e; border-radius: 10px;
+  padding: 11px 13px; color: #fff; font-size: 14px; font-family: inherit;
+  resize: none; min-height: 48px; max-height: 130px;
+}
+textarea:focus { outline: none; border-color: #6d28d9; }
+
+button {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa); color: #fff;
+  border: none; border-radius: 10px; padding: 0 22px; font-size: 14px;
+  font-weight: 600; cursor: pointer; font-family: inherit;
+}
+button:disabled { opacity: .45; cursor: default; }
+
+.contact { font-size: 13px; line-height: 1.95; color: #d1d5db; }
+.contact b { color: #fff; display: block; font-size: 13px; }
+.contact a { color: #a78bfa; text-decoration: none; }
+.hint { font-size: 12px; color: #6b7280; line-height: 1.65; margin-top: 9px; }
+
+.starter {
+  display: block; width: 100%; text-align: right; background: #0f0f1a;
+  border: 1px solid #2d1f5e; border-radius: 9px; padding: 9px 11px;
+  color: #c4b5fd; font-size: 12.5px; margin-bottom: 7px; cursor: pointer;
+  line-height: 1.5; font-family: inherit; font-weight: 400;
+}
+.starter:hover { border-color: #6d28d9; color: #ddd6fe; }
+
+.medical {
+  margin-top: 18px; padding: 13px 16px; background: #10192a;
+  border: 1px solid #1e3a5f; border-radius: 12px;
+  font-size: 12.5px; color: #93a5bd; line-height: 1.75;
+}
+
+.dots { align-self: flex-end; color: #6b7280; font-size: 13px; padding: 5px 4px; }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+  .msg { max-width: 95%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>ברונו גרונינג</h1>
+    <p class="tagline">עזרה והחלמה בדרך הרוחנית</p>
+    <p class="subtitle">
+      מענה על שאלות אודות שיטתו של ברונו גרונינג, מתוך החומר הרשמי של חוג ידידי ברונו גרונינג בלבד,
+      עם המקור לכל תשובה.
+    </p>
+  </header>
+
+  <div class="review">
+    <strong>גרסה לבדיקה — טרם אושרה.</strong>
+    זו טיוטה שהועברה לעופר לייבה ולדוב לבדיקה ואישור לפני שימוש כלשהו.
+    הסוכן מצטט אך ורק מהאתר הרשמי, ואינו מצטט מארכיון הסרטונים הפרטי.
+    אין לראות בתשובותיו עמדה רשמית של התנועה עד לאישור.
+  </div>
+
+  <div class="layout">
+
+    <div class="panel">
+      <div id="chat">
+        <div class="msg bot">שלום. אני כאן כדי לענות על שאלות אודות שיטתו של ברונו גרונינג — ההתכווננות, הזרם המרפא, הכאב המרפא ושאר הנושאים — מתוך החומר הרשמי של התנועה.
+
+לכל תשובה אצרף את המקור, כדי שתוכל לבדוק בעצמך מאיפה זה בא.
+
+מה מעסיק אותך?</div>
+      </div>
+
+      <div class="composer">
+        <textarea id="input" placeholder="כתוב את שאלתך…" rows="1"></textarea>
+        <button id="send">שלח</button>
+      </div>
+
+      <div class="medical">
+        הסוכן אינו רופא ואינו מאבחן. הקבוצה הרפואית-מדעית של התנועה (MWF) מתארת את השיטה
+        כ<b>תוספת</b> לידע הרפואי הקונבנציונלי או האלטרנטיבי — לא כתחליף לו.
+        אין להפסיק, לשנות או לדחות טיפול רפואי על סמך שיחה כאן.
+        במצב חירום רפואי — פנו מיד לעזרה דחופה.
+      </div>
+    </div>
+
+    <div>
+      <div class="panel" style="margin-bottom:16px">
+        <h3>לשאול על חוג</h3>
+        <div class="contact">
+          לשאלות על חוגים, מפגשים וחוגים מרחוק — הכי טוב לדבר עם אחת משתי הנציגות הוותיקות.
+          הן יסבירו ויפנו למנחה בעיר שלך.
+          <div style="margin-top:11px">
+            <b>בלהה</b><a href="tel:0547809195">054-7809195</a>
+          </div>
+          <div style="margin-top:7px">
+            <b>כרמית</b><a href="tel:0524766334">052-4766334</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>אפשר להתחיל מכאן</h3>
+        <button class="starter">מהי ההתכווננות ואיך עושים אותה?</button>
+        <button class="starter">התחלתי להתכוונן והכאב דווקא החמיר. מה זה אומר?</button>
+        <button class="starter">מה לפי גרונינג הסיבה למחלה?</button>
+        <button class="starter">קראתי שהוא הועמד לדין. מה בעצם קרה שם?</button>
+        <button class="starter">אני לא בטוח שאני מאמין בזה. יש בזה טעם בכל זאת?</button>
+        <p class="hint">כל תשובה מגיעה עם קישור למקור באתר הרשמי, ועם מצגת להמשך.</p>
+      </div>
+    </div>
+
+  </div>
+  <p class="credit">בליווי טכנולוגי של <b>BEZEN</b></p>
+
+</div>
+
+<script>
+const chat = document.getElementById('chat');
+const input = document.getElementById('input');
+const send = document.getElementById('send');
+let history = [];
+let busy = false;
+
+function el(cls, text) {
+  const d = document.createElement('div');
+  d.className = cls;
+  if (text !== undefined) d.textContent = text;
+  chat.appendChild(d);
+  chat.scrollTop = chat.scrollHeight;
+  return d;
+}
+
+function renderAfter(data) {
+  if ((!data.sources || !data.sources.length) && !data.video) return;
+  const box = el('after');
+
+  if (data.sources && data.sources.length) {
+    const seen = new Set();
+    const links = data.sources.filter(s => {
+      if (!s.url || seen.has(s.url)) return false;
+      seen.add(s.url); return true;
+    }).slice(0, 3);
+    if (links.length) {
+      const s = document.createElement('div');
+      s.className = 'sources';
+      s.innerHTML = 'מקורות: ' + links.map(l =>
+        `<a href="${l.url}" target="_blank" rel="noopener">${l.title}</a>`).join(' · ');
+      box.appendChild(s);
+    }
+  }
+
+  if (data.video && data.video.url) {
+    const v = document.createElement('div');
+    v.className = 'video';
+    const name = data.video.video_title || 'מצגת';
+    v.innerHTML = `להעמיק בנושא — מצגת: <a href="${data.video.url}" target="_blank" rel="noopener">${name}</a>`;
+    box.appendChild(v);
+  }
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function ask(text) {
+  if (busy || !text.trim()) return;
+  busy = true; send.disabled = true;
+  el('msg user', text);
+  input.value = '';
+  const dots = el('dots', 'מחפש במקורות…');
+
+  try {
+    const r = await fetch('/agent/groening', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ message: text, history })
+    });
+    const data = await r.json();
+    dots.remove();
+
+    if (data.error || !data.reply) {
+      el('msg err', 'שגיאה: ' + (data.error || 'לא התקבלה תשובה'));
+    } else {
+      el('msg bot', data.reply);
+      renderAfter(data);
+      history.push({ role: 'user', content: text });
+      history.push({ role: 'assistant', content: data.reply });
+    }
+  } catch (e) {
+    dots.remove();
+    el('msg err', 'שגיאת רשת: ' + e.message);
+  }
+  busy = false; send.disabled = false; input.focus();
+}
+
+send.onclick = () => ask(input.value);
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); ask(input.value); }
+});
+input.addEventListener('input', () => {
+  input.style.height = 'auto';
+  input.style.height = Math.min(input.scrollHeight, 130) + 'px';
+});
+document.querySelectorAll('.starter').forEach(b => b.onclick = () => ask(b.textContent));
+</script>
+</body>
+</html>

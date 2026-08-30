@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 .netlify/
 *.log
+ARENA_KEYS.md

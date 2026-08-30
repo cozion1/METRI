@@ -30,6 +30,7 @@ from bezen_wordsmith import BezenFlow as BezenWordsmith
 from bezen_debate import BezenDebate
 from bezen_support import BezenSupport
 from bezen_sales import BezenSales
+from bezen_groening import BezenGroening
 
 # ─────────────────────────────────────────
 # Setup
@@ -54,6 +55,7 @@ wordsmith = BezenWordsmith(client, MODEL)
 debate = BezenDebate(client, MODEL)
 support = BezenSupport(client, MODEL)
 sales = BezenSales(client, MODEL)
+groening = BezenGroening(client, MODEL)
 
 
 # ─────────────────────────────────────────
@@ -126,6 +128,12 @@ def sales_page():
 
 CONFIG_DIR = SCRIPT_DIR / "configs"
 _SLUG_OK = re.compile(r"^[a-z0-9][a-z0-9_-]{0,63}$")
+
+
+@app.route('/groening', methods=['GET'])
+def groening_page():
+    """Bruno Gröning teaching agent — under review by the Circle of Friends."""
+    return render_template('groening.html')
 
 
 @app.route('/config/<slug>', methods=['GET'])
@@ -299,6 +307,32 @@ def agent_support():
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+
+@app.route('/agent/groening', methods=['POST'])
+def agent_groening():
+    """Q&A on the teaching of Bruno Gröning, grounded in the movement's own site.
+
+    Body: {message, history: [{role, content}]}
+    Returns the reply plus the official sources it drew on and one presentation
+    to watch next — the sources are shown to the user so any quote can be checked
+    against the page it came from.
+    """
+    try:
+        data = request.json or {}
+        message = (data.get('message') or data.get('input') or '').strip()
+        if not message:
+            return jsonify({"error": "No message provided"}), 400
+        result = groening.respond(message, history=data.get('history') or [])
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route('/groening/stats', methods=['GET'])
+def groening_stats():
+    import groening_corpus
+    return jsonify(groening_corpus.stats())
 
 
 @app.route('/sales/brief', methods=['POST'])
