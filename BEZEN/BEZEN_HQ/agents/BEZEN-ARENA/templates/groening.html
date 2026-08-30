@@ -127,6 +127,20 @@ button:disabled { opacity: .45; cursor: default; }
 .close{display:block;margin:15px auto 0;background:none;border:1px solid #2d1f5e;
   color:#9ca3af;padding:8px 20px}
 
+
+.why{background:#141024;border:1px solid #2d1f5e;border-radius:14px;
+  padding:20px 22px;margin-top:22px;font-size:14px;line-height:1.8;color:#b9bcc6}
+.why h3{font-size:15px;color:#a78bfa;margin-bottom:11px}
+.why p{margin-bottom:11px}
+.why .item{margin-bottom:10px}
+.why .item b{color:#ede9fe;display:block;margin-bottom:1px;font-size:14px}
+.why .punch{margin-top:14px;padding-top:13px;border-top:1px solid #2d1f5e;color:#ddd6fe}
+
+.voice{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#9ca3af}
+.voice input{width:auto;margin:0}
+.mic{padding:0 14px;background:#2d1f5e;border:1px solid #3b2a75;font-size:16px}
+.mic.live{background:#7f1d3a;border-color:#b91c4c}
+
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .msg { max-width: 95%; }
@@ -157,7 +171,12 @@ button:disabled { opacity: .45; cursor: default; }
     <div class="panel">
       <div class="langbar">
         <span>הסוכן משיב ב־<b>33 שפות</b> — עברית, אנגלית, ערבית, רוסית, ספרדית ועוד.</span>
-        <button id="langBtn">בחירת שפה</button>
+        <span style="display:flex;gap:10px;align-items:center">
+          <label class="voice" id="voiceWrap" hidden>
+            <input type="checkbox" id="speak"> הקראת תשובות
+          </label>
+          <button id="langBtn">בחירת שפה</button>
+        </span>
       </div>
       <div id="chat">
         <div class="msg bot">שלום. אני כאן כדי לענות על שאלות אודות שיטתו של ברונו גרונינג — ההתכווננות, הזרם המרפא, הכאב המרפא ושאר הנושאים — מתוך החומר הרשמי של התנועה.
@@ -169,6 +188,7 @@ button:disabled { opacity: .45; cursor: default; }
 
       <div class="composer">
         <textarea id="input" placeholder="כתוב את שאלתך…" rows="1"></textarea>
+        <button class="mic" id="micBtn" title="דיבור" hidden>🎙</button>
         <button id="send">שלח</button>
       </div>
 
@@ -207,6 +227,31 @@ button:disabled { opacity: .45; cursor: default; }
     </div>
 
   </div>
+
+      <div class="why">
+        <h3>מה שכבת BEZEN מוסיפה כאן</h3>
+        <p>בלי השכבה הזו הסוכן היה חיפוש משוכלל: שאלה נכנסת, פסקה מהאתר יוצאת.
+        BEZEN היא מה שגורם לו <b>להתאים את עצמו לאדם שכותב.</b></p>
+
+        <div class="item"><b>תשובה אחת, לא תפריט</b>
+        מודל רגיל עונה בעשר נקודות ממוספרות. אדם שמכיר את החומר עונה במשפטים.</div>
+
+        <div class="item"><b>קודם מה שמתחת למילים</b>
+        מי שכותב "התחלתי והכאב החמיר" לא שואל שאלה טכנית. הוא מפוחד. הסוכן פונה
+        לזה קודם, ורק אחר כך לתוכן.</div>
+
+        <div class="item"><b>החזרת שליטה במקום פתרון</b>
+        לא "הנה מה שתעשה", אלא צעד אחד קטן שהאדם עצמו מחליט עליו.</div>
+
+        <div class="item"><b>בלי הבטחות ובלי אבחון</b>
+        בבדיקה, מול אדם שכתב שיש לו סרטן ושהוא שוקל להפסיק כימותרפיה, הסוכן לא אמר
+        "זה הכאב המרפא". הוא אמר שאינו יכול לדעת, שגם השואל אינו יכול לדעת לבד,
+        והפנה לרופא. ההבחנה הזו לא נמצאת בקורפוס — היא בשכבה.</div>
+
+        <p class="punch">זה גם ההבדל מהקופסה הסגורה: הקופסה נותנת לכל אדם את אותו הטקסט.
+        הסוכן נותן לכל אדם את מה שהוא צריך לשמוע מתוך אותו הטקסט.</p>
+      </div>
+
   <p class="credit">בליווי טכנולוגי של <b>BEZEN</b></p>
 
 </div>
@@ -290,6 +335,7 @@ async function ask(text) {
       el('msg err', 'שגיאה: ' + (data.error || 'לא התקבלה תשובה'));
     } else {
       el('msg bot', data.reply);
+      say(data.reply);
       renderAfter(data);
       history.push({ role: 'user', content: text });
       history.push({ role: 'assistant', content: data.reply });
@@ -367,8 +413,72 @@ langsBox.onclick = e => {
   const b = e.target.closest('.lang');
   if(!b) return;
   closeLangs();
-  ask(LANGS[+b.dataset.i][2]);
+  const L = LANGS[+b.dataset.i];
+  voiceLang = BCP[L[0]] || L[0];
+  ask(L[2]);
 };
+
+// ── Voice, entirely in the browser ──────────────────────────────────────────
+// Claude has no audio API, so speech runs on the visitor's own device through
+// the Web Speech API. That costs nothing per use, which matters for a movement
+// distributing this where nobody can pay — and it means the reply is spoken even
+// when the answer itself came back as text.
+// Support is uneven (best in Chrome and Edge; Safari recognises nothing), so
+// both controls stay hidden unless the browser actually has the feature.
+const BCP = {he:'he-IL',en:'en-US',de:'de-DE',ru:'ru-RU',ar:'ar-SA',es:'es-ES',
+  fr:'fr-FR',pt:'pt-PT',it:'it-IT',nl:'nl-NL',pl:'pl-PL',ro:'ro-RO',hu:'hu-HU',
+  cs:'cs-CZ',hr:'hr-HR',bg:'bg-BG',el:'el-GR',tr:'tr-TR',fa:'fa-IR',sv:'sv-SE',
+  da:'da-DK',fi:'fi-FI',lv:'lv-LV',af:'af-ZA',id:'id-ID',vi:'vi-VN',ja:'ja-JP',
+  ko:'ko-KR',zh:'zh-CN',zho:'zh-TW',mn:'mn-MN',sk:'sl-SI',eo:'en-US'};
+let voiceLang = 'he-IL';
+
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+const micBtn = document.getElementById('micBtn');
+const speakBox = document.getElementById('speak');
+const voiceWrap = document.getElementById('voiceWrap');
+
+if (window.speechSynthesis) voiceWrap.hidden = false;
+
+function say(text){
+  if (!speakBox || !speakBox.checked || !window.speechSynthesis) return;
+  // Strip the Latin technical terms' quotation marks so they aren't read aloud
+  // as punctuation, and cap length — nobody wants a four-minute recitation.
+  const clean = text.replace(/["“”«»]/g,' ').slice(0, 700);
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(clean);
+  u.lang = voiceLang;
+  u.rate = 0.98;
+  speechSynthesis.speak(u);
+}
+
+if (SR) {
+  micBtn.hidden = false;
+  const rec = new SR();
+  rec.continuous = false;
+  rec.interimResults = false;
+  let listening = false;
+
+  micBtn.onclick = () => {
+    if (listening) { rec.stop(); return; }
+    rec.lang = voiceLang;
+    try { rec.start(); } catch(e) { return; }
+    listening = true;
+    micBtn.classList.add('live');
+    micBtn.textContent = '⏹';
+  };
+  const done = () => {
+    listening = false;
+    micBtn.classList.remove('live');
+    micBtn.textContent = '🎙';
+  };
+  rec.onend = done;
+  rec.onerror = done;
+  rec.onresult = e => {
+    const said = e.results[0][0].transcript.trim();
+    done();
+    if (said) ask(said);
+  };
+}
 
 document.querySelectorAll('.starter').forEach(b => b.onclick = () => ask(b.textContent));
 </script>
