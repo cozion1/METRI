@@ -115,7 +115,8 @@ input:focus{outline:none;border-color:#8a6d3b}
 .qa{border:1px solid #e3ddd3;border-radius:11px;margin-bottom:11px;background:#fff;overflow:hidden}
 .qa summary{padding:15px 17px;cursor:pointer;font-weight:600;font-size:15.5px;color:#1a1816;list-style:none}
 .qa summary::-webkit-details-marker{display:none}
-.qa .body{padding:0 17px 16px;font-size:15px;white-space:pre-wrap;color:#3c3934}
+.qa .body{padding:0 17px 16px;font-size:15px;color:#3c3934}
+.qa .text{white-space:pre-wrap}
 .src{margin-top:12px;padding-top:11px;border-top:1px solid #eee7dc;font-size:12.5px;color:#8c857c}
 .src a{color:#8a6d3b}
 h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border-bottom:1px solid #e3ddd3}
@@ -130,6 +131,11 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .credit{text-align:center;margin:30px 0 12px;font-size:12px;color:#a9a29a}
 .credit b{color:#8c857c;letter-spacing:2px}
 .empty{color:#8c857c;font-size:14px;padding:14px 3px}
+.listen{background:#f3efe8;border:1px solid #ddd5c8;color:#6b5f4d;border-radius:8px;
+  padding:6px 13px;font-size:12.5px;font-family:inherit;cursor:pointer;margin-bottom:12px}
+.listen:hover{border-color:#8a6d3b;color:#8a6d3b}
+.listen.on{background:#8a6d3b;border-color:#8a6d3b;color:#fff}
+.hint{font-size:12.5px;color:#8c857c;margin:-4px 0 12px}
 </style>
 </head>
 <body>
@@ -148,6 +154,7 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 </div>
 
 <h2 class="sec">__QA_H__</h2>
+<p class="hint" id="readHint" hidden>__READ_HINT__</p>
 <div>__QA__</div>
 
 <h2 class="sec">__SEARCH_H__</h2>
@@ -208,6 +215,64 @@ function search(qs){
   return scored.slice(0,8).map(x=>x[1]);
 }
 
+// ── Read aloud, offline ────────────────────────────────────────────────────
+// speechSynthesis is built into the browser and needs no network, so a chapter
+// can be listened to on a phone with no connection at all — which is the point
+// for readers this file has to reach. Chapters run to a few thousand
+// characters, and Chrome truncates a long utterance, so the text is queued
+// sentence by sentence.
+const TTS = window.speechSynthesis;
+let playing = null;
+
+if (TTS) {
+  document.getElementById('readHint').hidden = false;
+  document.querySelectorAll('.listen').forEach(btn => { btn.hidden = false; });
+}
+
+function stopAll(){
+  if (!TTS) return;
+  TTS.cancel();
+  if (playing) {
+    playing.classList.remove('on');
+    playing.textContent = playing.dataset.read;
+    playing = null;
+  }
+}
+
+function listen(btn){
+  if (!TTS) return;
+  const wasPlaying = (playing === btn);
+  stopAll();
+  if (wasPlaying) return;
+
+  const text = btn.parentElement.querySelector('.text').textContent;
+  const parts = text.split(/(?<=[.!?׃।])\\s+|\\n+/).filter(x => x.trim().length > 1);
+  const queue = [];
+  let cur = '';
+  for (const p of parts) {
+    if ((cur + ' ' + p).length > 220) { if (cur) queue.push(cur); cur = p; }
+    else cur = cur ? cur + ' ' + p : p;
+  }
+  if (cur) queue.push(cur);
+
+  playing = btn;
+  btn.classList.add('on');
+  btn.textContent = L.stop;
+
+  queue.forEach((chunk, i) => {
+    const u = new SpeechSynthesisUtterance(chunk);
+    u.lang = L.bcp;
+    u.rate = 0.95;
+    if (i === queue.length - 1) u.onend = () => { if (playing === btn) stopAll(); };
+    TTS.speak(u);
+  });
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('.listen');
+  if (b) listen(b);
+});
+
 const input=document.getElementById('q');
 const hits=document.getElementById('hits');
 const count=document.getElementById('count');
@@ -238,11 +303,14 @@ def build(lang: str) -> Path:
 
     chs = chapters(cs)
     qa = "\n".join(
-        '<details class="qa"><summary>{t}</summary><div class="body">{b}'
+        '<details class="qa"><summary>{t}</summary><div class="body">'
+        '<button class="listen" data-read="{read}" hidden>{read}</button>'
+        '<div class="text">{b}</div>'
         '<div class="src">{src} <a href="{u}" target="_blank" rel="noopener">{t}</a></div>'
         "</div></details>".format(
             t=html.escape(ch["title"]), b=html.escape(ch["text"]),
             u=html.escape(ch["url"]), src=html.escape(L["src"]),
+            read=html.escape(L["read"]),
         )
         for ch in chs
     )
@@ -279,7 +347,9 @@ def build(lang: str) -> Path:
         "__CORPUS__": json.dumps(corpus, ensure_ascii=False, separators=(",", ":")),
         "__SYN__": json.dumps(groening_corpus._SYNONYMS, ensure_ascii=False, separators=(",", ":")),
         "__STOP__": json.dumps(sorted(groening_corpus._STOPWORDS), ensure_ascii=False, separators=(",", ":")),
-        "__L__": json.dumps({k: L[k] for k in ("hits", "empty", "src")}, ensure_ascii=False),
+        "__READ_HINT__": L["read_hint"],
+        "__L__": json.dumps({k: L[k] for k in ("hits", "empty", "src", "read", "stop", "bcp")},
+                            ensure_ascii=False),
     }.items():
         page = page.replace(key, val)
 

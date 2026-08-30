@@ -52,6 +52,8 @@ STRINGS = {
                 "השיטה כ<b>תוספת</b> לידע הרפואי הקונבנציונלי או האלטרנטיבי — לא כתחליף לו. "
                 "אין להפסיק, לשנות או לדחות טיפול רפואי על סמך מה שכתוב כאן. "
                 "במצב חירום רפואי — פנו מיד לעזרה דחופה."),
+        "read": "הקראה", "stop": "עצירה", "bcp": "he-IL",
+        "read_hint": "אפשר להאזין לכל פרק — גם בלי חיבור לאינטרנט.",
         "credit": "בליווי טכנולוגי של",
     },
     "en": {
@@ -93,6 +95,8 @@ STRINGS = {
                 "to conventional or alternative medical knowledge — not a replacement for it. "
                 "Do not stop, change or postpone medical treatment on the basis of anything "
                 "written here. In a medical emergency, seek urgent help immediately."),
+        "read": "Read aloud", "stop": "Stop", "bcp": "en-US",
+        "read_hint": "Each chapter can be listened to — no internet connection needed.",
         "credit": "Technology by",
     },
     "de": {
@@ -135,6 +139,8 @@ STRINGS = {
                 "nicht als Ersatz dafür. Brechen, ändern oder verschieben Sie keine "
                 "medizinische Behandlung aufgrund dessen, was hier steht. Im medizinischen "
                 "Notfall sofort Hilfe holen."),
+        "read": "Vorlesen", "stop": "Stopp", "bcp": "de-DE",
+        "read_hint": "Jedes Kapitel kann vorgelesen werden — auch ohne Internetverbindung.",
         "credit": "Technik von",
     },
     "ru": {
@@ -175,6 +181,8 @@ STRINGS = {
                 "альтернативным медицинским знаниям, а не как замену им. Не прекращайте, не "
                 "меняйте и не откладывайте лечение на основании написанного здесь. При "
                 "неотложном состоянии немедленно обратитесь за срочной помощью."),
+        "read": "Прочитать вслух", "stop": "Стоп", "bcp": "ru-RU",
+        "read_hint": "Каждую главу можно прослушать — интернет не нужен.",
         "credit": "Технология —",
     },
     "ar": {
@@ -212,6 +220,8 @@ STRINGS = {
                 "تصف الطريقة بأنها <b>إضافة</b> إلى المعرفة الطبية التقليدية أو البديلة — "
                 "وليست بديلاً عنها. لا توقف العلاج الطبي ولا تغيّره ولا تؤجّله بناءً على ما "
                 "هو مكتوب هنا. في حالة الطوارئ الطبية اطلب المساعدة العاجلة فوراً."),
+        "read": "استماع", "stop": "إيقاف", "bcp": "ar-SA",
+        "read_hint": "يمكن الاستماع إلى كل فصل — دون الحاجة إلى اتصال بالإنترنت.",
         "credit": "التقنية من",
     },
 }
