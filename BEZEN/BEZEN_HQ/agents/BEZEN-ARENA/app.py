@@ -137,12 +137,16 @@ def groening_page():
 
 
 @app.route('/groening/box', methods=['GET'])
-def groening_box():
-    """The closed box: one self-contained file, no server and no API needed once
-    downloaded. Served here only so it has a link to send. Built by
-    build_closed_box.py."""
+@app.route('/groening/box/<lang>', methods=['GET'])
+def groening_box(lang='he'):
+    """The closed box: one self-contained file per language, needing no server and
+    no API once downloaded — which is the point, since it is meant to reach places
+    with neither reliable internet nor a way to pay. Built by build_closed_box.py."""
     from flask import send_file, abort
-    f = SCRIPT_DIR / 'static' / 'groening-closed-box.html'
+    if lang not in ('he', 'en', 'de', 'ru', 'ar'):
+        abort(404, 'no box in that language yet')
+    name = 'groening-closed-box.html' if lang == 'he' else f'groening-closed-box-{lang}.html'
+    f = SCRIPT_DIR / 'static' / name
     if not f.exists():
         abort(404, 'not built yet — run build_closed_box.py')
     return send_file(f, mimetype='text/html')
