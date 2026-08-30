@@ -136,6 +136,9 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .listen:hover{border-color:#8a6d3b;color:#8a6d3b}
 .listen.on{background:#8a6d3b;border-color:#8a6d3b;color:#fff}
 .hint{font-size:12.5px;color:#8c857c;margin:-4px 0 12px}
+.hit .where{font-size:12.5px;color:#8a6d3b;font-weight:600;margin-bottom:7px;white-space:normal}
+.hit mark{background:#fdf0c9;color:#5c4a12;padding:0 2px;border-radius:3px}
+.hit .ctx{color:#9a938a}
 </style>
 </head>
 <body>
@@ -194,7 +197,35 @@ function words(s){
   }
   return out;
 }
-const INDEX = CORPUS.map(c=>({...c, w: words(c.ti+" "+c.t)}));
+const INDEX = CORPUS.map((c,i)=>({...c, i, w: words(c.ti+" "+c.t)}));
+
+// Highlight the words that were searched for. Runs on already-escaped text, so
+// there are no tags to collide with.
+function mark(escaped, terms){
+  if(!terms.length) return escaped;
+  try{
+    return escaped.replace(new RegExp('('+terms.join('|')+')','gi'),'<mark>$1</mark>');
+  }catch(e){ return escaped; }
+}
+
+// A passage cut at a chunk boundary can open mid-thought. Borrow the tail of the
+// previous piece and the head of the next one from the same page, so the result
+// reads as part of something rather than as a fragment.
+function withContext(c){
+  const before = INDEX[c.i-1], after = INDEX[c.i+1];
+  let pre='', post='';
+  if(before && before.u===c.u){
+    const ss = before.t.trim().split(/(?<=[.!?׃।])\\s+/);
+    pre = ss.slice(-2).join(' ').trim();
+    if(pre.length>240) pre = '…'+pre.slice(-240);
+  }
+  if(after && after.u===c.u){
+    const ss = after.t.trim().split(/(?<=[.!?׃।])\\s+/);
+    post = ss.slice(0,2).join(' ').trim();
+    if(post.length>240) post = post.slice(0,240)+'…';
+  }
+  return {pre, post};
+}
 
 function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 
@@ -212,7 +243,17 @@ function search(qs){
     scored.push([sc,c]);
   }
   scored.sort((a,b)=>b[0]-a[0]);
-  return scored.slice(0,8).map(x=>x[1]);
+
+  // One entry per chapter. Chunking often puts the same page at the top three
+  // times over, which fills the list without adding anything.
+  const seen=new Set(), out=[];
+  for(const [sc,c] of scored){
+    if(seen.has(c.u)) continue;
+    seen.add(c.u);
+    out.push(c);
+    if(out.length>=10) break;
+  }
+  return out;
 }
 
 // ── Read aloud, offline ────────────────────────────────────────────────────
@@ -284,10 +325,17 @@ input.addEventListener('input',()=>{
   const r=search(v);
   if(!r.length){ hits.innerHTML='<p class="empty">'+L.empty+'</p>'; return; }
   count.textContent=r.length+' '+L.hits;
-  hits.innerHTML=r.map(c=>
-    '<div class="hit">'+esc(c.t)+
-    '<div class="src">'+L.src+' <a href="'+c.u+'" target="_blank" rel="noopener">'+esc(c.ti)+'</a></div></div>'
-  ).join('');
+
+  const terms=[...words(v)].filter(w=>w.length>2);
+  hits.innerHTML=r.map(c=>{
+    const {pre,post}=withContext(c);
+    const body =
+      (pre  ? '<span class="ctx">'+mark(esc(pre),terms)+' </span>' : '') +
+      mark(esc(c.t),terms) +
+      (post ? '<span class="ctx"> '+mark(esc(post),terms)+'</span>' : '');
+    return '<div class="hit"><div class="where">'+esc(c.ti)+'</div>'+body+
+      '<div class="src">'+L.src+' <a href="'+c.u+'" target="_blank" rel="noopener">'+esc(c.ti)+'</a></div></div>';
+  }).join('');
 });
 </script>
 </body>

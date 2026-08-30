@@ -136,6 +136,19 @@ def groening_page():
     return render_template('groening.html')
 
 
+# Five plain links are easier to hand out than language codes — nobody has to be
+# told what /de means, and nobody mistypes it. /groening/box/<lang> still works.
+BOX_BY_NUMBER = {2: 'en', 3: 'de', 4: 'ru', 5: 'ar'}
+
+
+@app.route('/groening/box<int:num>', methods=['GET'])
+def groening_box_numbered(num):
+    from flask import abort
+    if num not in BOX_BY_NUMBER:
+        abort(404, 'no box with that number')
+    return groening_box(BOX_BY_NUMBER[num])
+
+
 @app.route('/groening/box', methods=['GET'])
 @app.route('/groening/box/<lang>', methods=['GET'])
 def groening_box(lang='he'):
