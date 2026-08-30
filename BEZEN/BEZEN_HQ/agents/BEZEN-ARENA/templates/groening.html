@@ -101,6 +101,32 @@ button:disabled { opacity: .45; cursor: default; }
 
 .dots { align-self: flex-end; color: #6b7280; font-size: 13px; padding: 5px 4px; }
 
+
+.langbar{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:#0f0f1a;border:1px solid #2d1f5e;border-radius:11px;
+  padding:10px 14px;margin-bottom:13px;font-size:13px;color:#9ca3af}
+.langbar b{color:#c4b5fd;font-weight:600}
+.langbar button{padding:7px 15px;font-size:12.5px;border-radius:8px}
+
+.overlay{position:fixed;inset:0;background:rgba(8,6,18,.82);z-index:50;
+  display:none;align-items:center;justify-content:center;padding:20px}
+.overlay.on{display:flex}
+.modal{background:#1a1035;border:1px solid #3b2a75;border-radius:16px;
+  max-width:720px;width:100%;max-height:82vh;overflow-y:auto;padding:22px 24px}
+.modal h2{font-size:18px;color:#fff;margin-bottom:5px}
+.modal .sub{font-size:13px;color:#9ca3af;line-height:1.6;margin-bottom:16px}
+.langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:7px}
+.lang{background:#0f0f1a;border:1px solid #2d1f5e;border-radius:9px;
+  padding:10px 12px;color:#ddd6fe;font-size:14px;font-family:inherit;
+  cursor:pointer;text-align:right}
+.lang:hover{border-color:#7c3aed;background:#171030}
+.lang .code{display:block;font-size:11px;color:#6b7280;margin-top:2px;letter-spacing:.5px}
+.modal .note{margin-top:16px;padding-top:13px;border-top:1px solid #2d1f5e;
+  font-size:12.5px;color:#7c7f8a;line-height:1.7}
+.modal .note a{color:#a78bfa}
+.close{display:block;margin:15px auto 0;background:none;border:1px solid #2d1f5e;
+  color:#9ca3af;padding:8px 20px}
+
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; }
   .msg { max-width: 95%; }
@@ -129,6 +155,10 @@ button:disabled { opacity: .45; cursor: default; }
   <div class="layout">
 
     <div class="panel">
+      <div class="langbar">
+        <span>הסוכן משיב ב־<b>33 שפות</b> — עברית, אנגלית, ערבית, רוסית, ספרדית ועוד.</span>
+        <button id="langBtn">בחירת שפה</button>
+      </div>
       <div id="chat">
         <div class="msg bot">שלום. אני כאן כדי לענות על שאלות אודות שיטתו של ברונו גרונינג — ההתכווננות, הזרם המרפא, הכאב המרפא ושאר הנושאים — מתוך החומר הרשמי של התנועה.
 
@@ -179,6 +209,20 @@ button:disabled { opacity: .45; cursor: default; }
   </div>
   <p class="credit">בליווי טכנולוגי של <b>BEZEN</b></p>
 
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h2>באיזו שפה תרצה לדבר?</h2>
+    <p class="sub">לחיצה על שפה פותחת את השיחה בשפה הזו. אפשר גם פשוט לכתוב בשפה שלך —
+    הסוכן יזהה אותה ויענה בה.</p>
+    <div class="langs" id="langs"></div>
+    <p class="note">החומר שהסוכן מצטט ממנו קיים אצלנו <b>בעברית</b>. כשהוא עונה בשפה אחרת
+    הוא מסביר בשפתך, ומביא ציטוטים בעברית כלשונם — כדי שלא ייוחס לברונו גרונינג נוסח שהוא
+    תרגום ולא מקור. הנוסח הרשמי המאושר בכל שפה נמצא באתר התנועה:
+    <a href="https://www.bruno-groening.org" target="_blank" rel="noopener">bruno-groening.org</a>.</p>
+    <button class="close" id="closeBtn">סגירה</button>
+  </div>
 </div>
 
 <script>
@@ -265,6 +309,67 @@ input.addEventListener('input', () => {
   input.style.height = 'auto';
   input.style.height = Math.min(input.scrollHeight, 130) + 'px';
 });
+// The 33 languages the movement's own site is published in. Clicking one opens
+// the conversation with a greeting in that language, which is all the agent
+// needs to answer in it from then on.
+const LANGS = [
+ ["he","עברית","שלום. אני רוצה לשאול על שיטתו של ברונו גרונינג."],
+ ["en","English","Hello. I'd like to ask about Bruno Gröning's teaching."],
+ ["de","Deutsch","Hallo. Ich möchte etwas über die Lehre von Bruno Gröning fragen."],
+ ["ar","العربية","مرحبا. أود أن أسأل عن تعاليم برونو غروننغ."],
+ ["ru","Русский","Здравствуйте. Я хотел бы спросить об учении Бруно Грёнинга."],
+ ["es","Español","Hola. Me gustaría preguntar sobre la enseñanza de Bruno Gröning."],
+ ["fr","Français","Bonjour. J'aimerais poser une question sur l'enseignement de Bruno Gröning."],
+ ["pt","Português","Olá. Gostaria de perguntar sobre o ensinamento de Bruno Gröning."],
+ ["it","Italiano","Buongiorno. Vorrei chiedere dell'insegnamento di Bruno Gröning."],
+ ["nl","Nederlands","Hallo. Ik wil graag iets vragen over de leer van Bruno Gröning."],
+ ["pl","Polski","Dzień dobry. Chciałbym zapytać o naukę Bruno Gröninga."],
+ ["ro","Română","Bună ziua. Aș dori să întreb despre învățătura lui Bruno Gröning."],
+ ["hu","Magyar","Jó napot. Szeretnék kérdezni Bruno Gröning tanításáról."],
+ ["cs","Čeština","Dobrý den. Rád bych se zeptal na učení Bruna Gröninga."],
+ ["sk","Slovenski","Pozdravljeni. Rad bi vprašal o nauku Bruna Gröninga."],
+ ["hr","Hrvatski","Dobar dan. Želio bih pitati o učenju Brune Gröninga."],
+ ["bg","Български","Здравейте. Бих искал да попитам за учението на Бруно Грьонинг."],
+ ["el","Ελληνικά","Γεια σας. Θα ήθελα να ρωτήσω για τη διδασκαλία του Μπρούνο Γκρένινγκ."],
+ ["tr","Türkçe","Merhaba. Bruno Gröning'in öğretisi hakkında soru sormak istiyorum."],
+ ["fa","فارسی","سلام. می‌خواهم درباره آموزه‌های برونو گرونینگ بپرسم."],
+ ["sv","Svenska","Hej. Jag skulle vilja fråga om Bruno Grönings lära."],
+ ["da","Dansk","Hej. Jeg vil gerne spørge om Bruno Grönings lære."],
+ ["fi","Suomi","Hei. Haluaisin kysyä Bruno Gröningin opetuksesta."],
+ ["lv","Latviski","Sveiki. Es vēlētos jautāt par Bruno Gröninga mācību."],
+ ["af","Afrikaans","Hallo. Ek wil graag oor Bruno Gröning se leer vra."],
+ ["id","Bahasa Indonesia","Halo. Saya ingin bertanya tentang ajaran Bruno Gröning."],
+ ["vi","Tiếng Việt","Xin chào. Tôi muốn hỏi về giáo lý của Bruno Gröning."],
+ ["ja","日本語","こんにちは。ブルーノ・グレーニングの教えについて質問したいです。"],
+ ["ko","한국어","안녕하세요. 브루노 그뢰닝의 가르침에 대해 여쭤보고 싶습니다."],
+ ["zh","簡體中文","你好。我想请教关于布鲁诺·格勒宁的教导。"],
+ ["zho","繁體中文","你好。我想請教關於布魯諾·格勒寧的教導。"],
+ ["mn","Монгол","Сайн байна уу. Бруно Грөнингийн сургаалын талаар асуумаар байна."],
+ ["eo","Esperanto","Saluton. Mi ŝatus demandi pri la instruo de Bruno Gröning."]
+];
+
+const overlay=document.getElementById('overlay');
+const langsBox=document.getElementById('langs');
+
+langsBox.innerHTML = LANGS.map((l,i)=>
+  `<button class="lang" data-i="${i}">${l[1]}<span class="code">${l[0]}</span></button>`
+).join('');
+
+function openLangs(){ overlay.classList.add('on'); }
+function closeLangs(){ overlay.classList.remove('on'); }
+
+document.getElementById('langBtn').onclick = openLangs;
+document.getElementById('closeBtn').onclick = closeLangs;
+overlay.onclick = e => { if(e.target===overlay) closeLangs(); };
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLangs(); });
+
+langsBox.onclick = e => {
+  const b = e.target.closest('.lang');
+  if(!b) return;
+  closeLangs();
+  ask(LANGS[+b.dataset.i][2]);
+};
+
 document.querySelectorAll('.starter').forEach(b => b.onclick = () => ask(b.textContent));
 </script>
 </body>
