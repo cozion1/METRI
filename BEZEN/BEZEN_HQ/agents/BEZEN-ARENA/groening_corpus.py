@@ -28,6 +28,12 @@ DATA_DIR = SCRIPT_DIR.parents[3] / "data"
 OFFICIAL_DIR = DATA_DIR / "groening_official"
 ARCHIVE_DIR = DATA_DIR / "groening_corpus"
 
+# Transcripts of Gröning speaking, in the movement's own Hebrew translation,
+# sent by Ofer Leiba on 2026-08-31. These are his actual words rather than the
+# site's account of his teaching, so they are the strongest thing the agent can
+# quote — and they are the movement's own translation, not ours.
+LECTURES_DIR = DATA_DIR / "groening_lectures"
+
 # The teaching section in the movement's own authorized translations. Without
 # these the agent could answer in Russian only by translating Hebrew itself and
 # presenting the result as Bruno Gröning's words. Now a Russian reader gets the
@@ -222,6 +228,23 @@ def load() -> list:
                     "words": _words(f"{title} {piece}"),
                 })
 
+    if LECTURES_DIR.exists():
+        for path in sorted(LECTURES_DIR.glob("*.md")):
+            try:
+                title, url, body = _read(path)
+            except Exception:
+                continue
+            for piece in _split(body):
+                chunks.append({
+                    "text": piece,
+                    "title": title,
+                    "url": "",
+                    "section": "lecture",
+                    "authority": "official",
+                    "lang": "he",
+                    "words": _words(f"{title} {piece}"),
+                })
+
     for lang, directory in TRANSLATED.items():
         if not directory.exists():
             continue
@@ -272,6 +295,7 @@ def detect_lang(text: str) -> str:
 # The teaching pages are the doctrine itself; healing testimonials are the
 # largest section by volume and would otherwise drown everything else out.
 _SECTION_WEIGHT = {
+    "lecture": 1.7,
     "teaching": 1.6,
     "medical": 2.6,
     "biography": 1.1,

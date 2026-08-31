@@ -292,15 +292,19 @@ function renderAfter(data) {
 
   if (data.sources && data.sources.length) {
     const seen = new Set();
+    // Lecture transcripts came from Ofer as files, so they have no page to link
+    // to — they are still sources and should be named, just not as links.
     const links = data.sources.filter(s => {
-      if (!s.url || seen.has(s.url)) return false;
-      seen.add(s.url); return true;
+      const key = s.url || s.title;
+      if (seen.has(key)) return false;
+      seen.add(key); return true;
     }).slice(0, 3);
     if (links.length) {
       const s = document.createElement('div');
       s.className = 'sources';
-      s.innerHTML = 'מקורות: ' + links.map(l =>
-        `<a href="${l.url}" target="_blank" rel="noopener">${l.title}</a>`).join(' · ');
+      s.innerHTML = 'מקורות: ' + links.map(l => l.url
+        ? `<a href="${l.url}" target="_blank" rel="noopener">${l.title}</a>`
+        : l.title).join(' · ');
       box.appendChild(s);
     }
   }
