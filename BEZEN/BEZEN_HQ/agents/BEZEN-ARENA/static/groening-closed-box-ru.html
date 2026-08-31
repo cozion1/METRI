@@ -48,6 +48,14 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .hit .where{font-size:12.5px;color:#8a6d3b;font-weight:600;margin-bottom:7px;white-space:normal}
 .hit mark{background:#fdf0c9;color:#5c4a12;padding:0 2px;border-radius:3px}
 .hit .ctx{color:#9a938a}
+.qlist{list-style:none;margin-bottom:8px}
+.qlist li{margin-bottom:6px}
+.ask{display:block;width:100%;text-align:left;background:#fff;border:1px solid #e3ddd3;
+  border-radius:10px;padding:11px 14px;font-size:14.5px;font-family:inherit;
+  color:#3c3934;cursor:pointer;line-height:1.5}
+.ask:hover{border-color:#8a6d3b;color:#8a6d3b}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{from{background:#fdf0c9}to{background:#fff}}
 </style>
 </head>
 <body>
@@ -67,6 +75,19 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
   <p>Практический смысл: вы можете прочитать <b>100% того, что эта страница когда-либо скажет.</b> Никаких неожиданностей.</p>
   <p><b>Живой агент — это совсем другое.</b> Агент понимает вопрос, заданный неожиданным образом, ведёт разговор на протяжении нескольких ответов и подстраивается под человека. Эта страница не делает ничего из этого — она показывает подготовленное заранее и ищет по исходному тексту. Это разница между хорошо составленной книгой и разговором.</p>
 </div>
+
+<h2 class="sec">Вопросы, которые задают</h2>
+<p class="hint">Нажмите на вопрос, чтобы открыть главу с ответом.</p>
+<ul class="qlist"><li><button class="ask" data-target="4">Что такое Einstellen и как это делать?</button></li>
+<li><button class="ask" data-target="5">Я начал, а боль усилилась. Это нормально?</button></li>
+<li><button class="ask" data-target="5">Сколько времени проходит, прежде чем что-то почувствуешь?</button></li>
+<li><button class="ask" data-target="3">Что такое Heilstrom?</button></li>
+<li><button class="ask" data-target="1">Почему люди болеют, по Бруно Грёнингу?</button></li>
+<li><button class="ask" data-target="6">Я не уверен, что верю в это. Может ли это всё равно помочь?</button></li>
+<li><button class="ask" data-target="6">Можно ли помочь тому, кто не просил о помощи?</button></li>
+<li><button class="ask" data-target="8">Как изменить привычку негативных мыслей?</button></li>
+<li><button class="ask" data-target="9">Что значит, что человек — дух, а не тело?</button></li>
+<li><button class="ask" data-target="med">А лечение у врача — нужно ли его прекращать?</button></li></ul>
 
 <h2 class="sec">Учение</h2>
 <p class="hint" id="readHint" hidden>Каждую главу можно прослушать — интернет не нужен.</p>
@@ -158,7 +179,7 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
   По вопросам о группах, встречах и дистанционных группах обращайтесь напрямую в Круг друзей:<br><br><a href="https://www.bruno-groening.org" target="_blank" rel="noopener">bruno-groening.org</a>
 </div>
 
-<div class="med">Эта страница не врач и не ставит диагнозов. Медицинско-научная группа движения (MWF) описывает учение как <b>дополнение</b> к обычным или альтернативным медицинским знаниям, а не как замену им. Не прекращайте, не меняйте и не откладывайте лечение на основании написанного здесь. При неотложном состоянии немедленно обратитесь за срочной помощью.</div>
+<div class="med" id="med">Эта страница не врач и не ставит диагнозов. Медицинско-научная группа движения (MWF) описывает учение как <b>дополнение</b> к обычным или альтернативным медицинским знаниям, а не как замену им. Не прекращайте, не меняйте и не откладывайте лечение на основании написанного здесь. При неотложном состоянии немедленно обратитесь за срочной помощью.</div>
 
 <p class="credit">Технология — <b>BEZEN</b></p>
 </div>
@@ -296,6 +317,23 @@ function listen(btn){
 document.addEventListener('click', e => {
   const b = e.target.closest('.listen');
   if (b) listen(b);
+});
+
+// Someone who does not know the vocabulary does not know what to look for. The
+// question list is the way in: pick the question closest to yours and it opens
+// the chapter that answers it.
+document.querySelectorAll('.ask').forEach(b => {
+  b.onclick = () => {
+    const t = b.dataset.target;
+    const el = t === 'med' ? document.getElementById('med')
+                           : document.querySelectorAll('.qa')[+t];
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    el.classList.remove('flash');
+    void el.offsetWidth;
+    el.classList.add('flash');
+  };
 });
 
 const input=document.getElementById('q');

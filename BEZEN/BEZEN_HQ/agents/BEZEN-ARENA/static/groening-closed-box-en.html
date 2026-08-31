@@ -48,6 +48,14 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .hit .where{font-size:12.5px;color:#8a6d3b;font-weight:600;margin-bottom:7px;white-space:normal}
 .hit mark{background:#fdf0c9;color:#5c4a12;padding:0 2px;border-radius:3px}
 .hit .ctx{color:#9a938a}
+.qlist{list-style:none;margin-bottom:8px}
+.qlist li{margin-bottom:6px}
+.ask{display:block;width:100%;text-align:left;background:#fff;border:1px solid #e3ddd3;
+  border-radius:10px;padding:11px 14px;font-size:14.5px;font-family:inherit;
+  color:#3c3934;cursor:pointer;line-height:1.5}
+.ask:hover{border-color:#8a6d3b;color:#8a6d3b}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{from{background:#fdf0c9}to{background:#fff}}
 </style>
 </head>
 <body>
@@ -67,6 +75,19 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
   <p>What that means in practice: you can read <b>100% of what this page will ever say.</b> There are no surprises.</p>
   <p><b>A live agent is something else entirely.</b> An agent understands a question phrased in a way nobody anticipated, holds a conversation across several answers, and adapts to the person in front of it. This page does none of those three — it presents what was prepared in advance and searches the original text. That is the difference between a well-organised book and a conversation.</p>
 </div>
+
+<h2 class="sec">Questions people ask</h2>
+<p class="hint">Tap a question to open the chapter that answers it.</p>
+<ul class="qlist"><li><button class="ask" data-target="4">What is the Einstellen, and how do I do it?</button></li>
+<li><button class="ask" data-target="5">I started, and the pain got worse. Is that normal?</button></li>
+<li><button class="ask" data-target="5">How long before I feel anything?</button></li>
+<li><button class="ask" data-target="3">What is the Heilstrom?</button></li>
+<li><button class="ask" data-target="1">Why do people become ill, according to Bruno Gröning?</button></li>
+<li><button class="ask" data-target="6">I am not sure I believe this. Can it still help?</button></li>
+<li><button class="ask" data-target="6">Can you help someone who has not asked for help?</button></li>
+<li><button class="ask" data-target="8">How do you change a habit of negative thinking?</button></li>
+<li><button class="ask" data-target="9">What does it mean that a person is spirit, not body?</button></li>
+<li><button class="ask" data-target="med">And medical treatment — should I stop it?</button></li></ul>
 
 <h2 class="sec">The teaching</h2>
 <p class="hint" id="readHint" hidden>Each chapter can be listened to — no internet connection needed.</p>
@@ -162,7 +183,7 @@ A positive thought builds up, a negative thought destroys Man is spirit The body
   For questions about community groups, meetings and distance groups, contact the Circle of Friends directly:<br><br><a href="https://www.bruno-groening.org" target="_blank" rel="noopener">bruno-groening.org</a>
 </div>
 
-<div class="med">This page is not a doctor and does not diagnose. The movement's own Medical-Scientific Group (MWF) describes the method as a <b>supplement</b> to conventional or alternative medical knowledge — not a replacement for it. Do not stop, change or postpone medical treatment on the basis of anything written here. In a medical emergency, seek urgent help immediately.</div>
+<div class="med" id="med">This page is not a doctor and does not diagnose. The movement's own Medical-Scientific Group (MWF) describes the method as a <b>supplement</b> to conventional or alternative medical knowledge — not a replacement for it. Do not stop, change or postpone medical treatment on the basis of anything written here. In a medical emergency, seek urgent help immediately.</div>
 
 <p class="credit">Technology by <b>BEZEN</b></p>
 </div>
@@ -300,6 +321,23 @@ function listen(btn){
 document.addEventListener('click', e => {
   const b = e.target.closest('.listen');
   if (b) listen(b);
+});
+
+// Someone who does not know the vocabulary does not know what to look for. The
+// question list is the way in: pick the question closest to yours and it opens
+// the chapter that answers it.
+document.querySelectorAll('.ask').forEach(b => {
+  b.onclick = () => {
+    const t = b.dataset.target;
+    const el = t === 'med' ? document.getElementById('med')
+                           : document.querySelectorAll('.qa')[+t];
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    el.classList.remove('flash');
+    void el.offsetWidth;
+    el.classList.add('flash');
+  };
 });
 
 const input=document.getElementById('q');

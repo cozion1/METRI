@@ -60,10 +60,16 @@ def chunks_for(lang: str) -> list:
 def chapters(cs: list) -> list:
     """Group the teaching chunks back into their pages, in site order."""
     pages, order = {}, []
+    seen_titles = set()
     for c in cs:
         if c["section"] != "teaching":
             continue
         key = c["url"] or c["title"]
+        # The Hebrew crawl picked the section's landing page up twice, under two
+        # URLs; the same chapter listed twice is just confusing.
+        if key not in pages and c["title"] in seen_titles:
+            continue
+        seen_titles.add(c["title"])
         if key not in pages:
             pages[key] = {"title": c["title"], "url": c["url"], "parts": []}
             order.append(key)
@@ -139,6 +145,14 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .hit .where{font-size:12.5px;color:#8a6d3b;font-weight:600;margin-bottom:7px;white-space:normal}
 .hit mark{background:#fdf0c9;color:#5c4a12;padding:0 2px;border-radius:3px}
 .hit .ctx{color:#9a938a}
+.qlist{list-style:none;margin-bottom:8px}
+.qlist li{margin-bottom:6px}
+.ask{display:block;width:100%;text-align:__ALIGN__;background:#fff;border:1px solid #e3ddd3;
+  border-radius:10px;padding:11px 14px;font-size:14.5px;font-family:inherit;
+  color:#3c3934;cursor:pointer;line-height:1.5}
+.ask:hover{border-color:#8a6d3b;color:#8a6d3b}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{from{background:#fdf0c9}to{background:#fff}}
 </style>
 </head>
 <body>
@@ -155,6 +169,10 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
   <h2>__WHAT_H__</h2>
   __WHAT__
 </div>
+
+<h2 class="sec">__Q_H__</h2>
+<p class="hint">__Q_HINT__</p>
+<ul class="qlist">__QLIST__</ul>
 
 <h2 class="sec">__QA_H__</h2>
 <p class="hint" id="readHint" hidden>__READ_HINT__</p>
@@ -174,7 +192,7 @@ __VIDBLOCK__
   __CONTACT__
 </div>
 
-<div class="med">__MED__</div>
+<div class="med" id="med">__MED__</div>
 
 <p class="credit">__CREDIT__ <b>BEZEN</b></p>
 </div>
@@ -314,6 +332,23 @@ document.addEventListener('click', e => {
   if (b) listen(b);
 });
 
+// Someone who does not know the vocabulary does not know what to look for. The
+// question list is the way in: pick the question closest to yours and it opens
+// the chapter that answers it.
+document.querySelectorAll('.ask').forEach(b => {
+  b.onclick = () => {
+    const t = b.dataset.target;
+    const el = t === 'med' ? document.getElementById('med')
+                           : document.querySelectorAll('.qa')[+t];
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    el.classList.remove('flash');
+    void el.offsetWidth;
+    el.classList.add('flash');
+  };
+});
+
 const input=document.getElementById('q');
 const hits=document.getElementById('hits');
 const count=document.getElementById('count');
@@ -363,6 +398,12 @@ def build(lang: str) -> Path:
         for ch in chs
     )
 
+    qlist = "\n".join(
+        '<li><button class="ask" data-target="{t}">{q}</button></li>'.format(
+            t=html.escape(str(t)), q=html.escape(q))
+        for q, t in L["questions"]
+    )
+
     if lang == "he":
         vid = f'<h2 class="sec">{L["vid_h"]}</h2>\n<div class="grid">' + "\n".join(
             '<a class="vid" href="{u}" target="_blank" rel="noopener">{n}</a>'.format(
@@ -389,6 +430,8 @@ def build(lang: str) -> Path:
         "__WHAT_H__": L["what_h"],
         "__WHAT__": "\n  ".join(f"<p>{p}</p>" for p in L["what"]),
         "__QA_H__": L["qa_h"], "__QA__": qa,
+        "__Q_H__": L["q_h"], "__Q_HINT__": L["q_hint"], "__QLIST__": qlist,
+        "__ALIGN__": "right" if L["dir"] == "rtl" else "left",
         "__SEARCH_H__": L["search_h"], "__SEARCH_PH__": L["search_ph"],
         "__VIDBLOCK__": vid, "__CONTACT_H__": L["contact_h"], "__CONTACT__": contact,
         "__MED__": L["med"], "__CREDIT__": L["credit"],

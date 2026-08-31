@@ -48,6 +48,14 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
 .hit .where{font-size:12.5px;color:#8a6d3b;font-weight:600;margin-bottom:7px;white-space:normal}
 .hit mark{background:#fdf0c9;color:#5c4a12;padding:0 2px;border-radius:3px}
 .hit .ctx{color:#9a938a}
+.qlist{list-style:none;margin-bottom:8px}
+.qlist li{margin-bottom:6px}
+.ask{display:block;width:100%;text-align:right;background:#fff;border:1px solid #e3ddd3;
+  border-radius:10px;padding:11px 14px;font-size:14.5px;font-family:inherit;
+  color:#3c3934;cursor:pointer;line-height:1.5}
+.ask:hover{border-color:#8a6d3b;color:#8a6d3b}
+.flash{animation:flash 1.4s ease-out}
+@keyframes flash{from{background:#fdf0c9}to{background:#fff}}
 </style>
 </head>
 <body>
@@ -67,6 +75,19 @@ h2.sec{font-size:16px;color:#8a6d3b;margin:30px 0 12px;padding-bottom:7px;border
   <p>المعنى العملي: يمكنك أن تقرأ هنا <b>مئة بالمئة مما ستقوله هذه الصفحة على الإطلاق.</b> لا مفاجآت.</p>
   <p><b>الوكيل الحي شيء مختلف تماماً.</b> الوكيل يفهم سؤالاً صيغ بطريقة غير متوقعة، ويُجري محادثة عبر عدة إجابات، ويتكيف مع الشخص أمامه. هذه الصفحة لا تفعل أياً من ذلك — بل تعرض ما أُعِدّ مسبقاً وتبحث في النص الأصلي. هذا هو الفرق بين كتاب مرتب جيداً وبين محادثة.</p>
 </div>
+
+<h2 class="sec">أسئلة يطرحها الناس</h2>
+<p class="hint">اضغط على سؤال ليُفتح الفصل الذي يجيب عليه.</p>
+<ul class="qlist"><li><button class="ask" data-target="4">ما هو الـ Einstellen وكيف أقوم به؟</button></li>
+<li><button class="ask" data-target="5">بدأت، وازداد الألم. هل هذا طبيعي؟</button></li>
+<li><button class="ask" data-target="5">كم من الوقت يمر قبل أن أشعر بشيء؟</button></li>
+<li><button class="ask" data-target="3">ما هو الـ Heilstrom؟</button></li>
+<li><button class="ask" data-target="1">لماذا يمرض الناس بحسب برونو غرونينغ؟</button></li>
+<li><button class="ask" data-target="6">لست متأكداً أنني أؤمن بهذا. هل يمكن أن يساعد رغم ذلك؟</button></li>
+<li><button class="ask" data-target="6">هل يمكن مساعدة شخص لم يطلب المساعدة؟</button></li>
+<li><button class="ask" data-target="8">كيف تتغير عادة التفكير السلبي؟</button></li>
+<li><button class="ask" data-target="9">ماذا يعني أن الإنسان روح وليس جسداً؟</button></li>
+<li><button class="ask" data-target="med">وماذا عن العلاج الطبي — هل أتوقف عنه؟</button></li></ul>
 
 <h2 class="sec">التعاليم</h2>
 <p class="hint" id="readHint" hidden>يمكن الاستماع إلى كل فصل — دون الحاجة إلى اتصال بالإنترنت.</p>
@@ -184,7 +205,7 @@ Gröning  &quot;محوّل&quot; بين &quot;محطة توليد الطاقة �
   للأسئلة عن الحلقات واللقاءات والمجموعات عن بُعد، تواصل مباشرة مع حلقة الأصدقاء:<br><br><a href="https://www.bruno-groening.org" target="_blank" rel="noopener">bruno-groening.org</a>
 </div>
 
-<div class="med">هذه الصفحة ليست طبيباً ولا تُشخِّص. المجموعة الطبية العلمية في الحركة (MWF) تصف الطريقة بأنها <b>إضافة</b> إلى المعرفة الطبية التقليدية أو البديلة — وليست بديلاً عنها. لا توقف العلاج الطبي ولا تغيّره ولا تؤجّله بناءً على ما هو مكتوب هنا. في حالة الطوارئ الطبية اطلب المساعدة العاجلة فوراً.</div>
+<div class="med" id="med">هذه الصفحة ليست طبيباً ولا تُشخِّص. المجموعة الطبية العلمية في الحركة (MWF) تصف الطريقة بأنها <b>إضافة</b> إلى المعرفة الطبية التقليدية أو البديلة — وليست بديلاً عنها. لا توقف العلاج الطبي ولا تغيّره ولا تؤجّله بناءً على ما هو مكتوب هنا. في حالة الطوارئ الطبية اطلب المساعدة العاجلة فوراً.</div>
 
 <p class="credit">التقنية من <b>BEZEN</b></p>
 </div>
@@ -322,6 +343,23 @@ function listen(btn){
 document.addEventListener('click', e => {
   const b = e.target.closest('.listen');
   if (b) listen(b);
+});
+
+// Someone who does not know the vocabulary does not know what to look for. The
+// question list is the way in: pick the question closest to yours and it opens
+// the chapter that answers it.
+document.querySelectorAll('.ask').forEach(b => {
+  b.onclick = () => {
+    const t = b.dataset.target;
+    const el = t === 'med' ? document.getElementById('med')
+                           : document.querySelectorAll('.qa')[+t];
+    if (!el) return;
+    if (el.tagName === 'DETAILS') el.open = true;
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+    el.classList.remove('flash');
+    void el.offsetWidth;
+    el.classList.add('flash');
+  };
 });
 
 const input=document.getElementById('q');
